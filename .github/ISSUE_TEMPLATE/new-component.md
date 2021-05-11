@@ -47,6 +47,8 @@ Our design system team will review this component proposal.
 
 ## Reviews
 
+Once a component is initially created, we will use this issue to fill in the additional information. This issue will eventually become part of the documentation.
+
 ### Checklist
 - [ ] Name
 - [ ] Short name
@@ -132,18 +134,23 @@ Our design system team will review this component proposal.
 ### Equity
 *Are there potential impacts of this component or how it is used that may need special consideration?*
 
-## Finalizing component
-
 ### Performance
 *We provide a [baseline]() of tests for basic performance. Will this component present additional performance issues, and if so, how can we address them?*
 
 ### Testing plan
 *We provide a [baseline]() of tests for basic component features. Are there additional tests that need to happen for this component?*
 
-### Support plan
-*What kinds of additional support are needed for this component?*
+## Publishing
+Once development is completed and the component is in use throughout ca.gov websites, any changes will need well communicated updates that will roll up into bigger updates. Additionally, documentation and support will be required.
 
 ### Documentation
-*This document will inform the documentation we eventually create for the finished component.*
+*This document will inform the documentation we create for the finished component.*
 
-- [ ] Is the documentation published?
+- [ ] Screenshots
+- [ ] Sample code
+- [ ] How to use
+- [ ] Video walkthrough (with captions) (editorial experience)
+
+### Support plan
+*We provide a [baseline]() of support. What kinds of additional support are needed for this component?*
+
