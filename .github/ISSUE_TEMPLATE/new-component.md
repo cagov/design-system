@@ -59,18 +59,25 @@ To make sure the component serves all Californians, we have identified some thin
 - [ ] Destination
 - [ ] schema.org type
 - [ ] Accessibility
+- [ ] Analytics
 - [ ] Equity
 - [ ] Performance
-- [ ] Analytics
 - [ ] Testing plan
 - [ ] Support plan
 - [ ] Documentation
+
+### Status
+*We plan to manage this mostly with Github labels & Airtable*
+- [ ] Has Github labels
+- [ ] Final content in Airtable (to autogenerate documentation & keep track of assets)
 
 ### User research
 *Has user research been conducted?*
 
 ### Design
 *Anything needed to know about designing this component*
+
+- Location of Figma assets
 
 ### Content design 
 *What content elements or assets does a content editor need to provide?*
@@ -85,7 +92,7 @@ To make sure the component serves all Californians, we have identified some thin
 * Where should this component live in the design system?* 
 
 ### schema.org type
-*If this component maps to an existing schema.org microdata format, please include. If you don't know, that's ok. We will look it up. We use this for SEO and data management.*
+*If this component maps to an existing schema.org microdata format, please include. If you don't know, that's ok. We will look it up. We use this for SEO and data management and round-trip data migration to help help the component easy to upgrade.*
 
 ### Accessibility
 *In our design system, we are creating fully-accessible components, for delivery and for the editor experience. We have a [baseline]() of general accessibility practices we are following. Are there any additional accessibility considerings with this component?* 
