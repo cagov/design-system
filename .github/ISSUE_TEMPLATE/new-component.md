@@ -2,10 +2,11 @@
 name: New component
 about: Define a new component
 title: 'Define new component: Name'
-labels: Component
+labels: Component, Component Definition
 assignees: ''
 
 ---
+
 We are really excited to hear about the component that you would like to suggest for the design system.
 
 # About this component
@@ -153,4 +154,3 @@ Once development is completed and the component is in use throughout ca.gov webs
 
 ### Support plan
 *We provide a [baseline]() of support. What kinds of additional support are needed for this component?*
-
