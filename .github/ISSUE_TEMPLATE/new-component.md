@@ -32,6 +32,9 @@ assignees: ''
 ## Format
 * Include or reference the expected HTML markup and CSS output (if known)*
 
+## Destination
+* Where should this component live in the design system?* 
+
 ## schema.org type
 *If this component maps to an existing schema.org microdata format, please include. If you don't know, that's ok. We will look it up. We use this for SEO and data management.*
 
