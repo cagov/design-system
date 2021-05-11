@@ -1,7 +1,7 @@
 ---
 name: New component
 about: Define a new component
-title: 'New component: {Component Name} [Component] '
+title: 'Define new component: Name'
 labels: Component
 assignees: ''
 
