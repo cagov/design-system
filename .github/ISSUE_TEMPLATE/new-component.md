@@ -12,6 +12,7 @@ assignees: ''
 |     |      |
 
 ## Checklist
+- [ ] Title
 - [ ] Purpose
 - [ ] Examples
 - [ ] Features
