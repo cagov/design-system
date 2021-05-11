@@ -70,3 +70,7 @@ assignees: ''
 ## Performance
 
 ## Testing plan
+
+## Documentation
+
+## Support plan
