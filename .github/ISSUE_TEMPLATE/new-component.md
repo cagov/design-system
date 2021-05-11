@@ -11,6 +11,23 @@ assignees: ''
 | --- |  --- |
 |     |      |
 
+## Checklist
+- [ ] Purpose
+- [ ] Examples
+- [ ] Features
+- [ ] User research
+- [ ] Design
+- [ ] Content design
+- [ ] Content strategy
+- [ ] Format
+- [ ] Destination
+- [ ] schema.org type
+- [ ] Accessibility
+- [ ] Equity
+- [ ] Performance
+- [ ] Analytics
+- [ ] Testing plan
+
 ## Purpose of component
 *Describe how this component will be used.*
 
@@ -23,10 +40,16 @@ assignees: ''
 ## Features
 *Critical features to support initially.*
 
-## Content Design 
+## User research
+*Has user research been conducted?*
+
+## Design
+*Anything needed to know about designing this component*
+
+## Content design 
 *What content elements or assets does a content editor need to provide?*
 
-## Content Strategy
+## Content strategy
 *What does a content editor need to know about writing and publishing this content?*
 
 ## Format
@@ -45,3 +68,5 @@ assignees: ''
 ## Equity 
 
 ## Performance
+
+## Testing plan
