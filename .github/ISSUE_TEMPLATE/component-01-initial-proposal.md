@@ -1,42 +1,44 @@
 ---
-name: New component
+name: New component, Initial proposal
 about: Define a new component
 title: 'Define new component: Name'
-labels: Component, Component Definition
+labels: Component, Component Definition, New proposal
 assignees: ''
-
 ---
 
-We are really excited to hear about the component that you would like to suggest for the design system.
-
-# About this component
-*Please tell us more about the component.*
-
-## Tell us more about the component
-To make sure the component serves all Californians, we have identified some things we need to know about this component.
-- Please fill in what you can. 
+We are really excited to share our idea for a design system component.
 
 Our design system team will review this component proposal.
 
+*To make sure the component serves all Californians, we have identified some things we need to know about this component.*
+
+- Please fill in what you can. 
+
+---
+
 ### Checklist
 - [ ] Name
+- [ ] About this component
 - [ ] Description
 - [ ] Examples (ca.gov)
 - [ ] Examples (design systems)
 - [ ] Features
 - [ ] Requesting agency
 
-### Name of component
+### Name
 *What should we call this component in conversation?*
+
+# About this component
+*Please tell us more about the component.*
 
 ### Description
 *Describe how this component will be used.*
 
 ### Examples from ca.gov properties
-*(Can be screenshots, a few examples is great. Please include URLs if the examples are live.)*
+*(Can be screenshots, a few examples is great. Please include URLs if the examples are live.) This helps everyone understand what you are referring to.*
 
 ### Examples from other design systems
-*If this component is commonly found in other design systems, please link to it*
+*If this component is commonly found in other design systems, please link to it. This helps everyone understand real-world examples of this idea.*
 
 ### Features
 *Critical features to support initially.*
@@ -121,13 +123,13 @@ Once a component is initially created, we will use this issue to fill in the add
 *What does a content editor need to know about writing and publishing this content?*
 
 ### Data structure
-*If this component maps to an existing schema.org microdata format, please include. If it doesnt, that's ok. We will look it up or provide a data structure. We use schema.org for SEO and data management and round-trip data migration to help help the component easy to upgrade.*
+*If this component maps to an existing schema.org microdata format, please include. If it doesnt, that's ok. We will look it up and provide a data structure. We use schema.org for SEO and data management and round-trip data migration to help keep the component upgradable.*
 
 ### Format
 * Include or reference the expected HTML markup and CSS output (if known)*
 
 ### Accessibility
-*In our design system, we are creating fully-accessible components, for delivery and for the editor experience. We have a [baseline]() of general accessibility practices we are following. Are there any additional accessibility considerings with this component?* 
+*In our design system, we are creating fully-accessible components, for delivery and for the editor experience. We have a [baseline]() of general accessibility practices we are following. Are there any additional accessibility considerations with this component?* 
 
 ### Analytics
 *How can we measure if this component is succeeding in its intention, or discover new insights about needs that we did not know?*
@@ -154,3 +156,9 @@ Once development is completed and the component is in use throughout ca.gov webs
 
 ### Support plan
 *We provide a [baseline]() of support. What kinds of additional support are needed for this component?*
+
+---
+
+Thank you!
+
+[Learn more about our review process.](#tbd)
