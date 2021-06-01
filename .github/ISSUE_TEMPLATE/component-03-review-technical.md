@@ -1,6 +1,6 @@
 ---
 name: New component, Technical Review
-about: Taking an initial component proposal, provide initial review of technical considerations in scoping out the component. This includes describing the technical features, highlighting any obvious performance or accessibility issues, and outlining the technical metadata about the component (naming, location of where code will live and what format, such as a web component, or a Gutenberg block, or other.)
+about: Taking an initial component proposal, provide initial review of technical considerations in scoping out the component.
 title: 'Technical Review: Name'
 labels: Component, Component Review, Technical Review
 assignees: ''
