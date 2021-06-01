@@ -1,6 +1,6 @@
 ---
 name: New component, Metadata Recommendation
-about: After reviewing design and technical considerations for this component, decide its name, location. This step should be done before development. Any existing code should be renamed to match whatever is decided at this step, once the naming step is finalized. This step helps with code inconsistencies.
+about: After reviewing design and technical considerations for this component, decide its name, location. 
 title: 'Metadata Recommendation: Name'
 labels: Component, Component Review, Metadata Recommendation
 assignees: ''
