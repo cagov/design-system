@@ -1,0 +1,29 @@
+@import '../../shared/css/vars';
+@import '../../shared/css/spacing';
+@import '../../shared/css/buttons';
+@import '../../shared/css/sidebar';
+
+.cagov-featured-sidebar {
+  max-width: 360px;
+}
+.cagov-featured-section .components-button.image-button {
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.cagov-featured-image {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height: 100%;
+  min-width: 18rem;
+  min-height: 20rem;
+}
+
+/* hero sidebar swap image on left to go on top when it wraps */
+@media (max-width: 719px) {
+  .cagov-with-sidebar > * {
+    flex-direction: column-reverse;
+  }
+} 
