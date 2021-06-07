@@ -25,7 +25,7 @@ This is a design for featuring important content at the top of a page. The layou
 
 Running the lighthouse audits against this HTML & CSS should produce no issues
 
-<img src="img/cannabis-hero.png">
+<img src="img/hero-audit.png">
 
 ## Development
 
