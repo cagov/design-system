@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npx web-dev-server --open /components",
-    "sass:hero": "sass components/hero/css/index.scss components/hero/css/index.css"
+    "sass:hero": "sass components/hero/css/index.scss components/hero/css/index.css",
+    "sass:cards": "sass components/card-grid/css/index.scss components/card-grid/css/index.css"
   },
   "repository": {
     "type": "git",
