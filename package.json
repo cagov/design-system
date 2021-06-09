@@ -1,0 +1,26 @@
+{
+  "name": "california-design-system",
+  "version": "1.0.0",
+  "description": "State of California Design System A work in progress!",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx web-dev-server --open /components",
+    "sass:hero": "sass components/hero/css/index.scss components/hero/css/index.css",
+    "sass:cards": "sass components/card-grid/css/index.scss components/card-grid/css/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cagov/design-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cagov/design-system/issues"
+  },
+  "homepage": "https://github.com/cagov/design-system#readme",
+  "devDependencies": {
+    "@web/dev-server": "^0.1.17",
+    "sass": "^1.34.1"
+  }
+}

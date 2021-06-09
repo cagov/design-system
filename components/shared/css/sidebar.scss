@@ -1,0 +1,23 @@
+/* sidebar layout */
+.cagov-with-sidebar {
+  overflow: hidden;
+}
+.cagov-with-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.cagov-with-sidebar > * > * {
+  margin: 0;
+  flex-grow: 1;
+}
+.cagov-with-sidebar-left > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(30% - var(0px));
+}
+.cagov-with-sidebar-right > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(30% - 0px);
+}

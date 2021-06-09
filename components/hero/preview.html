@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Preview hero component</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reusable preview HTML page for testing components">
+  <link type="text/css" rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <div id="html-content"></div>
+
+  <script>
+  fetch('template.html')
+    .then(response => response.text())
+    .then(string => document.getElementById('html-content').innerHTML = string);
+  </script>
+
+</body>
+</html>
