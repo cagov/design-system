@@ -10,9 +10,6 @@ cagov-accordion .card-container {
   overflow: hidden;
 }
 
-cagov-accordion .card-container[aria-hidden=false] {
-  border-bottom: 1px solid var(--primary-color, #064E66);
-}
 cagov-accordion button.card-header {
   display: flex;
   justify-content: left;
@@ -81,9 +78,6 @@ button.card-header:focus {
   fill: var(--primary-color, #064E66);
 }
 
-.prog-enhanced .accordion-alpha-open {
-  border-bottom-color: #fff !important;
-}
 .prog-enhanced .accordion-alpha-open cagov-plus .accordion-icon {
   display: none !important;
 }
