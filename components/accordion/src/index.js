@@ -58,21 +58,6 @@ export class CaGovAccordion extends window.HTMLElement {
     }
   }
 
-  static get observedAttributes() {
-    return ['value', 'max'];
-  }
-  
-  attributeChangedCallback(name, oldValue, newValue) {
-    switch (name) {
-      case 'value':
-        console.log(`Value changed from ${oldValue} to ${newValue}`);
-        break;
-      case 'max':
-        console.log(`You won't max-out any time soon, with ${newValue}!`);
-        break;
-    }
-  }
-
   listen() {
     if (!this.cardBodyHeight) {
       this.cardBodyHeight = this.querySelector('.card-body').clientHeight;
