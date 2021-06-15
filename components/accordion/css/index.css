@@ -1,0 +1,100 @@
+/* accordion component specific classes */
+cagov-accordion .card {
+  border-radius: 0 !important;
+  border: none;
+  margin-bottom: 0;
+  min-height: 3rem;
+}
+cagov-accordion .card-container {
+  display: block;
+  overflow: hidden;
+}
+
+cagov-accordion .card-container[aria-hidden=false] {
+  border-bottom: 1px solid var(--primary-color, #064E66);
+}
+cagov-accordion button.card-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  background-clip: border-box;
+  background-color: #EDEDEF;
+  border: none;
+  position: relative;
+  margin-top: -1px;
+  width: 98%;
+  line-height: 3rem;
+}
+cagov-accordion .accordion-title {
+  text-align: left;
+  margin-bottom: 0;
+  color: var(--primary-color, #064E66);
+  margin-right: auto;
+  width: 90%;
+  padding: 0 0.5rem 0 0 !important;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+cagov-accordion.prog-enhanced .card-container {
+  height: 0px;
+  transition: height 0.3s ease;
+}
+
+cagov-accordion .collapsed {
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.accordion-title h4,
+.accordion-title h3,
+.accordion-title h2 {
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 1.2rem !important;
+  font-weight: 700;
+  color: var(--primary-color, #064E66);
+  text-align: left !important;
+}
+
+button.card-header:hover {
+  background-color: #f2f54c;
+}
+button.card-header:focus {
+  outline-offset: -2px;
+}
+
+.prog-enhanced .accordion-alpha .plus-minus {
+  width: 2.125rem;
+  height: 2.125rem;
+  border: none;
+  padding: 0.45rem .45rem;
+  overflow: hidden;
+  margin-left: 1rem;
+  color: var(--primary-color, #064E66);
+  align-self: flex-start;
+}
+.prog-enhanced .accordion-alpha .plus-minus svg {
+  fill: var(--primary-color, #064E66);
+}
+
+.prog-enhanced .accordion-alpha-open {
+  border-bottom-color: #fff !important;
+}
+.prog-enhanced .accordion-alpha-open cagov-plus .accordion-icon {
+  display: none !important;
+}
+.prog-enhanced .accordion-alpha-open cagov-minus .accordion-icon {
+  display: block !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .accordion-alpha-open + .card-container {
+    height: 100% !important;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

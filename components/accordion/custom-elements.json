@@ -1,0 +1,48 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "cagov-accordion",
+      "path": "./src/index.js",
+      "description": "Accordion web component that collapses and expands content inside itself on click.",
+      "attributes": [
+        {
+          "name": "data-event-type",
+          "description": "dataset defined value for event type fired on click.",
+          "type": "string",
+          "default": "\"click\""
+        },
+        {
+          "name": "aria=expanded=true",
+          "description": "set on the internal element .card-header. If this is true the accordion will be open before any user interaction.",
+          "type": "string"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "max"
+        }
+      ],
+      "properties": [
+        {
+          "name": "prog-enhanced",
+          "description": "The element is open before any javascript executes so content can be read if an error occurs that prevents js execution. The prog-enhanced class is added to the element once javascript begins to execute. This triggers default collabsed state.",
+          "type": "class string"
+        }
+      ],
+      "events": [
+        {
+          "name": "click",
+          "description": "Default value, will be defined by this.dataset.eventType."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--primary-color",
+          "description": "Default value of #1f2574, used for all colors of borders and fills"
+        }
+      ]
+    }
+  ]
+}

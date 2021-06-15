@@ -15,7 +15,7 @@
 }
 
 /* call to action */
-.cagov-cta {
+.cagov-cta, .cagov-cta:hover {
   background-color: #33705B;
   /* defined here for when css vars are not supported */
   background-color: var(--primary-color, #33705B);
@@ -27,6 +27,9 @@
   display: inline-block;
   border: none;
   text-decoration: none;
+}
+.cagov-cta:hover, .cagov-cta:focus {
+  text-decoration: underline;
 }
 
 /* sidebar layout */
