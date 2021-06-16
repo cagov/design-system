@@ -25,7 +25,7 @@ h3 {
 
 /* card styles */
 .cagov-card {
-  border: 1px solid;
+  border: 1px solid #ededef;
   padding: 1rem;
   border-bottom: 0.3rem solid #33705B;
   border-bottom: 0.3rem solid var(--primary-color, #33705B);
@@ -37,21 +37,26 @@ h3 {
   justify-content: space-between;
 }
 
-.cagov-card h3 {
+.cagov-card .card-text {
   color: #33705B;
   /* defined here for when css vars are not supported */
   color: var(--primary-color, #33705B) !important;
   /* variable used with fallback in case it is not defined */
   /* color: #33705B !important; */
+  font-size: 1.75rem;
+  line-height: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 .cagov-card svg {
-  min-width: 24px;
   fill: #33705B;
   fill: var(--primary-color, #33705B);
-  margin-top: 0.5em;
+  width: 1rem;
+  margin-top: .2rem;
   margin-left: 1rem;
 }
+
 
 .cagov-card:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
