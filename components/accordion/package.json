@@ -4,25 +4,20 @@
   "description": "This custom element recreates the bootstrap accordion component functionality without the jquery dependency.",
   "main": "src/index.js",
   "scripts": {
-    "test": "karma start --coverage",
-    "test:watch": "karma start --auto-watch=true --single-run=false",
-    "test:update-snapshots": "karma start --update-snapshots",
-    "test:prune-snapshots": "karma start --prune-snapshots"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cagov/storybook-ca-gov/tree/main/packages/@cagov/accordion"
   },
-  "keywords": ["web component"],
+  "keywords": [
+    "web component"
+  ],
   "author": "ca.gov",
   "license": "ISC",
   "devDependencies": {
-    "@open-wc/karma-esm": "^2.12.8",
-    "@open-wc/testing": "^2.5.1",
-    "@open-wc/testing-karma": "^3.2.32",
-    "deepmerge": "^4.2.2",
-    "karma": "^4.4.1",
-    "lit-html": "^1.1.2"
+    "@open-wc/testing": "^3.0.0-next.2",
+    "lit": "^2.0.0-rc.2"
   },
   "directories": {
     "test": "test"
