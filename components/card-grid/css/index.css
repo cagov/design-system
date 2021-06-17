@@ -53,6 +53,7 @@ h3 {
   fill: #33705B;
   fill: var(--primary-color, #33705B);
   width: 1rem;
+  max-height: 36px;
   margin-top: .2rem;
   margin-left: 1rem;
 }
