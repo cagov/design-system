@@ -1,16 +1,16 @@
 /* accordion component specific classes */
-cagov-accordion .card {
+cagov-accordion .accordion-card {
   border-radius: 0 !important;
   border: none;
   margin-bottom: 0;
   min-height: 3rem;
 }
-cagov-accordion .card-container {
+cagov-accordion .accordion-card-container {
   display: block;
   overflow: hidden;
 }
 
-cagov-accordion button.card-header {
+cagov-accordion button.accordion-card-header {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -34,7 +34,7 @@ cagov-accordion .accordion-title {
   font-weight: bold;
 }
 
-cagov-accordion.prog-enhanced .card-container {
+cagov-accordion.prog-enhanced .accordion-card-container {
   height: 0px;
   transition: height 0.3s ease;
 }
@@ -57,10 +57,10 @@ cagov-accordion .collapsed {
   text-align: left !important;
 }
 
-button.card-header:hover {
+button.accordion-card-header:hover {
   background-color: #f2f54c;
 }
-button.card-header:focus {
+button.accordion-card-header:focus {
   outline-offset: -2px;
 }
 
@@ -86,7 +86,7 @@ button.card-header:focus {
 }
 
 @media only screen and (max-width: 767px) {
-  .accordion-alpha-open + .card-container {
+  .accordion-alpha-open + .accordion-card-container {
     height: 100% !important;
   }
 }
