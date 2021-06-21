@@ -2,7 +2,7 @@
   "name": "@cagov/ds-feedback",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build:sass": "sass src/css/index.scss src/css/index.css",
     "build:js": "rollup --config rollup.config.js",
