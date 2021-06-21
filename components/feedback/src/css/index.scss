@@ -1,54 +1,68 @@
+$tablet: 48rem; //768px
+$desktop: 81.25rem; //1300px
 
-pagerating-section {
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+cagov-feedback {
 
 	.feedback-form {
-		background: $blue;
-		padding: 2rem;
-		text-align: center;
-		@include desktop {
-			padding: 3rem
+		background: var(--primary-color, #064E66);
+		padding: 1rem;
+		
+		&-question {
+			display: flex;
+			align-items: center;	
 		}
 	
 		&-label {
 			color: #fff;
 			// cursor: pointer;
 			display: block;
-			margin-bottom: 0.5rem;
+			margin-right: 1rem;
 			transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
-			font-size: 1.25rem;
-
-			@include desktop {
-				margin-bottom: 0;
-
-			}
-
-			&hover {
-				color:$yellow;
-			}
 		}
 		&-button {
-			background: $orange;
-			padding: 0.75rem 1.5rem;
-			color: $darkblue;
+			padding: 1rem;
+			color: var(--primary-color, #064E66);
 			border: none;
-			border-radius: 2rem;
+			border-radius: .3rem;
 			transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
 			cursor: pointer;
-			text-transform: uppercase;
 			margin: 0 0.25rem;
 			display: inline !important;
+			font-weight: bold;
+
+			/* defensive overrides */
+			position: relative;
+			text-transform: none;
+			top: auto;
+			right: auto;
+			background: #fff;
 
 			&:hover {
-				background:$yellow;
+				background:yellow;
 				box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2)
 			}
 			&:focus {
 				box-shadow: 0 0 0 2px #fff
 			}
+			.feedback-yes {
+				margin-right: 1rem;
+			}
 		}
 
 		&-add {
 			padding-top: 2rem;
+			display: none;
 			@include tablet {
 				text-align: left;
 				padding-top: 0;
@@ -56,6 +70,7 @@ pagerating-section {
 		}
 		&-add-grid {
 			position: relative;
+			margin-top: 1rem;
 			@include tablet {
 				display: inline-flex;
 			}
@@ -64,12 +79,9 @@ pagerating-section {
 		&-textarea {
 			width: 100%;
 			padding: 1rem;
+			margin-right: 1rem;
 			font-family: "Roboto", sans-serif;
-			color:$darkblue;
-			
-			&:focus {
-				box-shadow: 0 0 0 2px $orange;
-			}
+			color:darkblue;
 		}
 
 		&-thanks {

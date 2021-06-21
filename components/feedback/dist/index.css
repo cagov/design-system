@@ -1,0 +1,84 @@
+cagov-feedback .feedback-form {
+  background: var(--primary-color, #064E66);
+  padding: 2rem;
+  text-align: center;
+}
+@media (min-width: 81.25rem) {
+  cagov-feedback .feedback-form {
+    padding: 3rem;
+  }
+}
+cagov-feedback .feedback-form-label {
+  color: #fff;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
+  font-size: 1.25rem;
+}
+@media (min-width: 81.25rem) {
+  cagov-feedback .feedback-form-label {
+    margin-bottom: 0;
+  }
+}
+cagov-feedback .feedback-form-labelhover {
+  color: yellow;
+}
+cagov-feedback .feedback-form-button {
+  background: orange;
+  padding: 0.75rem 1.5rem;
+  color: darkblue;
+  border: none;
+  border-radius: 2rem;
+  transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0 0.25rem;
+  display: inline !important;
+}
+cagov-feedback .feedback-form-button:hover {
+  background: yellow;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+cagov-feedback .feedback-form-button:focus {
+  box-shadow: 0 0 0 2px #fff;
+}
+cagov-feedback .feedback-form-add {
+  padding-top: 2rem;
+}
+@media (min-width: 48rem) {
+  cagov-feedback .feedback-form-add {
+    text-align: left;
+    padding-top: 0;
+  }
+}
+cagov-feedback .feedback-form-add-grid {
+  position: relative;
+}
+@media (min-width: 48rem) {
+  cagov-feedback .feedback-form-add-grid {
+    display: inline-flex;
+  }
+}
+cagov-feedback .feedback-form-textarea {
+  width: 100%;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: darkblue;
+}
+cagov-feedback .feedback-form-textarea:focus {
+  box-shadow: 0 0 0 2px orange;
+}
+cagov-feedback .feedback-form-thanks {
+  display: none;
+  color: #fff;
+}
+cagov-feedback .feedback-form-error {
+  position: relative;
+  top: 100%;
+  left: 0;
+  display: none;
+  font-weight: 300;
+  text-align: left;
+}
+
+/*# sourceMappingURL=index.css.map */
