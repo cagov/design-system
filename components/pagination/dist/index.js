@@ -29,7 +29,7 @@ function templateHTML (next, previous, page, currentPage, totalPages) {
           class="cagov-pagination__link cagov-pagination__previous-page"
           aria-label="${previous} ${page}"
         >
-          <span class="cagov-pagination__link-text ${(currentPage > 2) ? 'cagov-pagination__link-inactive' : ''}"> ${previous} </span>
+          <span class="cagov-pagination__link-text ${(currentPage > 2) ? '' : 'cagov-pagination__link-inactive'}"> ${previous} </span>
         </a>
       </li>
       ${(currentPage > 2) ? pageListItem(page, 1) : ''}
@@ -75,6 +75,8 @@ var styles = "cagov-pagination .cagov-pagination__list {\n  list-style: none;\n 
  * Pagination web component
  * 
  * @element cagov-pagination
+ * 
+ * @fires paginationClick - custom event with object with detail value of current page: {detail: 1}
  * 
  * @attr {string} [data-yes] - "Yes";
  * @attr {string} [data-no] - "No";
@@ -124,8 +126,6 @@ class CAGovPagination extends window.HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log(name);
-    console.log(newValue);
     if (name === 'data-current-page') {
       this.currentPage = parseInt(newValue);
       this.render();
@@ -133,32 +133,38 @@ class CAGovPagination extends window.HTMLElement {
   }
 
   applyListeners() {
-    let pageLinks = this.querySelector(".cagov-pagination__button");
+    let pageLinks = this.querySelectorAll(".cagov-pagination__button");
     pageLinks.forEach(function(pl) {
       pl.addEventListener("click", (event) => {
+        this.currentPage = parseInt(event.target.dataset.pageNum);
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
-            detail: parseInt(event.target.dataset.pageNum),
+            detail: this.currentPage
           })
         );
+        this.dataset.currentPage = this.currentPage;
       });  
-    });
+    }.bind(this));
     this.querySelector('.cagov-pagination__previous-page').addEventListener("click", (event) => {
       if(!event.target.classList.contains('cagov-pagination__link-inactive')) {
+        this.currentPage--;
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
-            detail: this.currentPage - 1,
+            detail: this.currentPage
           })
         );
+        this.dataset.currentPage = this.currentPage;
       }
     });
     this.querySelector('.cagov-pagination__next-page').addEventListener("click", (event) => {
       if(!event.target.classList.contains('cagov-pagination__link-inactive')) {
+        this.currentPage++;
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
-            detail: this.currentPage + 1,
+            detail: this.currentPage
           })
-        );  
+        );
+        this.dataset.currentPage = this.currentPage;
       }
     });
   }

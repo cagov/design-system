@@ -56,8 +56,6 @@ export class CAGovPagination extends window.HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log(name)
-    console.log(newValue)
     if (name === 'data-current-page') {
       this.currentPage = parseInt(newValue);
       this.render();
@@ -65,32 +63,38 @@ export class CAGovPagination extends window.HTMLElement {
   }
 
   applyListeners() {
-    let pageLinks = this.querySelector(".cagov-pagination__button");
+    let pageLinks = this.querySelectorAll(".cagov-pagination__button");
     pageLinks.forEach(function(pl) {
       pl.addEventListener("click", (event) => {
+        this.currentPage = parseInt(event.target.dataset.pageNum);
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
-            detail: parseInt(event.target.dataset.pageNum),
+            detail: this.currentPage
           })
         );
+        this.dataset.currentPage = this.currentPage;
       });  
-    })
+    }.bind(this))
     this.querySelector('.cagov-pagination__previous-page').addEventListener("click", (event) => {
       if(!event.target.classList.contains('cagov-pagination__link-inactive')) {
+        this.currentPage--;
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
-            detail: this.currentPage - 1,
+            detail: this.currentPage
           })
         );
+        this.dataset.currentPage = this.currentPage;
       }
     });
     this.querySelector('.cagov-pagination__next-page').addEventListener("click", (event) => {
       if(!event.target.classList.contains('cagov-pagination__link-inactive')) {
+        this.currentPage++;
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
-            detail: this.currentPage + 1,
+            detail: this.currentPage
           })
-        );  
+        );
+        this.dataset.currentPage = this.currentPage;
       }
     });
   }

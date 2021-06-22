@@ -29,7 +29,7 @@ export default function (next, previous, page, currentPage, totalPages) {
           class="cagov-pagination__link cagov-pagination__previous-page"
           aria-label="${previous} ${page}"
         >
-          <span class="cagov-pagination__link-text ${(currentPage > 2) ? 'cagov-pagination__link-inactive' : ''}"> ${previous} </span>
+          <span class="cagov-pagination__link-text ${(currentPage > 2) ? '' : 'cagov-pagination__link-inactive'}"> ${previous} </span>
         </a>
       </li>
       ${(currentPage > 2) ? pageListItem(page, 1) : ''}
