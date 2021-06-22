@@ -1,0 +1,34 @@
+cagov-pagination {
+  .cagov-pagination__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .cagov-pagination__item {
+    border: 1px solid #EDEDEF;
+    border-radius: .3rem;
+    padding: .75rem .875rem;
+    margin: .25rem;
+    a {
+      color: var(--primary-color, #064E66);
+    }
+
+    &.cagov-pagination-current {
+      background-color: #064E66;
+      background-color: var(--primary-color, #064E66);
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .cagov-pagination__item
+
+  .cagov-pagination__link-inactive {
+    color: grey;
+    border-color: grey;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+}

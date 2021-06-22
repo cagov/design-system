@@ -6,6 +6,8 @@ import styles from './css/index.css';
  * 
  * @element cagov-feedback
  * 
+ * @fires ratedPage - custom event with object with detail value of whether the user clicked yes or no to the first question: {detail: "yes"}. This can be used to send that value as a GA event outside this component.
+ * 
  * @attr {string} [data-question] - "Did you find what you were looking for?";
  * @attr {string} [data-yes] - "Yes";
  * @attr {string} [data-no] - "No";

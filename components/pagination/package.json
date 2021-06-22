@@ -1,0 +1,19 @@
+{
+  "name": "@cagov/ds-pagination",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:sass": "sass src/css/index.scss src/css/index.css",
+    "build:js": "rollup --config rollup.config.js",
+    "build": "npm run build:sass && npm run build:js"
+  },
+  "devDependencies": {
+    "rollup": "^2.52.2",
+    "rollup-plugin-import-css": "^2.0.1",
+    "sass": "^1.34.1"
+  },
+  "keywords": [],
+  "author": "State of California Office of Digital Innovation",
+  "license": "ISC"
+}

@@ -1,0 +1,40 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "cagov-pagination",
+      "path": "./src/index.js",
+      "description": "Pagination web component",
+      "attributes": [
+        {
+          "name": "data-yes",
+          "description": "\"Yes\";",
+          "type": "string"
+        },
+        {
+          "name": "data-no",
+          "description": "\"No\";",
+          "type": "string"
+        },
+        {
+          "name": "data-current-page"
+        },
+        {
+          "name": "data-total-pages"
+        }
+      ],
+      "events": [
+        {
+          "name": "paginationClick",
+          "description": "custom event with object with detail value of current page: {detail: 1}"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--primary-color",
+          "description": "Default value of #064E66, used for text, border color"
+        }
+      ]
+    }
+  ]
+}
