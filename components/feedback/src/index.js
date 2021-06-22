@@ -27,7 +27,6 @@ export class CAGovFeedback extends window.HTMLElement {
     style.textContent = styles;
     document.querySelector('head').appendChild(style);
     if (document.querySelector('api-viewer')) {
-      console.log('hi')
       let link = document.createElement('link');
       link.setAttribute('rel', 'stylesheet');
       link.setAttribute('href', './src/css/index.css');
