@@ -12,6 +12,10 @@ cagov-pagination {
     margin: .25rem;
     a {
       color: var(--primary-color, #064E66);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
 
     &.cagov-pagination-current {

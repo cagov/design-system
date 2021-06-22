@@ -12,6 +12,10 @@ cagov-pagination .cagov-pagination__item {
 }
 cagov-pagination .cagov-pagination__item a {
   color: var(--primary-color, #064E66);
+  text-decoration: none;
+}
+cagov-pagination .cagov-pagination__item a:hover {
+  text-decoration: underline;
 }
 cagov-pagination .cagov-pagination__item.cagov-pagination-current {
   background-color: #064E66;
