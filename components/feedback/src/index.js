@@ -6,6 +6,8 @@ import styles from './css/index.css';
  * 
  * @element cagov-feedback
  * 
+ * @fires ratedPage - custom event with object with detail value of whether the user clicked yes or no to the first question: {detail: "yes"}. This can be used to send that value as a GA event outside this component.
+ * 
  * @attr {string} [data-question] - "Did you find what you were looking for?";
  * @attr {string} [data-yes] - "Yes";
  * @attr {string} [data-no] - "No";
@@ -27,7 +29,6 @@ export class CAGovFeedback extends window.HTMLElement {
     style.textContent = styles;
     document.querySelector('head').appendChild(style);
     if (document.querySelector('api-viewer')) {
-      console.log('hi')
       let link = document.createElement('link');
       link.setAttribute('rel', 'stylesheet');
       link.setAttribute('href', './src/css/index.css');
