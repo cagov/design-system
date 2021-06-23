@@ -1,6 +1,7 @@
 cagov-feedback .feedback-form {
-  background: var(--primary-color, #064E66);
+  background: var(--secondary-color, #2F4C2C);
   padding: 1rem;
+  border-radius: 0.3125rem;
 }
 cagov-feedback .feedback-form-question {
   display: flex;
@@ -11,15 +12,16 @@ cagov-feedback .feedback-form-label {
   display: block;
   margin-right: 1rem;
   transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
+  line-height: 3rem;
 }
 cagov-feedback .feedback-form-button {
   padding: 1rem;
-  color: var(--primary-color, #064E66);
+  color: var(--secondary-color, #2F4C2C);
   border: none;
   border-radius: 0.3rem;
   transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
   cursor: pointer;
-  margin: 0 0.25rem;
+  margin: 0 0.5rem 0 0;
   display: inline !important;
   font-weight: bold;
   /* defensive overrides */
@@ -30,8 +32,9 @@ cagov-feedback .feedback-form-button {
   background: #fff;
 }
 cagov-feedback .feedback-form-button:hover {
-  background: yellow;
+  background: #d5dbd5;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  text-decoration: underline;
 }
 cagov-feedback .feedback-form-button:focus {
   box-shadow: 0 0 0 2px #fff;
@@ -56,14 +59,19 @@ cagov-feedback .feedback-form-add-grid {
 @media (min-width: 48rem) {
   cagov-feedback .feedback-form-add-grid {
     display: inline-flex;
+    flex-flow: column;
+    align-items: flex-start;
   }
 }
 cagov-feedback .feedback-form-textarea {
   width: 100%;
   padding: 1rem;
-  margin-right: 1rem;
+  margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
   color: darkblue;
+  max-width: 90%;
+  height: 127px;
+  width: 600px;
 }
 cagov-feedback .feedback-form-thanks {
   display: none;

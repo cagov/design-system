@@ -19,9 +19,6 @@ var styles = "/* accordion component specific classes */\ncagov-accordion .cagov
 class CaGovAccordion extends window.HTMLElement {
   constructor() {
     super();
-    const style = document.createElement("style");
-    style.textContent = styles;
-    document.querySelector('head').appendChild(style);
     if (document.querySelector('api-viewer')) {
       let link = document.createElement('link');
       link.setAttribute('rel', 'stylesheet');
@@ -118,5 +115,8 @@ class CaGovAccordion extends window.HTMLElement {
 
 }
 window.customElements.define('cagov-accordion', CaGovAccordion);
+const style = document.createElement("style");
+style.textContent = styles;
+document.querySelector('head').appendChild(style);
 
 export { CaGovAccordion };

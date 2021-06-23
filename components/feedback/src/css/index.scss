@@ -15,12 +15,14 @@ $desktop: 81.25rem; //1300px
 cagov-feedback {
 
 	.feedback-form {
-		background: var(--primary-color, #064E66);
+		background: var(--secondary-color, #2F4C2C);
 		padding: 1rem;
-		
+		border-radius: .3125rem;
+
 		&-question {
 			display: flex;
-			align-items: center;	
+			align-items: center;
+			flex-wrap: wrap;
 		}
 	
 		&-label {
@@ -29,15 +31,16 @@ cagov-feedback {
 			display: block;
 			margin-right: 1rem;
 			transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
+			line-height: 3rem;
 		}
 		&-button {
 			padding: 1rem;
-			color: var(--primary-color, #064E66);
+			color: var(--secondary-color, #2F4C2C);
 			border: none;
 			border-radius: .3rem;
 			transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
 			cursor: pointer;
-			margin: 0 0.25rem;
+			margin: 0 0.5rem 0 0;
 			display: inline !important;
 			font-weight: bold;
 
@@ -49,8 +52,9 @@ cagov-feedback {
 			background: #fff;
 
 			&:hover {
-				background:yellow;
-				box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2)
+				background: #d5dbd5;
+				box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+				text-decoration: underline;
 			}
 			&:focus {
 				box-shadow: 0 0 0 2px #fff
@@ -73,15 +77,20 @@ cagov-feedback {
 			margin-top: 1rem;
 			@include tablet {
 				display: inline-flex;
+				flex-flow: column;
+				align-items: flex-start;
 			}
 		}
 
 		&-textarea {
 			width: 100%;
 			padding: 1rem;
-			margin-right: 1rem;
+			margin-bottom: 1rem;
 			font-family: "Roboto", sans-serif;
 			color:darkblue;
+			max-width: 90%;
+			height: 127px;
+			width: 600px;
 		}
 
 		&-thanks {

@@ -1,4 +1,4 @@
-export default function (question, yes, no, commentPrompt, thanksFeedback, thanksComments, submit, requiredField) {
+export default function (question, yes, no, commentPrompt, thanksFeedback, thanksComments, submit) {
   return `
   <div class="feedback-form cagov-stack">
     <div class="js-feedback-form feedback-form-question">
@@ -13,7 +13,6 @@ export default function (question, yes, no, commentPrompt, thanksFeedback, thank
       <label class="feedback-form-label js-feedback-field-label" for="add-feedback">${commentPrompt}</label>
       <div class="feedback-form-add-grid">
         <textarea name="add-feedback" class="js-add-feedback feedback-form-textarea" id="add-feedback" rows="1"></textarea>
-        <div class="feedback-form-error feedback-error" role="alert">${requiredField}</div>
         <button class="feedback-form-button js-feedback-submit" type="submit" id="feedback-submit">${submit}</button>
       </div>
     </div>

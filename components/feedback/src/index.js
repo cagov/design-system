@@ -16,7 +16,6 @@ import styles from './css/index.css';
  * @attr {string} [data-thanksFeedback] - "Thank you for your feedback!";
  * @attr {string} [data-thanksComments] - "Thank you for your comments!";
  * @attr {string} [data-submit] - "Submit";
- * @attr {string} [data-requiredField] - "This field is required";
  * @attr {string} [data-anythingToAdd] - "If you have anything to add,"
  * @attr {string} [data-anyOtherFeedback] - "If you have any other feedback about this website,"
  *
@@ -25,9 +24,6 @@ import styles from './css/index.css';
 export class CAGovFeedback extends window.HTMLElement {
   constructor() {
     super();
-    const style = document.createElement("style");
-    style.textContent = styles;
-    document.querySelector('head').appendChild(style);
     if (document.querySelector('api-viewer')) {
       let link = document.createElement('link');
       link.setAttribute('rel', 'stylesheet');
@@ -55,9 +51,6 @@ export class CAGovFeedback extends window.HTMLElement {
       ? this.dataset.thanksComments
       : "Thank you for your comments!";
     let submit = this.dataset.submit ? this.dataset.submit : "Submit";
-    let requiredField = this.dataset.requiredField
-      ? this.dataset.requiredField
-      : "This field is required";
     let characterLimit = this.dataset.characterLimit
       ? this.dataset.characterLimit
       : "You have reached your character limit."
@@ -77,7 +70,6 @@ export class CAGovFeedback extends window.HTMLElement {
       thanksFeedback,
       thanksComments,
       submit,
-      requiredField,
       characterLimit,
       anythingToAdd,
       anyOtherFeedback
@@ -158,3 +150,6 @@ export class CAGovFeedback extends window.HTMLElement {
   }
 }
 window.customElements.define('cagov-feedback', CAGovFeedback);
+const style = document.createElement("style");
+style.textContent = styles;
+document.querySelector('head').appendChild(style);

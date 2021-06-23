@@ -86,9 +86,6 @@ var styles = "cagov-pagination .cagov-pagination__list {\n  list-style: none;\n 
 class CAGovPagination extends window.HTMLElement {
   constructor() {
     super();
-    const style = document.createElement("style");
-    style.textContent = styles;
-    document.querySelector('head').appendChild(style);
     if (document.querySelector('api-viewer')) {
       let link = document.createElement('link');
       link.setAttribute('rel', 'stylesheet');
@@ -170,5 +167,8 @@ class CAGovPagination extends window.HTMLElement {
   }
 }
 window.customElements.define('cagov-pagination', CAGovPagination);
+const style = document.createElement("style");
+style.textContent = styles;
+document.querySelector('head').appendChild(style);
 
 export { CAGovPagination };

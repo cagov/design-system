@@ -1,4 +1,4 @@
-function ratingsTemplate (question, yes, no, commentPrompt, thanksFeedback, thanksComments, submit, requiredField) {
+function ratingsTemplate (question, yes, no, commentPrompt, thanksFeedback, thanksComments, submit) {
   return `
   <div class="feedback-form cagov-stack">
     <div class="js-feedback-form feedback-form-question">
@@ -13,7 +13,6 @@ function ratingsTemplate (question, yes, no, commentPrompt, thanksFeedback, than
       <label class="feedback-form-label js-feedback-field-label" for="add-feedback">${commentPrompt}</label>
       <div class="feedback-form-add-grid">
         <textarea name="add-feedback" class="js-add-feedback feedback-form-textarea" id="add-feedback" rows="1"></textarea>
-        <div class="feedback-form-error feedback-error" role="alert">${requiredField}</div>
         <button class="feedback-form-button js-feedback-submit" type="submit" id="feedback-submit">${submit}</button>
       </div>
     </div>
@@ -22,7 +21,7 @@ function ratingsTemplate (question, yes, no, commentPrompt, thanksFeedback, than
   </div>`
 }
 
-var styles = "cagov-feedback .feedback-form {\n  background: var(--primary-color, #064E66);\n  padding: 1rem;\n}\ncagov-feedback .feedback-form-question {\n  display: flex;\n  align-items: center;\n}\ncagov-feedback .feedback-form-label {\n  color: #fff;\n  display: block;\n  margin-right: 1rem;\n  transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);\n}\ncagov-feedback .feedback-form-button {\n  padding: 1rem;\n  color: var(--primary-color, #064E66);\n  border: none;\n  border-radius: 0.3rem;\n  transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);\n  cursor: pointer;\n  margin: 0 0.25rem;\n  display: inline !important;\n  font-weight: bold;\n  /* defensive overrides */\n  position: relative;\n  text-transform: none;\n  top: auto;\n  right: auto;\n  background: #fff;\n}\ncagov-feedback .feedback-form-button:hover {\n  background: yellow;\n  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);\n}\ncagov-feedback .feedback-form-button:focus {\n  box-shadow: 0 0 0 2px #fff;\n}\ncagov-feedback .feedback-form-button .feedback-yes {\n  margin-right: 1rem;\n}\ncagov-feedback .feedback-form-add {\n  padding-top: 2rem;\n  display: none;\n}\n@media (min-width: 48rem) {\n  cagov-feedback .feedback-form-add {\n    text-align: left;\n    padding-top: 0;\n  }\n}\ncagov-feedback .feedback-form-add-grid {\n  position: relative;\n  margin-top: 1rem;\n}\n@media (min-width: 48rem) {\n  cagov-feedback .feedback-form-add-grid {\n    display: inline-flex;\n  }\n}\ncagov-feedback .feedback-form-textarea {\n  width: 100%;\n  padding: 1rem;\n  margin-right: 1rem;\n  font-family: \"Roboto\", sans-serif;\n  color: darkblue;\n}\ncagov-feedback .feedback-form-thanks {\n  display: none;\n  color: #fff;\n}\ncagov-feedback .feedback-form-error {\n  position: relative;\n  top: 100%;\n  left: 0;\n  display: none;\n  font-weight: 300;\n  text-align: left;\n}\n\n/*# sourceMappingURL=index.css.map */\n";
+var styles = "cagov-feedback .feedback-form {\n  background: var(--secondary-color, #2F4C2C);\n  padding: 1rem;\n  border-radius: 0.3125rem;\n}\ncagov-feedback .feedback-form-question {\n  display: flex;\n  align-items: center;\n}\ncagov-feedback .feedback-form-label {\n  color: #fff;\n  display: block;\n  margin-right: 1rem;\n  transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);\n  line-height: 3rem;\n}\ncagov-feedback .feedback-form-button {\n  padding: 1rem;\n  color: var(--secondary-color, #2F4C2C);\n  border: none;\n  border-radius: 0.3rem;\n  transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);\n  cursor: pointer;\n  margin: 0 0.5rem 0 0;\n  display: inline !important;\n  font-weight: bold;\n  /* defensive overrides */\n  position: relative;\n  text-transform: none;\n  top: auto;\n  right: auto;\n  background: #fff;\n}\ncagov-feedback .feedback-form-button:hover {\n  background: #d5dbd5;\n  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);\n  text-decoration: underline;\n}\ncagov-feedback .feedback-form-button:focus {\n  box-shadow: 0 0 0 2px #fff;\n}\ncagov-feedback .feedback-form-button .feedback-yes {\n  margin-right: 1rem;\n}\ncagov-feedback .feedback-form-add {\n  padding-top: 2rem;\n  display: none;\n}\n@media (min-width: 48rem) {\n  cagov-feedback .feedback-form-add {\n    text-align: left;\n    padding-top: 0;\n  }\n}\ncagov-feedback .feedback-form-add-grid {\n  position: relative;\n  margin-top: 1rem;\n}\n@media (min-width: 48rem) {\n  cagov-feedback .feedback-form-add-grid {\n    display: inline-flex;\n    flex-flow: column;\n    align-items: flex-start;\n  }\n}\ncagov-feedback .feedback-form-textarea {\n  width: 100%;\n  padding: 1rem;\n  margin-bottom: 1rem;\n  font-family: \"Roboto\", sans-serif;\n  color: darkblue;\n  max-width: 90%;\n  height: 127px;\n  width: 600px;\n}\ncagov-feedback .feedback-form-thanks {\n  display: none;\n  color: #fff;\n}\ncagov-feedback .feedback-form-error {\n  position: relative;\n  top: 100%;\n  left: 0;\n  display: none;\n  font-weight: 300;\n  text-align: left;\n}\n\n/*# sourceMappingURL=index.css.map */\n";
 
 /**
  * Page feedback web component that asks if you found what you were looking for, then prompts for comments
@@ -39,7 +38,6 @@ var styles = "cagov-feedback .feedback-form {\n  background: var(--primary-color
  * @attr {string} [data-thanksFeedback] - "Thank you for your feedback!";
  * @attr {string} [data-thanksComments] - "Thank you for your comments!";
  * @attr {string} [data-submit] - "Submit";
- * @attr {string} [data-requiredField] - "This field is required";
  * @attr {string} [data-anythingToAdd] - "If you have anything to add,"
  * @attr {string} [data-anyOtherFeedback] - "If you have any other feedback about this website,"
  *
@@ -48,9 +46,6 @@ var styles = "cagov-feedback .feedback-form {\n  background: var(--primary-color
 class CAGovFeedback extends window.HTMLElement {
   constructor() {
     super();
-    const style = document.createElement("style");
-    style.textContent = styles;
-    document.querySelector('head').appendChild(style);
     if (document.querySelector('api-viewer')) {
       let link = document.createElement('link');
       link.setAttribute('rel', 'stylesheet');
@@ -78,9 +73,6 @@ class CAGovFeedback extends window.HTMLElement {
       ? this.dataset.thanksComments
       : "Thank you for your comments!";
     let submit = this.dataset.submit ? this.dataset.submit : "Submit";
-    let requiredField = this.dataset.requiredField
-      ? this.dataset.requiredField
-      : "This field is required";
     this.dataset.characterLimit
       ? this.dataset.characterLimit
       : "You have reached your character limit.";
@@ -99,8 +91,7 @@ class CAGovFeedback extends window.HTMLElement {
       commentPrompt,
       thanksFeedback,
       thanksComments,
-      submit,
-      requiredField);
+      submit);
     this.innerHTML = html;
     this.applyListeners();
   }
@@ -177,5 +168,8 @@ class CAGovFeedback extends window.HTMLElement {
   }
 }
 window.customElements.define('cagov-feedback', CAGovFeedback);
+const style = document.createElement("style");
+style.textContent = styles;
+document.querySelector('head').appendChild(style);
 
 export { CAGovFeedback };
