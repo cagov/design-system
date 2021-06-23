@@ -27,7 +27,14 @@ cagov-pagination .cagov-pagination__item.cagov-pagination-current {
 cagov-pagination .cagov-pagination__item.cagov-pagination-current a {
   color: #fff;
 }
-cagov-pagination .cagov-pagination__item .cagov-pagination__link-inactive {
+cagov-pagination .cagov-pagination__item.cagov-pagination__overflow {
+  border: none;
+  padding: 0.875rem 0;
+}
+cagov-pagination .cagov-pagination__item.cagov-pagination__overflow:hover {
+  background: inherit;
+}
+cagov-pagination .cagov-pagination__link-inactive {
   color: grey;
   border-color: grey;
   cursor: not-allowed;
