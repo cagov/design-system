@@ -21,6 +21,7 @@
   "homepage": "https://github.com/cagov/design-system#readme",
   "devDependencies": {
     "@web/dev-server": "^0.1.17",
+    "rollup-plugin-import-css": "^2.0.1",
     "sass": "^1.34.1"
   }
 }

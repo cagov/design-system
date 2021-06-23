@@ -1,0 +1,47 @@
+cagov-pagination {
+  .cagov-pagination__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .cagov-pagination__item {
+    border: 1px solid #EDEDEF;
+    border-radius: .3rem;
+    padding: .75rem .875rem;
+    margin: .25rem;
+    a {
+      color: var(--primary-color, #064E66);
+      text-decoration: none;
+    }
+    &:hover {
+      background: #F9F9FA;
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    &.cagov-pagination-current {
+      background-color: #064E66;
+      background-color: var(--primary-color, #064E66);
+      a {
+        color: #fff;
+      }
+    }
+    &.cagov-pagination__overflow {
+      border: none;
+      padding: 0.875rem 0;
+      &:hover {
+        background: inherit;
+      }
+    }
+  }
+
+  .cagov-pagination__link-inactive {
+    color: grey;
+    border-color: grey;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+}

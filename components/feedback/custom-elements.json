@@ -1,0 +1,78 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "cagov-feedback",
+      "path": "./src/index.js",
+      "description": "Page feedback web component that asks if you found what you were looking for, then prompts for comments",
+      "attributes": [
+        {
+          "name": "data-question",
+          "description": "\"Did you find what you were looking for?\";",
+          "type": "string"
+        },
+        {
+          "name": "data-yes",
+          "description": "\"Yes\";",
+          "type": "string"
+        },
+        {
+          "name": "data-no",
+          "description": "\"No\";",
+          "type": "string"
+        },
+        {
+          "name": "data-commentPrompt",
+          "description": "\"What was the problem?\";",
+          "type": "string"
+        },
+        {
+          "name": "data-positiveCommentPrompt",
+          "description": "\"Great! What were you looking for today?\";",
+          "type": "string"
+        },
+        {
+          "name": "data-thanksFeedback",
+          "description": "\"Thank you for your feedback!\";",
+          "type": "string"
+        },
+        {
+          "name": "data-thanksComments",
+          "description": "\"Thank you for your comments!\";",
+          "type": "string"
+        },
+        {
+          "name": "data-submit",
+          "description": "\"Submit\";",
+          "type": "string"
+        },
+        {
+          "name": "data-requiredField",
+          "description": "\"This field is required\";",
+          "type": "string"
+        },
+        {
+          "name": "data-anythingToAdd",
+          "description": "\"If you have anything to add,\"",
+          "type": "string"
+        },
+        {
+          "name": "data-anyOtherFeedback",
+          "description": "\"If you have any other feedback about this website,\"",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "ratedPage"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--primary-color",
+          "description": "Default value of #064E66, used for background"
+        }
+      ]
+    }
+  ]
+}
