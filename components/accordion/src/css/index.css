@@ -1,10 +1,12 @@
 /* accordion component specific classes */
-cagov-accordion .accordion-card {
-  border-radius: 0 !important;
-  border: none;
+cagov-accordion .cagov-accordion-card {
+  border-radius: .3rem !important;
   margin-bottom: 0;
   min-height: 3rem;
+  margin-top: .5rem;
+  border: solid 1px #ededef !important;
 }
+
 cagov-accordion .accordion-card-container {
   display: block;
   overflow: hidden;
@@ -19,8 +21,7 @@ cagov-accordion button.accordion-card-header {
   background-color: #EDEDEF;
   border: none;
   position: relative;
-  margin-top: -1px;
-  width: 98%;
+  width: 100%;
   line-height: 3rem;
 }
 cagov-accordion .accordion-title {
@@ -37,6 +38,9 @@ cagov-accordion .accordion-title {
 cagov-accordion.prog-enhanced .accordion-card-container {
   height: 0px;
   transition: height 0.3s ease;
+}
+cagov-accordion.prog-enhanced .accordion-card-container .card-body {
+  padding-left: 1rem;
 }
 
 cagov-accordion .collapsed {
@@ -58,10 +62,17 @@ cagov-accordion .collapsed {
 }
 
 button.accordion-card-header:hover {
-  background-color: #f2f54c;
+  background-color: var(--hover-color, #F9F9FA);
+}
+button.accordion-card-header:hover .accordion-title {
+  text-decoration: underline;
 }
 button.accordion-card-header:focus {
   outline-offset: -2px;
+}
+
+.accordion-icon svg line {
+  stroke-width: 4px;  
 }
 
 .prog-enhanced .accordion-alpha .plus-minus {
@@ -76,6 +87,8 @@ button.accordion-card-header:focus {
 }
 .prog-enhanced .accordion-alpha .plus-minus svg {
   fill: var(--primary-color, #064E66);
+  width: 25px;
+  height: 25px;
 }
 
 .prog-enhanced .accordion-alpha-open cagov-plus .accordion-icon {

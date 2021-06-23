@@ -9,7 +9,7 @@ It is designed for use on https://covid19.ca.gov.
 
 ```
 <cagov-accordion>
-  <div class="accordion-card">
+  <div class="cagov-accordion-card">
     <button class="accordion-card-header accordion-alpha" type="button" aria-expanded="false">
       <div class="accordion-title">Lorem ipsum</div>
       <div class="plus-minus">
