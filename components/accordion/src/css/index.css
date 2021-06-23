@@ -79,7 +79,6 @@ button.accordion-card-header:focus {
   width: 2.125rem;
   height: 2.125rem;
   border: none;
-  padding: 0.45rem .45rem;
   overflow: hidden;
   margin-left: 1rem;
   color: var(--primary-color, #064E66);
