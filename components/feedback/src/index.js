@@ -103,16 +103,6 @@ export class CAGovFeedback extends window.HTMLElement {
       }
     });
 
-    feedback.addEventListener("keydown", function (event) {
-      if (feedback.value.length > 600) {
-        document.querySelector(".feedback-limit-error").style.display = "block";
-      } else {
-        document
-          .querySelector(".feedback-limit-error")
-          .removeAttribute("style");
-      }
-    });
-
     feedback.addEventListener("blur", (event) => {
       if (feedback.value.length !== 0) {
         this.querySelector(".js-feedback-submit").style.display = "block";

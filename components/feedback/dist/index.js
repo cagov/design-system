@@ -29,6 +29,8 @@ var styles = "cagov-feedback .feedback-form {\n  background: var(--primary-color
  * 
  * @element cagov-feedback
  * 
+ * @fires ratedPage - custom event with object with detail value of whether the user clicked yes or no to the first question: {detail: "yes"}. This can be used to send that value as a GA event outside this component.
+ * 
  * @attr {string} [data-question] - "Did you find what you were looking for?";
  * @attr {string} [data-yes] - "Yes";
  * @attr {string} [data-no] - "No";
@@ -50,7 +52,6 @@ class CAGovFeedback extends window.HTMLElement {
     style.textContent = styles;
     document.querySelector('head').appendChild(style);
     if (document.querySelector('api-viewer')) {
-      console.log('hi');
       let link = document.createElement('link');
       link.setAttribute('rel', 'stylesheet');
       link.setAttribute('href', './src/css/index.css');
@@ -118,16 +119,6 @@ class CAGovFeedback extends window.HTMLElement {
         feedback.setAttribute("rows", "3");
       } else {
         feedback.setAttribute("rows", "1");
-      }
-    });
-
-    feedback.addEventListener("keydown", function (event) {
-      if (feedback.value.length > 600) {
-        document.querySelector(".feedback-limit-error").style.display = "block";
-      } else {
-        document
-          .querySelector(".feedback-limit-error")
-          .removeAttribute("style");
       }
     });
 
