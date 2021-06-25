@@ -13,9 +13,10 @@ $desktop: 81.25rem; //1300px
 }
 
 cagov-feedback {
+	width: 100%;
 
 	.feedback-form {
-		background: var(--secondary-color, #2F4C2C);
+		background: var(--standout-color, #2F4C2C);
 		padding: 1rem;
 		border-radius: .3125rem;
 
@@ -35,7 +36,7 @@ cagov-feedback {
 		}
 		&-button {
 			padding: 1rem;
-			color: var(--secondary-color, #2F4C2C);
+			color: var(--standout-color, #2F4C2C);
 			border: none;
 			border-radius: .3rem;
 			transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);

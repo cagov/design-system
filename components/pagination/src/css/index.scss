@@ -8,9 +8,10 @@ cagov-pagination {
   .cagov-pagination__item {
     border: 1px solid #EDEDEF;
     border-radius: .3rem;
-    padding: .75rem .875rem;
     margin: .25rem;
     a {
+      padding: .75rem .875rem;
+      display: inline-block;
       color: var(--primary-color, #064E66);
       text-decoration: none;
     }

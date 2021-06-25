@@ -7,10 +7,11 @@ cagov-pagination .cagov-pagination__list {
 cagov-pagination .cagov-pagination__item {
   border: 1px solid #EDEDEF;
   border-radius: 0.3rem;
-  padding: 0.75rem 0.875rem;
   margin: 0.25rem;
 }
 cagov-pagination .cagov-pagination__item a {
+  padding: 0.75rem 0.875rem;
+  display: inline-block;
   color: var(--primary-color, #064E66);
   text-decoration: none;
 }
