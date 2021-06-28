@@ -28,11 +28,14 @@ cagov-feedback {
 	
 		&-label {
 			color: #fff;
-			// cursor: pointer;
 			display: block;
 			margin-right: 1rem;
 			transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
 			line-height: 3rem;
+			width: 100%;
+			@include tablet {
+				width: auto;
+			}
 		}
 		&-button {
 			padding: 1rem;
@@ -43,7 +46,6 @@ cagov-feedback {
 			cursor: pointer;
 			margin: 0 0.5rem 0 0;
 			display: inline !important;
-			font-weight: bold;
 
 			/* defensive overrides */
 			position: relative;
@@ -53,7 +55,6 @@ cagov-feedback {
 			background: #fff;
 
 			&:hover {
-				background: #d5dbd5;
 				box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
 				text-decoration: underline;
 			}
