@@ -31,7 +31,9 @@ export class CaGovAccordion extends window.HTMLElement {
     this.classList.add('prog-enhanced');
     this.expandTarget = this.querySelector('.accordion-card-container');
     this.expandButton = this.querySelector('.accordion-card-header');
-    this.expandButton.addEventListener('click', this.listen.bind(this));
+    if(this.expandButton) {
+      this.expandButton.addEventListener('click', this.listen.bind(this));
+    }
     this.activateButton = this.querySelector('.accordion-card-header');
     this.eventType = this.dataset.eventType ? this.dataset.eventType : 'click';
 
