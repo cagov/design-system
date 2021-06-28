@@ -33,16 +33,16 @@ export class CAGovPagination extends window.HTMLElement {
   }
 
   render() {
-    let previous = this.dataset.previous ? this.dataset.previous : "Previous";
-    let next = this.dataset.next ? this.dataset.next : "Next";
+    let previous = this.dataset.previous ? this.dataset.previous : "&#60;";
+    let next = this.dataset.next ? this.dataset.next : "&#62;";
     let page = this.dataset.page ? this.dataset.page : "Page";
-    let totalPages = this.dataset.totalPages ? this.dataset.totalPages : "1";
+    this.totalPages = this.dataset.totalPages ? this.dataset.totalPages : "1";
     let html = templateHTML(
       next,
       previous,
       page,
       this.currentPage,
-      totalPages
+      this.totalPages
     );
     this.innerHTML = html;
     this.applyListeners();
@@ -75,6 +75,7 @@ export class CAGovPagination extends window.HTMLElement {
     this.querySelector('.cagov-pagination__previous-page').addEventListener("click", (event) => {
       if(!event.target.classList.contains('cagov-pagination__link-inactive')) {
         this.currentPage--;
+        if(this.currentPage < 1) { this.currentPage = 1; }
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
             detail: this.currentPage
@@ -86,6 +87,7 @@ export class CAGovPagination extends window.HTMLElement {
     this.querySelector('.cagov-pagination__next-page').addEventListener("click", (event) => {
       if(!event.target.classList.contains('cagov-pagination__link-inactive')) {
         this.currentPage++;
+        if(this.currentPage > this.totalPages) { this.currentPage = this.totalPages; }
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
             detail: this.currentPage

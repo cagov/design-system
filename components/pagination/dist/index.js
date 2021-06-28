@@ -69,7 +69,7 @@ function templateHTML (next, previous, page, currentPage, totalPages) {
   </nav>`
 }
 
-var styles = "cagov-pagination .cagov-pagination__list {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  display: flex;\n}\ncagov-pagination .cagov-pagination__item {\n  border: 1px solid #EDEDEF;\n  border-radius: 0.3rem;\n  margin: 0.25rem;\n}\ncagov-pagination .cagov-pagination__item a {\n  padding: 0.75rem 0.875rem;\n  display: inline-block;\n  color: var(--primary-color, #064E66);\n  text-decoration: none;\n}\ncagov-pagination .cagov-pagination__item:hover {\n  background: #F9F9FA;\n}\ncagov-pagination .cagov-pagination__item:hover a {\n  text-decoration: underline;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current {\n  background-color: #064E66;\n  background-color: var(--primary-color, #064E66);\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current a {\n  color: #fff;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow {\n  border: none;\n  padding: 0.875rem 0;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow:hover {\n  background: inherit;\n}\ncagov-pagination .cagov-pagination__link-inactive {\n  color: grey;\n  border-color: grey;\n  cursor: not-allowed;\n  opacity: 0.5;\n}\n\n/*# sourceMappingURL=index.css.map */\n";
+var styles = "cagov-pagination .cagov-pagination__list {\n  list-style: none;\n  margin: 0;\n  padding: 0 !important;\n  display: flex;\n}\ncagov-pagination .cagov-pagination__item {\n  border: 1px solid #EDEDEF;\n  border-radius: 0.3rem;\n  margin: 0.25rem;\n}\ncagov-pagination .cagov-pagination__item a {\n  padding: 0.75rem 0.875rem;\n  display: inline-block;\n  color: var(--primary-color, #064E66);\n  text-decoration: none;\n}\ncagov-pagination .cagov-pagination__item:hover {\n  background: #F9F9FA;\n}\ncagov-pagination .cagov-pagination__item:hover a {\n  text-decoration: underline;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current {\n  background-color: #064E66;\n  background-color: var(--primary-color, #064E66);\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current a {\n  color: #fff;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow {\n  border: none;\n  padding: 0.875rem 0;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow:hover {\n  background: inherit;\n}\ncagov-pagination .cagov-pagination__link-inactive {\n  color: grey;\n  border-color: grey;\n  cursor: not-allowed;\n  opacity: 0.5;\n}\n\n/*# sourceMappingURL=index.css.map */\n";
 
 /**
  * Pagination web component
@@ -103,16 +103,16 @@ class CAGovPagination extends window.HTMLElement {
   }
 
   render() {
-    let previous = this.dataset.previous ? this.dataset.previous : "Previous";
-    let next = this.dataset.next ? this.dataset.next : "Next";
+    let previous = this.dataset.previous ? this.dataset.previous : "&#60;";
+    let next = this.dataset.next ? this.dataset.next : "&#62;";
     let page = this.dataset.page ? this.dataset.page : "Page";
-    let totalPages = this.dataset.totalPages ? this.dataset.totalPages : "1";
+    this.totalPages = this.dataset.totalPages ? this.dataset.totalPages : "1";
     let html = templateHTML(
       next,
       previous,
       page,
       this.currentPage,
-      totalPages
+      this.totalPages
     );
     this.innerHTML = html;
     this.applyListeners();
@@ -145,6 +145,7 @@ class CAGovPagination extends window.HTMLElement {
     this.querySelector('.cagov-pagination__previous-page').addEventListener("click", (event) => {
       if(!event.target.classList.contains('cagov-pagination__link-inactive')) {
         this.currentPage--;
+        if(this.currentPage < 1) { this.currentPage = 1; }
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
             detail: this.currentPage
@@ -156,6 +157,7 @@ class CAGovPagination extends window.HTMLElement {
     this.querySelector('.cagov-pagination__next-page').addEventListener("click", (event) => {
       if(!event.target.classList.contains('cagov-pagination__link-inactive')) {
         this.currentPage++;
+        if(this.currentPage > this.totalPages) { this.currentPage = this.totalPages; }
         this.dispatchEvent(
           new CustomEvent("paginationClick", {
             detail: this.currentPage
