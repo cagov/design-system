@@ -13,10 +13,17 @@ cagov-feedback .feedback-form-question {
 }
 cagov-feedback .feedback-form-label {
   color: #fff;
+  font-size: 1.125rem;
   display: block;
   margin-right: 1rem;
   transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
   line-height: 3rem;
+  width: 100%;
+}
+@media (min-width: 48rem) {
+  cagov-feedback .feedback-form-label {
+    width: auto;
+  }
 }
 cagov-feedback .feedback-form-button {
   padding: 1rem;
@@ -27,7 +34,6 @@ cagov-feedback .feedback-form-button {
   cursor: pointer;
   margin: 0 0.5rem 0 0;
   display: inline !important;
-  font-weight: bold;
   /* defensive overrides */
   position: relative;
   text-transform: none;
@@ -36,7 +42,6 @@ cagov-feedback .feedback-form-button {
   background: #fff;
 }
 cagov-feedback .feedback-form-button:hover {
-  background: #d5dbd5;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
   text-decoration: underline;
 }
