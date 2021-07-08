@@ -1,10 +1,11 @@
 export default function (question, yes, no, commentPrompt, thanksFeedback, thanksComments, submit) {
   return `
+  <section aria-label="feedback">
   <div class="feedback-form cagov-stack">
     <div class="js-feedback-form feedback-form-question">
-      <label class="feedback-form-label" id="feedback-rating">${question}</label>
-      <button class="feedback-form-button js-feedback-yes feedback-yes" id="feedback-yes" aria-labelledby="feedback-rating">${yes}</button>
-      <button class="feedback-form-button js-feedback-no" id="feedback-no" aria-labelledby="feedback-rating">${no}</button>
+      <h2 class="feedback-form-label" id="feedback-rating">${question}</h2>
+      <button class="feedback-form-button js-feedback-yes feedback-yes" id="feedback-yes">${yes}</button>
+      <button class="feedback-form-button js-feedback-no" id="feedback-no">${no}</button>
     </div>
           
     <div class="feedback-form-thanks js-feedback-thanks" role="alert">${thanksFeedback}</div>
@@ -18,5 +19,6 @@ export default function (question, yes, no, commentPrompt, thanksFeedback, thank
     </div>
 
     <div class="feedback-form-thanks feedback-thanks-add" role="alert">${thanksComments}</div>
-  </div>`
+  </div>
+  </section>`
 }
