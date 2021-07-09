@@ -19,7 +19,7 @@ data-required-field="This field is required"
 
 The Yes/No button interaction does not submit to the endpoint but triggers a separate custom event named ```ratedPage```. In our initial use case we listen for this event on the custom element from code outside this moduel and POST the value to google analytics.
 
-<img src="is-this-page-useful.png" />
+<img src="https://raw.githubusercontent.com/cagov/design-system/main/components/feedback/is-this-page-useful.png" />
 
 
 ## Sample markup
