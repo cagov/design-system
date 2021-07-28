@@ -10,13 +10,38 @@ $slow-curve: cubic-bezier(0.57, 0.2, 0.21, 0.89);
   height: $height;
 }
 
+// Breakpoints
+$mobile: 768px;
+$mobile-min: 767px;
+$desktop: 1176px;
+// Global mixins
+@mixin phone {
+  @media (max-width: #{$mobile-min}) {
+    @content;
+  }
+}
+/* Tablet and wider */
+@mixin tablet {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+/* Desktop and wider */
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+
 /* MAIN MENU / HAMBURGER */
 cagov-navoverlay {
   a:focus, button:focus {
     outline: none !important;
   }
   .container {
-    max-width: $w-lg;
+    max-width: var(--w-lg, '1176px');
 		margin: 0 auto;
 		/*padding: 0 16px 0 16px;*/
   }
@@ -159,7 +184,7 @@ cagov-navoverlay.display-menu {
 
 /* EXPANDED MENU SYTLES */
 cagov-navoverlay {
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid var(--gray-300, #e1e0e3);
   a.expanded-menu-section-header-link {
     /* jbum - this is to override the inherited text-decoration from .interior_page a */
     text-decoration: none;
@@ -192,15 +217,15 @@ cagov-navoverlay {
       margin-right: 10px;
 
       &:hover {
-        color: $primary-dark;
+        color: var(--primary-dark-color, #064e66);
 
         .blue {
-          fill: $primary-dark;
+          fill: var(--primary-dark-color, #064e66);
         }
       }
       &:focus {
-        color: $primary-dark;
-        outline: 2px solid $secondary;
+        color: var(--primary-dark-color, #064e66);
+        outline: 2px solid var(--secondary-color, #fec02f);
       }
 
       svg {
@@ -282,7 +307,7 @@ cagov-navoverlay {
         }
       }
       @include phone {
-        border-top: solid 1px $gray-300;
+        border-top: solid 1px var(--gray-300, #e1e0e3);
       }
 
       &.expanded {
@@ -332,8 +357,7 @@ cagov-navoverlay {
             background: transparent;
           }
           &:hover {
-            @include text-underline;
-            color: darken($color: $primary, $amount: 15%);
+            text-decoration: underline;
           }
 
           @include tablet {

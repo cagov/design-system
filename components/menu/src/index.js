@@ -1,6 +1,16 @@
+/**
+ * Dropdown menu web component
+ * 
+ * @element cagov-navoverlay
+ *
+ * @cssprop --primary-color - Default value of #064E66, used for background
+ * @cssprop --gray-300 - #e1e0e3
+ * @cssprop --primary-dark-color - #064e66
+ * @cssprop --secondary-color - #fec02f
+ * @cssprop --w-lg - '1176px'
+ */
 class CAGOVOverlayNav extends window.HTMLElement {
   connectedCallback () {
-    this.menuContentFile = this.dataset.json;
     this.querySelector('.open-menu').addEventListener('click', this.toggleMainMenu.bind(this));
     this.querySelector('.mobile-search .search-btn').addEventListener('click', this.toggleMobileSearch.bind(this));
     this.expansionListeners();

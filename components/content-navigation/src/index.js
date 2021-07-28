@@ -1,7 +1,11 @@
 /**
  * Content Navigation web component
- * Supported endpoints: Wordpress v2
- * Wordpress Dependencies: window.wp.moment
+ * 
+ * @element cagov-content-navigation
+ * 
+ * @attr {string} [data-selector] - "main";
+ * @attr {string} [data-type] - "wordpress";
+ * @attr {string} [data-label] - "On this page";
  */
  class CAGovContentNavigation extends window.HTMLElement {
   connectedCallback() {

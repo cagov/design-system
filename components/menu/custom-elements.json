@@ -1,0 +1,32 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "cagov-navoverlay",
+      "path": "./src/index.js",
+      "description": "Dropdown menu web component",
+      "cssProperties": [
+        {
+          "name": "--primary-color",
+          "description": "Default value of #064E66, used for background"
+        },
+        {
+          "name": "--gray-300",
+          "description": "#e1e0e3"
+        },
+        {
+          "name": "--primary-dark-color",
+          "description": "#064e66"
+        },
+        {
+          "name": "--secondary-color",
+          "description": "#fec02f"
+        },
+        {
+          "name": "--w-lg",
+          "description": "'1176px'"
+        }
+      ]
+    }
+  ]
+}
