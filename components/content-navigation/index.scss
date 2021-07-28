@@ -1,0 +1,55 @@
+/* CONTENT NAVIGATION */
+sidebar cagov-content-navigation .label {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.2px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+sidebar cagov-content-navigation ul,
+sidebar cagov-content-navigation ol:not([class*="menu"]):not([class*="nav"]):not([class*="footer-links"]),
+sidebar cagov-content-navigation ul:not([class*="menu"]):not([class*="nav"]):not([class*="footer-links"]) {
+  margin: 0;
+  text-indent: 0;
+  padding: 0;
+}
+
+sidebar cagov-content-navigation ul li {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid #EDEDEF;
+  line-height: 28.2px;
+  list-style: none;
+}
+
+sidebar cagov-content-navigation ul li:first-child {
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 992px) {
+cagov-content-navigation .label {
+  display: none;
+}
+
+.sidebar-container {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+sidebar cagov-content-navigation ul li:last-child {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #EDEDEF;
+}
+
+cagov-content-navigation ul li a {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+}
+
