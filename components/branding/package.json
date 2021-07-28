@@ -1,0 +1,11 @@
+{
+  "name": "@cagov/ds-branding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.css",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
