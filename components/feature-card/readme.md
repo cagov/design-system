@@ -7,16 +7,19 @@ This is a design for featuring important content at the top of a page. The layou
 ## HTML
 
 ```
-<div class="cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-border">
-  <div> <!-- intermediary wrapper -->
-    <div class="cagov-stack cagov-p-2 cagov-featured-sidebar"><!-- sidebar -->
-      <h2>Applying for a License</h2>
-      <p>Learn about what is required to apply for a commercial cannabis license.</p>
-      <a class="cagov-cta" href="/application/">Apply</a>
+<div class="wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero">
+  <div>
+    <div class="cagov-stack cagov-p-2 cagov-featured-sidebar">
+      <h2>We’re making changes to better serve you</h2>
+      <div class="cagov-hero-body-content">
+        <p>California has merged the three state cannabis authorities into a&nbsp;single,&nbsp;new Department of Cannabis Control.</p>
+
+        <div class="wp-block-button">
+          <a class="wp-block-button__link" href="https://cannabis.ca.gov/about-us/consolidation/">Learn more</a>
+        </div>
+      </div>
     </div>
-    <div><!-- non-sidebar -->
-      <img src="http://www.fillmurray.com/720/240" alt="Bill fill" class="cagov-featured-image" />
-    </div>
+    <div><img loading="lazy" class="cagov-featured-image" src="https://cannabis.ca.gov/wp-content/uploads/sites/2/2021/06/cannabis-buds-hero-1024x683.jpg" alt="" width="1024" height="683"></div>
   </div>
 </div>
 ```
@@ -43,7 +46,7 @@ Sass compilation is run from the root of the project ```npm run sass:hero``` wil
 
 There are some colors that should be defined by the containing page. 
 
-- The ```background-color``` of the ```.cagov-cta``` has a default value but if the css variable is defined
+- The ```background-color``` of the CTA has a default value but if the css variable is defined
 
 Expected definition is:
 
