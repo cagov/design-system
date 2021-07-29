@@ -24,6 +24,11 @@ cagov-accordion button.accordion-card-header {
   width: 100%;
   line-height: 3rem;
 }
+
+cagov-accordion.prog-enhanced button.accordion-card-header {
+  cursor:pointer;
+}
+
 cagov-accordion .accordion-title {
   text-align: left;
   margin-bottom: 0;
@@ -41,6 +46,12 @@ cagov-accordion.prog-enhanced .accordion-card-container {
 }
 cagov-accordion.prog-enhanced .accordion-card-container .card-body {
   padding-left: 1rem;
+  margin-top: 8px;
+}
+
+cagov-accordion.prog-enhanced .accordion-card-container .card-body ul {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 cagov-accordion .collapsed {
@@ -67,6 +78,10 @@ button.accordion-card-header:hover {
 button.accordion-card-header:hover .accordion-title {
   text-decoration: underline;
 }
+button.accordion-card-header:hover .accordion-title:hover {
+  text-decoration: underline;
+}
+
 button.accordion-card-header:focus {
   outline-offset: -2px;
 }
@@ -75,7 +90,7 @@ button.accordion-card-header:focus {
   stroke-width: 4px;  
 }
 
-.prog-enhanced .accordion-alpha .plus-minus {
+cagov-accordion.prog-enhanced .accordion-alpha .plus-minus {
   width: 2.125rem;
   height: 2.125rem;
   border: none;
@@ -83,7 +98,9 @@ button.accordion-card-header:focus {
   margin-left: 1rem;
   color: var(--primary-color, #064E66);
   align-self: flex-start;
+  margin-top: 8px;
 }
+
 .prog-enhanced .accordion-alpha .plus-minus svg {
   fill: var(--primary-color, #064E66);
   width: 25px;
