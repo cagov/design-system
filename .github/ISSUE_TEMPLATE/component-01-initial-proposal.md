@@ -17,13 +17,20 @@ Our design system team will review this component proposal.
 ---
 
 ### Checklist
+- [ ] Origin Story
+- [ ] Requesting agency
 - [ ] Name
 - [ ] About this component
 - [ ] Description
 - [ ] Examples (ca.gov)
 - [ ] Examples (design systems)
 - [ ] Features
-- [ ] Requesting agency
+
+### Requesting agency
+*Who is requesting this component?*
+
+### Origin Story
+*What prompted this proposal?*
 
 ### Name
 *What should we call this component in conversation?*
@@ -43,8 +50,6 @@ Our design system team will review this component proposal.
 ### Features
 *Critical features to support initially.*
 
-### Requesting agency
-*Who is requesting this component?*
 
 ---
 
