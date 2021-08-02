@@ -4,9 +4,7 @@
   "description": "State of California Design System A work in progress!",
   "main": "index.js",
   "scripts": {
-    "start": "npx web-dev-server --open /components",
-    "sass:hero": "sass components/hero/css/index.scss components/hero/css/index.css",
-    "sass:cards": "sass components/card-grid/css/index.scss components/card-grid/css/index.css"
+    "start": "npx web-dev-server --open /components"
   },
   "repository": {
     "type": "git",
