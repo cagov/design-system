@@ -1,0 +1,27 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "cagov-content-navigation",
+      "path": "./src/index.js",
+      "description": "Content Navigation web component",
+      "attributes": [
+        {
+          "name": "data-selector",
+          "description": "\"main\";",
+          "type": "string"
+        },
+        {
+          "name": "data-type",
+          "description": "\"wordpress\";",
+          "type": "string"
+        },
+        {
+          "name": "data-label",
+          "description": "\"On this page\";",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

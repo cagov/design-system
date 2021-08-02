@@ -1,29 +1,7 @@
-:root {
-  --primary-color: #33705B;
-}
-
-.stack * + * {
-  margin-top: 1.5rem;
-}
-
-.cagov-p-2 {
-  padding: 2rem;
-}
-
-.cagov-border {
-  border: solid 1px;
-}
-
 .no-deco {
   text-decoration: none;
 }
 
-/* reset */
-h3 {
-  margin: 0;
-}
-
-/* card styles */
 .cagov-card {
   border: 1px solid #ededef;
   padding: 1rem;
@@ -48,32 +26,31 @@ h3 {
   padding: 0;
   margin: 0;
 }
-
 .cagov-card svg {
   fill: #33705B;
   fill: var(--primary-color, #33705B);
   width: 1rem;
-  max-height: 36px;
   margin-top: .2rem;
   margin-left: 1rem;
+  max-height: 25px;
 }
-
 
 .cagov-card:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-/* card grid */
 .cagov-grid, .cagov-grid .block-editor-block-list__layout {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
+}
+/* editor override */
+.cagov-grid .block-editor-block-list__block {
+  margin: 0;
 }
 
-@supports (width: min(250px, 100%)) {
+@supports (width: calc(min(250px, 100%))) {
   .cagov-grid, .cagov-grid .block-editor-block-list__layout {
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax( calc(min(250px, 100%)), 1fr));
   }
 }
-
-/*# sourceMappingURL=index.css.map */

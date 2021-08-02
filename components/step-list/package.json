@@ -1,0 +1,16 @@
+{
+  "name": "@cagov/ds-step-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass index.scss index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.37.0"
+  }
+}
