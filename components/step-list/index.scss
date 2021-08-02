@@ -1,0 +1,132 @@
+/* step list */
+ol.steps, .cagov-step-list {
+  padding-left: 0 !important;
+  margin-left: 30px !important;
+
+  li {
+    list-style: none;
+    border-left: 5px solid var(--secondary-color, #fec02f);
+    font-size: 1.75rem;
+    font-weight: 700;
+    position: relative;
+    padding-left: 45px;
+    line-height: 1.5;
+  }
+  li:before {
+    content: "";
+    font-family: "Public Sans";
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding: 0 13px 0 13px;
+    border: 5px solid var(--secondary-color, #fec02f);
+    background-color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    position: absolute;
+    left: -29px;
+    top: -5px;
+    margin-left: -1px;
+  }
+  li span.has-black-color,
+  li .cagov-step-list-content {
+    margin-top: 1rem;
+    padding-bottom: 1.75rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: block;
+  }
+  li:first-child:before {
+    content: "1";
+    padding: 0 16px 0 16px;
+  }
+  li:nth-child(2):before {
+    content: "2";
+  }
+  li:nth-child(3):before {
+    content: "3";
+  }
+  li:nth-child(4):before {
+    content: "4";
+  }
+  li:nth-child(5):before {
+    content: "5";
+  }
+  li:nth-child(6):before {
+    content: "6";
+  }
+  li:nth-child(7):before {
+    content: "7";
+  }
+  li:nth-child(8):before {
+    content: "8";
+  }
+  li:nth-child(9):before {
+    content: "9";
+  }
+  li:nth-child(10):before {
+    content: "10";
+    padding: 0 7px 0 7px;
+    margin-left: -1px;
+  }
+  li:nth-child(11):before {
+    content: "11";
+    padding: 0 10px 0 10px;
+  }
+  li:nth-child(12):before {
+    content: "12";
+    padding: 0 8px 0 8px;
+    margin-left: -1px;
+  }
+  li:nth-child(13):before {
+    content: "13";
+    padding: 0 7px 0 7px;
+  }
+  li:nth-child(14):before {
+    content: "14";
+    padding: 0 7px 0 7px;
+  }
+  li:nth-child(15):before {
+    content: "15";
+    padding: 0 7px 0 8px;
+    margin-left: 3px;
+  }
+  li:nth-child(16):before {
+    content: "16";
+    padding: 0 7px 0 7px;
+  }
+  li:nth-child(17):before {
+    content: "17";
+    padding: 0 7px 0 7px;
+  }
+  li:nth-child(18):before {
+    content: "18";
+    padding: 0 7px 0 7px;
+  }
+  li:nth-child(19):before {
+    content: "19";
+    padding: 0 7px 0 7px;
+  }
+  li:nth-child(20):before {
+    content: "20";
+    padding: 0 5px 0 5px;
+  }
+  li:nth-child(21):before {
+    content: "21";
+    padding: 0 6px 0 6px;
+  }
+  li:nth-child(22):before {
+    content: "22";
+    padding: 0 5px 0 5px;
+  }
+  li:nth-child(23):before {
+    content: "23";
+    padding: 0 5px 0 5px;
+  }
+  li:nth-child(24):before {
+    content: "24";
+    padding: 0 5px 0 5px;
+  }
+  li:last-child {
+    border-left: none;
+  }
+}
