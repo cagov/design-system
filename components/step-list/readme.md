@@ -33,13 +33,4 @@ This CSS only module contains the styles required to create the list of steps in
 
 There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
 
-- var(--gray-100, #f9f9fa)
-- var(--gray-300, #e1e0e3)
-- var(--primary, #064E66)
-- var(--primary-color, #e1e0e3)
-- var(--primary-dark-color, #064e66)
 - var(--secondary-color, #fec02f)
-- var(--small-text, 1rem)
-- var(--standout-color, #064e66)
-- var(--w-lg, '1176px')
-- var(--white, #fff)
