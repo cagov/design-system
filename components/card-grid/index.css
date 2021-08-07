@@ -3,7 +3,7 @@
 }
 
 .cagov-card {
-  border: 1px solid #ededef;
+  border: 1px solid var(--gray-200, #ededef);
   padding: 1rem;
   border-bottom: 0.3rem solid #33705B;
   border-bottom: 0.3rem solid var(--primary-color, #33705B);
@@ -36,7 +36,7 @@
 }
 
 .cagov-card:hover {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: var(--gray-100, #f9f9fa);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 

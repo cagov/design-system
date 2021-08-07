@@ -46,7 +46,7 @@
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
-        let hashval = anchor.getAttribute("href");
+        let hashval = decodeURI(anchor.getAttribute("href"));
         try {
           let target = document.querySelector(hashval);
           if (target !== null) {
@@ -114,10 +114,15 @@
       headers.forEach((tag) => {
         let tagId = tag.getAttribute("id");
         let title = tag.innerHTML;
-
-        let anchor = tag.innerHTML.toLowerCase().trim().replace(/ /g, "-").replace(/\(|\)|\!|\"|\#|\$|\%|\&|\'|\*|\+|\,|\.|\/|\:|\;|\<|\=|\>|\?|\@|\[|\]|\\|\^|\`|\{|\||\|\}|\~/g, "");
-        // These are the CSS unallowed characters.
+        // Alt: [a-zA-Z\u00C0-\u017F]+,\s[a-zA-Z\u00C0-\u017F]+
+        let anchor = tag.innerHTML.toLowerCase().trim().replace(/ /g, "-")
+        // Strip out unallowed CSS characters (Selector API is used with the anchor links)
         // !, ", #, $, %, &, ', (, ), *, +, ,, -, ., /, :, ;, <, =, >, ?, @, [, \, ], ^, `, {, |, }, and ~.
+        .replace(/\(|\)|\!|\"|\#|\$|\%|\&|\'|\*|\+|\,|\.|\/|\:|\;|\<|\=|\>|\?|\@|\[|\]|\\|\^|\`|\{|\||\|\}|\~/g, "")
+        // All other characters are encoded and decoded using encodeURI/decodeURI which escapes UTF-8 characters.
+        // If we want to do this with allowed characters only
+        // .replace(/a-zA-ZÃ€-Ã–Ã™-Ã¶Ã¹-Ã¿Ä€-Å¾á¸€-á»¿0-9/g,"")
+        .replace(/a-zA-ZÃ€-Ã–Ã™-Ã¶Ã¹-Ã¿Ä€-Å¾á¸€-á»¿0-9\u00A0-\u017F/g,"") 
 
         // If id not set already, create an id to jump to.
         if (tagId !== undefined && tagId !== null) {

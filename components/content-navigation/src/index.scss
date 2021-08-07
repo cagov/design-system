@@ -19,7 +19,7 @@ sidebar cagov-content-navigation ul:not([class*="menu"]):not([class*="nav"]):not
 sidebar cagov-content-navigation ul li {
   padding-top: 16px;
   margin-top: 16px;
-  border-top: 1px solid #EDEDEF;
+  border-top: 1px solid var(--gray-200, #ededef);
   line-height: 28.2px;
   list-style: none;
 }
@@ -42,7 +42,7 @@ cagov-content-navigation .label {
 sidebar cagov-content-navigation ul li:last-child {
   padding-bottom: 16px;
   margin-bottom: 16px;
-  border-bottom: 1px solid #EDEDEF;
+  border-bottom: 1px solid var(--gray-200, #ededef);
 }
 
 cagov-content-navigation ul li a {
