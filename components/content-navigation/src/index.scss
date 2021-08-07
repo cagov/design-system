@@ -28,6 +28,14 @@ sidebar cagov-content-navigation ul li:first-child {
   margin-top: 0px;
 }
 
+sidebar cagov-content-navigation a {
+  text-decoration: none;
+}
+
+sidebar cagov-content-navigation a:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 992px) {
 cagov-content-navigation .label {
   display: none;
