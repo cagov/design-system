@@ -358,6 +358,7 @@ cagov-navoverlay {
           }
           &:hover {
             text-decoration: underline;
+            color: var(--primary-hover-color, #043747);
           }
 
           @include tablet {

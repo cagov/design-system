@@ -239,7 +239,8 @@ cagov-navoverlay {
           cagov-navoverlay .expanded-menu-section-header-link:active {
             background: transparent; }
           cagov-navoverlay .expanded-menu-section-header-link:hover {
-            text-decoration: underline; }
+            text-decoration: underline;
+            color: var(--primary-hover-color, #043747); }
           @media (min-width: 768px) {
             cagov-navoverlay .expanded-menu-section-header-link {
               width: auto; } }

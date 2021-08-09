@@ -34,3 +34,7 @@ The documentation is generated using the <a href="https://github.com/webcomponen
 ```
 wca analyze src --format json --outFile custom-elements.json
 ```
+
+## CSS Variables
+
+- var(--gray-200, #ededef)

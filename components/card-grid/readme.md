@@ -53,5 +53,7 @@ Expected definition is:
 ```
 :root {
   --primary-color: #33705B;
+  --gray-100: #f9f9fa;
+  --gray-200: #ededef;
 }
 ```
