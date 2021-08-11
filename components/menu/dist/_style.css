@@ -240,6 +240,7 @@ cagov-navoverlay {
             background: transparent; }
           cagov-navoverlay .expanded-menu-section-header-link:hover {
             text-decoration: underline;
+            text-underline-position: under;
             color: var(--primary-hover-color, #043747); }
           @media (min-width: 768px) {
             cagov-navoverlay .expanded-menu-section-header-link {
@@ -263,7 +264,8 @@ cagov-navoverlay {
             width: 100%;
             display: block;
             transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
-            margin-top: 0.3rem; }
+            margin-top: 0.3rem;
+            fill: var(--primary-color, #064E66); }
     cagov-navoverlay .expanded-menu-dropdown {
       max-height: 0px;
       overflow: hidden;

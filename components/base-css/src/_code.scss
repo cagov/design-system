@@ -1,0 +1,16 @@
+/* Code generic styles */
+code,
+samp,
+time {
+  background: var(--gray-100, #f9f9fa);
+  color: var(--gray-900, #3f3e4d);
+  padding: 2.5px 5px;
+  border-radius: 6px;
+  font-size: var(--body-text, 1.125rem);
+}
+
+pre > code {
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+}

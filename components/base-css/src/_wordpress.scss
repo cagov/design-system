@@ -1,0 +1,77 @@
+/* Gutenberg Block alignment */
+
+/* Class applied to most external element of a gutenberg block component. Controls spacing between blocks. */
+.cagov-stack {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Apply same spacing mechanism as cagov-stack, but overriding default gutenberg block element classes */
+
+
+.wp-block-columns {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.wp-block-column {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+.wp-block-column:first-child {
+  margin-right: 32px;
+}
+
+/* border styles */
+.wp-block-table {
+  background: none !important;
+  border: none !important;
+}
+.wp-block-table table,
+.wp-block-table table th,
+.wp-block-table table td {
+  border: 1px solid var(--gray-200, #ededef) !important;
+}
+
+main .wp-block-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    margin-bottom: 32px;
+    max-width: 100%;
+  }
+
+@include phone {
+
+
+.wp-block-columns {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.wp-block-column {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+}

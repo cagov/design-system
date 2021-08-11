@@ -1,0 +1,2728 @@
+@charset "UTF-8";
+/* Colorscheme root variables */
+:root {
+  /* Theme colors */
+  --primary-color: #064e66;
+  --primary-dark-color: #4A1106;
+  --primary-light-color: #965D52;
+  --primary-lightest-color: #B48C84;
+  --primary-hover-color: #043747;
+  --secondary-color: #fec02f;
+  --secondary-dark-color: #222222;
+  --secondary-light-color: #6F6F6F;
+  --secondary-lightest-color: #D6D6D6;
+  --secondary-hover-color: #222222;
+  --highlight-color: #fdb81e;
+  --highlight-color-300: #FFF2D5;
+  --standout-color: #2f4c2c;
+  --standout-hover-color: #21351f;
+}
+
+/* theme colors */
+/* sitewide styles, these are mostly blank but will be wrapped up into components/base-css */
+:root {
+  --w-lg: 1176px;
+  --w-lg: 1176px;
+  --w-md: 960px;
+  --w-sm: 720px;
+  --w-xs: 540px;
+  --w-page-content: 876px;
+  --spacing-base: 8px;
+  --padding-sm: calc(--spacing-base * 2);
+  --padding-md: calc(--spacing-base * 3);
+  --padding-lg: calc(--spacing-base * 4);
+  /* haven't seen these used yet, they seem very large */
+  --margin-sm: calc(--spacing-base * 6);
+  --margin-md: calc(--spacing-base * 8);
+  --margin-lg: calc(--spacing-base * 12);
+  --margin-xl: calc(--spacing-base * 24);
+  --site-font: "Public Sans",sans-serif;
+  --body-text: 1.125rem;
+  --lead-text: 1.5rem;
+  --small-text: 1rem;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+}
+
+/* spasing, margin and padding values */
+/* Tablet and wider */
+/* Desktop and wider */
+/* mixins */
+/* Fonts (global) */
+/* latin-ext */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/publicsans-regular-webfont.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/publicsans-regular-webfont.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/publicsans-bold-webfont.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/publicsans-bold-webfont.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/publicsans-light-webfont.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/ppublicsans-light-webfont.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* website global fonts */
+/* -----------------------------------------
+   ICON FONTS - /source/scss/cagov/icon-font.scss
+----------------------------------------- */
+@font-face {
+  font-family: "CaGov";
+  src: url("/fonts/CaGov.woff2") format("woff2"), url("/fonts/CaGov.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+[class^=ca-gov-icon-],
+[class*=" ca-gov-icon-"] {
+  font-family: "CaGov" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ca-gov-icon-mask-light:before {
+  content: "";
+}
+
+.ca-gov-icon-mask-dark:before {
+  content: "";
+}
+
+.ca-gov-icon-vaccine-check:before {
+  content: "";
+}
+
+.ca-gov-icon-teams:before {
+  content: "";
+}
+
+.ca-gov-icon-pharmacy:before {
+  content: "";
+}
+
+.ca-gov-icon-cart-delivered:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-shipped:before {
+  content: "";
+}
+
+.ca-gov-icon-vaccine:before {
+  content: "";
+}
+
+.ca-gov-icon-team:before {
+  content: "";
+}
+
+.ca-gov-icon-vaccine-patient:before {
+  content: "";
+}
+
+.ca-gov-icon-improvements:before {
+  content: "";
+}
+
+.ca-gov-icon-cloud-network:before {
+  content: "";
+}
+
+.ca-gov-icon-technology-reuse:before {
+  content: "";
+}
+
+.ca-gov-icon-accessibility:before {
+  content: "";
+}
+
+.ca-gov-icon-agriculture:before {
+  content: "";
+}
+
+.ca-gov-icon-air:before {
+  content: "";
+}
+
+.ca-gov-icon-air-polution:before {
+  content: "";
+}
+
+.ca-gov-icon-air-quality:before {
+  content: "";
+}
+
+.ca-gov-icon-albums:before {
+  content: "";
+}
+
+.ca-gov-icon-amexcard:before {
+  content: "";
+}
+
+.ca-gov-icon-amusement:before {
+  content: "";
+}
+
+.ca-gov-icon-anchor:before {
+  content: "";
+}
+
+.ca-gov-icon-android:before {
+  content: "";
+}
+
+.ca-gov-icon-angry:before {
+  content: "";
+}
+
+.ca-gov-icon-apple:before {
+  content: "";
+}
+
+.ca-gov-icon-apple-pay:before {
+  content: "";
+}
+
+.ca-gov-icon-apps:before {
+  content: "";
+}
+
+.ca-gov-icon-archive:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-down:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-fill-down:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-fill-left:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-fill-left-down:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-fill-left-up:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-fill-right:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-fill-right-down:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-fill-right-up:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-fill-up:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-left:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-next:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-prev:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-right:before {
+  content: "";
+}
+
+.ca-gov-icon-arrow-up:before {
+  content: "";
+}
+
+.ca-gov-icon-at-sign:before {
+  content: "";
+}
+
+.ca-gov-icon-attachment:before {
+  content: "";
+}
+
+.ca-gov-icon-audience:before {
+  content: "";
+}
+
+.ca-gov-icon-audio:before {
+  content: "";
+}
+
+.ca-gov-icon-baloons:before {
+  content: "";
+}
+
+.ca-gov-icon-bambinton:before {
+  content: "";
+}
+
+.ca-gov-icon-bar-chart:before {
+  content: "";
+}
+
+.ca-gov-icon-barge-ship:before {
+  content: "";
+}
+
+.ca-gov-icon-bars-up:before {
+  content: "";
+}
+
+.ca-gov-icon-bars-upward:before {
+  content: "";
+}
+
+.ca-gov-icon-baseballl:before {
+  content: "";
+}
+
+.ca-gov-icon-basketball:before {
+  content: "";
+}
+
+.ca-gov-icon-bath:before {
+  content: "";
+}
+
+.ca-gov-icon-bear:before {
+  content: "";
+}
+
+.ca-gov-icon-bell:before {
+  content: "";
+}
+
+.ca-gov-icon-bike:before {
+  content: "";
+}
+
+.ca-gov-icon-billiards:before {
+  content: "";
+}
+
+.ca-gov-icon-binoculars:before {
+  content: "";
+}
+
+.ca-gov-icon-biohazard:before {
+  content: "";
+}
+
+.ca-gov-icon-boat:before {
+  content: "";
+}
+
+.ca-gov-icon-book:before {
+  content: "";
+}
+
+.ca-gov-icon-bookmark:before {
+  content: "";
+}
+
+.ca-gov-icon-books:before {
+  content: "";
+}
+
+.ca-gov-icon-bowling:before {
+  content: "";
+}
+
+.ca-gov-icon-brain:before {
+  content: "";
+}
+
+.ca-gov-icon-bridge:before {
+  content: "";
+}
+
+.ca-gov-icon-bridge-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-briefcase:before {
+  content: "";
+}
+
+.ca-gov-icon-building:before {
+  content: "";
+}
+
+.ca-gov-icon-bus:before {
+  content: "";
+}
+
+.ca-gov-icon-bus-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-ca-capitol:before {
+  content: "";
+}
+
+.ca-gov-icon-ca-state:before {
+  content: "";
+}
+
+.ca-gov-icon-cal:before {
+  content: "";
+}
+
+.ca-gov-icon-cal-bear:before {
+  content: "";
+}
+
+.ca-gov-icon-calculator:before {
+  content: "";
+}
+
+.ca-gov-icon-calendar:before {
+  content: "";
+}
+
+.ca-gov-icon-call:before {
+  content: "";
+}
+
+.ca-gov-icon-camera:before {
+  content: "";
+}
+
+.ca-gov-icon-campfire:before {
+  content: "";
+}
+
+.ca-gov-icon-cannabis:before {
+  content: "";
+}
+
+.ca-gov-icon-capitol:before {
+  content: "";
+}
+
+.ca-gov-icon-car:before {
+  content: "";
+}
+
+.ca-gov-icon-car-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-care-tweezers:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-down:before {
+  content: "3";
+}
+
+.ca-gov-icon-caret-fill-down:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-fill-left:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-fill-right:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-fill-two-down:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-fill-two-left:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-fill-two-right:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-fill-two-up:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-fill-up:before {
+  content: "";
+}
+
+.ca-gov-icon-caret-left:before {
+  content: "4";
+}
+
+.ca-gov-icon-caret-line-down:before {
+  content: ";";
+}
+
+.ca-gov-icon-caret-line-left:before {
+  content: "<";
+}
+
+.ca-gov-icon-caret-line-right:before {
+  content: "=";
+}
+
+.ca-gov-icon-caret-line-two-down:before {
+  content: "?";
+}
+
+.ca-gov-icon-caret-line-two-left:before {
+  content: "@";
+}
+
+.ca-gov-icon-caret-line-two-right:before {
+  content: "A";
+}
+
+.ca-gov-icon-caret-line-two-up:before {
+  content: ">";
+}
+
+.ca-gov-icon-caret-line-up:before {
+  content: ":";
+}
+
+.ca-gov-icon-caret-right:before {
+  content: "5";
+}
+
+.ca-gov-icon-caret-two-down:before {
+  content: "7";
+}
+
+.ca-gov-icon-caret-two-left:before {
+  content: "8";
+}
+
+.ca-gov-icon-caret-two-right:before {
+  content: "9";
+}
+
+.ca-gov-icon-caret-two-up:before {
+  content: "6";
+}
+
+.ca-gov-icon-caret-up:before {
+  content: "2";
+}
+
+.ca-gov-icon-carousel-next:before {
+  content: "";
+}
+
+.ca-gov-icon-carousel-pause:before {
+  content: "";
+}
+
+.ca-gov-icon-carousel-play:before {
+  content: "";
+}
+
+.ca-gov-icon-carousel-prev:before {
+  content: "";
+}
+
+.ca-gov-icon-casino:before {
+  content: "";
+}
+
+.ca-gov-icon-cc-copyright:before {
+  content: "";
+}
+
+.ca-gov-icon-cellphone-touch:before {
+  content: "";
+}
+
+.ca-gov-icon-certificate:before {
+  content: "";
+}
+
+.ca-gov-icon-certificate-check:before {
+  content: "";
+}
+
+.ca-gov-icon-certificate-click:before {
+  content: "";
+}
+
+.ca-gov-icon-charge:before {
+  content: "";
+}
+
+.ca-gov-icon-charge-cycle:before {
+  content: "";
+}
+
+.ca-gov-icon-charge-units:before {
+  content: "";
+}
+
+.ca-gov-icon-chat:before {
+  content: "";
+}
+
+.ca-gov-icon-chat-bubble:before {
+  content: "";
+}
+
+.ca-gov-icon-chat-bubbles:before {
+  content: "";
+}
+
+.ca-gov-icon-check-fill:before {
+  content: "";
+}
+
+.ca-gov-icon-check-line:before {
+  content: "R";
+}
+
+.ca-gov-icon-check-list:before {
+  content: "";
+}
+
+.ca-gov-icon-check-mark:before {
+  content: "N";
+}
+
+.ca-gov-icon-chemical-hazard:before {
+  content: "";
+}
+
+.ca-gov-icon-chrome:before {
+  content: "";
+}
+
+.ca-gov-icon-church:before {
+  content: "";
+}
+
+.ca-gov-icon-city:before {
+  content: "";
+}
+
+.ca-gov-icon-clipboard:before {
+  content: "";
+}
+
+.ca-gov-icon-clock:before {
+  content: "";
+}
+
+.ca-gov-icon-close-fill:before {
+  content: "";
+}
+
+.ca-gov-icon-close-line:before {
+  content: "Q";
+}
+
+.ca-gov-icon-close-mark:before {
+  content: "M";
+}
+
+.ca-gov-icon-cloud-download:before {
+  content: "";
+}
+
+.ca-gov-icon-cloud-gear:before {
+  content: "";
+}
+
+.ca-gov-icon-cloud-services:before {
+  content: "";
+}
+
+.ca-gov-icon-cloud-sync:before {
+  content: "";
+}
+
+.ca-gov-icon-cloud-upload:before {
+  content: "";
+}
+
+.ca-gov-icon-code:before {
+  content: "";
+}
+
+.ca-gov-icon-cofee:before {
+  content: "";
+}
+
+.ca-gov-icon-collapse-all:before {
+  content: "";
+}
+
+.ca-gov-icon-collapse1:before {
+  content: "X";
+}
+
+.ca-gov-icon-compass:before {
+  content: "";
+}
+
+.ca-gov-icon-computer:before {
+  content: "";
+}
+
+.ca-gov-icon-construction1:before {
+  content: "";
+}
+
+.ca-gov-icon-contact-us:before {
+  content: "";
+}
+
+.ca-gov-icon-contacts:before {
+  content: "";
+}
+
+.ca-gov-icon-coronavirus:before {
+  content: "";
+}
+
+.ca-gov-icon-coughing:before {
+  content: "";
+}
+
+.ca-gov-icon-cover:before {
+  content: "";
+}
+
+.ca-gov-icon-cruise-ship:before {
+  content: "";
+}
+
+.ca-gov-icon-cubes:before {
+  content: "";
+}
+
+.ca-gov-icon-currency:before {
+  content: "";
+}
+
+.ca-gov-icon-dam:before {
+  content: "";
+}
+
+.ca-gov-icon-danger:before {
+  content: "";
+}
+
+.ca-gov-icon-desktop-checklist:before {
+  content: "";
+}
+
+.ca-gov-icon-desktop-video-module:before {
+  content: "";
+}
+
+.ca-gov-icon-dices:before {
+  content: "";
+}
+
+.ca-gov-icon-digging:before {
+  content: "";
+}
+
+.ca-gov-icon-directions:before {
+  content: "";
+}
+
+.ca-gov-icon-discovercard:before {
+  content: "";
+}
+
+.ca-gov-icon-distance:before {
+  content: "";
+}
+
+.ca-gov-icon-do-not-sign:before {
+  content: "";
+}
+
+.ca-gov-icon-document:before {
+  content: "";
+}
+
+.ca-gov-icon-down:before {
+  content: "";
+}
+
+.ca-gov-icon-down-left:before {
+  content: "";
+}
+
+.ca-gov-icon-down-right:before {
+  content: "";
+}
+
+.ca-gov-icon-download:before {
+  content: "";
+}
+
+.ca-gov-icon-download-cloud:before {
+  content: "";
+}
+
+.ca-gov-icon-drag:before {
+  content: "";
+}
+
+.ca-gov-icon-drawer:before {
+  content: "";
+}
+
+.ca-gov-icon-drive:before {
+  content: "";
+}
+
+.ca-gov-icon-ear:before {
+  content: "";
+}
+
+.ca-gov-icon-ear-slash:before {
+  content: "";
+}
+
+.ca-gov-icon-earthquake:before {
+  content: "";
+}
+
+.ca-gov-icon-electricity-hazard:before {
+  content: "";
+}
+
+.ca-gov-icon-email:before {
+  content: "";
+}
+
+.ca-gov-icon-entertainment:before {
+  content: "";
+}
+
+.ca-gov-icon-envelope-checklist:before {
+  content: "";
+}
+
+.ca-gov-icon-excel:before {
+  content: "";
+}
+
+.ca-gov-icon-expand-all:before {
+  content: "";
+}
+
+.ca-gov-icon-expand1:before {
+  content: "Y";
+}
+
+.ca-gov-icon-external-link:before {
+  content: "";
+}
+
+.ca-gov-icon-eye:before {
+  content: "";
+}
+
+.ca-gov-icon-eye-slash:before {
+  content: "";
+}
+
+.ca-gov-icon-facebook:before {
+  content: "";
+}
+
+.ca-gov-icon-family:before {
+  content: "";
+}
+
+.ca-gov-icon-family-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-fastfood:before {
+  content: "";
+}
+
+.ca-gov-icon-favorite:before {
+  content: "";
+}
+
+.ca-gov-icon-features:before {
+  content: "";
+}
+
+.ca-gov-icon-ferry:before {
+  content: "";
+}
+
+.ca-gov-icon-file:before {
+  content: "";
+}
+
+.ca-gov-icon-file-audio:before {
+  content: "";
+}
+
+.ca-gov-icon-file-certificate:before {
+  content: "";
+}
+
+.ca-gov-icon-file-check:before {
+  content: "";
+}
+
+.ca-gov-icon-file-code:before {
+  content: "";
+}
+
+.ca-gov-icon-file-csv:before {
+  content: "";
+}
+
+.ca-gov-icon-file-download:before {
+  content: "";
+}
+
+.ca-gov-icon-file-excel:before {
+  content: "";
+}
+
+.ca-gov-icon-file-export:before {
+  content: "";
+}
+
+.ca-gov-icon-file-import:before {
+  content: "";
+}
+
+.ca-gov-icon-file-invoice:before {
+  content: "";
+}
+
+.ca-gov-icon-file-medical:before {
+  content: "";
+}
+
+.ca-gov-icon-file-medical-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-file-pdf:before {
+  content: "";
+}
+
+.ca-gov-icon-file-powerpoint:before {
+  content: "";
+}
+
+.ca-gov-icon-file-prescription:before {
+  content: "";
+}
+
+.ca-gov-icon-file-upload:before {
+  content: "";
+}
+
+.ca-gov-icon-file-video:before {
+  content: "";
+}
+
+.ca-gov-icon-file-word:before {
+  content: "";
+}
+
+.ca-gov-icon-file-zip:before {
+  content: "";
+}
+
+.ca-gov-icon-film:before {
+  content: "";
+}
+
+.ca-gov-icon-filter:before {
+  content: "";
+}
+
+.ca-gov-icon-filter-solid:before {
+  content: "";
+}
+
+.ca-gov-icon-fingerprint:before {
+  content: "";
+}
+
+.ca-gov-icon-fingerprint-check:before {
+  content: "";
+}
+
+.ca-gov-icon-fire:before {
+  content: "";
+}
+
+.ca-gov-icon-firefox:before {
+  content: "";
+}
+
+.ca-gov-icon-fitness:before {
+  content: "";
+}
+
+.ca-gov-icon-fitness-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-flickr:before {
+  content: "";
+}
+
+.ca-gov-icon-flood:before {
+  content: "";
+}
+
+.ca-gov-icon-flowchart:before {
+  content: "";
+}
+
+.ca-gov-icon-folder:before {
+  content: "";
+}
+
+.ca-gov-icon-football:before {
+  content: "";
+}
+
+.ca-gov-icon-gas-pump:before {
+  content: "";
+}
+
+.ca-gov-icon-gear:before {
+  content: "";
+}
+
+.ca-gov-icon-gears:before {
+  content: "";
+}
+
+.ca-gov-icon-glass:before {
+  content: "";
+}
+
+.ca-gov-icon-globe:before {
+  content: "";
+}
+
+.ca-gov-icon-golf:before {
+  content: "";
+}
+
+.ca-gov-icon-google:before {
+  content: "";
+}
+
+.ca-gov-icon-google-plus:before {
+  content: "";
+}
+
+.ca-gov-icon-graduate:before {
+  content: "";
+}
+
+.ca-gov-icon-graduate-pointer:before {
+  content: "";
+}
+
+.ca-gov-icon-graph:before {
+  content: "";
+}
+
+.ca-gov-icon-green:before {
+  content: "";
+}
+
+.ca-gov-icon-grid:before {
+  content: "";
+}
+
+.ca-gov-icon-hair:before {
+  content: "";
+}
+
+.ca-gov-icon-hair-salon:before {
+  content: "";
+}
+
+.ca-gov-icon-hand:before {
+  content: "";
+}
+
+.ca-gov-icon-hand-heart:before {
+  content: "";
+}
+
+.ca-gov-icon-hand-money:before {
+  content: "";
+}
+
+.ca-gov-icon-hand-watter:before {
+  content: "";
+}
+
+.ca-gov-icon-handshake:before {
+  content: "";
+}
+
+.ca-gov-icon-happy:before {
+  content: "";
+}
+
+.ca-gov-icon-hazard:before {
+  content: "";
+}
+
+.ca-gov-icon-heart:before {
+  content: "";
+}
+
+.ca-gov-icon-highway:before {
+  content: "";
+}
+
+.ca-gov-icon-home:before {
+  content: "";
+}
+
+.ca-gov-icon-home-education:before {
+  content: "";
+}
+
+.ca-gov-icon-home-graduate:before {
+  content: "";
+}
+
+.ca-gov-icon-hourglass:before {
+  content: "";
+}
+
+.ca-gov-icon-hours:before {
+  content: "";
+}
+
+.ca-gov-icon-hours-security:before {
+  content: "";
+}
+
+.ca-gov-icon-house:before {
+  content: "";
+}
+
+.ca-gov-icon-hurricane:before {
+  content: "";
+}
+
+.ca-gov-icon-idea:before {
+  content: "";
+}
+
+.ca-gov-icon-idea-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-ie:before {
+  content: "";
+}
+
+.ca-gov-icon-image:before {
+  content: "";
+}
+
+.ca-gov-icon-images:before {
+  content: "";
+}
+
+.ca-gov-icon-important:before {
+  content: "";
+}
+
+.ca-gov-icon-important-line:before {
+  content: "";
+}
+
+.ca-gov-icon-info:before {
+  content: "";
+}
+
+.ca-gov-icon-info-bubble:before {
+  content: "";
+}
+
+.ca-gov-icon-info-line:before {
+  content: "";
+}
+
+.ca-gov-icon-instagram:before {
+  content: "";
+}
+
+.ca-gov-icon-institute:before {
+  content: "";
+}
+
+.ca-gov-icon-justice-legal:before {
+  content: "";
+}
+
+.ca-gov-icon-key:before {
+  content: "";
+}
+
+.ca-gov-icon-lab-tests:before {
+  content: "";
+}
+
+.ca-gov-icon-law-enforcement:before {
+  content: "";
+}
+
+.ca-gov-icon-left:before {
+  content: "";
+}
+
+.ca-gov-icon-lightbulb:before {
+  content: "";
+}
+
+.ca-gov-icon-link:before {
+  content: "";
+}
+
+.ca-gov-icon-linkedin:before {
+  content: "";
+}
+
+.ca-gov-icon-location:before {
+  content: "";
+}
+
+.ca-gov-icon-lock:before {
+  content: "";
+}
+
+.ca-gov-icon-logo:before {
+  content: "";
+}
+
+.ca-gov-icon-loud-speaker:before {
+  content: "";
+}
+
+.ca-gov-icon-magnify-glass:before {
+  content: "";
+}
+
+.ca-gov-icon-mail:before {
+  content: "";
+}
+
+.ca-gov-icon-malware:before {
+  content: "";
+}
+
+.ca-gov-icon-map:before {
+  content: "";
+}
+
+.ca-gov-icon-mask:before {
+  content: "";
+}
+
+.ca-gov-icon-mastercard:before {
+  content: "";
+}
+
+.ca-gov-icon-medal:before {
+  content: "";
+}
+
+.ca-gov-icon-medical:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-bubble:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-care:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-case:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-clinic:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-cross:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-doctor:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-heart:before {
+  content: "";
+}
+
+.ca-gov-icon-medical-pills:before {
+  content: "";
+}
+
+.ca-gov-icon-menu:before {
+  content: "";
+}
+
+.ca-gov-icon-menu-toggle-closed:before {
+  content: "";
+}
+
+.ca-gov-icon-menu-toggle-open:before {
+  content: "";
+}
+
+.ca-gov-icon-mic:before {
+  content: "";
+}
+
+.ca-gov-icon-microsoft:before {
+  content: "";
+}
+
+.ca-gov-icon-minus-fill:before {
+  content: "";
+}
+
+.ca-gov-icon-minus-line:before {
+  content: "O";
+}
+
+.ca-gov-icon-minus-mark:before {
+  content: "K";
+}
+
+.ca-gov-icon-mobile:before {
+  content: "";
+}
+
+.ca-gov-icon-mobile-graduate:before {
+  content: "";
+}
+
+.ca-gov-icon-mobile-textbook:before {
+  content: "";
+}
+
+.ca-gov-icon-museum:before {
+  content: "";
+}
+
+.ca-gov-icon-museum-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-music:before {
+  content: "";
+}
+
+.ca-gov-icon-nail-polish:before {
+  content: "";
+}
+
+.ca-gov-icon-no-coughing:before {
+  content: "";
+}
+
+.ca-gov-icon-no-handshake:before {
+  content: "";
+}
+
+.ca-gov-icon-no-smoking:before {
+  content: "";
+}
+
+.ca-gov-icon-no-travel:before {
+  content: "";
+}
+
+.ca-gov-icon-no-virus:before {
+  content: "";
+}
+
+.ca-gov-icon-online-education:before {
+  content: "";
+}
+
+.ca-gov-icon-online-graduate:before {
+  content: "";
+}
+
+.ca-gov-icon-online-help:before {
+  content: "";
+}
+
+.ca-gov-icon-online-module:before {
+  content: "";
+}
+
+.ca-gov-icon-online-services:before {
+  content: "";
+}
+
+.ca-gov-icon-opera:before {
+  content: "";
+}
+
+.ca-gov-icon-paddle-boat:before {
+  content: "";
+}
+
+.ca-gov-icon-page:before {
+  content: "";
+}
+
+.ca-gov-icon-palette:before {
+  content: "";
+}
+
+.ca-gov-icon-party:before {
+  content: "";
+}
+
+.ca-gov-icon-pause:before {
+  content: "";
+}
+
+.ca-gov-icon-payment-card:before {
+  content: "";
+}
+
+.ca-gov-icon-paypal:before {
+  content: "";
+}
+
+.ca-gov-icon-pdf:before {
+  content: "";
+}
+
+.ca-gov-icon-pencil:before {
+  content: "j";
+}
+
+.ca-gov-icon-pencil-edit:before {
+  content: "l";
+}
+
+.ca-gov-icon-people:before {
+  content: "";
+}
+
+.ca-gov-icon-person:before {
+  content: "";
+}
+
+.ca-gov-icon-personal-care:before {
+  content: "";
+}
+
+.ca-gov-icon-phone:before {
+  content: "";
+}
+
+.ca-gov-icon-pie-chart:before {
+  content: "";
+}
+
+.ca-gov-icon-pinterest:before {
+  content: "";
+}
+
+.ca-gov-icon-places:before {
+  content: "";
+}
+
+.ca-gov-icon-play:before {
+  content: "";
+}
+
+.ca-gov-icon-plus-fill:before {
+  content: "";
+}
+
+.ca-gov-icon-plus-line:before {
+  content: "P";
+}
+
+.ca-gov-icon-plus-mark:before {
+  content: "L";
+}
+
+.ca-gov-icon-powerpoint:before {
+  content: "";
+}
+
+.ca-gov-icon-print:before {
+  content: "";
+}
+
+.ca-gov-icon-pro-services:before {
+  content: "";
+}
+
+.ca-gov-icon-procurement:before {
+  content: "";
+}
+
+.ca-gov-icon-project:before {
+  content: "";
+}
+
+.ca-gov-icon-pushpin:before {
+  content: "";
+}
+
+.ca-gov-icon-puzzle:before {
+  content: "";
+}
+
+.ca-gov-icon-puzzle-piece:before {
+  content: "";
+}
+
+.ca-gov-icon-quake-hazard:before {
+  content: "";
+}
+
+.ca-gov-icon-quake-house:before {
+  content: "";
+}
+
+.ca-gov-icon-question:before {
+  content: "";
+}
+
+.ca-gov-icon-question-fill:before {
+  content: "";
+}
+
+.ca-gov-icon-question-line:before {
+  content: "";
+}
+
+.ca-gov-icon-quote-fill:before {
+  content: "";
+}
+
+.ca-gov-icon-radiation:before {
+  content: "";
+}
+
+.ca-gov-icon-rail:before {
+  content: "";
+}
+
+.ca-gov-icon-read-book:before {
+  content: "";
+}
+
+.ca-gov-icon-reader:before {
+  content: "";
+}
+
+.ca-gov-icon-recycle:before {
+  content: "";
+}
+
+.ca-gov-icon-responsive:before {
+  content: "";
+}
+
+.ca-gov-icon-responsive-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-restaurant:before {
+  content: "";
+}
+
+.ca-gov-icon-right:before {
+  content: "";
+}
+
+.ca-gov-icon-road:before {
+  content: "";
+}
+
+.ca-gov-icon-road-pin:before {
+  content: "";
+}
+
+.ca-gov-icon-roadways:before {
+  content: "";
+}
+
+.ca-gov-icon-rss:before {
+  content: "";
+}
+
+.ca-gov-icon-rv:before {
+  content: "";
+}
+
+.ca-gov-icon-safari:before {
+  content: "";
+}
+
+.ca-gov-icon-sail-ship:before {
+  content: "";
+}
+
+.ca-gov-icon-science:before {
+  content: "";
+}
+
+.ca-gov-icon-scooter:before {
+  content: "";
+}
+
+.ca-gov-icon-sea-level-rise:before {
+  content: "";
+}
+
+.ca-gov-icon-sea-level-rise-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-search:before {
+  content: "";
+}
+
+.ca-gov-icon-search-right:before {
+  content: "U";
+}
+
+.ca-gov-icon-searching:before {
+  content: "";
+}
+
+.ca-gov-icon-security-network:before {
+  content: "";
+}
+
+.ca-gov-icon-security-system:before {
+  content: "";
+}
+
+.ca-gov-icon-server:before {
+  content: "";
+}
+
+.ca-gov-icon-severe-weather:before {
+  content: "";
+}
+
+.ca-gov-icon-share:before {
+  content: "";
+}
+
+.ca-gov-icon-share-Instagram:before {
+  content: "";
+}
+
+.ca-gov-icon-share-button:before {
+  content: "";
+}
+
+.ca-gov-icon-share-email:before {
+  content: "";
+}
+
+.ca-gov-icon-share-facebook:before {
+  content: "";
+}
+
+.ca-gov-icon-share-flickr:before {
+  content: "";
+}
+
+.ca-gov-icon-share-googleplus:before {
+  content: "";
+}
+
+.ca-gov-icon-share-linkedin:before {
+  content: "";
+}
+
+.ca-gov-icon-share-pinterest:before {
+  content: "";
+}
+
+.ca-gov-icon-share-snapchat:before {
+  content: "";
+}
+
+.ca-gov-icon-share-twitter:before {
+  content: "";
+}
+
+.ca-gov-icon-share-vimeo:before {
+  content: "";
+}
+
+.ca-gov-icon-share-youtube:before {
+  content: "";
+}
+
+.ca-gov-icon-shield:before {
+  content: "";
+}
+
+.ca-gov-icon-shield-check:before {
+  content: "";
+}
+
+.ca-gov-icon-ship:before {
+  content: "";
+}
+
+.ca-gov-icon-shopping-cart:before {
+  content: "";
+}
+
+.ca-gov-icon-sign-language:before {
+  content: "";
+}
+
+.ca-gov-icon-skip-backwards:before {
+  content: "";
+}
+
+.ca-gov-icon-skip-forward:before {
+  content: "";
+}
+
+.ca-gov-icon-smartphone:before {
+  content: "";
+}
+
+.ca-gov-icon-smoking:before {
+  content: "";
+}
+
+.ca-gov-icon-snapchat:before {
+  content: "";
+}
+
+.ca-gov-icon-soap:before {
+  content: "";
+}
+
+.ca-gov-icon-soccer:before {
+  content: "";
+}
+
+.ca-gov-icon-sos:before {
+  content: "";
+}
+
+.ca-gov-icon-spartan-helmet:before {
+  content: "";
+}
+
+.ca-gov-icon-speech-dialog:before {
+  content: "";
+}
+
+.ca-gov-icon-speedtrain:before {
+  content: "";
+}
+
+.ca-gov-icon-state:before {
+  content: "";
+}
+
+.ca-gov-icon-stay-home:before {
+  content: "";
+}
+
+.ca-gov-icon-stop-fire:before {
+  content: "";
+}
+
+.ca-gov-icon-stop-hand:before {
+  content: "";
+}
+
+.ca-gov-icon-suv:before {
+  content: "";
+}
+
+.ca-gov-icon-table:before {
+  content: "";
+}
+
+.ca-gov-icon-tablet:before {
+  content: "";
+}
+
+.ca-gov-icon-tags:before {
+  content: "";
+}
+
+.ca-gov-icon-teleworking:before {
+  content: "";
+}
+
+.ca-gov-icon-temple:before {
+  content: "";
+}
+
+.ca-gov-icon-tennis:before {
+  content: "";
+}
+
+.ca-gov-icon-tent:before {
+  content: "";
+}
+
+.ca-gov-icon-testing:before {
+  content: "";
+}
+
+.ca-gov-icon-testing-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-textbook:before {
+  content: "";
+}
+
+.ca-gov-icon-thumb-up:before {
+  content: "";
+}
+
+.ca-gov-icon-time:before {
+  content: "";
+}
+
+.ca-gov-icon-tool:before {
+  content: "";
+}
+
+.ca-gov-icon-tools:before {
+  content: "";
+}
+
+.ca-gov-icon-tornado:before {
+  content: "";
+}
+
+.ca-gov-icon-train:before {
+  content: "";
+}
+
+.ca-gov-icon-travel-air:before {
+  content: "";
+}
+
+.ca-gov-icon-travel-car:before {
+  content: "";
+}
+
+.ca-gov-icon-triangle-down:before {
+  content: "C";
+}
+
+.ca-gov-icon-triangle-left:before {
+  content: "D";
+}
+
+.ca-gov-icon-triangle-line-down:before {
+  content: "G";
+}
+
+.ca-gov-icon-triangle-line-left:before {
+  content: "H";
+}
+
+.ca-gov-icon-triangle-line-right:before {
+  content: "I";
+}
+
+.ca-gov-icon-triangle-line-up:before {
+  content: "F";
+}
+
+.ca-gov-icon-triangle-right:before {
+  content: "E";
+}
+
+.ca-gov-icon-triangle-up:before {
+  content: "B";
+}
+
+.ca-gov-icon-trolleybus:before {
+  content: "";
+}
+
+.ca-gov-icon-trophy:before {
+  content: "";
+}
+
+.ca-gov-icon-truck:before {
+  content: "";
+}
+
+.ca-gov-icon-truck-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-truck-delivery:before {
+  content: "";
+}
+
+.ca-gov-icon-tsunami:before {
+  content: "";
+}
+
+.ca-gov-icon-tsunami-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-twitter:before {
+  content: "";
+}
+
+.ca-gov-icon-up:before {
+  content: "";
+}
+
+.ca-gov-icon-up-left:before {
+  content: "";
+}
+
+.ca-gov-icon-up-right:before {
+  content: "";
+}
+
+.ca-gov-icon-update:before {
+  content: "";
+}
+
+.ca-gov-icon-upload-cloud:before {
+  content: "";
+}
+
+.ca-gov-icon-user-desk:before {
+  content: "";
+}
+
+.ca-gov-icon-user-desktop-instructor:before {
+  content: "";
+}
+
+.ca-gov-icon-user-headphone:before {
+  content: "";
+}
+
+.ca-gov-icon-user-id:before {
+  content: "";
+}
+
+.ca-gov-icon-user-laptop:before {
+  content: "";
+}
+
+.ca-gov-icon-users:before {
+  content: "";
+}
+
+.ca-gov-icon-users-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-users-check-mark:before {
+  content: "";
+}
+
+.ca-gov-icon-users-dialog:before {
+  content: "";
+}
+
+.ca-gov-icon-users-interaction:before {
+  content: "";
+}
+
+.ca-gov-icon-users-huddle:before {
+  content: "";
+}
+
+.ca-gov-icon-van:before {
+  content: "";
+}
+
+.ca-gov-icon-video:before {
+  content: "";
+}
+
+.ca-gov-icon-video-camera:before {
+  content: "";
+}
+
+.ca-gov-icon-vimeo:before {
+  content: "";
+}
+
+.ca-gov-icon-virus:before {
+  content: "";
+}
+
+.ca-gov-icon-viruses:before {
+  content: "";
+}
+
+.ca-gov-icon-visa:before {
+  content: "";
+}
+
+.ca-gov-icon-volcano:before {
+  content: "";
+}
+
+.ca-gov-icon-volume:before {
+  content: "";
+}
+
+.ca-gov-icon-wallet:before {
+  content: "";
+}
+
+.ca-gov-icon-warning-circle:before {
+  content: "";
+}
+
+.ca-gov-icon-warning-fill:before {
+  content: "";
+}
+
+.ca-gov-icon-warning-square:before {
+  content: "";
+}
+
+.ca-gov-icon-warning-triangle:before {
+  content: "";
+}
+
+.ca-gov-icon-wash:before {
+  content: "";
+}
+
+.ca-gov-icon-word:before {
+  content: "";
+}
+
+.ca-gov-icon-yacht:before {
+  content: "";
+}
+
+.ca-gov-icon-youtube:before {
+  content: "";
+}
+
+.ca-gov-icon-zipped-file:before {
+  content: "";
+}
+
+.ca-gov-icon-zoo:before {
+  content: "";
+}
+
+.ca-gov-icon-zoo-alt:before {
+  content: "";
+}
+
+.ca-gov-icon-zoom-in:before {
+  content: "";
+}
+
+.ca-gov-icon-zoom-out:before {
+  content: "";
+}
+
+select[data-class-icon] {
+  font-size: 20px;
+  font-family: "CaGov";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* website global fonts */
+/* beginnings of normalize */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+
+body {
+  font-family: var(--site-font, "Public Sans", sans-serif);
+  font-size: var(--body-text, 1.125rem);
+  line-height: 1.5;
+  color: var(--black, #000);
+}
+
+/* html, body, main and all the website level base styes */
+#main-content {
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+#main-content.single-column.landing {
+  margin-bottom: 0;
+}
+
+.page-container-ds {
+  max-width: var(--w-lg, 1176px);
+  margin: 2rem auto;
+}
+
+.main-content-ds {
+  margin-top: 32px;
+  max-width: 100%;
+}
+
+article {
+  display: block;
+}
+
+/* Single column layout */
+.single-column {
+  max-width: var(--w-page-content, 876px);
+  margin: 0 auto;
+}
+
+.single-column.landing {
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+}
+
+.has-sidebar-left .single-column {
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+}
+
+@media (max-width: 1216px) {
+  .header-container,
+.footer-container,
+.page-container-ds {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+/* Responsive title behavior */
+/* Hide Mobile title, lives outside flex aligned elements and before content navigation, desktop page title is inside main. */
+.narrow-page-title {
+  display: none;
+}
+
+.main-content-ds.single-column.landing .wide-page-title {
+  display: none;
+}
+.main-content-ds.single-column.landing .narrow-page-title {
+  display: none;
+}
+
+/* Responsive page title */
+.wide-page-title {
+  display: none;
+}
+
+.narrow-page-title {
+  display: block;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.main-content-ds.single-column .wide-page-title {
+  display: none;
+}
+
+.main-content-ds.single-column.landing .wide-page-title {
+  display: none;
+}
+.main-content-ds.single-column.landing .narrow-page-title {
+  display: none;
+}
+
+.sidebar-container {
+  display: block;
+  width: 276px;
+  max-width: 276px;
+  padding-right: var(--padding-md, 16px);
+}
+
+.with-sidebar .main-content-default,
+.with-sidebar .ds-content-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--s1) / 2 * -1);
+}
+.with-sidebar.has-sidebar-left .main-content-default > *, .with-sidebar.has-sidebar-left .main-content-ds .ds-content-layout > .everylayout {
+  margin: calc(var(--s1) / 2);
+  flex-basis: 267px;
+  flex-grow: 1;
+}
+.with-sidebar.has-sidebar-left .main-content-default > :last-child, .with-sidebar.has-sidebar-left .main-content-ds .ds-content-layout > .everylayout:last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - var(--s1));
+}
+.with-sidebar.has-sidebar-right .main-content-default, .with-sidebar.has-sidebar-right .main-content-ds .ds-content-layout > .everylayout {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - var(--s1));
+}
+.with-sidebar.has-sidebar-right .main-content-default > * > :last-child, .with-sidebar.has-sidebar-right .main-content-ds .ds-content-layout > :last-child {
+  margin: calc(var(--s1) / 2);
+  flex-basis: 267px;
+  flex-grow: 1;
+}
+.with-sidebar.page-container-ds.has-sidebar-left main {
+  margin-left: 64px;
+  margin-right: 20px;
+}
+.with-sidebar .page-container-ds.has-sidebar-right main {
+  margin-right: 64px;
+  margin-left: 20px;
+}
+.with-sidebar .main-container-ds {
+  max-width: 877px;
+}
+
+/* footer */
+.content-footer-container {
+  border-bottom: 1px solid var(--gray-200, #ededef);
+  border-top: 1px solid var(--gray-200, #ededef);
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.content-footer {
+  max-width: var(--w-lg, 1176px) !important;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+  .with-sidebar .main-content-default,
+.with-sidebar .ds-content-layout {
+    display: block;
+  }
+  .with-sidebar.page-container-ds main {
+    margin-left: inherit;
+    margin-top: 32px;
+  }
+  .with-sidebar main {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  /* sidebar */
+  .sidebar-container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding-right: var(--padding-md, 16px);
+  }
+
+  /* Content Menu */
+  .content-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+/* html, body, main and all the website level base styes */
+/* Gutenberg Block alignment */
+/* Class applied to most external element of a gutenberg block component. Controls spacing between blocks. */
+.cagov-stack {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Apply same spacing mechanism as cagov-stack, but overriding default gutenberg block element classes */
+.wp-block-columns {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.wp-block-column {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.wp-block-column:first-child {
+  margin-right: 32px;
+}
+
+/* border styles */
+.wp-block-table {
+  background: none !important;
+  border: none !important;
+}
+
+.wp-block-table table,
+.wp-block-table table th,
+.wp-block-table table td {
+  border: 1px solid var(--gray-200, #ededef) !important;
+}
+
+main .wp-block-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+  margin-bottom: 32px;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .wp-block-columns {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .wp-block-column {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+/* a, a:hover, a:focus */
+/* Buttons global styles */
+.wp-block-button__link {
+  background-color: #33705b;
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-color, #33705b);
+  color: white;
+  padding: 0.5556rem;
+  border-radius: 0.2778rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+}
+
+.wp-block-button__link:hover {
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-hover-color, #33705b);
+  /* variable used with fallback in case it is not defined */
+  color: var(--white, #ffffff);
+  padding: 0.5556rem;
+  border-radius: 0.2778rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+}
+
+/* buttons generic styles */
+/* Code generic styles */
+code,
+samp,
+time {
+  background: var(--gray-100, #f9f9fa);
+  color: var(--gray-900, #3f3e4d);
+  padding: 2.5px 5px;
+  border-radius: 6px;
+  font-size: var(--body-text, 1.125rem);
+}
+
+pre > code {
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+}
+
+/* pre, code, var generic styles */
+/* Forms generic styles*/
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+textarea, input {
+  background-color: var(--white, #fff);
+  color: var(--black, #000) !important;
+  font-size: var(--body-text, 1.125rem);
+  font-weight: var(--font-weight-regular, 400);
+}
+textarea:focus, input:focus {
+  outline: 2px solid var(--secondary-color, #fec02f);
+}
+
+/* input, textarea, select generic styles */
+/* Links global styles */
+a {
+  color: var(--primary-color, #004abc);
+  text-underline-position: under;
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--primary-dark-color, #1e1569);
+  text-decoration: none;
+}
+a:focus {
+  outline: 2px solid var(--secondary-color, #fec02f);
+}
+
+a:focus, button:focus {
+  outline: solid 2px #fdb81e !important;
+}
+
+/* a, a:hover, a:focus */
+.breadcrumb {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 64px;
+  font-size: 16px;
+}
+
+.breadcrumb a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  text-underline-position: under;
+}
+
+.breadcrumb span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+  /* BREADCRUMB */
+  .breadcrumb a.crumb,
+.breadcrumb span.crumb {
+    display: none;
+  }
+
+  .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.8px;
+    color: #064e66;
+  }
+
+  .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
+    padding: 0;
+  }
+
+  .breadcrumb {
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .with-sidebar.page-container-ds .breadcrumb {
+    margin-bottom: 0px;
+  }
+}
+/* copied from blocks */
+/* Typography global styles */
+body {
+  font-weight: var(--font-weight-regular, 400);
+}
+
+/* TYPOGRAPHY */
+h1.page-title {
+  margin: 0 0 0 0;
+  padding: 0 0 24px 0;
+}
+
+main h2:first-child {
+  margin-top: 0px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* New styles, need home */
+ul {
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Update position list element */
+main ul li {
+  list-style-position: outside;
+  margin-left: 32px;
+}
+
+h1,
+.h1 {
+  font-size: 2.611rem;
+  margin-top: 3rem;
+  margin-bottom: 1.6rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h2,
+.h2 {
+  font-size: 2.056rem;
+  margin-top: 2.75rem;
+  margin-bottom: 1.4rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h3,
+.h3 {
+  font-size: 1.611rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h4,
+.h4 {
+  font-size: 1.278rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+  margin-top: 1.7rem;
+  margin-bottom: 0.8rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h6,
+.h6 {
+  font-size: 0.75rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+@media (max-width: 767px) {
+  h1,
+.h1 {
+    font-size: 2.333rem;
+  }
+
+  h2,
+.h2 {
+    font-size: 1.833rem;
+  }
+
+  h3,
+.h3 {
+    font-size: 1.444rem;
+  }
+
+  h4,
+.h4 {
+    font-size: 1.111rem;
+  }
+
+  h5,
+.h5 {
+    font-size: 1rem;
+  }
+
+  h2:first-child,
+figure ~ h2:first-of-type {
+    margin-top: 0px;
+  }
+}
+/* lists */
+ul.list-highlight li {
+  list-style: none;
+  background-color: var(--gray-100, #f9f9fa);
+  padding: 24px;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+ul.list-highlight li span.has-black-color {
+  margin-top: 1rem;
+  font-size: var(--body-text, 1.125rem);
+  font-weight: var(--font-weight-bold, 400);
+  display: block;
+  line-height: 1.6;
+}
+
+/* Remove any margins from tags in Gutenberg blocks */
+.cagov-stack h1,
+.cagov-stack h2,
+.cagov-stack h3,
+.cagov-stack h4,
+.cagov-card h1,
+.cagov-card h2,
+.cagov-card h3,
+.cagov-card h4,
+.cagov-card ul {
+  margin: 0;
+}
+
+/* headings, p, blockqute, font styles */
+/* css var values */
+:root {
+  --s1: 0px;
+  /* this needs to have px value or the calcs using it break */
+}
+
+/* my utility classes */
+.p-2 {
+  padding: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.border {
+  border: solid 1px;
+}
+
+.cluster .sp-bt {
+  justify-content: space-between;
+}
+
+.fb-500 {
+  flex-basis: 500px !important;
+}
+
+/* every-layout.dev layout classes */
+.stack * + * {
+  margin-top: 1.5rem;
+}
+
+/* all utility css classes that can be used (shortcodes) */
+/* all of the above will become part of base-css component */
+
+/*# sourceMappingURL=cannabis.css.map */

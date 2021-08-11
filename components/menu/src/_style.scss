@@ -358,6 +358,7 @@ cagov-navoverlay {
           }
           &:hover {
             text-decoration: underline;
+            text-underline-position: under;
             color: var(--primary-hover-color, #043747);
           }
 
@@ -384,6 +385,7 @@ cagov-navoverlay {
             display: block;
             transition: $bounce;
             margin-top: 0.3rem;
+            fill: var(--primary-color, #064E66);
           }
         }
       }
