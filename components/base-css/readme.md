@@ -4,12 +4,7 @@ This is a package of universal style rules for CA design system
 
 ## Preview
 
-
-
-```
-npm run start
-```
-
+<a href="https://cagov.github.io/design-system/components/base-css/preview.html">https://cagov.github.io/design-system/components/base-css/preview.html</a>
 
 ## Theming
 

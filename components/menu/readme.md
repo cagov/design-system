@@ -22,6 +22,36 @@ This sample markup taken from headless.cannabis.ca.gov uses njk code for looping
         </div>
         <div class="menu-trigger-label menu-label" data-openlabel="Open" data-closelabel="Close">Menu</div>
       </button>
+      <div class="mobile-search">
+        <button class="search-btn" aria-expanded="true">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
+            height="17px" viewBox="0 0 17 17" style="enable-background:new 0 0 17 17;" xml:space="preserve">
+            <path class="blue" d="M16.4,15.2l-4-4c2-2.6,1.8-6.5-0.6-8.9c-1.3-1.3-3-2-4.8-2S3.5,1,2.2,2.3c-2.6,2.6-2.6,6.9,0,9.6
+      c1.3,1.3,3,2,4.8,2c1.4,0,2.9-0.5,4.1-1.4l4.1,4c0.2,0.2,0.4,0.3,0.7,0.3c0.2,0,0.5-0.1,0.7-0.3C16.7,16.2,16.7,15.6,16.4,15.2
+      L16.4,15.2z M7,12c-1.3,0-2.6-0.5-3.5-1.4c-1.9-1.9-1.9-5.1,0-7C4.4,2.7,5.6,2.1,7,2.1s2.6,0.5,3.5,1.4c0.9,0.9,1.4,2.2,1.4,3.5
+      c0,1.3-0.5,2.6-1.4,3.5C9.5,11.5,8.3,12,7,12z"></path>
+          </svg>
+          Search
+        </button>
+      </div>
+    </div>
+    <div class="search-container search-container--small hidden-search">
+      <form class="site-search" action="/serp/">
+        <span class="sr-only" id="SearchInput2">Custom Google Search</span>
+        <input type="text" name="q" aria-labelledby="SearchInput2" placeholder="Search this website"
+          class="search-textfield">
+        <button type="submit" class="search-submit">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="17px" height="17px" viewBox="0 0 17 17" style="enable-background:new 0 0 17 17;"
+            xml:space="preserve">
+            <path class="blue" d="M16.4,15.2l-4-4c2-2.6,1.8-6.5-0.6-8.9c-1.3-1.3-3-2-4.8-2S3.5,1,2.2,2.3c-2.6,2.6-2.6,6.9,0,9.6
+        c1.3,1.3,3,2,4.8,2c1.4,0,2.9-0.5,4.1-1.4l4.1,4c0.2,0.2,0.4,0.3,0.7,0.3c0.2,0,0.5-0.1,0.7-0.3C16.7,16.2,16.7,15.6,16.4,15.2
+        L16.4,15.2z M7,12c-1.3,0-2.6-0.5-3.5-1.4c-1.9-1.9-1.9-5.1,0-7C4.4,2.7,5.6,2.1,7,2.1s2.6,0.5,3.5,1.4c0.9,0.9,1.4,2.2,1.4,3.5
+        c0,1.3-0.5,2.6-1.4,3.5C9.5,11.5,8.3,12,7,12z" />
+          </svg>
+          <span class="sr-only">Submit</span>
+        </button>
+      </form>
     </div>
     <nav class="expanded-menu" role="navigation" aria-label="Site Navigation" aria-hidden="false" id="main-menu">
       <div class="expanded-menu-grid">
@@ -30,34 +60,164 @@ This sample markup taken from headless.cannabis.ca.gov uses njk code for looping
             <a class="expanded-menu-section-header-link js-event-hm-menu" href="/">Home</a>
           </strong>
         </div>
-        {%-set headerLinks = menus['header-menu'].items -%}
-        {% for menu in headerLinks %}
         <div class="expanded-menu-col js-cagov-navoverlay-expandable">
           <div class="expanded-menu-section">
             <strong class="expanded-menu-section-header">
-              {% if menu['child_items'] %}
-                <button class="expanded-menu-section-header-link js-event-hm-menu">{{
-                  menu.title | safe }}</button>
-              {% else %}
-                <a class="expanded-menu-section-header-link js-event-hm-menu" href="{{ menu.url | safe }}">{{
-                  menu.title | safe }}</a>
-              {% endif %}
+              
+                <button class="expanded-menu-section-header-link js-event-hm-menu">Applicants</button>
+              
               <span class="expanded-menu-section-header-arrow"><svg width="11" height="7"
                   class="expanded-menu-section-header-arrow-svg" viewBox="0 0 11 7" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M1.15596 0.204797L5.49336 5.06317L9.8545 0.204797C10.4293 -0.452129 11.4124 0.625368 10.813 1.28143L5.90083 6.82273C5.68519 7.05909 5.32606 7.05909 5.1342 6.82273L0.174341 1.28143C-0.400433 0.6245 0.581838 -0.452151 1.15661 0.204797H1.15596Z"
-                    fill="#064E66" />
+                     />
                 </svg></span>
             </strong>
             <div class="expanded-menu-dropdown">
-              {% for sublink in menu['child_items'] %}
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/{{ sublink.url.replace('https://cannabis.ca.gov/','') | safe }}" tabindex="-1">{{ sublink.title | safe }}</a>
-              {% endfor %}
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/how-to-apply-renew/" tabindex="-1">How to apply for or renew a license</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/license-types/" tabindex="-1">License types</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/application-license-fees/" tabindex="-1">Application and license fees</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/application-resources/" tabindex="-1">Application resources</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/access-license-portals/" tabindex="-1">Access the license portals</a>
+              
             </div>
           </div>
         </div>
-        {% endfor %}
+        
+        <div class="expanded-menu-col js-cagov-navoverlay-expandable">
+          <div class="expanded-menu-section">
+            <strong class="expanded-menu-section-header">
+              
+                <button class="expanded-menu-section-header-link js-event-hm-menu">Licensees</button>
+              
+              <span class="expanded-menu-section-header-arrow"><svg width="11" height="7"
+                  class="expanded-menu-section-header-arrow-svg" viewBox="0 0 11 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.15596 0.204797L5.49336 5.06317L9.8545 0.204797C10.4293 -0.452129 11.4124 0.625368 10.813 1.28143L5.90083 6.82273C5.68519 7.05909 5.32606 7.05909 5.1342 6.82273L0.174341 1.28143C-0.400433 0.6245 0.581838 -0.452151 1.15661 0.204797H1.15596Z"
+                     />
+                </svg></span>
+            </strong>
+            <div class="expanded-menu-dropdown">
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/cultivation/" tabindex="-1">Cultivation</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/manufacturing/" tabindex="-1">Manufacturing</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/distribution/" tabindex="-1">Distribution</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/testing-laboratories/" tabindex="-1">Testing laboratories</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/retail/" tabindex="-1">Retail</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/events/" tabindex="-1">Events</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/track-and-trace/" tabindex="-1">Track and Trace</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/requirements-cannabis-goods/" tabindex="-1">Requirements for cannabis goods</a>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="expanded-menu-col js-cagov-navoverlay-expandable">
+          <div class="expanded-menu-section">
+            <strong class="expanded-menu-section-header">
+              
+                <button class="expanded-menu-section-header-link js-event-hm-menu">Consumers</button>
+              
+              <span class="expanded-menu-section-header-arrow"><svg width="11" height="7"
+                  class="expanded-menu-section-header-arrow-svg" viewBox="0 0 11 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.15596 0.204797L5.49336 5.06317L9.8545 0.204797C10.4293 -0.452129 11.4124 0.625368 10.813 1.28143L5.90083 6.82273C5.68519 7.05909 5.32606 7.05909 5.1342 6.82273L0.174341 1.28143C-0.400433 0.6245 0.581838 -0.452151 1.15661 0.204797H1.15596Z"
+                     />
+                </svg></span>
+            </strong>
+            <div class="expanded-menu-dropdown">
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/whats-legal/" tabindex="-1">What’s legal</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/medicinal-cannabis/" tabindex="-1">Medicinal cannabis</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/responsible-cannabis-use/" tabindex="-1">Responsible cannabis use</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/talking-young-people-about-cannabis/" tabindex="-1">Talking to young people about cannabis</a>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="expanded-menu-col js-cagov-navoverlay-expandable">
+          <div class="expanded-menu-section">
+            <strong class="expanded-menu-section-header">
+              
+                <button class="expanded-menu-section-header-link js-event-hm-menu">Resources</button>
+              
+              <span class="expanded-menu-section-header-arrow"><svg width="11" height="7"
+                  class="expanded-menu-section-header-arrow-svg" viewBox="0 0 11 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.15596 0.204797L5.49336 5.06317L9.8545 0.204797C10.4293 -0.452129 11.4124 0.625368 10.813 1.28143L5.90083 6.82273C5.68519 7.05909 5.32606 7.05909 5.1342 6.82273L0.174341 1.28143C-0.400433 0.6245 0.581838 -0.452151 1.15661 0.204797H1.15596Z"
+                     />
+                </svg></span>
+            </strong>
+            <div class="expanded-menu-dropdown">
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/laws-and-regulations/" tabindex="-1">Laws and regulations</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/running-business/" tabindex="-1">Running a business in California</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/file-complaint/" tabindex="-1">File a complaint</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/disaster-relief-programs/" tabindex="-1">Disaster relief programs</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/search-for-licensed-business/" tabindex="-1">Search for a licensed business</a>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="expanded-menu-col js-cagov-navoverlay-expandable">
+          <div class="expanded-menu-section">
+            <strong class="expanded-menu-section-header">
+              
+                <button class="expanded-menu-section-header-link js-event-hm-menu">About us</button>
+              
+              <span class="expanded-menu-section-header-arrow"><svg width="11" height="7"
+                  class="expanded-menu-section-header-arrow-svg" viewBox="0 0 11 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.15596 0.204797L5.49336 5.06317L9.8545 0.204797C10.4293 -0.452129 11.4124 0.625368 10.813 1.28143L5.90083 6.82273C5.68519 7.05909 5.32606 7.05909 5.1342 6.82273L0.174341 1.28143C-0.400433 0.6245 0.581838 -0.452151 1.15661 0.204797H1.15596Z"
+                     />
+                </svg></span>
+            </strong>
+            <div class="expanded-menu-dropdown">
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/about-dcc/" tabindex="-1">About DCC</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/announcements/" tabindex="-1">Announcements</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/dcc-events/" tabindex="-1">DCC events</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/public-awareness-campaigns/" tabindex="-1">Public awareness campaigns</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/scientific-research/" tabindex="-1">Scientific research</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/grant-funding/" tabindex="-1">Grant funding</a>
+              
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/contact-us/" tabindex="-1">Contact us</a>
+              
+            </div>
+          </div>
+        </div>
+        
       </div>
     </nav>
   </div>
