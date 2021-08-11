@@ -7,8 +7,6 @@ This component adds dropdown menu functionality when provided with expected HTML
 
 ## Sample markup
 
-This sample markup taken from headless.cannabis.ca.gov uses njk code for looping through menu values. The {% syntax should be replaced with hardcoded menu values or your own code to write the menu links.
-
 ```
 <cagov-navoverlay>
   <div class="container">
