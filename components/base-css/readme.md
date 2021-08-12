@@ -4,7 +4,7 @@ This is a package of universal style rules for CA design system
 
 ## Preview
 
-<a href="https://cagov.github.io/design-system/components/base-css/preview.html">https://cagov.github.io/design-system/components/base-css/preview.html</a>
+<a href="http://ca-design-system.s3-website-us-west-1.amazonaws.com/components/base-css/preview.html">http://ca-design-system.s3-website-us-west-1.amazonaws.com/components/base-css/preview.html</a>
 
 ## Theming
 
