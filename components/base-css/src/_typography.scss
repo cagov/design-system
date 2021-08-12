@@ -1,0 +1,150 @@
+/* Typography global styles */
+body {
+  font-weight: var(--font-weight-regular, 400);
+}
+/* TYPOGRAPHY */
+h1.page-title {
+  margin: 0 0 0 0;
+  padding: 0 0 24px 0;
+}
+
+main {
+  h2:first-child {
+    margin-top: 0px;
+  }
+}
+
+// paragraph margin
+p {
+  margin-bottom: 1rem;
+}
+
+/* New styles, need home */
+ul {
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Update position list element */
+main ul li {
+  list-style-position: outside;
+  margin-left: 32px;
+}
+
+h1,
+.h1 {
+  font-size: 2.611rem;
+  margin-top: 3rem;
+  margin-bottom: 1.6rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h2,
+.h2 {
+  font-size: 2.056rem;
+  margin-top: 2.75rem;
+  margin-bottom: 1.4rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h3,
+.h3 {
+  font-size: 1.611rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h4,
+.h4 {
+  font-size: 1.278rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+  margin-top: 1.7rem;
+  margin-bottom: 0.8rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h6,
+.h6 {
+  font-size: .75rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+// Mobile headings
+@media (max-width: 767px) {
+  h1,
+  .h1 {
+    font-size: 2.333rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.833rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.444rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.111rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1rem;
+  }
+
+  h2:first-child,
+  figure ~ h2:first-of-type {
+    margin-top: 0px;
+  }
+}
+
+/* lists */
+
+ul.list-highlight {
+  li {
+    list-style: none;
+    background-color: var(--gray-100, #f9f9fa);
+    padding: 24px;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-bold, 700);
+    span.has-black-color {
+      margin-top: 1rem;
+      font-size: var(--body-text, 1.125rem);
+      font-weight: var(--font-weight-bold, 400);
+      display: block;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* Remove any margins from tags in Gutenberg blocks */
+.cagov-stack h1,
+.cagov-stack h2,
+.cagov-stack h3,
+.cagov-stack h4,
+.cagov-card h1,
+.cagov-card h2,
+.cagov-card h3,
+.cagov-card h4,
+.cagov-card ul {
+  margin: 0;
+}

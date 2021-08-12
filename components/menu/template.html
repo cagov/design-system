@@ -1,13 +1,3 @@
-# Dropdown menu
-
-This component adds dropdown menu functionality when provided with expected HTML structure inside its custom element  
-
-
-<img src="https://raw.githubusercontent.com/cagov/design-system/main/components/menu/dropdown-menu-screenshot.png" alt="dropdown menu component screenshot" />
-
-## Sample markup
-
-```
 <cagov-navoverlay>
   <div class="container">
     <div class="mobile-icons">
@@ -220,24 +210,3 @@ This component adds dropdown menu functionality when provided with expected HTML
     </nav>
   </div>
 </cagov-navoverlay>
-```
-
-### Expected variables
-
-There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
-
-- var(--gray-300, #e1e0e3)
-- var(--primary-dark-color, #064e66)
-- var(--primary-hover-color, #043747);
-- var(--secondary-color, #fec02f)
-- var(--w-lg, '1176px')
-
-## Docs
-
-Run: ```npm run start``` at the repository root to preview elements. This will launch local server with links to component demo pages.
-
-The documentation is generated using the <a href="https://github.com/webcomponents/custom-elements-manifest">custom elements manifest schema</a> draft standard <a href="https://github.com/runem/web-component-analyzer">analyzer</a> command. Here is an example run outside the accordion directory:
-
-```
-wca analyze src --format json --outFile custom-elements.json
-```

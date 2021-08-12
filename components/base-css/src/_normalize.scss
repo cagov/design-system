@@ -1,0 +1,21 @@
+/* beginnings of normalize */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+
+body {
+    font-family: var(--site-font, "Public Sans",sans-serif);
+    font-size: var(--body-text, 1.125rem);
+    line-height: 1.5;
+    color: var(--black, #000);
+  }
+  

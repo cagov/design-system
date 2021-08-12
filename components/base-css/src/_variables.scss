@@ -1,0 +1,47 @@
+// Global variables
+
+// Breakpoints
+$mobile: 768px;
+$mobile-min: 767px;
+$tablet-buffer: 1216px;
+$desktop: 1176px;
+$desktop-min: 1176px;
+
+:root {
+  // Container widths
+  --w-lg: 1176px;
+  --w-lg: 1176px;
+  --w-md: 960px;
+  --w-sm: 720px;
+  --w-xs: 540px;
+
+  // Page container widths
+  --w-page-content: 876px;
+
+  // Padding elements
+  --spacing-base: 8px;
+  --padding-sm: calc(--spacing-base * 2); // 16px
+  --padding-md: calc(--spacing-base * 3); // 24px
+  --padding-lg: calc(--spacing-base * 4); // 32px
+
+  // Margin elements
+  /* haven't seen these used yet, they seem very large */
+  --margin-sm: calc(--spacing-base * 6); // 48px
+  --margin-md: calc(--spacing-base * 8); // 64px
+  --margin-lg: calc(--spacing-base * 12); // 96px
+  --margin-xl: calc(--spacing-base * 24); // 96px
+
+
+  // Font 
+  --site-font: "Public Sans",sans-serif;
+
+  // Font sizes
+  --body-text: 1.125rem;
+  --lead-text: 1.5rem;
+  --small-text: 1rem;
+
+  // Font weights
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+}

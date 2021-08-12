@@ -1,0 +1,16 @@
+/* sitewide styles, these are mostly blank but will be wrapped up into components/base-css */
+@import './_variables'; /* spasing, margin and padding values */
+@import './_mixins'; /* mixins */
+@import './_fonts'; /* website global fonts */
+@import './_cagov-font'; /* website global fonts */
+@import './_normalize'; /* html, body, main and all the website level base styes */
+@import './_page'; /* html, body, main and all the website level base styes */
+@import './_wordpress'; /* a, a:hover, a:focus */
+@import './_buttons'; /* buttons generic styles */
+@import './_code'; /* pre, code, var generic styles */
+@import './_forms'; /* input, textarea, select generic styles */
+@import './_links'; /* a, a:hover, a:focus */
+@import './_breadcrumbs'; /* copied from blocks */
+@import './_typography'; /* headings, p, blockqute, font styles */
+@import './_utility-classes'; /* all utility css classes that can be used (shortcodes) */
+/* all of the above will become part of base-css component */

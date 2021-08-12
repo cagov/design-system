@@ -1,0 +1,25 @@
+// Global mixins
+@mixin phone {
+  @media (max-width: #{$mobile-min}) {
+    @content;
+  }
+}
+/* Tablet and wider */
+@mixin tablet {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet-buffer {
+  @media (max-width: #{$tablet-buffer}) {
+    @content;
+  }
+}
+
+/* Desktop and wider */
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}

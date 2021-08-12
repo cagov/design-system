@@ -1,0 +1,52 @@
+.breadcrumb {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 64px;
+  font-size: 16px;
+}
+
+.breadcrumb a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  text-underline-position: under;
+}
+
+.breadcrumb span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+  /* BREADCRUMB */
+  .breadcrumb a.crumb,
+  .breadcrumb span.crumb {
+    display: none;
+  }
+
+  .breadcrumb span.crumb:not(:last-child):not([class*="separator"]) {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.8px;
+    color: #064e66;
+  }
+
+  .breadcrumb span.crumb:not(:last-child):not([class*="separator"]) {
+    padding: 0;
+  }
+
+  .breadcrumb {
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .with-sidebar.page-container-ds .breadcrumb {
+    margin-bottom: 0px;
+  }
+}

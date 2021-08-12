@@ -1,0 +1,29 @@
+
+/* css var values */
+:root {
+  --s1: 0px; /* this needs to have px value or the calcs using it break */
+}
+
+/* my utility classes */
+.p-2 {
+  padding: 2rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.border {
+  border: solid 1px;
+}
+.cluster .sp-bt {
+  justify-content: space-between;
+}
+.fb-500 {
+  flex-basis: 500px !important;
+}
+
+
+
+/* every-layout.dev layout classes */
+.stack * + * {
+  margin-top: 1.5rem;
+}

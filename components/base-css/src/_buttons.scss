@@ -1,0 +1,25 @@
+/* Buttons global styles */
+.wp-block-button__link {
+  background-color: #33705b;
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-color, #33705b);
+  color: white;
+  padding: 0.5556rem;
+  border-radius: 0.2778rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+}
+.wp-block-button__link:hover {
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-hover-color, #33705b);
+  /* variable used with fallback in case it is not defined */
+  color: var(--white, #ffffff);
+  padding: 0.5556rem;
+  border-radius: 0.2778rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+  // text-decoration: underline;
+}
