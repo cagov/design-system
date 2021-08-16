@@ -57,7 +57,7 @@
   padding: 0 0.5rem 0 0.5rem;
 }
 .official-header .official-languages a:hover {
-  color: var(--primary-dark-color, #4A1106);
+  color: var(--primary-dark-color, #4a1106);
 }
 .official-header .official-languages {
   display: flex;
@@ -74,7 +74,7 @@
   transition: transform 0.3s;
 }
 .official-header .official-languages button.offcial-more:hover {
-  color: var(--primary-dark-color, #4A1106);
+  color: var(--primary-dark-color, #4a1106);
 }
 .official-header .official-languages button.offcial-more[aria-expanded=false] .caret-down {
   transition: all 0.3s;
