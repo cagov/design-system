@@ -1,0 +1,155 @@
+/* translate widget loader */
+#google_translate_element {
+  font-size: 0.85rem;
+}
+
+/*official*/
+.official-header {
+  background-color: var(--gray-100, #f9f9fa);
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--gray-200, #ededef);
+  /* google translate */
+}
+@media (max-width: 767px) {
+  .official-header {
+    width: 100vw;
+    margin-left: -15px;
+    padding: 0.5rem 0;
+  }
+}
+.official-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: var(--w-lg, 1176px);
+  min-height: 40px;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+.official-header .ofiicial-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.official-header .ofiicial-logo .cagov-logo {
+  margin: 0 20px 0 0;
+  display: flex;
+}
+.official-header svg {
+  padding: 0;
+  width: 38px;
+}
+.official-header svg .ca {
+  fill: var(--secondary-color, #cf5d28);
+}
+.official-header svg .gov {
+  fill: var(--primary-dark-color, #4a1106);
+}
+.official-header .official-tag {
+  margin: 0 10px;
+  font-size: 0.95rem;
+}
+.official-header .official-languages a {
+  color: var(--black, #000);
+  padding: 0 0.5rem 0 0.5rem;
+}
+.official-header .official-languages a:hover {
+  color: var(--primary-dark-color, #4a1106);
+}
+.official-header .official-languages {
+  display: flex;
+  flex-wrap: wrap;
+}
+.official-header .official-languages .dropdown {
+  position: relative;
+}
+.official-header .official-languages button.offcial-more {
+  padding-right: 0;
+  border: none;
+  text-decoration: underline;
+  background-color: var(--white, #fff);
+  transition: transform 0.3s;
+}
+.official-header .official-languages button.offcial-more:hover {
+  color: var(--primary-dark-color, #4a1106);
+}
+.official-header .official-languages button.offcial-more[aria-expanded=false] .caret-down {
+  transition: all 0.3s;
+}
+.official-header .official-languages button.offcial-more[aria-expanded=false] .caret-down svg {
+  padding: 0 0 0 0;
+  width: 20px;
+  height: 18px;
+  overflow: visible;
+  position: relative;
+  right: 5px;
+}
+.official-header .official-languages button.offcial-more[aria-expanded=true] .caret-down {
+  transition: transform 0.3s;
+}
+.official-header .official-languages button.offcial-more[aria-expanded=true] .caret-down svg {
+  padding: 0 0 0 0;
+  width: 20px;
+  height: 18px;
+  position: relative;
+  top: 8px;
+  left: 4px;
+  overflow: visible;
+  transform: rotate(180deg);
+}
+.official-header .official-languages .dropdown-content {
+  background-clip: padding-box;
+  background-color: var(--white, #fff);
+  border: 1px solid var(--primary-color, #064e66);
+  border-radius: 0.25rem;
+  padding: 15px;
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  text-align: left;
+  z-index: 1000;
+  min-width: 150px;
+  display: none;
+}
+.official-header .official-languages .dropdown-content.show {
+  display: flex;
+  flex-direction: column;
+}
+.official-header .goog-te-gadget {
+  max-height: 42px;
+  overflow: hidden;
+}
+.official-header .goog-te-gadget .goog-te-combo {
+  /* hardcoded translate widget stuff from cannabis site */
+  background-color: #fff;
+  border: 1px solid #bbb;
+  padding: 0.25rem;
+  color: #4e4e4e;
+}
+.official-header .goog-logo-link {
+  display: none;
+}
+.official-header #google_translate_element .skiptranslate.goog-te-gadget,
+.official-header .skiptranslate.goog-te-gadget a {
+  color: white;
+}
+.official-header .goog-te-gadget {
+  margin-bottom: -10px;
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* sticky header */
+@media (min-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
