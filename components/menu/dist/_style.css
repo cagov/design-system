@@ -1,18 +1,11 @@
 /* Tablet and wider */
 /* Desktop and wider */
-/* MAIN MENU / HAMBURGER */
-cagov-navoverlay a:focus, cagov-navoverlay button:focus {
-  outline: none !important; }
-
-cagov-navoverlay .container {
-  max-width: var(--w-lg, "1176px");
-  margin: 0 auto;
-  /*padding: 0 16px 0 16px;*/ }
-
-cagov-navoverlay .mobile-search {
+/* HAMBURGER */
+/* MAIN MENU */
+.cagov-nav.mobile-search {
   margin-top: 1rem; }
 
-cagov-navoverlay .menu-trigger {
+.cagov-nav.menu-trigger {
   margin-top: 1rem;
   padding: 0.5em 1em 0.5em 0;
   transition: 0.3s;
@@ -26,20 +19,20 @@ cagov-navoverlay .menu-trigger {
   right: 0;
   transition: 0.3s;
   transform-origin: center center; }
-  cagov-navoverlay .menu-trigger .is-fixed {
+  .cagov-nav.menu-trigger .is-fixed {
     position: fixed; }
   @media (max-width: 767px) {
-    cagov-navoverlay .menu-trigger {
+    .cagov-nav.menu-trigger {
       z-index: 2000; } }
   @media (min-width: 768px) {
-    cagov-navoverlay .menu-trigger {
+    .cagov-nav.menu-trigger {
       z-index: 2000; } }
-  cagov-navoverlay .menu-trigger .hamburger-inner {
+  .cagov-nav.menu-trigger .hamburger-inner {
     background: #000; }
-  cagov-navoverlay .menu-trigger:hover .hamburger-inner:before, cagov-navoverlay .menu-trigger:hover .hamburger-inner:after {
+  .cagov-nav.menu-trigger:hover .hamburger-inner:before, .cagov-nav.menu-trigger:hover .hamburger-inner:after {
     width: 13px; }
 
-cagov-navoverlay .hamburger {
+.cagov-nav.hamburger {
   padding: 0.15rem 0.15rem;
   display: inline-block;
   cursor: pointer;
@@ -51,53 +44,61 @@ cagov-navoverlay .hamburger {
   vertical-align: middle;
   z-index: 10000;
   margin-right: 0.5rem; }
-  cagov-navoverlay .hamburger-box {
+  .cagov-nav.hamburger-box {
     width: 20px;
     height: 20px;
     display: inline-block;
     position: relative; }
-  cagov-navoverlay .hamburger-inner {
+  .cagov-nav.hamburger-inner {
     display: block;
     top: 50%;
     width: 20px;
     margin-top: -1px;
     transition-duration: 0.22s;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-    cagov-navoverlay .hamburger-inner, cagov-navoverlay .hamburger-inner:before, cagov-navoverlay .hamburger-inner:after {
+    .cagov-nav.hamburger-inner, .cagov-nav.hamburger-inner:before, .cagov-nav.hamburger-inner:after {
       height: 2px;
       border-radius: 0;
       position: absolute;
       transition-property: transform, width, background-color;
       transition-duration: 0.15s;
       transition-timing-function: ease; }
-    cagov-navoverlay .hamburger-inner:before, cagov-navoverlay .hamburger-inner:after {
+    .cagov-nav.hamburger-inner:before, .cagov-nav.hamburger-inner:after {
       width: 20px;
       content: "";
       display: block; }
-    cagov-navoverlay .hamburger-inner:before {
+    .cagov-nav.hamburger-inner:before {
       top: -6px;
       transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in, width 0.1s 0.12s ease-out; }
-    cagov-navoverlay .hamburger-inner:after {
+    .cagov-nav.hamburger-inner:after {
       bottom: -6px;
       transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.1s 0.12s ease-out; }
 
-cagov-navoverlay.display-menu .menu-trigger {
+cagov-navoverlay a:focus, cagov-navoverlay button:focus {
+  outline: none !important; }
+
+cagov-navoverlay .container {
+  max-width: var(--w-lg, "1176px");
+  margin: 0 auto;
+  /*padding: 0 16px 0 16px;*/ }
+
+.display-menu .cagov-nav.menu-trigger {
   box-shadow: none; }
-  cagov-navoverlay.display-menu .menu-trigger .hamburger-inner, cagov-navoverlay.display-menu .menu-trigger .hamburger-inner:before, cagov-navoverlay.display-menu .menu-trigger .hamburger-inner:after {
+  .display-menu .cagov-nav.menu-trigger .hamburger-inner, .display-menu .cagov-nav.menu-trigger .hamburger-inner:before, .display-menu .cagov-nav.menu-trigger .hamburger-inner:after {
     transition: 0.3s; }
 
-cagov-navoverlay.display-menu .hamburger-inner {
+.display-menu .cagov-nav.hamburger-inner {
   transform: rotate(225deg);
   transition-delay: 0.12s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   width: 12px; }
-  cagov-navoverlay.display-menu .hamburger-inner, cagov-navoverlay.display-menu .hamburger-inner:before, cagov-navoverlay.display-menu .hamburger-inner:after {
+  .display-menu .cagov-nav.hamburger-inner, .display-menu .cagov-nav.hamburger-inner:before, .display-menu .cagov-nav.hamburger-inner:after {
     width: 20px !important; }
-  cagov-navoverlay.display-menu .hamburger-inner:before {
+  .display-menu .cagov-nav.hamburger-inner:before {
     top: 0;
     opacity: 0;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-  cagov-navoverlay.display-menu .hamburger-inner:after {
+  .display-menu .cagov-nav.hamburger-inner:after {
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
@@ -240,7 +241,6 @@ cagov-navoverlay {
             background: transparent; }
           cagov-navoverlay .expanded-menu-section-header-link:hover {
             text-decoration: underline;
-            text-underline-position: under;
             color: var(--primary-hover-color, #043747); }
           @media (min-width: 768px) {
             cagov-navoverlay .expanded-menu-section-header-link {
@@ -264,8 +264,7 @@ cagov-navoverlay {
             width: 100%;
             display: block;
             transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
-            margin-top: 0.3rem;
-            fill: var(--primary-color, #064E66); }
+            margin-top: 0.3rem; }
     cagov-navoverlay .expanded-menu-dropdown {
       max-height: 0px;
       overflow: hidden;
