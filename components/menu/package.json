@@ -4,12 +4,33 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "build": "node-sass-chokidar --source-map true src/index.scss -o ."
+    "build": "node-sass-chokidar --source-map true src/index.scss -o .",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+    "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --ext .js,.html . --ignore-path .gitignore --fix",
+    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass-chokidar": "^1.5.0"
+    "@open-wc/eslint-config": "^4.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-lit": "^1.5.1",
+    "node-sass-chokidar": "^1.5.0",
+    "prettier": "^2.3.2"
   }
 }
