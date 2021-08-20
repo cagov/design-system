@@ -3,7 +3,7 @@
 This component adds dropdown menu functionality when provided with expected HTML structure inside its custom element  
 
 
-<img src="https://raw.githubusercontent.com/cagov/design-system/main/components/menu/dropdown-menu-screenshot.png" alt="dropdown menu component screenshot" />
+<img src="https://raw.githubusercontent.com/cagov/design-system/main/components/menu/img/dropdown-menu-screenshot.png" alt="dropdown menu component screenshot" />
 
 ## Sample markup
 

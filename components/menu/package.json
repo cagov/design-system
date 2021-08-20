@@ -1,10 +1,10 @@
 {
   "name": "@cagov/ds-dropdown-menu",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "build": "node-sass-chokidar --source-map true src/_style.scss -o dist"
+    "build": "node-sass-chokidar --source-map true src/index.scss -o ."
   },
   "keywords": [],
   "author": "",
