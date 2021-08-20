@@ -100,7 +100,7 @@ $desktop: 1176px;
     display: inline-block;
     position: relative;
   }
-  &-inner {
+  .hamburger-inner {
     display: block;
     top: 50%;
     width: 20px;
@@ -160,7 +160,7 @@ cagov-navoverlay {
     }
   }
   .cagov-nav.hamburger {
-    &-inner {
+    .hamburger-inner {
       transform: rotate(225deg);
       transition-delay: 0.12s;
       transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);

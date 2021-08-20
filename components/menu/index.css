@@ -49,28 +49,28 @@
     height: 20px;
     display: inline-block;
     position: relative; }
-  .cagov-nav.hamburger-inner {
+  .cagov-nav.hamburger .hamburger-inner {
     display: block;
     top: 50%;
     width: 20px;
     margin-top: -1px;
     transition-duration: 0.22s;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-    .cagov-nav.hamburger-inner, .cagov-nav.hamburger-inner:before, .cagov-nav.hamburger-inner:after {
+    .cagov-nav.hamburger .hamburger-inner, .cagov-nav.hamburger .hamburger-inner:before, .cagov-nav.hamburger .hamburger-inner:after {
       height: 2px;
       border-radius: 0;
       position: absolute;
       transition-property: transform, width, background-color;
       transition-duration: 0.15s;
       transition-timing-function: ease; }
-    .cagov-nav.hamburger-inner:before, .cagov-nav.hamburger-inner:after {
+    .cagov-nav.hamburger .hamburger-inner:before, .cagov-nav.hamburger .hamburger-inner:after {
       width: 20px;
       content: "";
       display: block; }
-    .cagov-nav.hamburger-inner:before {
+    .cagov-nav.hamburger .hamburger-inner:before {
       top: -6px;
       transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in, width 0.1s 0.12s ease-out; }
-    .cagov-nav.hamburger-inner:after {
+    .cagov-nav.hamburger .hamburger-inner:after {
       bottom: -6px;
       transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.1s 0.12s ease-out; }
 
@@ -87,18 +87,18 @@ cagov-navoverlay .container {
   .display-menu .cagov-nav.menu-trigger .hamburger-inner, .display-menu .cagov-nav.menu-trigger .hamburger-inner:before, .display-menu .cagov-nav.menu-trigger .hamburger-inner:after {
     transition: 0.3s; }
 
-.display-menu .cagov-nav.hamburger-inner {
+.display-menu .cagov-nav.hamburger .hamburger-inner {
   transform: rotate(225deg);
   transition-delay: 0.12s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   width: 12px; }
-  .display-menu .cagov-nav.hamburger-inner, .display-menu .cagov-nav.hamburger-inner:before, .display-menu .cagov-nav.hamburger-inner:after {
+  .display-menu .cagov-nav.hamburger .hamburger-inner, .display-menu .cagov-nav.hamburger .hamburger-inner:before, .display-menu .cagov-nav.hamburger .hamburger-inner:after {
     width: 20px !important; }
-  .display-menu .cagov-nav.hamburger-inner:before {
+  .display-menu .cagov-nav.hamburger .hamburger-inner:before {
     top: 0;
     opacity: 0;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-  .display-menu .cagov-nav.hamburger-inner:after {
+  .display-menu .cagov-nav.hamburger .hamburger-inner:after {
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
