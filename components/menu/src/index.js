@@ -9,10 +9,10 @@
  * @cssprop --secondary-color - #fec02f
  * @cssprop --w-lg - '1176px'
  */
-class CAGOVOverlayNav extends window.HTMLElement {
+ class CAGOVOverlayNav extends window.HTMLElement {
   connectedCallback () {
-    this.querySelector('.open-menu').addEventListener('click', this.toggleMainMenu.bind(this));
-    this.querySelector('.mobile-search .search-btn').addEventListener('click', this.toggleMobileSearch.bind(this));
+    document.querySelector('.cagov-nav.open-menu').addEventListener('click', this.toggleMainMenu.bind(this));
+    document.querySelector('.cagov-nav.mobile-search .search-btn').addEventListener('click', this.toggleMobileSearch.bind(this));
     this.expansionListeners();
     document.addEventListener('keydown', this.escapeMainMenu.bind(this));
     document.body.addEventListener('click',this.bodyClick.bind(this))
@@ -20,7 +20,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
   }
 
   toggleMainMenu () {
-    if (this.querySelector('.hamburger').classList.contains('is-active')) {
+    if (document.querySelector('.cagov-nav.hamburger').classList.contains('is-active')) {
       this.closeMainMenu();
     } else {
       this.openMainMenu();
@@ -41,18 +41,20 @@ class CAGOVOverlayNav extends window.HTMLElement {
   }
 
   openMainMenu () {
+    document.querySelector('.mobile-icons').classList.add('display-menu');
     this.classList.add('display-menu');
-    this.querySelector('.hamburger').classList.add('is-active');
-    this.querySelector('.menu-trigger').classList.add('is-fixed');
-    var menLabel = this.querySelector('.menu-trigger-label');
+    document.querySelector('.cagov-nav.hamburger').classList.add('is-active');
+    document.querySelector('.cagov-nav.menu-trigger').classList.add('is-fixed');
+    var menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML = menLabel.getAttribute('data-closelabel');
   }
 
   closeMainMenu () {
+    document.querySelector('.mobile-icons').classList.remove('display-menu');
     this.classList.remove('display-menu');
-    this.querySelector('.hamburger').classList.remove('is-active');
-    this.querySelector('.menu-trigger').classList.remove('is-fixed');
-    var menLabel = this.querySelector('.menu-trigger-label');
+    document.querySelector('.cagov-nav.hamburger').classList.remove('is-active');
+    document.querySelector('.cagov-nav.menu-trigger').classList.remove('is-fixed');
+    var menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML =  menLabel.getAttribute('data-openlabel');
   }
 
