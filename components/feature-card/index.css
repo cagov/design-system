@@ -2,24 +2,20 @@
 .cagov-with-sidebar {
   overflow: hidden;
 }
-
 .cagov-with-sidebar > * {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
 }
-
 .cagov-with-sidebar > * > * {
   margin: 0;
   flex-grow: 1;
 }
-
 .cagov-with-sidebar-left > * > :last-child {
   flex-basis: 0;
   flex-grow: 999;
   min-width: calc(30% - var(0px));
 }
-
 .cagov-with-sidebar-right > * > :first-child {
   flex-basis: 0;
   flex-grow: 999;
@@ -30,33 +26,24 @@
 .stack * + * {
   margin-top: 1.5rem;
 }
-
 .cagov-border {
   border: solid 1px;
 }
-
 .no-deco {
   text-decoration: none;
 }
-
 /* reset */
-h3 {
-  margin: 0;
-}
-
+h3 { margin: 0; }
 /* spacing overrides, can these come from base-css? */
 .cagov-featured-section h2 {
   padding-bottom: 16px;
 }
-
 .cagov-hero-body-content p {
   margin-bottom: 16px;
 }
-
 .cagov-p-2 {
   padding: 1.5rem;
 }
-
 .cagov-bkgrd-gry {
   background-color: var(--gray-100, #f9f9fa);
 }
@@ -66,18 +53,15 @@ h3 {
   max-width: 400px;
   margin-top: 0;
 }
-
 .cagov-featured-section {
   margin: 0 0 3rem 0;
 }
-
 .cagov-featured-section .components-button.image-button {
   display: block;
   height: 100%;
   margin: 0 0 3rem 0;
   padding: 0;
 }
-
 .cagov-featured-image {
   object-fit: cover;
   width: 100%;
@@ -87,6 +71,7 @@ h3 {
   min-height: 20rem;
   max-height: 420px;
 }
+
 
 /* hero sidebar swap image on left to go on top when it wraps */
 @media (max-width: 719px) {
@@ -99,9 +84,12 @@ h3 {
     max-width: 34%;
   }
 }
+
 /* call to action */
 /* styles applied to elements WordPress is adding to the markup */
-.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+.cagov-hero-body-content
+  .wp-block-button:not(.is-style-outline)
+  .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
   /* defined here for when css vars are not supported */
   background-color: var(--primary-color, #33705b);
   /* variable used with fallback in case it is not defined */
@@ -113,8 +101,9 @@ h3 {
   border: none;
   text-decoration: none;
 }
-
-.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+.cagov-hero-body-content
+  .wp-block-button:not(.is-style-outline)
+  .wp-block-button__link:hover {
   /* defined here for when css vars are not supported */
   background-color: var(--primary-hover-color, #33705b);
   /* variable used with fallback in case it is not defined */
@@ -125,10 +114,7 @@ h3 {
   display: inline-block;
   border: none;
 }
-
 .cagov-hero-body-content .wp-block-button__link {
   overflow-wrap: normal;
   white-space: nowrap;
 }
-
-/*# sourceMappingURL=index.css.map */

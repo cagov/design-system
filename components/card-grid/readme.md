@@ -38,10 +38,6 @@ npm run start
 ```
 Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by ```preview.html```
 
-### CSS
-
-Sass compilation is run from the root of the project ```npm run sass:cards``` will create a plain css file from the scss file in this component css directory. This file inherits reusable css from /components/shared/css.
-
 ### Expected variables
 
 There are some colors that should be defined by the containing page. 
