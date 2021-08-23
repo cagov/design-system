@@ -1,11 +1,19 @@
 {
   "name": "@cagov/ds-branding",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.css",
   "scripts": {
+    "build": "sass src/index.scss index.css"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/components/branding/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.38.0"
+  }
 }
