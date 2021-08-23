@@ -11,160 +11,168 @@
   border-bottom: 1px solid var(--gray-200, #ededef);
 
   @media (max-width: 767px) {
-    width: 100vw;
-    margin-left: -15px;
-    padding: 0.5rem 0;
+      width: 100vw;
+      margin-left: -15px;
+      padding: 0.5rem 0;
   }
 
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    max-width: var(--w-lg, 1176px);
-    min-height: 40px;
-    margin: 0 auto;
-    padding: 0 10px 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      max-width: var(--w-lg, 1176px);
+      min-height: 40px;
+      margin: 0 auto;
+      padding: 0 10px 0 10px;
   }
 
   .ofiicial-logo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .cagov-logo {
-      margin: 0 20px 0 0;
       display: flex;
-    }
+      flex-wrap: wrap;
+      align-items: center;
+
+      .cagov-logo {
+          margin: 0 20px 0 0;
+          display: flex;
+      }
   }
 
   svg {
-    padding: 0;
-    width: 38px;
+      padding: 0;
+      width: 38px;
 
-    .ca {
-      fill: var(--secondary-color, #cf5d28);
-    }
-    .gov {
-      fill: var(--primary-dark-color, #4a1106);
-    }
+      .ca {
+          fill: var(--secondary-color, #cf5d28);
+      }
+      .gov {
+          fill: var(--primary-dark-color, #4a1106);
+      }
   }
 
   .official-tag {
-    margin: 0 10px;
-    font-size: 0.95rem;
+      margin: 0 10px;
+      font-size: 0.95rem;
+      display: inherit;
   }
 
   .official-languages a {
-    color: var(--black, #000);
-    padding: 0 0.5rem 0 0.5rem;
+      color: var(--black, #000);
+      padding: 0 0.5rem 0 0.5rem;
 
-    &:hover {
-      color: var(--primary-dark-color, #4a1106);
-    }
+      &:hover {
+          color: var(--primary-dark-color, #4a1106);
+      }
   }
 
   .official-languages {
-    display: flex;
-    flex-wrap: wrap;
-    .dropdown {
-      position: relative;
-    }
-    // languages button
-    button.offcial-more {
-      padding-right: 0;
-      border: none;
-      text-decoration: underline;
-      background-color: var(--white, #fff);
-      transition: transform 0.3s;
-
-      &:hover {
-        color: var(--primary-dark-color, #4a1106);
+      display: flex;
+      flex-wrap: wrap;
+      .dropdown {
+          position: relative;
       }
-      &[aria-expanded="false"] {
-        .caret-down {
-          transition: all 0.3s;
-          svg {
-            padding: 0 0 0 0;
-            width: 20px;
-            height: 18px;
-            overflow: visible;
-            position: relative;
-            right: 5px;
-          }
-        }
-      }
-      &[aria-expanded="true"] {
-        .caret-down {
+      // languages button
+      button.offcial-more {
+          padding-right: 0;
+          border: none;
+          text-decoration: underline;
+          background-color: var(--white, #fff);
           transition: transform 0.3s;
-          svg {
-            padding: 0 0 0 0;
-            width: 20px;
-            height: 18px;
-            position: relative;
-            top: 8px;
-            left: 4px;
-            overflow: visible;
-            transform: rotate(180deg);
-          }
-        }
-      }
-    }
 
-    .dropdown-content {
-      background-clip: padding-box;
-      background-color: var(--white, #fff);
-      border: 1px solid var(--primary-color, #064e66);
-      border-radius: 0.25rem;
-      padding: 15px;
-      position: absolute;
-      right: 0px;
-      top: 100%;
-      text-align: left;
-      z-index: 1000;
-      min-width: 150px;
-      display: none;
-      &.show {
-        display: flex;
-        flex-direction: column;
+          &:hover {
+              color: var(--primary-dark-color, #4a1106);
+          }
+          &[aria-expanded="false"] {
+              .caret-down {
+                  transition: all 0.3s;
+                  svg {
+                      padding: 0 0 0 0;
+                      width: 20px;
+                      height: 18px;
+                      overflow: visible;
+                      position: relative;
+                      right: 5px;
+                  }
+              }
+          }
+          &[aria-expanded="true"] {
+              .caret-down {
+                  transition: transform 0.3s;
+                  svg {
+                      padding: 0 0 0 0;
+                      width: 20px;
+                      height: 18px;
+                      position: relative;
+                      top: 8px;
+                      left: 4px;
+                      overflow: visible;
+                      transform: rotate(180deg);
+                  }
+              }
+          }
       }
-    }
+
+      .dropdown-content {
+          background-clip: padding-box;
+          background-color: var(--white, #fff);
+          border: 1px solid var(--primary-color, #064e66);
+          border-radius: 0.25rem;
+          padding: 15px;
+          position: absolute;
+          right: 0px;
+          top: 100%;
+          text-align: left;
+          z-index: 1000;
+          min-width: 150px;
+          display: none;
+          &.show {
+              display: flex;
+              flex-direction: column;
+          }
+      }
   }
 
   /* google translate */
   .goog-te-gadget {
-    max-height: 42px;
-    overflow: hidden;
+      max-height: 42px;
+      overflow: hidden;
 
-    .goog-te-combo {
-      /* hardcoded translate widget stuff from cannabis site */
-      background-color: #fff;
-      border: 1px solid #bbb;
-      padding: 0.25rem;
-      color: #4e4e4e;
-    }
+      .goog-te-combo {
+          /* hardcoded translate widget stuff from cannabis site */
+          background-color: #fff;
+          border: 1px solid #bbb;
+          padding: 0.25rem;
+          color: #4e4e4e;
+      }
   }
   .goog-logo-link {
-    display: none;
+      display: none;
   }
   #google_translate_element .skiptranslate.goog-te-gadget,
   .skiptranslate.goog-te-gadget a {
-    color: white;
+      color: white;
   }
   .goog-te-gadget {
-    margin-bottom: -10px;
-    font-size: 11px;
-    color: #666;
-    white-space: nowrap;
+      margin-bottom: -10px;
+      font-size: 11px;
+      color: #666;
+      white-space: nowrap;
   }
+}
+.desktop-only {
+  display: none;
 }
 
 /* sticky header */
 @media (min-width: 768px) {
   header {
-    position: sticky;
-    top: 0;
-    z-index: 99;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+  }
+  .desktop-only {
+      display: inherit;
+      padding-right: 0.2rem;
   }
 }
