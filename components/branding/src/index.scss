@@ -4,6 +4,9 @@
   src: url("/fonts/Lexend-Medium.woff2") format("woff2");
 }
 
+$mobile: 768px;
+$mobile-min: 767px;
+
 /* branding */
 .branding {
   box-sizing: border-box;
@@ -159,12 +162,16 @@
     right: 0;
     transition: 0.3s;
     transform-origin: center center;
-    @include phone {
-      z-index: 2000;
+    @mixin phone {
+      @media (max-width: #{$mobile-min}) {
+        z-index: 2000;
+      }
     }
 
-    @include tablet {
-      z-index: 2000;
+    @mixin tablet {
+      @media (min-width: #{$mobile}) {
+        z-index: 2000;
+      }
     }
     .hamburger-inner {
       background-color: var(--primary-color, #064e66);
