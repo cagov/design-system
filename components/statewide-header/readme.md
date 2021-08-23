@@ -42,7 +42,7 @@ This CSS only module contains the styles required to create the list of steps in
           </g>
         </svg>
       </a>
-      <p class="official-tag">Official website of the State of California</p>
+      <p class="official-tag"><span class="desktop-only">Official website of the</span> State of California</p>
     </div>
     <cagov-google-translate />
   </div>
