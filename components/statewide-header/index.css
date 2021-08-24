@@ -51,6 +51,7 @@
 .official-header .official-tag {
   margin: 0 10px;
   font-size: 0.95rem;
+  display: inherit;
 }
 .official-header .official-languages a {
   color: var(--black, #000);
@@ -143,12 +144,21 @@
   white-space: nowrap;
 }
 
+.desktop-only {
+  display: none;
+}
+
 /* sticky header */
 @media (min-width: 768px) {
   header {
     position: sticky;
     top: 0;
     z-index: 99;
+  }
+
+  .desktop-only {
+    display: inherit;
+    padding-right: 0.2rem;
   }
 }
 
