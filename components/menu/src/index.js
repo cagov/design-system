@@ -12,10 +12,13 @@
 class CAGOVOverlayNav extends window.HTMLElement {
   connectedCallback() {
     document.querySelector('.cagov-nav.open-menu').addEventListener('click', this.toggleMainMenu.bind(this));
-    document.querySelector('.cagov-nav.mobile-search .search-btn').addEventListener('click', () => {
-      document.querySelector('.search-container--small').classList.toggle('hidden-search');
-      document.querySelector('.search-container--small .site-search input').focus();
-    });
+    let mobileSearchBtn = document.querySelector('.cagov-nav.mobile-search .search-btn');
+    if(mobileSearchBtn) {
+      mobileSearchBtn.addEventListener('click', () => {
+        document.querySelector('.search-container--small').classList.toggle('hidden-search');
+        document.querySelector('.search-container--small .site-search input').focus();
+      });
+    }
     this.expansionListeners();
     document.addEventListener('keydown', this.escapeMainMenu.bind(this));
     document.body.addEventListener('click', this.bodyClick.bind(this));

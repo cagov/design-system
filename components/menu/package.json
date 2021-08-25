@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "build": "node-sass-chokidar --source-map true src/index.scss -o .",
     "format": "npm run format:eslint && npm run format:prettier",
@@ -11,7 +12,9 @@
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "lint:eslint:fix": "eslint --ext .js,.html . --ignore-path .gitignore --fix",
-    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore"
+    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "eslintConfig": {
     "extends": [
@@ -27,6 +30,9 @@
   "license": "ISC",
   "devDependencies": {
     "@open-wc/eslint-config": "^4.3.0",
+    "@open-wc/testing": "^3.0.0-next.2",
+    "@web/test-runner": "^0.13.16",
+    "@web/test-runner-puppeteer": "^0.10.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-lit": "^1.5.1",
