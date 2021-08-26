@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "",
   "main": "dist/index.js",
+  "customElements": "custom-elements.json",
   "scripts": {
     "build:sass": "sass src/css/index.scss src/css/index.css",
     "build:js": "rollup --config rollup.config.js",
@@ -15,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cagov/design-system/tree/main/components/accordion"
+    "url": "https://github.com/cagov/design-system/tree/main/components/pagination"
   },
   "keywords": [
     "web component"

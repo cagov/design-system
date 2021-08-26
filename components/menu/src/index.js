@@ -11,12 +11,20 @@
  */
 class CAGOVOverlayNav extends window.HTMLElement {
   connectedCallback() {
-    document.querySelector('.cagov-nav.open-menu').addEventListener('click', this.toggleMainMenu.bind(this));
-    let mobileSearchBtn = document.querySelector('.cagov-nav.mobile-search .search-btn');
-    if(mobileSearchBtn) {
+    document
+      .querySelector('.cagov-nav.open-menu')
+      .addEventListener('click', this.toggleMainMenu.bind(this));
+    const mobileSearchBtn = document.querySelector(
+      '.cagov-nav.mobile-search .search-btn',
+    );
+    if (mobileSearchBtn) {
       mobileSearchBtn.addEventListener('click', () => {
-        document.querySelector('.search-container--small').classList.toggle('hidden-search');
-        document.querySelector('.search-container--small .site-search input').focus();
+        document
+          .querySelector('.search-container--small')
+          .classList.toggle('hidden-search');
+        document
+          .querySelector('.search-container--small .site-search input')
+          .focus();
       });
     }
     this.expansionListeners();
@@ -26,7 +34,11 @@ class CAGOVOverlayNav extends window.HTMLElement {
   }
 
   toggleMainMenu() {
-    if (document.querySelector('.cagov-nav.hamburger').classList.contains('is-active')) {
+    if (
+      document
+        .querySelector('.cagov-nav.hamburger')
+        .classList.contains('is-active')
+    ) {
       this.closeMainMenu();
     } else {
       this.openMainMenu();
@@ -53,15 +65,21 @@ class CAGOVOverlayNav extends window.HTMLElement {
   closeMainMenu() {
     document.querySelector('.mobile-icons').classList.remove('display-menu');
     this.classList.remove('display-menu');
-    document.querySelector('.cagov-nav.hamburger').classList.remove('is-active');
-    document.querySelector('.cagov-nav.menu-trigger').classList.remove('is-fixed');
+    document
+      .querySelector('.cagov-nav.hamburger')
+      .classList.remove('is-active');
+    document
+      .querySelector('.cagov-nav.menu-trigger')
+      .classList.remove('is-fixed');
     const menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML = menLabel.getAttribute('data-openlabel');
   }
 
   escapeMainMenu(event) {
     // Close menus if user presses escape key.
-    if (event.keyCode === 27) { this.closeAllMenus(); }
+    if (event.keyCode === 27) {
+      this.closeAllMenus();
+    }
   }
 
   bodyClick(event) {
@@ -92,7 +110,9 @@ class CAGOVOverlayNav extends window.HTMLElement {
     allMenus.forEach((menu) => {
       const nearestMenu = menu.querySelector('.expanded-menu-section');
       if (nearestMenu) {
-        const nearestMenuDropDown = nearestMenu.querySelector('.expanded-menu-dropdown');
+        const nearestMenuDropDown = nearestMenu.querySelector(
+          '.expanded-menu-dropdown',
+        );
         if (nearestMenuDropDown) {
           nearestMenuDropDown.setAttribute('aria-hidden', 'true');
           menu.setAttribute('aria-expanded', 'false');
@@ -112,7 +132,9 @@ class CAGOVOverlayNav extends window.HTMLElement {
             menuComponent.closeAllMenus();
             expandedEl.classList.add('expanded');
             this.setAttribute('aria-expanded', 'true');
-            const closestDropDown = this.querySelector('.expanded-menu-dropdown');
+            const closestDropDown = this.querySelector(
+              '.expanded-menu-dropdown',
+            );
             if (closestDropDown) {
               closestDropDown.setAttribute('aria-hidden', 'false');
               const allLinks = closestDropDown.querySelectorAll('a');
