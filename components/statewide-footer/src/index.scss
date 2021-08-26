@@ -1,0 +1,72 @@
+/* footer */
+footer {
+	font-size: 1rem;
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		box-sizing: border-box;
+		max-width: var(--w-lg, 1176px);
+		margin: 0 auto;
+		padding: 1rem;
+	}
+	a {
+		&:hover {
+			color: var(--primary-dark-color, #1e1569);
+		}
+		&:focus {
+			outline: 2px solid var(--highlight-color, #FEC02F);
+		}
+	}
+
+	.footer-secondary-links {
+		display: flex;
+		flex-direction: column;
+
+		a {
+			margin-right: 1.7rem;
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+            &:hover {
+                text-decoration: none;
+            }
+		}
+	}
+
+	.bg-light-grey svg {
+		padding: 0;
+		.ca {
+			fill: var(--highlight-color, #FEC02F);
+		}
+
+		.gov {
+			fill: var(--primary-color, #004ABC);
+		}
+	}
+
+	.cagov-logo {
+		padding: 5px 2rem 5px 0;
+	}
+
+	.bg-light-grey a,
+	.copyright {
+		color: var(--black, #000);
+	}
+}
+
+.bg-light-grey {
+	background-color: var(--gray-100, #f9f9fa);
+}
+
+.pt-0 {
+	padding-top: 0 !important;
+}
+
+@media (min-width: 991px) {
+	.footer-secondary-links,
+	footer .container {
+		flex-direction: row;
+		align-items: center;
+	}
+}
