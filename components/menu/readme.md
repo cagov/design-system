@@ -229,7 +229,7 @@ There are some colors that should be defined by the containing page. Here are th
 - var(--gray-300, #e1e0e3)
 - var(--primary-dark-color, #064e66)
 - var(--primary-hover-color, #043747);
-- var(--secondary-color, #fec02f)
+- var(--highlight-color, #fec02f)
 - var(--w-lg, '1176px')
 
 ## Docs
