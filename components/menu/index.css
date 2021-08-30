@@ -111,9 +111,6 @@
   transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.1s 0.12s ease-out;
 }
 
-cagov-navoverlay a:focus, cagov-navoverlay button:focus {
-  outline: none !important;
-}
 cagov-navoverlay .container {
   max-width: var(--w-lg, "1176px");
   margin: 0 auto;
@@ -188,7 +185,7 @@ cagov-navoverlay .mobile-icons .menu-btn:hover .blue {
 cagov-navoverlay .mobile-icons .search-btn:focus,
 cagov-navoverlay .mobile-icons .menu-btn:focus {
   color: var(--primary-dark-color, #064e66);
-  outline: 2px solid var(--secondary-color, #fec02f);
+  outline: 2px solid var(--highlight-color, #fec02f);
 }
 cagov-navoverlay .mobile-icons .search-btn svg,
 cagov-navoverlay .mobile-icons .menu-btn svg {
@@ -272,8 +269,8 @@ cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
 }
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section .expanded-menu-section-header {
-    padding: 0;
-    padding-right: 0.5rem;
+    padding-right: 0;
+    margin-right: 0;
   }
 }
 @media (max-width: 767px) {
@@ -337,6 +334,7 @@ cagov-navoverlay .expanded-menu-section-header-link:hover {
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section-header-link {
     width: auto;
+    padding-right: 2rem;
   }
 }
 cagov-navoverlay .expanded-menu-section-header-arrow {
@@ -344,16 +342,16 @@ cagov-navoverlay .expanded-menu-section-header-arrow {
   height: 1rem;
   position: absolute;
   top: 50%;
-  right: 0.5rem;
+  right: 1rem;
   transform: translateY(-50%);
   display: block;
   transition: all 0.5s cubic-bezier(0.57, 0.2, 0.21, 0.89);
 }
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section-header-arrow {
-    position: relative;
+    position: absolute;
     top: auto;
-    right: auto;
+    right: 0.5rem;
     transform: none;
   }
 }
