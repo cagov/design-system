@@ -95,7 +95,7 @@
     allMenus.forEach((menu) => {
       const expandedEl = menu.querySelector('.expanded-menu-section');
       expandedEl.classList.remove('expanded');
-      //menu.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-expanded', 'false');
       const closestDropDown = menu.querySelector('.expanded-menu-dropdown');
       if (closestDropDown) {
         closestDropDown.setAttribute('aria-hidden', 'true');
@@ -117,7 +117,7 @@
         );
         if (nearestMenuDropDown) {
           nearestMenuDropDown.setAttribute('aria-hidden', 'true');
-         // menu.setAttribute('aria-expanded', 'false');
+         menu.setAttribute('aria-expanded', 'false');
         }
       }
       const menuComponent = this;
@@ -133,7 +133,7 @@
           } else {
             menuComponent.closeAllMenus();
             expandedEl.classList.add('expanded');
-           // menu.setAttribute('aria-expanded', 'true');
+           menu.setAttribute('aria-expanded', 'true');
             const closestDropDown = this.querySelector(
               '.expanded-menu-dropdown',
             );
