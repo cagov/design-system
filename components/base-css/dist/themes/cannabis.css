@@ -2202,8 +2202,7 @@ article {
 }
 
 @media (max-width: 1216px) {
-  .header-container,
-.footer-container,
+  .footer-container,
 .page-container-ds {
     margin-left: 15px;
     margin-right: 15px;

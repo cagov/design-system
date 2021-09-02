@@ -9,6 +9,7 @@ $mobile-min: 767px;
 
 /* branding */
 .branding {
+  padding: 0 15px 15px 15px;
   box-sizing: border-box;
   background-color: var(--white, #fff);
   border-bottom: 1px solid var(--gray-300, #e1e0e3);
@@ -182,7 +183,6 @@ $mobile-min: 767px;
       .hamburger-inner {
         &:before,
         &:after {
-          width: 13px;
           background-color: var(--primary-dark-color, #043747);
         }
       }
@@ -241,6 +241,34 @@ $mobile-min: 767px;
         transition: bottom 0.1s 0.25s ease-in,
           transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
           width 0.1s 0.12s ease-out;
+      }
+    }
+  }
+}
+
+.display-menu {
+
+  .cagov-nav.hamburger {
+    .hamburger-inner {
+      transform: rotate(225deg);
+      transition-delay: 0.12s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      width: 12px;
+      &,
+      &:before,
+      &:after {
+        width: 20px !important;
+      }
+      &:before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+      }
+      &:after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.1s ease-out,
+          transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
     }
   }
@@ -311,6 +339,7 @@ cagov-navoverlay {
   }
 
   .branding {
+    padding: 0;
     .container {
       flex-flow: row;
       align-items: center;

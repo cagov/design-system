@@ -9,7 +9,7 @@
  * @cssprop --secondary-color - #fec02f
  * @cssprop --w-lg - '1176px'
  */
-class CAGOVOverlayNav extends window.HTMLElement {
+ class CAGOVOverlayNav extends window.HTMLElement {
   connectedCallback() {
     document
       .querySelector('.cagov-nav.open-menu')
@@ -58,6 +58,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
     this.classList.add('display-menu');
     document.querySelector('.cagov-nav.hamburger').classList.add('is-active');
     document.querySelector('.cagov-nav.menu-trigger').classList.add('is-fixed');
+    document.querySelector('.cagov-nav.menu-trigger').setAttribute('aria-expanded', 'true');
     const menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML = menLabel.getAttribute('data-closelabel');
   }
@@ -71,6 +72,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
     document
       .querySelector('.cagov-nav.menu-trigger')
       .classList.remove('is-fixed');
+      document.querySelector('.cagov-nav.menu-trigger').setAttribute('aria-expanded', 'false');
     const menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML = menLabel.getAttribute('data-openlabel');
   }
@@ -93,7 +95,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
     allMenus.forEach((menu) => {
       const expandedEl = menu.querySelector('.expanded-menu-section');
       expandedEl.classList.remove('expanded');
-      menu.setAttribute('aria-expanded', 'false');
+      //menu.setAttribute('aria-expanded', 'false');
       const closestDropDown = menu.querySelector('.expanded-menu-dropdown');
       if (closestDropDown) {
         closestDropDown.setAttribute('aria-hidden', 'true');
@@ -115,7 +117,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
         );
         if (nearestMenuDropDown) {
           nearestMenuDropDown.setAttribute('aria-hidden', 'true');
-          menu.setAttribute('aria-expanded', 'false');
+         // menu.setAttribute('aria-expanded', 'false');
         }
       }
       const menuComponent = this;
@@ -131,7 +133,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
           } else {
             menuComponent.closeAllMenus();
             expandedEl.classList.add('expanded');
-            this.setAttribute('aria-expanded', 'true');
+           // menu.setAttribute('aria-expanded', 'true');
             const closestDropDown = this.querySelector(
               '.expanded-menu-dropdown',
             );
