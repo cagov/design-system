@@ -9,7 +9,7 @@
  * @cssprop --secondary-color - #fec02f
  * @cssprop --w-lg - '1176px'
  */
- class CAGOVOverlayNav extends window.HTMLElement {
+class CAGOVOverlayNav extends window.HTMLElement {
   connectedCallback() {
     document
       .querySelector('.cagov-nav.open-menu')
@@ -58,7 +58,9 @@
     this.classList.add('display-menu');
     document.querySelector('.cagov-nav.hamburger').classList.add('is-active');
     document.querySelector('.cagov-nav.menu-trigger').classList.add('is-fixed');
-    document.querySelector('.cagov-nav.menu-trigger').setAttribute('aria-expanded', 'true');
+    document
+      .querySelector('.cagov-nav.menu-trigger')
+      .setAttribute('aria-expanded', 'true');
     const menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML = menLabel.getAttribute('data-closelabel');
   }
@@ -72,7 +74,9 @@
     document
       .querySelector('.cagov-nav.menu-trigger')
       .classList.remove('is-fixed');
-      document.querySelector('.cagov-nav.menu-trigger').setAttribute('aria-expanded', 'false');
+    document
+      .querySelector('.cagov-nav.menu-trigger')
+      .setAttribute('aria-expanded', 'false');
     const menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML = menLabel.getAttribute('data-openlabel');
   }
@@ -117,7 +121,7 @@
         );
         if (nearestMenuDropDown) {
           nearestMenuDropDown.setAttribute('aria-hidden', 'true');
-         menu.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-expanded', 'false');
         }
       }
       const menuComponent = this;
@@ -133,7 +137,7 @@
           } else {
             menuComponent.closeAllMenus();
             expandedEl.classList.add('expanded');
-           menu.setAttribute('aria-expanded', 'true');
+            menu.setAttribute('aria-expanded', 'true');
             const closestDropDown = this.querySelector(
               '.expanded-menu-dropdown',
             );
