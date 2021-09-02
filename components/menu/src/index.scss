@@ -84,74 +84,8 @@ $desktop: 1176px;
   @include tablet {
     z-index: 2000;
   }
-  .hamburger-inner {
-    background: #000;
-  }
-
-  &:hover {
-    .hamburger-inner {
-      &:before,
-      &:after {
-        width: 13px;
-      }
-    }
-  }
 }
 
-.cagov-nav.hamburger {
-  padding: 0.15rem 0.15rem;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  position: relative;
-  transition: $basic;
-  vertical-align: middle;
-  z-index: 10000;
-  margin-right: 0.5rem;
-  &-box {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    position: relative;
-  }
-  .hamburger-inner {
-    display: block;
-    top: 50%;
-    width: 20px;
-    margin-top: -1px;
-    transition-duration: 0.22s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    &,
-    &:before,
-    &:after {
-      height: 2px;
-      border-radius: 0;
-      position: absolute;
-      transition-property: transform, width, background-color;
-      transition-duration: 0.15s;
-      transition-timing-function: ease;
-    }
-    &:before,
-    &:after {
-      width: 20px;
-      content: "";
-      display: block;
-    }
-    &:before {
-      top: -6px;
-      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in,
-        width 0.1s 0.12s ease-out;
-    }
-    &:after {
-      bottom: -6px;
-      transition: bottom 0.1s 0.25s ease-in,
-        transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
-        width 0.1s 0.12s ease-out;
-    }
-  }
-}
 
 cagov-navoverlay {
   .container {
@@ -161,42 +95,7 @@ cagov-navoverlay {
   }
 }
 
-.display-menu {
-  .cagov-nav.menu-trigger {
-    box-shadow: none;
-    .hamburger-inner {
-      &,
-      &:before,
-      &:after {
-        transition: 0.3s;
-      }
-    }
-  }
-  .cagov-nav.hamburger {
-    .hamburger-inner {
-      transform: rotate(225deg);
-      transition-delay: 0.12s;
-      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      width: 12px;
-      &,
-      &:before,
-      &:after {
-        width: 20px !important;
-      }
-      &:before {
-        top: 0;
-        opacity: 0;
-        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-      }
-      &:after {
-        bottom: 0;
-        transform: rotate(-90deg);
-        transition: bottom 0.1s ease-out,
-          transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-      }
-    }
-  }
-}
+
 
 /* EXPANDED MENU SYTLES */
 cagov-navoverlay {
@@ -362,7 +261,6 @@ cagov-navoverlay {
           text-transform: none;
           display: block;
           text-align: left;
-          transition: $basic;
           border: none;
           padding-top: 1rem;
           padding-bottom: 1rem;
@@ -457,8 +355,9 @@ cagov-navoverlay.display-menu {
   }
   .expanded-menu {
     @include phone {
-      margin-left: -15px;
+      margin-left: 0;
       width: 100vw;
+      border-bottom: solid 1px var(--gray-300,#e1e0e3);
     }
     &-col,
     &-search {

@@ -40,7 +40,6 @@ article {
 }
 
 @include tablet-buffer {
-  .header-container,
   .footer-container,
   .page-container-ds {
     margin-left: 15px;

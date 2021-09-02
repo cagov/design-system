@@ -58,6 +58,9 @@ class CAGOVOverlayNav extends window.HTMLElement {
     this.classList.add('display-menu');
     document.querySelector('.cagov-nav.hamburger').classList.add('is-active');
     document.querySelector('.cagov-nav.menu-trigger').classList.add('is-fixed');
+    document
+      .querySelector('.cagov-nav.menu-trigger')
+      .setAttribute('aria-expanded', 'true');
     const menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML = menLabel.getAttribute('data-closelabel');
   }
@@ -71,6 +74,9 @@ class CAGOVOverlayNav extends window.HTMLElement {
     document
       .querySelector('.cagov-nav.menu-trigger')
       .classList.remove('is-fixed');
+    document
+      .querySelector('.cagov-nav.menu-trigger')
+      .setAttribute('aria-expanded', 'false');
     const menLabel = document.querySelector('.cagov-nav.menu-trigger-label');
     menLabel.innerHTML = menLabel.getAttribute('data-openlabel');
   }
@@ -131,7 +137,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
           } else {
             menuComponent.closeAllMenus();
             expandedEl.classList.add('expanded');
-            this.setAttribute('aria-expanded', 'true');
+            menu.setAttribute('aria-expanded', 'true');
             const closestDropDown = this.querySelector(
               '.expanded-menu-dropdown',
             );

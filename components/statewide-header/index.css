@@ -14,7 +14,6 @@
 @media (max-width: 767px) {
   .official-header {
     width: 100vw;
-    margin-left: -15px;
     padding: 0.5rem 0;
   }
 }
