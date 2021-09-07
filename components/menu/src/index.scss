@@ -91,7 +91,9 @@ cagov-navoverlay {
   .container {
     max-width: var(--w-lg, '1176px');
     margin: 0 auto;
-    /*padding: 0 16px 0 16px;*/
+    .search-container {
+      padding: 0 8px 0 16px;
+    }
   }
 }
 
