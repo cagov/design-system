@@ -1,0 +1,36 @@
+{
+  "name": "@cagov/ds-accordion",
+  "version": "1.0.6",
+  "description": "This custom element recreates the bootstrap accordion component functionality without the jquery dependency.",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ds-accordion.umd.js",
+  "module": "./dist/ds-accordion.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ds-accordion.es.js",
+      "require": "./dist/ds-accordion.umd.js"
+    }
+  },
+  "scripts": {
+    "build:js": "rollup --config rollup.config.js",
+    "build": "npm run build:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/tree/main/components/accordion"
+  },
+  "keywords": [
+    "web component"
+  ],
+  "author": "ca.gov",
+  "license": "ISC",
+  "devDependencies": {
+    "@cagov/ds-minus": "^1.0.0",
+    "@cagov/ds-plus": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "rollup": "^2.56.3",
+    "rollup-plugin-string": "^3.0.0"
+  }
+}
