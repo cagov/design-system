@@ -33,6 +33,10 @@ class CaGovAccordion extends window.HTMLElement {
 
     this.attachShadow({mode: "open"})
     this.shadowRoot.append(template.content.cloneNode(true));
+
+    if (this.hasAttribute('expanded')) {
+      this.shadowRoot.querySelector('.accordion-card-header').setAttribute('aria-expanded', 'true');
+    }
   }
 
   connectedCallback() {
@@ -95,6 +99,7 @@ class CaGovAccordion extends window.HTMLElement {
     this.expandTarget.setAttribute('aria-hidden', 'true');
     this.shadowRoot.querySelector('.accordion-card-header').classList.remove('accordion-alpha-open');
     this.activateButton.setAttribute('aria-expanded', 'false');
+    this.removeAttribute('expanded', '');
     this.removeTabStops();
   }
 
@@ -104,6 +109,7 @@ class CaGovAccordion extends window.HTMLElement {
     this.shadowRoot.querySelector('.accordion-card-header').classList.add('accordion-alpha-open');
     this.shadowRoot.querySelector('.accordion-card-container').classList.remove('collapsed');
     this.activateButton.setAttribute('aria-expanded', 'true');
+    this.setAttribute('expanded', '');
     this.restoreTabStops();
   }
 
