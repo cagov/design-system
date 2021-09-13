@@ -67,6 +67,7 @@ cagov-navoverlay .container .search-container {
 /* EXPANDED MENU SYTLES */
 cagov-navoverlay {
   border-bottom: 1px solid var(--gray-300, #e1e0e3);
+  background-color: #ffffff;
 }
 cagov-navoverlay a.expanded-menu-section-header-link {
   /* jbum - this is to override the inherited text-decoration from .interior_page a */
