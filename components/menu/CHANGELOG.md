@@ -1,5 +1,8 @@
 # CHANGELOG for ds-dropdown-menu
 `ds-dropdown-menu`
+# 1.0.11
+* Add white background to the navigation container block, so the content under it would not be seen through when scrolled (in case when the sticky header is used)
+
 # 1.0.10
 * Added right and left padding to the search container in mobile
 

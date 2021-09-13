@@ -102,6 +102,7 @@ cagov-navoverlay {
 /* EXPANDED MENU SYTLES */
 cagov-navoverlay {
   border-bottom: 1px solid var(--gray-300, #e1e0e3);
+  background-color: #ffffff;
   a.expanded-menu-section-header-link {
     /* jbum - this is to override the inherited text-decoration from .interior_page a */
     text-decoration: none;
