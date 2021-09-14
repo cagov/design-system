@@ -36,72 +36,79 @@ main ul li {
 
 h1,
 .h1 {
-  font-size: 2.611rem;
+  font-size: 2.9375rem;
   margin-top: 3rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h2,
 .h2 {
-  font-size: 2.056rem;
-  margin-top: 2.75rem;
-  margin-bottom: 1.4rem;
+  font-size: 2.3175rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h3,
 .h3 {
-  font-size: 1.611rem;
-  margin-top: 2.4rem;
-  margin-bottom: 1.2rem;
+  font-size: 1.8125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h4,
 .h4 {
-  font-size: 1.278rem;
-  margin-top: 2rem;
+  font-size: 1.4375rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h5,
 .h5 {
-  font-size: 1rem;
-  margin-top: 1.7rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h6,
 .h6 {
   font-size: .75rem;
-  margin-top: 1.4rem;
-  margin-bottom: 0.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: var(--font-weight-bold, 700);
+}
+
+.text-lead, .lead { 
+  font-size:  var(--lead-text,  1.4375rem);
+}
+.text-small, .text-sm { 
+  font-size:  var(--small-text,  .875rem);
 }
 
 // Mobile headings
 @media (max-width: 767px) {
   h1,
   .h1 {
-    font-size: 2.333rem;
+    font-size: 2.625rem;
   }
 
   h2,
   .h2 {
-    font-size: 1.833rem;
+    font-size: 2.0625rem;
   }
 
   h3,
   .h3 {
-    font-size: 1.444rem;
+    font-size: 1.625rem;
   }
 
   h4,
   .h4 {
-    font-size: 1.111rem;
+    font-size: 1.25rem;
   }
 
   h5,
@@ -112,6 +119,13 @@ h6,
   h2:first-child,
   figure ~ h2:first-of-type {
     margin-top: 0px;
+  }
+
+  .text-lead, .lead { 
+    font-size:  var(--lead-text-mobile,  1.25rem);
+  }
+  .text-small, .text-sm { 
+    font-size:  var(--small-text-mobile,  .875rem);
   }
 }
 
@@ -148,3 +162,14 @@ ul.list-highlight {
 .cagov-card ul {
   margin: 0;
 }
+
+/* Image captions */
+figure {
+  background: none; 
+  border:none;
+  figcaption {
+    padding-left: 0;
+    font-size: 0.875rem;
+    }  
+  }
+  

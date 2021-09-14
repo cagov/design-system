@@ -2,20 +2,21 @@
 /* Colorscheme root variables */
 :root {
   /* Theme colors */
-  --primary-color: #064e66;
-  --primary-dark-color: #4A1106;
-  --primary-light-color: #965D52;
-  --primary-lightest-color: #B48C84;
+  --primary-color: #064E66;
+  --primary-dark-color: #043747;
+  --primary-light-color: #518394;
+  --primary-lightest-color: #B4CAD1;
   --primary-hover-color: #043747;
-  --secondary-color: #fec02f;
-  --secondary-dark-color: #222222;
-  --secondary-light-color: #6F6F6F;
-  --secondary-lightest-color: #D6D6D6;
-  --secondary-hover-color: #222222;
-  --highlight-color: #fdb81e;
-  --highlight-color-300: #FFF2D5;
-  --standout-color: #2f4c2c;
-  --standout-hover-color: #21351f;
+  --secondary-color: #2F4C2C;
+  --secondary-dark-color: #21351F;
+  --secondary-light-color: #6D826B;
+  --secondary-lightest-color: #C1C9C0;
+  --secondary-hover-color: #21351F;
+  --highlight-color: #C0633B;
+  --highlight-dark-color: #864529;
+  --highlight-light-color: #D39276;
+  --highlight-lightest-color: #ECD0C4;
+  --secondary-hover-color: #864529;
 }
 
 /* theme colors */
@@ -38,8 +39,11 @@
   --margin-xl: calc(--spacing-base * 24);
   --site-font: "Public Sans",sans-serif;
   --body-text: 1.125rem;
-  --lead-text: 1.5rem;
-  --small-text: 1rem;
+  --lead-text: 1.4375rem;
+  --small-text: .875rem;
+  --body-text-mobile: 1rem;
+  --lead-text-mobile: 1.25rem;
+  --small-text-mobile: .875rem;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --font-weight-light: 300;
@@ -2474,20 +2478,20 @@ textarea:focus, input:focus {
 /* input, textarea, select generic styles */
 /* Links global styles */
 a {
-  color: var(--primary-color, #004abc);
+  color: var(--primary-color, #004ABC);
   text-underline-position: under;
   text-decoration: underline;
 }
 a:hover {
-  color: var(--primary-dark-color, #1e1569);
+  color: var(--primary-dark-color, #003484);
   text-decoration: none;
 }
 a:focus {
-  outline: 2px solid var(--secondary-color, #fec02f);
+  outline: 2px solid var(--highlight-color, #FBAD23);
 }
 
 a:focus, button:focus {
-  outline: solid 2px #fdb81e !important;
+  outline: solid 2px var(--highlight-color, #FBAD23) !important;
 }
 
 /* a, a:hover, a:focus */
@@ -2580,71 +2584,79 @@ main ul li {
 
 h1,
 .h1 {
-  font-size: 2.611rem;
+  font-size: 2.9375rem;
   margin-top: 3rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h2,
 .h2 {
-  font-size: 2.056rem;
-  margin-top: 2.75rem;
-  margin-bottom: 1.4rem;
+  font-size: 2.3175rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h3,
 .h3 {
-  font-size: 1.611rem;
-  margin-top: 2.4rem;
-  margin-bottom: 1.2rem;
+  font-size: 1.8125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h4,
 .h4 {
-  font-size: 1.278rem;
-  margin-top: 2rem;
+  font-size: 1.4375rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h5,
 .h5 {
-  font-size: 1rem;
-  margin-top: 1.7rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: var(--font-weight-bold, 700);
 }
 
 h6,
 .h6 {
   font-size: 0.75rem;
-  margin-top: 1.4rem;
-  margin-bottom: 0.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: var(--font-weight-bold, 700);
+}
+
+.text-lead, .lead {
+  font-size: var(--lead-text, 1.4375rem);
+}
+
+.text-small, .text-sm {
+  font-size: var(--small-text, 0.875rem);
 }
 
 @media (max-width: 767px) {
   h1,
 .h1 {
-    font-size: 2.333rem;
+    font-size: 2.625rem;
   }
 
   h2,
 .h2 {
-    font-size: 1.833rem;
+    font-size: 2.0625rem;
   }
 
   h3,
 .h3 {
-    font-size: 1.444rem;
+    font-size: 1.625rem;
   }
 
   h4,
 .h4 {
-    font-size: 1.111rem;
+    font-size: 1.25rem;
   }
 
   h5,
@@ -2655,6 +2667,14 @@ h6,
   h2:first-child,
 figure ~ h2:first-of-type {
     margin-top: 0px;
+  }
+
+  .text-lead, .lead {
+    font-size: var(--lead-text-mobile, 1.25rem);
+  }
+
+  .text-small, .text-sm {
+    font-size: var(--small-text-mobile, 0.875rem);
   }
 }
 /* lists */
@@ -2686,6 +2706,16 @@ ul.list-highlight li span.has-black-color {
 .cagov-card h4,
 .cagov-card ul {
   margin: 0;
+}
+
+/* Image captions */
+figure {
+  background: none;
+  border: none;
+}
+figure figcaption {
+  padding-left: 0;
+  font-size: 0.875rem;
 }
 
 /* headings, p, blockqute, font styles */

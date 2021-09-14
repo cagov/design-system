@@ -37,8 +37,12 @@ $desktop-min: 1176px;
 
   // Font sizes
   --body-text: 1.125rem;
-  --lead-text: 1.5rem;
-  --small-text: 1rem;
+  --lead-text: 1.4375rem;
+  --small-text: .875rem;
+// font sizes mobile
+  --body-text-mobile: 1rem;
+  --lead-text-mobile: 1.25rem;
+  --small-text-mobile: .875rem;
 
   // Font weights
   --font-weight-bold: 700;

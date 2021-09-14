@@ -1,11 +1,11 @@
 {
   "name": "@cagov/ds-base-css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "src/_core.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/themes/_cannabis.scss dist/themes/cannabis.css && sass src/themes/_drought.scss dist/themes/drought.css"
+    "build": "sass src/themes/_cannabis.scss dist/themes/cannabis.css && sass src/themes/_drought.scss dist/themes/drought.css && sass src/themes/_cagov.scss dist/themes/cagov.css"
   },
   "keywords": [],
   "author": "",
