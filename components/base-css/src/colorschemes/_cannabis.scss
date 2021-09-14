@@ -2,25 +2,21 @@
 /* Colorscheme root variables */
 :root {
   /* Theme colors */
-  --primary-color: #064e66;
-  --primary-dark-color: #4A1106;
-  --primary-light-color: #965D52;
-  --primary-lightest-color: #B48C84;
+  --primary-color: #064E66;
+  --primary-dark-color: #043747;
+  --primary-light-color: #518394;
+  --primary-lightest-color: #B4CAD1;
   --primary-hover-color: #043747;
-  // --primary-active-color: #4A1106;
-  // --primary-focused-color: #4A1106;
-  // --primary-disabled-color: #4A1106;
-  --secondary-color: #fec02f;
-  --secondary-dark-color: #222222;
-  --secondary-light-color: #6F6F6F;
-  --secondary-lightest-color: #D6D6D6;
-  --secondary-hover-color: #222222;
-  // --secondary-active-color: #4A1106;
-  // --secondary-focused-color: #4A1106;
-  // --secondary-disabled-color: #4A1106;
-  --highlight-color: #fdb81e;
-  --highlight-color-300: #FFF2D5;
 
-  --standout-color: #2f4c2c;
-  --standout-hover-color: #21351f;
+  --secondary-color: #2F4C2C;
+  --secondary-dark-color: #21351F;
+  --secondary-light-color: #6D826B;
+  --secondary-lightest-color: #C1C9C0;
+  --secondary-hover-color: #21351F;
+
+  --highlight-color: #C0633B;
+  --highlight-dark-color: #864529;
+  --highlight-light-color: #D39276;
+  --highlight-lightest-color: #ECD0C4;
+  --secondary-hover-color: #864529;
 }

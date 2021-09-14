@@ -1,14 +1,14 @@
 /* Links global styles */
 a {
-  color: var(--primary-color, #004abc);
+  color: var(--primary-color, #004ABC);
   text-underline-position: under;
 
   &:hover {
-    color: var(--primary-dark-color, #1e1569);
+    color: var(--primary-dark-color, #003484);
     text-decoration: none;
   }
   &:focus {
-    outline: 2px solid var(--secondary-color, #fec02f);
+    outline: 2px solid var(--highlight-color, #FBAD23);
   }
 
   text-decoration: underline;
@@ -16,5 +16,5 @@ a {
 }
 
 a:focus, button:focus {
-  outline: solid 2px #fdb81e !important;
+  outline: solid 2px var(--highlight-color, #FBAD23) !important;
 }
