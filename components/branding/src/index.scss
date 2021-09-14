@@ -1,15 +1,9 @@
-/* Cannabis logo font */
-@font-face {
-  font-family: "Lexend";
-  src: url("/fonts/Lexend-Medium.woff2") format("woff2");
-}
-
 $mobile: 768px;
 $mobile-min: 767px;
 
 /* branding */
 .branding {
-  padding: 0 15px 15px 15px;
+  padding: 0 15px;
   box-sizing: border-box;
   background-color: var(--white, #fff);
   border-bottom: 1px solid var(--gray-300, #e1e0e3);
@@ -38,30 +32,25 @@ $mobile-min: 767px;
   .branding-logo {
     color: var(--black, #000);
     text-decoration: none;
-    margin: 0;
+    margin: 10px 0;
     &:focus {
       outline: 2px solid var(--secondary-color, #fec02f);
     }
     .logo-text {
       display: inline-block;
-      position: relative;
-      top: -3px;
 
       .logo-state {
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        font-family: "Arial", "Helvetica", sans-serif;
+        font-size: 1rem;
         margin: 0;
         padding: 0;
         transition: all 0.3s;
+        line-height: 1.2em;
         display: block;
-        position: relative;
-        top: 4px;
       }
       .logo-dept {
         font-family: var(--logo-font, "Public Sans", sans-serif) !important;
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 1.75rem;
+        font-weight: 700;
         margin: 0;
         padding: 0;
         line-height: 1.2em;
@@ -339,7 +328,6 @@ cagov-navoverlay {
   }
 
   .branding {
-    padding: 0;
     .container {
       flex-flow: row;
       align-items: center;
