@@ -28,12 +28,12 @@
   margin: 0 auto;
   padding: 0 10px 0 10px;
 }
-.official-header .ofiicial-logo {
+.official-header .official-logo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.official-header .ofiicial-logo .cagov-logo {
+.official-header .official-logo .cagov-logo {
   margin: 0 20px 0 0;
   display: flex;
 }
