@@ -273,7 +273,7 @@ cagov-navoverlay {
       // submit input
       .search-textfield {
         border: 1px solid;
-        border-color: var(--primary-dark-color, #064e66);
+        border-color: var(--secondary-color, #064e66);
         border-radius: 4px;
         padding: 10px;
         width: 100%;
@@ -284,17 +284,17 @@ cagov-navoverlay {
         position: relative;
         right: 5px;
         outline-offset: -2px;
-        background-color: var(--standout-color, #064e66);
-        border: 1px solid var(--standout-color, #064e66);
+        background-color: var(--secondary-color, #064e66);
+        border: 1px solid var(--secondary-color, #064e66);
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
         padding: 7px 14px 4px 14px;
         &:hover {
-          background-color: var(--primary, #064e66);
-          border-color: var(--primary, #064e66);
+          background-color: var(--primary-color, #064e66);
+          border-color: var(--primary-color, #064e66);
         }
         &:focus {
-          outline: 2px solid var(--secondary-color, #fec02f);
+          outline: 2px solid var(--standout-color, #fec02f);
         }
         svg path {
           fill: var(--white, #fff);
