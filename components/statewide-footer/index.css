@@ -33,10 +33,10 @@ footer .bg-light-grey svg {
   padding: 0;
 }
 footer .bg-light-grey svg .ca {
-  fill: var(--highlight-color, #FEC02F);
+  fill: var(--cagov-highlight, #FEC02F);
 }
 footer .bg-light-grey svg .gov {
-  fill: var(--primary-color, #004ABC);
+  fill: var(--cagov-primary-dark, #003484);
 }
 footer .cagov-logo {
   padding: 5px 2rem 5px 0;
