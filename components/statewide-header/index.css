@@ -42,10 +42,10 @@
   width: 38px;
 }
 .official-header svg .ca {
-  fill: var(--secondary-color, #cf5d28);
+  fill: var(--cagov-highlight, #FEC02F);
 }
 .official-header svg .gov {
-  fill: var(--primary-dark-color, #4a1106);
+  fill: var(--cagov-primary-dark, #003484);
 }
 .official-header .official-tag {
   margin: 0 10px;
