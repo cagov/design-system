@@ -77,7 +77,7 @@ $mobile-min: 767px;
 
   .org-name-state {
     font-family: var(--org-name-state-font, "Public Sans",sans-serif);
-    font-size: var(--org-name-state-size, 1rem);
+    font-size: var(--org-name-state-font-size, 1rem);
     font-weight: var(--org-name-state-font-weight, 500);
     line-height: var(--org-name-state-line-height, 1.2);
     text-transform: var(--org-name-state-text-transform, none);
