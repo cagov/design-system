@@ -1,16 +1,19 @@
 {
   "name": "@cagov/ds-regulatory-outline",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.css",
+  "version": "0.0.1",
+  "description": "Nested, ordered list with the following pattern: (a)(b)(c), (1)(2)(3), (A)(B)(C), (i)(ii)(iii)",
+  "main": "src/index.html",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/index.scss index.css"
+    "build": "sass src/index.scss dist/index.css",
+    "test": "web-test-runner test/test.index.js --node-resolve",
+    "test:visual": "web-test-runner test/test.index.js --node-resolve --config test/test.config.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "sass": "^1.37.0"
+  "dependencies": {},
+  "devDependencies": {
+    "@open-wc/testing": "^2.5.33",
+    "@web/test-runner": "^0.13.17",
+    "@web/test-runner-puppeteer": "^0.10.2",
+    "sass": "^1.41.1"
   }
 }
