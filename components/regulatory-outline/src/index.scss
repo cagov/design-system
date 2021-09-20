@@ -1,0 +1,39 @@
+ol.regulatory-outline {
+  counter-reset: section;
+  list-style-type: none;
+  margin-left: 30px;
+  padding-left: 30px;
+  li {
+    counter-increment: section;
+    margin: 0.6rem 0;
+
+    &::before {
+      content: "(" counter(section, lower-alpha) ") ";
+      display: inline-block;
+      margin-left: -32px;
+      padding-right: 10px;
+    }
+  }
+
+  ol {
+    counter-reset: section;
+    list-style-type: none;
+    margin-left: 30px;
+    padding-left: 30px;
+    li {
+      &:before {
+        content: "(" counter(section, decimal) ") ";
+      }
+
+      ol li {
+        &:before {
+          content: "(" counter(section, upper-alpha) ") ";
+        }
+
+        ol li:before {
+          content: "(" counter(section, lower-roman) ") ";
+        }
+      }
+    }
+  }
+}

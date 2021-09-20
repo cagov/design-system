@@ -1,0 +1,16 @@
+{
+  "name": "@cagov/ds-regulatory-outline",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/index.scss index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.37.0"
+  }
+}
