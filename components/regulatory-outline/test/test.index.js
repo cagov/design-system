@@ -2,8 +2,6 @@ import { expect, fixture } from '@open-wc/testing';
 /* this test file can be run on command line with npm run test
    or with visual debug via npm run test:visual */
 
-// import '../src/template.js';
-
 describe('CAGOVRegulatoryOutline', () => {
   it('works', async () => {
     const csslink = document.createElement('link');
