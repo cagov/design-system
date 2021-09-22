@@ -1,32 +1,29 @@
-ol.regulatory-outline {
+cagov-regulatory-outline {
+  display: block;
+}
+cagov-regulatory-outline ol {
   counter-reset: section;
   list-style-type: none;
-  margin-left: 30px;
-  padding-left: 30px;
+  margin-left: 32px;
+  padding-left: 32px;
 }
-ol.regulatory-outline li {
+cagov-regulatory-outline ol li {
   counter-increment: section;
-  margin: 0.6rem 0;
+  margin: 16px 0;
 }
-ol.regulatory-outline li::before {
+cagov-regulatory-outline ol li::before {
   content: "(" counter(section, lower-alpha) ") ";
   display: inline-block;
   margin-left: -32px;
-  padding-right: 10px;
+  padding-right: 32px;
 }
-ol.regulatory-outline ol {
-  counter-reset: section;
-  list-style-type: none;
-  margin-left: 30px;
-  padding-left: 30px;
-}
-ol.regulatory-outline ol li:before {
+cagov-regulatory-outline ol ol li:before {
   content: "(" counter(section, decimal) ") ";
 }
-ol.regulatory-outline ol li ol li:before {
+cagov-regulatory-outline ol ol li ol li:before {
   content: "(" counter(section, upper-alpha) ") ";
 }
-ol.regulatory-outline ol li ol li ol li:before {
+cagov-regulatory-outline ol ol li ol li ol li:before {
   content: "(" counter(section, lower-roman) ") ";
 }
 

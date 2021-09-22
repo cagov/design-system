@@ -1,26 +1,23 @@
-ol.regulatory-outline {
-  counter-reset: section;
-  list-style-type: none;
-  margin-left: 30px;
-  padding-left: 30px;
-  li {
-    counter-increment: section;
-    margin: 0.6rem 0;
-
-    &::before {
-      content: "(" counter(section, lower-alpha) ") ";
-      display: inline-block;
-      margin-left: -32px;
-      padding-right: 10px;
-    }
-  }
-
+cagov-regulatory-outline {
   ol {
     counter-reset: section;
     list-style-type: none;
-    margin-left: 30px;
-    padding-left: 30px;
+    margin-left: 32px;
+    padding-left: 32px;
+
     li {
+      counter-increment: section;
+      margin: 16px 0;
+
+      &::before {
+        content: "(" counter(section, lower-alpha) ") ";
+        display: inline-block;
+        margin-left: -32px;
+        padding-right: 32px;
+      }
+    }
+
+    ol li {
       &:before {
         content: "(" counter(section, decimal) ") ";
       }
