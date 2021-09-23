@@ -15,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.38.0"
+  },
+  "cagov": {
+    "scss": "src/index.scss"
   }
 }
