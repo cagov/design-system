@@ -4,7 +4,7 @@ export class CaGovBackToTop extends window.HTMLElement {
       super();
       // Support additional options
       let defaultOptions = {
-        parentSelector: "#page-container",
+        parentSelector: "cagov-back-to-top",
         onLoadSelector: "body",
         scrollBottomThreshold: 10,
         scrollAfterHeight: 400, // Pixel height (after which, go-to-top behavior will start)
