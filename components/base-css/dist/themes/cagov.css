@@ -51,6 +51,17 @@
   --cagov-primary: #004ABC;
   --cagov-primary-dark: #003484;
   --cagov-secondary: #FF8000;
+  --white: #fff;
+  --gray-100: #f9f9fa;
+  --gray-200: #ededef;
+  --gray-300: #e1e0e3;
+  --gray-400: #D3D2D6;
+  --gray-500: #C4C3C8;
+  --gray-600: #B3B2B8;
+  --gray-700: #A09FA7;
+  --gray-800: #3F3E4D;
+  --gray-900: #3F3E4D;
+  --black: #000;
 }
 
 /* spasing, margin and padding values */
