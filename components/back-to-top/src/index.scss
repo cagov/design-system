@@ -1,0 +1,46 @@
+/* Back to top button */
+cagov-back-to-top {
+  .back-to-top {
+    position: fixed;
+    z-index: 99999;
+    right: -2px;
+    font-size: var(--small-text, 0.875rem);
+    padding: 10px 10px 10px 10px;
+    bottom: -50px;
+    opacity: 0;
+    visibility: hidden;
+    color: var(--primary-color, #004abc);
+    border: 1px solid var(--primary-color, #004abc);
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: bottom 0.5s linear;
+    &:hover {
+      color: var(--primary-dark-color, #003484);
+      border: 1px solid var(--primary-dark-color, #003484);
+      background-color: var(--gray-100, #f9f9fa);
+      svg path {
+        fill: var(--primary-dark-color, #003484);
+      }
+    }
+  
+    &:focus {
+      outline: 2px solid var(--highlight-color, #fec02f);
+    }
+    svg {
+      width: 16px;
+      position: relative;
+      top: 3px;
+      path {
+        fill: var(--primary-color, #004abc);
+      }
+    }
+    // Styles for visible button
+    &.is-visible {
+      opacity: 1;
+      visibility: visible;
+      display: inline;
+      bottom: 50px;
+    }
+  }  
+}
