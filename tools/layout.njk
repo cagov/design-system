@@ -7,7 +7,7 @@
     <title>Test</title>
 
     {% if css %}
-      <style>{{ css }}</style>
+      <style>{{ css | safe }}</style>
     {% endif %}
 
   </head>

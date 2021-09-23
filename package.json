@@ -4,7 +4,7 @@
   "description": "State of California Design System A work in progress!",
   "main": "index.js",
   "scripts": {
-    "start": "npx web-dev-server --open /components"
+    "start": "web-dev-server --config tools/web-dev-server.config.mjs"
   },
   "repository": {
     "type": "git",
