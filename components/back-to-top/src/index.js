@@ -42,6 +42,8 @@ export class CaGovBackToTop extends window.HTMLElement {
       var returnTopButton = document.querySelector(".back-to-top");
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         returnTopButton.classList.add("is-visible");
+        returnTopButton.removeAttribute("aria-hidden");
+        returnTopButton.removeAttribute("tabindex");
         clearTimeout(timer);
       }
     }
@@ -85,6 +87,8 @@ export class CaGovBackToTop extends window.HTMLElement {
       if (scrollTop > lastScrollTop) {
         // Downscroll code
         returnTopButton.classList.remove("is-visible");
+        returnTopButton.setAttribute("aria-hidden", "true");
+        returnTopButton.setAttribute("tabindex", "-1");
       } else {
         // Upscroll code
         if (
@@ -95,13 +99,19 @@ export class CaGovBackToTop extends window.HTMLElement {
             clearTimeout(timer);
           }
           returnTopButton.classList.add("is-visible");
+          returnTopButton.removeAttribute("aria-hidden");
+          returnTopButton.removeAttribute("tabindex");
   
           timer = setTimeout(function () {
             returnTopButton.classList.remove("is-visible");
+            returnTopButton.setAttribute("aria-hidden", "true");
+            returnTopButton.setAttribute("tabindex", "-1");
           }, options.hideAfter); // Back to top removes itself after 2 sec of inactivity
         } else {
           // Bottom of the page
           returnTopButton.classList.remove("is-visible");
+          returnTopButton.setAttribute("aria-hidden", "true");
+          returnTopButton.setAttribute("tabindex", "-1");
         }
       }
   
@@ -132,8 +142,8 @@ export class CaGovBackToTop extends window.HTMLElement {
       // returnTop.classList.add(options.classes);
       // Does not need to be accessible.
       // Screen Reader users have other options to get to the top.
-      // returnTop.setAttribute("aria-hidden", "true");
-  
+      returnTop.setAttribute("aria-hidden", "true");
+      returnTop.setAttribute("tabindex", "-1");
       // Add some text to the go-to-top button
       const returnContent = document.createTextNode(options.label);
   
