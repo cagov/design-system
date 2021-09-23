@@ -2,17 +2,36 @@ import nunjucks from 'nunjucks';
 import * as path from 'path';
 import { promises as fs } from "fs"
 import { fileURLToPath } from 'url';
+import { promisify } from 'util';
 import sass from 'sass';
 
-const pluginForServingTemplates =     {
+const sassAsync = promisify(sass.render);
+
+const pluginForServingSass = {
+  name: 'serve-sass',
+  resolveMimeType(context) {
+    if (context.path.endsWith('.scss')) {
+      return 'css';
+    }
+  },
+  async transform(context) {
+    if (context.path.endsWith('.scss')) {
+      let css = await sassAsync({data: context.body})
+        .then(result => result.css.toString())
+        .catch(err => undefined);
+      return css;
+    }
+  },
+}
+
+const pluginForServingTemplates = {
   name: 'serve-templated-html',
   async transform(context) {
     if (context.response.is('html')) {
       
       nunjucks.configure({ autoescape: true });
-      let requestedContent = nunjucks.compile(context.body);
-      let attributes = {
-        requestedContent
+      let renderAttributes = {
+        requestedContent: nunjucks.compile(context.body)
       }
 
       let packageDir = path.dirname(path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url))), '../components', context.request.path));
@@ -20,17 +39,15 @@ const pluginForServingTemplates =     {
       let packageFile = await fs.readFile(path.resolve(packageDir, 'package.json'), 'utf-8')
         .catch(err => undefined);
 
-      console.log(path.resolve(packageDir, 'package.json'));
-
       if (packageFile) {
         let packageData = JSON.parse(packageFile);
 
         if (packageData.cagov && packageData.cagov.scss) {
-          attributes.css = sass.renderSync({file: path.join(packageDir, packageData.cagov.scss)}).css.toString();
+          renderAttributes.scss = path.join(path.dirname(context.request.path), packageData.cagov.scss);
         }
       }
 
-      return nunjucks.render('tools/layout.njk', attributes);
+      return nunjucks.render('tools/layout.njk', renderAttributes);
     }
   }
 }
@@ -41,6 +58,7 @@ export default {
   appIndex: 'components/index.html',
   rootDir: 'components',
   plugins: [
+    pluginForServingSass,
     pluginForServingTemplates
   ]
 };
