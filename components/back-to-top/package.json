@@ -1,0 +1,19 @@
+{
+  "name": "@cagov/ds-back-to-top",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.css",
+  "scripts": {
+    "build": "sass src/index.scss index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/components/back-to-top/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.38.0"
+  }
+}

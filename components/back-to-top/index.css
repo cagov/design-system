@@ -1,0 +1,44 @@
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  z-index: 99999;
+  right: -2px;
+  font-size: var(--small-text, 0.875rem);
+  padding: 10px 10px 10px 10px;
+  bottom: -50px;
+  opacity: 0;
+  visibility: hidden;
+  color: var(--primary-color, #004abc);
+  border: 1px solid var(--primary-color, #004abc);
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: bottom 0.5s linear;
+}
+.back-to-top:hover {
+  color: var(--primary-dark-color, #003484);
+  border: 1px solid var(--primary-dark-color, #003484);
+  background-color: var(--gray-100, #f9f9fa);
+}
+.back-to-top:hover svg path {
+  fill: var(--primary-dark-color, #003484);
+}
+.back-to-top:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+.back-to-top svg {
+  width: 16px;
+  position: relative;
+  top: 3px;
+}
+.back-to-top svg path {
+  fill: var(--primary-color, #004abc);
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  display: inline;
+  bottom: 50px;
+}
+
+/*# sourceMappingURL=index.css.map */
