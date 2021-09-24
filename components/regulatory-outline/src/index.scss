@@ -7,13 +7,20 @@ cagov-regulatory-outline {
 
     li {
       counter-increment: section;
+      list-style-type: none;
       margin: 16px 0;
+      position: relative;
 
       &::before {
         content: "(" counter(section, lower-alpha) ") ";
-        display: inline-block;
+        width: 100px;
         margin-left: -32px;
         padding-right: 32px;
+        display: inline-block;
+        position: absolute;
+        left: -50px;
+        white-space: nowrap;
+        text-align: right;
       }
     }
 
