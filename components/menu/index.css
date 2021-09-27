@@ -57,11 +57,11 @@
 }
 
 cagov-navoverlay .container {
-  max-width: var(--w-lg, "1176px");
-  margin: 0 auto;
+  padding: 0 15px;
+  margin: 0;
 }
 cagov-navoverlay .container .search-container {
-  padding: 0 8px 0 16px;
+  padding: 16px 0;
 }
 
 /* EXPANDED MENU SYTLES */
@@ -124,6 +124,8 @@ cagov-navoverlay .mobile-icons .menu-btn svg {
 }
 cagov-navoverlay .expanded-menu {
   display: none;
+  max-width: var(--w-lg, "1176px");
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu {
@@ -142,8 +144,21 @@ cagov-navoverlay .expanded-menu-grid {
   }
 }
 cagov-navoverlay .expanded-menu-col {
-  margin: 0;
   text-align: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-col:nth-child(2) {
+    margin-left: 0;
+  }
+  cagov-navoverlay .expanded-menu-col:last-child {
+    margin-right: 0;
+  }
+  cagov-navoverlay .expanded-menu-col:last-child .expanded-menu-dropdown {
+    right: 0;
+    left: initial;
+  }
 }
 cagov-navoverlay .expanded-menu-section {
   text-align: left;
@@ -171,6 +186,10 @@ cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
   cagov-navoverlay .expanded-menu-section:last-of-type {
     margin-bottom: 0;
   }
+}
+cagov-navoverlay .expanded-menu-section.mobile-only {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section.mobile-only {
@@ -218,16 +237,9 @@ cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-section-header-a
   transform: rotate(180deg);
 }
 cagov-navoverlay .expanded-menu-section-header {
-  display: block;
-  position: relative;
-}
-@media (min-width: 768px) {
-  cagov-navoverlay .expanded-menu-section-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0rem;
-    background: #fff;
-  }
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
 }
 cagov-navoverlay .expanded-menu-section-header-link {
   font-weight: normal;
@@ -240,9 +252,8 @@ cagov-navoverlay .expanded-menu-section-header-link {
   border: none;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-right: 0.5rem;
-  /* arrow clearence for long text */
-  padding-left: 1rem;
+  padding-left: 0;
+  padding-right: 0;
   color: var(--primary-color, #064E66);
 }
 cagov-navoverlay .expanded-menu-section-header-link:active {
@@ -255,32 +266,29 @@ cagov-navoverlay .expanded-menu-section-header-link:hover {
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section-header-link {
     width: auto;
-    padding-right: 2rem;
   }
 }
 cagov-navoverlay .expanded-menu-section-header-arrow {
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  top: 50%;
-  right: 1rem;
+  max-width: 1rem;
+  max-height: 1rem;
   transform: translateY(-50%);
   display: block;
   transition: all 0.5s cubic-bezier(0.57, 0.2, 0.21, 0.89);
 }
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section-header-arrow {
-    position: absolute;
-    top: auto;
-    right: 0.5rem;
     transform: none;
   }
 }
 cagov-navoverlay .expanded-menu-section-header-arrow-svg {
   width: 100%;
-  display: block;
+  display: inline-block;
   transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
-  margin-top: 0.3rem;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section-header-arrow-svg {
+    display: block;
+  }
 }
 cagov-navoverlay .expanded-menu-dropdown {
   max-height: 0px;
@@ -339,7 +347,6 @@ cagov-navoverlay.display-menu .expanded-menu:focus {
 @media (max-width: 767px) {
   cagov-navoverlay.display-menu .expanded-menu {
     margin-left: 0;
-    width: 100vw;
     border-bottom: solid 1px var(--gray-300, #e1e0e3);
   }
 }
