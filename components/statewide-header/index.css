@@ -42,7 +42,7 @@
   width: 38px;
 }
 .official-header svg .ca {
-  fill: var(--cagov-highlight, #FEC02F);
+  fill: var(--cagov-highlight, #fec02f);
 }
 .official-header svg .gov {
   fill: var(--cagov-primary-dark, #003484);
@@ -158,6 +158,17 @@
   .desktop-only {
     display: inherit;
     padding-right: 0.2rem;
+  }
+
+  /* headder transition on scroll (in desktop) */
+  .official-header,
+header {
+    transition: all 0.3s ease;
+  }
+
+  .is-hidden,
+.scrolled {
+    top: -50px;
   }
 }
 
