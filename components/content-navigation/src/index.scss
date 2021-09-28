@@ -27,7 +27,7 @@ sidebar cagov-content-navigation ul li {
   &:first-child {
     border-top: 1px solid var(--gray-200, #ededef);
   }
-  
+
   a {
     text-decoration: none;
     &:hover {
@@ -35,7 +35,6 @@ sidebar cagov-content-navigation ul li {
     }
   }
 }
-
 
 @media only screen and (max-width: 992px) {
   cagov-content-navigation .label {
@@ -50,5 +49,13 @@ sidebar cagov-content-navigation ul li {
   cagov-content-navigation ul li a {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+/* sticky content navigation in desktop */
+@media (min-width: 768px) {
+  .sidebar-container {
+    position: sticky;
+    top: 200px;
   }
 }
