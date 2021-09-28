@@ -275,10 +275,11 @@ cagov-navoverlay {
         }
       }
       &-header {
-        display: flex;
-        column-gap: .5rem;
-        align-items: center;
         &-link {
+          display: flex !important;
+          column-gap: .5rem;
+          align-items: center;
+          justify-content: space-between;
           font-weight: normal;
           font-size: 1.125rem;
           cursor: pointer !important;
@@ -301,7 +302,7 @@ cagov-navoverlay {
           }
 
           @include tablet {
-            width: auto;
+            justify-content: flex-start;
           }
         }
         &-arrow {
