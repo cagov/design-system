@@ -236,12 +236,11 @@ cagov-navoverlay .expanded-menu-section.mobile-only {
 cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-section-header-arrow-svg {
   transform: rotate(180deg);
 }
-cagov-navoverlay .expanded-menu-section-header {
-  display: flex;
+cagov-navoverlay .expanded-menu-section-header-link {
+  display: flex !important;
   column-gap: 0.5rem;
   align-items: center;
-}
-cagov-navoverlay .expanded-menu-section-header-link {
+  justify-content: space-between;
   font-weight: normal;
   font-size: 1.125rem;
   cursor: pointer !important;
@@ -265,7 +264,7 @@ cagov-navoverlay .expanded-menu-section-header-link:hover {
 }
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section-header-link {
-    width: auto;
+    justify-content: flex-start;
   }
 }
 cagov-navoverlay .expanded-menu-section-header-arrow {
