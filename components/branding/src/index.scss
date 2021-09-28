@@ -13,21 +13,19 @@ $mobile-min: 767px;
     padding: 16px 0;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-areas: 
-      "org-name-top mobile-icons"
-      "org-name-bottom mobile-icons";
+      "org-name mobile-icons";
     column-gap: .5rem;
     row-gap: .25rem;
     justify-items: start;
 
     &.with-logo {
       grid-template-columns: auto 1fr;
-      grid-template-rows: auto auto auto;
+      grid-template-rows: auto auto;
       grid-template-areas: 
         "logo mobile-icons"
-        "org-name-top ."
-        "org-name-bottom .";
+        "org-name org-name";
     }
 
     .search-container {
@@ -42,14 +40,18 @@ $mobile-min: 767px;
     align-items: center;
   }
 
-  .grid-org-name-top {
-    grid-area: org-name-top;
-    align-self: end;
-  }
+  .grid-org-name {
+    grid-area: org-name;
+    display: flex;
+    flex-direction: column;
+    row-gap: .25rem;
 
-  .grid-org-name-bottom {
-    grid-area: org-name-bottom;
-    align-self: start;
+    transition: all 0.3s;
+    color: var(--black, #000);
+    text-decoration: none;
+    &:focus {
+      outline: 2px solid var(--secondary-color, #fec02f);
+    }
   }
 
   .grid-search {
@@ -65,17 +67,8 @@ $mobile-min: 767px;
     justify-self: end;
   }
 
-  .org-name {
-    transition: all 0.3s;
-    display: block;
-    color: var(--black, #000);
-    text-decoration: none;
-    &:focus {
-      outline: 2px solid var(--secondary-color, #fec02f);
-    }
-  }
-
   .org-name-state {
+    display: block;
     font-family: var(--org-name-state-font, "Public Sans",sans-serif);
     font-size: var(--org-name-state-font-size, 1rem);
     font-weight: var(--org-name-state-font-weight, 500);
@@ -84,6 +77,7 @@ $mobile-min: 767px;
   }
 
   .org-name-dept {
+    display: block;
     font-family: var(--org-name-dept-font, "Public Sans",sans-serif);
     font-size: var(--org-name-dept-font-size, 1.75rem);
     font-weight: var(--org-name-dept-font-weight, 700);
@@ -107,6 +101,10 @@ $mobile-min: 767px;
   button.menu-btn {
     padding: 0 !important;
     border: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+    align-items: center;
     background: transparent;
     overflow: visible;
     padding: 10px;
@@ -125,8 +123,7 @@ $mobile-min: 767px;
     }
 
     svg {
-      position: relative;
-      top: 1px;
+      display: inline-block;
     }
 
     .blue {
@@ -333,16 +330,14 @@ cagov-navoverlay {
   .branding {
     .container {
       grid-template-columns: auto 1fr;
-      grid-template-rows: auto auto;
+      grid-template-rows: auto;
       grid-template-areas: 
-        "org-name-top search"
-        "org-name-bottom search";
+        "org-name search";
       &.with-logo {
         grid-template-columns: auto auto 1fr;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto;
         grid-template-areas: 
-          "logo org-name-top search"
-          "logo org-name-bottom search";
+          "logo org-name search";
       }
     }
     .search-container {

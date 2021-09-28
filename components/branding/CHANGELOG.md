@@ -15,4 +15,7 @@
     * org-name-dept-font-weight
     * org-name-dept-line-height
     * org-name-dept-text-transform
+# 1.0.4
+* Fixed for design preference where mobile icons should continue to flow inline when a branding logo is present (instead of bunching up at a CSS grid border).
+* Fixed problem where search icon could get pinched vertically on smaller screen sizes.
 

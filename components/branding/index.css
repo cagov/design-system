@@ -1,4 +1,3 @@
-/* branding */
 .branding {
   padding: 0 15px;
   box-sizing: border-box;
@@ -8,68 +7,88 @@
 .branding .container {
   max-width: var(--w-lg, "1176px");
   margin: 0 auto;
-  padding: 5px 0 0 0;
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "org-name mobile-icons";
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  justify-items: start;
+}
+.branding .container.with-logo {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "logo mobile-icons" "org-name org-name";
+}
+.branding .container .search-container {
+  display: none;
+}
+.branding .grid-logo {
+  grid-area: logo;
+  align-self: center;
   display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
+  align-items: center;
 }
-.branding .logo {
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-right: 10px;
-}
-.branding .logo:focus {
-  outline: 2px solid var(--secondary-color, #fec02f);
-}
-.branding .logo-img {
-  margin-left: 10px;
-}
-.branding .branding-logo {
+.branding .grid-org-name {
+  grid-area: org-name;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+  transition: all 0.3s;
   color: var(--black, #000);
   text-decoration: none;
-  margin: 10px 0;
 }
-.branding .branding-logo:focus {
+.branding .grid-org-name:focus {
   outline: 2px solid var(--secondary-color, #fec02f);
 }
-.branding .branding-logo .logo-text {
-  display: inline-block;
+.branding .grid-search {
+  grid-area: search;
+  align-self: center;
+  justify-self: end;
+  min-width: 40%;
 }
-.branding .branding-logo .logo-text .logo-state {
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
-  transition: all 0.3s;
-  line-height: 1.2em;
-  display: block;
+.branding .grid-mobile-icons {
+  grid-area: mobile-icons;
+  align-self: center;
+  justify-self: end;
 }
-.branding .branding-logo .logo-text .logo-dept {
-  font-family: var(--logo-font, "Public Sans", sans-serif) !important;
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1.2em;
-  transition: all 0.3s;
+.branding .org-name-state {
   display: block;
+  font-family: var(--org-name-state-font, "Public Sans", sans-serif);
+  font-size: var(--org-name-state-font-size, 1rem);
+  font-weight: var(--org-name-state-font-weight, 500);
+  line-height: var(--org-name-state-line-height, 1.2);
+  text-transform: var(--org-name-state-text-transform, none);
+}
+.branding .org-name-dept {
+  display: block;
+  font-family: var(--org-name-dept-font, "Public Sans", sans-serif);
+  font-size: var(--org-name-dept-font-size, 1.75rem);
+  font-weight: var(--org-name-dept-font-weight, 700);
+  line-height: var(--org-name-dept-line-height, 1.2);
+  text-transform: var(--org-name-dept-text-transform, none);
 }
 .branding .mobile-icons {
-  margin-left: auto;
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
-  right: 0px;
-  top: 20px;
+  justify-content: end;
+  gap: 10px;
+}
+.branding .mobile-search {
+  margin: 0 !important;
 }
 .branding button.search-btn,
 .branding button.menu-btn {
+  padding: 0 !important;
   border: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+  align-items: center;
   background: transparent;
   overflow: visible;
-  padding: 10px 10px;
-  margin-right: 10px;
+  padding: 10px;
   color: var(--primary-color, #064e66);
 }
 .branding button.search-btn:hover,
@@ -87,42 +106,15 @@
 }
 .branding button.search-btn svg,
 .branding button.menu-btn svg {
-  position: relative;
-  top: 1px;
+  display: inline-block;
 }
 .branding button.search-btn .blue,
 .branding button.menu-btn .blue {
   fill: var(--primary-color, #064e66);
 }
-.branding .search-container {
-  display: none;
-  position: absolute;
-  right: 0px;
-  top: 25px;
-  width: 30%;
-}
-.branding .search-container.show {
-  display: block;
-  position: relative;
-  display: block;
-  position: relative;
-  width: 100%;
-  background-color: var(--gray-100, #f9f9fa);
-  padding: 20px 16px 20px 16px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-top: 1px solid var(--primary-color, #e1e0e3);
-  border-bottom: 1px solid var(--primary-color, #e1e0e3);
-}
-
-.branding .mobile-search {
-  margin-top: 1rem;
-}
 .branding .menu-trigger {
-  margin-top: 1rem;
-  padding: 0.5em 1em 0.5em 0;
+  padding: 0 !important;
+  margin: 0 !important;
   transition: 0.3s;
   transform-origin: top left;
   display: inline-block;
@@ -226,7 +218,7 @@ cagov-navoverlay .search-container .site-search {
 .branding .search-container .site-search .search-textfield,
 cagov-navoverlay .search-container .site-search .search-textfield {
   border: 1px solid;
-  border-color: var(--primary-dark-color, #064e66);
+  border-color: var(--secondary-color, #064e66);
   border-radius: 4px;
   padding: 10px;
   width: 100%;
@@ -237,20 +229,20 @@ cagov-navoverlay .search-container .site-search .search-submit {
   position: relative;
   right: 5px;
   outline-offset: -2px;
-  background-color: var(--standout-color, #064e66);
-  border: 1px solid var(--standout-color, #064e66);
+  background-color: var(--secondary-color, #064e66);
+  border: 1px solid var(--secondary-color, #064e66);
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   padding: 7px 14px 4px 14px;
 }
 .branding .search-container .site-search .search-submit:hover,
 cagov-navoverlay .search-container .site-search .search-submit:hover {
-  background-color: var(--primary, #064e66);
-  border-color: var(--primary, #064e66);
+  background-color: var(--primary-color, #064e66);
+  border-color: var(--primary-color, #064e66);
 }
 .branding .search-container .site-search .search-submit:focus,
 cagov-navoverlay .search-container .site-search .search-submit:focus {
-  outline: 2px solid var(--secondary-color, #fec02f);
+  outline: 2px solid var(--standout-color, #fec02f);
 }
 .branding .search-container .site-search .search-submit svg path,
 cagov-navoverlay .search-container .site-search .search-submit svg path {
@@ -285,11 +277,17 @@ cagov-navoverlay .search-container--small.hidden-search {
   }
 
   .branding .container {
-    flex-flow: row;
-    align-items: center;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "org-name search";
+  }
+  .branding .container.with-logo {
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo org-name search";
   }
   .branding .search-container {
-    display: block;
+    display: block !important;
   }
 }
 
