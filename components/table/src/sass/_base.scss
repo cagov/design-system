@@ -1,0 +1,38 @@
+#{$class} {
+  table {
+    border: 1px solid var(--gray-700, #a09fa7);
+    border-collapse: collapse;
+    margin: 0 0 15px;
+    text-align: left;
+
+    & + figcaption {
+      margin-bottom: 15px;
+    }
+  }
+
+  &.aligncenter table {
+    margin: 0 auto 15px;
+
+    & + figcaption {
+      margin: 0 auto 15px;
+      text-align: center;
+    }
+  }
+
+  &.alignright table {
+    margin: 0 0 15px auto;
+
+    & + figcaption {
+      text-align: right;
+    }
+  }
+
+  th {
+    font-weight: bold;
+  }
+  td,
+  th {
+    border: 1px solid var(--gray-700, #a09fa7);
+    padding: 16px;
+  }
+}

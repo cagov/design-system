@@ -1,0 +1,20 @@
+{
+  "name": "@cagov/ds-table",
+  "version": "",
+  "description": "Default table style.",
+  "main": "src/index.html",
+  "type": "module",
+  "scripts": {
+    "build": "sass src/index.scss dist/index.css",
+    "build:wp": "sass src/index.wordpress.scss dist/index.wordpress.css",
+    "test": "web-test-runner test/test.index.js --node-resolve",
+    "test:visual": "web-test-runner test/test.index.js --node-resolve --config test/test.config.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@open-wc/testing": "^2.5.33",
+    "@web/test-runner": "^0.13.17",
+    "@web/test-runner-puppeteer": "^0.10.2",
+    "sass": "^1.41.1"
+  }
+}
