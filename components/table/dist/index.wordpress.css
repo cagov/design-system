@@ -1,5 +1,5 @@
 .wp-block-table table {
-  border: 1px solid var(--black, #000000);
+  border: 1px solid var(--gray-700, #a09fa7);
   border-collapse: collapse;
   margin: 0 0 15px;
   text-align: left;
@@ -25,8 +25,8 @@
 }
 .wp-block-table td,
 .wp-block-table th {
-  border: 1px solid var(--black, #000000);
-  padding: 6px 24px;
+  border: 1px solid var(--gray-700, #a09fa7);
+  padding: 16px;
 }
 
 /*# sourceMappingURL=index.wordpress.css.map */
