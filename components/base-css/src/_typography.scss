@@ -20,18 +20,26 @@ p {
 }
 
 /* New styles, need home */
-ul {
+ul, ol {
   margin-bottom: 1rem;
 }
 
-ul li {
+ul li, ol li {
   margin-bottom: 0.5rem;
 }
 
-/* Update position list element */
-main ul li {
-  list-style-position: outside;
+main ol li, main ul li {
   margin-left: 32px;
+}
+
+main ol li {
+  padding: 0 16px;
+  margin-top: 0.5rem;
+}
+
+/* Update position list element */
+main ul li, main ol li {
+  list-style-position: outside;
 }
 
 h1,
