@@ -1,0 +1,32 @@
+.wp-block-table table {
+  border: 1px solid var(--black, #000000);
+  border-collapse: collapse;
+  margin: 0 0 15px;
+  text-align: left;
+}
+.wp-block-table table + figcaption {
+  margin-bottom: 15px;
+}
+.wp-block-table.aligncenter table {
+  margin: 0 auto 15px;
+}
+.wp-block-table.aligncenter table + figcaption {
+  margin: 0 auto 15px;
+  text-align: center;
+}
+.wp-block-table.alignright table {
+  margin: 0 0 15px auto;
+}
+.wp-block-table.alignright table + figcaption {
+  text-align: right;
+}
+.wp-block-table th {
+  font-weight: bold;
+}
+.wp-block-table td,
+.wp-block-table th {
+  border: 1px solid var(--black, #000000);
+  padding: 6px 24px;
+}
+
+/*# sourceMappingURL=index.wordpress.css.map */

@@ -1,0 +1,32 @@
+.cagov-table table {
+  border: 1px solid var(--black, #000000);
+  border-collapse: collapse;
+  margin: 0 0 15px;
+  text-align: left;
+}
+.cagov-table table + figcaption {
+  margin-bottom: 15px;
+}
+.cagov-table.aligncenter table {
+  margin: 0 auto 15px;
+}
+.cagov-table.aligncenter table + figcaption {
+  margin: 0 auto 15px;
+  text-align: center;
+}
+.cagov-table.alignright table {
+  margin: 0 0 15px auto;
+}
+.cagov-table.alignright table + figcaption {
+  text-align: right;
+}
+.cagov-table th {
+  font-weight: bold;
+}
+.cagov-table td,
+.cagov-table th {
+  border: 1px solid var(--black, #000000);
+  padding: 6px 24px;
+}
+
+/*# sourceMappingURL=index.css.map */
