@@ -1,0 +1,44 @@
+ol.cagov-regulatory-outline {
+  &,
+  & ol {
+    counter-reset: section;
+    list-style-type: none;
+    margin-left: 32px;
+    padding-left: 32px;
+
+    li {
+      counter-increment: section;
+      list-style-type: none;
+      margin: 16px 0;
+      position: relative;
+
+      &::before {
+        content: "(" counter(section, lower-alpha) ") ";
+        width: 100px;
+        margin-left: -32px;
+        padding-right: 32px;
+        display: inline-block;
+        position: absolute;
+        left: -50px;
+        white-space: nowrap;
+        text-align: right;
+      }
+    }
+
+    ol li {
+      &:before {
+        content: "(" counter(section, decimal) ") ";
+      }
+
+      ol li {
+        &:before {
+          content: "(" counter(section, upper-alpha) ") ";
+        }
+
+        ol li:before {
+          content: "(" counter(section, lower-roman) ") ";
+        }
+      }
+    }
+  }
+}
