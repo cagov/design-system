@@ -1,5 +1,7 @@
 # CHANGELOG for ds-content-navigation
 `ds-content-navigation`
+# 1.0.5
+* Removed sticky position since it caused scroll to target positioning bug.
 # 1.0.4
 * Made content navigation sticky (Request came from cannabis project issue #234). To do: need to highlight nav items based on the h2 # or section, which user is scrolling through.
 # 1.0.3

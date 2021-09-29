@@ -51,11 +51,3 @@ sidebar cagov-content-navigation ul li {
     line-height: 24px;
   }
 }
-
-/* sticky content navigation in desktop */
-@media (min-width: 768px) {
-  .sidebar-container {
-    position: sticky;
-    top: 200px;
-  }
-}
