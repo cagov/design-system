@@ -1,5 +1,6 @@
-cagov-regulatory-outline {
-  ol {
+ol.cagov-regulatory-outline {
+  &,
+  & ol {
     counter-reset: section;
     list-style-type: none;
     margin-left: 32px;

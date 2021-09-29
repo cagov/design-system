@@ -1,16 +1,16 @@
-cagov-regulatory-outline ol {
+ol.cagov-regulatory-outline, ol.cagov-regulatory-outline ol {
   counter-reset: section;
   list-style-type: none;
   margin-left: 32px;
   padding-left: 32px;
 }
-cagov-regulatory-outline ol li {
+ol.cagov-regulatory-outline li, ol.cagov-regulatory-outline ol li {
   counter-increment: section;
   list-style-type: none;
   margin: 16px 0;
   position: relative;
 }
-cagov-regulatory-outline ol li::before {
+ol.cagov-regulatory-outline li::before, ol.cagov-regulatory-outline ol li::before {
   content: "(" counter(section, lower-alpha) ") ";
   width: 100px;
   margin-left: -32px;
@@ -21,13 +21,13 @@ cagov-regulatory-outline ol li::before {
   white-space: nowrap;
   text-align: right;
 }
-cagov-regulatory-outline ol ol li:before {
+ol.cagov-regulatory-outline ol li:before, ol.cagov-regulatory-outline ol ol li:before {
   content: "(" counter(section, decimal) ") ";
 }
-cagov-regulatory-outline ol ol li ol li:before {
+ol.cagov-regulatory-outline ol li ol li:before, ol.cagov-regulatory-outline ol ol li ol li:before {
   content: "(" counter(section, upper-alpha) ") ";
 }
-cagov-regulatory-outline ol ol li ol li ol li:before {
+ol.cagov-regulatory-outline ol li ol li ol li:before, ol.cagov-regulatory-outline ol ol li ol li ol li:before {
   content: "(" counter(section, lower-roman) ") ";
 }
 
