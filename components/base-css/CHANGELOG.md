@@ -1,5 +1,8 @@
 # CHANGELOG for ds-base-css
 `ds-base-css`
+# 1.0.5
+* Changes to default wordpress button and ordered-list styles.
+
 # 1.0.4
 * Added missing gray colors to the variables.scss
 
