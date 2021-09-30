@@ -177,7 +177,8 @@ cagov-navoverlay {
       margin: 0 auto;
       @include tablet {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        column-gap: 24px;
         align-content: flex-start;
         align-items: stretch;
       }
@@ -193,11 +194,6 @@ cagov-navoverlay {
     
         &:last-child {
           margin-right: 0;
-          .expanded-menu-dropdown {
-            // Ensure right-most drop-down doesn't run off screen.
-            right: 0;
-            left: initial;
-          }
         }
       }
     }
