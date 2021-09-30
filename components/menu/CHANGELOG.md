@@ -11,4 +11,4 @@
 
 # 1.0.12
 * Modified menu items to fit with or without a drop-down menu. It's now possible to add simple static links in the menu without a dropdown arrow.
-* Fixed problem with right-most menu item, where a narrow desktop screen could cause the expanded menu to flow off-screen.
+* Aligned all menu items to the left, per latest design direction.
