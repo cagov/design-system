@@ -2,18 +2,26 @@
 cagov-back-to-top .back-to-top {
   position: fixed;
   z-index: 99999;
-  right: -2px;
-  font-size: var(--small-text, 0.875rem);
+  right: -100px;
+  font-size: var(--body-text, 1.125rem);
   padding: 10px 10px 10px 10px;
-  bottom: -50px;
+  bottom: 50px;
   opacity: 0;
   visibility: hidden;
   color: var(--primary-color, #004abc);
   border: 1px solid var(--primary-color, #004abc);
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
   text-decoration: none;
   cursor: pointer;
-  transition: bottom 0.5s linear;
+  transition: all 0.5s ease;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 768px) {
+  cagov-back-to-top .back-to-top {
+    font-size: var(--body-text-mobile, 1rem);
+    padding: 8px 8px 8px 8px;
+  }
 }
 cagov-back-to-top .back-to-top:hover {
   color: var(--primary-dark-color, #003484);
@@ -38,7 +46,7 @@ cagov-back-to-top .back-to-top.is-visible {
   opacity: 1;
   visibility: visible;
   display: inline;
-  bottom: 50px;
+  right: -4px;
 }
 
 /*# sourceMappingURL=index.css.map */
