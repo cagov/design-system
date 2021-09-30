@@ -1,31 +1,19 @@
-$tablet: 48rem; //768px
-$desktop: 81.25rem; //1300px
-
-@mixin tablet {
-  @media (min-width: #{$tablet}) {
-    @content;
-  }
-}
-@mixin desktop {
-  @media (min-width: #{$desktop}) {
-    @content;
-  }
-}
-
 cagov-feedback {
 	width: 100%;
 
 	.feedback-form {
-		background: var(--standout-color, #2F4C2C);
+		background: var(--primary-color, #004abc);
 		padding: 1rem;
-		border-radius: .3125rem;
+		border-radius: 0.3125rem;
+		max-width: var(--w-lg, 1176px);
+		margin: 0 auto;
 
 		&-question {
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
 		}
-	
+
 		&-label {
 			color: #fff;
 			font-size: 1.125rem;
@@ -35,15 +23,15 @@ cagov-feedback {
 			transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
 			line-height: 3rem;
 			width: 100%;
-			@include tablet {
+			@media (max-width: 678px) {
 				width: auto;
 			}
 		}
 		&-button {
 			padding: 1rem;
-			color: var(--standout-color, #2F4C2C);
+			color: var(--primary-color, #004abc);
 			border: none;
-			border-radius: .3rem;
+			border-radius: 0.3rem;
 			transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
 			cursor: pointer;
 			margin: 0 0.5rem 0 0;
@@ -61,7 +49,7 @@ cagov-feedback {
 				text-decoration: underline;
 			}
 			&:focus {
-				box-shadow: 0 0 0 2px #fff
+				box-shadow: 0 0 0 2px #fff;
 			}
 			.feedback-yes {
 				margin-right: 1rem;
@@ -71,7 +59,7 @@ cagov-feedback {
 		&-add {
 			padding-top: 2rem;
 			display: none;
-			@include tablet {
+			@media (max-width: 678px) {
 				text-align: left;
 				padding-top: 0;
 			}
@@ -79,7 +67,7 @@ cagov-feedback {
 		&-add-grid {
 			position: relative;
 			margin-top: 1rem;
-			@include tablet {
+			@media (max-width: 678px) {
 				display: inline-flex;
 				flex-flow: column;
 				align-items: flex-start;
@@ -91,7 +79,7 @@ cagov-feedback {
 			padding: 1rem;
 			margin-bottom: 1rem;
 			font-family: "Roboto", sans-serif;
-			color:darkblue;
+			color: var(--primary-color, #004abc);
 			max-width: 90%;
 			height: 127px;
 			width: 600px;
@@ -99,7 +87,7 @@ cagov-feedback {
 
 		&-thanks {
 			display: none;
-			color: #fff
+			color: #fff;
 		}
 
 		&-error {
@@ -110,9 +98,5 @@ cagov-feedback {
 			font-weight: 300;
 			text-align: left;
 		}
-
-	} // end .feedback-form 
-	
-
+	} // end .feedback-form
 } // end cwds-pagerating
-	

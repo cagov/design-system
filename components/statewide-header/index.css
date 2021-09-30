@@ -34,7 +34,7 @@
   align-items: center;
 }
 .official-header .official-logo .cagov-logo {
-  margin: 0 20px 0 0;
+  margin: 0 0 0 0;
   display: flex;
 }
 .official-header svg {
@@ -48,7 +48,7 @@
   fill: var(--cagov-primary-dark, #003484);
 }
 .official-header .official-tag {
-  margin: 0 10px;
+  margin: 0 var(--spacing-base, 8px);
   font-size: 0.95rem;
   display: inherit;
 }
@@ -145,31 +145,6 @@
 
 .desktop-only {
   display: none;
-}
-
-/* sticky header */
-@media (min-width: 768px) {
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 99;
-  }
-
-  .desktop-only {
-    display: inherit;
-    padding-right: 0.2rem;
-  }
-
-  /* headder transition on scroll (in desktop) */
-  .official-header,
-header {
-    transition: all 0.3s ease;
-  }
-
-  .is-hidden,
-.scrolled {
-    top: -50px;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */

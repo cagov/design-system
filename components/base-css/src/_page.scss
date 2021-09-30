@@ -6,7 +6,6 @@
   margin-bottom: 0;
 }
 
-
 .page-container-ds {
   max-width: var(--w-lg, 1176px);
   margin: 2rem auto;
@@ -111,10 +110,7 @@ article {
   }
 
   &.has-sidebar-left .main-content-default > :last-child,
-  &.has-sidebar-left
-    .main-content-ds
-    .ds-content-layout
-    > .everylayout:last-child {
+  &.has-sidebar-left .main-content-ds .ds-content-layout > .everylayout:last-child {
     flex-basis: 0;
     flex-grow: 999;
     min-width: calc(50% - var(--s1));
@@ -175,7 +171,7 @@ article {
     }
 
     &.page-container-ds main {
-      margin-left: inherit;
+      margin-left: 0 !important;
       margin-top: 32px;
     }
 

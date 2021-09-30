@@ -16,7 +16,7 @@ footer {
 			color: var(--primary-dark-color, #1e1569);
 		}
 		&:focus {
-			outline: 2px solid var(--highlight-color, #FEC02F);
+			outline: 2px solid var(--highlight-color, #fec02f);
 		}
 	}
 
@@ -25,27 +25,27 @@ footer {
 		flex-direction: column;
 
 		a {
-			margin-right: 1.7rem;
+			margin-right: 24px;
 			padding-top: 0.5rem;
 			padding-bottom: 0.5rem;
-            &:hover {
-                text-decoration: none;
-            }
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 
 	.bg-light-grey svg {
 		padding: 0;
 		.ca {
-            fill: var(--cagov-highlight, #FEC02F);
-        }
-        .gov {
-            fill: var(--cagov-primary-dark, #003484);
-        }
+			fill: var(--cagov-highlight, #fec02f);
+		}
+		.gov {
+			fill: var(--cagov-primary-dark, #003484);
+		}
 	}
 
 	.cagov-logo {
-		padding: 5px 2rem 5px 0;
+		padding: 0 0 0 0;
 	}
 
 	.bg-light-grey a,

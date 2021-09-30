@@ -2331,7 +2331,7 @@ article {
     display: block;
   }
   .with-sidebar.page-container-ds main {
-    margin-left: inherit;
+    margin-left: 0 !important;
     margin-top: 32px;
   }
   .with-sidebar main {
@@ -2457,8 +2457,7 @@ main .wp-block-image img {
 /* buttons generic styles */
 /* Code generic styles */
 code,
-samp,
-time {
+samp {
   background: var(--gray-100, #f9f9fa);
   color: var(--gray-900, #3f3e4d);
   padding: 2.5px 5px;
