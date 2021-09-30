@@ -1,5 +1,7 @@
 # CHANGELOG for ds-statewide-header
 `ds-statewide-header`
+# 1.0.9
+* Removed sticky header feature until it's fully developed. Decrease spacing between CA.gov icon and tagline to 8px.
 # 1.0.8
 * Added script and styles that toggles official header display on scroll. 
 # 1.0.7

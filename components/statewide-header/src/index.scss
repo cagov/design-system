@@ -33,7 +33,7 @@
         align-items: center;
 
         .cagov-logo {
-            margin: 0 20px 0 0;
+            margin: 0 0 0 0;
             display: flex;
         }
     }
@@ -51,7 +51,7 @@
     }
 
     .official-tag {
-        margin: 0 10px;
+        margin: 0 var(--spacing-base, 8px);
         font-size: 0.95rem;
         display: inherit;
     }
@@ -161,28 +161,4 @@
 }
 .desktop-only {
     display: none;
-}
-
-/* sticky header */
-@media (min-width: 768px) {
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 99;
-    }
-    .desktop-only {
-        display: inherit;
-        padding-right: 0.2rem;
-    }
-
-    /* headder transition on scroll (in desktop) */
-    .official-header,
-    header {
-        transition: all 0.3s ease;
-    }
-
-    .is-hidden,
-    .scrolled {
-        top: -50px;
-    }
 }
