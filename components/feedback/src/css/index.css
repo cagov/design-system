@@ -2,9 +2,11 @@ cagov-feedback {
   width: 100%;
 }
 cagov-feedback .feedback-form {
-  background: var(--standout-color, #2F4C2C);
+  background: var(--primary-color, #004abc);
   padding: 1rem;
   border-radius: 0.3125rem;
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
 }
 cagov-feedback .feedback-form-question {
   display: flex;
@@ -20,14 +22,14 @@ cagov-feedback .feedback-form-label {
   line-height: 3rem;
   width: 100%;
 }
-@media (min-width: 48rem) {
+@media (max-width: 678px) {
   cagov-feedback .feedback-form-label {
     width: auto;
   }
 }
 cagov-feedback .feedback-form-button {
   padding: 1rem;
-  color: var(--standout-color, #2F4C2C);
+  color: var(--primary-color, #004abc);
   border: none;
   border-radius: 0.3rem;
   transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
@@ -55,7 +57,7 @@ cagov-feedback .feedback-form-add {
   padding-top: 2rem;
   display: none;
 }
-@media (min-width: 48rem) {
+@media (max-width: 678px) {
   cagov-feedback .feedback-form-add {
     text-align: left;
     padding-top: 0;
@@ -65,7 +67,7 @@ cagov-feedback .feedback-form-add-grid {
   position: relative;
   margin-top: 1rem;
 }
-@media (min-width: 48rem) {
+@media (max-width: 678px) {
   cagov-feedback .feedback-form-add-grid {
     display: inline-flex;
     flex-flow: column;
@@ -77,7 +79,7 @@ cagov-feedback .feedback-form-textarea {
   padding: 1rem;
   margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
-  color: darkblue;
+  color: var(--primary-color, #004abc);
   max-width: 90%;
   height: 127px;
   width: 600px;
