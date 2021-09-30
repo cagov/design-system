@@ -22,7 +22,7 @@ footer .footer-secondary-links {
   flex-direction: column;
 }
 footer .footer-secondary-links a {
-  margin-right: var(--padding-md, 24px);
+  margin-right: 24px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
