@@ -167,7 +167,7 @@ cagov-navoverlay {
 
   .expanded-menu {
     display: none;
-    max-width: calc(var(--w-lg, "1176px") + 24px);
+    max-width: calc(var(--w-lg, "1176px") + 32px);
     margin: 0 auto;
 
     @include tablet {
