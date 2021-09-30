@@ -57,7 +57,7 @@
 }
 
 cagov-navoverlay .container {
-  padding: 0 15px;
+  padding: 0;
   margin: 0;
 }
 cagov-navoverlay .container .search-container {
@@ -124,7 +124,7 @@ cagov-navoverlay .mobile-icons .menu-btn svg {
 }
 cagov-navoverlay .expanded-menu {
   display: none;
-  max-width: var(--w-lg, "1176px");
+  max-width: calc(var(--w-lg, "1176px") + 24px);
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -138,27 +138,14 @@ cagov-navoverlay .expanded-menu-grid {
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
     align-content: flex-start;
     align-items: stretch;
   }
 }
 cagov-navoverlay .expanded-menu-col {
   text-align: left;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-@media (min-width: 768px) {
-  cagov-navoverlay .expanded-menu-col:nth-child(2) {
-    margin-left: 0;
-  }
-  cagov-navoverlay .expanded-menu-col:last-child {
-    margin-right: 0;
-  }
-  cagov-navoverlay .expanded-menu-col:last-child .expanded-menu-dropdown {
-    right: 0;
-    left: initial;
-  }
 }
 cagov-navoverlay .expanded-menu-section {
   text-align: left;
@@ -186,10 +173,6 @@ cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
   cagov-navoverlay .expanded-menu-section:last-of-type {
     margin-bottom: 0;
   }
-}
-cagov-navoverlay .expanded-menu-section.mobile-only {
-  margin-left: 5px;
-  margin-right: 5px;
 }
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section.mobile-only {
@@ -251,8 +234,8 @@ cagov-navoverlay .expanded-menu-section-header-link {
   border: none;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: var(--primary-color, #064E66);
 }
 cagov-navoverlay .expanded-menu-section-header-link:active {

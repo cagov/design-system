@@ -94,7 +94,7 @@ $desktop: 1176px;
 
 cagov-navoverlay {
   .container {
-    padding: 0 15px;
+    padding: 0;
     margin: 0;
 
     .search-container {
@@ -167,7 +167,7 @@ cagov-navoverlay {
 
   .expanded-menu {
     display: none;
-    max-width: var(--w-lg, "1176px");
+    max-width: calc(var(--w-lg, "1176px") + 24px);
     margin: 0 auto;
 
     @include tablet {
@@ -178,24 +178,13 @@ cagov-navoverlay {
       @include tablet {
         display: flex;
         justify-content: flex-start;
-        column-gap: 24px;
+        column-gap: .5rem;
         align-content: flex-start;
         align-items: stretch;
       }
     }
     &-col {
       text-align: left;
-      margin-left: 5px;
-      margin-right: 5px;
-      @include tablet {
-        &:nth-child(2) {
-          margin-left: 0;
-        }
-    
-        &:last-child {
-          margin-right: 0;
-        }
-      }
     }
     &-section {
       text-align: left;
@@ -222,8 +211,6 @@ cagov-navoverlay {
         }
       }
       &.mobile-only {
-        margin-left: 5px;
-        margin-right: 5px;
         @include tablet {
           display: none;
         }
@@ -286,8 +273,8 @@ cagov-navoverlay {
           border: none;
           padding-top: 1rem;
           padding-bottom: 1rem;
-          padding-left: 0;
-          padding-right: 0;
+          padding-left: 1rem;
+          padding-right: 1rem;
           color: var(--primary-color, #064E66);
           &:active {
             background: transparent;
