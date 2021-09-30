@@ -15,14 +15,14 @@ footer a:hover {
   color: var(--primary-dark-color, #1e1569);
 }
 footer a:focus {
-  outline: 2px solid var(--highlight-color, #FEC02F);
+  outline: 2px solid var(--highlight-color, #fec02f);
 }
 footer .footer-secondary-links {
   display: flex;
   flex-direction: column;
 }
 footer .footer-secondary-links a {
-  margin-right: 1.7rem;
+  margin-right: var(--padding-md, 24px);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -33,13 +33,13 @@ footer .bg-light-grey svg {
   padding: 0;
 }
 footer .bg-light-grey svg .ca {
-  fill: var(--cagov-highlight, #FEC02F);
+  fill: var(--cagov-highlight, #fec02f);
 }
 footer .bg-light-grey svg .gov {
   fill: var(--cagov-primary-dark, #003484);
 }
 footer .cagov-logo {
-  padding: 5px 2rem 5px 0;
+  padding: 0 0 0 0;
 }
 footer .bg-light-grey a,
 footer .copyright {
