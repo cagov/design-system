@@ -22,10 +22,7 @@ cagov-feedback {
 			margin-right: 1rem;
 			transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
 			line-height: 3rem;
-			width: 100%;
-			@media (max-width: 678px) {
-				width: auto;
-			}
+			width: auto;
 		}
 		&-button {
 			padding: 1rem;
@@ -57,9 +54,9 @@ cagov-feedback {
 		}
 
 		&-add {
-			padding-top: 2rem;
+			padding-top: 0;
 			display: none;
-			@media (max-width: 678px) {
+			@media (max-width: 768px) {
 				text-align: left;
 				padding-top: 0;
 			}
@@ -67,10 +64,11 @@ cagov-feedback {
 		&-add-grid {
 			position: relative;
 			margin-top: 1rem;
-			@media (max-width: 678px) {
-				display: inline-flex;
-				flex-flow: column;
-				align-items: flex-start;
+			display: inline-flex;
+			flex-flow: column;
+			align-items: flex-start;
+			@media (max-width: 768px) {
+				display: block;
 			}
 		}
 
