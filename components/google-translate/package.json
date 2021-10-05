@@ -1,12 +1,25 @@
 {
   "name": "@cagov/ds-google-translate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:eslint": "eslint --ext .js . --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --ext .js . --ignore-path .gitignore --fix"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@open-wc/eslint-config": "^4.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-lit": "^1.5.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config"
+    ]
+  }
 }
