@@ -1,6 +1,8 @@
 # CHANGELOG for ds-base-css
 `ds-base-css`
 
+# 1.0.7
+* Fixed font-weight for 'ul.list-highlight span.has-black-color'.
 # 1.0.6
 * Removed time selector from code.scss that was creating boxes in search results, also removed main container's margin right in mobile.
 # 1.0.5

@@ -2713,7 +2713,7 @@ ul.list-highlight li {
 ul.list-highlight li span.has-black-color {
   margin-top: 1rem;
   font-size: var(--body-text, 1.125rem);
-  font-weight: var(--font-weight-bold, 400);
+  font-weight: var(--font-weight-regular, 400);
   display: block;
   line-height: 1.6;
 }
