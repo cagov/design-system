@@ -1,4 +1,4 @@
-# Step List
+# Agency Footer
 
 This CSS only module contains the styles required to create agency footer. This component is usually placed on top of statewide footer and consists of three major parts: site logo, secondary links and social media links. Site logo is optional. Agency footer is using svg icons for most common social media platforms such as facebook, twitter, instagram, youtube, GitHub. Also, for the contacts link there is mail svg icon.
 
