@@ -59,6 +59,7 @@ footer .copyright {
 footer .container {
     flex-direction: row;
     align-items: center;
+    padding: 1rem 0;
   }
 }
 
