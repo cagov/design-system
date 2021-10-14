@@ -1,6 +1,8 @@
 # CHANGELOG for ds-feedback
 `ds-feedback`
 
+# 1.0.9
+* Removed line height from the feedback's main h2 label in mobile and added 1rem margin bottom to it.
 # 1.0.8
 * Changed mobile media queries values to 768px and fixed some mobile styles
 # 1.0.7

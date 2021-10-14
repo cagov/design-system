@@ -22,6 +22,12 @@ cagov-feedback .feedback-form-label {
   line-height: 3rem;
   width: auto;
 }
+@media (max-width: 768px) {
+  cagov-feedback .feedback-form-label {
+    line-height: unset;
+    margin-bottom: 1rem;
+  }
+}
 cagov-feedback .feedback-form-button {
   padding: 1rem;
   color: var(--primary-color, #004abc);

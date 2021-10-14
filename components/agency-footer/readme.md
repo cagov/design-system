@@ -3,11 +3,11 @@
 This CSS only module contains the styles required to create agency footer. This component is usually placed on top of statewide footer and consists of three major parts: site logo, secondary links and social media links. Site logo is optional. Agency footer is using svg icons for most common social media platforms such as facebook, twitter, instagram, youtube, GitHub. Also, for the contacts link there is mail svg icon.
 
 
-<img src="https://raw.githubusercontent.com/cagov/design-system/main/components/statewide-header/img/site-footer.jpg" />
+<img src="https://files.covid19.ca.gov/img/site-footer.jpg" />
 
 ## Sample HTML
 
-<samp>
+
 ```
 <section aria-label="agency footer" class="agency-footer">
     <div class="container">
@@ -88,7 +88,6 @@ This CSS only module contains the styles required to create agency footer. This 
     </div>
 </section>
 ```
-</samp>
 
 
 ### Expected variables

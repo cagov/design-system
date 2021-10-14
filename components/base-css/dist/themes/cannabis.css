@@ -2184,6 +2184,8 @@ body {
 #main-content {
   margin-top: 32px;
   margin-bottom: 64px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 #main-content.single-column.landing {
@@ -2193,6 +2195,8 @@ body {
 .page-container-ds {
   max-width: var(--w-lg, 1176px);
   margin: 2rem auto;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .main-content-ds {
@@ -2223,8 +2227,8 @@ article {
 @media (max-width: 1216px) {
   .footer-container,
 .page-container-ds {
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 /* Responsive title behavior */
@@ -2323,6 +2327,8 @@ article {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @media (max-width: 767px) {

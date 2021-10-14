@@ -18,7 +18,8 @@
 }
 
 @media (min-width: 768px) {
-  .mobile-icons, .search-close {
+  .mobile-icons,
+.search-close {
     display: none !important;
   }
 }
@@ -37,7 +38,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  top: -2px;
   right: 0;
   transition: 0.3s;
   transform-origin: center center;
@@ -61,7 +61,8 @@ cagov-navoverlay .container {
   margin: 0;
 }
 cagov-navoverlay .container .search-container {
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 /* EXPANDED MENU SYTLES */
@@ -130,6 +131,7 @@ cagov-navoverlay .expanded-menu {
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu {
     display: block;
+    padding: 0 16px;
   }
 }
 cagov-navoverlay .expanded-menu-grid {
@@ -158,11 +160,6 @@ cagov-navoverlay .expanded-menu-section {
 cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
   max-height: none;
   top: 2.35rem;
-}
-@media (max-width: 767px) {
-  cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
-    padding: 0.5rem 0;
-  }
 }
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section {
@@ -210,7 +207,7 @@ cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
 @media (min-width: 768px) {
   cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
     max-height: none;
-    top: 55px;
+    top: 59px;
     padding: 0.5rem 1rem 1rem 1rem;
     border: solid 1px #ccc;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -236,7 +233,8 @@ cagov-navoverlay .expanded-menu-section-header-link {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  color: var(--primary-color, #064E66);
+  color: var(--primary-color, #064e66);
+  outline-offset: -2px;
 }
 cagov-navoverlay .expanded-menu-section-header-link:active {
   background: transparent;
@@ -284,8 +282,8 @@ cagov-navoverlay .expanded-menu-dropdown-link {
   margin: 0.15rem 0 0.15rem 2px;
   display: table;
   transition: color 0.3s cubic-bezier(0.57, 0.2, 0.21, 0.89);
-  border-radius: 1rem;
   text-decoration: none;
+  width: 100%;
 }
 cagov-navoverlay .expanded-menu-dropdown-link:hover {
   text-decoration: underline;
@@ -302,6 +300,13 @@ cagov-navoverlay .expanded-menu-dropdown-link.current-page-highlight {
 @media (max-width: 767px) {
   cagov-navoverlay .expanded-menu-dropdown-link {
     padding: 0.5rem 0.25rem 0.5rem 1rem;
+    outline-offset: -4px;
+  }
+  cagov-navoverlay .expanded-menu-dropdown-link:first-child {
+    padding-top: 1rem;
+  }
+  cagov-navoverlay .expanded-menu-dropdown-link:last-child {
+    padding-bottom: 1rem;
   }
 }
 cagov-navoverlay .expanded-menu-grouping:not(:first-child) {

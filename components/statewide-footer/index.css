@@ -9,7 +9,7 @@ footer .container {
   box-sizing: border-box;
   max-width: var(--w-lg, 1176px);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 16px;
 }
 footer a:hover {
   color: var(--primary-dark-color, #1e1569);

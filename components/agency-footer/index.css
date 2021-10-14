@@ -6,7 +6,7 @@ section.agency-footer .container {
   box-sizing: border-box;
   max-width: var(--w-lg, 1176px);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 16px;
 }
 section.agency-footer a {
   color: var(--primary-color, #064e66);
@@ -56,8 +56,6 @@ section.agency-footer .footer-social-links a:hover svg path {
 section.agency-footer .container {
     flex-direction: row !important;
     align-items: center;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .footer-social-links {

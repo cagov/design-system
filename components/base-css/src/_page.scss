@@ -1,6 +1,8 @@
 #main-content {
   margin-top: 32px;
   margin-bottom: 64px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 #main-content.single-column.landing {
   margin-bottom: 0;
@@ -9,6 +11,8 @@
 .page-container-ds {
   max-width: var(--w-lg, 1176px);
   margin: 2rem auto;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .main-content-ds {
@@ -41,8 +45,8 @@ article {
 @include tablet-buffer {
   .footer-container,
   .page-container-ds {
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -161,6 +165,8 @@ article {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @include phone {
