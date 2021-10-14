@@ -1,5 +1,8 @@
 # CHANGELOG for ds-statewide-header
 `ds-statewide-header`
+
+# 1.0.10
+* Updated statewide header container's left and right padding to 16px.
 # 1.0.9
 * Removed sticky header feature until it's fully developed. Decrease spacing between CA.gov icon and tagline to 8px.
 # 1.0.8
@@ -10,4 +13,3 @@
 * Renamed .ofiicial-logo to .official-logo. Should help prevent naming conflicts within existing markup.
 # 1.0.5
 * Removed -15px padding left from the .official-header selector since we we don't need that padding anymore because we removed header-container with its padding properties from the base css.
-

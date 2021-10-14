@@ -23,6 +23,10 @@ cagov-feedback {
 			transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
 			line-height: 3rem;
 			width: auto;
+			@media (max-width: 768px) {
+				line-height: unset;
+				margin-bottom: 1rem;
+			}
 		}
 		&-button {
 			padding: 1rem;

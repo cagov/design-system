@@ -1,13 +1,13 @@
-# Step List
+# Statewide footer
 
 This CSS only module contains the styles required to create the list of steps in the following graphic:
 
-<img src="https://raw.githubusercontent.com/cagov/design-system/main/components/statewide-header/img/statewide-footer-screenshot.jpg" />
+<img src="https://github.com/cagov/design-system/blob/main/components/statewide-footer/img/statewide-footer-screenshot.jpg?raw=true" />
 
 
 ## Sample HTML
 
-<samp>
+
 ```
 <footer>
     <div class="bg-light-grey">
@@ -57,7 +57,6 @@ This CSS only module contains the styles required to create the list of steps in
     </div>
 </footer>
 ```
-</samp>
 
 
 ### Expected variables

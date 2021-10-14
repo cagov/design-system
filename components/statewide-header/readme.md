@@ -1,4 +1,4 @@
-# Step List
+# Statewide Header
 
 This CSS only module contains the styles required to create the list of steps in the following graphic:
 
@@ -7,7 +7,7 @@ This CSS only module contains the styles required to create the list of steps in
 
 ## Sample HTML
 
-<samp>
+
 ```
 <div class="official-header">
   <div class="container">
@@ -48,8 +48,6 @@ This CSS only module contains the styles required to create the list of steps in
   </div>
 </div>
 ```
-</samp>
-
 
 ### Expected variables
 

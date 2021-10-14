@@ -51,11 +51,14 @@ $desktop: 1176px;
   white-space: nowrap;
   border: 0;
 }
-.hidden-search { display: none; }
+.hidden-search {
+  display: none;
+}
 @media (min-width: 768px) {
-  .mobile-icons, .search-close {
-    display: none!important;
-  }  
+  .mobile-icons,
+  .search-close {
+    display: none !important;
+  }
 }
 
 /* MAIN MENU */
@@ -78,7 +81,6 @@ $desktop: 1176px;
   .is-fixed {
     position: fixed;
   }
-  top: -2px;
   right: 0;
   transition: 0.3s;
   transform-origin: center center;
@@ -91,19 +93,17 @@ $desktop: 1176px;
   }
 }
 
-
 cagov-navoverlay {
   .container {
     padding: 0;
     margin: 0;
 
     .search-container {
-      padding: 16px 0;
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
   }
 }
-
-
 
 /* EXPANDED MENU SYTLES */
 cagov-navoverlay {
@@ -169,16 +169,16 @@ cagov-navoverlay {
     display: none;
     max-width: calc(var(--w-lg, "1176px") + 32px);
     margin: 0 auto;
-
     @include tablet {
       display: block;
+      padding: 0 16px;
     }
     &-grid {
       margin: 0 auto;
       @include tablet {
         display: flex;
         justify-content: flex-start;
-        column-gap: .5rem;
+        column-gap: 0.5rem;
         align-content: flex-start;
         align-items: stretch;
       }
@@ -196,10 +196,6 @@ cagov-navoverlay {
         .expanded-menu-dropdown {
           max-height: none;
           top: 2.35rem;
-
-          @include phone {
-            padding: .5rem 0;
-          }
         }
       }
       @include tablet {
@@ -246,11 +242,10 @@ cagov-navoverlay {
         @include tablet {
           .expanded-menu-dropdown {
             max-height: none;
-            top: 55px;
+            top: 59px;
             padding: 0.5rem 1rem 1rem 1rem;
             border: solid 1px #ccc;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
-
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           }
         }
         .expanded-menu-section-header-arrow-svg {
@@ -260,7 +255,7 @@ cagov-navoverlay {
       &-header {
         &-link {
           display: flex !important;
-          column-gap: .5rem;
+          column-gap: 0.5rem;
           align-items: center;
           justify-content: space-between;
           font-weight: normal;
@@ -275,7 +270,8 @@ cagov-navoverlay {
           padding-bottom: 1rem;
           padding-left: 1rem;
           padding-right: 1rem;
-          color: var(--primary-color, #064E66);
+          color: var(--primary-color, #064e66);
+          outline-offset: -2px;
           &:active {
             background: transparent;
           }
@@ -301,7 +297,7 @@ cagov-navoverlay {
             display: inline-block;
             transition: $bounce;
             @include tablet {
-              display: block
+              display: block;
             }
           }
         }
@@ -319,8 +315,8 @@ cagov-navoverlay {
         margin: 0.15rem 0 0.15rem 2px;
         display: table;
         transition: color 0.3s $slow-curve;
-        border-radius: 1rem;
         text-decoration: none;
+        width: 100%;
         &:hover {
           text-decoration: underline;
         }
@@ -328,11 +324,18 @@ cagov-navoverlay {
           font-weight: bold;
         }
         @include tablet {
-          padding: .5rem 0;
+          padding: 0.5rem 0;
           line-height: 2rem;
         }
         @include phone {
-          padding: .5rem .25rem .5rem 1rem;
+          padding: 0.5rem 0.25rem 0.5rem 1rem;
+          outline-offset: -4px;
+          &:first-child {
+            padding-top: 1rem;
+          }
+          &:last-child {
+            padding-bottom: 1rem;
+          }
         }
       }
     }
@@ -355,12 +358,12 @@ cagov-navoverlay.display-menu {
     }
     &:focus {
       outline: none;
-    }  
+    }
   }
   .expanded-menu {
     @include phone {
       margin-left: 0;
-      border-bottom: solid 1px var(--gray-300,#e1e0e3);
+      border-bottom: solid 1px var(--gray-300, #e1e0e3);
     }
     &-col,
     &-search {

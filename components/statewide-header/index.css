@@ -26,7 +26,7 @@
   max-width: var(--w-lg, 1176px);
   min-height: 40px;
   margin: 0 auto;
-  padding: 0 10px 0 10px;
+  padding: 0 16px 0 16px;
 }
 .official-header .official-logo {
   display: flex;
