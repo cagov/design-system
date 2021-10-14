@@ -1,5 +1,9 @@
 # CHANGELOG for ds-statewide-footer
 `ds-statewide-footer`
+
+
+# 1.0.4
+* Added padding right 24px to the cagov-logo to make there is always consistent space between footer-secondary-links and cagov-logo.
 # 1.0.3
 * Updated statewide footer container's padding to 16px instead of 1rem to make it consistent with other components.
 # 1.0.2

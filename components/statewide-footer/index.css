@@ -39,7 +39,7 @@ footer .bg-light-grey svg .gov {
   fill: var(--cagov-primary-dark, #003484);
 }
 footer .cagov-logo {
-  padding: 0 0 0 0;
+  padding: 0 24px 0 0;
 }
 footer .bg-light-grey a,
 footer .copyright {
