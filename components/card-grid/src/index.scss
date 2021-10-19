@@ -1,0 +1,54 @@
+.no-deco {
+	text-decoration: none;
+}
+
+.cagov-card {
+	border: 1px solid var(--gray-300, #e1e0e3);
+	padding: 1rem;
+	border-bottom: 0.3rem solid #004abc;
+	border-bottom: 0.3rem solid var(--primary-color, #004abc);
+	border-radius: 0.3rem;
+	min-width: 250px;
+	min-height: 50px;
+	margin-top: 0;
+	display: flex;
+	justify-content: space-between;
+	&:hover {
+		background-color: var(--gray-100, #f9f9fa);
+		transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	}
+	&:focus {
+		outline: var(--highlight-color, #fec02f);
+	}
+	.card-text {
+		color: var(--primary-color, #004abc) !important;
+		font-size: 1.75rem;
+		line-height: 40px;
+		padding: 0;
+		margin: 0;
+	}
+	svg {
+		fill: var(--primary-color, #004abc);
+		width: 1rem;
+		margin-top: 0.2rem;
+		margin-left: 1rem;
+		max-height: 25px;
+	}
+}
+
+.cagov-card .cagov-card .cagov-grid,
+.cagov-grid .block-editor-block-list__layout {
+	display: grid;
+	grid-gap: 1.5rem;
+}
+/* editor override */
+.cagov-grid .block-editor-block-list__block {
+	margin: 0;
+}
+
+@supports (width: calc(min(250px, 100%))) {
+	.cagov-grid,
+	.cagov-grid .block-editor-block-list__layout {
+		grid-template-columns: repeat(auto-fit, minmax(calc(min(250px, 100%)), 1fr));
+	}
+}
