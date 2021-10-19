@@ -2,7 +2,7 @@ cagov-feedback {
 	width: 100%;
 
 	.feedback-form {
-		background: var(--primary-color, #004abc);
+		background: var(--primary-dark-color, #003484);
 		padding: 1rem;
 		border-radius: 0.3125rem;
 		max-width: var(--w-lg, 1176px);
@@ -16,8 +16,8 @@ cagov-feedback {
 
 		&-label {
 			color: #fff;
+			background-color: var(--primary-dark-color, #003484);
 			font-size: 1.125rem;
-			// cursor: pointer;
 			display: block;
 			margin-right: 1rem;
 			transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
@@ -30,7 +30,7 @@ cagov-feedback {
 		}
 		&-button {
 			padding: 1rem;
-			color: var(--primary-color, #004abc);
+			color: var(--primary-dark-color, #003484);
 			border: none;
 			border-radius: 0.3rem;
 			transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
@@ -81,7 +81,7 @@ cagov-feedback {
 			padding: 1rem;
 			margin-bottom: 1rem;
 			font-family: "Roboto", sans-serif;
-			color: var(--primary-color, #004abc);
+			color: var(--primary-dark-color, #003484);
 			max-width: 90%;
 			height: 127px;
 			width: 600px;
