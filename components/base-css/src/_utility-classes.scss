@@ -1,4 +1,3 @@
-
 /* css var values */
 :root {
   --s1: 0px; /* this needs to have px value or the calcs using it break */
@@ -20,9 +19,52 @@
 .fb-500 {
   flex-basis: 500px !important;
 }
-
-
-
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+/* positions */
+.position-sticky {
+  position: sticky !important;
+}
+.position-relative {
+  position: relative !important;
+}
+.position-absolute {
+  position: absolute !important;
+}
+.position-fixed {
+  position: fixed !important;
+}
+/* displays */
+.d-none {
+  display: none !important;
+}
+.d-inline {
+  display: inline !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-inline-block {
+  display: inline-block !important;
+}
+.d-grid {
+  display: grid !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.d-inline-flex {
+  display: inline-flex !important;
+}
 /* every-layout.dev layout classes */
 .stack * + * {
   margin-top: 1.5rem;
