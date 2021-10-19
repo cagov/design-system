@@ -2499,20 +2499,20 @@ textarea:focus, input:focus {
 /* input, textarea, select generic styles */
 /* Links global styles */
 a {
-  color: var(--primary-color, #004ABC);
+  color: var(--primary-color, #004abc);
   text-underline-position: under;
   text-decoration: underline;
 }
 a:hover {
   color: var(--primary-dark-color, #003484);
-  text-decoration: none;
 }
 a:focus {
-  outline: 2px solid var(--highlight-color, #FBAD23);
+  outline: 2px solid var(--highlight-color, #fbad23);
 }
 
-a:focus, button:focus {
-  outline: solid 2px var(--highlight-color, #FBAD23) !important;
+a:focus,
+button:focus {
+  outline: solid 2px var(--highlight-color, #fbad23) !important;
 }
 
 /* a, a:hover, a:focus */
@@ -2773,6 +2773,64 @@ figure figcaption {
 
 .fb-500 {
   flex-basis: 500px !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* positions */
+.position-sticky {
+  position: sticky !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+/* displays */
+.d-none {
+  display: none !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
 }
 
 /* every-layout.dev layout classes */

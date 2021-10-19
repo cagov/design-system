@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-base-css",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "src/_core.scss",
   "scripts": {
