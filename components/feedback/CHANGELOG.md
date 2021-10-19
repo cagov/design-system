@@ -1,6 +1,8 @@
 # CHANGELOG for ds-feedback
 `ds-feedback`
 
+# 1.0.10
+* Changed per page feedback's container background color to Primary Dark color. 
 # 1.0.9
 * Removed line height from the feedback's main h2 label in mobile and added 1rem margin bottom to it.
 # 1.0.8
