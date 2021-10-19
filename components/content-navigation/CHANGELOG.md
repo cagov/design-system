@@ -1,5 +1,8 @@
 # CHANGELOG for ds-content-navigation
 `ds-content-navigation`
+
+# 1.0.6
+* Changed content navigation border color to Gray-300.
 # 1.0.5
 * Removed sticky position since it caused scroll to target positioning bug.
 # 1.0.4
