@@ -2,6 +2,8 @@
 `ds-branding`
 
 
+# 1.0.6
+* Changed search bar border and search button to Primary color.
 # 1.0.5
 * Fixed focus color variables to --highlight-color. Fixed focus aesthetics for toggle menu button in mobile. Updated gap distance between search and toggle menu mobile buttons to 24px according to figma. Updated branding container's left and right padding to 16px to be consistent with other components.
 # 1.0.4
