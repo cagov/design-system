@@ -1,6 +1,8 @@
 # CHANGELOG for ds-dropdown-menu
 `ds-dropdown-menu`
 
+# 1.0.14
+* Moved @web/test-runner-puppeteer from optionalDependencies to devDependencies.
 # 1.0.13
 * Removed jump effect when opening dropdown menu in mobile by adding top and bottom padding to the :first and :last child. Polished focus outline aesthetics for all menu links. Added left and right 16px padding to the entire menu container to make it consistent with all other components. 
 # 1.0.12
