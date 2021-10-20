@@ -1,5 +1,3 @@
-const { default: plugin } = require("rollup-plugin-import-css");
-
 module.exports = {
 	settings: {
 		"import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
