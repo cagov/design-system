@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-card-grid",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The card grid depends on individual cards and lays them out in a grid",
   "main": "index.css",
   "scripts": {
