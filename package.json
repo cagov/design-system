@@ -4,7 +4,14 @@
   "description": "State of California Design System A work in progress!",
   "main": "index.js",
   "scripts": {
-    "start": "npx web-dev-server --open /components"
+    "start": "npx web-dev-server --open /components",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+    "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --ext .js,.html . --ignore-path .gitignore --fix",
+    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore"
   },
   "repository": {
     "type": "git",
@@ -18,8 +25,20 @@
   },
   "homepage": "https://github.com/cagov/design-system#readme",
   "devDependencies": {
+    "@open-wc/eslint-config": "^4.3.0",
+    "@open-wc/testing": "^3.0.0-next.2",
     "@web/dev-server": "^0.1.17",
-    "rollup-plugin-import-css": "^2.0.1",
-    "sass": "^1.34.1"
+    "@web/test-runner": "^0.13.16",
+    "@web/test-runner-puppeteer": "^0.10.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-lit": "^1.5.1",
+    "prettier": "^2.3.2",
+    "rollup-plugin-import-css": "^2.0.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
   }
 }
