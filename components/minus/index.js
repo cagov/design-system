@@ -1,11 +1,10 @@
 /**
  * Minus web component, inlines an svg minus symbol so it can be styled dynamically
- * 
+ *
  * @element cagov-minus
- * 
+ *
  */
 export class CaGovMinus extends window.HTMLElement {
-
   connectedCallback() {
     this.innerHTML = `<div class="accordion-icon" aria-hidden="true">
         <svg viewbox="0 0 25 25">
@@ -14,7 +13,5 @@ export class CaGovMinus extends window.HTMLElement {
         </svg>
       </div>`;
   }
-
-
 }
 window.customElements.define('cagov-minus', CaGovMinus);
