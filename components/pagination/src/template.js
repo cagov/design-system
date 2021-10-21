@@ -20,7 +20,7 @@ function pageOverflow() {
   </li>`;
 }
 
-export default function (next, previous, page, currentPage, totalPages) {
+function templateHTML(next, previous, page, currentPage, totalPages) {
   return `<nav aria-label="Pagination" class="cagov-pagination">
     <ul class="cagov-pagination__list">
       <li class="cagov-pagination__item">
@@ -66,5 +66,7 @@ export default function (next, previous, page, currentPage, totalPages) {
         </a>
       </li>
     </ul>
-  </nav>`
+  </nav>`;
 }
+
+export default templateHTML;
