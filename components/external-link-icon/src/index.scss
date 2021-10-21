@@ -1,0 +1,41 @@
+/* External link icon */
+// Globally adds external link icon to all external links.
+.external-link-icon {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  left: 1px;
+  top: -2px;
+  text-decoration: none;
+  min-width: 0.85rem;
+  svg path {
+    fill: var(--primary-color, #004abc);
+  }
+}
+
+main a,
+.agency-footer a {
+  &:hover {
+    .external-link-icon svg path {
+      fill: var(--primary-dark-color, #003484);
+    }
+  }
+}
+
+footer a {
+  .external-link-icon svg path {
+    fill: var(--black, #000);
+  }
+}
+
+/* External link icon exceptions */
+.cagov-card,
+.wp-block-button__link,
+.footer-social-links a,
+img ~,
+svg ~,
+.pdf-link-icon ~ {
+  .external-link-icon {
+    display: none;
+  }
+}
