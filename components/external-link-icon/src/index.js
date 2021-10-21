@@ -7,8 +7,7 @@
     return (link_element.host !== window.location.host);
   }
 
-  // selector is looking for links with pdf extension in the href
-  // Looping thru all link inside of the internal pages main content body
+  // Looping thru all links inside of the main content body, agency footer and statewide footer
   var externalLink = document.querySelectorAll("main a, .agency-footer a, footer a");
   for (var i = 0; i < externalLink.length; i++) {
     var anchorLink = externalLink[i].href.indexOf("#") > -1;
