@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--
+  <script type="module" src="dist/ds-accordion.es.js"></script>
+  -->
+  <script type="module">
+    import './src/main.js'
+  </script>
+
+  <style>
+    /* Main DOM styles DO NOT apply to HTML inside the ShadowDOM. */
+    .card-body {
+      background-color: red;
+    }
+
+    /* Main DOM styles still apply to slotted HTML. */
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <cagov-accordion>
+    <h2 slot="heading">Does my health plan have to cover my COVID-19 test at a testing site?</h2>
+    <p>Yes. <a href="https://www.dmhc.ca.gov/Portals/0/Docs/DO/APL21-011-NewFederalGuidanceRegardingCOVID-19Testing.pdf">Federal guidance</a> requires health plans to provide testing at no cost to everyone. You do not need to have symptoms or to have been exposed to COVID-19. You do not need to be an “essential worker” to get tested.</p>
+    <p>To get tested you can go to any COVID-19 testing provider authorized or licensed by the state. You do not need to go to a provider that is in your health plan’s or health insurer’s provider network. You do not need to get permission from your health plan or health insurer before going to get a COVID-19 test. And you do not need to pay a co-payment for a COVID-19 test.</p>
+  </cagov-accordion>
+
+  <cagov-accordion expanded>
+    <h2 slot="heading">What should I do if I may have been exposed to COVID-19?</h2>
+    <p>Get tested, even if you’re vaccinated. Know your status so you can avoid infecting others.</p>
+    <p>If you have <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/COVID-19/Symptoms-Risks.aspx">symptoms</a>, stay home and <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/isolation.html">self-isolate</a> from others in your household.</p>
+  </cagov-accordion>
+
+  <cagov-accordion>
+    <h2 slot="heading">What is acceptable as proof of a negative COVID-19 test result?</h2>
+    <p class="red">The following are accepted:</p>
+    <ul>
+      <li>Printed document from your test provider or laboratory</li>
+      <li>An email or text message displayed on your phone from your test provider or laboratory</li>
+    </ul>
+    <p>Results should include name of person tested, type of test, and date of negative test result. For PCR, the date of negative result must be within the prior 72 hours. For antigen, the date of negative result must be within the prior 24 hours.</p>
+  </cagov-accordion>
+
+</body>
+
+</html>
