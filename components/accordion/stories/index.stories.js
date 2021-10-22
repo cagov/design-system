@@ -1,28 +1,28 @@
-import { WebComponent, MultipleWebComponent, MultipleWebComponentLongPage } from "./storybook-web-component";
-import { html } from "lit-html";
+import { html } from 'lit-html';
+import { WebComponent, MultipleWebComponent, MultipleWebComponentLongPage } from './storybook-web-component';
 import './index.scss';
 
 export default {
-  title: "@cagov/accordion",
+  title: '@cagov/accordion',
   argTypes: {
     // backgroundColor: { control: "color" },
     // onClick: { action: "onClick" },
-    accordionLabel: { control: { type: "string" } },
-    accordionContent: { control: { type: "string", disable: true } },
-    accordions: { control: { type: "array", disable: true } },
-    expanded: { control: { type: "boolean", disable: true } },
+    accordionLabel: { control: { type: 'string' } },
+    accordionContent: { control: { type: 'string', disable: true } },
+    accordions: { control: { type: 'array', disable: true } },
+    expanded: { control: { type: 'boolean', disable: true } },
   },
   decorators: [],
 };
 
-const Template = (args) => WebComponent(args);
+const Template = args => WebComponent(args);
 
 export const BasicAccordion = Template.bind({});
-BasicAccordion.storyName = "Basic Accordion";
+BasicAccordion.storyName = 'Basic Accordion';
 BasicAccordion.args = {
   expanded: false,
   accordionLabel:
-    "What are the similarities and differences between Influenza (flu) and COVID-19?",
+    'What are the similarities and differences between Influenza (flu) and COVID-19?',
   accordionContent: html`<p>
       Influenza (flu) and COVID-19 are both contagious respiratory illnesses,
       but they’re caused by different viruses. COVID-19 is caused by a
@@ -67,20 +67,19 @@ BasicAccordion.args = {
 };
 
 export const BasicAccordionOpen = Template.bind({});
-BasicAccordionOpen.storyName = "Basic Accordion, open";
+BasicAccordionOpen.storyName = 'Basic Accordion, open';
 BasicAccordionOpen.args = {
   expanded: true,
-  accordionLabel: "Open accordion",
+  accordionLabel: 'Open accordion',
   accordionContent: html`<p>Accordion content</p>`,
 };
 
-
 export const MultipleAccordions = MultipleWebComponent.bind({});
-MultipleAccordions.storyName = "Three accordions, middle item open";
+MultipleAccordions.storyName = 'Three accordions, middle item open';
 MultipleAccordions.args = {
   accordions: [
     {
-      accordionLabel: "Minimum wage increases on January 1, 2020",
+      accordionLabel: 'Minimum wage increases on January 1, 2020',
       accordionContent: html`<table>
       <thead><tr><th>Place</th><th>Rate</th></tr></thead>
       <tbody>
@@ -92,7 +91,7 @@ MultipleAccordions.args = {
       expanded: false,
     },
     {
-      accordionLabel: "Minimum wage increases on July 1, 2020",
+      accordionLabel: 'Minimum wage increases on July 1, 2020',
       accordionContent: html`<table>
       <thead><tr><th>Place</th><th>Rate</th></tr></thead>
       <tbody>
@@ -104,19 +103,19 @@ MultipleAccordions.args = {
       expanded: true,
     },
     {
-      accordionLabel: "Accordion with plain text",
+      accordionLabel: 'Accordion with plain text',
       accordionContent: html`<p>Vivamus rhoncus dictum turpis et ullamcorper. Pellentesque turpis lectus, dignissim in semper rutrum, consequat ut dui. Curabitur ut ullamcorper purus. In venenatis dui faucibus justo mattis fermentum. Quisque erat quam, convallis vel eleifend eget, volutpat et ex. Donec vestibulum elit purus, sit amet interdum lorem feugiat at. Pellentesque vel augue in nisi dignissim congue a nec est. Phasellus tellus risus, egestas vel tincidunt vitae, suscipit eu ante. Quisque feugiat erat sit amet facilisis congue. Donec eget dolor pretium, ultrices purus sed, interdum sem. Sed quis scelerisque est. Vestibulum ligula dui, dignissim eu egestas et, tincidunt eget sem. Quisque ac finibus risus. Fusce cursus rutrum mauris, in laoreet ligula tempus rhoncus. Phasellus porta lorem tortor. Maecenas magna risus, varius accumsan leo et, condimentum posuere est.</p>`,
       expanded: false,
     },
-  ]
+  ],
 };
 
 export const MultipleAccordionsLongPage = MultipleWebComponentLongPage.bind({});
-MultipleAccordionsLongPage.storyName = "Three accordions, all closed, on a tall page";
+MultipleAccordionsLongPage.storyName = 'Three accordions, all closed, on a tall page';
 MultipleAccordionsLongPage.args = {
   accordions: [
     {
-      accordionLabel: "Accordion1 label",
+      accordionLabel: 'Accordion1 label',
       accordionContent: html`<p>Second generation vaccines were developed to reduce the risks from live vaccines. These are subunit vaccines, consisting of specific protein antigens (such as tetanus or diphtheria toxoid) or recombinant protein components (such as the hepatitis B surface antigen). They can generate TH and antibody responses, but not killer T cell responses.</p>
 
       <p>RNA vaccines and DNA vaccines are examples of third generation vaccines.mRNA vaccines such as BNT162b2 were developed in the year 2020 with the help of Operation Warp Speed and massively deployed to combat the coronavirus pandemic.</p>
@@ -125,7 +124,7 @@ MultipleAccordionsLongPage.args = {
       expanded: false,
     },
     {
-      accordionLabel: "Accordion2 label",
+      accordionLabel: 'Accordion2 label',
       accordionContent: html`<p>The filing of patents on vaccine development processes can also be viewed as an obstacle to the development of new vaccines. Because of the weak protection offered through a patent on the final product, the protection of the innovation regarding vaccines is often made through the patent of processes used in the development of new vaccines as well as the protection of secrecy.</p>
 
       <p>Vaccine production has several stages. First, the antigen itself is generated. Viruses are grown either on primary cells such as chicken eggs (e.g., for influenza) or on continuous cell lines such as cultured human cells (e.g., for hepatitis A).</p>
@@ -134,7 +133,7 @@ MultipleAccordionsLongPage.args = {
       expanded: false,
     },
     {
-      accordionLabel: "Accordion3 label",
+      accordionLabel: 'Accordion3 label',
       accordionContent: html`<p>International research on vaccines and medicines in COVID-19 is underway by government organisations, academic groups, and industry researchers.</p>
 
       <p>As of December 2020</p>
@@ -142,5 +141,5 @@ MultipleAccordionsLongPage.args = {
       <p>Repurposed antiviral drugs make up most of the research into COVID-19 treatments.</p><p><a href="https://www.boom-online.co.uk/lorem-ipsum/">Source: Boom text generator</a></p>`,
       expanded: false,
     },
-  ]
+  ],
 };

@@ -1,15 +1,14 @@
-import { html, nothing } from "lit-html";
-import "./../src";
+import { html, nothing } from 'lit-html';
+import '../src';
 
 /**
  * Primary UI component for user interaction
  */
 export const WebComponent = ({
   expanded = false,
-  accordionLabel = "Accordion label",
-  accordionContent = "Accordion content",
-}) => {
-  return html`
+  accordionLabel = 'Accordion label',
+  accordionContent = 'Accordion content',
+}) => html`
     <cagov-accordion>
       <div class="card">
         <button
@@ -34,28 +33,26 @@ export const WebComponent = ({
       </div>
     </cagov-accordion>
   `;
-};
 
 export const MultipleWebComponent = ({
   accordions = [
     {
-      accordionLabel: "Accordion1 label",
-      accordionContent: "Accordion1 content",
+      accordionLabel: 'Accordion1 label',
+      accordionContent: 'Accordion1 content',
       expanded: false,
     },
     {
-      accordionLabel: "Accordion2 label",
-      accordionContent: "Accordion2 content",
+      accordionLabel: 'Accordion2 label',
+      accordionContent: 'Accordion2 content',
       expanded: true,
     },
     {
-      accordionLabel: "Accordion3 label",
-      accordionContent: "Accordion3 content",
+      accordionLabel: 'Accordion3 label',
+      accordionContent: 'Accordion3 content',
       expanded: false,
     },
   ],
-}) => {
-  return html`
+}) => html`
   <div class="header">
     <h2>Compare minimum wage across cities</h2>
     <p>These California cities and counties have their own minimum wage laws.</p>
@@ -86,30 +83,28 @@ export const MultipleWebComponent = ({
         </div>
       </cagov-accordion>
     </div>`,
-    i < item.length - 1 ? "," : nothing,
+    i < item.length - 1 ? ',' : nothing,
   ])}`;
-};
 
 export const MultipleWebComponentLongPage = ({
   accordions = [
     {
-      accordionLabel: "Accordion1 label",
-      accordionContent: "Accordion1 content",
+      accordionLabel: 'Accordion1 label',
+      accordionContent: 'Accordion1 content',
       expanded: false,
     },
     {
-      accordionLabel: "Accordion2 label",
-      accordionContent: "Accordion2 content",
+      accordionLabel: 'Accordion2 label',
+      accordionContent: 'Accordion2 content',
       expanded: true,
     },
     {
-      accordionLabel: "Accordion3 label",
-      accordionContent: "Accordion3 content",
+      accordionLabel: 'Accordion3 label',
+      accordionContent: 'Accordion3 content',
       expanded: false,
     },
   ],
-}) => {
-  return html`<main style="background:black;height:6000px">
+}) => html`<main style="background:black;height:6000px">
   <div class="accordion-container" style="background:light-gray;height:3000px">${accordions.map((item, i) => [
     html`<div>
       <cagov-accordion>
@@ -136,6 +131,5 @@ export const MultipleWebComponentLongPage = ({
         </div>
       </cagov-accordion>
     </div>`,
-    i < item.length - 1 ? "," : nothing,
+    i < item.length - 1 ? ',' : nothing,
   ])}</div></main>`;
-};
