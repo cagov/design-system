@@ -7,6 +7,7 @@
   ],
   "main": "./dist/ds-accordion.umd.js",
   "module": "./dist/ds-accordion.es.js",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/ds-accordion.es.js",
@@ -14,6 +15,7 @@
     }
   },
   "scripts": {
+    "start": "web-dev-server",
     "build:js": "rollup --config rollup.config.js",
     "build": "npm run build:js"
   },
@@ -30,6 +32,7 @@
     "@cagov/ds-minus": "^1.0.0",
     "@cagov/ds-plus": "^1.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
+    "@web/dev-server": "^0.1.25",
     "rollup": "^2.56.3",
     "rollup-plugin-string": "^3.0.0"
   }
