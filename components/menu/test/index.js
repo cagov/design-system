@@ -4,8 +4,8 @@ import { expect, fixture } from '@open-wc/testing';
 
 import '../src/index.js';
 
-describe('<cagov-navoverlay>', function() {
-  this.timeout(5000)
+describe('<cagov-navoverlay>', function () {
+  this.timeout(5000);
   it('works', async () => {
     const csslink = document.createElement('link');
     csslink.rel = 'stylesheet';
