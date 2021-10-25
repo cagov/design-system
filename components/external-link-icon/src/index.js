@@ -4,7 +4,7 @@
 
   // Check if link is external function
   function link_is_external(link_element) {
-    return (link_element.host !== window.location.host);
+    return (window.location.host.indexOf(link_element.host) > -1);
   }
 
   // Looping thru all links inside of the main content body, agency footer and statewide footer
