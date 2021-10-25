@@ -2,8 +2,7 @@ const appendGoogleTranslateJS = () => {
   const JS = document.createElement('script');
   JS.type = 'text/javascript';
   JS.defer = 'defer';
-  JS.src =
-    '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  JS.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
   document.body.appendChild(JS);
 };
 
@@ -18,8 +17,7 @@ class CAGOVGoogleTranslate extends window.HTMLElement {
     this.querySelector('.goog-init').addEventListener('click', (e) => {
       e.preventDefault();
       sessionStorage.setItem(this.storagekey, new Date().getTime());
-      this.innerHTML =
-        '<div class="quarter standard-translate" id="google_translate_element">loading</div>';
+      this.innerHTML = '<div class="quarter standard-translate" id="google_translate_element">loading</div>';
       this.loadGoogleTranslateJS();
     });
 
@@ -41,14 +39,13 @@ window.googleTranslateElementInit = () => {
   const translateEl = document.getElementById('google_translate_element');
   translateEl.innerHTML = '';
   translateEl.classList.remove('d-none');
-  (() =>
-    new window.google.translate.TranslateElement(
-      {
-        pageLanguage: 'en',
-        gaTrack: !0,
-        autoDisplay: !1,
-        layout: window.google.translate.TranslateElement.InlineLayout.VERTICAL,
-      },
-      'google_translate_element',
-    ))();
+  (() => new window.google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      gaTrack: !0,
+      autoDisplay: !1,
+      layout: window.google.translate.TranslateElement.InlineLayout.VERTICAL,
+    },
+    'google_translate_element',
+  ))();
 };
