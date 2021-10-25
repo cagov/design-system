@@ -1,4 +1,12 @@
-function ratingsTemplate(question, yes, no, commentPrompt, thanksFeedback, thanksComments, submit) {
+function ratingsTemplate(
+  question,
+  yes,
+  no,
+  commentPrompt,
+  thanksFeedback,
+  thanksComments,
+  submit,
+) {
   return `
   <section aria-label="feedback">
   <div class="feedback-form cagov-stack">

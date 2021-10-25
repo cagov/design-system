@@ -29,14 +29,16 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
           class="cagov-pagination__link cagov-pagination__previous-page"
           aria-label="${previous} ${page}"
         >
-          <span class="cagov-pagination__link-text ${(currentPage > 2) ? '' : 'cagov-pagination__link-inactive'}"> ${previous} </span>
+          <span class="cagov-pagination__link-text ${
+            currentPage > 2 ? '' : 'cagov-pagination__link-inactive'
+          }"> ${previous} </span>
         </a>
       </li>
-      ${(currentPage > 2) ? pageListItem(page, 1) : ''}
+      ${currentPage > 2 ? pageListItem(page, 1) : ''}
 
-      ${(currentPage > 3) ? pageOverflow() : ''}
+      ${currentPage > 3 ? pageOverflow() : ''}
 
-      ${(currentPage > 1) ? pageListItem(page, currentPage - 1) : ''}
+      ${currentPage > 1 ? pageListItem(page, currentPage - 1) : ''}
 
       <li class="cagov-pagination__item cagov-pagination-current">
         <a
@@ -50,11 +52,11 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
         </a>
       </li>
 
-      ${(currentPage < totalPages) ? pageListItem(page, currentPage + 1) : ''}
+      ${currentPage < totalPages ? pageListItem(page, currentPage + 1) : ''}
 
-      ${(currentPage < totalPages - 3) ? pageOverflow() : ''}
+      ${currentPage < totalPages - 3 ? pageOverflow() : ''}
 
-      ${(currentPage < totalPages - 1) ? pageListItem(page, totalPages) : ''}
+      ${currentPage < totalPages - 1 ? pageListItem(page, totalPages) : ''}
 
       <li class="cagov-pagination__item">
         <a
@@ -62,14 +64,19 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
           class="cagov-pagination__link cagov-pagination__next-page"
           aria-label="${next} ${page}"
         >
-          <span class="cagov-pagination__link-text ${(currentPage > totalPages - 1) ? 'cagov-pagination__link-inactive' : ''}"> ${next} </span>
+          <span class="cagov-pagination__link-text ${
+            currentPage > totalPages - 1
+              ? 'cagov-pagination__link-inactive'
+              : ''
+          }"> ${next} </span>
         </a>
       </li>
     </ul>
   </nav>`;
 }
 
-const styles = 'cagov-pagination .cagov-pagination__list {\n  list-style: none;\n  margin: 0;\n  padding: 0 !important;\n  display: flex;\n}\ncagov-pagination .cagov-pagination__item {\n  border: 1px solid #EDEDEF;\n  border-radius: 0.3rem;\n  margin: 0.25rem;\n}\ncagov-pagination .cagov-pagination__item a {\n  padding: 0.75rem 0.875rem;\n  display: inline-block;\n  color: var(--primary-color, #064E66);\n  text-decoration: none;\n}\ncagov-pagination .cagov-pagination__item:hover {\n  background: #F9F9FA;\n}\ncagov-pagination .cagov-pagination__item:hover a {\n  text-decoration: underline;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current {\n  background-color: #064E66;\n  background-color: var(--primary-color, #064E66);\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current a {\n  color: #fff;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow {\n  border: none;\n  padding: 0.875rem 0;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow:hover {\n  background: inherit;\n}\ncagov-pagination .cagov-pagination__link-inactive {\n  color: grey;\n  border-color: grey;\n  cursor: not-allowed;\n  opacity: 0.5;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+const styles =
+  'cagov-pagination .cagov-pagination__list {\n  list-style: none;\n  margin: 0;\n  padding: 0 !important;\n  display: flex;\n}\ncagov-pagination .cagov-pagination__item {\n  border: 1px solid #EDEDEF;\n  border-radius: 0.3rem;\n  margin: 0.25rem;\n}\ncagov-pagination .cagov-pagination__item a {\n  padding: 0.75rem 0.875rem;\n  display: inline-block;\n  color: var(--primary-color, #064E66);\n  text-decoration: none;\n}\ncagov-pagination .cagov-pagination__item:hover {\n  background: #F9F9FA;\n}\ncagov-pagination .cagov-pagination__item:hover a {\n  text-decoration: underline;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current {\n  background-color: #064E66;\n  background-color: var(--primary-color, #064E66);\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current a {\n  color: #fff;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow {\n  border: none;\n  padding: 0.875rem 0;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow:hover {\n  background: inherit;\n}\ncagov-pagination .cagov-pagination__link-inactive {\n  color: grey;\n  border-color: grey;\n  cursor: not-allowed;\n  opacity: 0.5;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 /**
  * Pagination web component
@@ -98,7 +105,10 @@ class CAGovPagination extends window.HTMLElement {
   // add jsdoc event to feedback too
 
   connectedCallback() {
-    this.currentPage = parseInt((this.dataset.currentPage ? this.dataset.currentPage : '1'), 10);
+    this.currentPage = parseInt(
+      this.dataset.currentPage ? this.dataset.currentPage : '1',
+      10,
+    );
     this.render();
   }
 
@@ -142,30 +152,44 @@ class CAGovPagination extends window.HTMLElement {
         this.dataset.currentPage = this.currentPage;
       });
     });
-    this.querySelector('.cagov-pagination__previous-page').addEventListener('click', (event) => {
-      if (!event.target.classList.contains('cagov-pagination__link-inactive')) {
-        this.currentPage -= 1;
-        if (this.currentPage < 1) { this.currentPage = 1; }
-        this.dispatchEvent(
-          new CustomEvent('paginationClick', {
-            detail: this.currentPage,
-          }),
-        );
-        this.dataset.currentPage = this.currentPage;
-      }
-    });
-    this.querySelector('.cagov-pagination__next-page').addEventListener('click', (event) => {
-      if (!event.target.classList.contains('cagov-pagination__link-inactive')) {
-        this.currentPage += 1;
-        if (this.currentPage > this.totalPages) { this.currentPage = this.totalPages; }
-        this.dispatchEvent(
-          new CustomEvent('paginationClick', {
-            detail: this.currentPage,
-          }),
-        );
-        this.dataset.currentPage = this.currentPage;
-      }
-    });
+    this.querySelector('.cagov-pagination__previous-page').addEventListener(
+      'click',
+      (event) => {
+        if (
+          !event.target.classList.contains('cagov-pagination__link-inactive')
+        ) {
+          this.currentPage -= 1;
+          if (this.currentPage < 1) {
+            this.currentPage = 1;
+          }
+          this.dispatchEvent(
+            new CustomEvent('paginationClick', {
+              detail: this.currentPage,
+            }),
+          );
+          this.dataset.currentPage = this.currentPage;
+        }
+      },
+    );
+    this.querySelector('.cagov-pagination__next-page').addEventListener(
+      'click',
+      (event) => {
+        if (
+          !event.target.classList.contains('cagov-pagination__link-inactive')
+        ) {
+          this.currentPage += 1;
+          if (this.currentPage > this.totalPages) {
+            this.currentPage = this.totalPages;
+          }
+          this.dispatchEvent(
+            new CustomEvent('paginationClick', {
+              detail: this.currentPage,
+            }),
+          );
+          this.dataset.currentPage = this.currentPage;
+        }
+      },
+    );
   }
 }
 window.customElements.define('cagov-pagination', CAGovPagination);

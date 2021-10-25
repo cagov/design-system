@@ -28,7 +28,10 @@ export class CAGovPagination extends window.HTMLElement {
   // add jsdoc event to feedback too
 
   connectedCallback() {
-    this.currentPage = parseInt((this.dataset.currentPage ? this.dataset.currentPage : '1'), 10);
+    this.currentPage = parseInt(
+      this.dataset.currentPage ? this.dataset.currentPage : '1',
+      10,
+    );
     this.render();
   }
 
@@ -72,30 +75,44 @@ export class CAGovPagination extends window.HTMLElement {
         this.dataset.currentPage = this.currentPage;
       });
     });
-    this.querySelector('.cagov-pagination__previous-page').addEventListener('click', (event) => {
-      if (!event.target.classList.contains('cagov-pagination__link-inactive')) {
-        this.currentPage -= 1;
-        if (this.currentPage < 1) { this.currentPage = 1; }
-        this.dispatchEvent(
-          new CustomEvent('paginationClick', {
-            detail: this.currentPage,
-          }),
-        );
-        this.dataset.currentPage = this.currentPage;
-      }
-    });
-    this.querySelector('.cagov-pagination__next-page').addEventListener('click', (event) => {
-      if (!event.target.classList.contains('cagov-pagination__link-inactive')) {
-        this.currentPage += 1;
-        if (this.currentPage > this.totalPages) { this.currentPage = this.totalPages; }
-        this.dispatchEvent(
-          new CustomEvent('paginationClick', {
-            detail: this.currentPage,
-          }),
-        );
-        this.dataset.currentPage = this.currentPage;
-      }
-    });
+    this.querySelector('.cagov-pagination__previous-page').addEventListener(
+      'click',
+      (event) => {
+        if (
+          !event.target.classList.contains('cagov-pagination__link-inactive')
+        ) {
+          this.currentPage -= 1;
+          if (this.currentPage < 1) {
+            this.currentPage = 1;
+          }
+          this.dispatchEvent(
+            new CustomEvent('paginationClick', {
+              detail: this.currentPage,
+            }),
+          );
+          this.dataset.currentPage = this.currentPage;
+        }
+      },
+    );
+    this.querySelector('.cagov-pagination__next-page').addEventListener(
+      'click',
+      (event) => {
+        if (
+          !event.target.classList.contains('cagov-pagination__link-inactive')
+        ) {
+          this.currentPage += 1;
+          if (this.currentPage > this.totalPages) {
+            this.currentPage = this.totalPages;
+          }
+          this.dispatchEvent(
+            new CustomEvent('paginationClick', {
+              detail: this.currentPage,
+            }),
+          );
+          this.dataset.currentPage = this.currentPage;
+        }
+      },
+    );
   }
 }
 window.customElements.define('cagov-pagination', CAGovPagination);

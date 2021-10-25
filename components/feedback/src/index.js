@@ -84,12 +84,9 @@ export class CAGovFeedback extends window.HTMLElement {
 
   applyListeners() {
     this.wasHelpful = '';
-    this.querySelector('.js-add-feedback').addEventListener(
-      'focus',
-      () => {
-        this.querySelector('.js-feedback-submit').style.display = 'block';
-      },
-    );
+    this.querySelector('.js-add-feedback').addEventListener('focus', () => {
+      this.querySelector('.js-feedback-submit').style.display = 'block';
+    });
     const feedback = this.querySelector('.js-add-feedback');
     feedback.addEventListener('keyup', () => {
       if (feedback.value.length > 15) {
@@ -104,20 +101,18 @@ export class CAGovFeedback extends window.HTMLElement {
         this.querySelector('.js-feedback-submit').style.display = 'block';
       }
     });
-    this.querySelector('.js-feedback-yes').addEventListener(
-      'click',
-      () => {
-        this.querySelector('.js-feedback-field-label').innerHTML = this.positiveCommentPrompt;
-        this.querySelector('.js-feedback-form').style.display = 'none';
-        this.querySelector('.feedback-form-add').style.display = 'block';
-        this.wasHelpful = 'yes';
-        this.dispatchEvent(
-          new CustomEvent('ratedPage', {
-            detail: this.wasHelpful,
-          }),
-        );
-      },
-    );
+    this.querySelector('.js-feedback-yes').addEventListener('click', () => {
+      this.querySelector('.js-feedback-field-label').innerHTML =
+        this.positiveCommentPrompt;
+      this.querySelector('.js-feedback-form').style.display = 'none';
+      this.querySelector('.feedback-form-add').style.display = 'block';
+      this.wasHelpful = 'yes';
+      this.dispatchEvent(
+        new CustomEvent('ratedPage', {
+          detail: this.wasHelpful,
+        }),
+      );
+    });
     this.querySelector('.js-feedback-no').addEventListener('click', () => {
       this.querySelector('.js-feedback-form').style.display = 'none';
       this.querySelector('.feedback-form-add').style.display = 'block';
@@ -128,29 +123,26 @@ export class CAGovFeedback extends window.HTMLElement {
         }),
       );
     });
-    this.querySelector('.js-feedback-submit').addEventListener(
-      'click',
-      () => {
-        this.querySelector('.feedback-form-add').style.display = 'none';
-        this.querySelector('.feedback-thanks-add').style.display = 'block';
+    this.querySelector('.js-feedback-submit').addEventListener('click', () => {
+      this.querySelector('.feedback-form-add').style.display = 'none';
+      this.querySelector('.feedback-thanks-add').style.display = 'block';
 
-        const postData = {};
-        postData.url = window.location.href;
-        postData.helpful = this.wasHelpful;
-        postData.comments = feedback.value;
-        postData.userAgent = navigator.userAgent;
+      const postData = {};
+      postData.url = window.location.href;
+      postData.helpful = this.wasHelpful;
+      postData.comments = feedback.value;
+      postData.userAgent = navigator.userAgent;
 
-        fetch(this.endpointUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(postData),
-        })
-          .then(response => response.json())
-          .then(data => console.log(data));
-      },
-    );
+      fetch(this.endpointUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postData),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    });
   }
 }
 window.customElements.define('cagov-feedback', CAGovFeedback);

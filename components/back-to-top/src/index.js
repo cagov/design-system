@@ -1,5 +1,7 @@
 export class CaGovBackToTop extends window.HTMLElement {
-  static get observedAttributes() { return ['data-hide-after', 'data-label']; }
+  static get observedAttributes() {
+    return ['data-hide-after', 'data-label'];
+  }
 
   constructor() {
     super();
@@ -23,9 +25,8 @@ export class CaGovBackToTop extends window.HTMLElement {
 
   connectedCallback() {
     // Load go-to-top button
-    document.querySelector(
-      this.options.onLoadSelector,
-    ).onload = this.addGoToTopButton();
+    document.querySelector(this.options.onLoadSelector).onload =
+      this.addGoToTopButton();
 
     // If a user scrolls down the page for more than the "scrollAfterHeight" (example: 400px),
     // activate back to top button. Otherwise, keep it invisible.
@@ -99,8 +100,8 @@ export class CaGovBackToTop extends window.HTMLElement {
       returnTopButton.setAttribute('aria-hidden', 'true');
       returnTopButton.setAttribute('tabindex', '-1');
     } else if (
-      container.scrollTop >= this.options.scrollAfterHeight
-      || document.documentElement.scrollTop >= this.options.scrollAfterHeight
+      container.scrollTop >= this.options.scrollAfterHeight ||
+      document.documentElement.scrollTop >= this.options.scrollAfterHeight
     ) {
       // Upscroll code
       if (timer !== null) {
@@ -122,9 +123,7 @@ export class CaGovBackToTop extends window.HTMLElement {
       returnTopButton.setAttribute('tabindex', '-1');
     }
 
-    this.state.lastScrollTop = scrollTop <= 0
-      ? 0
-      : scrollTop; // For Mobile or negative scrolling
+    this.state.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
   }
 
   // Insert swg icon

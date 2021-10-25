@@ -48,7 +48,9 @@ export class CaGovAccordion extends window.HTMLElement {
     if (expanded === 'true') {
       this.triggerAccordionClick(); // Open the accordion.
       const allLinks = this.querySelectorAll('.accordion-card-container a');
-      const allbuttons = this.querySelectorAll('.accordion-card-container button');
+      const allbuttons = this.querySelectorAll(
+        '.accordion-card-container button',
+      );
       for (let i = 0; i < allLinks.length; i += 1) {
         allLinks[i].removeAttribute('tabindex'); // remove tabindex from all the links
       }
@@ -58,7 +60,9 @@ export class CaGovAccordion extends window.HTMLElement {
     } else {
       // making sure that all links inside of the accordion container are having tabindex -1
       const allLinks = this.querySelectorAll('.accordion-card-container a');
-      const allbuttons = this.querySelectorAll('.accordion-card-container button');
+      const allbuttons = this.querySelectorAll(
+        '.accordion-card-container button',
+      );
       for (let i = 0; i < allLinks.length; i += 1) {
         allLinks[i].setAttribute('tabindex', '-1');
       }
@@ -92,10 +96,14 @@ export class CaGovAccordion extends window.HTMLElement {
   closeAccordion() {
     this.expandTarget.style.height = '0px';
     this.expandTarget.setAttribute('aria-hidden', 'true');
-    this.querySelector('.accordion-card-header').classList.remove('accordion-alpha-open');
+    this.querySelector('.accordion-card-header').classList.remove(
+      'accordion-alpha-open',
+    );
     this.activateButton.setAttribute('aria-expanded', 'false');
     const allLinks = this.querySelectorAll('.accordion-card-container a');
-    const allbuttons = this.querySelectorAll('.accordion-card-container button');
+    const allbuttons = this.querySelectorAll(
+      '.accordion-card-container button',
+    );
     for (let i = 0; i < allLinks.length; i += 1) {
       allLinks[i].setAttribute('tabindex', '-1'); // tabindex to all links
     }
@@ -107,11 +115,17 @@ export class CaGovAccordion extends window.HTMLElement {
   expandAccordion() {
     this.expandTarget.style.height = `${this.cardBodyHeight}px`;
     this.expandTarget.setAttribute('aria-hidden', 'false');
-    this.querySelector('.accordion-card-header').classList.add('accordion-alpha-open');
-    this.querySelector('.accordion-card-container').classList.remove('collapsed');
+    this.querySelector('.accordion-card-header').classList.add(
+      'accordion-alpha-open',
+    );
+    this.querySelector('.accordion-card-container').classList.remove(
+      'collapsed',
+    );
     this.activateButton.setAttribute('aria-expanded', 'true');
     const allLinks = this.querySelectorAll('.accordion-card-container a');
-    const allbuttons = this.querySelectorAll('.accordion-card-container button');
+    const allbuttons = this.querySelectorAll(
+      '.accordion-card-container button',
+    );
     for (let i = 0; i < allLinks.length; i += 1) {
       allLinks[i].removeAttribute('tabindex'); // remove tabindex from all the links
     }
