@@ -1,10 +1,17 @@
 {
   "name": "@cagov/ds-external-link-icon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.css",
   "scripts": {
-    "build": "sass src/index.scss index.css"
+    "build": "sass src/index.scss index.css",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+    "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --ext .js,.html . --ignore-path .gitignore --fix",
+    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore"
   },
   "keywords": [],
   "author": "",
@@ -12,8 +19,27 @@
     "type": "git",
     "url": "https://github.com/cagov/design-system/components/external-link-icon/"
   },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.38.0"
+    "@open-wc/eslint-config": "^4.3.0",
+    "@open-wc/testing": "^3.0.0-next.2",
+    "@web/test-runner": "^0.13.16",
+    "@web/test-runner-puppeteer": "^0.10.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-lit": "^1.5.1",
+    "husky": "^7.0.2",
+    "prettier": "^2.3.2",
+    "sass": "^1.38.1"
   }
 }
