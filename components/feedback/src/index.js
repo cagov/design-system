@@ -102,7 +102,8 @@ export class CAGovFeedback extends window.HTMLElement {
       }
     });
     this.querySelector('.js-feedback-yes').addEventListener('click', () => {
-      this.querySelector('.js-feedback-field-label').innerHTML = this.positiveCommentPrompt;
+      this.querySelector('.js-feedback-field-label').innerHTML =
+        this.positiveCommentPrompt;
       this.querySelector('.js-feedback-form').style.display = 'none';
       this.querySelector('.feedback-form-add').style.display = 'block';
       this.wasHelpful = 'yes';
@@ -139,8 +140,8 @@ export class CAGovFeedback extends window.HTMLElement {
         },
         body: JSON.stringify(postData),
       })
-        .then(response => response.json())
-        .then(data => console.log(data));
+        .then((response) => response.json())
+        .then((data) => console.log(data));
     });
   }
 }

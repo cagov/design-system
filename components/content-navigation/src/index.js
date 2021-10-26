@@ -260,7 +260,9 @@ class CAGovContentNavigation extends window.HTMLElement {
     /* eslint-enable */
 
     if (this.type === 'wordpress') {
-      document.addEventListener('DOMContentLoaded', () => this.buildContentNavigation());
+      document.addEventListener('DOMContentLoaded', () =>
+        this.buildContentNavigation(),
+      );
     }
   }
 
