@@ -4,7 +4,7 @@
 
   // Check if link is external function
   function link_is_external(link_element) {
-    return (link_element.host !== window.location.host);
+    return (window.location.host.indexOf(link_element.host) > -1);
   }
 
   // Looping thru all links inside of the main content body, agency footer and statewide footer
@@ -13,7 +13,7 @@
     var anchorLink = externalLink[i].href.indexOf("#") > -1;
     var localHost = externalLink[i].href.indexOf("localhost") > -1;
     var localEmail = externalLink[i].href.indexOf("@") > -1;
-    if (link_is_external(externalLink[i]) && !anchorLink && !localEmail && !localHost) {
+    if (link_is_external(externalLink[i]) === false && !anchorLink && !localEmail && !localHost) {
       externalLink[i].innerHTML += ext; // += concatenates to external links
     }
   }
