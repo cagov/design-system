@@ -1,0 +1,28 @@
+/* Grid classes */
+
+// 2 column grid
+@supports (width: calc(min(376px, 100%))) {
+  .card-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(min(376px, 100%)), 1fr));
+    grid-gap: 1.5rem;
+  }
+}
+
+// 3 column grid
+@supports (width: calc(min(300px, 100%))) {
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(min(300px, 100%)), 1fr));
+    grid-gap: 1.5rem;
+  }
+}
+
+// 4 column grid
+@supports (width: calc(min(250px, 100%))) {
+  .card-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(min(250px, 100%)), 1fr));
+    grid-gap: 1.5rem;
+  }
+}

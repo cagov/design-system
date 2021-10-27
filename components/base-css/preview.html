@@ -2,7 +2,8 @@
 <html lang="en">
 
   <head>
-    <title>Design system base CSS </title>
+    <title>Design system base CSS
+    </title>
     <script>
       const onThemeChanged = (e) => {
         const style = document.querySelector('#theme-stylesheet');
@@ -24,7 +25,10 @@
     <link type="text/css" rel="stylesheet" href="../step-list/index.css">
     <link type="text/css" rel="stylesheet" href="../menu/dist/_style.css">
     <style>
-    .sr-only, .hidden-search { display: none; }
+      .hidden-search,
+      .sr-only {
+        display: none;
+      }
     </style>
   </head>
 
@@ -35,7 +39,7 @@
       <h1>Design System Base CSS</h1>
       <p>Toggle between themes</p>
 
-      <input type="radio" id="drought" name="color-scheme" value="drought" checked/>
+      <input type="radio" id="drought" name="color-scheme" value="drought" checked="checked"/>
       <label for="drought">Drought Theme</label>
       <input type="radio" id="cannabis" name="color-scheme" value="cannabis"/>
       <label for="cannabis">Cannabis Theme</label>
@@ -87,17 +91,41 @@
     </script>
     <script>
       fetch('../menu/template.html')
-        .then(response => response.text())
-        .then(string => document.getElementById('menu-html-content').innerHTML = string);
+        .then(response => {
+          response.text()
+        })
+        .then(string => {
+          document
+            .getElementById('menu-html-content')
+            .innerHTML = string
+        });
       fetch('../card-grid/template.html')
-        .then(response => response.text())
-        .then(string => document.getElementById('card-grid-html-content').innerHTML = string);
+        .then(response => {
+          response.text()
+        })
+        .then(string => {
+          document
+            .getElementById('card-grid-html-content')
+            .innerHTML = string
+        });
       fetch('../accordion/template.html')
-        .then(response => response.text())
-        .then(string => document.getElementById('accordion-html-content').innerHTML = string);
+        .then(response => {
+          response.text()
+        })
+        .then(string => {
+          document
+            .getElementById('accordion-html-content')
+            .innerHTML = string
+        });
       fetch('../step-list/template.html')
-        .then(response => response.text())
-        .then(string => document.getElementById('step-list-html-content').innerHTML = string);
+        .then(response => {
+          response.text()
+        })
+        .then(string => {
+          document
+            .getElementById('step-list-html-content')
+            .innerHTML = string
+        });
     </script>
 
   </body>

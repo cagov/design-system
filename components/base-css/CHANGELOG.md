@@ -1,6 +1,9 @@
 # CHANGELOG for ds-base-css
 `ds-base-css`
 
+
+# 1.0.10
+* Added _grid.scss file with grid classes (.card-grid-2, .card-grid-3,.card-grid-4). Also, added linting testing to the component.
 # 1.0.9
 * Added underline to main body links on hover have another visual cue indicating that they are links fro accessibility. Added some display and positioning utility classes.
 # 1.0.8
