@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "customElements": "custom-elements.json",
   "scripts": {
+    "test": "echo \"No test specified.\"",
     "build:sass": "sass src/css/index.scss src/css/index.css",
     "build:js": "rollup --config rollup.config.js",
     "build": "npm run build:sass && npm run build:js"

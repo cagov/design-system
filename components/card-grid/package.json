@@ -4,6 +4,7 @@
   "description": "The card grid depends on individual cards and lays them out in a grid",
   "main": "index.css",
   "scripts": {
+    "test": "echo \"No test specified.\"",
     "build": "sass src/index.scss index.css"
   },
   "keywords": [],
