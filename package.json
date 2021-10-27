@@ -11,7 +11,10 @@
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "lint:eslint:fix": "eslint --ext .js,.html . --ignore-path .gitignore --fix",
-    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore"
+    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "test": "web-test-runner **/*.test.js --node-resolve",
+    "test:visual": "web-test-runner **/*.test.js --node-resolve --config test/test.config.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -32,11 +35,15 @@
     "@web/test-runner-puppeteer": "^0.10.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
     "prettier": "^2.4.1",
     "rollup-plugin-import-css": "^2.0.1"
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
-  }
+  },
+  "workspaces": [
+    "./components/*"
+  ]
 }

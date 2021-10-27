@@ -4,7 +4,7 @@
   "description": "This custom element recreates the bootstrap accordion component functionality without the jquery dependency.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "echo \"No test specified.\"",
     "build:js": "rollup --config rollup.config.js",
     "build": "npm run build:js"
   },

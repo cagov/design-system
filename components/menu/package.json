@@ -18,7 +18,6 @@
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "lint:eslint:fix": "eslint --ext .js,.html . --ignore-path .gitignore --fix",
     "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
-    "prepare": "cd ../../ && husky install components/menu/.husky",
     "prepublishOnly": "npm run format && npm run lint && npm run build && npm run test",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve",
     "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
