@@ -15,3 +15,5 @@ function placePdfIcons() {
 }
 
 placePdfIcons();
+
+export { placePdfIcons };
