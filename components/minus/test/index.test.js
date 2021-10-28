@@ -13,7 +13,7 @@ describe('CAGOV Minus svg', function () {
     expect(
       el.querySelector('.accordion-icon').getAttribute('aria-hidden'),
     ).to.equal('true');
-    
+
     await expect(el).to.be.accessible();
   });
 });
