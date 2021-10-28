@@ -1,16 +1,20 @@
 {
   "name": "@cagov/ds-step-list",
   "version": "1.0.1",
-  "description": "",
+  "description": "CSS only component that renders stylized step by step instructions",
   "main": "index.css",
+  "type": "module",
   "scripts": {
-    "test": "echo \"No test specified.\"",
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
     "build": "sass src/index.scss index.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "sass": "^1.37.0"
+  "devDependencies": {
+    "@open-wc/testing": "^3.0.1",
+    "@web/test-runner-puppeteer": "^0.10.2",
+    "sass": "^1.37.5"
   }
 }
