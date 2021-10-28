@@ -13,10 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.37.5"
-  },
-  "dependencies": {
     "@open-wc/testing": "^3.0.1",
-    "@web/test-runner-puppeteer": "^0.10.2"
+    "@web/test-runner-puppeteer": "^0.10.2",
+    "sass": "^1.37.5"
   }
 }
