@@ -1,5 +1,9 @@
-# CHANGELOG for cagov-accordion
-`cagov-accordion`
+# CHANGELOG for ds-accordion
+`ds-accordion`
+
+# 2.0.7 (ds-accordion)
+* Added src folder with index.scss file to be consistent with the rest of the ds components.
+
 # 2.0.11
 * Fixed "allbuttons is not defined" console error.
 
