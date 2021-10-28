@@ -4,7 +4,7 @@ import { expect, fixture, html } from '@open-wc/testing';
 
 import '../index.js';
 
-describe('CAGOV Plus svg', function () {
+describe('CAGOV Plus svg', function unitTest() {
   this.timeout(5000);
   it('works', async () => {
     const el = await fixture(html`<cagov-plus />`);
