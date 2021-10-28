@@ -7,27 +7,40 @@ import '../dist/index.js';
 describe('CAGOV Pagination', function unitTest() {
   this.timeout(9000);
   it('works', async () => {
-    const el = await fixture(html`<cagov-pagination data-current-page="5" data-total-pages="99"></cagov-pagination>`);
-    
+    const el = await fixture(
+      html`<cagov-pagination
+        data-current-page="5"
+        data-total-pages="99"
+      ></cagov-pagination>`,
+    );
+
     // verify an expected initial attribute is present
     expect(
-      el.querySelector('.cagov-pagination-current .cagov-pagination__button').getAttribute('aria-current'),
+      el
+        .querySelector('.cagov-pagination-current .cagov-pagination__button')
+        .getAttribute('aria-current'),
     ).to.equal('page');
 
     expect(
-      el.querySelector('.cagov-pagination-current .cagov-pagination__button').getAttribute('data-page-num'),
+      el
+        .querySelector('.cagov-pagination-current .cagov-pagination__button')
+        .getAttribute('data-page-num'),
     ).to.equal('5');
 
     el.querySelector('a[data-page-num="6"]').click();
 
     expect(
-      el.querySelector('.cagov-pagination-current .cagov-pagination__button').getAttribute('data-page-num'),
+      el
+        .querySelector('.cagov-pagination-current .cagov-pagination__button')
+        .getAttribute('data-page-num'),
     ).to.equal('6');
 
     el.querySelector('.cagov-pagination__previous-page').click();
 
     expect(
-      el.querySelector('.cagov-pagination-current .cagov-pagination__button').getAttribute('data-page-num'),
+      el
+        .querySelector('.cagov-pagination-current .cagov-pagination__button')
+        .getAttribute('data-page-num'),
     ).to.equal('5');
 
     await expect(el).to.be.accessible();
