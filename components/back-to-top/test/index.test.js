@@ -14,21 +14,17 @@ describe('CAGOV Back-to-top', function unitTest() {
             <cagov-back-to-top data-hide-after="1000" data-label="Back to top">
             </cagov-back-to-top>
           </div>
-        </body> 
-      `
+        </body>
+      `,
     );
 
-    expect(
-      el.querySelector('button')
-    ).to.have.class('back-to-top');
+    expect(el.querySelector('button')).to.have.class('back-to-top');
 
-    expect(
-      el.querySelector('button').getAttribute('aria-hidden')
-    ).to.equal('true');
+    expect(el.querySelector('button').getAttribute('aria-hidden')).to.equal(
+      'true',
+    );
 
-    expect(
-      el.querySelector('button').getAttribute('tabindex')
-    ).to.equal('-1');
+    expect(el.querySelector('button').getAttribute('tabindex')).to.equal('-1');
 
     await expect(el).to.be.accessible();
   });
