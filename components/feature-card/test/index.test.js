@@ -22,4 +22,3 @@ describe('CAGOV Feature card', function unitTest() {
     await expect(el).to.be.accessible();
   });
 });
-

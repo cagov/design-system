@@ -10,9 +10,7 @@ describe('CAGOV Google Translate', function unitTest() {
     const el = await fixture(html`<cagov-google-translate />`);
 
     // verify an expected initial element is present
-    expect(
-      el.querySelectorAll('#google_translate_element').length
-    ).to.equal(1)
+    expect(el.querySelectorAll('#google_translate_element').length).to.equal(1);
 
     await expect(el).to.be.accessible();
   });
