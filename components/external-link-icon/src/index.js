@@ -28,3 +28,5 @@ function linkAnnotator() {
 }
 
 linkAnnotator();
+
+export { linkAnnotator };
