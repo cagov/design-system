@@ -1,7 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+npm run build --workspaces
 npm run format
 npm run lint
-npm run build --workspaces
 npm run test --workspaces
+
