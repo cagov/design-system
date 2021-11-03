@@ -1,22 +1,22 @@
-/* combined design system styles that based on cagov color scheme */
-/* Cagov color scheme root variables */
+/* combined design system styles that based on drought color scheme */
+/* Drought color scheme */
 :root {
   /* Theme colors */
-  --primary-color: #004ABC;
-  --primary-dark-color: #003484;
-  --primary-light-color: #4D80D0;
-  --primary-lightest-color: #B3C9EB;
-  --primary-hover-color: #003484;
-  --secondary-color: #FF8000;
-  --secondary-dark-color: #B35A00;
-  --secondary-light-color: #FFA64D;
-  --secondary-lightest-color: #FFD9B3;
-  --secondary-hover-color: #B35A00;
-  --highlight-color: #FEC02F;
-  --highlight-dark-color: #B28621;
-  --highlight-light-color: #FED36D;
-  --highlight-lightest-color: #FFECC1;
-  --secondary-hover-color: #B28621;
+  --primary-color: #691808;
+  --primary-dark-color: #4A1106;
+  --primary-light-color: #965D52;
+  --primary-lightest-color: #D2BAB5;
+  --primary-hover-color: #4A1106;
+  --secondary-color: #313131;
+  --secondary-dark-color: #222222;
+  --secondary-light-color: #6F6F6F;
+  --secondary-lightest-color: #C1C1C1;
+  --secondary-hover-color: #222222;
+  --highlight-color: #FBAD23;
+  --highlight-dark-color: #B07919;
+  --highlight-light-color: #FCC665;
+  --highlight-lightest-color: #FEE6BD;
+  --secondary-hover-color: #B07919;
 }
 
 /* theme colors */
@@ -5218,5 +5218,3 @@ ol.steps li:last-child, .cagov-step-list li:last-child {
   border: 1px solid var(--gray-700, #a09fa7);
   padding: 16px;
 }
-
-/*# sourceMappingURL=cagov.css.map */
