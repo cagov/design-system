@@ -3,8 +3,14 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/tree/main/components/google-translate"
+  },
   "scripts": {
-    "test": "echo \"No test specified.\"",
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
     "lint:eslint": "eslint --ext .js . --ignore-path .gitignore",
     "lint:eslint:fix": "eslint --ext .js . --ignore-path .gitignore --fix",
     "build": "echo \"No build specified.\""
@@ -13,6 +19,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@open-wc/testing": "^3.0.1",
+    "@web/test-runner-puppeteer": "^0.10.2",
     "@open-wc/eslint-config": "^4.3.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",

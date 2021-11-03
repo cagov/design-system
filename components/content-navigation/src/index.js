@@ -264,6 +264,9 @@ class CAGovContentNavigation extends window.HTMLElement {
         this.buildContentNavigation(),
       );
     }
+    if (document.readyState === "complete" || document.readyState === "loaded") {
+      this.buildContentNavigation();
+    }
   }
 
   buildContentNavigation() {

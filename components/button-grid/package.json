@@ -1,0 +1,24 @@
+{
+  "name": "@cagov/ds-button-grid",
+  "version": "2.0.0",
+  "description": "The card grid depends on individual cards and lays them out in a grid",
+  "main": "index.css",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/tree/main/components/button-grid"
+  },
+  "scripts": {
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
+    "build": "sass src/index.scss index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@open-wc/testing": "^3.0.1",
+    "@web/test-runner-puppeteer": "^0.10.2",
+    "sass": "^1.38.0"
+  }
+}

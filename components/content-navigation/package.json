@@ -3,11 +3,21 @@
   "version": "1.0.6",
   "description": "",
   "main": "src/index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/tree/main/components/content-navigation"
+  },
   "scripts": {
-    "test": "echo \"No test specified.\"",
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
     "build": "echo \"No build specified.\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@open-wc/testing": "^3.0.1",
+    "@web/test-runner-puppeteer": "^0.10.2"
+  }
 }
