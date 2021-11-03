@@ -1,0 +1,5232 @@
+/* combined design system styles that based on drought color scheme */
+/* Drought color scheme */
+:root {
+  /* Theme colors */
+  --primary-color: #691808;
+  --primary-dark-color: #4A1106;
+  --primary-light-color: #965D52;
+  --primary-lightest-color: #D2BAB5;
+  --primary-hover-color: #4A1106;
+  --secondary-color: #313131;
+  --secondary-dark-color: #222222;
+  --secondary-light-color: #6F6F6F;
+  --secondary-lightest-color: #C1C1C1;
+  --secondary-hover-color: #222222;
+  --highlight-color: #FBAD23;
+  --highlight-dark-color: #B07919;
+  --highlight-light-color: #FCC665;
+  --highlight-lightest-color: #FEE6BD;
+  --secondary-hover-color: #B07919;
+}
+
+/* theme colors */
+/* sitewide styles, these are mostly blank but will be wrapped up into components/base-css */
+:root {
+  --w-lg: 1176px;
+  --w-lg: 1176px;
+  --w-md: 960px;
+  --w-sm: 720px;
+  --w-xs: 540px;
+  --w-page-content: 876px;
+  --spacing-base: 8px;
+  --padding-sm: calc(--spacing-base * 2);
+  --padding-md: calc(--spacing-base * 3);
+  --padding-lg: calc(--spacing-base * 4);
+  /* haven't seen these used yet, they seem very large */
+  --margin-sm: calc(--spacing-base * 6);
+  --margin-md: calc(--spacing-base * 8);
+  --margin-lg: calc(--spacing-base * 12);
+  --margin-xl: calc(--spacing-base * 24);
+  --site-font: "Public Sans",sans-serif;
+  --body-text: 1.125rem;
+  --lead-text: 1.4375rem;
+  --small-text: .875rem;
+  --body-text-mobile: 1rem;
+  --lead-text-mobile: 1.25rem;
+  --small-text-mobile: .875rem;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+  --cagov-highlight: #FEC02F;
+  --cagov-primary: #004ABC;
+  --cagov-primary-dark: #003484;
+  --cagov-secondary: #FF8000;
+  --white: #fff;
+  --gray-100: #f9f9fa;
+  --gray-200: #ededef;
+  --gray-300: #e1e0e3;
+  --gray-400: #D3D2D6;
+  --gray-500: #C4C3C8;
+  --gray-600: #B3B2B8;
+  --gray-700: #A09FA7;
+  --gray-800: #3F3E4D;
+  --gray-900: #3F3E4D;
+  --black: #000;
+}
+
+/* spasing, margin and padding values */
+/* Tablet and wider */
+/* Desktop and wider */
+/* mixins */
+/* Fonts (global) */
+/* latin-ext */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/publicsans-regular-webfont.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/publicsans-regular-webfont.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/publicsans-bold-webfont.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/publicsans-bold-webfont.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/publicsans-light-webfont.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/ppublicsans-light-webfont.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* website global fonts */
+/* -----------------------------------------
+   ICON FONTS - /source/scss/cagov/icon-font.scss
+----------------------------------------- */
+@font-face {
+  font-family: "CaGov";
+  src: url("/fonts/CaGov.woff2") format("woff2"), url("/fonts/CaGov.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+[class^=ca-gov-icon-],
+[class*=" ca-gov-icon-"] {
+  font-family: "CaGov" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ca-gov-icon-mask-light:before {
+  content: "\e9fb";
+}
+
+.ca-gov-icon-mask-dark:before {
+  content: "\e9fc";
+}
+
+.ca-gov-icon-vaccine-check:before {
+  content: "\e9fe";
+}
+
+.ca-gov-icon-teams:before {
+  content: "\ea0c";
+}
+
+.ca-gov-icon-pharmacy:before {
+  content: "\ea12";
+}
+
+.ca-gov-icon-cart-delivered:before {
+  content: "\ea15";
+}
+
+.ca-gov-icon-medical-shipped:before {
+  content: "\ea16";
+}
+
+.ca-gov-icon-vaccine:before {
+  content: "\ea17";
+}
+
+.ca-gov-icon-team:before {
+  content: "\ea18";
+}
+
+.ca-gov-icon-vaccine-patient:before {
+  content: "\ea19";
+}
+
+.ca-gov-icon-improvements:before {
+  content: "\ea1a";
+}
+
+.ca-gov-icon-cloud-network:before {
+  content: "\ea1b";
+}
+
+.ca-gov-icon-technology-reuse:before {
+  content: "\ea1c";
+}
+
+.ca-gov-icon-accessibility:before {
+  content: "\e992";
+}
+
+.ca-gov-icon-agriculture:before {
+  content: "\e973";
+}
+
+.ca-gov-icon-air:before {
+  content: "\e9de";
+}
+
+.ca-gov-icon-air-polution:before {
+  content: "\e9df";
+}
+
+.ca-gov-icon-air-quality:before {
+  content: "\e9e0";
+}
+
+.ca-gov-icon-albums:before {
+  content: "\e90e";
+}
+
+.ca-gov-icon-amexcard:before {
+  content: "\e979";
+}
+
+.ca-gov-icon-amusement:before {
+  content: "\e9ab";
+}
+
+.ca-gov-icon-anchor:before {
+  content: "\e9e1";
+}
+
+.ca-gov-icon-android:before {
+  content: "\e620";
+}
+
+.ca-gov-icon-angry:before {
+  content: "\e975";
+}
+
+.ca-gov-icon-apple:before {
+  content: "\e61f";
+}
+
+.ca-gov-icon-apple-pay:before {
+  content: "\e97a";
+}
+
+.ca-gov-icon-apps:before {
+  content: "\e603";
+}
+
+.ca-gov-icon-archive:before {
+  content: "\e088";
+}
+
+.ca-gov-icon-arrow-down:before {
+  content: "\e04c";
+}
+
+.ca-gov-icon-arrow-fill-down:before {
+  content: "\e03a";
+}
+
+.ca-gov-icon-arrow-fill-left:before {
+  content: "\e03b";
+}
+
+.ca-gov-icon-arrow-fill-left-down:before {
+  content: "\e040";
+}
+
+.ca-gov-icon-arrow-fill-left-up:before {
+  content: "\e03d";
+}
+
+.ca-gov-icon-arrow-fill-right:before {
+  content: "\e03c";
+}
+
+.ca-gov-icon-arrow-fill-right-down:before {
+  content: "\e03f";
+}
+
+.ca-gov-icon-arrow-fill-right-up:before {
+  content: "\e03e";
+}
+
+.ca-gov-icon-arrow-fill-up:before {
+  content: "\e039";
+}
+
+.ca-gov-icon-arrow-left:before {
+  content: "\e04d";
+}
+
+.ca-gov-icon-arrow-next:before {
+  content: "\e669";
+}
+
+.ca-gov-icon-arrow-prev:before {
+  content: "\e668";
+}
+
+.ca-gov-icon-arrow-right:before {
+  content: "\e04e";
+}
+
+.ca-gov-icon-arrow-up:before {
+  content: "\e04b";
+}
+
+.ca-gov-icon-at-sign:before {
+  content: "\e60e";
+}
+
+.ca-gov-icon-attachment:before {
+  content: "\e60f";
+}
+
+.ca-gov-icon-audience:before {
+  content: "\e9fa";
+}
+
+.ca-gov-icon-audio:before {
+  content: "\e63a";
+}
+
+.ca-gov-icon-baloons:before {
+  content: "\e9ac";
+}
+
+.ca-gov-icon-bambinton:before {
+  content: "\e9e2";
+}
+
+.ca-gov-icon-bar-chart:before {
+  content: "\e629";
+}
+
+.ca-gov-icon-barge-ship:before {
+  content: "\e9ad";
+}
+
+.ca-gov-icon-bars-up:before {
+  content: "\e9fd";
+}
+
+.ca-gov-icon-bars-upward:before {
+  content: "\ea1d";
+}
+
+.ca-gov-icon-baseballl:before {
+  content: "\e9e3";
+}
+
+.ca-gov-icon-basketball:before {
+  content: "\e9e4";
+}
+
+.ca-gov-icon-bath:before {
+  content: "\e9e5";
+}
+
+.ca-gov-icon-bear:before {
+  content: "\e60b";
+}
+
+.ca-gov-icon-bell:before {
+  content: "\e982";
+}
+
+.ca-gov-icon-bike:before {
+  content: "\e9ae";
+}
+
+.ca-gov-icon-billiards:before {
+  content: "\e9e6";
+}
+
+.ca-gov-icon-binoculars:before {
+  content: "\e632";
+}
+
+.ca-gov-icon-biohazard:before {
+  content: "\e918";
+}
+
+.ca-gov-icon-boat:before {
+  content: "\e9af";
+}
+
+.ca-gov-icon-book:before {
+  content: "\e086";
+}
+
+.ca-gov-icon-bookmark:before {
+  content: "\e983";
+}
+
+.ca-gov-icon-books:before {
+  content: "\e984";
+}
+
+.ca-gov-icon-bowling:before {
+  content: "\e9e7";
+}
+
+.ca-gov-icon-brain:before {
+  content: "\e90f";
+}
+
+.ca-gov-icon-bridge:before {
+  content: "\e9b0";
+}
+
+.ca-gov-icon-bridge-alt:before {
+  content: "\e9b1";
+}
+
+.ca-gov-icon-briefcase:before {
+  content: "\e901";
+}
+
+.ca-gov-icon-building:before {
+  content: "\e0fd";
+}
+
+.ca-gov-icon-bus:before {
+  content: "\e9b2";
+}
+
+.ca-gov-icon-bus-alt:before {
+  content: "\e9b3";
+}
+
+.ca-gov-icon-ca-capitol:before {
+  content: "\e657";
+}
+
+.ca-gov-icon-ca-state:before {
+  content: "\e658";
+}
+
+.ca-gov-icon-cal:before {
+  content: "\e650";
+}
+
+.ca-gov-icon-cal-bear:before {
+  content: "\e90b";
+}
+
+.ca-gov-icon-calculator:before {
+  content: "\e0e7";
+}
+
+.ca-gov-icon-calendar:before {
+  content: "\e60a";
+}
+
+.ca-gov-icon-call:before {
+  content: "\e641";
+}
+
+.ca-gov-icon-camera:before {
+  content: "\e637";
+}
+
+.ca-gov-icon-campfire:before {
+  content: "\e96a";
+}
+
+.ca-gov-icon-cannabis:before {
+  content: "\e974";
+}
+
+.ca-gov-icon-capitol:before {
+  content: "\e606";
+}
+
+.ca-gov-icon-car:before {
+  content: "\e9b4";
+}
+
+.ca-gov-icon-car-alt:before {
+  content: "\e9b5";
+}
+
+.ca-gov-icon-care-tweezers:before {
+  content: "\e9e8";
+}
+
+.ca-gov-icon-caret-down:before {
+  content: "3";
+}
+
+.ca-gov-icon-caret-fill-down:before {
+  content: "\e044";
+}
+
+.ca-gov-icon-caret-fill-left:before {
+  content: "\e045";
+}
+
+.ca-gov-icon-caret-fill-right:before {
+  content: "\e046";
+}
+
+.ca-gov-icon-caret-fill-two-down:before {
+  content: "\e048";
+}
+
+.ca-gov-icon-caret-fill-two-left:before {
+  content: "\e049";
+}
+
+.ca-gov-icon-caret-fill-two-right:before {
+  content: "\e04a";
+}
+
+.ca-gov-icon-caret-fill-two-up:before {
+  content: "\e047";
+}
+
+.ca-gov-icon-caret-fill-up:before {
+  content: "\e043";
+}
+
+.ca-gov-icon-caret-left:before {
+  content: "4";
+}
+
+.ca-gov-icon-caret-line-down:before {
+  content: ";";
+}
+
+.ca-gov-icon-caret-line-left:before {
+  content: "<";
+}
+
+.ca-gov-icon-caret-line-right:before {
+  content: "=";
+}
+
+.ca-gov-icon-caret-line-two-down:before {
+  content: "?";
+}
+
+.ca-gov-icon-caret-line-two-left:before {
+  content: "@";
+}
+
+.ca-gov-icon-caret-line-two-right:before {
+  content: "A";
+}
+
+.ca-gov-icon-caret-line-two-up:before {
+  content: ">";
+}
+
+.ca-gov-icon-caret-line-up:before {
+  content: ":";
+}
+
+.ca-gov-icon-caret-right:before {
+  content: "5";
+}
+
+.ca-gov-icon-caret-two-down:before {
+  content: "7";
+}
+
+.ca-gov-icon-caret-two-left:before {
+  content: "8";
+}
+
+.ca-gov-icon-caret-two-right:before {
+  content: "9";
+}
+
+.ca-gov-icon-caret-two-up:before {
+  content: "6";
+}
+
+.ca-gov-icon-caret-up:before {
+  content: "2";
+}
+
+.ca-gov-icon-carousel-next:before {
+  content: "\e667";
+}
+
+.ca-gov-icon-carousel-pause:before {
+  content: "\e66c";
+}
+
+.ca-gov-icon-carousel-play:before {
+  content: "\e907";
+}
+
+.ca-gov-icon-carousel-prev:before {
+  content: "\e666";
+}
+
+.ca-gov-icon-casino:before {
+  content: "\e9b6";
+}
+
+.ca-gov-icon-cc-copyright:before {
+  content: "\e656";
+}
+
+.ca-gov-icon-cellphone-touch:before {
+  content: "\ea08";
+}
+
+.ca-gov-icon-certificate:before {
+  content: "\e910";
+}
+
+.ca-gov-icon-certificate-check:before {
+  content: "\e911";
+}
+
+.ca-gov-icon-certificate-click:before {
+  content: "\ea03";
+}
+
+.ca-gov-icon-charge:before {
+  content: "\e912";
+}
+
+.ca-gov-icon-charge-cycle:before {
+  content: "\e913";
+}
+
+.ca-gov-icon-charge-units:before {
+  content: "\e914";
+}
+
+.ca-gov-icon-chat:before {
+  content: "\e605";
+}
+
+.ca-gov-icon-chat-bubble:before {
+  content: "\e66f";
+}
+
+.ca-gov-icon-chat-bubbles:before {
+  content: "\e640";
+}
+
+.ca-gov-icon-check-fill:before {
+  content: "\e052";
+}
+
+.ca-gov-icon-check-line:before {
+  content: "R";
+}
+
+.ca-gov-icon-check-list:before {
+  content: "\e651";
+}
+
+.ca-gov-icon-check-mark:before {
+  content: "N";
+}
+
+.ca-gov-icon-chemical-hazard:before {
+  content: "\e956";
+}
+
+.ca-gov-icon-chrome:before {
+  content: "\e97d";
+}
+
+.ca-gov-icon-church:before {
+  content: "\e9e9";
+}
+
+.ca-gov-icon-city:before {
+  content: "\e915";
+}
+
+.ca-gov-icon-clipboard:before {
+  content: "\e653";
+}
+
+.ca-gov-icon-clock:before {
+  content: "\e916";
+}
+
+.ca-gov-icon-close-fill:before {
+  content: "\e051";
+}
+
+.ca-gov-icon-close-line:before {
+  content: "Q";
+}
+
+.ca-gov-icon-close-mark:before {
+  content: "M";
+}
+
+.ca-gov-icon-cloud-download:before {
+  content: "\e62e";
+}
+
+.ca-gov-icon-cloud-gear:before {
+  content: "\e917";
+}
+
+.ca-gov-icon-cloud-services:before {
+  content: "\e91a";
+}
+
+.ca-gov-icon-cloud-sync:before {
+  content: "\e91b";
+}
+
+.ca-gov-icon-cloud-upload:before {
+  content: "\e62f";
+}
+
+.ca-gov-icon-code:before {
+  content: "\e91c";
+}
+
+.ca-gov-icon-cofee:before {
+  content: "\e9b7";
+}
+
+.ca-gov-icon-collapse-all:before {
+  content: "\e970";
+}
+
+.ca-gov-icon-collapse1:before {
+  content: "X";
+}
+
+.ca-gov-icon-compass:before {
+  content: "\e633";
+}
+
+.ca-gov-icon-computer:before {
+  content: "\e621";
+}
+
+.ca-gov-icon-construction1:before {
+  content: "\e628";
+}
+
+.ca-gov-icon-contact-us:before {
+  content: "\e66e";
+}
+
+.ca-gov-icon-contacts:before {
+  content: "\e087";
+}
+
+.ca-gov-icon-coronavirus:before {
+  content: "\e996";
+}
+
+.ca-gov-icon-coughing:before {
+  content: "\e997";
+}
+
+.ca-gov-icon-cover:before {
+  content: "\e998";
+}
+
+.ca-gov-icon-cruise-ship:before {
+  content: "\e9b8";
+}
+
+.ca-gov-icon-cubes:before {
+  content: "\e999";
+}
+
+.ca-gov-icon-currency:before {
+  content: "\e0f3";
+}
+
+.ca-gov-icon-dam:before {
+  content: "\e96b";
+}
+
+.ca-gov-icon-danger:before {
+  content: "\e957";
+}
+
+.ca-gov-icon-desktop-checklist:before {
+  content: "\ea05";
+}
+
+.ca-gov-icon-desktop-video-module:before {
+  content: "\ea10";
+}
+
+.ca-gov-icon-dices:before {
+  content: "\e9b9";
+}
+
+.ca-gov-icon-digging:before {
+  content: "\e989";
+}
+
+.ca-gov-icon-directions:before {
+  content: "\e9ba";
+}
+
+.ca-gov-icon-discovercard:before {
+  content: "\e97b";
+}
+
+.ca-gov-icon-distance:before {
+  content: "\e995";
+}
+
+.ca-gov-icon-do-not-sign:before {
+  content: "\e958";
+}
+
+.ca-gov-icon-document:before {
+  content: "\e652";
+}
+
+.ca-gov-icon-down:before {
+  content: "\e9ea";
+}
+
+.ca-gov-icon-down-left:before {
+  content: "\e9eb";
+}
+
+.ca-gov-icon-down-right:before {
+  content: "\e9ec";
+}
+
+.ca-gov-icon-download:before {
+  content: "\e62d";
+}
+
+.ca-gov-icon-download-cloud:before {
+  content: "\e96c";
+}
+
+.ca-gov-icon-drag:before {
+  content: "\e972";
+}
+
+.ca-gov-icon-drawer:before {
+  content: "\e084";
+}
+
+.ca-gov-icon-drive:before {
+  content: "\e0e5";
+}
+
+.ca-gov-icon-ear:before {
+  content: "\e91d";
+}
+
+.ca-gov-icon-ear-slash:before {
+  content: "\e91e";
+}
+
+.ca-gov-icon-earthquake:before {
+  content: "\e959";
+}
+
+.ca-gov-icon-electricity-hazard:before {
+  content: "\e95c";
+}
+
+.ca-gov-icon-email:before {
+  content: "\e609";
+}
+
+.ca-gov-icon-entertainment:before {
+  content: "\e9bb";
+}
+
+.ca-gov-icon-envelope-checklist:before {
+  content: "\ea13";
+}
+
+.ca-gov-icon-excel:before {
+  content: "\e612";
+}
+
+.ca-gov-icon-expand-all:before {
+  content: "\e991";
+}
+
+.ca-gov-icon-expand1:before {
+  content: "Y";
+}
+
+.ca-gov-icon-external-link:before {
+  content: "\e9ed";
+}
+
+.ca-gov-icon-eye:before {
+  content: "\e91f";
+}
+
+.ca-gov-icon-eye-slash:before {
+  content: "\e920";
+}
+
+.ca-gov-icon-facebook:before {
+  content: "\e616";
+}
+
+.ca-gov-icon-family:before {
+  content: "\e9bc";
+}
+
+.ca-gov-icon-family-alt:before {
+  content: "\e9bd";
+}
+
+.ca-gov-icon-fastfood:before {
+  content: "\e9be";
+}
+
+.ca-gov-icon-favorite:before {
+  content: "\e659";
+}
+
+.ca-gov-icon-features:before {
+  content: "\e993";
+}
+
+.ca-gov-icon-ferry:before {
+  content: "\e9bf";
+}
+
+.ca-gov-icon-file:before {
+  content: "\e921";
+}
+
+.ca-gov-icon-file-audio:before {
+  content: "\e922";
+}
+
+.ca-gov-icon-file-certificate:before {
+  content: "\e923";
+}
+
+.ca-gov-icon-file-check:before {
+  content: "\e924";
+}
+
+.ca-gov-icon-file-code:before {
+  content: "\e925";
+}
+
+.ca-gov-icon-file-csv:before {
+  content: "\e926";
+}
+
+.ca-gov-icon-file-download:before {
+  content: "\e927";
+}
+
+.ca-gov-icon-file-excel:before {
+  content: "\e928";
+}
+
+.ca-gov-icon-file-export:before {
+  content: "\e929";
+}
+
+.ca-gov-icon-file-import:before {
+  content: "\e92a";
+}
+
+.ca-gov-icon-file-invoice:before {
+  content: "\e92b";
+}
+
+.ca-gov-icon-file-medical:before {
+  content: "\e92c";
+}
+
+.ca-gov-icon-file-medical-alt:before {
+  content: "\e92d";
+}
+
+.ca-gov-icon-file-pdf:before {
+  content: "\e92e";
+}
+
+.ca-gov-icon-file-powerpoint:before {
+  content: "\e92f";
+}
+
+.ca-gov-icon-file-prescription:before {
+  content: "\e930";
+}
+
+.ca-gov-icon-file-upload:before {
+  content: "\e931";
+}
+
+.ca-gov-icon-file-video:before {
+  content: "\e932";
+}
+
+.ca-gov-icon-file-word:before {
+  content: "\e933";
+}
+
+.ca-gov-icon-file-zip:before {
+  content: "\e934";
+}
+
+.ca-gov-icon-film:before {
+  content: "\e024";
+}
+
+.ca-gov-icon-filter:before {
+  content: "\e90a";
+}
+
+.ca-gov-icon-filter-solid:before {
+  content: "\e935";
+}
+
+.ca-gov-icon-fingerprint:before {
+  content: "\e936";
+}
+
+.ca-gov-icon-fingerprint-check:before {
+  content: "\e937";
+}
+
+.ca-gov-icon-fire:before {
+  content: "\e631";
+}
+
+.ca-gov-icon-firefox:before {
+  content: "\e97e";
+}
+
+.ca-gov-icon-fitness:before {
+  content: "\e9c0";
+}
+
+.ca-gov-icon-fitness-alt:before {
+  content: "\e9c1";
+}
+
+.ca-gov-icon-flickr:before {
+  content: "\e61d";
+}
+
+.ca-gov-icon-flood:before {
+  content: "\e95d";
+}
+
+.ca-gov-icon-flowchart:before {
+  content: "\e0df";
+}
+
+.ca-gov-icon-folder:before {
+  content: "\e05c";
+}
+
+.ca-gov-icon-football:before {
+  content: "\e9ee";
+}
+
+.ca-gov-icon-gas-pump:before {
+  content: "\e98a";
+}
+
+.ca-gov-icon-gear:before {
+  content: "\e64d";
+}
+
+.ca-gov-icon-gears:before {
+  content: "\e900";
+}
+
+.ca-gov-icon-glass:before {
+  content: "\e987";
+}
+
+.ca-gov-icon-globe:before {
+  content: "\e0e3";
+}
+
+.ca-gov-icon-golf:before {
+  content: "\e9ef";
+}
+
+.ca-gov-icon-google:before {
+  content: "\ea0e";
+}
+
+.ca-gov-icon-google-plus:before {
+  content: "\e66d";
+}
+
+.ca-gov-icon-graduate:before {
+  content: "\e903";
+}
+
+.ca-gov-icon-graduate-pointer:before {
+  content: "\ea0f";
+}
+
+.ca-gov-icon-graph:before {
+  content: "\e62b";
+}
+
+.ca-gov-icon-green:before {
+  content: "\e638";
+}
+
+.ca-gov-icon-grid:before {
+  content: "\e08c";
+}
+
+.ca-gov-icon-hair:before {
+  content: "\e9c2";
+}
+
+.ca-gov-icon-hair-salon:before {
+  content: "\e9c3";
+}
+
+.ca-gov-icon-hand:before {
+  content: "\e938";
+}
+
+.ca-gov-icon-hand-heart:before {
+  content: "\e99a";
+}
+
+.ca-gov-icon-hand-money:before {
+  content: "\e939";
+}
+
+.ca-gov-icon-hand-watter:before {
+  content: "\e99b";
+}
+
+.ca-gov-icon-handshake:before {
+  content: "\e93a";
+}
+
+.ca-gov-icon-happy:before {
+  content: "\e976";
+}
+
+.ca-gov-icon-hazard:before {
+  content: "\e95e";
+}
+
+.ca-gov-icon-heart:before {
+  content: "\e988";
+}
+
+.ca-gov-icon-highway:before {
+  content: "\e9c4";
+}
+
+.ca-gov-icon-home:before {
+  content: "\e601";
+}
+
+.ca-gov-icon-home-education:before {
+  content: "\ea07";
+}
+
+.ca-gov-icon-home-graduate:before {
+  content: "\ea09";
+}
+
+.ca-gov-icon-hourglass:before {
+  content: "\e0e1";
+}
+
+.ca-gov-icon-hours:before {
+  content: "\e90c";
+}
+
+.ca-gov-icon-hours-security:before {
+  content: "\e90d";
+}
+
+.ca-gov-icon-house:before {
+  content: "\e64c";
+}
+
+.ca-gov-icon-hurricane:before {
+  content: "\e95f";
+}
+
+.ca-gov-icon-idea:before {
+  content: "\e902";
+}
+
+.ca-gov-icon-idea-alt:before {
+  content: "\e98b";
+}
+
+.ca-gov-icon-ie:before {
+  content: "\e97f";
+}
+
+.ca-gov-icon-image:before {
+  content: "\e64b";
+}
+
+.ca-gov-icon-images:before {
+  content: "\e904";
+}
+
+.ca-gov-icon-important:before {
+  content: "\e63f";
+}
+
+.ca-gov-icon-important-line:before {
+  content: "\e906";
+}
+
+.ca-gov-icon-info:before {
+  content: "\e661";
+}
+
+.ca-gov-icon-info-bubble:before {
+  content: "\e670";
+}
+
+.ca-gov-icon-info-line:before {
+  content: "\e905";
+}
+
+.ca-gov-icon-instagram:before {
+  content: "\e9dd";
+}
+
+.ca-gov-icon-institute:before {
+  content: "\e93b";
+}
+
+.ca-gov-icon-justice-legal:before {
+  content: "\e60d";
+}
+
+.ca-gov-icon-key:before {
+  content: "\e65f";
+}
+
+.ca-gov-icon-lab-tests:before {
+  content: "\e99c";
+}
+
+.ca-gov-icon-law-enforcement:before {
+  content: "\e60c";
+}
+
+.ca-gov-icon-left:before {
+  content: "\e9f0";
+}
+
+.ca-gov-icon-lightbulb:before {
+  content: "\e072";
+}
+
+.ca-gov-icon-link:before {
+  content: "\e65d";
+}
+
+.ca-gov-icon-linkedin:before {
+  content: "\e617";
+}
+
+.ca-gov-icon-location:before {
+  content: "\e081";
+}
+
+.ca-gov-icon-lock:before {
+  content: "\e660";
+}
+
+.ca-gov-icon-logo:before {
+  content: "\e600";
+}
+
+.ca-gov-icon-loud-speaker:before {
+  content: "\e639";
+}
+
+.ca-gov-icon-magnify-glass:before {
+  content: "\e65e";
+}
+
+.ca-gov-icon-mail:before {
+  content: "\e64a";
+}
+
+.ca-gov-icon-malware:before {
+  content: "\e919";
+}
+
+.ca-gov-icon-map:before {
+  content: "\e083";
+}
+
+.ca-gov-icon-mask:before {
+  content: "\e99d";
+}
+
+.ca-gov-icon-mastercard:before {
+  content: "\e978";
+}
+
+.ca-gov-icon-medal:before {
+  content: "\e98c";
+}
+
+.ca-gov-icon-medical:before {
+  content: "\e63c";
+}
+
+.ca-gov-icon-medical-bubble:before {
+  content: "\e93c";
+}
+
+.ca-gov-icon-medical-care:before {
+  content: "\e93d";
+}
+
+.ca-gov-icon-medical-case:before {
+  content: "\e93e";
+}
+
+.ca-gov-icon-medical-clinic:before {
+  content: "\e93f";
+}
+
+.ca-gov-icon-medical-cross:before {
+  content: "\e940";
+}
+
+.ca-gov-icon-medical-doctor:before {
+  content: "\e941";
+}
+
+.ca-gov-icon-medical-heart:before {
+  content: "\e942";
+}
+
+.ca-gov-icon-medical-pills:before {
+  content: "\e943";
+}
+
+.ca-gov-icon-menu:before {
+  content: "\e602";
+}
+
+.ca-gov-icon-menu-toggle-closed:before {
+  content: "\e66a";
+}
+
+.ca-gov-icon-menu-toggle-open:before {
+  content: "\e66b";
+}
+
+.ca-gov-icon-mic:before {
+  content: "\e07f";
+}
+
+.ca-gov-icon-microsoft:before {
+  content: "\e61e";
+}
+
+.ca-gov-icon-minus-fill:before {
+  content: "\e04f";
+}
+
+.ca-gov-icon-minus-line:before {
+  content: "O";
+}
+
+.ca-gov-icon-minus-mark:before {
+  content: "K";
+}
+
+.ca-gov-icon-mobile:before {
+  content: "\e944";
+}
+
+.ca-gov-icon-mobile-graduate:before {
+  content: "\ea11";
+}
+
+.ca-gov-icon-mobile-textbook:before {
+  content: "\ea0a";
+}
+
+.ca-gov-icon-museum:before {
+  content: "\e9c5";
+}
+
+.ca-gov-icon-museum-alt:before {
+  content: "\e9c6";
+}
+
+.ca-gov-icon-music:before {
+  content: "\e08e";
+}
+
+.ca-gov-icon-nail-polish:before {
+  content: "\e9f1";
+}
+
+.ca-gov-icon-no-coughing:before {
+  content: "\e99e";
+}
+
+.ca-gov-icon-no-handshake:before {
+  content: "\e99f";
+}
+
+.ca-gov-icon-no-smoking:before {
+  content: "\e98e";
+}
+
+.ca-gov-icon-no-travel:before {
+  content: "\e9c7";
+}
+
+.ca-gov-icon-no-virus:before {
+  content: "\e9a0";
+}
+
+.ca-gov-icon-online-education:before {
+  content: "\ea01";
+}
+
+.ca-gov-icon-online-graduate:before {
+  content: "\e9ff";
+}
+
+.ca-gov-icon-online-help:before {
+  content: "\ea1e";
+}
+
+.ca-gov-icon-online-module:before {
+  content: "\ea0b";
+}
+
+.ca-gov-icon-online-services:before {
+  content: "\e65c";
+}
+
+.ca-gov-icon-opera:before {
+  content: "\e980";
+}
+
+.ca-gov-icon-paddle-boat:before {
+  content: "\e9c8";
+}
+
+.ca-gov-icon-page:before {
+  content: "\e654";
+}
+
+.ca-gov-icon-palette:before {
+  content: "\e986";
+}
+
+.ca-gov-icon-party:before {
+  content: "\e9c9";
+}
+
+.ca-gov-icon-pause:before {
+  content: "\e648";
+}
+
+.ca-gov-icon-payment-card:before {
+  content: "\e645";
+}
+
+.ca-gov-icon-paypal:before {
+  content: "\e97c";
+}
+
+.ca-gov-icon-pdf:before {
+  content: "\e614";
+}
+
+.ca-gov-icon-pencil:before {
+  content: "j";
+}
+
+.ca-gov-icon-pencil-edit:before {
+  content: "l";
+}
+
+.ca-gov-icon-people:before {
+  content: "\e642";
+}
+
+.ca-gov-icon-person:before {
+  content: "\e643";
+}
+
+.ca-gov-icon-personal-care:before {
+  content: "\e9f2";
+}
+
+.ca-gov-icon-phone:before {
+  content: "\e608";
+}
+
+.ca-gov-icon-pie-chart:before {
+  content: "\e62a";
+}
+
+.ca-gov-icon-pinterest:before {
+  content: "\e61a";
+}
+
+.ca-gov-icon-places:before {
+  content: "\e9ca";
+}
+
+.ca-gov-icon-play:before {
+  content: "\e647";
+}
+
+.ca-gov-icon-plus-fill:before {
+  content: "\e050";
+}
+
+.ca-gov-icon-plus-line:before {
+  content: "P";
+}
+
+.ca-gov-icon-plus-mark:before {
+  content: "L";
+}
+
+.ca-gov-icon-powerpoint:before {
+  content: "\e611";
+}
+
+.ca-gov-icon-print:before {
+  content: "\e63b";
+}
+
+.ca-gov-icon-pro-services:before {
+  content: "\e945";
+}
+
+.ca-gov-icon-procurement:before {
+  content: "\e9a1";
+}
+
+.ca-gov-icon-project:before {
+  content: "\e9a2";
+}
+
+.ca-gov-icon-pushpin:before {
+  content: "\e082";
+}
+
+.ca-gov-icon-puzzle:before {
+  content: "\e946";
+}
+
+.ca-gov-icon-puzzle-piece:before {
+  content: "\e947";
+}
+
+.ca-gov-icon-quake-hazard:before {
+  content: "\e95b";
+}
+
+.ca-gov-icon-quake-house:before {
+  content: "\e95a";
+}
+
+.ca-gov-icon-question:before {
+  content: "\e909";
+}
+
+.ca-gov-icon-question-fill:before {
+  content: "\e064";
+}
+
+.ca-gov-icon-question-line:before {
+  content: "\e908";
+}
+
+.ca-gov-icon-quote-fill:before {
+  content: "\e06a";
+}
+
+.ca-gov-icon-radiation:before {
+  content: "\e955";
+}
+
+.ca-gov-icon-rail:before {
+  content: "\e9cb";
+}
+
+.ca-gov-icon-read-book:before {
+  content: "\e655";
+}
+
+.ca-gov-icon-reader:before {
+  content: "\e985";
+}
+
+.ca-gov-icon-recycle:before {
+  content: "\e948";
+}
+
+.ca-gov-icon-responsive:before {
+  content: "\e949";
+}
+
+.ca-gov-icon-responsive-alt:before {
+  content: "\e94a";
+}
+
+.ca-gov-icon-restaurant:before {
+  content: "\e9cc";
+}
+
+.ca-gov-icon-right:before {
+  content: "\e9f3";
+}
+
+.ca-gov-icon-road:before {
+  content: "\e9cd";
+}
+
+.ca-gov-icon-road-pin:before {
+  content: "\e65b";
+}
+
+.ca-gov-icon-roadways:before {
+  content: "\e624";
+}
+
+.ca-gov-icon-rss:before {
+  content: "\e65a";
+}
+
+.ca-gov-icon-rv:before {
+  content: "\e9ce";
+}
+
+.ca-gov-icon-safari:before {
+  content: "\e981";
+}
+
+.ca-gov-icon-sail-ship:before {
+  content: "\e9cf";
+}
+
+.ca-gov-icon-science:before {
+  content: "\e00a";
+}
+
+.ca-gov-icon-scooter:before {
+  content: "\e9d0";
+}
+
+.ca-gov-icon-sea-level-rise:before {
+  content: "\e960";
+}
+
+.ca-gov-icon-sea-level-rise-alt:before {
+  content: "\e96e";
+}
+
+.ca-gov-icon-search:before {
+  content: "\e604";
+}
+
+.ca-gov-icon-search-right:before {
+  content: "U";
+}
+
+.ca-gov-icon-searching:before {
+  content: "\e0f7";
+}
+
+.ca-gov-icon-security-network:before {
+  content: "\e94b";
+}
+
+.ca-gov-icon-security-system:before {
+  content: "\e94c";
+}
+
+.ca-gov-icon-server:before {
+  content: "\e62c";
+}
+
+.ca-gov-icon-severe-weather:before {
+  content: "\e961";
+}
+
+.ca-gov-icon-share:before {
+  content: "\e615";
+}
+
+.ca-gov-icon-share-Instagram:before {
+  content: "\e9f9";
+}
+
+.ca-gov-icon-share-button:before {
+  content: "\e671";
+}
+
+.ca-gov-icon-share-email:before {
+  content: "\e673";
+}
+
+.ca-gov-icon-share-facebook:before {
+  content: "\e672";
+}
+
+.ca-gov-icon-share-flickr:before {
+  content: "\e674";
+}
+
+.ca-gov-icon-share-googleplus:before {
+  content: "\e677";
+}
+
+.ca-gov-icon-share-linkedin:before {
+  content: "\e676";
+}
+
+.ca-gov-icon-share-pinterest:before {
+  content: "\e679";
+}
+
+.ca-gov-icon-share-snapchat:before {
+  content: "\e98f";
+}
+
+.ca-gov-icon-share-twitter:before {
+  content: "\e675";
+}
+
+.ca-gov-icon-share-vimeo:before {
+  content: "\e67a";
+}
+
+.ca-gov-icon-share-youtube:before {
+  content: "\e67b";
+}
+
+.ca-gov-icon-shield:before {
+  content: "\e630";
+}
+
+.ca-gov-icon-shield-check:before {
+  content: "\e94d";
+}
+
+.ca-gov-icon-ship:before {
+  content: "\e9d1";
+}
+
+.ca-gov-icon-shopping-cart:before {
+  content: "\e635";
+}
+
+.ca-gov-icon-sign-language:before {
+  content: "\e971";
+}
+
+.ca-gov-icon-skip-backwards:before {
+  content: "\e646";
+}
+
+.ca-gov-icon-skip-forward:before {
+  content: "\e649";
+}
+
+.ca-gov-icon-smartphone:before {
+  content: "\e623";
+}
+
+.ca-gov-icon-smoking:before {
+  content: "\e98d";
+}
+
+.ca-gov-icon-snapchat:before {
+  content: "\e990";
+}
+
+.ca-gov-icon-soap:before {
+  content: "\e9a3";
+}
+
+.ca-gov-icon-soccer:before {
+  content: "\e9f4";
+}
+
+.ca-gov-icon-sos:before {
+  content: "\e634";
+}
+
+.ca-gov-icon-spartan-helmet:before {
+  content: "\ea14";
+}
+
+.ca-gov-icon-speech-dialog:before {
+  content: "\ea1f";
+}
+
+.ca-gov-icon-speedtrain:before {
+  content: "\e9d2";
+}
+
+.ca-gov-icon-state:before {
+  content: "\e607";
+}
+
+.ca-gov-icon-stay-home:before {
+  content: "\e9a4";
+}
+
+.ca-gov-icon-stop-fire:before {
+  content: "\e962";
+}
+
+.ca-gov-icon-stop-hand:before {
+  content: "\e963";
+}
+
+.ca-gov-icon-suv:before {
+  content: "\e9d3";
+}
+
+.ca-gov-icon-table:before {
+  content: "\e025";
+}
+
+.ca-gov-icon-tablet:before {
+  content: "\e622";
+}
+
+.ca-gov-icon-tags:before {
+  content: "\e07c";
+}
+
+.ca-gov-icon-teleworking:before {
+  content: "\e9a5";
+}
+
+.ca-gov-icon-temple:before {
+  content: "\e9d4";
+}
+
+.ca-gov-icon-tennis:before {
+  content: "\e9f5";
+}
+
+.ca-gov-icon-tent:before {
+  content: "\e969";
+}
+
+.ca-gov-icon-testing:before {
+  content: "\e9a6";
+}
+
+.ca-gov-icon-testing-alt:before {
+  content: "\e9a7";
+}
+
+.ca-gov-icon-textbook:before {
+  content: "\ea00";
+}
+
+.ca-gov-icon-thumb-up:before {
+  content: "\e94e";
+}
+
+.ca-gov-icon-time:before {
+  content: "\e64f";
+}
+
+.ca-gov-icon-tool:before {
+  content: "\e64e";
+}
+
+.ca-gov-icon-tools:before {
+  content: "\e035";
+}
+
+.ca-gov-icon-tornado:before {
+  content: "\e964";
+}
+
+.ca-gov-icon-train:before {
+  content: "\e9d5";
+}
+
+.ca-gov-icon-travel-air:before {
+  content: "\e626";
+}
+
+.ca-gov-icon-travel-car:before {
+  content: "\e625";
+}
+
+.ca-gov-icon-triangle-down:before {
+  content: "C";
+}
+
+.ca-gov-icon-triangle-left:before {
+  content: "D";
+}
+
+.ca-gov-icon-triangle-line-down:before {
+  content: "G";
+}
+
+.ca-gov-icon-triangle-line-left:before {
+  content: "H";
+}
+
+.ca-gov-icon-triangle-line-right:before {
+  content: "I";
+}
+
+.ca-gov-icon-triangle-line-up:before {
+  content: "F";
+}
+
+.ca-gov-icon-triangle-right:before {
+  content: "E";
+}
+
+.ca-gov-icon-triangle-up:before {
+  content: "B";
+}
+
+.ca-gov-icon-trolleybus:before {
+  content: "\e9d6";
+}
+
+.ca-gov-icon-trophy:before {
+  content: "\e94f";
+}
+
+.ca-gov-icon-truck:before {
+  content: "\e9d7";
+}
+
+.ca-gov-icon-truck-alt:before {
+  content: "\e9d8";
+}
+
+.ca-gov-icon-truck-delivery:before {
+  content: "\e627";
+}
+
+.ca-gov-icon-tsunami:before {
+  content: "\e965";
+}
+
+.ca-gov-icon-tsunami-alt:before {
+  content: "\e96f";
+}
+
+.ca-gov-icon-twitter:before {
+  content: "\e619";
+}
+
+.ca-gov-icon-up:before {
+  content: "\e9f6";
+}
+
+.ca-gov-icon-up-left:before {
+  content: "\e9f7";
+}
+
+.ca-gov-icon-up-right:before {
+  content: "\e9f8";
+}
+
+.ca-gov-icon-update:before {
+  content: "\e994";
+}
+
+.ca-gov-icon-upload-cloud:before {
+  content: "\e96d";
+}
+
+.ca-gov-icon-user-desk:before {
+  content: "\ea0d";
+}
+
+.ca-gov-icon-user-desktop-instructor:before {
+  content: "\ea02";
+}
+
+.ca-gov-icon-user-headphone:before {
+  content: "\ea06";
+}
+
+.ca-gov-icon-user-id:before {
+  content: "\e644";
+}
+
+.ca-gov-icon-user-laptop:before {
+  content: "\ea04";
+}
+
+.ca-gov-icon-users:before {
+  content: "\e950";
+}
+
+.ca-gov-icon-users-alt:before {
+  content: "\e951";
+}
+
+.ca-gov-icon-users-check-mark:before {
+  content: "\ea27";
+}
+
+.ca-gov-icon-users-dialog:before {
+  content: "\e952";
+}
+
+.ca-gov-icon-users-interaction:before {
+  content: "\e953";
+}
+
+.ca-gov-icon-users-huddle:before {
+  content: "\ea28";
+}
+
+.ca-gov-icon-van:before {
+  content: "\e9d9";
+}
+
+.ca-gov-icon-video:before {
+  content: "\e954";
+}
+
+.ca-gov-icon-video-camera:before {
+  content: "\e636";
+}
+
+.ca-gov-icon-vimeo:before {
+  content: "\e61b";
+}
+
+.ca-gov-icon-virus:before {
+  content: "\e9a8";
+}
+
+.ca-gov-icon-viruses:before {
+  content: "\e9a9";
+}
+
+.ca-gov-icon-visa:before {
+  content: "\e977";
+}
+
+.ca-gov-icon-volcano:before {
+  content: "\e966";
+}
+
+.ca-gov-icon-volume:before {
+  content: "\e069";
+}
+
+.ca-gov-icon-wallet:before {
+  content: "\e0d8";
+}
+
+.ca-gov-icon-warning-circle:before {
+  content: "\e967";
+}
+
+.ca-gov-icon-warning-fill:before {
+  content: "\e062";
+}
+
+.ca-gov-icon-warning-square:before {
+  content: "\e968";
+}
+
+.ca-gov-icon-warning-triangle:before {
+  content: "\e063";
+}
+
+.ca-gov-icon-wash:before {
+  content: "\e9aa";
+}
+
+.ca-gov-icon-word:before {
+  content: "\e613";
+}
+
+.ca-gov-icon-yacht:before {
+  content: "\e9da";
+}
+
+.ca-gov-icon-youtube:before {
+  content: "\e618";
+}
+
+.ca-gov-icon-zipped-file:before {
+  content: "\e610";
+}
+
+.ca-gov-icon-zoo:before {
+  content: "\e9db";
+}
+
+.ca-gov-icon-zoo-alt:before {
+  content: "\e9dc";
+}
+
+.ca-gov-icon-zoom-in:before {
+  content: "\e63e";
+}
+
+.ca-gov-icon-zoom-out:before {
+  content: "\e63d";
+}
+
+select[data-class-icon] {
+  font-size: 20px;
+  font-family: "CaGov";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* website global fonts */
+/* beginnings of normalize */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+
+body {
+  font-family: var(--site-font, "Public Sans", sans-serif);
+  font-size: var(--body-text, 1.125rem);
+  line-height: 1.5;
+  color: var(--black, #000);
+}
+
+/* html, body, main and all the website level base styes */
+#main-content {
+  margin-top: 32px;
+  margin-bottom: 64px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+#main-content.single-column.landing {
+  margin-bottom: 0;
+}
+
+.page-container-ds {
+  max-width: var(--w-lg, 1176px);
+  margin: 2rem auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.main-content-ds {
+  margin-top: 32px;
+  max-width: 100%;
+}
+
+article {
+  display: block;
+}
+
+/* Single column layout */
+.single-column {
+  max-width: var(--w-page-content, 876px);
+  margin: 0 auto;
+}
+
+.single-column.landing {
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+}
+
+.has-sidebar-left .single-column {
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+}
+
+@media (max-width: 1216px) {
+  .footer-container,
+.page-container-ds {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* Responsive title behavior */
+/* Hide Mobile title, lives outside flex aligned elements and before content navigation, desktop page title is inside main. */
+.narrow-page-title {
+  display: none;
+}
+
+.main-content-ds.single-column.landing .wide-page-title {
+  display: none;
+}
+.main-content-ds.single-column.landing .narrow-page-title {
+  display: none;
+}
+
+/* Responsive page title */
+.wide-page-title {
+  display: none;
+}
+
+.narrow-page-title {
+  display: block;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.main-content-ds.single-column .wide-page-title {
+  display: none;
+}
+
+.main-content-ds.single-column.landing .wide-page-title {
+  display: none;
+}
+.main-content-ds.single-column.landing .narrow-page-title {
+  display: none;
+}
+
+.sidebar-container {
+  display: block;
+  width: 276px;
+  max-width: 276px;
+  padding-right: var(--padding-md, 16px);
+}
+
+.with-sidebar .main-content-default,
+.with-sidebar .ds-content-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--s1) / 2 * -1);
+}
+.with-sidebar.has-sidebar-left .main-content-default > *, .with-sidebar.has-sidebar-left .main-content-ds .ds-content-layout > .everylayout {
+  margin: calc(var(--s1) / 2);
+  flex-basis: 267px;
+  flex-grow: 1;
+}
+.with-sidebar.has-sidebar-left .main-content-default > :last-child, .with-sidebar.has-sidebar-left .main-content-ds .ds-content-layout > .everylayout:last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - var(--s1));
+}
+.with-sidebar.has-sidebar-right .main-content-default, .with-sidebar.has-sidebar-right .main-content-ds .ds-content-layout > .everylayout {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - var(--s1));
+}
+.with-sidebar.has-sidebar-right .main-content-default > * > :last-child, .with-sidebar.has-sidebar-right .main-content-ds .ds-content-layout > :last-child {
+  margin: calc(var(--s1) / 2);
+  flex-basis: 267px;
+  flex-grow: 1;
+}
+.with-sidebar.page-container-ds.has-sidebar-left main {
+  margin-left: 64px;
+  margin-right: 20px;
+}
+.with-sidebar .page-container-ds.has-sidebar-right main {
+  margin-right: 64px;
+  margin-left: 20px;
+}
+.with-sidebar .main-container-ds {
+  max-width: 877px;
+}
+
+/* footer */
+.content-footer-container {
+  border-bottom: 1px solid var(--gray-200, #ededef);
+  border-top: 1px solid var(--gray-200, #ededef);
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.content-footer {
+  max-width: var(--w-lg, 1176px) !important;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 767px) {
+  .with-sidebar .main-content-default,
+.with-sidebar .ds-content-layout {
+    display: block;
+  }
+  .with-sidebar.page-container-ds main {
+    margin-left: 0 !important;
+    margin-top: 32px;
+  }
+  .with-sidebar main {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  /* sidebar */
+  .sidebar-container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding-right: var(--padding-md, 16px);
+  }
+
+  /* Content Menu */
+  .content-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+/* html, body, main and all the website level base styes */
+/* Gutenberg Block alignment */
+/* Class applied to most external element of a gutenberg block component. Controls spacing between blocks. */
+.cagov-stack {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Apply same spacing mechanism as cagov-stack, but overriding default gutenberg block element classes */
+.wp-block-columns {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.wp-block-column {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.wp-block-column:first-child {
+  margin-right: 32px;
+}
+
+/* border styles */
+.wp-block-table {
+  background: none !important;
+  border: none !important;
+}
+
+.wp-block-table table,
+.wp-block-table table th,
+.wp-block-table table td {
+  border: 1px solid var(--gray-200, #ededef) !important;
+}
+
+main .wp-block-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+  margin-bottom: 32px;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .wp-block-columns {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .wp-block-column {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+/* a, a:hover, a:focus */
+/* Buttons global styles */
+.wp-block-button__link {
+  background-color: #33705b;
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-color, #33705b);
+  color: white;
+  padding: 0.5556rem;
+  margin: 0 0 1rem 0;
+  border-radius: 0.2778rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+}
+
+.wp-block-button__link:hover {
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-hover-color, #33705b);
+  /* variable used with fallback in case it is not defined */
+  color: var(--white, #ffffff);
+  padding: 0.5556rem;
+  border-radius: 0.2778rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+}
+
+/* buttons generic styles */
+/* Code generic styles */
+code,
+samp {
+  background: var(--gray-100, #f9f9fa);
+  color: var(--gray-900, #3f3e4d);
+  padding: 2.5px 5px;
+  border-radius: 6px;
+  font-size: var(--body-text, 1.125rem);
+}
+
+pre > code {
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+}
+
+/* pre, code, var generic styles */
+/* Forms generic styles*/
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+textarea, input {
+  background-color: var(--white, #fff);
+  color: var(--black, #000) !important;
+  font-size: var(--body-text, 1.125rem);
+  font-weight: var(--font-weight-regular, 400);
+}
+textarea:focus, input:focus {
+  outline: 2px solid var(--secondary-color, #fec02f);
+}
+
+/* input, textarea, select generic styles */
+/* Links global styles */
+a {
+  color: var(--primary-color, #004abc);
+  text-underline-position: under;
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--primary-dark-color, #003484);
+}
+a:focus {
+  outline: 2px solid var(--highlight-color, #fbad23);
+}
+
+a:focus,
+button:focus {
+  outline: solid 2px var(--highlight-color, #fbad23) !important;
+}
+
+/* a, a:hover, a:focus */
+.breadcrumb {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 64px;
+  font-size: 16px;
+}
+
+.breadcrumb a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  text-underline-position: under;
+}
+
+.breadcrumb span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+  /* BREADCRUMB */
+  .breadcrumb a.crumb,
+.breadcrumb span.crumb {
+    display: none;
+  }
+
+  .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.8px;
+    color: #064e66;
+  }
+
+  .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
+    padding: 0;
+  }
+
+  .breadcrumb {
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .with-sidebar.page-container-ds .breadcrumb {
+    margin-bottom: 0px;
+  }
+}
+/* copied from blocks */
+/* Typography global styles */
+body {
+  font-weight: var(--font-weight-regular, 400);
+}
+
+/* TYPOGRAPHY */
+h1.page-title {
+  margin: 0 0 0 0;
+  padding: 0 0 24px 0;
+}
+
+main h2:first-child {
+  margin-top: 0px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* New styles, need home */
+ul, ol {
+  margin-bottom: 1rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5rem;
+}
+
+main ol li, main ul li {
+  margin-left: 32px;
+}
+
+main ol li {
+  padding: 0 16px;
+  margin-top: 0.5rem;
+}
+
+/* Update position list element */
+main ul li, main ol li {
+  list-style-position: outside;
+}
+
+h1,
+.h1 {
+  font-size: 2.9375rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h2,
+.h2 {
+  font-size: 2.3175rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h3,
+.h3 {
+  font-size: 1.8125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h4,
+.h4 {
+  font-size: 1.4375rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h5,
+.h5 {
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+h6,
+.h6 {
+  font-size: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+
+.text-lead, .lead {
+  font-size: var(--lead-text, 1.4375rem);
+}
+
+.text-small, .text-sm {
+  font-size: var(--small-text, 0.875rem);
+}
+
+@media (max-width: 767px) {
+  h1,
+.h1 {
+    font-size: 2.625rem;
+  }
+
+  h2,
+.h2 {
+    font-size: 2.0625rem;
+  }
+
+  h3,
+.h3 {
+    font-size: 1.625rem;
+  }
+
+  h4,
+.h4 {
+    font-size: 1.25rem;
+  }
+
+  h5,
+.h5 {
+    font-size: 1rem;
+  }
+
+  h2:first-child,
+figure ~ h2:first-of-type {
+    margin-top: 0px;
+  }
+
+  .text-lead, .lead {
+    font-size: var(--lead-text-mobile, 1.25rem);
+  }
+
+  .text-small, .text-sm {
+    font-size: var(--small-text-mobile, 0.875rem);
+  }
+}
+/* lists */
+ul.list-highlight li {
+  list-style: none;
+  background-color: var(--gray-100, #f9f9fa);
+  padding: 24px;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold, 700);
+}
+ul.list-highlight li span.has-black-color {
+  margin-top: 1rem;
+  font-size: var(--body-text, 1.125rem);
+  font-weight: var(--font-weight-regular, 400);
+  display: block;
+  line-height: 1.6;
+}
+
+/* Remove any margins from tags in Gutenberg blocks */
+.cagov-stack h1,
+.cagov-stack h2,
+.cagov-stack h3,
+.cagov-stack h4,
+.cagov-card h1,
+.cagov-card h2,
+.cagov-card h3,
+.cagov-card h4,
+.cagov-card ul {
+  margin: 0;
+}
+
+/* Image captions */
+figure {
+  background: none;
+  border: none;
+}
+figure figcaption {
+  padding-left: 0;
+  font-size: 0.875rem;
+}
+
+/* headings, p, blockqute, font styles */
+/* css var values */
+:root {
+  --s1: 0px;
+  /* this needs to have px value or the calcs using it break */
+}
+
+/* my utility classes */
+.p-2 {
+  padding: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.border {
+  border: solid 1px;
+}
+
+.cluster .sp-bt {
+  justify-content: space-between;
+}
+
+.fb-500 {
+  flex-basis: 500px !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* positions */
+.position-sticky {
+  position: sticky !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+/* displays */
+.d-none {
+  display: none !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+/* every-layout.dev layout classes */
+.stack * + * {
+  margin-top: 1.5rem;
+}
+
+/* all utility css classes that can be used (shortcodes) */
+/* Grid classes */
+@supports (width: min(376px, 100%)) {
+  .card-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(376px, 100%), 1fr));
+    grid-gap: 1.5rem;
+  }
+}
+@supports (width: min(300px, 100%)) {
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-gap: 1.5rem;
+  }
+}
+@supports (width: min(250px, 100%)) {
+  .card-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    grid-gap: 1.5rem;
+  }
+}
+/* grid classes */
+/* all of the above will become part of base-css component */
+/* accordion component specific classes */
+cagov-accordion .cagov-accordion-card {
+  border-radius: 0.3rem !important;
+  margin-bottom: 0;
+  min-height: 3rem;
+  margin-top: 0.5rem;
+  border: solid 1px #ededef !important;
+}
+
+cagov-accordion .accordion-card-container {
+  display: block;
+  overflow: hidden;
+}
+
+cagov-accordion button.accordion-card-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  background-clip: border-box;
+  background-color: #ededef;
+  border: none;
+  position: relative;
+  width: 100%;
+  line-height: 3rem;
+}
+
+cagov-accordion.prog-enhanced button.accordion-card-header {
+  cursor: pointer;
+}
+
+cagov-accordion .accordion-title {
+  text-align: left;
+  margin-bottom: 0;
+  color: var(--primary-color, #064e66);
+  margin-right: auto;
+  width: 90%;
+  padding: 0 0.5rem 0 0 !important;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+cagov-accordion.prog-enhanced .accordion-card-container {
+  height: 0px;
+  transition: height 0.3s ease;
+}
+
+cagov-accordion.prog-enhanced .accordion-card-container .card-body {
+  padding-left: 1rem;
+  margin-top: 8px;
+}
+
+cagov-accordion.prog-enhanced .accordion-card-container .card-body ul {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+cagov-accordion .collapsed {
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.accordion-title h4,
+.accordion-title h3,
+.accordion-title h2 {
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 1.2rem !important;
+  font-weight: 700;
+  color: var(--primary-color, #064e66);
+  text-align: left !important;
+}
+
+button.accordion-card-header:hover {
+  background-color: var(--hover-color, #f9f9fa);
+}
+
+button.accordion-card-header:hover .accordion-title {
+  text-decoration: underline;
+}
+
+button.accordion-card-header:hover .accordion-title:hover {
+  text-decoration: underline;
+}
+
+button.accordion-card-header:focus {
+  outline-offset: -2px;
+}
+
+.accordion-icon svg line {
+  stroke-width: 4px;
+}
+
+cagov-accordion.prog-enhanced .accordion-alpha .plus-minus {
+  width: 2.125rem;
+  height: 2.125rem;
+  border: none;
+  overflow: hidden;
+  margin-left: 1rem;
+  color: var(--primary-color, #064e66);
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.prog-enhanced .accordion-alpha .plus-minus svg {
+  fill: var(--primary-color, #064e66);
+  width: 25px;
+  height: 25px;
+}
+
+.prog-enhanced .accordion-alpha-open cagov-plus .accordion-icon {
+  display: none !important;
+}
+
+.prog-enhanced .accordion-alpha-open cagov-minus .accordion-icon {
+  display: block !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .accordion-alpha-open + .accordion-card-container {
+    height: 100% !important;
+  }
+}
+/* agency footer */
+section.agency-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+  padding: 16px;
+}
+section.agency-footer a {
+  color: var(--primary-color, #064e66);
+}
+section.agency-footer a:hover {
+  color: var(--primary-hover-color, #043747);
+}
+section.agency-footer a:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+section.agency-footer .footer-logo:not(:empty) {
+  width: 54px;
+  margin-right: 24px;
+}
+section.agency-footer .footer-logo:not(:empty) img {
+  width: 100%;
+}
+section.agency-footer .footer-secondary-links {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+}
+section.agency-footer .footer-secondary-links a {
+  margin-right: 1.7rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+section.agency-footer .footer-social-links {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+section.agency-footer .footer-social-links a {
+  text-decoration: none;
+  padding-right: 0.3rem;
+  padding-left: 0.3rem;
+  transition: all 0.3s ease;
+}
+section.agency-footer .footer-social-links a svg path {
+  fill: var(--primary-color, #064e66);
+}
+section.agency-footer .footer-social-links a:hover svg path {
+  fill: var(--primary-dark-color, #1e1569);
+}
+
+@media (min-width: 991px) {
+  .footer-secondary-links,
+section.agency-footer .container {
+    flex-direction: row !important;
+    align-items: center;
+  }
+
+  .footer-social-links {
+    margin-left: auto;
+  }
+}
+.bg-light-grey {
+  background-color: var(--gray-100, #f9f9fa);
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Back to top button */
+cagov-back-to-top .back-to-top {
+  position: fixed;
+  z-index: 99999;
+  right: -100px;
+  font-size: var(--body-text, 1.125rem);
+  padding: 10px 10px 10px 10px;
+  bottom: 50px;
+  opacity: 0;
+  visibility: hidden;
+  color: var(--primary-color, #004abc);
+  border: 1px solid var(--primary-color, #004abc);
+  border-radius: 5px 0px 0px 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 768px) {
+  cagov-back-to-top .back-to-top {
+    font-size: var(--body-text-mobile, 1rem);
+    padding: 8px 8px 8px 8px;
+  }
+}
+cagov-back-to-top .back-to-top:hover {
+  color: var(--primary-dark-color, #003484);
+  border: 1px solid var(--primary-dark-color, #003484);
+  background-color: var(--gray-100, #f9f9fa);
+}
+cagov-back-to-top .back-to-top:hover svg path {
+  fill: var(--primary-dark-color, #003484);
+}
+cagov-back-to-top .back-to-top:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+cagov-back-to-top .back-to-top svg {
+  width: 16px;
+  position: relative;
+  top: 3px;
+}
+cagov-back-to-top .back-to-top svg path {
+  fill: var(--primary-color, #004abc);
+}
+cagov-back-to-top .back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  display: inline;
+  right: 0;
+}
+
+.branding {
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--white, #fff);
+  border-bottom: 1px solid var(--gray-300, #e1e0e3);
+}
+.branding .container {
+  max-width: var(--w-lg, "1176px");
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "org-name mobile-icons";
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  justify-items: start;
+}
+.branding .container.with-logo {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "logo mobile-icons" "org-name org-name";
+}
+.branding .container .search-container {
+  display: none;
+}
+.branding .grid-logo {
+  grid-area: logo;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+.branding .grid-org-name {
+  grid-area: org-name;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+  transition: all 0.3s;
+  color: var(--black, #000);
+  text-decoration: none;
+}
+.branding .grid-org-name:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+.branding .grid-search {
+  grid-area: search;
+  align-self: center;
+  justify-self: end;
+  min-width: 40%;
+  position: relative;
+  left: 4px;
+}
+.branding .grid-mobile-icons {
+  grid-area: mobile-icons;
+  align-self: center;
+  justify-self: end;
+}
+.branding .org-name-state {
+  display: block;
+  font-family: var(--org-name-state-font, "Public Sans", sans-serif);
+  font-size: var(--org-name-state-font-size, 1rem);
+  font-weight: var(--org-name-state-font-weight, 500);
+  line-height: var(--org-name-state-line-height, 1.2);
+  text-transform: var(--org-name-state-text-transform, none);
+}
+.branding .org-name-dept {
+  display: block;
+  font-family: var(--org-name-dept-font, "Public Sans", sans-serif);
+  font-size: var(--org-name-dept-font-size, 1.75rem);
+  font-weight: var(--org-name-dept-font-weight, 700);
+  line-height: var(--org-name-dept-line-height, 1.2);
+  text-transform: var(--org-name-dept-text-transform, none);
+}
+.branding .mobile-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 24px;
+}
+.branding .mobile-search {
+  margin: 0 !important;
+}
+.branding button.search-btn,
+.branding button.menu-btn {
+  padding: 0 !important;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+  align-items: center;
+  background: transparent;
+  overflow: visible;
+  padding: 10px;
+  color: var(--primary-color, #064e66);
+}
+.branding button.search-btn:hover,
+.branding button.menu-btn:hover {
+  color: var(--primary-dark-color, #043747);
+}
+.branding button.search-btn:hover .blue,
+.branding button.menu-btn:hover .blue {
+  fill: var(--primary-dark-color, #043747);
+}
+.branding button.search-btn:focus,
+.branding button.menu-btn:focus {
+  color: var(--primary-dark-color, #043747);
+  outline: 2px solid var(--highlight-color, #fdb81e);
+}
+.branding button.search-btn svg,
+.branding button.menu-btn svg {
+  display: inline-block;
+}
+.branding button.search-btn .blue,
+.branding button.menu-btn .blue {
+  fill: var(--primary-color, #064e66);
+}
+.branding .menu-trigger {
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: 0.3s;
+  transform-origin: top left;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  color: var(--primary-color, #064e66);
+  display: flex;
+  align-items: center;
+  right: 0;
+  transition: 0.3s;
+  transform-origin: center center;
+}
+.branding .menu-trigger .is-fixed {
+  position: fixed;
+}
+.branding .menu-trigger .hamburger-inner {
+  background-color: var(--primary-color, #064e66);
+}
+.branding .menu-trigger:hover {
+  color: var(--primary-dark-color, #043747);
+}
+.branding .menu-trigger:hover .hamburger-inner:before, .branding .menu-trigger:hover .hamburger-inner:after {
+  background-color: var(--primary-dark-color, #043747);
+}
+.branding .hamburger {
+  padding: 0.15rem 0.15rem;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  position: relative;
+  top: -2px;
+  height: 20px;
+  transition: all 0.2s ease-in-out;
+  vertical-align: middle;
+  z-index: 10000;
+  margin-right: 0.5rem;
+}
+.branding .hamburger-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+.branding .hamburger-inner {
+  display: block;
+  top: 50%;
+  width: 20px;
+  margin-top: -1px;
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.branding .hamburger-inner, .branding .hamburger-inner:before, .branding .hamburger-inner:after {
+  height: 2px;
+  border-radius: 0;
+  position: absolute;
+  transition-property: transform, width, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.branding .hamburger-inner:before, .branding .hamburger-inner:after {
+  width: 20px;
+  content: "";
+  display: block;
+}
+.branding .hamburger-inner:before {
+  top: -6px;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in, width 0.1s 0.12s ease-out;
+}
+.branding .hamburger-inner:after {
+  bottom: -6px;
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.1s 0.12s ease-out;
+}
+
+.display-menu .cagov-nav.hamburger .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  width: 12px;
+}
+.display-menu .cagov-nav.hamburger .hamburger-inner, .display-menu .cagov-nav.hamburger .hamburger-inner:before, .display-menu .cagov-nav.hamburger .hamburger-inner:after {
+  width: 20px !important;
+}
+.display-menu .cagov-nav.hamburger .hamburger-inner:before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.display-menu .cagov-nav.hamburger .hamburger-inner:after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.branding .search-container .site-search,
+cagov-navoverlay .search-container .site-search {
+  display: flex;
+  position: relative;
+}
+.branding .search-container .site-search .search-textfield,
+cagov-navoverlay .search-container .site-search .search-textfield {
+  border: 1px solid;
+  border-color: var(--primary-color, #004abc);
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+}
+.branding .search-container .site-search .search-textfield:focus,
+cagov-navoverlay .search-container .site-search .search-textfield:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+  outline-offset: -2px;
+}
+.branding .search-container .site-search .search-submit,
+cagov-navoverlay .search-container .site-search .search-submit {
+  position: relative;
+  right: 5px;
+  outline-offset: -2px;
+  background-color: var(--primary-color, #004abc);
+  border: 1px solid var(--primary-color, #004abc);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 7px 14px 4px 14px;
+}
+.branding .search-container .site-search .search-submit:hover,
+cagov-navoverlay .search-container .site-search .search-submit:hover {
+  background-color: var(--primary-dark-color, #003484);
+  border-color: var(--primary-dark-color, #003484);
+}
+.branding .search-container .site-search .search-submit:focus,
+cagov-navoverlay .search-container .site-search .search-submit:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+.branding .search-container .site-search .search-submit svg path,
+cagov-navoverlay .search-container .site-search .search-submit svg path {
+  fill: var(--white, #fff);
+}
+.branding .search-container .site-search .search-close,
+cagov-navoverlay .search-container .site-search .search-close {
+  color: var(--primary-color, #004abc);
+  text-decoration: underline;
+  border: none;
+  background-color: var(--gray-100, #f9f9fa);
+  padding: 0 15px 0 15px;
+}
+.branding .search-container .site-search .search-close:hover,
+cagov-navoverlay .search-container .site-search .search-close:hover {
+  color: var(--primary-dark-color, #003484);
+  text-decoration: none;
+}
+.branding .search-container .site-search .search-close:focus,
+cagov-navoverlay .search-container .site-search .search-close:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+.branding .search-container--small,
+cagov-navoverlay .search-container--small {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.branding .search-container--small.hidden-search,
+cagov-navoverlay .search-container--small.hidden-search {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-icons,
+.search-close {
+    display: none !important;
+  }
+
+  .branding .container {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "org-name search";
+  }
+  .branding .container.with-logo {
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo org-name search";
+  }
+  .branding .search-container {
+    display: block !important;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.no-deco {
+  text-decoration: none;
+}
+
+.cagov-card {
+  border: 1px solid var(--gray-300, #e1e0e3);
+  padding: 1rem;
+  border-bottom: 0.3rem solid #004abc;
+  border-bottom: 0.3rem solid var(--primary-color, #004abc);
+  border-radius: 0.3rem;
+  min-width: 250px;
+  min-height: 50px;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.cagov-card:hover {
+  background-color: var(--gray-100, #f9f9fa);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.cagov-card:focus {
+  outline: var(--highlight-color, #fec02f);
+}
+.cagov-card .card-text {
+  color: var(--primary-color, #004abc) !important;
+  font-size: 1.75rem;
+  line-height: 40px;
+  padding: 0;
+  margin: 0;
+}
+.cagov-card svg {
+  fill: var(--primary-color, #004abc);
+  width: 1rem;
+  margin-top: 0.2rem;
+  margin-left: 1rem;
+  max-height: 25px;
+}
+
+.cagov-grid,
+.cagov-grid .block-editor-block-list__layout {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+/* editor override */
+.cagov-grid .block-editor-block-list__block {
+  margin: 0;
+}
+
+@supports (width: min(250px, 100%)) {
+  .cagov-grid,
+.cagov-grid .block-editor-block-list__layout {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+}
+/* CONTENT NAVIGATION */
+sidebar cagov-content-navigation .label {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.2px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+sidebar cagov-content-navigation ul,
+sidebar cagov-content-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),
+sidebar cagov-content-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {
+  margin: 0;
+  text-indent: 0;
+  padding: 0;
+}
+
+sidebar cagov-content-navigation ul li {
+  padding-top: 14px;
+  padding-bottom: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid var(--gray-300, #e1e0e3);
+  line-height: 28.2px;
+  list-style: none;
+}
+sidebar cagov-content-navigation ul li:first-child {
+  border-top: 1px solid var(--gray-300, #e1e0e3);
+}
+sidebar cagov-content-navigation ul li a {
+  text-decoration: none;
+}
+sidebar cagov-content-navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px) {
+  cagov-content-navigation .label {
+    display: none;
+  }
+
+  .sidebar-container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  cagov-content-navigation ul li a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+/* External link icon */
+.external-link-icon {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  left: 1px;
+  top: -2px;
+  text-decoration: none;
+  min-width: 0.85rem;
+}
+.external-link-icon svg path {
+  fill: var(--primary-color, #004abc);
+}
+
+main a:hover .external-link-icon svg path,
+.agency-footer a:hover .external-link-icon svg path {
+  fill: var(--primary-dark-color, #003484);
+}
+
+footer a .external-link-icon svg path {
+  fill: var(--black, #000);
+}
+
+/* External link icon exceptions */
+.cagov-card .external-link-icon,
+.wp-block-button__link .external-link-icon,
+.footer-social-links a .external-link-icon,
+img ~ .external-link-icon,
+svg ~ .external-link-icon,
+.pdf-link-icon ~ .external-link-icon {
+  display: none;
+}
+
+/* sidebar layout */
+.cagov-with-sidebar {
+  overflow: hidden;
+}
+
+.cagov-with-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.cagov-with-sidebar > * > * {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.cagov-with-sidebar-left > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(30% - var(0px));
+}
+
+.cagov-with-sidebar-right > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(30% - 0px);
+}
+
+/* generic utility styles, should come from base-css */
+.stack * + * {
+  margin-top: 1.5rem;
+}
+
+.cagov-border {
+  border: solid 1px;
+}
+
+.no-deco {
+  text-decoration: none;
+}
+
+/* reset */
+h3 {
+  margin: 0;
+}
+
+/* spacing overrides, can these come from base-css? */
+.cagov-featured-section h2 {
+  padding-bottom: 16px;
+}
+
+.cagov-hero-body-content p {
+  margin-bottom: 16px;
+}
+
+.cagov-p-2 {
+  padding: 1.5rem;
+}
+
+.cagov-bkgrd-gry {
+  background-color: var(--gray-100, #f9f9fa);
+}
+
+/* featured section specific style */
+.cagov-featured-sidebar {
+  max-width: 400px;
+  margin-top: 0;
+}
+
+.cagov-featured-section {
+  margin: 0 0 3rem 0;
+}
+
+.cagov-featured-section .components-button.image-button {
+  display: block;
+  height: 100%;
+  margin: 0 0 3rem 0;
+  padding: 0;
+}
+
+.cagov-featured-image {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height: 100%;
+  min-width: 18rem;
+  min-height: 20rem;
+  max-height: 420px;
+}
+
+/* hero sidebar swap image on left to go on top when it wraps */
+@media (max-width: 719px) {
+  .cagov-with-sidebar > * {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 1200px) {
+  .cagov-featured-sidebar {
+    max-width: 34%;
+  }
+}
+/* call to action */
+/* styles applied to elements WordPress is adding to the markup */
+.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-color, #33705b);
+  /* variable used with fallback in case it is not defined */
+  color: var(--white, #ffffff);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+}
+
+.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-hover-color, #33705b);
+  /* variable used with fallback in case it is not defined */
+  color: var(--white, #ffffff);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+}
+
+.cagov-hero-body-content .wp-block-button__link {
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+/* sidebar layout */
+.cagov-with-sidebar {
+  overflow: hidden;
+}
+
+.cagov-with-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.cagov-with-sidebar > * > * {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.cagov-with-sidebar-left > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(30% - var(0px));
+}
+
+.cagov-with-sidebar-right > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(30% - 0px);
+}
+
+/* generic utility styles, should come from base-css */
+.stack * + * {
+  margin-top: 1.5rem;
+}
+
+.cagov-border {
+  border: solid 1px;
+}
+
+.no-deco {
+  text-decoration: none;
+}
+
+/* reset */
+h3 {
+  margin: 0;
+}
+
+/* spacing overrides, can these come from base-css? */
+.cagov-featured-section h2 {
+  padding-bottom: 16px;
+}
+
+.cagov-hero-body-content p {
+  margin-bottom: 16px;
+}
+
+.cagov-p-2 {
+  padding: 1.5rem;
+}
+
+.cagov-bkgrd-gry {
+  background-color: var(--gray-100, #f9f9fa);
+}
+
+/* featured section specific style */
+.cagov-featured-sidebar {
+  max-width: 400px;
+  margin-top: 0;
+}
+
+.cagov-featured-section {
+  margin: 0 0 3rem 0;
+}
+
+.cagov-featured-section .components-button.image-button {
+  display: block;
+  height: 100%;
+  margin: 0 0 3rem 0;
+  padding: 0;
+}
+
+.cagov-featured-image {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height: 100%;
+  min-width: 18rem;
+  min-height: 20rem;
+  max-height: 420px;
+}
+
+/* hero sidebar swap image on left to go on top when it wraps */
+@media (max-width: 719px) {
+  .cagov-with-sidebar > * {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 1200px) {
+  .cagov-featured-sidebar {
+    max-width: 34%;
+  }
+}
+/* call to action */
+/* styles applied to elements WordPress is adding to the markup */
+.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-color, #33705b);
+  /* variable used with fallback in case it is not defined */
+  color: var(--white, #ffffff);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+}
+
+.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+  /* defined here for when css vars are not supported */
+  background-color: var(--primary-hover-color, #33705b);
+  /* variable used with fallback in case it is not defined */
+  color: var(--white, #ffffff);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+}
+
+.cagov-hero-body-content .wp-block-button__link {
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+cagov-feedback {
+  width: 100%;
+}
+cagov-feedback .feedback-form {
+  background: var(--primary-dark-color, #003484);
+  padding: 1rem;
+  border-radius: 0.3125rem;
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+}
+cagov-feedback .feedback-form-question {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+cagov-feedback .feedback-form-label {
+  color: #fff;
+  background-color: var(--primary-dark-color, #003484);
+  font-size: 1.125rem;
+  display: block;
+  margin-right: 1rem;
+  transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
+  line-height: 3rem;
+  width: auto;
+}
+@media (max-width: 768px) {
+  cagov-feedback .feedback-form-label {
+    line-height: unset;
+    margin-bottom: 1rem;
+  }
+}
+cagov-feedback .feedback-form-button {
+  padding: 1rem;
+  color: var(--primary-dark-color, #003484);
+  border: none;
+  border-radius: 0.3rem;
+  transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
+  cursor: pointer;
+  margin: 0 0.5rem 0 0;
+  display: inline !important;
+  /* defensive overrides */
+  position: relative;
+  text-transform: none;
+  top: auto;
+  right: auto;
+  background: #fff;
+}
+cagov-feedback .feedback-form-button:hover {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  text-decoration: underline;
+}
+cagov-feedback .feedback-form-button:focus {
+  box-shadow: 0 0 0 2px #fff;
+}
+cagov-feedback .feedback-form-button .feedback-yes {
+  margin-right: 1rem;
+}
+cagov-feedback .feedback-form-add {
+  padding-top: 0;
+  display: none;
+}
+@media (max-width: 768px) {
+  cagov-feedback .feedback-form-add {
+    text-align: left;
+    padding-top: 0;
+  }
+}
+cagov-feedback .feedback-form-add-grid {
+  position: relative;
+  margin-top: 1rem;
+  display: inline-flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  cagov-feedback .feedback-form-add-grid {
+    display: block;
+  }
+}
+cagov-feedback .feedback-form-textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-dark-color, #003484);
+  max-width: 90%;
+  height: 127px;
+  width: 600px;
+}
+cagov-feedback .feedback-form-thanks {
+  display: none;
+  color: #fff;
+}
+cagov-feedback .feedback-form-error {
+  position: relative;
+  top: 100%;
+  left: 0;
+  display: none;
+  font-weight: 300;
+  text-align: left;
+}
+
+/* Tablet and wider */
+/* Desktop and wider */
+/* utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden-search {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-icons,
+.search-close {
+    display: none !important;
+  }
+}
+/* MAIN MENU */
+.cagov-nav.mobile-search {
+  margin-top: 1rem;
+}
+
+.cagov-nav.menu-trigger {
+  margin-top: 1rem;
+  padding: 0.5em 1em 0.5em 0;
+  transition: 0.3s;
+  transform-origin: top left;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  right: 0;
+  transition: 0.3s;
+  transform-origin: center center;
+}
+.cagov-nav.menu-trigger .is-fixed {
+  position: fixed;
+}
+@media (max-width: 767px) {
+  .cagov-nav.menu-trigger {
+    z-index: 2000;
+  }
+}
+@media (min-width: 768px) {
+  .cagov-nav.menu-trigger {
+    z-index: 2000;
+  }
+}
+
+cagov-navoverlay .container {
+  padding: 0;
+  margin: 0;
+}
+cagov-navoverlay .container .search-container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* EXPANDED MENU SYTLES */
+cagov-navoverlay {
+  border-bottom: 1px solid var(--gray-300, #e1e0e3);
+  background-color: #ffffff;
+}
+cagov-navoverlay a.expanded-menu-section-header-link {
+  /* jbum - this is to override the inherited text-decoration from .interior_page a */
+  text-decoration: none;
+}
+cagov-navoverlay.display-menu .expanded-menu {
+  display: block;
+}
+cagov-navoverlay .mobile-icons {
+  display: block;
+  margin-left: auto;
+  display: flex;
+}
+cagov-navoverlay .mobile-icons .search-btn {
+  display: flex;
+  align-items: center;
+}
+cagov-navoverlay .mobile-icons .search-btn svg {
+  margin-right: 0.5rem;
+}
+cagov-navoverlay .mobile-icons .search-btn,
+cagov-navoverlay .mobile-icons .menu-btn {
+  border: none;
+  background: transparent;
+  overflow: visible;
+  padding: 10px 10px;
+  margin-right: 10px;
+}
+cagov-navoverlay .mobile-icons .search-btn:hover,
+cagov-navoverlay .mobile-icons .menu-btn:hover {
+  color: var(--primary-dark-color, #064e66);
+}
+cagov-navoverlay .mobile-icons .search-btn:hover .blue,
+cagov-navoverlay .mobile-icons .menu-btn:hover .blue {
+  fill: var(--primary-dark-color, #064e66);
+}
+cagov-navoverlay .mobile-icons .search-btn:focus,
+cagov-navoverlay .mobile-icons .menu-btn:focus {
+  color: var(--primary-dark-color, #064e66);
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+cagov-navoverlay .mobile-icons .search-btn svg,
+cagov-navoverlay .mobile-icons .menu-btn svg {
+  position: relative;
+  top: 1px;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay {
+    display: block;
+  }
+  cagov-navoverlay .mobile-icons {
+    display: none;
+  }
+}
+cagov-navoverlay .expanded-menu {
+  display: none;
+  max-width: calc(var(--w-lg, "1176px") + 32px);
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu {
+    display: block;
+    padding: 0 16px;
+  }
+}
+cagov-navoverlay .expanded-menu-grid {
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-grid {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+    align-content: flex-start;
+    align-items: stretch;
+  }
+}
+cagov-navoverlay .expanded-menu-col {
+  text-align: left;
+}
+cagov-navoverlay .expanded-menu-section {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section.expanded {
+    z-index: 3;
+  }
+}
+cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
+  max-height: none;
+  top: 2.35rem;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section {
+    padding: 0;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  cagov-navoverlay .expanded-menu-section:last-of-type {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section.mobile-only {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section .expanded-menu-dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    min-width: 17rem;
+    background: #fff;
+    padding: 0;
+    border: none;
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section .expanded-menu-section-header {
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  cagov-navoverlay .expanded-menu-section {
+    border-top: solid 1px var(--gray-300, #e1e0e3);
+  }
+}
+@media (max-width: 767px) {
+  cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
+    max-height: 100rem;
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
+    max-height: none;
+    top: 59px;
+    padding: 0.5rem 1rem 1rem 1rem;
+    border: solid 1px #ccc;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-section-header-arrow-svg {
+  transform: rotate(180deg);
+}
+cagov-navoverlay .expanded-menu-section-header-link {
+  display: flex !important;
+  column-gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: normal;
+  font-size: 1.125rem;
+  cursor: pointer !important;
+  width: 100%;
+  text-transform: none;
+  display: block;
+  text-align: left;
+  border: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: var(--primary-color, #064e66);
+  outline-offset: -2px;
+}
+cagov-navoverlay .expanded-menu-section-header-link:active {
+  background: transparent;
+}
+cagov-navoverlay .expanded-menu-section-header-link:hover {
+  text-decoration: underline;
+  color: var(--primary-hover-color, #043747);
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section-header-link {
+    justify-content: flex-start;
+  }
+}
+cagov-navoverlay .expanded-menu-section-header-arrow {
+  max-width: 1rem;
+  max-height: 1rem;
+  transform: translateY(-50%);
+  display: block;
+  transition: all 0.5s cubic-bezier(0.57, 0.2, 0.21, 0.89);
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section-header-arrow {
+    transform: none;
+  }
+}
+cagov-navoverlay .expanded-menu-section-header-arrow-svg {
+  width: 100%;
+  display: inline-block;
+  transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section-header-arrow-svg {
+    display: block;
+  }
+}
+cagov-navoverlay .expanded-menu-dropdown {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.57, 0.2, 0.21, 0.89);
+}
+cagov-navoverlay .expanded-menu-dropdown-link {
+  font-weight: 400;
+  font-size: 1.125rem;
+  padding: 0.5rem 0.25rem;
+  margin: 0.15rem 0 0.15rem 2px;
+  display: table;
+  transition: color 0.3s cubic-bezier(0.57, 0.2, 0.21, 0.89);
+  text-decoration: none;
+  width: 100%;
+}
+cagov-navoverlay .expanded-menu-dropdown-link:hover {
+  text-decoration: underline;
+}
+cagov-navoverlay .expanded-menu-dropdown-link.current-page-highlight {
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-dropdown-link {
+    padding: 0.5rem 0;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  cagov-navoverlay .expanded-menu-dropdown-link {
+    padding: 0.5rem 0.25rem 0.5rem 1rem;
+    outline-offset: -4px;
+  }
+  cagov-navoverlay .expanded-menu-dropdown-link:first-child {
+    padding-top: 1rem;
+  }
+  cagov-navoverlay .expanded-menu-dropdown-link:last-child {
+    padding-bottom: 1rem;
+  }
+}
+cagov-navoverlay .expanded-menu-grouping:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+cagov-navoverlay.display-menu {
+  overflow: hidden;
+}
+cagov-navoverlay.display-menu .expanded-menu {
+  transform: translateX(0);
+  visibility: visible;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay.display-menu .expanded-menu {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+cagov-navoverlay.display-menu .expanded-menu:focus {
+  outline: none;
+}
+@media (max-width: 767px) {
+  cagov-navoverlay.display-menu .expanded-menu {
+    margin-left: 0;
+    border-bottom: solid 1px var(--gray-300, #e1e0e3);
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay.display-menu .expanded-menu-col, cagov-navoverlay.display-menu .expanded-menu-search {
+    transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay.display-menu .expanded-menu-col.section-get-help {
+    transition-delay: 0.15s !important;
+  }
+  cagov-navoverlay.display-menu .expanded-menu-col.section-health-info {
+    transition-delay: 0.3s !important;
+  }
+  cagov-navoverlay.display-menu .expanded-menu-col.section-working-living-safely {
+    transition-delay: 0.45s !important;
+  }
+  cagov-navoverlay.display-menu .expanded-menu-col.section-you-help {
+    transition-delay: 0.6s !important;
+  }
+}
+
+cagov-navoverlay .expanded-menu-close-mobile-svg {
+  width: 1rem;
+  transform: rotate(180deg);
+}
+
+.expanded-menu-section-header-arrow-svg {
+  max-width: 20px;
+}
+
+/* Tablet and wider */
+/* Desktop and wider */
+/* utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden-search {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-icons,
+.search-close {
+    display: none !important;
+  }
+}
+/* MAIN MENU */
+.cagov-nav.mobile-search {
+  margin-top: 1rem;
+}
+
+.cagov-nav.menu-trigger {
+  margin-top: 1rem;
+  padding: 0.5em 1em 0.5em 0;
+  transition: 0.3s;
+  transform-origin: top left;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  right: 0;
+  transition: 0.3s;
+  transform-origin: center center;
+}
+.cagov-nav.menu-trigger .is-fixed {
+  position: fixed;
+}
+@media (max-width: 767px) {
+  .cagov-nav.menu-trigger {
+    z-index: 2000;
+  }
+}
+@media (min-width: 768px) {
+  .cagov-nav.menu-trigger {
+    z-index: 2000;
+  }
+}
+
+cagov-navoverlay .container {
+  padding: 0;
+  margin: 0;
+}
+cagov-navoverlay .container .search-container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* EXPANDED MENU SYTLES */
+cagov-navoverlay {
+  border-bottom: 1px solid var(--gray-300, #e1e0e3);
+  background-color: #ffffff;
+}
+cagov-navoverlay a.expanded-menu-section-header-link {
+  /* jbum - this is to override the inherited text-decoration from .interior_page a */
+  text-decoration: none;
+}
+cagov-navoverlay.display-menu .expanded-menu {
+  display: block;
+}
+cagov-navoverlay .mobile-icons {
+  display: block;
+  margin-left: auto;
+  display: flex;
+}
+cagov-navoverlay .mobile-icons .search-btn {
+  display: flex;
+  align-items: center;
+}
+cagov-navoverlay .mobile-icons .search-btn svg {
+  margin-right: 0.5rem;
+}
+cagov-navoverlay .mobile-icons .search-btn,
+cagov-navoverlay .mobile-icons .menu-btn {
+  border: none;
+  background: transparent;
+  overflow: visible;
+  padding: 10px 10px;
+  margin-right: 10px;
+}
+cagov-navoverlay .mobile-icons .search-btn:hover,
+cagov-navoverlay .mobile-icons .menu-btn:hover {
+  color: var(--primary-dark-color, #064e66);
+}
+cagov-navoverlay .mobile-icons .search-btn:hover .blue,
+cagov-navoverlay .mobile-icons .menu-btn:hover .blue {
+  fill: var(--primary-dark-color, #064e66);
+}
+cagov-navoverlay .mobile-icons .search-btn:focus,
+cagov-navoverlay .mobile-icons .menu-btn:focus {
+  color: var(--primary-dark-color, #064e66);
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+cagov-navoverlay .mobile-icons .search-btn svg,
+cagov-navoverlay .mobile-icons .menu-btn svg {
+  position: relative;
+  top: 1px;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay {
+    display: block;
+  }
+  cagov-navoverlay .mobile-icons {
+    display: none;
+  }
+}
+cagov-navoverlay .expanded-menu {
+  display: none;
+  max-width: calc(var(--w-lg, "1176px") + 32px);
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu {
+    display: block;
+    padding: 0 16px;
+  }
+}
+cagov-navoverlay .expanded-menu-grid {
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-grid {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+    align-content: flex-start;
+    align-items: stretch;
+  }
+}
+cagov-navoverlay .expanded-menu-col {
+  text-align: left;
+}
+cagov-navoverlay .expanded-menu-section {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section.expanded {
+    z-index: 3;
+  }
+}
+cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
+  max-height: none;
+  top: 2.35rem;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section {
+    padding: 0;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  cagov-navoverlay .expanded-menu-section:last-of-type {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section.mobile-only {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section .expanded-menu-dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    min-width: 17rem;
+    background: #fff;
+    padding: 0;
+    border: none;
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section .expanded-menu-section-header {
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  cagov-navoverlay .expanded-menu-section {
+    border-top: solid 1px var(--gray-300, #e1e0e3);
+  }
+}
+@media (max-width: 767px) {
+  cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
+    max-height: 100rem;
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-dropdown {
+    max-height: none;
+    top: 59px;
+    padding: 0.5rem 1rem 1rem 1rem;
+    border: solid 1px #ccc;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+cagov-navoverlay .expanded-menu-section.expanded .expanded-menu-section-header-arrow-svg {
+  transform: rotate(180deg);
+}
+cagov-navoverlay .expanded-menu-section-header-link {
+  display: flex !important;
+  column-gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: normal;
+  font-size: 1.125rem;
+  cursor: pointer !important;
+  width: 100%;
+  text-transform: none;
+  display: block;
+  text-align: left;
+  border: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: var(--primary-color, #064e66);
+  outline-offset: -2px;
+}
+cagov-navoverlay .expanded-menu-section-header-link:active {
+  background: transparent;
+}
+cagov-navoverlay .expanded-menu-section-header-link:hover {
+  text-decoration: underline;
+  color: var(--primary-hover-color, #043747);
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section-header-link {
+    justify-content: flex-start;
+  }
+}
+cagov-navoverlay .expanded-menu-section-header-arrow {
+  max-width: 1rem;
+  max-height: 1rem;
+  transform: translateY(-50%);
+  display: block;
+  transition: all 0.5s cubic-bezier(0.57, 0.2, 0.21, 0.89);
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section-header-arrow {
+    transform: none;
+  }
+}
+cagov-navoverlay .expanded-menu-section-header-arrow-svg {
+  width: 100%;
+  display: inline-block;
+  transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-section-header-arrow-svg {
+    display: block;
+  }
+}
+cagov-navoverlay .expanded-menu-dropdown {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.57, 0.2, 0.21, 0.89);
+}
+cagov-navoverlay .expanded-menu-dropdown-link {
+  font-weight: 400;
+  font-size: 1.125rem;
+  padding: 0.5rem 0.25rem;
+  margin: 0.15rem 0 0.15rem 2px;
+  display: table;
+  transition: color 0.3s cubic-bezier(0.57, 0.2, 0.21, 0.89);
+  text-decoration: none;
+  width: 100%;
+}
+cagov-navoverlay .expanded-menu-dropdown-link:hover {
+  text-decoration: underline;
+}
+cagov-navoverlay .expanded-menu-dropdown-link.current-page-highlight {
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay .expanded-menu-dropdown-link {
+    padding: 0.5rem 0;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  cagov-navoverlay .expanded-menu-dropdown-link {
+    padding: 0.5rem 0.25rem 0.5rem 1rem;
+    outline-offset: -4px;
+  }
+  cagov-navoverlay .expanded-menu-dropdown-link:first-child {
+    padding-top: 1rem;
+  }
+  cagov-navoverlay .expanded-menu-dropdown-link:last-child {
+    padding-bottom: 1rem;
+  }
+}
+cagov-navoverlay .expanded-menu-grouping:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+cagov-navoverlay.display-menu {
+  overflow: hidden;
+}
+cagov-navoverlay.display-menu .expanded-menu {
+  transform: translateX(0);
+  visibility: visible;
+}
+@media (min-width: 768px) {
+  cagov-navoverlay.display-menu .expanded-menu {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+cagov-navoverlay.display-menu .expanded-menu:focus {
+  outline: none;
+}
+@media (max-width: 767px) {
+  cagov-navoverlay.display-menu .expanded-menu {
+    margin-left: 0;
+    border-bottom: solid 1px var(--gray-300, #e1e0e3);
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay.display-menu .expanded-menu-col, cagov-navoverlay.display-menu .expanded-menu-search {
+    transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 768px) {
+  cagov-navoverlay.display-menu .expanded-menu-col.section-get-help {
+    transition-delay: 0.15s !important;
+  }
+  cagov-navoverlay.display-menu .expanded-menu-col.section-health-info {
+    transition-delay: 0.3s !important;
+  }
+  cagov-navoverlay.display-menu .expanded-menu-col.section-working-living-safely {
+    transition-delay: 0.45s !important;
+  }
+  cagov-navoverlay.display-menu .expanded-menu-col.section-you-help {
+    transition-delay: 0.6s !important;
+  }
+}
+
+cagov-navoverlay .expanded-menu-close-mobile-svg {
+  width: 1rem;
+  transform: rotate(180deg);
+}
+
+.expanded-menu-section-header-arrow-svg {
+  max-width: 20px;
+}
+
+cagov-pagination .cagov-pagination__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 !important;
+  display: flex;
+}
+cagov-pagination .cagov-pagination__item {
+  border: 1px solid #EDEDEF;
+  border-radius: 0.3rem;
+  margin: 0.25rem;
+}
+cagov-pagination .cagov-pagination__item a {
+  padding: 0.75rem 0.875rem;
+  display: inline-block;
+  color: var(--primary-color, #064E66);
+  text-decoration: none;
+}
+cagov-pagination .cagov-pagination__item:hover {
+  background: #F9F9FA;
+}
+cagov-pagination .cagov-pagination__item:hover a {
+  text-decoration: underline;
+}
+cagov-pagination .cagov-pagination__item.cagov-pagination-current {
+  background-color: #064E66;
+  background-color: var(--primary-color, #064E66);
+}
+cagov-pagination .cagov-pagination__item.cagov-pagination-current a {
+  color: #fff;
+}
+cagov-pagination .cagov-pagination__item.cagov-pagination__overflow {
+  border: none;
+  padding: 0.875rem 0;
+}
+cagov-pagination .cagov-pagination__item.cagov-pagination__overflow:hover {
+  background: inherit;
+}
+cagov-pagination .cagov-pagination__link-inactive {
+  color: grey;
+  border-color: grey;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pdf-link-icon {
+  display: inline-block;
+  outline: 1px solid;
+  outline-offset: -2px;
+  padding: 0;
+  position: relative;
+  left: 1px;
+  top: -3px;
+  line-height: 0.9rem;
+  text-decoration: none;
+}
+.pdf-link-icon svg path {
+  fill: var(--primary-color, #064e66);
+}
+
+.sr-only {
+  height: unset !important;
+  text-indent: -10000px;
+  width: unset !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+}
+
+ol.cagov-regulatory-outline, ol.cagov-regulatory-outline ol {
+  counter-reset: section;
+  list-style-type: none;
+  margin-left: 32px;
+  padding-left: 32px;
+}
+ol.cagov-regulatory-outline li, ol.cagov-regulatory-outline ol li {
+  counter-increment: section;
+  list-style-type: none;
+  margin: 16px 0;
+  position: relative;
+}
+ol.cagov-regulatory-outline li::before, ol.cagov-regulatory-outline ol li::before {
+  content: "(" counter(section, lower-alpha) ") ";
+  width: 100px;
+  margin-left: -32px;
+  padding-right: 32px;
+  display: inline-block;
+  position: absolute;
+  left: -50px;
+  white-space: nowrap;
+  text-align: right;
+}
+ol.cagov-regulatory-outline ol li:before, ol.cagov-regulatory-outline ol ol li:before {
+  content: "(" counter(section, decimal) ") ";
+}
+ol.cagov-regulatory-outline ol li ol li:before, ol.cagov-regulatory-outline ol ol li ol li:before {
+  content: "(" counter(section, upper-alpha) ") ";
+}
+ol.cagov-regulatory-outline ol li ol li ol li:before, ol.cagov-regulatory-outline ol ol li ol li ol li:before {
+  content: "(" counter(section, lower-roman) ") ";
+}
+
+/* skip-to-content */
+#skip-to-content {
+  position: relative;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  z-index: 999;
+}
+#skip-to-content a {
+  width: 0;
+  height: 0;
+  text-align: center;
+  position: absolute !important;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  clip: unset;
+  background-color: white;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  overflow: hidden;
+}
+#skip-to-content a:focus {
+  width: 160px;
+  height: 27px;
+}
+
+/* footer */
+footer {
+  font-size: 1rem;
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+  padding: 16px;
+}
+footer a:hover {
+  color: var(--primary-dark-color, #1e1569);
+}
+footer a:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+footer .footer-secondary-links {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-secondary-links a {
+  margin-right: 24px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+footer .footer-secondary-links a:hover {
+  text-decoration: none;
+}
+footer .bg-light-grey svg {
+  padding: 0;
+}
+footer .bg-light-grey svg .ca {
+  fill: var(--cagov-highlight, #fec02f);
+}
+footer .bg-light-grey svg .gov {
+  fill: var(--cagov-primary-dark, #003484);
+}
+footer .cagov-logo {
+  padding: 0 24px 0 0;
+}
+footer .bg-light-grey a,
+footer .copyright {
+  color: var(--black, #000);
+}
+
+.bg-light-grey {
+  background-color: var(--gray-100, #f9f9fa);
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+@media (min-width: 991px) {
+  .footer-secondary-links,
+footer .container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/* translate widget loader */
+#google_translate_element {
+  font-size: 0.85rem;
+}
+
+/*official*/
+.official-header {
+  background-color: var(--gray-100, #f9f9fa);
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--gray-200, #ededef);
+  /* google translate */
+}
+@media (max-width: 767px) {
+  .official-header {
+    width: 100vw;
+    padding: 0.5rem 0;
+  }
+}
+.official-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: var(--w-lg, 1176px);
+  min-height: 40px;
+  margin: 0 auto;
+  padding: 0 16px 0 16px;
+}
+.official-header .official-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.official-header .official-logo .cagov-logo {
+  margin: 0 0 0 0;
+  display: flex;
+}
+.official-header svg {
+  padding: 0;
+  width: 38px;
+}
+.official-header svg .ca {
+  fill: var(--cagov-highlight, #fec02f);
+}
+.official-header svg .gov {
+  fill: var(--cagov-primary-dark, #003484);
+}
+.official-header .official-tag {
+  margin: 0 var(--spacing-base, 8px);
+  font-size: 0.95rem;
+  display: inherit;
+}
+.official-header .official-languages a {
+  color: var(--black, #000);
+  padding: 0 0.5rem 0 0.5rem;
+}
+.official-header .official-languages a:hover {
+  color: var(--primary-dark-color, #4a1106);
+}
+.official-header .official-languages {
+  display: flex;
+  flex-wrap: wrap;
+}
+.official-header .official-languages .dropdown {
+  position: relative;
+}
+.official-header .official-languages button.offcial-more {
+  padding-right: 0;
+  border: none;
+  text-decoration: underline;
+  background-color: var(--white, #fff);
+  transition: transform 0.3s;
+}
+.official-header .official-languages button.offcial-more:hover {
+  color: var(--primary-dark-color, #4a1106);
+}
+.official-header .official-languages button.offcial-more[aria-expanded=false] .caret-down {
+  transition: all 0.3s;
+}
+.official-header .official-languages button.offcial-more[aria-expanded=false] .caret-down svg {
+  padding: 0 0 0 0;
+  width: 20px;
+  height: 18px;
+  overflow: visible;
+  position: relative;
+  right: 5px;
+}
+.official-header .official-languages button.offcial-more[aria-expanded=true] .caret-down {
+  transition: transform 0.3s;
+}
+.official-header .official-languages button.offcial-more[aria-expanded=true] .caret-down svg {
+  padding: 0 0 0 0;
+  width: 20px;
+  height: 18px;
+  position: relative;
+  top: 8px;
+  left: 4px;
+  overflow: visible;
+  transform: rotate(180deg);
+}
+.official-header .official-languages .dropdown-content {
+  background-clip: padding-box;
+  background-color: var(--white, #fff);
+  border: 1px solid var(--primary-color, #064e66);
+  border-radius: 0.25rem;
+  padding: 15px;
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  text-align: left;
+  z-index: 1000;
+  min-width: 150px;
+  display: none;
+}
+.official-header .official-languages .dropdown-content.show {
+  display: flex;
+  flex-direction: column;
+}
+.official-header .goog-te-gadget {
+  max-height: 42px;
+  overflow: hidden;
+}
+.official-header .goog-te-gadget .goog-te-combo {
+  /* hardcoded translate widget stuff from cannabis site */
+  background-color: #fff;
+  border: 1px solid #bbb;
+  padding: 0.25rem;
+  color: #4e4e4e;
+}
+.official-header .goog-logo-link {
+  display: none;
+}
+.official-header #google_translate_element .skiptranslate.goog-te-gadget,
+.official-header .skiptranslate.goog-te-gadget a {
+  color: white;
+}
+.official-header .goog-te-gadget {
+  margin-bottom: -10px;
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.desktop-only {
+  display: none;
+}
+
+/* step list */
+ol.steps, .cagov-step-list {
+  padding-left: 0 !important;
+  margin-left: 30px !important;
+}
+ol.steps li, .cagov-step-list li {
+  list-style: none;
+  border-left: 5px solid var(--secondary-color, #fec02f);
+  font-size: 1.75rem;
+  font-weight: 700;
+  position: relative;
+  padding-left: 45px;
+  line-height: 1.5;
+}
+ol.steps li:before, .cagov-step-list li:before {
+  content: "";
+  font-family: "Public Sans";
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 0 13px 0 13px;
+  border: 5px solid var(--secondary-color, #fec02f);
+  background-color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  position: absolute;
+  left: -29px;
+  top: -5px;
+  margin-left: -1px;
+}
+ol.steps li span.has-black-color,
+ol.steps li .cagov-step-list-content, .cagov-step-list li span.has-black-color,
+.cagov-step-list li .cagov-step-list-content {
+  margin-top: 1rem;
+  padding-bottom: 1.75rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: block;
+}
+ol.steps li:first-child:before, .cagov-step-list li:first-child:before {
+  content: "1";
+  padding: 0 16px 0 16px;
+}
+ol.steps li:nth-child(2):before, .cagov-step-list li:nth-child(2):before {
+  content: "2";
+}
+ol.steps li:nth-child(3):before, .cagov-step-list li:nth-child(3):before {
+  content: "3";
+}
+ol.steps li:nth-child(4):before, .cagov-step-list li:nth-child(4):before {
+  content: "4";
+}
+ol.steps li:nth-child(5):before, .cagov-step-list li:nth-child(5):before {
+  content: "5";
+}
+ol.steps li:nth-child(6):before, .cagov-step-list li:nth-child(6):before {
+  content: "6";
+}
+ol.steps li:nth-child(7):before, .cagov-step-list li:nth-child(7):before {
+  content: "7";
+}
+ol.steps li:nth-child(8):before, .cagov-step-list li:nth-child(8):before {
+  content: "8";
+}
+ol.steps li:nth-child(9):before, .cagov-step-list li:nth-child(9):before {
+  content: "9";
+}
+ol.steps li:nth-child(10):before, .cagov-step-list li:nth-child(10):before {
+  content: "10";
+  padding: 0 7px 0 7px;
+  margin-left: -1px;
+}
+ol.steps li:nth-child(11):before, .cagov-step-list li:nth-child(11):before {
+  content: "11";
+  padding: 0 10px 0 10px;
+}
+ol.steps li:nth-child(12):before, .cagov-step-list li:nth-child(12):before {
+  content: "12";
+  padding: 0 8px 0 8px;
+  margin-left: -1px;
+}
+ol.steps li:nth-child(13):before, .cagov-step-list li:nth-child(13):before {
+  content: "13";
+  padding: 0 7px 0 7px;
+}
+ol.steps li:nth-child(14):before, .cagov-step-list li:nth-child(14):before {
+  content: "14";
+  padding: 0 7px 0 7px;
+}
+ol.steps li:nth-child(15):before, .cagov-step-list li:nth-child(15):before {
+  content: "15";
+  padding: 0 7px 0 8px;
+  margin-left: 3px;
+}
+ol.steps li:nth-child(16):before, .cagov-step-list li:nth-child(16):before {
+  content: "16";
+  padding: 0 7px 0 7px;
+}
+ol.steps li:nth-child(17):before, .cagov-step-list li:nth-child(17):before {
+  content: "17";
+  padding: 0 7px 0 7px;
+}
+ol.steps li:nth-child(18):before, .cagov-step-list li:nth-child(18):before {
+  content: "18";
+  padding: 0 7px 0 7px;
+}
+ol.steps li:nth-child(19):before, .cagov-step-list li:nth-child(19):before {
+  content: "19";
+  padding: 0 7px 0 7px;
+}
+ol.steps li:nth-child(20):before, .cagov-step-list li:nth-child(20):before {
+  content: "20";
+  padding: 0 5px 0 5px;
+}
+ol.steps li:nth-child(21):before, .cagov-step-list li:nth-child(21):before {
+  content: "21";
+  padding: 0 6px 0 6px;
+}
+ol.steps li:nth-child(22):before, .cagov-step-list li:nth-child(22):before {
+  content: "22";
+  padding: 0 5px 0 5px;
+}
+ol.steps li:nth-child(23):before, .cagov-step-list li:nth-child(23):before {
+  content: "23";
+  padding: 0 5px 0 5px;
+}
+ol.steps li:nth-child(24):before, .cagov-step-list li:nth-child(24):before {
+  content: "24";
+  padding: 0 5px 0 5px;
+}
+ol.steps li:last-child, .cagov-step-list li:last-child {
+  border-left: none;
+}
+
+.cagov-table table {
+  border: 1px solid var(--gray-700, #a09fa7);
+  border-collapse: collapse;
+  margin: 0 0 15px;
+  text-align: left;
+}
+.cagov-table table + figcaption {
+  margin-bottom: 15px;
+}
+.cagov-table.aligncenter table {
+  margin: 0 auto 15px;
+}
+.cagov-table.aligncenter table + figcaption {
+  margin: 0 auto 15px;
+  text-align: center;
+}
+.cagov-table.alignright table {
+  margin: 0 0 15px auto;
+}
+.cagov-table.alignright table + figcaption {
+  text-align: right;
+}
+.cagov-table th {
+  font-weight: bold;
+}
+.cagov-table td,
+.cagov-table th {
+  border: 1px solid var(--gray-700, #a09fa7);
+  padding: 16px;
+}
+
+.wp-block-table table {
+  border: 1px solid var(--gray-700, #a09fa7);
+  border-collapse: collapse;
+  margin: 0 0 15px;
+  text-align: left;
+}
+.wp-block-table table + figcaption {
+  margin-bottom: 15px;
+}
+.wp-block-table.aligncenter table {
+  margin: 0 auto 15px;
+}
+.wp-block-table.aligncenter table + figcaption {
+  margin: 0 auto 15px;
+  text-align: center;
+}
+.wp-block-table.alignright table {
+  margin: 0 0 15px auto;
+}
+.wp-block-table.alignright table + figcaption {
+  text-align: right;
+}
+.wp-block-table th {
+  font-weight: bold;
+}
+.wp-block-table td,
+.wp-block-table th {
+  border: 1px solid var(--gray-700, #a09fa7);
+  padding: 16px;
+}

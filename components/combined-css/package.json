@@ -1,0 +1,31 @@
+{
+  "name": "@cagov/ds-combined-css",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.css",
+  "scripts": {
+    "test": "echo \"WARNING: No test specified\" && exit 0",
+    "build:js": "rollup --config rollup.config.js",
+    "build": "npm run build:js && sass --no-source-map src/_cannabis.scss dist/cannabis.css && sass --no-source-map src/_drought.scss dist/drought.css && sass --no-source-map src/_cagov.scss dist/cagov.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^3.0.0-next.2",
+    "@web/test-runner": "^0.13.16",
+    "@web/test-runner-puppeteer": "^0.10.1",
+    "rollup": "^2.52.2",
+    "rollup-plugin-import-css": "^2.0.1",
+    "sass": "^1.38.1"
+  }
+}

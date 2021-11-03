@@ -1,0 +1,121 @@
+/* accordion component specific classes */
+cagov-accordion .cagov-accordion-card {
+	border-radius: 0.3rem !important;
+	margin-bottom: 0;
+	min-height: 3rem;
+	margin-top: 0.5rem;
+	border: solid 1px #ededef !important;
+}
+
+cagov-accordion .accordion-card-container {
+	display: block;
+	overflow: hidden;
+}
+
+cagov-accordion button.accordion-card-header {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding: 0 0 0 1rem;
+	background-clip: border-box;
+	background-color: #ededef;
+	border: none;
+	position: relative;
+	width: 100%;
+	line-height: 3rem;
+}
+
+cagov-accordion.prog-enhanced button.accordion-card-header {
+	cursor: pointer;
+}
+
+cagov-accordion .accordion-title {
+	text-align: left;
+	margin-bottom: 0;
+	color: var(--primary-color, #064e66);
+	margin-right: auto;
+	width: 90%;
+	padding: 0 0.5rem 0 0 !important;
+	font-size: 1.125rem;
+	font-weight: bold;
+}
+
+cagov-accordion.prog-enhanced .accordion-card-container {
+	height: 0px;
+	transition: height 0.3s ease;
+}
+cagov-accordion.prog-enhanced .accordion-card-container .card-body {
+	padding-left: 1rem;
+	margin-top: 8px;
+}
+
+cagov-accordion.prog-enhanced .accordion-card-container .card-body ul {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+cagov-accordion .collapsed {
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.accordion-title h4,
+.accordion-title h3,
+.accordion-title h2 {
+	padding: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	font-size: 1.2rem !important;
+	font-weight: 700;
+	color: var(--primary-color, #064e66);
+	text-align: left !important;
+}
+
+button.accordion-card-header:hover {
+	background-color: var(--hover-color, #f9f9fa);
+}
+button.accordion-card-header:hover .accordion-title {
+	text-decoration: underline;
+}
+button.accordion-card-header:hover .accordion-title:hover {
+	text-decoration: underline;
+}
+
+button.accordion-card-header:focus {
+	outline-offset: -2px;
+}
+
+.accordion-icon svg line {
+	stroke-width: 4px;
+}
+
+cagov-accordion.prog-enhanced .accordion-alpha .plus-minus {
+	width: 2.125rem;
+	height: 2.125rem;
+	border: none;
+	overflow: hidden;
+	margin-left: 1rem;
+	color: var(--primary-color, #064e66);
+	align-self: flex-start;
+	margin-top: 8px;
+}
+
+.prog-enhanced .accordion-alpha .plus-minus svg {
+	fill: var(--primary-color, #064e66);
+	width: 25px;
+	height: 25px;
+}
+
+.prog-enhanced .accordion-alpha-open cagov-plus .accordion-icon {
+	display: none !important;
+}
+.prog-enhanced .accordion-alpha-open cagov-minus .accordion-icon {
+	display: block !important;
+}
+
+@media only screen and (max-width: 767px) {
+	.accordion-alpha-open + .accordion-card-container {
+		height: 100% !important;
+	}
+}
