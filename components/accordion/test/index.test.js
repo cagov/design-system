@@ -4,7 +4,7 @@ import { expect, fixture } from '@open-wc/testing';
 
 import '../dist/index.js';
 
-describe('CAGOV Pagination', function unitTest() {
+describe('CAGOV Accordion', function unitTest() {
   this.timeout(9000);
   it('works', async () => {
     const response = await fetch('test/test.fixture.html');
