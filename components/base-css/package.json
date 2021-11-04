@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-base-css",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "",
   "main": "src/_core.scss",
   "scripts": {
@@ -11,15 +11,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "eslintConfig": {
-    "extends": [
-      "@open-wc/eslint-config"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
   "devDependencies": {
     "@open-wc/testing": "^3.0.1",
     "@web/test-runner-puppeteer": "^0.10.2",
