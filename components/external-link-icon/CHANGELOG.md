@@ -1,6 +1,10 @@
 # CHANGELOG for ds-external-link-icon
 `ds-external-link-icon`
 
+# 1.0.3
+* Change min-width to regular width.
+* Change width unit from rem to em, so it'll grow and shrink relative to surrounding text.
+
 # 1.0.2
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.
