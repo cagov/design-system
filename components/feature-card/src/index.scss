@@ -32,13 +32,12 @@
 .no-deco {
 	text-decoration: none;
 }
-/* reset */
-h3 {
-	margin: 0;
-}
 /* spacing overrides, can these come from base-css? */
 .cagov-featured-section h2 {
 	padding-bottom: 16px;
+}
+.cagov-featured-section h3 {
+	margin: 0;
 }
 .cagov-hero-body-content p {
 	margin-bottom: 16px;
