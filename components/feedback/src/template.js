@@ -1,4 +1,12 @@
-export default function (question, yes, no, commentPrompt, thanksFeedback, thanksComments, submit) {
+function ratingsTemplate(
+  question,
+  yes,
+  no,
+  commentPrompt,
+  thanksFeedback,
+  thanksComments,
+  submit,
+) {
   return `
   <section aria-label="feedback">
   <div class="feedback-form cagov-stack">
@@ -20,5 +28,7 @@ export default function (question, yes, no, commentPrompt, thanksFeedback, thank
 
     <div class="feedback-form-thanks feedback-thanks-add" role="alert">${thanksComments}</div>
   </div>
-  </section>`
+  </section>`;
 }
+
+export default ratingsTemplate;

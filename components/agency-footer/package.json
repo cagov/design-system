@@ -1,16 +1,19 @@
 {
   "name": "@cagov/ds-agency-footer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
     "build": "sass src/index.scss index.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.37.5"
+    "@open-wc/testing": "^3.0.1",
+    "@web/test-runner-puppeteer": "^0.10.2",
+    "sass": "^1.38.0"
   }
 }

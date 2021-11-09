@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-table",
-  "version": "",
+  "version": "1.0.1",
   "description": "Default table style.",
   "main": "src/index.html",
   "type": "module",

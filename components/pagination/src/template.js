@@ -20,7 +20,7 @@ function pageOverflow() {
   </li>`;
 }
 
-export default function (next, previous, page, currentPage, totalPages) {
+function templateHTML(next, previous, page, currentPage, totalPages) {
   return `<nav aria-label="Pagination" class="cagov-pagination">
     <ul class="cagov-pagination__list">
       <li class="cagov-pagination__item">
@@ -29,14 +29,16 @@ export default function (next, previous, page, currentPage, totalPages) {
           class="cagov-pagination__link cagov-pagination__previous-page"
           aria-label="${previous} ${page}"
         >
-          <span class="cagov-pagination__link-text ${(currentPage > 2) ? '' : 'cagov-pagination__link-inactive'}"> ${previous} </span>
+          <span class="cagov-pagination__link-text ${
+            currentPage > 2 ? '' : 'cagov-pagination__link-inactive'
+          }"> ${previous} </span>
         </a>
       </li>
-      ${(currentPage > 2) ? pageListItem(page, 1) : ''}
+      ${currentPage > 2 ? pageListItem(page, 1) : ''}
 
-      ${(currentPage > 3) ? pageOverflow() : ''}
+      ${currentPage > 3 ? pageOverflow() : ''}
 
-      ${(currentPage > 1) ? pageListItem(page, currentPage - 1) : ''}
+      ${currentPage > 1 ? pageListItem(page, currentPage - 1) : ''}
 
       <li class="cagov-pagination__item cagov-pagination-current">
         <a
@@ -50,11 +52,11 @@ export default function (next, previous, page, currentPage, totalPages) {
         </a>
       </li>
 
-      ${(currentPage < totalPages) ? pageListItem(page, currentPage + 1) : ''}
+      ${currentPage < totalPages ? pageListItem(page, currentPage + 1) : ''}
 
-      ${(currentPage < totalPages - 3) ? pageOverflow() : ''}
+      ${currentPage < totalPages - 3 ? pageOverflow() : ''}
 
-      ${(currentPage < totalPages - 1) ? pageListItem(page, totalPages) : ''}
+      ${currentPage < totalPages - 1 ? pageListItem(page, totalPages) : ''}
 
       <li class="cagov-pagination__item">
         <a
@@ -62,9 +64,15 @@ export default function (next, previous, page, currentPage, totalPages) {
           class="cagov-pagination__link cagov-pagination__next-page"
           aria-label="${next} ${page}"
         >
-          <span class="cagov-pagination__link-text ${(currentPage > totalPages - 1) ? 'cagov-pagination__link-inactive' : ''}"> ${next} </span>
+          <span class="cagov-pagination__link-text ${
+            currentPage > totalPages - 1
+              ? 'cagov-pagination__link-inactive'
+              : ''
+          }"> ${next} </span>
         </a>
       </li>
     </ul>
-  </nav>`
+  </nav>`;
 }
+
+export default templateHTML;

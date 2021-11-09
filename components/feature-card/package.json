@@ -1,13 +1,22 @@
 {
   "name": "@cagov/ds-feature-card",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a design for featuring important content at the top of a page. The layout uses a sidebar pattern with the text elements: header, description and call to action button on the left and an image on the right. On smaller screens the image appears above the text.",
-  "main": "index.css",
+  "main": "index.css",  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/tree/main/components/feature-card"
+  },
   "scripts": {
-    "build": "sass src/index.scss index.css"
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
+    "build": "echo \"No build specified.\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "@open-wc/testing": "^3.0.1",
+    "@web/test-runner-puppeteer": "^0.10.2"
+  }
 }

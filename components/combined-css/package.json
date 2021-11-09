@@ -1,42 +1,20 @@
 {
   "name": "@cagov/ds-combined-css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\" && exit 0",
     "build:js": "rollup --config rollup.config.js",
-    "build": "npm run build:js && sass --no-source-map src/_cannabis.scss dist/cannabis.css && sass --no-source-map src/_drought.scss dist/drought.css && sass --no-source-map src/_cagov.scss dist/cagov.css",
-    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
-    "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
-    "lint:eslint:fix": "eslint --ext .js,.html . --ignore-path .gitignore --fix",
-    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore"
+    "build": "npm run build:js && sass --no-source-map src/_cannabis.scss dist/cannabis.css && sass --no-source-map src/_drought.scss dist/drought.css && sass --no-source-map src/_cagov.scss dist/cagov.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "eslintConfig": {
-    "extends": [
-      "@open-wc/eslint-config"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
   "devDependencies": {
-    "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "^3.0.0-next.2",
     "@web/test-runner": "^0.13.16",
     "@web/test-runner-puppeteer": "^0.10.1",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-html": "^6.2.0",
-    "eslint-plugin-lit": "^1.5.1",
-    "husky": "^7.0.2",
-    "prettier": "^2.3.2",
     "rollup": "^2.52.2",
     "rollup-plugin-import-css": "^2.0.1",
     "sass": "^1.38.1"

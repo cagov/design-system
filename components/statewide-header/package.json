@@ -1,16 +1,20 @@
 {
   "name": "@cagov/ds-statewide-header",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "",
   "main": "index.css",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/index.scss index.css"
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
+      "build": "sass src/index.scss index.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@open-wc/testing": "^3.0.1",
+    "@web/test-runner-puppeteer": "^0.10.2",
     "sass": "^1.37.5"
-  }
+    }
 }

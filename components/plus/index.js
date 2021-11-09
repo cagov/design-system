@@ -1,11 +1,10 @@
 /**
  * Plus web component, inlines an svg plus symbol so it can be styled dynamically
- * 
+ *
  * @element cagov-plus
- * 
+ *
  */
 export class CaGovPlus extends window.HTMLElement {
-
   connectedCallback() {
     this.innerHTML = `<div class="accordion-icon" aria-hidden="true">
         <svg viewbox="0 0 25 25">
@@ -15,7 +14,5 @@ export class CaGovPlus extends window.HTMLElement {
         </svg>
       </div>`;
   }
-
-
 }
 window.customElements.define('cagov-plus', CaGovPlus);

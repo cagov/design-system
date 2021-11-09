@@ -91,41 +91,17 @@
     </script>
     <script>
       fetch('../menu/template.html')
-        .then(response => {
-          response.text()
-        })
-        .then(string => {
-          document
-            .getElementById('menu-html-content')
-            .innerHTML = string
-        });
+        .then(response => response.text())
+        .then((string) => { document.getElementById('menu-html-content').innerHTML = string; });
       fetch('../card-grid/template.html')
-        .then(response => {
-          response.text()
-        })
-        .then(string => {
-          document
-            .getElementById('card-grid-html-content')
-            .innerHTML = string
-        });
+        .then(response => response.text())
+        .then((string) => { document.getElementById('card-grid-html-content').innerHTML = string; });
       fetch('../accordion/template.html')
-        .then(response => {
-          response.text()
-        })
-        .then(string => {
-          document
-            .getElementById('accordion-html-content')
-            .innerHTML = string
-        });
+        .then(response => response.text())
+        .then((string) => { document.getElementById('accordion-html-content').innerHTML = string; });
       fetch('../step-list/template.html')
-        .then(response => {
-          response.text()
-        })
-        .then(string => {
-          document
-            .getElementById('step-list-html-content')
-            .innerHTML = string
-        });
+        .then(response => response.text())
+        .then((string) => { document.getElementById('step-list-html-content').innerHTML = string; });
     </script>
 
   </body>

@@ -2,12 +2,16 @@ import ratingsTemplate from './template.js';
 import styles from './css/index.css';
 
 /**
- * Page feedback web component that asks if you found what you were looking for, then prompts for comments
- * 
+ * Page feedback web component that asks if you found what you were looking for,
+ * then prompts for comments
+ *
  * @element cagov-feedback
- * 
- * @fires ratedPage - custom event with object with detail value of whether the user clicked yes or no to the first question: {detail: "yes"}. This can be used to send that value as a GA event outside this component.
- * 
+ *
+ * @fires ratedPage - custom event with object with detail value of whether the user
+ *                    clicked yes or no to the first question: {detail: "yes"}.
+ *                    This can be used to send that value as a GA event outside this
+ *                    component.
+ *
  * @attr {string} [data-question] - "Did you find what you were looking for?";
  * @attr {string} [data-yes] - "Yes";
  * @attr {string} [data-no] - "No";
@@ -25,7 +29,7 @@ export class CAGovFeedback extends window.HTMLElement {
   constructor() {
     super();
     if (document.querySelector('api-viewer')) {
-      let link = document.createElement('link');
+      const link = document.createElement('link');
       link.setAttribute('rel', 'stylesheet');
       link.setAttribute('href', './src/css/index.css');
       document.querySelector('api-viewer').shadowRoot.appendChild(link);
@@ -33,36 +37,36 @@ export class CAGovFeedback extends window.HTMLElement {
   }
 
   connectedCallback() {
-    let question = this.dataset.question
+    const question = this.dataset.question
       ? this.dataset.question
-      : "Did you find what you were looking for?";
-    let yes = this.dataset.yes ? this.dataset.yes : "Yes";
-    let no = this.dataset.no ? this.dataset.no : "No";
-    let commentPrompt = this.dataset.commentPrompt
+      : 'Did you find what you were looking for?';
+    const yes = this.dataset.yes ? this.dataset.yes : 'Yes';
+    const no = this.dataset.no ? this.dataset.no : 'No';
+    const commentPrompt = this.dataset.commentPrompt
       ? this.dataset.commentPrompt
-      : "What was the problem?";
+      : 'What was the problem?';
     this.positiveCommentPrompt = this.dataset.positiveCommentPrompt
       ? this.dataset.positiveCommentPrompt
-      : "Great! What were you looking for today?";
-    let thanksFeedback = this.dataset.thanksFeedback
+      : 'Great! What were you looking for today?';
+    const thanksFeedback = this.dataset.thanksFeedback
       ? this.dataset.thanksFeedback
-      : "Thank you for your feedback!";
-    let thanksComments = this.dataset.thanksComments
+      : 'Thank you for your feedback!';
+    const thanksComments = this.dataset.thanksComments
       ? this.dataset.thanksComments
-      : "Thank you for your comments!";
-    let submit = this.dataset.submit ? this.dataset.submit : "Submit";
-    let characterLimit = this.dataset.characterLimit
+      : 'Thank you for your comments!';
+    const submit = this.dataset.submit ? this.dataset.submit : 'Submit';
+    const characterLimit = this.dataset.characterLimit
       ? this.dataset.characterLimit
-      : "You have reached your character limit."
-    let anythingToAdd = this.dataset.anythingToAdd
+      : 'You have reached your character limit.';
+    const anythingToAdd = this.dataset.anythingToAdd
       ? this.dataset.anythingToAdd
-      : "If you have anything to add,"
-    let anyOtherFeedback = this.dataset.anyOtherFeedback
+      : 'If you have anything to add,';
+    const anyOtherFeedback = this.dataset.anyOtherFeedback
       ? this.dataset.anyOtherFeedback
-      : "If you have any other feedback about this website,"
+      : 'If you have any other feedback about this website,';
 
     this.endpointUrl = this.dataset.endpointUrl;
-    let html = ratingsTemplate(
+    const html = ratingsTemplate(
       question,
       yes,
       no,
@@ -72,84 +76,76 @@ export class CAGovFeedback extends window.HTMLElement {
       submit,
       characterLimit,
       anythingToAdd,
-      anyOtherFeedback
+      anyOtherFeedback,
     );
     this.innerHTML = html;
     this.applyListeners();
   }
 
   applyListeners() {
-    this.wasHelpful = "";
-    this.querySelector(".js-add-feedback").addEventListener(
-      "focus",
-      (event) => {
-        this.querySelector(".js-feedback-submit").style.display = "block";
-      }
-    );
-    let feedback = this.querySelector(".js-add-feedback");
-    feedback.addEventListener("keyup", function (event) {
+    this.wasHelpful = '';
+    this.querySelector('.js-add-feedback').addEventListener('focus', () => {
+      this.querySelector('.js-feedback-submit').style.display = 'block';
+    });
+    const feedback = this.querySelector('.js-add-feedback');
+    feedback.addEventListener('keyup', () => {
       if (feedback.value.length > 15) {
-        feedback.setAttribute("rows", "3");
+        feedback.setAttribute('rows', '3');
       } else {
-        feedback.setAttribute("rows", "1");
+        feedback.setAttribute('rows', '1');
       }
     });
 
-    feedback.addEventListener("blur", (event) => {
+    feedback.addEventListener('blur', () => {
       if (feedback.value.length !== 0) {
-        this.querySelector(".js-feedback-submit").style.display = "block";
+        this.querySelector('.js-feedback-submit').style.display = 'block';
       }
     });
-    this.querySelector(".js-feedback-yes").addEventListener(
-      "click",
-      (event) => {
-        this.querySelector('.js-feedback-field-label').innerHTML = this.positiveCommentPrompt;
-        this.querySelector(".js-feedback-form").style.display = "none";
-        this.querySelector(".feedback-form-add").style.display = "block";
-        this.wasHelpful = "yes";
-        this.dispatchEvent(
-          new CustomEvent("ratedPage", {
-            detail: this.wasHelpful,
-          })
-        );
-      }
-    );
-    this.querySelector(".js-feedback-no").addEventListener("click", (event) => {
-      this.querySelector(".js-feedback-form").style.display = "none";
-      this.querySelector(".feedback-form-add").style.display = "block";
-      this.wasHelpful = "no";
+    this.querySelector('.js-feedback-yes').addEventListener('click', () => {
+      this.querySelector('.js-feedback-field-label').innerHTML =
+        this.positiveCommentPrompt;
+      this.querySelector('.js-feedback-form').style.display = 'none';
+      this.querySelector('.feedback-form-add').style.display = 'block';
+      this.wasHelpful = 'yes';
       this.dispatchEvent(
-        new CustomEvent("ratedPage", {
+        new CustomEvent('ratedPage', {
           detail: this.wasHelpful,
-        })
+        }),
       );
     });
-    this.querySelector(".js-feedback-submit").addEventListener(
-      "click",
-      (event) => {
-        this.querySelector(".feedback-form-add").style.display = "none";
-        this.querySelector(".feedback-thanks-add").style.display = "block";
+    this.querySelector('.js-feedback-no').addEventListener('click', () => {
+      this.querySelector('.js-feedback-form').style.display = 'none';
+      this.querySelector('.feedback-form-add').style.display = 'block';
+      this.wasHelpful = 'no';
+      this.dispatchEvent(
+        new CustomEvent('ratedPage', {
+          detail: this.wasHelpful,
+        }),
+      );
+    });
+    this.querySelector('.js-feedback-submit').addEventListener('click', () => {
+      this.querySelector('.feedback-form-add').style.display = 'none';
+      this.querySelector('.feedback-thanks-add').style.display = 'block';
 
-        let postData = {};
-        postData.url = window.location.href;
-        postData.helpful = this.wasHelpful;
-        postData.comments = feedback.value;
-        postData.userAgent = navigator.userAgent;
+      const postData = {};
+      postData.url = window.location.href;
+      postData.helpful = this.wasHelpful;
+      postData.comments = feedback.value;
+      postData.userAgent = navigator.userAgent;
 
-        fetch(this.endpointUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(postData),
-        })
-          .then((response) => response.json())
-          .then((data) => console.log(data));
-      }
-    );
+      fetch(this.endpointUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postData),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    });
   }
 }
 window.customElements.define('cagov-feedback', CAGovFeedback);
-const style = document.createElement("style");
+const style = document.createElement('style');
 style.textContent = styles;
 document.querySelector('head').appendChild(style);
