@@ -1,6 +1,9 @@
 # CHANGELOG for ds-compiled-css
 `ds-compiled-css`
 
+# 1.0.3
+* Added page-alert's component css an js to the import lists. 
+
 # 1.0.2
 * Linted and formatted code per root eslint/prettier settings.
 
