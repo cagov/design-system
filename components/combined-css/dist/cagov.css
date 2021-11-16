@@ -3157,6 +3157,7 @@ cagov-back-to-top .back-to-top.is-visible {
 }
 .branding .grid-org-name {
   grid-area: org-name;
+  align-self: center;
   display: flex;
   flex-direction: column;
   row-gap: 0.25rem;
@@ -3200,7 +3201,8 @@ cagov-back-to-top .back-to-top.is-visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 12px;
 }
 .branding .mobile-search {
   margin: 0 !important;

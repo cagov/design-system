@@ -1,6 +1,10 @@
 # CHANGELOG for ds-branding
 `ds-branding`
 
+# 1.0.8
+* Separated `gap` on .mobile-icons into `column-gap` and `row-gap`.
+* Added `align-self: center` to .grid-org-name.
+
 # 1.0.7
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.
