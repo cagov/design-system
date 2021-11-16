@@ -41,6 +41,7 @@ $mobile-min: 767px;
 
   .grid-org-name {
     grid-area: org-name;
+    align-self: center;
     display: flex;
     flex-direction: column;
     row-gap: 0.25rem;
@@ -91,7 +92,8 @@ $mobile-min: 767px;
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 12px;
   }
 
   .mobile-search {
