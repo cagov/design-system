@@ -25,6 +25,7 @@ A combined css is composed of:
 @import "../../feedback/src/css/index.scss";
 @import "../../menu/src/index.scss";
 @import "../../menu/src/index.scss";
+@import "../../page-alert/src/index.scss";
 @import "../../pagination/src/css/index.scss";
 @import "../../pdf-icon/src/index.scss";
 @import "../../regulatory-outline/src/index.scss";
@@ -51,7 +52,7 @@ import '../../external-link-icon/src/index.js';
 import '../../feedback/dist/index.js';
 import '../../google-translate/index.js';
 import '../../menu/src/index.js';
-import '../../menu/src/index.js';
+import '../../page-alert/src/index.js';
 import '../../pagination/dist/index.js';
 import '../../pdf-icon/src/index.js';
 import '../../plus/index.js';

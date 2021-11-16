@@ -4688,6 +4688,60 @@ cagov-navoverlay .expanded-menu-close-mobile-svg {
   max-width: 20px;
 }
 
+/* Page alert */
+.icon-select {
+  height: 48px;
+  padding: 0 0px 0 16px;
+}
+
+.editor-styles-wrapper .message-body {
+  padding: 0 32px;
+}
+
+.editor-styles-wrapper .cagov-page-alert {
+  min-height: 64px;
+  height: auto;
+}
+
+.cagov-page-alert {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  width: 100%;
+  min-height: 46px;
+  height: auto;
+  background: rgba(254, 192, 47, 0.2);
+  border: 1px solid var(--cagov-highlight, #fec02f);
+  box-sizing: border-box;
+  border-radius: 5px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 32px 0px;
+}
+.cagov-page-alert .icon {
+  line-height: 1.5rem;
+  background: none;
+}
+.cagov-page-alert .close-button {
+  background: none;
+  margin-left: auto;
+  border: none;
+  cursor: pointer !important;
+}
+.cagov-page-alert .body {
+  line-height: 1.5rem;
+  padding: 0 16px;
+  background: none;
+}
+@media only screen and (max-width: 600px) {
+  .cagov-page-alert {
+    min-height: 46px;
+    height: auto;
+  }
+}
+
 cagov-pagination .cagov-pagination__list {
   list-style: none;
   margin: 0;
