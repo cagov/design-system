@@ -2,7 +2,7 @@
 
 Page alert provides brief, important or time-sensitive information. Yellow background color is used to grab users attention and create sense of importance and urgency. Page alert box usually appears beneath the site navigation on the homepage. It can include a hyperlink, but not a button or image.
 
-<img src="https://github.com/cagov/design-system/blob/page-alert/components/external-link-icon/img/external-link-icon.jpg?raw=true" alt="Page alert sample">
+<img src="https://github.com/cagov/design-system/blob/page-alert/components/page-alert/img/page-alert.jpg?raw=true" alt="Page alert sample">
 
 
 ## NPM install
