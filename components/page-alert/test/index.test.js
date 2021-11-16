@@ -5,21 +5,33 @@ import { expect, fixture, html } from '@open-wc/testing';
 import '../src/index.js';
 
 describe('Page Alert', function unitTest() {
-  this.timeout(5000);
+  this.timeout(20000);
   it('works', async () => {
-    const el = await fixture(html`<cagov-page-alert data-icon="ca-gov-icon-bell"
-       >
-       </cagov-page-alert>`);
+    const el = await fixture(html`<div class="main">
+    <cagov-page-alert data-icon="ca-gov-icon-bell" data-message="Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href=&quot;/about-us/grant-funding/local-jurisdiction-assistance-grant-program/&quot;>Learn more</a>."></cagov-page-alert>
+  </div>`);
+
+    // click if icon has aria-hidden attribute
+    await expect(
+      el.querySelector('.icon').getAttribute('aria-hidden'),
+    ).to.equal('true');
 
 
     // click on dismiss button
     el.querySelector('.close-button').click();
 
     // verify now that page alert is dismissed
-    expect(el.querySelector('.cagov-page-alert').style.display).to.equal(
-      'none',
-    );
+    await expect(el.querySelector('cagov-page-alert')).to.have.style("display", "none");
 
     await expect(el).to.be.accessible();
   });
 });
+
+
+
+
+function delay(time) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, time)
+  });
+}
