@@ -4,14 +4,15 @@
  */
 class CAGovPageAlert extends window.HTMLElement {
   connectedCallback() {
-    this.message = this.dataset.message || "";
-    this.icon = this.dataset.icon || "";
+    this.message = this.dataset.message || '';
+    this.icon = this.dataset.icon || '';
 
     this.template({ message: this.message, icon: this.icon });
-    document.querySelector('cagov-page-alert .close-button').addEventListener('click', () => {
-      document.querySelector('cagov-page-alert').style.display = "none";
-    }
-    );
+    document
+      .querySelector('cagov-page-alert .close-button')
+      .addEventListener('click', () => {
+        document.querySelector('cagov-page-alert').style.display = 'none';
+      });
   }
 
   template(data) {
@@ -25,6 +26,6 @@ class CAGovPageAlert extends window.HTMLElement {
   }
 }
 
-if (customElements.get("cagov-page-alert") === undefined) {
-  window.customElements.define("cagov-page-alert", CAGovPageAlert);
+if (customElements.get('cagov-page-alert') === undefined) {
+  window.customElements.define('cagov-page-alert', CAGovPageAlert);
 }
