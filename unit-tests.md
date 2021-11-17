@@ -78,4 +78,4 @@ this.timeout(5000);
 
 ### Selector issues
 
-Using fixtures, then referring to that fixture and running querySelectors inside it to review the element state works fine. Be careful if you are attempting to review some attribute on the top level element in the fisture though. The querySelector method is only reviewing children of the top level element so won't be able to retrieve attributes of a custom element if that is what your fixture starts with. To avoid this refer to that element directly without querySelector or put a containing element at the top level of your fixture.
+Using fixtures, then referring to that fixture and running querySelectors inside it to review the element state works fine. Be careful if you are attempting to review some attribute on the top level element in the fixture though. The querySelector method is only reviewing children of the top level element so won't be able to retrieve attributes of a custom element if that is what your fixture starts with. To avoid this refer to that element directly without querySelector or put a containing element at the top level of your fixture.
