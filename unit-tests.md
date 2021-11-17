@@ -45,9 +45,27 @@ A new component needs the following to run a test:
       ],
     };
     ```
-- The test scirpt should be in a test folder
+- The test script should be in a test folder
 
 ## Fetching fixtures
+
+You can supply a fixture as an HTML string:
+
+```
+const el = await fixture(html`<cagov-plus />`);
+```
+
+Or retrieve a longer snippet from an HTML template:
+
+```
+const response = await fetch('../template.html');
+if (!response.ok) {
+  throw new Error(`HTTP error! status: ${response.status}`);
+}
+const startHTML = await response.text();
+// use this HTML as a test fixture
+const el = await fixture(startHTML);
+```
 
 ## Delays for visual review
 
