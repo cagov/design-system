@@ -15,7 +15,7 @@ If a link is both external and a PDF, only the PDF icon will appear. It’s more
 ##  External link icon
 This component adds an icon next to a link that goes outside your website. It lets people know they will leave the site when that link is opened.
 
-<img src="https://github.com/cagov/design-system/blob/external-link/components/external-link-icon/img/external-link-icon.jpg?raw=true" alt="External link sample">
+![Screen Shot 2021-11-30 at 12 56 47 PM](https://user-images.githubusercontent.com/31669748/144338964-a374ffb2-7d45-42a6-9487-49fe856a5208.png)
 
 
 ## NPM install
