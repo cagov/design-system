@@ -1,0 +1,72 @@
+/* PDF Icon */
+// Globally adds pdf icon to all links to pdf files.
+.pdf-link-icon {
+  display: inline-block;
+  outline: 1px solid;
+  outline-offset: -2px;
+  padding: 0;
+  position: relative;
+  left: 1px;
+  top: -3px;
+  line-height: 0.9rem;
+  text-decoration: none;
+  svg path {
+    fill: var(--primary-color, #004abc);
+  }
+}
+
+/* External link icon */
+// Globally adds external link icon to all external links.
+.external-link-icon {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  left: 1px;
+  top: -2px;
+  text-decoration: none;
+  width: 0.8em;
+  svg path {
+    fill: var(--primary-color, #004abc);
+  }
+}
+
+main a,
+.agency-footer a {
+  &:hover {
+    .external-link-icon svg path {
+      fill: var(--primary-dark-color, #003484);
+    }
+  }
+}
+
+footer a {
+  .external-link-icon svg path {
+    fill: var(--black, #000);
+  }
+}
+
+/* External link icon exceptions */
+.cagov-card,
+.wp-block-button__link,
+.footer-social-links a,
+img ~,
+svg ~,
+.pdf-link-icon ~ {
+  .external-link-icon {
+    display: none;
+  }
+}
+
+// screen readers class
+.sr-only {
+  height: unset !important;
+  text-indent: -10000px;
+  width: unset !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+}
