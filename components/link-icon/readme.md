@@ -26,8 +26,8 @@ npm install @cagov/ds-link-icon
 ## HTML
 
 ```
-<a href="link.pdf">This is pdf link</a>
-<a href="google.html">External link</a>
+<a href="link.pdf">This is pdf link.</a>
+<a href="https://google.com">This is an external link.</a>
 
 ```
 

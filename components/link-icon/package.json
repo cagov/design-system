@@ -12,7 +12,7 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cagov/design-system/components/external-link-icon/"
+    "url": "https://github.com/cagov/design-system/components/link-icon/"
   },
   "license": "ISC",
   "devDependencies": {
