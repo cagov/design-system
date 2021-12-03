@@ -1,0 +1,63 @@
+/* PDF Icon */
+.pdf-link-icon {
+  display: inline-block;
+  outline: 1px solid;
+  outline-offset: -2px;
+  padding: 0;
+  position: relative;
+  left: 1px;
+  top: -3px;
+  line-height: 0.9rem;
+  text-decoration: none;
+}
+.pdf-link-icon svg path {
+  fill: var(--primary-color, #004abc);
+}
+
+/* External link icon */
+.external-link-icon {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  left: 1px;
+  top: -2px;
+  text-decoration: none;
+  width: 0.8em;
+}
+.external-link-icon svg path {
+  fill: var(--primary-color, #004abc);
+}
+
+main a:hover .external-link-icon svg path,
+.agency-footer a:hover .external-link-icon svg path {
+  fill: var(--primary-dark-color, #003484);
+}
+
+footer a .external-link-icon svg path {
+  fill: var(--black, #000);
+}
+
+/* External link icon exceptions */
+.cagov-card .external-link-icon,
+.wp-block-button__link .external-link-icon,
+.footer-social-links a .external-link-icon,
+img ~ .external-link-icon,
+svg ~ .external-link-icon,
+.pdf-link-icon ~ .external-link-icon {
+  display: none;
+}
+
+.sr-only {
+  height: unset !important;
+  text-indent: -10000px;
+  width: unset !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+}
+
+/*# sourceMappingURL=index.css.map */
