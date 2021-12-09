@@ -145,6 +145,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ca-gov-icon-github:before {
+  content: "\ea21";
+}
+
+.ca-gov-icon-pdf-text:before {
+  content: "\ea20";
+}
+
 .ca-gov-icon-mask-light:before {
   content: "\e9fb";
 }
@@ -737,7 +745,7 @@
   content: "\e970";
 }
 
-.ca-gov-icon-collapse1:before {
+.ca-gov-icon-collapse:before {
   content: "X";
 }
 
@@ -749,7 +757,7 @@
   content: "\e621";
 }
 
-.ca-gov-icon-construction1:before {
+.ca-gov-icon-construction:before {
   content: "\e628";
 }
 
@@ -897,7 +905,7 @@
   content: "\e991";
 }
 
-.ca-gov-icon-expand1:before {
+.ca-gov-icon-expand:before {
   content: "Y";
 }
 

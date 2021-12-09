@@ -1,10 +1,9 @@
 # CHANGELOG for ds-base-css
 `ds-base-css`
 
-# 1.0.11
-* Linted and formatted code per root eslint/prettier settings.
-* Added unit test.
-* Removed local eslint/prettier settings, in favor of repo-wide tooling.
+
+# 1.0.12
+* Updated CAGov font with new icons.
 
 # 1.0.10
 * Added _grid.scss file with grid classes (.card-grid-2, .card-grid-3,.card-grid-4). Also, added linting testing to the component.
