@@ -146,6 +146,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ca-gov-icon-github:before {
+  content: "\ea21";
+}
+
+.ca-gov-icon-pdf-text:before {
+  content: "\ea20";
+}
+
 .ca-gov-icon-mask-light:before {
   content: "\e9fb";
 }
@@ -738,7 +746,7 @@
   content: "\e970";
 }
 
-.ca-gov-icon-collapse1:before {
+.ca-gov-icon-collapse:before {
   content: "X";
 }
 
@@ -750,7 +758,7 @@
   content: "\e621";
 }
 
-.ca-gov-icon-construction1:before {
+.ca-gov-icon-construction:before {
   content: "\e628";
 }
 
@@ -898,7 +906,7 @@
   content: "\e991";
 }
 
-.ca-gov-icon-expand1:before {
+.ca-gov-icon-expand:before {
   content: "Y";
 }
 
@@ -3549,39 +3557,6 @@ sidebar cagov-content-navigation ul li a:hover {
     line-height: 24px;
   }
 }
-/* External link icon */
-.external-link-icon {
-  display: inline-block;
-  padding: 0;
-  position: relative;
-  left: 1px;
-  top: -2px;
-  text-decoration: none;
-  width: 0.8em;
-}
-.external-link-icon svg path {
-  fill: var(--primary-color, #004abc);
-}
-
-main a:hover .external-link-icon svg path,
-.agency-footer a:hover .external-link-icon svg path {
-  fill: var(--primary-dark-color, #003484);
-}
-
-footer a .external-link-icon svg path {
-  fill: var(--black, #000);
-}
-
-/* External link icon exceptions */
-.cagov-card .external-link-icon,
-.wp-block-button__link .external-link-icon,
-.footer-social-links a .external-link-icon,
-img ~ .external-link-icon,
-svg ~ .external-link-icon,
-.pdf-link-icon ~ .external-link-icon {
-  display: none;
-}
-
 /* sidebar layout */
 .cagov-with-sidebar {
   overflow: hidden;
@@ -4786,6 +4761,7 @@ cagov-pagination .cagov-pagination__link-inactive {
   opacity: 0.5;
 }
 
+/* PDF Icon */
 .pdf-link-icon {
   display: inline-block;
   outline: 1px solid;
@@ -4798,7 +4774,40 @@ cagov-pagination .cagov-pagination__link-inactive {
   text-decoration: none;
 }
 .pdf-link-icon svg path {
-  fill: var(--primary-color, #064e66);
+  fill: var(--primary-color, #004abc);
+}
+
+/* External link icon */
+.external-link-icon {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  left: 1px;
+  top: -2px;
+  text-decoration: none;
+  width: 0.8em;
+}
+.external-link-icon svg path {
+  fill: var(--primary-color, #004abc);
+}
+
+main a:hover .external-link-icon svg path,
+.agency-footer a:hover .external-link-icon svg path {
+  fill: var(--primary-dark-color, #003484);
+}
+
+footer a .external-link-icon svg path {
+  fill: var(--black, #000);
+}
+
+/* External link icon exceptions */
+.cagov-card .external-link-icon,
+.wp-block-button__link .external-link-icon,
+.footer-social-links a .external-link-icon,
+img ~ .external-link-icon,
+svg ~ .external-link-icon,
+.pdf-link-icon ~ .external-link-icon {
+  display: none;
 }
 
 .sr-only {

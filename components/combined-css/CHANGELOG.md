@@ -1,6 +1,10 @@
 # CHANGELOG for ds-compiled-css
 `ds-compiled-css`
 
+
+# 1.0.4
+* Replaced pdf-icon and external-link-icon components with link0icon components. Uncluding newer version of base-css/.
+
 # 1.0.3
 * Added page-alert's component css an js to the import lists. 
 
