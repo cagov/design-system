@@ -5,7 +5,6 @@ import { expect, fixture, html } from '@open-wc/testing';
 import { linkAnnotator, placePdfIcons } from '../src/index.js';
 
 describe('CAGOV Link Icon', function unitTest() {
-
   // EXTERNAL LINK UNIT TESTS
   this.timeout(5000);
   it('applies icons to external links', async () => {

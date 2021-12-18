@@ -1361,7 +1361,6 @@ function placePdfIcons() {
 }
 placePdfIcons();
 
-
 /* EXTERNAL LINK ICON */
 function linkAnnotator() {
   const ext =

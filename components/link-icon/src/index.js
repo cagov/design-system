@@ -1,4 +1,3 @@
-
 /* PDF ICON */
 function placePdfIcons() {
   // pdf-icon component svg icon
@@ -17,7 +16,6 @@ function placePdfIcons() {
 }
 placePdfIcons();
 export { placePdfIcons };
-
 
 /* EXTERNAL LINK ICON */
 function linkAnnotator() {
