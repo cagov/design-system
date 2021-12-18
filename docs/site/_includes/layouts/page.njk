@@ -1,0 +1,32 @@
+{% extends "layouts/index.njk" %}
+
+{% block content %}
+    <div id="page-container" class="with-sidebar has-sidebar-left page-container-ds">
+        <div id="main-content" class="main-content-ds single-column">
+            <div class="ds-content-layout">
+                <div class="sidebar-container everylayout" style="z-index: 1;">
+                    <sidebar space="0" side="left">
+                        {% block contentNavigation %}
+                            {% include "content-navigation.njk" %}                        
+                        {% endblock %}
+                    </sidebar>
+                </div>
+                <div class="everylayout">
+                    <main class="main-primary">
+                        <article id="post-{{ id }}">
+                            <h1 class="page-title">{{ title | safe }}</h1>
+                            <!-- Page Title-->
+                            <h1 class="wide-page-title page-title">
+                                {{ title | safe }}
+                            </h1>
+                            <div class="entry-content">
+                                {{ content | safe }}
+                            </div>
+                        </article>
+                        <span class="return-top hidden-print"></span>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

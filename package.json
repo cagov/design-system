@@ -14,7 +14,13 @@
     "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
     "test": "web-test-runner **/*.test.js --node-resolve",
     "test:visual": "web-test-runner **/*.test.js --node-resolve --config test/test.config.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "site:build": "eleventy",
+    "site:build:dev": "cross-env NODE_ENV=development eleventy",
+    "site:watch": "eleventy --serve",
+    "site:watch:dev": "cross-env NODE_ENV=development eleventy --serve --incremental",
+    "site:start": "npm run watch",
+    "site:dev": "npm run watch:dev"
   },
   "repository": {
     "type": "git",
@@ -45,5 +51,10 @@
   },
   "workspaces": [
     "./components/*"
-  ]
+  ],
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0-beta.3",
+    "@cagov/11ty-build-system": "^0.2.2",
+    "cross-env": "^7.0.3"
+  }
 }

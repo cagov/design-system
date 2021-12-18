@@ -1,0 +1,24 @@
+{% extends "layouts/index.njk" %}
+
+{% block content %}
+    <div id="page-container" class="page-container-ds">
+        <div id="main-content" class="main-content-ds single-column">
+            {# <div class="breadcrumb"></div> #}
+            <div class="ds-content-layout">
+                <main class="main-primary">
+                    <div>
+                        <article id="post-{{id}}">
+                            <h1 class="page-title">{{ title | safe }}</h1>
+                            <!-- Page Title-->
+                            <h1 class="page-title wide-page-title">{{ title | safe }}</h1>
+                            <div class="entry-content">
+                                {{ content | safe }}
+                            </div>
+                        </article>
+                        <span class="return-top hidden-print"></span>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+{% endblock %}
