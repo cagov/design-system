@@ -19,8 +19,8 @@
     "site:build:dev": "cross-env NODE_ENV=development eleventy",
     "site:watch": "eleventy --serve",
     "site:watch:dev": "cross-env NODE_ENV=development eleventy --serve --incremental",
-    "site:start": "npm run watch",
-    "site:dev": "npm run watch:dev"
+    "site:start": "npm run site:watch",
+    "site:dev": "npm run site:watch:dev"
   },
   "repository": {
     "type": "git",
@@ -55,6 +55,9 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.0-beta.3",
     "@cagov/11ty-build-system": "^0.2.2",
-    "cross-env": "^7.0.3"
+    "@rocket/core": "^0.1.2",
+    "@rocket/eleventy-plugin-mdjs-unified": "^0.6.0",
+    "cross-env": "^7.0.3",
+    "lit-element": "^3.0.2"
   }
 }

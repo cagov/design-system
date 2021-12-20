@@ -1,5 +1,21 @@
 # Accordion component
 
+```js script
+import { LitElement, html } from 'https://unpkg.com/lit-element?module';
+class MyEl extends window.HTMLElement {
+  connectedCallback() {
+    const shadow = this.attachShadow({mode: 'open'});
+    shadow.innerHTML = `<p style="color: red">I am alive</p>`;
+  }
+}
+
+customElements.define('my-el', MyEl);
+```
+
+```html preview-story
+<my-el></my-el>
+```
+
 This custom element recreates the bootstrap accordion component functionality without the jquery dependency.
 It is designed for use on https://covid19.ca.gov.
 

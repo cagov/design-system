@@ -1,6 +1,8 @@
 const cagovBuildSystem = require('@cagov/11ty-build-system');
+const pluginMdjs = require('@rocket/eleventy-plugin-mdjs-unified');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginMdjs);
   eleventyConfig.addPlugin(cagovBuildSystem, {
     sass: {
       watch: ['docs/src/css/**/*', 'components/**/*.scss'],

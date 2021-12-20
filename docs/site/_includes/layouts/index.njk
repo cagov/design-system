@@ -35,7 +35,7 @@
   <link rel="shortcut icon" href="/assets/img/cagov_favicon.ico">
   <!-- Google Analytics performance -->
   <link rel="preconnect" href="https://www.google-analytics.com/">
-  
+
   <!-- CSS -->
   {% block css %}
     {% set css %}
@@ -48,6 +48,15 @@
         grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
       }
     </style>
+  {% endblock %}
+
+  {% block js %}
+    {% set js %}
+      {% include "../../../../_site_dist/built.js" %}
+    {% endset %}
+    <script type="module">
+      {{ js | safe }}
+    </script>
   {% endblock %}
 </head>
 
@@ -80,15 +89,6 @@
       {% include "statewide-footer.njk" %}
     {% endblock %}
   </div>
-
-  {% block js %}
-    {% set js %}
-      {% include "../../../../_site_dist/built.js" %}
-    {% endset %}
-    <script type="module">
-      {{ js | safe }}
-    </script>
-  {% endblock %}
 </body>
 
 </html>
