@@ -36,7 +36,7 @@ article {
 }
 
 .single-column.single-column-wide .ds-content-layout {
-  max-width: 1176px;
+  max-width: var(--w-lg, 1176px);
   margin: 0 auto;
 }
 
