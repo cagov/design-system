@@ -1,5 +1,13 @@
 const cagovBuildSystem = require('@cagov/11ty-build-system');
 const pluginMdjs = require('@rocket/eleventy-plugin-mdjs-unified');
+const fs = require('fs');
+
+const extraContent = fs.readdirSync('components', { withFileTypes: true })
+  .filter(entry => entry.isDirectory())
+  .reduce((bucket, dir) => {
+    bucket[`components/${dir.name}/*.+(md|11tydata.json)`] = `docs/site/components/${dir.name}`;
+    return bucket;
+  }, {});
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginMdjs);
@@ -22,11 +30,7 @@ module.exports = function (eleventyConfig) {
         outfile: '_site_dist/built.js',
       },
     },
-    extraContent: {
-      'components/accordion/*.+(md|11tydata.json)':
-        'docs/site/components/accordion',
-      'components/menu/*.+(md|11tydata.json)': 'docs/site/components/menu',
-    },
+    extraContent,
   });
 
   eleventyConfig.addPassthroughCopy({ 'docs/src/assets': 'assets' });
