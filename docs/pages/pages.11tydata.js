@@ -1,6 +1,6 @@
 module.exports = {
-  layout: "page",
+  layout: 'page',
   eleventyComputed: {
-    permalink: article => `/${article.page.fileSlug}/index.html`
-  }
+    permalink: (article) => `/${article.page.fileSlug}/index.html`,
+  },
 };
