@@ -1,0 +1,12 @@
+.github
+.husky
+components/**/*.!(md|11tydata.json)
+docs/src/css
+docs/src/js
+test
+package.json
+package-lock.json
+README.md
+unit-tests.md
+node_modules/**
+**/node_modules/**

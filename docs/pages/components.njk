@@ -1,0 +1,9 @@
+<h1>Components</h1>
+
+<ul>
+{%- for component in collections.component -%}
+  <li>
+    <a href="{{ component.url }}">{{ component.url }}</a>
+  </li>
+{%- endfor -%}
+</ul>
