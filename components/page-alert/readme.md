@@ -1,4 +1,4 @@
-# Page Alert
+# Content components >> Page alert >> Readme || 10
 
 Page alert provides brief, important or time-sensitive information. Yellow background color is used to grab users attention and create sense of importance and urgency. Page alert box usually appears beneath the site navigation on the homepage. It can include a hyperlink, but not a button or image.
 

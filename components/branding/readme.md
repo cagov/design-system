@@ -1,4 +1,4 @@
-# Site branding header layer
+# Visual components >> Agency header >> Readme || 10
 
 This is a CSS only module that contains the styles for laying out the agency branding for a state of California agency as part of the site header. These styles expect the following HTML structure.
 

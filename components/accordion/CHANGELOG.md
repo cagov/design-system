@@ -1,4 +1,5 @@
-# CHANGELOG for ds-accordion
+# Content components >> Accordion >> Changelog || 20
+
 `ds-accordion`
 
 # 1.0.8

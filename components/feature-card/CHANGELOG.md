@@ -1,4 +1,5 @@
-# CHANGELOG for ds-feature-card
+# Content components >> Feature card >> Changelog || 30
+
 `ds-feature-card`
 
 # 1.0.5

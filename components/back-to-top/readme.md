@@ -1,4 +1,4 @@
-# Site branding header layer
+# Navigation components >> Back to top button >> Readme || 10
 
 When users get at the bottom of a really long page, they often will need to get back to the top. Back to top button will take the user to the top of the page when clicked on. Custom element code can be placed inside the footer tag or right before the closing main tag.
 

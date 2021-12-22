@@ -1,4 +1,5 @@
-# CHANGELOG for ds-feedback
+# Structural components >> Page feedback >> Changelog || 30
+
 `ds-feedback`
 
 # 1.0.11

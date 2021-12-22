@@ -1,4 +1,5 @@
-# CHANGELOG for ds-dropdown-menu
+# Navigation components >> Site navigation >> Changelog || 30
+
 `ds-dropdown-menu`
 
 # 1.0.15
