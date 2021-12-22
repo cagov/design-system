@@ -15,7 +15,7 @@ customElements.define('my-el', MyEl);
 <my-el></my-el>
 ```
 
-This custom element recreates the bootstrap accordion component functionality without the jquery dependency.
+This Custom Element recreates the bootstrap accordion component functionality without the jquery dependency.
 
 It is designed for use on https://covid19.ca.gov.
 

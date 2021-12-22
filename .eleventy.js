@@ -23,10 +23,10 @@ md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
         ignoreIllegals: true,
       };
       const highlightedCode = hljs.highlight(rawCode, hljsOptions).value;
-      formattedCode = `<pre class="hljs"><code>${highlightedCode}</code></pre>`;
+      formattedCode = `<pre><code class="hljs">${highlightedCode}</code></pre>`;
     } catch (_) {
       const escapedCode = md.utils.escapeHtml(rawCode);
-      formattedCode = `<pre class="hljs"><code>${escapedCode}</code></pre>`;
+      formattedCode = `<pre><code class="hljs">${escapedCode}</code></pre>`;
     }
 
     if (instruction === 'script') {
@@ -41,7 +41,7 @@ md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
   }
 
   const escapedCode = md.utils.escapeHtml(rawCode);
-  return `<pre class="hljs"><code>${escapedCode}</code></pre>`;
+  return `<pre><code>${escapedCode}</code></pre>`;
 };
 
 module.exports = function (eleventyConfig) {
