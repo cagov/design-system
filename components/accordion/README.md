@@ -1,7 +1,6 @@
 # Accordion component
 
 ```js script
-import { LitElement, html } from 'https://unpkg.com/lit-element?module';
 class MyEl extends window.HTMLElement {
   connectedCallback() {
     const shadow = this.attachShadow({mode: 'open'});
