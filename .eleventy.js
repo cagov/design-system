@@ -1,8 +1,51 @@
 const cagovBuildSystem = require('@cagov/11ty-build-system');
-const pluginMdjs = require('@rocket/eleventy-plugin-mdjs-unified');
+const markdownIt = require('markdown-it');
+const hljs = require('highlight.js');
+
+const md = require('markdown-it')({
+  html: true,
+  breaks: true,
+  linkify: true,
+});
+
+md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
+  const token = tokens[idx];
+  const info = token.info ? md.utils.unescapeAll(token.info).trim() : '';
+  const [lang, instruction] = info.split(/\s+/g);
+
+  const rawCode = token.content;
+  let formattedCode;
+
+  if (lang) {
+    try {
+      const hljsOptions = {
+        language: lang,
+        ignoreIllegals: true,
+      };
+      const highlightedCode = hljs.highlight(rawCode, hljsOptions).value;
+      formattedCode = `<pre class="hljs"><code>${highlightedCode}</code></pre>`;
+    } catch (_) {
+      const escapedCode = md.utils.escapeHtml(rawCode);
+      formattedCode = `<pre class="hljs"><code>${escapedCode}</code></pre>`;
+    }
+
+    if (instruction === 'script') {
+      formattedCode = `<script type="module">${rawCode}</script>${formattedCode}`;
+    }
+
+    if (instruction === 'preview') {
+      formattedCode = `<div class="code-block-preview">${rawCode}</div>${formattedCode}`;
+    }
+
+    return formattedCode;
+  }
+
+  const escapedCode = md.utils.escapeHtml(rawCode);
+  return `<pre class="hljs"><code>${escapedCode}</code></pre>`;
+};
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(pluginMdjs);
+  eleventyConfig.setLibrary('md', md);
   eleventyConfig.addPlugin(cagovBuildSystem, {
     sass: {
       watch: ['docs/src/css/**/*', 'components/**/*.scss'],
