@@ -20,3 +20,9 @@
 @import "../../../../components/agency-footer/src/index.scss";
 @import "../../../../components/statewide-footer/src/index.scss";
 @import "../../../../components/menu/src/index.scss";
+
+@import "../../../../node_modules/highlight.js/styles/vs";
+
+.hljs {
+  margin: 24px 0;
+}
