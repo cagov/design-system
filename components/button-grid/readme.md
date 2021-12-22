@@ -1,4 +1,4 @@
-# Card grid component
+# Content components >> Link grid >> Readme || 10
 
 The card grid depends on individual cards and lays them out in a grid
 

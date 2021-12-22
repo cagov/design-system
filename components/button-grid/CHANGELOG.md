@@ -1,4 +1,5 @@
-# CHANGELOG for ds-card-grid
+# Content components >> Link grid >> Changelog || 30
+
 `ds-card-grid`
 
 # 2.0.1

@@ -1,4 +1,5 @@
-# CHANGELOG for ds-content-navigation
+# Navigation components >> Page navigation >> Changelog || 30
+
 `ds-content-navigation`
 
 # 1.0.7

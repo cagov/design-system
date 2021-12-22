@@ -1,4 +1,5 @@
-# CHANGELOG for ds-branding
+# Visual components >> Agency header >> Changelog || 30
+
 `ds-branding`
 
 # 1.0.8

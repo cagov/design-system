@@ -1,4 +1,5 @@
-# CHANGELOG for ds-agency-footer
+# Structural components >> Agency footer >> Changelog || 30
+
 `ds-agency-footer`
 
 # 1.0.2
