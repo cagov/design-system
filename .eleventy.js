@@ -47,27 +47,32 @@ md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', md);
   eleventyConfig.addPlugin(cagovBuildSystem, {
-    sass: {
-      watch: ['docs/src/css/**/*', 'components/**/*.scss'],
-      output: '_site_dist/index.css',
-      minify: true,
-      options: {
-        file: 'docs/src/css/sass/index.scss',
-        includePaths: ['./src/css/sass'],
-      },
-    },
-    esbuild: {
-      watch: ['docs/src/js/**/*', 'components/**/*.!(md)'],
-      options: {
-        entryPoints: ['docs/src/js/index.js'],
-        bundle: true,
+    processors: {
+      sass: {
+        watch: ['docs/src/css/**/*', 'components/**/*.scss'],
+        output: '_site_dist/index.css',
         minify: true,
-        outfile: '_site_dist/built.js',
+        options: {
+          file: 'docs/src/css/sass/index.scss',
+          includePaths: ['./src/css/sass'],
+        },
+      },
+      esbuild: {
+        watch: ['docs/src/js/**/*', 'components/**/*.!(md)'],
+        options: {
+          entryPoints: ['docs/src/js/index.js'],
+          bundle: true,
+          minify: true,
+          outfile: '_site_dist/built.js',
+        },
       },
     },
   });
 
+  eleventyConfig.setUseGitIgnore(false);
+
   eleventyConfig.addPassthroughCopy({ 'docs/src/assets': 'assets' });
+  eleventyConfig.addPassthroughCopy({ 'docs/src/css/fonts': 'fonts' });
   eleventyConfig.addPassthroughCopy({ '_site_dist/*': '/' });
 
   return {
