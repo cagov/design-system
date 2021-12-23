@@ -1,7 +1,6 @@
 # Accordion component
 
 ```js script
-import { LitElement, html } from 'https://unpkg.com/lit-element?module';
 class MyEl extends window.HTMLElement {
   connectedCallback() {
     const shadow = this.attachShadow({mode: 'open'});
@@ -12,18 +11,19 @@ class MyEl extends window.HTMLElement {
 customElements.define('my-el', MyEl);
 ```
 
-```html preview-story
+```html preview
 <my-el></my-el>
 ```
 
-This custom element recreates the bootstrap accordion component functionality without the jquery dependency.
+This Custom Element recreates the bootstrap accordion component functionality without the jquery dependency.
+
 It is designed for use on https://covid19.ca.gov.
 
 <img src="https://github.com/cagov/storybook-ca-gov/raw/main/packages/%40cagov/accordion/stories/accordion.png" />
 
 ## Sample markup
 
-```
+```html
 <cagov-accordion>
   <div class="cagov-accordion-card">
     <button class="accordion-card-header accordion-alpha" type="button" aria-expanded="false">

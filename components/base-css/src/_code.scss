@@ -1,4 +1,5 @@
 /* Code generic styles */
+
 code,
 samp {
   background: var(--gray-100, #f9f9fa);
@@ -12,4 +13,7 @@ pre > code {
   padding: 10px;
   display: block;
   overflow-x: auto;
+  margin: 24px 0;
 }
+
+

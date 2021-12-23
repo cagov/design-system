@@ -1,25 +1,27 @@
 /* GLOBAL */
 // Site Colors
-@import "../../../../components/base-css/src/colorschemes/cagov"; /* theme colors */
+@import '../../../../components/base-css/src/colorschemes/cagov'; /* theme colors */
 
 /* sitewide styles */
-@import "../../../../components/base-css/src/core";
+@import '../../../../components/base-css/src/core';
 
 /* COMPONENTS/BLOCKS */
-@import "../../../../components/branding/src/index.scss";
-@import "../../../../components/button-grid/src/index.scss"; /* copied from blocks */
-@import "../../../../components/content-navigation/src/index.scss"; /* copied from blocks */
-@import "../../../../components/feature-card/src/index.scss"; /* copied from block */
-@import "../../../../components/step-list/src/index.scss";
-@import "../../../../components/link-icon/src/index.scss";
-@import "../../../../components/skip-to-content/src/index.scss";
-@import "../../../../components/back-to-top/src/index.scss";
+@import '../../../../components/branding/src/index.scss';
+@import '../../../../components/button-grid/src/index.scss'; /* copied from blocks */
+@import '../../../../components/content-navigation/src/index.scss'; /* copied from blocks */
+@import '../../../../components/feature-card/src/index.scss'; /* copied from block */
+@import '../../../../components/step-list/src/index.scss';
+@import '../../../../components/link-icon/src/index.scss';
+@import '../../../../components/skip-to-content/src/index.scss';
+@import '../../../../components/back-to-top/src/index.scss';
 
 /* NAVIGATION ELEMENTS */
-@import "../../../../components/statewide-header/src/index.scss";
-@import "../../../../components/agency-footer/src/index.scss";
-@import "../../../../components/statewide-footer/src/index.scss";
-@import "../../../../components/menu/src/index.scss";
+@import '../../../../components/statewide-header/src/index.scss';
+@import '../../../../components/agency-footer/src/index.scss';
+@import '../../../../components/statewide-footer/src/index.scss';
+@import '../../../../components/menu/src/index.scss';
+
+@import '../../../../node_modules/highlight.js/styles/a11y-dark';
 
 /* homepage element styles */
 /* Feature card additional styles for full bleed */

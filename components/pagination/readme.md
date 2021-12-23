@@ -1,4 +1,4 @@
-# Pagination
+# Navigation components >> Pagination >> Readme || 10
 
 This custom element renders a set of links to page through sets of items.
 
@@ -25,8 +25,17 @@ new CustomEvent("paginationClick", {
 })
 ```
 
-<img src="pagination.png" />
+## Demo
 
+```js script
+import './dist/index.js';
+import { html } from 'lit-html';
+```
+
+```js story
+export const demo = () => html`
+  <cagov-pagination data-current-page="5" data-total-pages="99"></cagov-pagination>`;
+```
 
 ## Sample markup
 
@@ -34,15 +43,27 @@ new CustomEvent("paginationClick", {
 <cagov-pagination data-current-page="5" data-total-pages="99"></cagov-pagination>
 ```
 
+## Install
 
-## Docs
+Install the package into your production dependencies from npm:
 
-Run: ```npm run start``` at the repository root to preview elements. This will launch local server with links to component demo pages.
-
-The documentation is generated using the <a href="https://github.com/webcomponents/custom-elements-manifest">custom elements manifest schema</a> draft standard <a href="https://github.com/runem/web-component-analyzer">analyzer</a> command. Here is an example run outside the accordion directory:
-
-```
-wca analyze src --format json --outFile custom-elements.json
+```bash
+npm i @cagov/ds-pagination
 ```
 
-Then the <a href="https://github.com/web-padawan/api-viewer-element">api viewer element</a> references the generated custom-elements.json and builds a live preview playground with docs.
+## Include javascript
+
+Include the package in your javascript bundle:
+
+```js
+import @cagov/ds-pagination
+```
+
+
+## Sample markup
+
+Include this markup where you want the pagination element to appear
+
+```
+<cagov-pagination data-current-page="5" data-total-pages="99"></cagov-pagination>
+```

@@ -1,4 +1,4 @@
-# Link icon component
+# Visual components >> Link icon >> Readme || 10
 
 - PDF icon: The pdf icon is the letters PDF surrounded by a box outline. It indicates that the link opens a PDF. PDF link should not appear in combination with any other link icon.
 - External link: this component can also add an external-link icon next to a link that goes outside current website. It lets people know they will leave the site when that link is opened. However, if link is already link to pdf file the external link icon (or any other icon) will not be displayed.
