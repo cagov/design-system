@@ -1,9 +1,10 @@
 /* step list */
-ol.steps, .cagov-step-list {
+.cagov-step-list {
   padding-left: 0 !important;
   margin-left: 30px !important;
+  counter-reset: step-list-count;
 }
-ol.steps li, .cagov-step-list li {
+.cagov-step-list li {
   list-style: none;
   border-left: 5px solid var(--secondary-color, #fec02f);
   font-size: 1.75rem;
@@ -12,7 +13,7 @@ ol.steps li, .cagov-step-list li {
   padding-left: 45px;
   line-height: 1.5;
 }
-ol.steps li:before, .cagov-step-list li:before {
+.cagov-step-list li:before {
   content: "";
   font-family: "Public Sans";
   font-size: 1.75rem;
@@ -27,8 +28,7 @@ ol.steps li:before, .cagov-step-list li:before {
   top: -5px;
   margin-left: -1px;
 }
-ol.steps li span.has-black-color,
-ol.steps li .cagov-step-list-content, .cagov-step-list li span.has-black-color,
+.cagov-step-list li span.has-black-color,
 .cagov-step-list li .cagov-step-list-content {
   margin-top: 1rem;
   padding-bottom: 1.75rem;
@@ -36,99 +36,24 @@ ol.steps li .cagov-step-list-content, .cagov-step-list li span.has-black-color,
   font-weight: 500;
   display: block;
 }
-ol.steps li:first-child:before, .cagov-step-list li:first-child:before {
-  content: "1";
+.cagov-step-list li:first-child:before {
   padding: 0 16px 0 16px;
 }
-ol.steps li:nth-child(2):before, .cagov-step-list li:nth-child(2):before {
-  content: "2";
+.cagov-step-list li::before {
+  counter-increment: step-list-count;
+  content: counter(step-list-count);
 }
-ol.steps li:nth-child(3):before, .cagov-step-list li:nth-child(3):before {
-  content: "3";
+.cagov-step-list li:nth-child(n+10):before {
+  padding: 0 7px;
 }
-ol.steps li:nth-child(4):before, .cagov-step-list li:nth-child(4):before {
-  content: "4";
+.cagov-step-list li:nth-child(n+20):before {
+  padding: 0 5px;
 }
-ol.steps li:nth-child(5):before, .cagov-step-list li:nth-child(5):before {
-  content: "5";
-}
-ol.steps li:nth-child(6):before, .cagov-step-list li:nth-child(6):before {
-  content: "6";
-}
-ol.steps li:nth-child(7):before, .cagov-step-list li:nth-child(7):before {
-  content: "7";
-}
-ol.steps li:nth-child(8):before, .cagov-step-list li:nth-child(8):before {
-  content: "8";
-}
-ol.steps li:nth-child(9):before, .cagov-step-list li:nth-child(9):before {
-  content: "9";
-}
-ol.steps li:nth-child(10):before, .cagov-step-list li:nth-child(10):before {
-  content: "10";
-  padding: 0 7px 0 7px;
-  margin-left: -1px;
-}
-ol.steps li:nth-child(11):before, .cagov-step-list li:nth-child(11):before {
-  content: "11";
-  padding: 0 10px 0 10px;
-}
-ol.steps li:nth-child(12):before, .cagov-step-list li:nth-child(12):before {
-  content: "12";
-  padding: 0 8px 0 8px;
-  margin-left: -1px;
-}
-ol.steps li:nth-child(13):before, .cagov-step-list li:nth-child(13):before {
-  content: "13";
-  padding: 0 7px 0 7px;
-}
-ol.steps li:nth-child(14):before, .cagov-step-list li:nth-child(14):before {
-  content: "14";
-  padding: 0 7px 0 7px;
-}
-ol.steps li:nth-child(15):before, .cagov-step-list li:nth-child(15):before {
-  content: "15";
-  padding: 0 7px 0 8px;
-  margin-left: 3px;
-}
-ol.steps li:nth-child(16):before, .cagov-step-list li:nth-child(16):before {
-  content: "16";
-  padding: 0 7px 0 7px;
-}
-ol.steps li:nth-child(17):before, .cagov-step-list li:nth-child(17):before {
-  content: "17";
-  padding: 0 7px 0 7px;
-}
-ol.steps li:nth-child(18):before, .cagov-step-list li:nth-child(18):before {
-  content: "18";
-  padding: 0 7px 0 7px;
-}
-ol.steps li:nth-child(19):before, .cagov-step-list li:nth-child(19):before {
-  content: "19";
-  padding: 0 7px 0 7px;
-}
-ol.steps li:nth-child(20):before, .cagov-step-list li:nth-child(20):before {
-  content: "20";
-  padding: 0 5px 0 5px;
-}
-ol.steps li:nth-child(21):before, .cagov-step-list li:nth-child(21):before {
-  content: "21";
-  padding: 0 6px 0 6px;
-}
-ol.steps li:nth-child(22):before, .cagov-step-list li:nth-child(22):before {
-  content: "22";
-  padding: 0 5px 0 5px;
-}
-ol.steps li:nth-child(23):before, .cagov-step-list li:nth-child(23):before {
-  content: "23";
-  padding: 0 5px 0 5px;
-}
-ol.steps li:nth-child(24):before, .cagov-step-list li:nth-child(24):before {
-  content: "24";
-  padding: 0 5px 0 5px;
-}
-ol.steps li:last-child, .cagov-step-list li:last-child {
+.cagov-step-list li:last-child {
   border-left: none;
+}
+.cagov-step-list li:last-child:before {
+  margin-left: 6px;
 }
 
 /*# sourceMappingURL=index.css.map */
