@@ -1,20 +1,5 @@
 # Accordion component
 
-```js script
-class MyEl extends window.HTMLElement {
-  connectedCallback() {
-    const shadow = this.attachShadow({mode: 'open'});
-    shadow.innerHTML = `<p style="color: red">I am alive</p>`;
-  }
-}
-
-customElements.define('my-el', MyEl);
-```
-
-```html preview
-<my-el></my-el>
-```
-
 This Custom Element recreates the bootstrap accordion component functionality without the jquery dependency.
 
 It is designed for use on https://covid19.ca.gov.
@@ -23,7 +8,7 @@ It is designed for use on https://covid19.ca.gov.
 
 ## Sample markup
 
-```html
+```html preview
 <cagov-accordion>
   <div class="cagov-accordion-card">
     <button class="accordion-card-header accordion-alpha" type="button" aria-expanded="false">
