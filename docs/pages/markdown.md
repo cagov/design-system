@@ -6,7 +6,7 @@ Here's a page for documenting and testing our markdown preview capabilities.
 
 In markdown, code block are enclosed by triple-backticks.
 
-````
+````markdown
 ```
 # Your code here.
 ```
@@ -15,7 +15,7 @@ In markdown, code block are enclosed by triple-backticks.
 We can define the types of code in these block via labels. For example, the following code block is labeled as `js` for Javascript.
 
 
-````
+````markdown
 ```js
 // Your Javascript code here.
 ```
@@ -31,7 +31,7 @@ Inspired by the [MDJS plugin](https://rocket.modern-web.dev/docs/eleventy-plugin
 
 The `script` instruction will execute a Javascript code block live on the page. It can be added directly after the `js` label on the code block, separated by a space.
 
-````
+````markdown
 ```js script
 console.log("This javascript would be executed on the page.")
 ```
@@ -56,7 +56,7 @@ customElements.define('my-el', MyEl);
 
 The `preview` instruction will insert an HTML code block into the page. 
 
-````
+````markdown
 ```html preview
 <p>This HTML would be inserted into the DOM.</p>
 ```
