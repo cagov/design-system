@@ -23,9 +23,16 @@
 
 @import '../../../../node_modules/highlight.js/styles/a11y-dark';
 
-
+/* sitewide styles */
 @import './ds-site-global';
+
+/* proposed new components */
+@import '../../../../components/highlight-section/src/index.scss';
+
+/* proposed variations for existing design system components */
 @import './feature-card-variations';
+
+/* these are additions to base-css grids */
 @import './grids';
 
 
