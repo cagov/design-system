@@ -1,6 +1,6 @@
 /* GLOBAL */
 // Site Colors
-@import '../../../../components/base-css/src/colorschemes/drought'; /* theme colors */
+@import '../../../../components/base-css/src/colorschemes/cagov'; /* theme colors */
 
 /* sitewide styles */
 @import '../../../../components/base-css/src/core';
@@ -22,3 +22,18 @@
 @import '../../../../components/menu/src/index.scss';
 
 @import '../../../../node_modules/highlight.js/styles/a11y-dark';
+
+/* sitewide styles */
+@import './ds-site-global';
+
+/* proposed new components */
+@import '../../../../components/highlight-section/src/index.scss';
+
+/* proposed variations for existing design system components */
+@import './feature-card-variations';
+
+/* these are additions to base-css grids */
+@import './grids';
+
+
+

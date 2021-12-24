@@ -1,0 +1,37 @@
+/* Feature card full bleed variation */
+.full-bleed {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
+.full-bleed--highlight1 {
+  background: #FFECC1;
+}
+.full-bleed-content-area {
+  padding: 0 20px;
+  display: flex;
+  background: transparent;
+}
+@media screen and (min-width: 1024px) {
+  .full-bleed-content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* feature-card responsive resize using semantic order variation */
+@media (max-width: 719px) {
+  .cagov-with-sidebar.cagov-no-reverse >* {
+    flex-direction: column;
+  }  
+}
+
+/* utility classes added for this section */
+.cagov-mt-2 {
+  margin-top: 2rem;
+}
+.cagov-pr-2 {
+  padding-right: 2rem;
+}
+.cagov-bold {
+  font-weight: bold;
+}

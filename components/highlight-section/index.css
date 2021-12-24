@@ -1,0 +1,102 @@
+cagov-highlight-section article .container {
+  max-width: var(--w-lg, 1176px) !important;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+cagov-highlight-section article .btn-primary-outline {
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  color: var(--primary-color, #004abc);
+  font-weight: var(--font-weight-regular, 400);
+  font-size: var(--body-text, 1.125rem);
+  border: 1px solid var(--primary-color, #004abc);
+  border-radius: 5px;
+  padding: var(--spacing-base, 0.5rem);
+  background-color: #fff;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+cagov-highlight-section article .btn-primary-outline:hover {
+  color: var(--primary-dark-color, #003484);
+  border: 1px solid var(--primary-dark-color, #003484);
+  background-color: var(--gray-200, #ededef);
+}
+cagov-highlight-section article .btn-primary-outline:focus {
+  outline: 2px solid var(--highlight-color, #fec02f);
+}
+cagov-highlight-section article .highlight-body {
+  display: flex;
+  flex-direction: column;
+}
+cagov-highlight-section article .highlight-body .highlight-image {
+  background-color: var(--primary-lightest-color, #b3c9eb);
+  padding: 1.5rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+cagov-highlight-section article .highlight-body .highlight-image img {
+  width: 100%;
+  margin: auto;
+}
+cagov-highlight-section article .highlight-body .highlight-text {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  cagov-highlight-section article .container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  cagov-highlight-section article .container .highlight-header {
+    text-align: center;
+  }
+  cagov-highlight-section article .container .highlight-body {
+    flex-direction: row;
+  }
+  cagov-highlight-section article .container .highlight-body .highlight-image {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+    max-width: 30%;
+  }
+  cagov-highlight-section article .container .highlight-body .highlight-image img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  cagov-highlight-section article .container .highlight-body .highlight-text {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+  }
+}
+.full-bleed {
+  margin-left: calc(50% - 50vw);
+  width: 99.5vw;
+}
+
+.bg-highlight-lightest {
+  background-color: var(--highlight-lightest-color, #ffecc1) !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+/*# sourceMappingURL=index.css.map */
