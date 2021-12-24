@@ -6,6 +6,10 @@ It is designed for use on https://covid19.ca.gov.
 
 <img src="https://github.com/cagov/storybook-ca-gov/raw/main/packages/%40cagov/accordion/stories/accordion.png" />
 
+```html preview
+<script type="module" src="/builds/accordion.js"></script>
+```
+
 ## Sample markup
 
 ```html preview

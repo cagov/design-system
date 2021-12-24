@@ -2,4 +2,5 @@ node_modules
 .DS_Store
 _site
 _site_dist
+_build_dist
 docs/site/components/*/

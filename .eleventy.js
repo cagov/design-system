@@ -57,15 +57,29 @@ module.exports = function (eleventyConfig) {
           includePaths: ['./src/css/sass'],
         },
       },
-      esbuild: {
-        watch: ['docs/src/js/**/*', 'components/**/*.!(md)'],
-        options: {
-          entryPoints: ['docs/src/js/index.js'],
-          bundle: true,
-          minify: true,
-          outfile: '_site_dist/built.js',
+      esbuild: [
+        {
+          watch: ['docs/src/js/**/*', 'components/**/*.!(md)'],
+          options: {
+            entryPoints: ['docs/src/js/index.js'],
+            bundle: true,
+            minify: true,
+            outfile: '_site_dist/built.js',
+          },
         },
-      },
+        ...['accordion'].map((component) => {
+          return {
+            watch: [`components/${component}/**/*.!(md)`],
+            options: {
+              entryPoints: [`components/${component}/src/index.js`],
+              bundle: true,
+              minify: true,
+              outfile: `_build_dist/${component}.js`,
+              loader: { '.css': 'text' },
+            },
+          };
+        }),
+      ],
     },
   });
 
@@ -75,6 +89,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'docs/src/assets/img/*': 'img' });
   eleventyConfig.addPassthroughCopy({ 'docs/src/css/fonts': 'fonts' });
   eleventyConfig.addPassthroughCopy({ '_site_dist/*': '/' });
+  eleventyConfig.addPassthroughCopy({ '_build_dist/*': 'builds' });
 
   return {
     htmlTemplateEngine: 'njk',
