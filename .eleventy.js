@@ -69,14 +69,11 @@ module.exports = function (eleventyConfig) {
     },
   });
 
-<<<<<<< HEAD
-  eleventyConfig.addPassthroughCopy({ 'docs/src/assets/img/*': 'img' });
-=======
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addPassthroughCopy({ 'docs/src/assets': 'assets' });
+  eleventyConfig.addPassthroughCopy({ 'docs/src/assets/img/*': 'img' });
   eleventyConfig.addPassthroughCopy({ 'docs/src/css/fonts': 'fonts' });
->>>>>>> 83708b33668976f1593d0f468a31d26473dd1a06
   eleventyConfig.addPassthroughCopy({ '_site_dist/*': '/' });
 
   return {

@@ -23,97 +23,10 @@
 
 @import '../../../../node_modules/highlight.js/styles/a11y-dark';
 
-/* homepage element styles */
-/* Feature card additional styles for full bleed */
-.main-content-ds.landing {
-  margin-top: -2rem;
-}
-.full-bleed {
-  margin-left: calc(50% - 50vw);
-  width: 100vw;
-}
-.full-bleed--highlight1 {
-  background: #FFECC1;
-}
-.full-bleed-content-area {
-  padding: 0 20px;
-  display: flex;
-  background: transparent;
-}
-@media screen and (min-width: 1024px) {
-  .full-bleed-content-area {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
 
-/* card grid */
-.cagov-cluster-3 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space, 1.5rem);
-}
-@supports (width: calc(min(376px, 100%))) {
-  .cagov-cluster-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(calc(min(376px, 100%)), 1fr));
-    grid-gap: 1.5rem;
-  }
-}
+@import './ds-site-global';
+@import './feature-card-variations';
+@import './grids';
 
-.cagov-cluster-3 {
-  .cagov-stack-card {
-    max-width: 376px;
-    border-radius: 5px;  
-  }
-}
-.cagov-stack-card {
-  background-color: #F9F9FA;
 
-  .cagov-card-head {
-    background: #b3c9eb;
-    min-height: 176px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .cagov-card-body {
-    padding: 2rem;
-    .cagov-card-title {
-      font-size: 23px; /* got these numbers from figma, weird they are not divisible by 4 */
-      line-height: 39px;
-    }
-    p {
-      margin-top: 1rem;
-      font-size: 1.5rem; /* is this redundant, should be usable body copy */
-      line-height: 2rem;
-    }
-  }
-}
 
-/* Who is using big cards */
-.cagov-cluster-big-2 {
-  display: flex;
-  flex-direction: row;
-}
-@supports (width: calc(min(576px, 100%))) {
-  .cagov-cluster-big-2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(calc(min(576px, 100%)), 1fr));
-    grid-gap: 1.5rem;
-  }
-}
-.cagov-cluster-big-2 {
-  .cagov-stack-card {
-    max-width: 576px;
-    border-radius: 5px;
-    .cagov-card-head {
-      padding: 1rem;
-    }
- }
-}
-.cagov-border-link {
-  border: solid 1px; /* review for existing styles */
-  padding: 1rem;
-  display: inline-block;
-}
