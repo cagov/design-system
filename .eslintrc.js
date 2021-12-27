@@ -10,7 +10,12 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'function-paren-newline': 'off',
   },
-  ignorePatterns: ['**/dist/*', '**/stories/*'],
+  ignorePatterns: [
+    '**/dist/*',
+    '**/stories/*',
+    '_build_dist/*',
+    '_site_dist/**/*',
+  ],
   parserOptions: {
     allowImportExportEverywhere: true,
     ecmaVersion: 2018,
