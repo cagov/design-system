@@ -1,51 +1,9 @@
 const cagovBuildSystem = require('@cagov/11ty-build-system');
-const markdownIt = require('markdown-it');
-const hljs = require('highlight.js');
-
-const md = require('markdown-it')({
-  html: true,
-  breaks: true,
-  linkify: true,
-});
-
-md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
-  const token = tokens[idx];
-  const info = token.info ? md.utils.unescapeAll(token.info).trim() : '';
-  const [lang, instruction] = info.split(/\s+/g);
-
-  const rawCode = token.content;
-  let formattedCode;
-
-  if (lang) {
-    try {
-      const hljsOptions = {
-        language: lang,
-        ignoreIllegals: true,
-      };
-      const highlightedCode = hljs.highlight(rawCode, hljsOptions).value;
-      formattedCode = `<pre><code class="hljs">${highlightedCode}</code></pre>`;
-    } catch (_) {
-      const escapedCode = md.utils.escapeHtml(rawCode);
-      formattedCode = `<pre><code class="hljs">${escapedCode}</code></pre>`;
-    }
-
-    if (instruction === 'script') {
-      formattedCode = `<script type="module">${rawCode}</script>${formattedCode}`;
-    }
-
-    if (instruction === 'preview') {
-      formattedCode = `<div class="code-block-preview">${rawCode}</div>${formattedCode}`;
-    }
-
-    return formattedCode;
-  }
-
-  const escapedCode = md.utils.escapeHtml(rawCode);
-  return `<pre><code>${escapedCode}</code></pre>`;
-};
+const builds = require('./docs/src/js/builds.js');
+const markdown = require('./docs/src/js/markdown.js');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setLibrary('md', md);
+  eleventyConfig.setLibrary('md', markdown);
   eleventyConfig.addPlugin(cagovBuildSystem, {
     processors: {
       sass: {
@@ -67,18 +25,7 @@ module.exports = function (eleventyConfig) {
             outfile: '_site_dist/built.js',
           },
         },
-        ...['accordion'].map((component) => {
-          return {
-            watch: [`components/${component}/**/*.!(md)`],
-            options: {
-              entryPoints: [`components/${component}/src/index.js`],
-              bundle: true,
-              minify: true,
-              outfile: `_build_dist/${component}.js`,
-              loader: { '.css': 'text' },
-            },
-          };
-        }),
+        ...builds,
       ],
     },
   });
