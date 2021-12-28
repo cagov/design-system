@@ -6,6 +6,7 @@ samp {
   padding: 2.5px 5px;
   border-radius: 6px;
   font-size: var(--body-text, 1.125rem);
+  font-size: calc(var(--body-text) + var(--ratio));
 }
 
 pre > code {

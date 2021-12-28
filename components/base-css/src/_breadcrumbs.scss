@@ -1,8 +1,8 @@
 .breadcrumb {
   display: block;
   margin-top: 0px;
-  margin-bottom: 64px;
-  font-size: 16px;
+  margin-bottom: calc(4rem + var(--ratio));
+  font-size: calc(1rem + var(--ratio));
 }
 
 .breadcrumb a {
@@ -29,9 +29,9 @@
   .breadcrumb span.crumb:not(:last-child):not([class*="separator"]) {
     display: inline-block;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 18.8px;
-    color: #064e66;
+    font-size: calc(1rem + var(--ratio));
+    line-height: 1.125rem;
+    color: var(--primary-color, #004abc);
   }
 
   .breadcrumb span.crumb:not(:last-child):not([class*="separator"]) {
@@ -40,8 +40,8 @@
 
   .breadcrumb {
     display: block;
-    margin-top: 48px;
-    margin-bottom: 16px;
+    margin-top: calc(3rem + var(--ratio));
+    margin-bottom: calc(1rem + var(--ratio));
     background-color: transparent;
     padding: 0;
   }
