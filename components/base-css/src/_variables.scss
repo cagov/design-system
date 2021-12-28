@@ -31,18 +31,21 @@ $desktop-min: 1176px;
   --margin-lg: calc(--spacing-base * 12); // 96px
   --margin-xl: calc(--spacing-base * 24); // 96px
 
-
-  // Font 
-  --site-font: "Public Sans",sans-serif;
+  // Font
+  --site-font: "Public Sans", sans-serif;
 
   // Font sizes
   --body-text: 1.125rem;
   --lead-text: 1.4375rem;
-  --small-text: .875rem;
-// font sizes mobile
+  --small-text: 0.875rem;
+
+  // Responsive Font Ratio (for responsive typography (body))
+  --ratio: 0.1vw;
+
+  // font sizes mobile
   --body-text-mobile: 1rem;
   --lead-text-mobile: 1.25rem;
-  --small-text-mobile: .875rem;
+  --small-text-mobile: 0.875rem;
 
   // Font weights
   --font-weight-bold: 700;
@@ -50,21 +53,21 @@ $desktop-min: 1176px;
   --font-weight-light: 300;
 
   // cagov main colors
-  --cagov-highlight: #FEC02F;
-  --cagov-primary: #004ABC;
+  --cagov-highlight: #fec02f;
+  --cagov-primary: #004abc;
   --cagov-primary-dark: #003484;
-  --cagov-secondary: #FF8000;
+  --cagov-secondary: #ff8000;
 
-    // Gray colors
-    --white: #fff;
-    --gray-100: #f9f9fa;
-    --gray-200: #ededef;
-    --gray-300: #e1e0e3;
-    --gray-400: #D3D2D6;
-    --gray-500: #C4C3C8;
-    --gray-600: #B3B2B8;
-    --gray-700: #A09FA7;
-    --gray-800: #3F3E4D;
-    --gray-900: #3F3E4D;
-    --black: #000;
+  // Gray colors
+  --white: #fff;
+  --gray-100: #f9f9fa;
+  --gray-200: #ededef;
+  --gray-300: #e1e0e3;
+  --gray-400: #d3d2d6;
+  --gray-500: #c4c3c8;
+  --gray-600: #b3b2b8;
+  --gray-700: #a09fa7;
+  --gray-800: #3f3e4d;
+  --gray-900: #3f3e4d;
+  --black: #000;
 }
