@@ -1,4 +1,4 @@
 module.exports = {
   layout: 'component-page',
-  tags: 'component',
+  tags: ['component'],
 };

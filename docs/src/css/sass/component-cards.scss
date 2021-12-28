@@ -1,0 +1,22 @@
+.component-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, 1.5rem);
+  margin: 1.5rem 0;
+}
+
+.component-card {
+  padding: 1rem;
+  border: solid 1px #E1E0E3;
+  border-radius: .5rem;
+  &-link {
+    text-decoration: none;
+  }
+  &-status, &-link {
+    display: block;
+    font-weight: 700;
+  }
+  &-blurb, &-status, &-link {
+    margin: .25rem 0;
+  }
+}
