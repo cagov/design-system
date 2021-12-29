@@ -23,6 +23,7 @@ module.exports = {
       status: 'Alpha',
       blurb: 'Blurb.',
       slug: 'agency-footer',
+      new: true,
     },
     {
       name: 'Page feedback',

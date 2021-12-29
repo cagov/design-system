@@ -11,12 +11,72 @@
   border-radius: .5rem;
   &-link {
     text-decoration: none;
+    display: block;
   }
   &-status, &-link {
-    display: block;
     font-weight: 700;
   }
   &-blurb, &-status, &-link {
     margin: .25rem 0;
+  }
+}
+
+.component-sidebar {
+  &-heading, &-item {
+    margin: 1.5rem 0;
+  }
+  &-heading:first-child {
+    margin-top: 0;
+  }
+  &-heading {
+    font-weight: 700;
+  }
+  &-item {
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+  }
+  &-selected {
+    margin: 0 0 0 1rem;
+    font-weight: 700;
+  }
+  &-link {
+    text-decoration: none;
+  }
+  &-link-new {
+    background-color: var(--secondary-color, #FF8000);
+    font-size: .8rem;
+    color: white;
+    padding: .25rem .5rem;
+    border-radius: 1rem;
+  }
+  &-menu {
+    &-button {
+      display: none;
+      align-items: center;
+      column-gap: .75rem;
+      width: 100%
+    }
+    &-text {
+      flex-grow: 1;
+      text-align: start;
+      color: var(--primary-color, #004abc);
+    }
+    &-arrow {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .component-sidebar-menu-button {
+    display: flex;
+  }
+  .component-sidebar-menu-content {
+    margin: 32px 0;
+    display: none;
+  }
+  .component-sidebar-menu-content-reveal {
+    display: block;
   }
 }
