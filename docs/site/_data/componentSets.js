@@ -1,4 +1,4 @@
-const components = require('./components.js');
+const components = require('./components.json');
 
 const filterByType = (type) =>
   Object.entries(components).reduce((bucket, [key, properties]) => {
