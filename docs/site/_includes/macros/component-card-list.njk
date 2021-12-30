@@ -1,0 +1,14 @@
+{% macro componentCardList(collection) %}
+  <section class="component-cards">
+    {%- for component in collection -%}
+      <div class="component-card">
+        <div class="component-card-img">
+          <img src="/img/ds-{{ component.slug }}.png">
+        </div>
+        <a class="component-card-link" href="/components/{{ component.slug }}/readme">{{ component.name }}</a>
+        <p class="component-card-status">{{ component.status }}</p>
+        <p class="component-card-blurb">{{ component.blurb }}</p>
+      </div>
+    {%- endfor -%}
+  </section>
+{% endmacro %}
