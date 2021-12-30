@@ -9,6 +9,7 @@
   padding: 1rem;
   border: solid 1px #E1E0E3;
   border-radius: .5rem;
+  max-width: calc(200px + 2rem);
   &-link {
     text-decoration: none;
     display: block;
@@ -18,6 +19,15 @@
   }
   &-blurb, &-status, &-link {
     margin: .25rem 0;
+  }
+  &-img {
+    max-width: 200px;
+    max-height: 150px;
+    background-color: #F9F9FA;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 }
 
