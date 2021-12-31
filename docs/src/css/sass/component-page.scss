@@ -47,7 +47,7 @@
     column-gap: .5rem;
   }
   &-selected {
-    margin: 0 0 0 1rem;
+    margin: 0;
     font-weight: 700;
   }
   &-link {
@@ -59,6 +59,18 @@
     color: white;
     padding: .25rem .5rem;
     border-radius: 1rem;
+  }
+  &-document {
+    &-link {
+      margin: 1.5rem 0 1.5rem 1rem;
+      display: block;
+      text-decoration: none;
+    }
+    &-selected {
+      padding-left: calc(1rem - 3px);
+      margin: 1.5rem 0;
+      border-left: solid 3px var(--secondary-color, #FF8000);
+    }
   }
   &-menu {
     &-content {
