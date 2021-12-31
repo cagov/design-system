@@ -1,3 +1,7 @@
+---
+layout: component-page
+---
+
 {%- from "macros/component-card-list.njk" import componentCardList -%}
 
 # Components
