@@ -163,3 +163,10 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .component-development-stage-grid {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+}

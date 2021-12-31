@@ -3,7 +3,7 @@
 {% macro componentDocumentTab(name, stem, slug) %}
   {% if stem in page.url | lower %}
     <span class="component-document-tabs-selected" aria-current="page">{{ name }}</span>
-  {% else %}
+  {% elif has[stem] %}
     <a class="component-document-tabs-link" href="/components/{{ slug }}/{{ stem }}/">{{ name }}</a>
   {% endif %}
 {% endmacro %}

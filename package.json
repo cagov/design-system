@@ -56,6 +56,7 @@
     "@11ty/eleventy": "^1.0.0-beta.3",
     "@cagov/11ty-build-system": "^0.3.0",
     "cross-env": "^7.0.3",
+    "glob": "^7.2.0",
     "highlight.js": "^11.3.1",
     "markdown-it": "^12.3.0"
   }

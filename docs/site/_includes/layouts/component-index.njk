@@ -3,7 +3,7 @@
 {% macro componentSidebarDocument(name, stem, slug) %}
   {% if stem in page.url | lower %}
     <p class="component-sidebar-document-selected" aria-current="page">{{ name }}</p>
-  {% else %}
+  {% elif has[stem] %}
     <a class="component-sidebar-document-link" href="/components/{{ slug }}/{{ stem }}/">{{ name }}</a>
   {% endif %}
 {% endmacro %}
