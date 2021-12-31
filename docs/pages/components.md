@@ -1,5 +1,5 @@
 ---
-layout: component-page
+layout: component-index
 ---
 
 {%- from "macros/component-card-list.njk" import componentCardList -%}
