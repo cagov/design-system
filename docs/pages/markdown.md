@@ -90,7 +90,7 @@ First we'll define and insert our Javascript via the `script` instruction. This 
 
 ```js script
 let counter = 0
-document.getElementById("counterButton").onclick = () => {
+document.getElementById("add-one").onclick = () => {
     counter += 1
     document.getElementById("count").innerHTML = counter
 }
@@ -101,7 +101,7 @@ Next, we'll display and insert the relevant HTML via the `preview` instruction. 
 ```html preview
 <style>
     /* We should have a decent default button style in our Design System! */
-    #counterButton {
+    #add-one {
         border: 2px solid;
         border-radius: 5px;
         padding: 5px;
@@ -110,5 +110,5 @@ Next, we'll display and insert the relevant HTML via the `preview` instruction. 
 
 <p>Counter: <span id="count">0</span></p>
 
-<button id="counterButton">Add one</button>
+<button id="add-one">Add one</button>
 ```

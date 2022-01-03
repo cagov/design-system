@@ -18,3 +18,7 @@
   color: var(--secondary-color, #FF8000);
   font-size: .6em;
 }
+/* Prevent images from overflowing on the component pages */
+.component-page img {
+  max-width: 100%;
+}
