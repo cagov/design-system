@@ -32,7 +32,10 @@ module.exports = function (eleventyConfig) {
     },
   });
 
-  eleventyConfig.addTransform("developmentStageTransform", developmentStageTransform);
+  eleventyConfig.addTransform(
+    'developmentStageTransform',
+    developmentStageTransform,
+  );
 
   eleventyConfig.setUseGitIgnore(false);
 
