@@ -1,13 +1,18 @@
 # Accordion component
 
-This custom element recreates the bootstrap accordion component functionality without the jquery dependency.
+This Custom Element recreates the bootstrap accordion component functionality without the jquery dependency.
+
 It is designed for use on https://covid19.ca.gov.
 
 <img src="https://github.com/cagov/storybook-ca-gov/raw/main/packages/%40cagov/accordion/stories/accordion.png" />
 
+```html preview
+<script type="module" src="/builds/accordion-esm.js"></script>
+```
+
 ## Sample markup
 
-```
+```html preview
 <cagov-accordion>
   <div class="cagov-accordion-card">
     <button class="accordion-card-header accordion-alpha" type="button" aria-expanded="false">

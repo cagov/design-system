@@ -1,4 +1,4 @@
-# Site branding header layer
+# Navigation components >> Skip to content >> Readme || 10
 
 This is a CSS only module that bypasses header and main navigation links an goes directly to the main content of the Web page. It is a first interactive item in the Web page, which links to the beginning of the main content. Activating the link sets focus beyond the other content to the main content.
 

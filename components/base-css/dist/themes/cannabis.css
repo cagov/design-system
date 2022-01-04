@@ -2477,6 +2477,7 @@ pre > code {
   padding: 10px;
   display: block;
   overflow-x: auto;
+  margin: 24px 0;
 }
 
 /* pre, code, var generic styles */

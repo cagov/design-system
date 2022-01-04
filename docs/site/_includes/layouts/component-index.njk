@@ -1,0 +1,78 @@
+{% extends "layouts/index.njk" %}
+
+{% macro componentSidebarDocument(name, stem, slug) %}
+  {% if stem in page.url | lower %}
+    <p class="component-sidebar-document-selected" aria-current="page">{{ name }}</p>
+  {% elif has[stem] %}
+    <a class="component-sidebar-document-link" href="/components/{{ slug }}/{{ stem }}/">{{ name }}</a>
+  {% endif %}
+{% endmacro %}
+
+{% macro sidebarComponentSection(collection) %}
+  {% if collection %}
+    {%- for component in collection -%}
+      <div class="component-sidebar-item">
+        {% if component.slug in page.url %}
+          <p class="component-sidebar-selected" aria-current="page">{{ component.name }}</p>
+        {% else %}
+          <a class="component-sidebar-link" href="/components/{{ component.slug }}/readme">{{ component.name }}</a>
+        {% endif %}
+        {% if component.new %}<span class="component-sidebar-link-new">New</span>{% endif %}
+      </div>
+      {% if component.slug in page.url %}
+        <div class="component-sidebar-document">
+          {{ componentSidebarDocument("Readme", "readme", component.slug) }}
+          {{ componentSidebarDocument("Use cases", "use-cases", component.slug) }}
+          {{ componentSidebarDocument("Changelog", "changelog", component.slug) }}
+        </div>
+      {% endif %}
+    {%- endfor -%}
+  {% endif %}
+{% endmacro %}
+
+{% block content %}
+  <div id="page-container" class="with-sidebar has-sidebar-left page-container-ds component-page">
+    <div id="main-content" class="main-content-ds single-column">
+      <div class="ds-content-layout">
+        <div class="sidebar-container component-sidebar everylayout" style="z-index: 1;">
+          <button class="component-sidebar-menu-button">
+            <svg class="component-sidebar-menu-boxes" width="25" height="25" fill="#004abc" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect width="43" height="43" x="0" y="0" rx="10"/>
+              <rect width="43" height="43" x="57" y="0" rx="10"/>
+              <rect width="43" height="43" x="0" y="57" rx="10"/>
+              <rect width="43" height="43" x="57" y="57" rx="10"/>
+            </svg>
+            <span class="component-sidebar-menu-text">Components</span>
+            <svg width="11" height="7" class="component-sidebar-menu-arrow" viewBox="0 0 11 7" fill="#004abc" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1.15596 0.204797L5.49336 5.06317L9.8545 0.204797C10.4293 -0.452129 11.4124 0.625368 10.813 1.28143L5.90083 6.82273C5.68519 7.05909 5.32606 7.05909 5.1342 6.82273L0.174341 1.28143C-0.400433 0.6245 0.581838 -0.452151 1.15661 0.204797H1.15596Z"
+              />
+            </svg>
+          </button>
+          <div class="component-sidebar-menu-content">
+            <p class="component-sidebar-heading">Structural components</p>
+            {{ sidebarComponentSection(componentSets.structural) }}
+            <p class="component-sidebar-heading">Navigation components</p>
+            {{ sidebarComponentSection(componentSets.navigation) }}
+            <p class="component-sidebar-heading">Visual components</p>
+            {{ sidebarComponentSection(componentSets.visual) }}
+            <p class="component-sidebar-heading">Content components</p>
+            {{ sidebarComponentSection(componentSets.content) }}
+          </div>
+        </div>
+        <div class="everylayout">
+          <main class="main-primary">
+            {% block componentData %}
+            {% endblock %}
+            <article id="post-{{ id }}">
+              <div class="entry-content">
+                {{ content | safe }}
+              </div>
+            </article>
+            <span class="return-top hidden-print"></span>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

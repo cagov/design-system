@@ -1,0 +1,31 @@
+/* homepage base-css overrides */
+.main-content-ds.landing {
+  margin-top: -2rem;
+}
+/* mobile padding for whole page */
+@media screen and (max-width: 767px) {
+  .entry-content {
+    padding: 0 1rem;
+  }
+}
+/* fix h1 on markdown pages */
+.entry-content h1:first-of-type {
+  margin: 0;
+  padding: 0 0 24px 0
+}
+/* For the BETA tag that appears in the site header */
+.org-name-dept sup {
+  color: var(--secondary-color, #FF8000);
+  font-size: .6em;
+}
+/* Prevent images from overflowing on the component pages */
+.component-page img {
+  max-width: 100%;
+}
+.entry-content blockquote {
+  padding: 1rem;
+  background-color: var(--primary-lightest-color, #B3C9EB);
+}
+.entry-content blockquote p:last-child {
+  margin: 0;
+}
