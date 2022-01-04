@@ -1,6 +1,8 @@
 # CHANGELOG for ds-base-css
 `ds-base-css`
 
+# 1.0.13
+* Added reponsive font size functionality. (added font increase ratio variable based based on the dimensions of the browser viewport)
 
 # 1.0.12
 * Updated CAGov font with new icons.

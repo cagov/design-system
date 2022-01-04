@@ -36,30 +36,31 @@
   --margin-md: calc(--spacing-base * 8);
   --margin-lg: calc(--spacing-base * 12);
   --margin-xl: calc(--spacing-base * 24);
-  --site-font: "Public Sans",sans-serif;
+  --site-font: "Public Sans", sans-serif;
   --body-text: 1.125rem;
   --lead-text: 1.4375rem;
-  --small-text: .875rem;
+  --small-text: 0.875rem;
+  --ratio: 0.1vw;
   --body-text-mobile: 1rem;
   --lead-text-mobile: 1.25rem;
-  --small-text-mobile: .875rem;
+  --small-text-mobile: 0.875rem;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --font-weight-light: 300;
-  --cagov-highlight: #FEC02F;
-  --cagov-primary: #004ABC;
+  --cagov-highlight: #fec02f;
+  --cagov-primary: #004abc;
   --cagov-primary-dark: #003484;
-  --cagov-secondary: #FF8000;
+  --cagov-secondary: #ff8000;
   --white: #fff;
   --gray-100: #f9f9fa;
   --gray-200: #ededef;
   --gray-300: #e1e0e3;
-  --gray-400: #D3D2D6;
-  --gray-500: #C4C3C8;
-  --gray-600: #B3B2B8;
-  --gray-700: #A09FA7;
-  --gray-800: #3F3E4D;
-  --gray-900: #3F3E4D;
+  --gray-400: #d3d2d6;
+  --gray-500: #c4c3c8;
+  --gray-600: #b3b2b8;
+  --gray-700: #a09fa7;
+  --gray-800: #3f3e4d;
+  --gray-900: #3f3e4d;
   --black: #000;
 }
 
@@ -2180,13 +2181,6 @@ select[data-class-icon] {
   border: 0 solid;
 }
 
-body {
-  font-family: var(--site-font, "Public Sans", sans-serif);
-  font-size: var(--body-text, 1.125rem);
-  line-height: 1.5;
-  color: var(--black, #000);
-}
-
 /* html, body, main and all the website level base styes */
 #main-content {
   margin-top: 32px;
@@ -2476,6 +2470,7 @@ samp {
   padding: 2.5px 5px;
   border-radius: 6px;
   font-size: var(--body-text, 1.125rem);
+  font-size: calc(var(--body-text) + var(--ratio));
 }
 
 pre > code {
@@ -2487,20 +2482,27 @@ pre > code {
 
 /* pre, code, var generic styles */
 /* Forms generic styles*/
-input, button, select, optgroup, textarea {
+input,
+button,
+select,
+optgroup,
+textarea {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
-textarea, input {
+textarea,
+input {
   background-color: var(--white, #fff);
   color: var(--black, #000) !important;
   font-size: var(--body-text, 1.125rem);
+  font-size: calc(var(--body-text) + var(--ratio));
   font-weight: var(--font-weight-regular, 400);
 }
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: 2px solid var(--secondary-color, #fec02f);
 }
 
@@ -2527,8 +2529,8 @@ button:focus {
 .breadcrumb {
   display: block;
   margin-top: 0px;
-  margin-bottom: 64px;
-  font-size: 16px;
+  margin-bottom: calc(4rem + var(--ratio));
+  font-size: calc(1rem + var(--ratio));
 }
 
 .breadcrumb a {
@@ -2555,9 +2557,9 @@ button:focus {
   .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
     display: inline-block;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 18.8px;
-    color: #064e66;
+    font-size: calc(1rem + var(--ratio));
+    line-height: 1.125rem;
+    color: var(--primary-color, #004abc);
   }
 
   .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
@@ -2566,8 +2568,8 @@ button:focus {
 
   .breadcrumb {
     display: block;
-    margin-top: 48px;
-    margin-bottom: 16px;
+    margin-top: calc(3rem + var(--ratio));
+    margin-bottom: calc(1rem + var(--ratio));
     background-color: transparent;
     padding: 0;
   }
@@ -2579,7 +2581,16 @@ button:focus {
 /* copied from blocks */
 /* Typography global styles */
 body {
+  font-family: var(--site-font, "Public Sans", sans-serif);
+  font-size: var(--body-text, 1.125rem);
   font-weight: var(--font-weight-regular, 400);
+  line-height: 1.5;
+  color: var(--black, #000);
+}
+@media (min-width: 768px) {
+  body {
+    font-size: calc(var(--body-text) + var(--ratio));
+  }
 }
 
 /* TYPOGRAPHY */
@@ -2593,86 +2604,94 @@ main h2:first-child {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: calc(1rem + var(--ratio));
 }
 
 /* New styles, need home */
-ul, ol {
-  margin-bottom: 1rem;
+ul,
+ol {
+  margin-bottom: calc(1rem + var(--ratio));
 }
 
-ul li, ol li {
-  margin-bottom: 0.5rem;
+ul li,
+ol li {
+  margin-bottom: calc(0.5rem + var(--ratio));
 }
 
-main ol li, main ul li {
+main ol li,
+main ul li {
   margin-left: 32px;
 }
 
 main ol li {
   padding: 0 16px;
-  margin-top: 0.5rem;
+  margin-bottom: calc(0.5rem + var(--ratio));
 }
 
 /* Update position list element */
-main ul li, main ol li {
+main ul li,
+main ol li {
   list-style-position: outside;
 }
 
 h1,
 .h1 {
-  font-size: 2.9375rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  font-size: calc(2.9375rem + var(--ratio));
+  margin-top: calc(3rem + var(--ratio));
+  margin-bottom: calc(2rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h2,
 .h2 {
-  font-size: 2.3175rem;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: calc(2.3175rem + var(--ratio));
+  margin-top: calc(2rem + var(--ratio));
+  margin-bottom: calc(1.5rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h3,
 .h3 {
-  font-size: 1.8125rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: calc(1.8125rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
+  margin-bottom: calc(1rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h4,
 .h4 {
-  font-size: 1.4375rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: calc(1.4375rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
+  margin-bottom: calc(1rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h5,
 .h5 {
-  font-size: 1.125rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: calc(1.125rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
+  margin-bottom: calc(1rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h6,
 .h6 {
-  font-size: 0.75rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: calc(0.75rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
+  margin-bottom: calc(1rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
-.text-lead, .lead {
+.text-lead,
+.lead {
   font-size: var(--lead-text, 1.4375rem);
+  font-size: calc(var(--lead-text) + var(--ratio));
 }
 
-.text-small, .text-sm {
+.text-small,
+.text-sm {
   font-size: var(--small-text, 0.875rem);
+  font-size: calc(var(--small-text) + var(--ratio));
 }
 
 @media (max-width: 767px) {
@@ -2706,11 +2725,13 @@ figure ~ h2:first-of-type {
     margin-top: 0px;
   }
 
-  .text-lead, .lead {
+  .text-lead,
+.lead {
     font-size: var(--lead-text-mobile, 1.25rem);
   }
 
-  .text-small, .text-sm {
+  .text-small,
+.text-sm {
     font-size: var(--small-text-mobile, 0.875rem);
   }
 }
@@ -2719,14 +2740,15 @@ ul.list-highlight li {
   list-style: none;
   background-color: var(--gray-100, #f9f9fa);
   padding: 24px;
-  margin-bottom: 1rem;
+  margin-bottom: calc(1rem + var(--ratio));
   margin-left: 0;
-  font-size: 1.75rem;
+  font-size: calc(1.75rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 ul.list-highlight li span.has-black-color {
-  margin-top: 1rem;
+  margin-top: calc(1rem + var(--ratio));
   font-size: var(--body-text, 1.125rem);
+  font-size: calc(var(--body-text) + var(--ratio));
   font-weight: var(--font-weight-regular, 400);
   display: block;
   line-height: 1.6;
@@ -2752,7 +2774,7 @@ figure {
 }
 figure figcaption {
   padding-left: 0;
-  font-size: 0.875rem;
+  font-size: calc(0.875rem + var(--ratio));
 }
 
 /* headings, p, blockqute, font styles */

@@ -1,7 +1,15 @@
 /* Typography global styles */
 body {
+  font-family: var(--site-font, "Public Sans", sans-serif);
+  font-size: var(--body-text, 1.125rem);
   font-weight: var(--font-weight-regular, 400);
+  line-height: 1.5;
+  color: var(--black, #000);
+  @media (min-width: 768px) {
+    font-size: calc(var(--body-text) + var(--ratio));
+  }
 }
+
 /* TYPOGRAPHY */
 h1.page-title {
   margin: 0 0 0 0;
@@ -16,85 +24,93 @@ main {
 
 // paragraph margin
 p {
-  margin-bottom: 1rem;
+  margin-bottom: calc(1rem + var(--ratio));
 }
 
 /* New styles, need home */
-ul, ol {
-  margin-bottom: 1rem;
+ul,
+ol {
+  margin-bottom: calc(1rem + var(--ratio));
 }
 
-ul li, ol li {
-  margin-bottom: 0.5rem;
+ul li,
+ol li {
+  margin-bottom: calc(0.5rem + var(--ratio));
 }
 
-main ol li, main ul li {
+main ol li,
+main ul li {
   margin-left: 32px;
 }
 
 main ol li {
   padding: 0 16px;
-  margin-top: 0.5rem;
+  margin-bottom: calc(0.5rem + var(--ratio));
 }
 
 /* Update position list element */
-main ul li, main ol li {
+main ul li,
+main ol li {
   list-style-position: outside;
 }
 
 h1,
 .h1 {
-  font-size: 2.9375rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  font-size: calc(2.9375rem + var(--ratio));
+  margin-top: calc(3rem + var(--ratio));
+  margin-bottom: calc(2rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h2,
 .h2 {
-  font-size: 2.3175rem;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: calc(2.3175rem + var(--ratio));
+  margin-top: calc(2rem + var(--ratio));
+  margin-bottom: calc(1.5rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h3,
 .h3 {
-  font-size: 1.8125rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: calc(1.8125rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
+  margin-bottom: calc(1rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h4,
 .h4 {
-  font-size: 1.4375rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: calc(1.4375rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
+  margin-bottom: calc(1rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h5,
 .h5 {
-  font-size: 1.125rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: calc(1.125rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
+  margin-bottom: calc(1rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
 h6,
 .h6 {
-  font-size: .75rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: calc(0.75rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
+  margin-bottom: calc(1rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
 
-.text-lead, .lead { 
-  font-size:  var(--lead-text,  1.4375rem);
+.text-lead,
+.lead {
+  font-size: var(--lead-text, 1.4375rem);
+  font-size: calc(var(--lead-text) + var(--ratio));
 }
-.text-small, .text-sm { 
-  font-size:  var(--small-text,  .875rem);
+.text-small,
+.text-sm {
+  font-size: var(--small-text, 0.875rem);
+  font-size: calc(var(--small-text) + var(--ratio));
 }
 
 // Mobile headings
@@ -129,11 +145,13 @@ h6,
     margin-top: 0px;
   }
 
-  .text-lead, .lead { 
-    font-size:  var(--lead-text-mobile,  1.25rem);
+  .text-lead,
+  .lead {
+    font-size: var(--lead-text-mobile, 1.25rem);
   }
-  .text-small, .text-sm { 
-    font-size:  var(--small-text-mobile,  .875rem);
+  .text-small,
+  .text-sm {
+    font-size: var(--small-text-mobile, 0.875rem);
   }
 }
 
@@ -144,13 +162,14 @@ ul.list-highlight {
     list-style: none;
     background-color: var(--gray-100, #f9f9fa);
     padding: 24px;
-    margin-bottom: 1rem;
+    margin-bottom: calc(1rem + var(--ratio));
     margin-left: 0;
-    font-size: 1.75rem;
+    font-size: calc(1.75rem + var(--ratio));
     font-weight: var(--font-weight-bold, 700);
     span.has-black-color {
-      margin-top: 1rem;
+      margin-top: calc(1rem + var(--ratio));
       font-size: var(--body-text, 1.125rem);
+      font-size: calc(var(--body-text) + var(--ratio));
       font-weight: var(--font-weight-regular, 400);
       display: block;
       line-height: 1.6;
@@ -173,11 +192,10 @@ ul.list-highlight {
 
 /* Image captions */
 figure {
-  background: none; 
-  border:none;
+  background: none;
+  border: none;
   figcaption {
     padding-left: 0;
-    font-size: 0.875rem;
-    }  
+    font-size: calc(0.875rem + var(--ratio));
   }
-  
+}
