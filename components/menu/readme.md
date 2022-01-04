@@ -1,13 +1,31 @@
 # Navigation components >> Site navigation >> Readme || 10
 
-This component adds dropdown menu functionality when provided with expected HTML structure inside its custom element  
-
+This component adds dropdown menu functionality when provided with expected HTML structure inside its custom element. 
 
 <img src="https://raw.githubusercontent.com/cagov/design-system/main/components/menu/img/dropdown-menu-screenshot.png" alt="dropdown menu component screenshot" />
 
+## Specs
+
+| Property | Value |
+| --- | --- |
+| Machine name | ds-dropdown-menu |
+| JavaScript | true |
+| SCSS | ./src/index.scss |
+
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
+
+1. `npm i @cagov/[machine-name]`
+2. Use `import`¹ or `require` to include **JavaScript**.  
+3. Include **SCSS** in your Sass compiler.
+4. Add the **Sample markup** to your HTML.
+1. Repeat the div.expanded-menu-col element to add additional menu items.
+2. Replace  links with as necessary.
+
 ## Sample markup
 
-```
+```html
 <cagov-navoverlay>
   <div class="container">
     <div class="mobile-icons">
@@ -222,7 +240,7 @@ This component adds dropdown menu functionality when provided with expected HTML
 </cagov-navoverlay>
 ```
 
-### Expected variables
+## CSS variables
 
 There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
 
@@ -232,7 +250,7 @@ There are some colors that should be defined by the containing page. Here are th
 - var(--highlight-color, #fec02f)
 - var(--w-lg, '1176px')
 
-## Docs
+## Contributor/Developer documentation
 
 Run: ```npm run start``` at the repository root to preview elements. This will launch local server with links to component demo pages.
 
@@ -241,3 +259,5 @@ The documentation is generated using the <a href="https://github.com/webcomponen
 ```
 wca analyze src --format json --outFile custom-elements.json
 ```
+
+¹ To use `import`, files must be served from a [webserver](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) such as Apache, Nginx, or [http-server](https://www.npmjs.com/package/http-server). The `file://` protocol will cause CORS errors in some browsers.

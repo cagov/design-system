@@ -4,8 +4,23 @@ This CSS only module contains the styles required to create the list of steps in
 
 <img src="https://raw.githubusercontent.com/cagov/design-system/main/components/step-list/img/step-list-screenshot.png" />
 
+## Specs
 
-## Sample HTML
+| Property | Value |
+| --- | --- |
+| Machine name | ds-step-list |
+| JavaScript | false |
+| SCSS | ./src/index.scss |
+
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
+
+1. Include **SCSS** in your compiler.
+2. Add the **Sample markup** from the component to your HTML.
+3. Adjust text as needed.
+
+## Sample markup
 
 ```
 <ol class="cagov-step-list">
@@ -28,8 +43,7 @@ This CSS only module contains the styles required to create the list of steps in
 </ol>
 ```
 
-
-### Expected variables
+## CSS variables
 
 There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
 

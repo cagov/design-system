@@ -9,11 +9,9 @@ This CSS only module contains the styles required to create agency footer. This 
 
 | Property | Value |
 | --- | --- |
-| Machine name |   `ds-agency-footer` |
-| Sample markup | `./template.html` |
+| Machine name | ds-agency-footer |
 | JavaScript | false |
-| SCSS | `./src/index.scss` |
-| npm version | 1.0.2  |
+| SCSS | ./src/index.scss |
 
 ## Project installation
 
@@ -24,7 +22,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 3. Place your own site links within the `<div class="footer-secondary-links">` element. Your social media links go within `<div class="footer-social-links">`.
 
 
-## Expected variables
+## CSS variables
 
 There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
 

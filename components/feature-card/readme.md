@@ -4,7 +4,24 @@ This is a design for featuring important content at the top of a page. The layou
 
 <img src="img/cannabis-hero.png">
 
-## HTML
+## Specs
+
+| Property | Value |
+| --- | --- |
+| Machine name | ds-feature-card |
+| JavaScript | false |
+| SCSS | ./src/index.scss |
+
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
+
+1. Include **SCSS** in your compiler.
+2. Add the **Sample markup** from the component to your HTML.
+1. Modify with your own text, alt text, and image.
+
+
+## Sample markup
 
 ```
 <div class="wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero">
@@ -30,15 +47,8 @@ Running the lighthouse audits against this HTML & CSS should produce no issues
 
 <img src="img/hero-audit.png">
 
-## Development
 
-From the command line at the root of this project you can run:
-```
-npm run start
-```
-Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by ```preview.html```
-
-### Expected variables
+## CSS variables
 
 There are some colors that should be defined by the containing page. 
 
@@ -46,8 +56,16 @@ There are some colors that should be defined by the containing page.
 
 Expected definition is:
 
-```
+```html preview
 :root {
   --primary-color: #33705B;
 }
 ```
+
+## Contributor/developer documentation
+
+From the command line at the root of this project you can run:
+```
+npm run start
+```
+Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by ```preview.html```

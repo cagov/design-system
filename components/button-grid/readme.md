@@ -4,7 +4,24 @@ The card grid depends on individual cards and lays them out in a grid
 
 <img src="img/card-grid.png">
 
-## HTML
+## Specs
+
+| Property | Value |
+| --- | --- |
+| Machine name | ds-button-grid |
+| JavaScript | false |
+| SCSS | ./src/index.scss |
+
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
+
+1. Include **SCSS** in your compiler.
+2. Add the **Sample markup** from the component to your HTML.
+
+3. Modify the **Sample markup** with your URLs and card text as needed.  
+
+## Sample markup
 
 ```
 <div class="cagov-grid">
@@ -30,7 +47,7 @@ Running the lighthouse audits against this HTML & CSS should produce no issues
 
 <img src="img/grid-audit.png">
 
-## Development
+## Contributor/Developer documentation
 
 From the command line at the root of this project you can run:
 ```
@@ -38,7 +55,7 @@ npm run start
 ```
 Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by ```preview.html```
 
-### Expected variables
+### CSS variables
 
 There are some colors that should be defined by the containing page. 
 

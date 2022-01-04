@@ -1,4 +1,4 @@
-# Accordion component
+# Accordion
 
 This Custom Element recreates the bootstrap accordion component functionality without the jquery dependency.
 
@@ -10,7 +10,7 @@ It is designed for use on https://covid19.ca.gov.
 <script type="module" src="/builds/accordion-esm.js"></script>
 ```
 
-## Sample markup
+# Demo
 
 ```html preview
 <cagov-accordion>
@@ -36,7 +36,26 @@ It is designed for use on https://covid19.ca.gov.
 </cagov-accordion>
 ```
 
-## Docs
+## Specs
+
+| Property | Value |
+| --- | --- |
+| Machine name | ds-accordion  |
+| JavaScript | true |
+| Sass  | ./src/index.scss |
+
+
+## Project Installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
+
+1. `npm i @cagov/[machine-name]`
+2. Use `import`<a href="/footnotes/#footnote1" target="_blank">¹</a> or `require` to include **JavaScript**.  
+3. Include **SCSS** in your Sass compiler.
+4. Add the **Sample markup** to your HTML.
+
+
+## Contributor/developer documentation
 
 Run: ```npm run start``` to preview elements. This will launch local server with links to component demo pages.
 
