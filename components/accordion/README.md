@@ -1,10 +1,8 @@
-# Accordion component
+# Accordion
 
-This Custom Element recreates the bootstrap accordion component functionality without the jquery dependency.
+The accordion element allows for sections of text to be expanded or collapsed on click.
 
-It is designed for use on https://covid19.ca.gov.
-
-<img src="https://github.com/cagov/storybook-ca-gov/raw/main/packages/%40cagov/accordion/stories/accordion.png" />
+## Install
 
 ```html preview
 <script type="module" src="/builds/accordion-esm.js"></script>

@@ -1,7 +1,7 @@
 const cagovBuildSystem = require('@cagov/11ty-build-system');
 const builds = require('./docs/src/11ty/builds.js');
 const markdown = require('./docs/src/11ty/markdown.js');
-const developmentStageTransform = require('./docs/src/11ty/development-stage-transform.js');
+const devStageTransform = require('./docs/src/11ty/development-stage-transform.js');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdown);
@@ -32,10 +32,7 @@ module.exports = function (eleventyConfig) {
     },
   });
 
-  eleventyConfig.addTransform(
-    'developmentStageTransform',
-    developmentStageTransform,
-  );
+  eleventyConfig.addTransform('devStageTransform', devStageTransform);
 
   eleventyConfig.setUseGitIgnore(false);
 

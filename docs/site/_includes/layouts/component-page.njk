@@ -1,41 +1,7 @@
 {% extends "layouts/component-index.njk" %}
 
-{% macro componentDocumentTab(name, stem, slug) %}
-  {% if stem in page.url | lower %}
-    <span class="component-document-tabs-selected" aria-current="page">{{ name }}</span>
-  {% elif has[stem] %}
-    <a class="component-document-tabs-link" href="/components/{{ slug }}/{{ stem }}/">{{ name }}</a>
-  {% endif %}
-{% endmacro %}
-
-{% macro componentDevelopmentStage(number, label, component) %}
-  <div class="{%- if component.status === label -%}current-development-stage{%- endif -%}">
-    <dt>{{ number }}</dt>
-    <dd>{{ label }}</dd>
-  </div>
-{% endmacro %}
-
 {% block meta %}
-  <meta itemprop="additionalProperty" content="stage:{{ components[componentSlug].status }}">
   {% if has["readme"] %}<meta itemprop="additionalProperty" content="has:readme">{% endif %}
   {% if has["use-cases"] %}<meta itemprop="additionalProperty" content="has:use-cases">{% endif %}
   {% if has["changelog"] %}<meta itemprop="additionalProperty" content="has:changelog">{% endif %}
-{% endblock %}
-
-{% block componentData %}
-  <div class="component-document-tabs">
-    {{ componentDocumentTab("Readme", "readme", componentSlug) }}
-    {{ componentDocumentTab("Use cases", "use-cases", componentSlug) }}
-    {{ componentDocumentTab("Changelog", "changelog", componentSlug) }}
-  </div>
-  <div class="component-development-stage">
-    <p class="component-development-stage-heading">Development stage</p>
-    <dl class="component-development-stage-grid">
-      {{ componentDevelopmentStage("1", "In research", components[componentSlug]) }}
-      {{ componentDevelopmentStage("2", "Alpha", components[componentSlug]) }}
-      {{ componentDevelopmentStage("3", "Beta", components[componentSlug]) }}
-      {{ componentDevelopmentStage("4", "Production", components[componentSlug]) }}
-    </dl>
-    <p class="component-development-stage-description">This component is currently in Alpha. Alpha means that the component has not been thorougly tested by developers. <a href="#">Learn more.</a>
-  </div>
 {% endblock %}
