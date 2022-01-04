@@ -15,6 +15,13 @@
   </div>
 {% endmacro %}
 
+{% block meta %}
+  <meta itemprop="additionalProperty" content="stage:{{ components[componentSlug].status }}">
+  {% if has["readme"] %}<meta itemprop="additionalProperty" content="has:readme">{% endif %}
+  {% if has["use-cases"] %}<meta itemprop="additionalProperty" content="has:use-cases">{% endif %}
+  {% if has["changelog"] %}<meta itemprop="additionalProperty" content="has:changelog">{% endif %}
+{% endblock %}
+
 {% block componentData %}
   <div class="component-document-tabs">
     {{ componentDocumentTab("Readme", "readme", componentSlug) }}
