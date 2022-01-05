@@ -52,3 +52,23 @@ _Listen up: you’ve got to get your application in before the end of the month.
 This example strikes the right balance between being conversational and official:
 
 _Apply between August 1 and September 30._
+
+## Voice checklist
+
+Check your writing against these traits to make sure it’s conversational and official.
+
+| **Be**                  | **Do not be**                                               |
+| A source of truth       | A source of opinions                                        |
+| Informative             | Judgmental                                                  |
+| Welcoming to everyone   | Overbearing                                                 |
+| Friendly                | Fake                                                        |
+| Official                | Cold or distant                                             |
+| Conversational          | Disrespectful                                               |
+| Straightforward         | Blunt                                                       |
+| Sensitive toward others | Patronizing, pretending that you know everything about them |
+
+### Use a style guide for consistency
+
+Style guides help you be consistent across your content. They standardize the way to write punctuation, dates, numbers, and other elements. Adopt an existing style guide if you often have questions about how to write something.
+
+If you want to adopt a style, but do not know how to choose one, Associated Press (AP) Style is a good choice.
