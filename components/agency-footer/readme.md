@@ -19,7 +19,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **Sample markup** from the component to your HTML.
-3. Place your own site links within the `<div class="footer-secondary-links">` element. Your social media links go within `<div class="footer-social-links">`.
+1. Place your own site links within the `<div class="footer-secondary-links">` element. Your social media links go within `<div class="footer-social-links">`.
 
 
 ## CSS variables

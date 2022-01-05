@@ -20,7 +20,6 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 2. Add the **Sample markup** from the component to your HTML.
 1. Modify with your own text, alt text, and image.
 
-
 ## Sample markup
 
 ```

@@ -17,7 +17,7 @@ This component adds dropdown menu functionality when provided with expected HTML
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
 1. `npm i @cagov/[machine-name]`
-2. Use `import`¹ or `require` to include **JavaScript**.  
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include **JavaScript**.  
 3. Include **SCSS** in your Sass compiler.
 4. Add the **Sample markup** to your HTML.
 1. Repeat the div.expanded-menu-col element to add additional menu items.

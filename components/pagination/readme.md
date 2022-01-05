@@ -28,12 +28,10 @@ export const demo = () => html`
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
 1. `npm i @cagov/[machine-name]`
-2. Use `import`¹ or `require` to include **JavaScript**.  
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include **JavaScript**.  
 3. Include **SCSS** in your Sass compiler.
 4. Add the **Sample markup** to your HTML.
 1. If directly importing, be sure to reference the js file at  `./dist/index.js`
-
-¹ To use `import`, files must be served from a [webserver](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) such as Apache, Nginx, or [http-server](https://www.npmjs.com/package/http-server). The `file://` protocol will cause CORS errors in some browsers.
 
 ## Sample markup
 

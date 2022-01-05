@@ -31,12 +31,12 @@ This component adds an icon next to a link that goes outside your website. It le
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
 1. `npm i @cagov/[machine-name]`
-2. Use `import`¹ or `require` to include **JavaScript**.  
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include **JavaScript**.  
 3. Include **SCSS** in your Sass compiler.
 4. Add the **Sample markup** to your HTML.
 1. Note that the `<a>` tags must be inside the `<main>` tag and external link to icons are required.
 
-## Other dependencies
+### Other dependencies
 
 Page alert is using [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html). You can use any icon from CAGov font library for your page alert icon by simply adding icon class into data-icon endpoint.
 

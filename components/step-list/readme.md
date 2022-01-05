@@ -18,11 +18,11 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **Sample markup** from the component to your HTML.
-3. Adjust text as needed.
+1. Adjust text as needed.
 
 ## Sample markup
 
-```
+```html
 <ol class="cagov-step-list">
   <li><strong>Complete local permitting processes</strong><br><span class="has-inline-color cagov-step-list-content">Many cities
       and counties have rules and permitting for cannabis businesses. Some do not allow cannabis businesses. Make sure
