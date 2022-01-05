@@ -1,0 +1,47 @@
+{
+  "1": {
+    "name": "Design for people's needs",
+    "description": "Put the needs of Californians first in everything you do. Make your guiding question, “What does someone need to do?”",
+    "example": "The <a href='/components/feedback/readme/'>per page feedback component</a> makes it easy to learn about the needs of your audience."
+  },
+  "2": {
+    "name": "Do the hard work to make it simple and elegant",
+    "description": "Government services often put the burden on people to understand and navigate services and policies. Break down these barriers for them to create simple, understandable services.",
+    "example": "The <a href='/components/step-list/readme/'>step list component</a> takes complicated processes and makes their steps transparent."
+  },
+  "3": {
+    "name": "Prioritize accessibility",
+    "description": "Make your services accessible for all Californians. Think about people who have been traditionally excluded, like people who use screen readers or reside in low bandwidth regions.",
+    "example": "Our <a href='/style/design/'>visual design style guide</a> includes direction on how to create accessible design. All design system components are <a href='https://www.w3.org/TR/WCAG21/'>WCAG 2.1 compliant</a>."
+  },
+  "4": {
+    "name": "Be concise",
+    "description": "Things are easy to use when they’re simple. Ask yourself, “Does this word, image, or functionality help people do what they need to do?”",
+    "example": "Our <a href='/style/content/'>content design guidelines</a> provide actionable tips for writing in plain language. This makes information to the point and easy to read."
+  },
+  "5": {
+    "name": "Design with data",
+    "description": "Use research and analytics to understand how people use your services and products. This keeps us focused on their needs, not preconceived solutions.",
+    "example": "Design System components work seamlessly with Google Analytics. This gathers information about the people who use your services and their needs."
+  },
+  "6": {
+    "name": "Iterate, then iterate again",
+    "description": "Services and products are never finished. Rigorously test and refine your work to make sure it’s robust and useful.",
+    "example": "We continuously look at data and improve Design System components. Our Alpha, Beta, and Production labels show what development track each component is in."
+  },
+  "7": {
+    "name": "Be consistent, but not uniform",
+    "description": "Use the component, content, and visual guidelines. This creates a shared, consistent experience across state departments.",
+    "example": "The <a href='/components/statewide-header/readme/'>statewide header</a> is a default component of the Design System. This helps people know they are on a CA.gov website."
+  },
+  "8": {
+    "name": "Optimize performance",
+    "description": "Not every Californian has a high-end device. When you build services and products, think about people on a range of devices and internet speeds.",
+    "example": "Websites built with the design system have a Lighthouse performance score X% higher than the average CA.gov website."
+  },
+  "9": {
+    "name": "Make things open",
+    "description": "As part of our commitment to transparency and collaboration, our default state is to share. Our Design System work is open to the public.",
+    "example": "All of the <a href='https://github.com/cagov/design-system'>Design System code</a> is open source and hosted on <a href='https://github.com'>Github</a>. This means anyone can see how it's built, suggest improvements, or adapt it for their own purposes."
+  }
+}
