@@ -8,6 +8,9 @@ module.exports = {
     // componentSlug gets the folder name for the page's component.
     componentSlug: (article) =>
       article.page.filePathStem.match(/\/components\/(.+?)\/.+/)[1],
+    // Need to ensure the permalink is always lower-case, even though some docs are not.
+    permalink: (article) =>
+      `${article.page.filePathStem.toLowerCase()}/index.html`,
     // The `has` object checks to see if the component has various .md files.
     has: (article) => {
       const pattern = `components/${article.componentSlug}/*.md`;
