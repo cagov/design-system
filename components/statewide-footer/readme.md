@@ -2,11 +2,12 @@
 
 This CSS only module contains the styles required to render the statewide footer.
 
+
+## Demo
+
 ```js script
 import { html } from 'lit-html';
 ```
-
-## Live demo
 
 ```js story
 export const demo = () => html`
@@ -59,8 +60,24 @@ export const demo = () => html`
 </footer>`;
 ```
 
-## Sample HTML
+## Specs
 
+| Property | Value |
+| --- | --- |
+| Machine name | ds-statewide-footer |
+| JavaScript | false |
+| SCSS | ./src/index.scss |
+
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
+
+1. Include **SCSS** in your compiler.
+2. Add the **Sample markup** from the component to your HTML.
+1. Adjust links as needed.
+
+
+## Sample markup
 
 ```html
 <footer>
@@ -113,7 +130,7 @@ export const demo = () => html`
 ```
 
 
-### Expected variables
+## CSS variables
 
 There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
 
@@ -123,4 +140,3 @@ There are some colors that should be defined by the containing page. Here are th
 - var(--primary-color, #004ABC);
 - var(--primary-dark-color, #003484);
 - var(--highlight-color, #FEC02F);
-

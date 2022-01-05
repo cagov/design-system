@@ -1,10 +1,29 @@
-# Visual components >> Agency header >> Readme || 10
+# Visual components >> Site header >> Readme || 10
 
 This is a CSS only module that contains the styles for laying out the agency branding for a state of California agency as part of the site header. These styles expect the following HTML structure.
 
-## HTML
+## Specs
 
-```
+| Property | Value |
+| --- | --- |
+| Machine name | ds-branding |
+| JavaScript | false |
+| SCSS | ./src/index.scss |
+
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
+
+1. Include **SCSS** in your compiler.
+2. Add the **Sample markup** from the component to your HTML.
+3. Edit the “logo”, “logo-state”, and “logo-department” elements to meet your own department’s branding needs.
+4. Connect the search form to your own system. 
+
+Note: There are two versions of the markup, one with and one without a logo. 
+
+## Sample markup
+
+```html
 <div class="branding">
   <div class="container">
     <a href="/" class="logo" aria-label="DCC logo">
@@ -63,7 +82,7 @@ This is a CSS only module that contains the styles for laying out the agency bra
 </div>
 ```
 
-### Expected variables
+## CSS variables
 
 There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
 

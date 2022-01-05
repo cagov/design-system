@@ -20,7 +20,8 @@
     "site:watch": "eleventy --serve",
     "site:watch:dev": "cross-env NODE_ENV=development eleventy --serve --incremental",
     "site:start": "npm run site:watch",
-    "site:dev": "npm run site:watch:dev"
+    "site:dev": "npm run site:watch:dev",
+    "build": "echo \"WARN: no build specified\" && exit 0" 
   },
   "repository": {
     "type": "git",

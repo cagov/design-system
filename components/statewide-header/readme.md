@@ -5,15 +5,29 @@ This CSS only module contains the styles required to create the list of steps in
 <img src="https://raw.githubusercontent.com/cagov/design-system/main/components/statewide-header/img/statewide-header-screenshot.png" />
 
 
-## Sample HTML
+## Specs
 
+| Property | Value |
+| --- | --- |
+| Machine name | ds-statewide-header |
+| JavaScript | false |
+| SCSS | ./src/index.scss |
 
-```
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
+
+1. Include **SCSS** in your compiler.
+2. Add the **Sample markup** from the component to your HTML.
+1. Adjust links as needed.
+
+## Sample markup
+
+```html
 <div class="official-header">
   <div class="container">
     <div class="official-logo">
-      <a class="cagov-logo" href="https://ca.gov" title="ca.gov" target="_blank" rel="noopener">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        <svg title="ca.gov logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
             y="0px" width="44px" height="34px" viewBox="0 0 44 34" style="enable-background:new 0 0 44 34;"
             xml:space="preserve">
           <path class="ca" d="M27.4,14c0.1-0.4,0.4-1.5,0.9-3.2c0.1-0.5,0.4-1.3,0.9-2.7c0.5-1.4,0.9-2.5,1.2-3.3c-0.9,0.6-1.8,1.4-2.7,2.3
@@ -41,7 +55,6 @@ This CSS only module contains the styles required to create the list of steps in
             <polygon class="gov" points="36.3,21.6 38,21.6 40.1,27.6 42.2,21.6 43.9,21.6 40.8,30 39.3,30 36.3,21.6 	"/>
           </g>
         </svg>
-      </a>
       <p class="official-tag"><span class="desktop-only">Official website of the</span> State of California</p>
     </div>
     <cagov-google-translate />
@@ -49,7 +62,7 @@ This CSS only module contains the styles required to create the list of steps in
 </div>
 ```
 
-### Expected variables
+## CSS variables
 
 There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
 

@@ -8,7 +8,7 @@ The accordion element allows for sections of text to be expanded or collapsed on
 <script type="module" src="/builds/accordion-esm.js"></script>
 ```
 
-## Sample markup
+# Demo
 
 ```html preview
 <cagov-accordion>
@@ -34,7 +34,24 @@ The accordion element allows for sections of text to be expanded or collapsed on
 </cagov-accordion>
 ```
 
-## Docs
+## Specs
+
+| Property | Value |
+| --- | --- |
+| Machine name | ds-accordion  |
+| JavaScript | true |
+| Sass  | ./src/index.scss |
+
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
+
+1. `npm i @cagov/[machine-name]`
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include **JavaScript**.  
+3. Include **SCSS** in your Sass compiler.
+4. Add the **Sample markup** to your HTML.
+
+## Contributor/developer documentation
 
 Run: ```npm run start``` to preview elements. This will launch local server with links to component demo pages.
 
