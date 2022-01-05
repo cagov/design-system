@@ -34,8 +34,8 @@ jobs:
         run: echo ${URLSAFE_BRANCH_NAME}
       - name: Build 11ty
         run: |
-          mkdir dist
-          npm ci --production
+          npm install
+          npm run site:build
           DOMAIN=${URLSAFE_BRANCH_NAME}.pr.designsystem.webstandards.ca.gov npm run build
       - name: Write robots.txt
         run: |
