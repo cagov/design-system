@@ -1,9 +1,11 @@
 const cagovBuildSystem = require('@cagov/11ty-build-system');
-const builds = require('./docs/src/js/builds.js');
-const markdown = require('./docs/src/js/markdown.js');
+const builds = require('./docs/src/11ty/builds.js');
+const markdown = require('./docs/src/11ty/markdown.js');
+const devStageTransform = require('./docs/src/11ty/development-stage-transform.js');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdown);
+
   eleventyConfig.addPlugin(cagovBuildSystem, {
     processors: {
       sass: {
@@ -29,6 +31,8 @@ module.exports = function (eleventyConfig) {
       ],
     },
   });
+
+  eleventyConfig.addTransform('devStageTransform', devStageTransform);
 
   eleventyConfig.setUseGitIgnore(false);
 
