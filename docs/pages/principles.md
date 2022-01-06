@@ -1,3 +1,7 @@
+---
+layout: single-column
+---
+
 {%- from "macros/principles-page-item.njk" import principlesPageItem -%}
 
 # Principles

@@ -1,11 +1,10 @@
 {% macro principlesPageItem(principles, number) %}
   {% set principle = principles[number] %}
   <section class="principle-page-item">
+    <div class="kicker h4">Principle {{ number }}</div>
     <h2>{{ principle.name }}</h2>
-    <h3>Principle {{ number }}</h3>
     <p>{{ principle.description | safe }}</p>
     <blockquote>
-      <p><em>Example</em></p>
       <p>{{ principle.example | safe }}</p>
     </blockquote>
   </section>

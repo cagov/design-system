@@ -62,9 +62,7 @@
         </div>
         <div class="everylayout">
           <main class="main-primary">
-            {% block componentData %}
-            {% endblock %}
-            <article id="post-{{ id }}">
+            <article id="post-{{ componentSlug }}-{{ page.fileSlug }}">
               <div class="entry-content">
                 {{ content | safe }}
               </div>

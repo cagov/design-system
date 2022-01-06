@@ -22,11 +22,3 @@
 .component-page img {
   max-width: 100%;
 }
-.entry-content blockquote {
-  padding: 1rem;
-  margin-bottom: calc(1rem + var(--ratio));
-  background-color: var(--primary-lightest-color, #B3C9EB);
-}
-.entry-content blockquote p:last-child {
-  margin: 0;
-}
