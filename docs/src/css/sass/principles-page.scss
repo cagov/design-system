@@ -1,0 +1,17 @@
+.principle-page-item {
+  margin: 4rem 0;
+  h2 {
+    margin-top: 0;
+  }
+  .kicker {
+    margin-bottom: 0;
+  }
+  blockquote {
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background-color: var(--secondary-lightest-color, #FFD9B3);
+    p:last-child {
+      margin: 0;
+    }
+  }
+}
