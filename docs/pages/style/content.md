@@ -10,6 +10,12 @@ Great content takes work. The good news is that anyone can do it. These 7 princi
 * Write in a conversational and official voice
 * Organize content strategically
 
+## Share your thoughts
+
+We’d love to hear what you thought of these principles and if you have suggestions on how we can improve them. Share through our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLScNllSkyD7sI7wQPQ9LkkfbRB4w7stEbEKuhrHVxYue-DPyQQ/viewform?usp=sf_link).
+
+## Our inspiration
+
 We were inspired by the work of teams that came before us, including:
 
 * [18F](https://18f.gsa.gov/)
