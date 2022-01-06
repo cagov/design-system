@@ -4,7 +4,7 @@ The accordion element allows for sections of text to be expanded or collapsed on
 
 ## Install
 
-```html preview
+```html
 <script type="module" src="/builds/accordion-esm.js"></script>
 ```
 
