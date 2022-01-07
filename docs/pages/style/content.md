@@ -8,11 +8,11 @@ These 7 principles contain strategies and tips to help you write excellent conte
 
 * [Focus on user needs and principles](/style/content/focus-on-user-needs-services/)
 * [Know your audience and meet them where they are](/style/content/know-your-audience/)
-* [Build in accessibility from the start](/build-accessibility-from-start/)
-* [Be concise](/be-concise/)
-* [Write in plain language](/write-in-plain-language/)
-* [Write in a conversational and official voice](/write-with-conversational-official-voice/)
-* [Organize content strategically](/organize-content-strategically/)
+* [Build in accessibility from the start](/style/content/build-accessibility-from-start/)
+* [Be concise](/style/content/be-concise/)
+* [Write in plain language](/style/content/write-in-plain-language/)
+* [Write in a conversational and official voice](/style/content/write-with-conversational-official-voice/)
+* [Organize content strategically](/style/content/organize-content-strategically/)
 
 ## Our inspiration
 
