@@ -170,3 +170,36 @@
     row-gap: 1.5rem;
   }
 }
+
+.code-preview {
+  border: solid 1px #A09FA7;
+  background-color: #f9f9fa;
+  padding: 1rem;
+  &-demo {
+    border: solid 1px #A09FA7;
+    background-color: white;
+    padding: 1rem;
+  }
+  .code-block {
+    margin-bottom: 0;
+  }
+}
+
+.code-block {
+  margin: 1rem 0;
+  &-language {
+    background-color: #2b2b2b;
+    color: #A09FA7;
+    border-bottom: solid 1px #A09FA7;
+    font-style: italic;
+    margin: 0;
+    padding: .5rem 1rem;
+  }
+  code.hljs {
+    margin: 0;
+  }
+}
+
+code.hljs {
+  border-radius: 0;
+}
