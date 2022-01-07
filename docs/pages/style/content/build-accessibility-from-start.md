@@ -88,3 +88,7 @@ Link text like **click here**, **read more**, and **more** are not useful to peo
 ### Add alt text to images
 
 Screen readers look for alt text. Add useful alt text to images so screen readers can describe images to people who use them.
+
+## Share your thoughts
+
+We’d love to hear what you thought of these principles and if you have suggestions on how we can improve them. Share through our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLScNllSkyD7sI7wQPQ9LkkfbRB4w7stEbEKuhrHVxYue-DPyQQ/viewform?usp=sf_link).
