@@ -11,7 +11,7 @@ The accordion element allows for sections of text to be expanded or collapsed on
 # Demo
 
 <!-- the value inside the htmlpreview tags is written dynamically from the template file using a prepublish hook to keep the sample in synch with the tested HTML -->
-<htmlpreview>
+<html-preview>
   ```html preview
     <cagov-accordion>
     <div class="cagov-accordion-card">
@@ -235,7 +235,7 @@ The accordion element allows for sections of text to be expanded or collapsed on
     </div>
   </cagov-accordion>
   ```
-  </htmlpreview>
+  </html-preview>
 
 ## Specs
 

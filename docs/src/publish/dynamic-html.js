@@ -5,16 +5,16 @@ const htmlFile = './template.html';
 try {
   let readme = fs.readFileSync(readmeFile, 'utf8');
 
-  let retrievalRegex = /<htmlpreview>(.|\n)*?<\/htmlpreview>/;
+  let retrievalRegex = /<html-preview>(.|\n)*?<\/html-preview>/;
 
   let latestHTML = fs.readFileSync(htmlFile,'utf8');
   const markdownCodeDelim = '```';
 
-  let finalReadme = readme.replace(retrievalRegex,`<htmlpreview>
+  let finalReadme = readme.replace(retrievalRegex,`<html-preview>
   ${markdownCodeDelim}html preview
   ${latestHTML}
   ${markdownCodeDelim}
-  </htmlpreview>`);
+  </html-preview>`);
 
   fs.writeFileSync(readmeFile,finalReadme,'utf8')
 } catch(e) {
