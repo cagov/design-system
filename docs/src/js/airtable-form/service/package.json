@@ -1,0 +1,15 @@
+{
+  "name": "cagov-airtable-form-service",
+  "version": "1.0.0",
+  "description": "Pass front end form data to Airtable base",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "airtable": "^0.11.1",
+    "fetch": "^1.1.0"
+  }
+}

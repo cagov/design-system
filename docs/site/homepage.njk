@@ -1,4 +1,4 @@
-<div class="full-bleed full-bleed--highlight1">
+{# <div class="full-bleed full-bleed--highlight1">
   <div class="full-bleed-content-area wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero">
     <div>
       <div class="cagov-stack cagov-p-2 cagov-featured-sidebar">
@@ -85,11 +85,11 @@
       </div>
     </div>
   </div>
-</div>
+</div> #}
 
 {% set principleNumber = range(1, 9) | random %}
 {% set principle = principles[principleNumber] %}
-
+{# 
 <div>
   <cagov-highlight-section>
     <article role="article" class="full-bleed bg-highlight-lightest">
@@ -113,8 +113,58 @@
       </div>
     </article>
   </cagov-highlight-section>
-</div>
+</div> #}
 
+
+<div class="full-bleed full-bleed--highlight1">
+  <div class="full-bleed-content-area wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero">
+    <div>
+      <div>
+        <h2>Be a part of the Design System</h2>
+        <p>We’d love to talk about how we can partner with you.</p>
+        <div class="cagov-hero-body-content">
+          <cagov-airtable-form
+            data-airtable-service-endpoint="http://localhost:3000"
+            data-airtable-database="app4B5KqaCTSHAdCS"
+            data-airtable-table="01%20-%20Design%20System%20Launch"
+            data-response-success="Submitted"
+            data-response-error="Nope"
+          >
+            <form>
+              <p>
+                <label for="name">Your name</label>
+              </p>         
+              <p>  
+                <input class="form-field" type="text" id="name" name="name" required>
+              </p>         
+              <p>
+                <label for="name">Your email</label>
+              </p>         
+              <p>  
+                <input class="form-field" type="email" id="email" name="email" required>
+              </p>
+              <p>
+                <label for="name">How can we help you?</label>
+              </p>
+              <p>
+                <select class="form-field">
+                  <option value="Send me updates on the Design System">
+                    Send me updates on the Design System
+                  </option>
+                </select>
+              </p>
+              <div class="wp-block-button">
+                <button class="wp-block-button__link airtable-form-submit"    id="airtable-form-submit">Submit</button>
+              </div>
+            </form>
+            </cagov-airtable-form>
+        </div>
+      </div>
+      <div><img src="/img/feedback.svg" alt="Be part of the design system image"/></div>
+    </div>
+  </div>
+</div>
+{# 
 <h2>Who's using the design system</h2>
 <div class="cagov-cluster-big-2">
   <div class="cagov-stack-card">
@@ -137,4 +187,4 @@
       <p><a href="" class="cagov-border-link">Visit website</a></p>
     </div>
   </div>
-</div>
+</div> #}
