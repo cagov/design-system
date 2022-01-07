@@ -1,4 +1,6 @@
-const componentMenuButton = document.querySelector('.component-sidebar-menu-button');
+const componentMenuButton = document.querySelector(
+  '.component-sidebar-menu-button',
+);
 
 if (componentMenuButton) {
   componentMenuButton.onclick = () => {
