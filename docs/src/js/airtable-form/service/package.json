@@ -4,12 +4,14 @@
   "description": "Pass front end form data to Airtable base",
   "main": "index.js",
   "scripts": {
+    "start": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "airtable": "^0.11.1",
+    "dotenv": "^10.0.0",
     "fetch": "^1.1.0"
   }
 }

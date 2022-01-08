@@ -1,12 +1,40 @@
 <cagov-airtable-form
-    data-airtable-service-endpoint=""
-    data-airtable-database="app4B5KqaCTSHAdCS"
-    data-airtable-table="01%20-%20Design%20System%20Launch"
+  data-airtable-service-endpoint="http://localhost:3000"
+  data-airtable-database="app4B5KqaCTSHAdCS"
+  data-airtable-table="01%20-%20Design%20System%20Launch"
+  data-response-success="Submitted"
+  data-response-error="Nope"
 >
-    <form>
-        <input type="text" name="name" />
-        <input type="text" name="email" />
-        <input type="text" name="message" />
-        <input type="submit" name="submit" />
-    </form>
+  <form>
+    <p>
+      <label for="name">Your name</label>
+    </p>
+    <p>
+      <input class="form-field" type="text" id="name" name="name" required />
+    </p>
+    <p>
+      <label for="name">Your email</label>
+    </p>
+    <p>
+      <input class="form-field" type="email" id="email" name="email" required />
+    </p>
+    <p>
+      <label for="name">How can we help you?</label>
+    </p>
+    <p>
+      <select class="form-field">
+        <option value="Send me updates on the Design System">
+          Send me updates on the Design System
+        </option>
+      </select>
+    </p>
+    <div class="wp-block-button">
+      <button
+        class="wp-block-button__link airtable-form-submit"
+        id="airtable-form-submit"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
 </cagov-airtable-form>

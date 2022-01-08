@@ -19,6 +19,7 @@
     "site:build:dev": "cross-env NODE_ENV=development eleventy",
     "site:watch": "eleventy --serve",
     "site:watch:dev": "cross-env NODE_ENV=development eleventy --serve --incremental",
+    "site:watch:airtable": "node -r dotenv/config ./docs/src/js/airtable-form/service/index.js",
     "site:start": "npm run site:watch",
     "site:dev": "npm run site:watch:dev",
     "build": "echo \"WARN: no build specified\" && exit 0"
