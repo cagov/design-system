@@ -1,23 +1,29 @@
 const fs = require('fs');
+
 const readmeFile = './readme.md';
 const htmlFile = './template.html';
 
 try {
-  let readme = fs.readFileSync(readmeFile, 'utf8');
+  const readme = fs.readFileSync(readmeFile, 'utf8');
 
-  let retrievalRegex = /<html-preview>(.|\n)*?<\/html-preview>/;
+  const retrievalRegex = /<html-preview>(.|\n)*?<\/html-preview>/;
 
-  let latestHTML = fs.readFileSync(htmlFile,'utf8');
+  const latestHTML = fs.readFileSync(htmlFile, 'utf8');
   const markdownCodeDelim = '```';
 
-  let finalReadme = readme.replace(retrievalRegex,`<html-preview>
-  ${markdownCodeDelim}html preview
-  ${latestHTML}
-  ${markdownCodeDelim}
-  </html-preview>`);
+  const finalReadme = readme.replace(
+    retrievalRegex,
+    `<html-preview>
 
-  fs.writeFileSync(readmeFile,finalReadme,'utf8')
-} catch(e) {
+${markdownCodeDelim}html preview
+${latestHTML}
+${markdownCodeDelim}
+
+</html-preview>`,
+  );
+
+  fs.writeFileSync(readmeFile, finalReadme, 'utf8');
+} catch (e) {
   console.log(e);
   // called from prepublish, exit if readme cannot be updated
   process.exit(1);
