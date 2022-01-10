@@ -294,35 +294,37 @@ class CAGovContentNavigation extends window.HTMLElement {
       }
     }
 
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener('click', (e) => {
-        const hashval = decodeURI(anchor.getAttribute('href'));
-        try {
-          const target = document.querySelector(hashval);
-          if (target !== null) {
-            const position = target.getBoundingClientRect();
+    document
+      .querySelectorAll('a[data-content-navigation]')
+      .forEach((anchor) => {
+        anchor.addEventListener('click', (e) => {
+          const hashval = decodeURI(anchor.getAttribute('href'));
+          try {
+            const target = document.querySelector(hashval);
+            if (target !== null) {
+              const position = target.getBoundingClientRect();
 
-            const prefersReducedMotion = window.matchMedia(
-              '(prefers-reduced-motion)',
-            ).matches;
+              const prefersReducedMotion = window.matchMedia(
+                '(prefers-reduced-motion)',
+              ).matches;
 
-            // console.log("prefersReducedMotion", prefersReducedMotion);
-            if (!prefersReducedMotion) {
-              window.scrollTo({
-                behavior: 'smooth',
-                left: position.left,
-                top: position.top - 200,
-              });
+              // console.log("prefersReducedMotion", prefersReducedMotion);
+              if (!prefersReducedMotion) {
+                window.scrollTo({
+                  behavior: 'smooth',
+                  left: position.left,
+                  top: position.top - 200,
+                });
+              }
+
+              window.history.pushState(null, null, hashval);
             }
-
-            window.history.pushState(null, null, hashval);
+          } catch (error) {
+            console.error(error);
           }
-        } catch (error) {
-          console.error(error);
-        }
-        e.preventDefault();
+          e.preventDefault();
+        });
       });
-    });
 
     return null;
   }
@@ -387,7 +389,9 @@ class CAGovContentNavigation extends window.HTMLElement {
           anchor = tagId;
         }
 
-        output += `<li><a href="#${encodeURI(anchor)}">${title}</a></li>`;
+        output += `<li><a data-content-navigation href="#${encodeURI(
+          anchor,
+        )}">${title}</a></li>`;
 
         if (tagId === undefined || tagId === null) {
           tagId = anchor;
