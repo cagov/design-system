@@ -21,4 +21,4 @@ Everyone can benefit from getting familiar with the [Design System principles](/
 
 ## Need help getting started?
 
-[Reach out to us](support/). We’re available to help you figure out how you can get started, even if you do not have a digital team.
+[Reach out to us](/support/). We’re available to help you figure out how you can get started, even if you do not have a digital team.
