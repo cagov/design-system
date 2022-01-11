@@ -9,9 +9,8 @@ class CaGovAirtableForm extends window.HTMLElement {
     super();
     const defaultOptions = {
       parentSelector: 'cagov-airtable-form',
-      formFieldSelector:
-        '.form-field [data-airtable-field]',
-      formSubmitSelector: '.airtable-form-submit[data-airtable-form-id]'
+      formFieldSelector: '.form-field [data-airtable-field]',
+      formSubmitSelector: '.airtable-form-submit[data-airtable-form-id]',
     };
 
     this.options = {
@@ -30,14 +29,16 @@ class CaGovAirtableForm extends window.HTMLElement {
 
     const submitForm = this.submitForm.bind(this);
     // This will work with just one form element per page.
-    document.querySelector('cagov-airtable-form form .airtable-form-submit').addEventListener(
-      'click',
-      (e) => {
-        e.preventDefault();
-        submitForm();
-      },
-      false,
-    );
+    document
+      .querySelector('cagov-airtable-form form .airtable-form-submit')
+      .addEventListener(
+        'click',
+        (e) => {
+          e.preventDefault();
+          submitForm();
+        },
+        false,
+      );
   }
 
   submitForm() {

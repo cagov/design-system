@@ -1,8 +1,10 @@
 const CaGovAirtableFormSubmit = {
   init: (options) => {
-    const formFields = document.querySelectorAll(`${options.parentSelector} ${options.formFieldSelector}`);
+    const formFields = document.querySelectorAll(
+      `${options.parentSelector} ${options.formFieldSelector}`,
+    );
     // console.log("options", options);
-    console.log("formFields", formFields);
+    console.log('formFields', formFields);
     let submit = true;
     const fields = {};
     Object.keys(formFields).map((index) => {
@@ -25,7 +27,7 @@ const CaGovAirtableFormSubmit = {
             'get response',
             'trigger submit success or try again later message',
           );
-          console.log("response data", data); // JSON data parsed by `data.json()` call
+          console.log('response data', data); // JSON data parsed by `data.json()` call
         },
       );
     }
