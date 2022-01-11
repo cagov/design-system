@@ -15,7 +15,7 @@ Leveraging the efforts of three pivotal digital contributions, we reflect on the
 * The [Alpha Project](https://alpha.ca.gov/), and 
 * The [COVID-19](https://covid19.ca.gov/) website
 
-###The beginning 
+### The beginning 
 
 The first state websites started out as a place for people to download forms. We’ve come a long way and continue to evolve to meet people’s needs. 
 
@@ -26,15 +26,15 @@ Over the years, and with each state template release, we’ve improved the acces
 * Web accessibility
 * Improved performance 
 
-###Alpha
+### Alpha
 
 Alpha was the first effort to reimagine how government understands, builds and provides digital services. The primary goal was to create a better digital experience for all Californians. The CA.gov Alpha team adopted agile principles allowing them to quickly iterate on feedback while [blogging their story](https://digital.ca.gov/blog/) out in the open. 
 
-###COVID-19
+### COVID-19
 In response to the pandemic, the CA.gov Alpha team developed the COVID-19 emergency response website. The Alpha team collaborated with the HHS Office of Innovation and the California Department of Technology.
 
 Developed as California’s source of truth in the battle against the Coronavirus, the team created a scalable website. It was accessible, stable, and easy to update in a fast changing public health crisis. And it was built in four days!
 The team also broadened the definition of accessibility for state government. Reimagining performance as accessibility,  Alpha considers performance as a core component of accessibility. 
 
-##The Future
+## The Future
 The Design System is an [open source project](https://github.com/cagov/design-system). With it, the team hopes to partner with the broader digital community and continue to make it better. We will continue to build in the open and leverage best practices that use the power of digital to deliver services. For these efforts, state websites will rise to the challenge to better serve the people in California.  
