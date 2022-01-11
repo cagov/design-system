@@ -1,7 +1,11 @@
+---
+permalink: /
+---
+
 <div class="full-bleed full-bleed--highlight1">
   <div class="full-bleed-content-area wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero">
     <div>
-      <div class="cagov-stack cagov-p-2 cagov-featured-sidebar">
+      <div class="cagov-stack cagov-py-2 cagov-pr-2 cagov-featured-sidebar">
         <h2>Meet the California Design System</h2>
         <div class="cagov-hero-body-content">
           <p>The Design System makes it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.</p>
@@ -135,6 +139,51 @@
       <h3>COVID19.ca.gov</h3>
       <p>We built the page feedback component so state departments could get direct thoughts from Californians. COVID19.ca.gov was the initial testing ground for this innovative component.</p>
       <p><a href="" class="cagov-border-link">Visit website</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="full-bleed full-bleed--highlight2 cagov-mt-2">
+  <div class="full-bleed-content-area get-involved">
+    <div class="get-involved-content">
+      <h2>Be a part of the Design System</h2>
+      <p>We'd love to talk about how we can partner with you.</p>
+      <div class="get-involved-content-form">
+        <cagov-airtable-form
+          data-airtable-service-endpoint="https://fa-go-design-system-cagov-airtable-form.azurewebsites.net/api/AirtableFormTrigger?code=Zu6Ck/103KrMh2mp/7CANtN3dMrtHMpjdhayZm82OnGava5/A1urvQ=="
+          data-airtable-database="app4B5KqaCTSHAdCS"
+          data-airtable-table="01 - Design System Launch"
+          data-response-success="Submitted"
+          data-response-error="Nope"
+        >
+          <form>
+            <div class="form-field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" data-airtable-field="Name" placeholder="Name" required>
+            </div>         
+            <div class="form-field">
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="email" data-airtable-field="Email" placeholder="Email address" required>
+            </div>
+            <div class="form-field">
+              <label for="request">How can we help you?</label>
+              <div class="form-select">
+                <select id="request" data-airtable-field="Request">
+                  <option value="Send me updates on the Design System">
+                    Send me updates on the Design System
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="wp-block-button">
+              <button class="wp-block-button__link airtable-form-submit" id="airtable-form-submit">Submit</button>
+            </div>
+          </form>
+        </cagov-airtable-form>
+      </div>
+    </div>
+    <div class="get-involved-image">
+      <img src="/img/desk-work-sketch.svg" alt="sketch of person working at computer desk">
     </div>
   </div>
 </div>
