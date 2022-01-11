@@ -54,3 +54,7 @@ Use frequently asked questions (FAQs) sparingly. Most of the time they are not a
 FAQs are hard for people to read, especially when there are a lot of them on one page. They also often duplicate content that’s already on your site. And by putting the content in the form of a question and answer, you’re at least doubling the text someone has to read to get the information.
 
 Use the same rules for accordions for FAQs. If more than a third of readers need the information, put it in your body content.
+
+## Share your thoughts
+
+We’d love to hear what you thought of these principles and if you have suggestions on how we can improve them. Share through our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLScNllSkyD7sI7wQPQ9LkkfbRB4w7stEbEKuhrHVxYue-DPyQQ/viewform?usp=sf_link).

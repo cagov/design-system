@@ -21,9 +21,9 @@
     </script>
     <link id="theme-stylesheet" rel="stylesheet" href="dist/themes/drought.css">
 
-    <link type="text/css" rel="stylesheet" href="../card-grid/index.css">
+    <link type="text/css" rel="stylesheet" href="../button-grid/index.css">
     <link type="text/css" rel="stylesheet" href="../step-list/index.css">
-    <link type="text/css" rel="stylesheet" href="../menu/dist/_style.css">
+    <link type="text/css" rel="stylesheet" href="../menu/index.css">
     <style>
       .hidden-search,
       .sr-only {
@@ -56,7 +56,7 @@
 
       <h2>Featured cards</h2>
 
-      <div id="card-grid-html-content"></div>
+      <div id="button-grid-html-content"></div>
 
       <h2>Accordion</h2>
 
@@ -93,9 +93,9 @@
       fetch('../menu/template.html')
         .then(response => response.text())
         .then((string) => { document.getElementById('menu-html-content').innerHTML = string; });
-      fetch('../card-grid/template.html')
+      fetch('../button-grid/template.html')
         .then(response => response.text())
-        .then((string) => { document.getElementById('card-grid-html-content').innerHTML = string; });
+        .then((string) => { document.getElementById('button-grid-html-content').innerHTML = string; });
       fetch('../accordion/template.html')
         .then(response => response.text())
         .then((string) => { document.getElementById('accordion-html-content').innerHTML = string; });

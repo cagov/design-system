@@ -2,6 +2,9 @@
 
 `ds-accordion`
 
+#1.0.9
+* Add prepublish hook which writes latest sample HTML into readme from template.html
+* Update description to match latest design system docs
 # 1.0.8
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.

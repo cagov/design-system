@@ -37,3 +37,7 @@ If an individual has a payment to submit to the Treasurer’s Office of Departme
 You must pay your license fee when you renew your license. Use the Department of Weights and Measures online portal to renew and pay.
 
 Plainlanguage.gov has more tips for [writing concise content](https://www.plainlanguage.gov/guidelines/concise/). You can also see examples of how to improve government writing.
+
+## Share your thoughts
+
+We’d love to hear what you thought of these principles and if you have suggestions on how we can improve them. Share through our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLScNllSkyD7sI7wQPQ9LkkfbRB4w7stEbEKuhrHVxYue-DPyQQ/viewform?usp=sf_link).
