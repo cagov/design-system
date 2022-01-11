@@ -6,7 +6,7 @@ In contrast, California’s Design System is a collection of independent compone
 
 The independent components are also themeable. We use CSS variables with default values as design tokens. 
 
-## Use your preferred framework...or none at all
+## Use your preferred framework, or none at all
 
 The Design System components are agnostic. You can choose to use an opinionated tool, like Vue or React, but you do not need to use one. All components include sample HTML and only use JavaScript when necessary.
 

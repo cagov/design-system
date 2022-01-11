@@ -47,4 +47,4 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
 
-- var(--secondary-color, #fec02f)
+- var(--highlight-color, #fec02f)
