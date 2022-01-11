@@ -17,16 +17,15 @@ const CaGovAirtableFormSubmit = {
 
     if (submit) {
       const requestData = { options, fields };
-      CaGovAirtableFormSubmit.postData(
-        'http://localhost:3000',
-        requestData,
-      ).then((data) => {
-        console.log(
-          'get response',
-          'trigger submit success or try again later message',
-        );
-        console.log(data); // JSON data parsed by `data.json()` call
-      });
+      CaGovAirtableFormSubmit.postData(options.endpoint, requestData).then(
+        (data) => {
+          console.log(
+            'get response',
+            'trigger submit success or try again later message',
+          );
+          console.log(data); // JSON data parsed by `data.json()` call
+        },
+      );
     }
     return false;
   },
