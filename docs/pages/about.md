@@ -16,6 +16,7 @@ Leveraging the efforts of three pivotal digital contributions, we reflect on the
 * The [COVID-19](https://covid19.ca.gov/) website
 
 ###The beginning 
+
 The first state websites started out as a place for people to download forms. We’ve come a long way and continue to evolve to meet people’s needs. 
 
 Over the years, and with each state template release, we’ve improved the access of online government services with:
@@ -26,6 +27,7 @@ Over the years, and with each state template release, we’ve improved the acces
 * Improved performance 
 
 ###Alpha
+
 Alpha was the first effort to reimagine how government understands, builds and provides digital services. The primary goal was to create a better digital experience for all Californians. The CA.gov Alpha team adopted agile principles allowing them to quickly iterate on feedback while [blogging their story](https://digital.ca.gov/blog/) out in the open. 
 
 ###COVID-19
