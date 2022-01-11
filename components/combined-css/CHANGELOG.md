@@ -1,6 +1,8 @@
 # CHANGELOG for ds-compiled-css
 `ds-compiled-css`
 
+# 1.0.5
+* Step list border color is now changed to highlight-color
 
 # 1.0.4
 * Replaced pdf-icon and external-link-icon components with link0icon components. Uncluding newer version of base-css/.
