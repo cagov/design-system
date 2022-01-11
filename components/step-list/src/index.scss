@@ -7,7 +7,7 @@
 
   li {
     list-style: none;
-    border-left: 5px solid var(--secondary-color, #fec02f);
+    border-left: 5px solid var(--highlight-color, #fec02f);
     font-size: 1.75rem;
     font-weight: 700;
     position: relative;
@@ -15,12 +15,12 @@
     line-height: 1.5;
   }
   li:before {
-    content: '';
-    font-family: 'Public Sans';
+    content: "";
+    font-family: "Public Sans";
     font-size: 1.75rem;
     font-weight: 700;
     padding: 0 13px 0 13px;
-    border: 5px solid var(--secondary-color, #fec02f);
+    border: 5px solid var(--highlight-color, #fec02f);
     background-color: #fff;
     border-radius: 50%;
     text-align: center;
