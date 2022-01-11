@@ -43,6 +43,52 @@
   font-weight: bold;
 }
 
-.be-a-part-image {
-  
+.get-involved {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 2rem;
+  flex-wrap: wrap-reverse;
+  &-content {
+    flex-grow: 2;
+  }
+  &-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    img {
+      max-width: 85vw;
+    }
+  }
+  label, input, select {
+    display: block;
+  }
+  input, select {
+    padding: .5rem;
+  }
+  select {
+    appearance: none;
+    width: 100%;
+  }
+  .form-field {
+    margin-bottom: 1rem;
+  }
+  .form-select {
+    position: relative;
+    background: white;
+    &::after {
+      content: "∨";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      right: 1px;
+      top: 5%;
+      position: absolute;
+      height: 90%;
+      width: 2rem;
+      font-weight: 900;
+      pointer-events: none;
+    }
+  }
 }

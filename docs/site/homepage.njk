@@ -144,19 +144,46 @@ permalink: /
 </div>
 
 <div class="full-bleed full-bleed--highlight2 cagov-mt-2">
-  <div class="full-bleed-content-area cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-block">
-    <div>
-      <div class="cagov-stack cagov-py-2 cagov-pr-2 cagov-featured-sidebar">
-        <h2>Be a part of the Design System</h2>
-        <p>We'd love to talk about how we can partner with you.</p>
-        <div class="cagov-hero-body-content">
-          <p>We make it easy for state digital teams to build accessible, consistent, and performant services and products to meet Californians’ needs.</p>
-          <div class="wp-block-button">
-            <a class="wp-block-button__link" href="/get-started/">Submit</a>
+  <div class="full-bleed-content-area get-involved">
+    <div class="get-involved-content">
+      <h2>Be a part of the Design System</h2>
+      <p>We'd love to talk about how we can partner with you.</p>
+      <cagov-airtable-form
+        data-airtable-service-endpoint="http://localhost:3000"
+        data-airtable-database="app4B5KqaCTSHAdCS"
+        data-airtable-table="01%20-%20Design%20System%20Launch"
+        data-airtable-table="01 - Design System Launch"
+        data-response-success="Submitted"
+        data-response-error="Nope"
+      >
+        <form>
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" data-airtable-field="Name" placeholder="Name" required>
+          </div>         
+          <div class="form-field">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" data-airtable-field="Email" placeholder="Email address" required>
           </div>
-        </div>
-      </div>
-      <div><img class="cagov-featured-image" src="/img/desk-work-sketch.svg" alt="sketch of person working at computer desk"></div>
+          <div class="form-field">
+            <label for="request">How can we help you?</label>
+            <div class="form-select">
+              <select id="request" data-airtable-field="Request">
+                <option value="Send me updates on the Design System">
+                  Send me updates on the Design System
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="wp-block-button">
+            <button class="wp-block-button__link airtable-form-submit" id="airtable-form-submit">Submit</button>
+          </div>
+        </form>
+      </cagov-airtable-form>
+
+    </div>
+    <div class="get-involved-image">
+      <img src="/img/desk-work-sketch.svg" alt="sketch of person working at computer desk">
     </div>
   </div>
 </div>
