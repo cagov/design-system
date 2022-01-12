@@ -24,7 +24,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
       document.querySelector('.search-container--small .site-search input').setAttribute("tabindex", "-1");
       document.querySelector('.search-container--small .site-search button.search-submit').setAttribute("tabindex", "-1");
       document.querySelector('.search-container--small').setAttribute("aria-hidden", "true");
-      if (this.mobileView()) {
+      if (mobileView()) {
         mobileSearchBtn.addEventListener('click', () => {
           document.querySelector('.search-container--small').classList.toggle('hidden-search');
           const searchactive = document.querySelector('.search-container--small').classList.contains("hidden-search");
@@ -185,18 +185,16 @@ class CAGOVOverlayNav extends window.HTMLElement {
     });
   }
 
-  // Function determining if it's mobile view (max 767px)
-  mobileView() {
-    const mobileElement = document.querySelector('.branding .grid-mobile-icons');
 
-    if (mobileElement) {
-      return getComputedStyle(mobileElement).display !== 'none';
-
-    }
-    return false;
-
-
-  };
 
 }
 window.customElements.define('cagov-navoverlay', CAGOVOverlayNav);
+
+// Function determining if it's mobile view (max 767px)
+function mobileView() {
+  const mobileElement = document.querySelector('.branding .grid-mobile-icons');
+  if (mobileElement) {
+    return getComputedStyle(mobileElement).display !== 'none';
+  }
+  return false;
+};
