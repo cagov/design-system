@@ -30,24 +30,7 @@ In respect to accessibility, color choice is intended to align with Web Content 
 For CA.gov, that looks like this. This is also the default color palette for any new digital service.
 
 While there is no official color palette for CA.gov, the primary, secondary and highlight color are selected to reflect the latest CA.gov initiatives such as covid19.ca.gov and alpha.ca.gov. 
-<style>
-  .cagov-table table {
-    width: 100%;
-  }
-  .cagov-table table.partial-borders {
-    border-bottom: none;
-    border-right: none;
-  }
-  .bgcolor-chips td {
-    height: 5rem;
-  }
-  .font-demo {
-    border: solid 1px #ccc;
-    padding: 2rem;
-    display: inline-block;
-    margin-bottom: 2rem;
-  }
-</style>
+
 <span class="cagov-table">
   <table>
     <tr>
