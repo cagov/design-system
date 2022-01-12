@@ -21,7 +21,7 @@
     "site:watch:dev": "cross-env NODE_ENV=development eleventy --serve --incremental",
     "site:start": "npm run site:watch",
     "site:dev": "npm run site:watch:dev",
-    "build": "echo \"WARN: no build specified\" && exit 0" 
+    "build": "echo \"WARN: no build specified\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "@web/dev-server": "^0.1.17",
     "@web/test-runner": "^0.13.16",
     "@web/test-runner-puppeteer": "^0.10.1",
+    "aws-sdk": "^2.1055.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
