@@ -2,6 +2,10 @@
 
 `ds-content-navigation`
 
+# 1.0.8
+* Added label to sidebar menu for accessibility.
+* Made link targets more specific in JavaScript so they don't interfere with skip to content navigation.
+
 # 1.0.7
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.
