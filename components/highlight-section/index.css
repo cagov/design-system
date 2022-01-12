@@ -86,6 +86,12 @@ cagov-highlight-section article .highlight-body .highlight-text {
     border-bottom-right-radius: 5px;
   }
 }
+@media (min-width: 1600px) {
+  cagov-highlight-section article .container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
 .full-bleed {
   margin-left: calc(50% - 50vw);
   width: 99.5vw;
