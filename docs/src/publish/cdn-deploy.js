@@ -5,8 +5,10 @@ const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 
 // publish to  S3 bucket at /components/${package-name}/v${package-version}/
-const currentPackageInfo = JSON.parse(fs.readFileSync('./package.json','utf8'));
-const packageName = currentPackageInfo.name.replace('@cagov/','');
+const currentPackageInfo = JSON.parse(
+  fs.readFileSync('./package.json', 'utf8'),
+);
+const packageName = currentPackageInfo.name.replace('@cagov/', '');
 const packageVersion = currentPackageInfo.version;
 const keyPrefix = `components/${packageName}/v${packageVersion}/dist/`;
 
@@ -30,7 +32,8 @@ const getFilePaths = (dir) => {
 getFilePaths(directoryToUpload);
 
 // upload to S3
-const uploadToS3 = (dir, filePath) => new Promise((resolve, reject) => {
+const uploadToS3 = (dir, filePath) =>
+  new Promise((resolve, reject) => {
     const key = keyPrefix + filePath.split(`${dir}/`)[1];
     const params = {
       Bucket: bucketName,
@@ -48,7 +51,7 @@ const uploadToS3 = (dir, filePath) => new Promise((resolve, reject) => {
   });
 
 const uploadPromises = filePaths.map((filePath) =>
-  uploadToS3(directoryToUpload, filePath)
+  uploadToS3(directoryToUpload, filePath),
 );
 Promise.all(uploadPromises)
   .then((result) => {

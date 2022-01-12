@@ -27,7 +27,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 <div class="cagov-grid">
   <a href="linkurl" class="no-deco cagov-card">
     <h3>card title here</h3>
-    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
       width="24px">
       <g>
         <path d="M0,0h24v24H0V0z" fill="none" />

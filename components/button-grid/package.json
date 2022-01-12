@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-button-grid",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "The card grid depends on individual cards and lays them out in a grid",
   "main": "index.css",
   "type": "module",
