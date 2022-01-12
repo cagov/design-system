@@ -95,6 +95,13 @@ cagov-highlight-section {
 	}
 }
 
+@media (min-width: 1600px) {
+	cagov-highlight-section article .container {
+		padding-left: 10rem;
+		padding-right: 10rem;
+	}
+}
+
 // TO_DO:  add to base css utility classes
 .full-bleed {
 	margin-left: calc(50% - 50vw);
