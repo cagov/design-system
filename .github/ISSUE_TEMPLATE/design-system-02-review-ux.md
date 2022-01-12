@@ -1,7 +1,7 @@
 ---
-name: New component, UX Review
-about: Taking an initial component proposal, provide initial designs, content strategy, user research and other human-centered considerations in scoping out the component.
-title: 'UX Review: Name'
+name: UX Review
+about: Checklist of what we review for each component
+title: 'UX Review: '
 labels: Component, Component Review, UX Review
 assignees: ''
 ---
@@ -10,26 +10,28 @@ assignees: ''
 
 A component proposal for the design system needs a UX review.
 
+## Component name
+
+
 ## Checklist
 - [ ] User research
 - [ ] Design
-- [ ] Content design
-- [ ] Content strategy
+- [ ] Content UX
 - [ ] Accessibility
 - [ ] Analytics
 - [ ] Impact
 
 ### User research
-*Has user research been conducted?*
+*Has any user research been conducted on this project? If so, please describe.*
 
 ### Design
-*Anything needed to know about designing this component*
+*Anything needed to know about reviewing the design of this component?*
 
 - [ ] Screenshots of Designs
-- [ ] Notes on responsive design?
+- [ ] Review of responsive design
 
 #### Screenshots
-*You can include a public link to a design asset, but please provide design screenshots at 100% size so that everyone can see the design.* 
+*Include a public link to a design asset. Please provide design screenshots at 100% size so that everyone can see the design.* 
 
 ### Content design 
 *What content elements or assets does a content editor need to provide?*
