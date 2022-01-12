@@ -39,7 +39,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
         <div class="menu-trigger-label menu-label" data-openlabel="Open" data-closelabel="Close">Menu</div>
       </button>
       <div class="mobile-search">
-        <button class="search-btn" aria-expanded="true">
+        <button class="search-btn" aria-expanded="true" aria-controls="mobile-search-container">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
             height="17px" viewBox="0 0 17 17" style="enable-background:new 0 0 17 17;" xml:space="preserve">
             <path class="blue" d="M16.4,15.2l-4-4c2-2.6,1.8-6.5-0.6-8.9c-1.3-1.3-3-2-4.8-2S3.5,1,2.2,2.3c-2.6,2.6-2.6,6.9,0,9.6
@@ -51,7 +51,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
         </button>
       </div>
     </div>
-    <div class="search-container search-container--small hidden-search">
+    <div class="search-container search-container--small hidden-search" id="mobile-search-container">
       <form class="site-search" action="/serp/">
         <span class="sr-only" id="SearchInput2">Custom Google Search</span>
         <input type="text" name="q" aria-labelledby="SearchInput2" placeholder="Search this website"

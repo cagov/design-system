@@ -2,6 +2,9 @@
 
 `ds-dropdown-menu`
 
+# 1.0.16
+* Fixed mobile search button accessiblity (in index.js).
+
 # 1.0.15
 * Linted and formatted code per root eslint/prettier settings.
 * Removed local eslint/prettier configuration, in favor of repo-wide tooling.
