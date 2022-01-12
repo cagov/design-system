@@ -1,6 +1,6 @@
 # Visual Design
 
-We are consistent without being uniform. Below are the guidelines that allow us to achieve this.
+The visual design of the CA.gov Design System is inspired by the Design System principles. Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.
 
 ## Color
 
