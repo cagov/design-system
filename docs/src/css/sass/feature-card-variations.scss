@@ -65,6 +65,7 @@
   }
   input, select {
     padding: .5rem;
+    border-radius: 5px;
   }
   select {
     appearance: none;
@@ -76,6 +77,7 @@
   .form-select {
     position: relative;
     background: white;
+    border-radius: 5px;
     &::after {
       content: "∨";
       display: flex;
