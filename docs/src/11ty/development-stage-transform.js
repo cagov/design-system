@@ -1,5 +1,6 @@
 const cheerio = require('cheerio');
-const components = require('../../site/_data/components.json');
+const components = require('../../site/_data/editable/components.json');
+const componentStages = require('../../site/_data/editable/componentStages.json');
 
 const componentDocTab = (docName, docSlug, metadata) => {
   let result = '';
@@ -47,9 +48,7 @@ const devStageTemplate = (metadata) => `
       ${devStageGridItemTemplate('4', 'Production', metadata.component.status)}
     </dl>
     <p class="component-development-stage-description">
-      This component is currently in Alpha. 
-      Alpha means that the component has not been thorougly tested by developers. 
-      <a href="#">Learn more.</a>
+      ${componentStages[metadata.component.status].description}
     </p>
   </div>
 `;
@@ -78,17 +77,13 @@ module.exports = (html, outputPath) => {
             'use-cases': $('meta[content="has:use-cases"]').length,
             changelog: $('meta[content="has:changelog"]').length,
           },
-          stage: $('meta[content*="stage"]').length
-            ? $('meta[content*="stage"]')['0'].attribs.content.replace(
-                'stage:',
-                '',
-              )
-            : undefined,
         };
 
-        const devStageHtml = devStageTemplate(metadata);
-        h1.after(devStageHtml);
-        result = $.html();
+        if (component.status in componentStages) {
+          const devStageHtml = devStageTemplate(metadata);
+          h1.after(devStageHtml);
+          result = $.html();
+        }
       }
     }
   }
