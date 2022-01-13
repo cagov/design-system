@@ -1,7 +1,7 @@
 const glob = require('glob');
 const path = require('path');
-const components = require('../docs/site/_data/components.json');
-const defaults = require('../docs/site/_data/defaults.json');
+const components = require('../docs/site/_data/editable/components.json');
+const defaults = require('../docs/site/_data/editable/defaults.json');
 
 const getComponentSlug = (article) =>
   article.page.filePathStem.match(/\/components\/(.+?)\/.+/)[1];

@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
-const components = require('../../site/_data/components.json');
-const componentStages = require('../../site/_data/componentStages.json');
+const components = require('../../site/_data/editable/components.json');
+const componentStages = require('../../site/_data/editable/componentStages.json');
 
 const componentDocTab = (docName, docSlug, metadata) => {
   let result = '';
@@ -76,7 +76,7 @@ module.exports = (html, outputPath) => {
             readme: $('meta[content="has:readme"]').length,
             'use-cases': $('meta[content="has:use-cases"]').length,
             changelog: $('meta[content="has:changelog"]').length,
-          }
+          },
         };
 
         if (component.status in componentStages) {

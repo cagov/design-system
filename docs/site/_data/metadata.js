@@ -1,4 +1,4 @@
-const defaults = require('./defaults.json');
+const defaults = require('./editable/defaults.json');
 
 // Note that several metadata properties need to be in EleventyComputed.
 // See ./eleventyComputed.js.
