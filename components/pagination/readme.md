@@ -8,9 +8,9 @@ Pagination always shows the first and last page in the series. It automatically 
 
 ## When and how to use it
 
-You should implement the component wherever a long list of content could benefit from paged navigation. If you have more than 10 items, use pagination.
+Use the component wherever a long list of content could benefit from paged navigation. If you have more than 10 items, use pagination.
 
-Use pagination with:
+Pagination works well with:
 
 - A list of announcements or press releases
 - Search results
@@ -65,7 +65,7 @@ The component tracks the current page and triggers custom events on page clicks.
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-color`
 
@@ -81,7 +81,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ### Review items specific to the pagination accessibility
 
-- Make sure that each pagination link has appropriate `aria-label`
+- Make sure that each pagination link has appropriate `aria-label`.
 - make sure that pagination component is contained within `nav` tag and has `aria-label="Pagination”` added to it.
 
 ### Standard accessibility review
@@ -97,7 +97,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
