@@ -2,7 +2,7 @@
 `ds-compiled-css`
 
 # 1.0.5
-* Step list border color is now changed to highlight-color. Fixed mobile search accessibility. Fixed page-alert dismiss button accessibility.
+* Step list border color is now changed to highlight-color. Fixed mobile search accessibility. Fixed page-alert dismiss button accessibility. Fixed content navigation accessibility.
 
 # 1.0.4
 * Replaced pdf-icon and external-link-icon components with link0icon components. Uncluding newer version of base-css/.
