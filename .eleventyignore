@@ -2,6 +2,7 @@
 .husky
 test
 components/index.html
+components/readme.md
 components/*/*.(json|html|js|css|scss)
 components/*/*/**/*
 package.json
