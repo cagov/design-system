@@ -2645,7 +2645,7 @@ h1,
 h2,
 .h2 {
   font-size: calc(2.3175rem + var(--ratio));
-  margin-top: calc(2rem + var(--ratio));
+  margin-top: calc(1.5rem + var(--ratio));
   margin-bottom: calc(1.5rem + var(--ratio));
   font-weight: var(--font-weight-bold, 700);
 }
@@ -2789,7 +2789,7 @@ figure figcaption {
   padding: 2rem;
 }
 
-.mb-2 {
+.mb-2, .cagov-mb-2 {
   margin-bottom: 2rem;
 }
 
