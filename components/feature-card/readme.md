@@ -1,7 +1,7 @@
 
 # Feature card
 
-The feature card is a space to highlight content on the homepage. It always includes:
+The feature card highlights an action you want people to take or important or recent information on the homepage. It is the first thing a visitor sees. It always includes:
 
 - Title
 - Brief description
@@ -19,7 +19,7 @@ The feature card spans the full width of the screen on desktop and mobile. On mo
 
 ## When and how to use it
 
-The feature card highlights an action you want people to take or important or recent information. It is the first thing a visitor sees. Use this to catch their attention and highlight the top task or need.
+Use the feature card to catch visitors' attention and highlight the top task or need.
 
 We recommend always using a feature card on your homepage. Place it at the top of the homepage so it appears below the statewide header, site header, and site navigation. The only other thing that may appear above the feature card is a page alert.
 
