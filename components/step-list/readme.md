@@ -1,5 +1,3 @@
-
-
 # Step list
 
 The step list is a numbered list. It has:
@@ -8,8 +6,8 @@ The step list is a numbered list. It has:
 - Lines connecting all the circled numbers
 - A title for each step
 - Detail for each step
-    - You can use hyperlinks in the detail space.
-    - You cannot use bullet points in the detail space.
+  - You can use hyperlinks in the detail space.
+  - You cannot use bullet points in the detail space.
 
 The step list shows all the steps in a process. State processes can be complicated and opaque. The step list makes these processes visible, even when some steps do not require people to act.
 
@@ -25,13 +23,70 @@ The step list emphasizes important processes. Use it sparingly on your website. 
 
 Do not use the step list to create a list of items that are not ordered. Use bullet points instead.
 
+## Demo and sample markup
+
+<html-preview>
+
+```html preview
+<ol class="cagov-step-list">
+  <li>
+    <strong>Complete local permitting processes</strong>
+    <br />
+    <span class="has-inline-color cagov-step-list-content"
+      >Many cities and counties have rules and permitting for cannabis
+      businesses. Some do not allow cannabis businesses. Make sure you set up
+      your business in an area that allows commercial cannabis activity.
+      Complete any permitting requirements your city or county requires before
+      you apply for a state cannabis license.</span
+    >
+  </li>
+  <li>
+    <strong>Understand the state regulations for cannabis businesses</strong>
+    <br />
+    <span class="has-inline-color cagov-step-list-content"
+      >The Department of Cannabis Control (DCC) has
+      <a
+        href="https://cannabis.ca.gov/resources/laws-and-regulations/"
+        data-type="page"
+        data-id="713"
+        >requirements</a
+      >
+      for standard operating procedures, training employees and how facilities
+      must be set up. Make sure you understand and can meet these rules.</span
+    >
+  </li>
+  <li>
+    <strong>Gather your application information and documents</strong>
+    <br />
+    <span class="has-inline-color cagov-step-list-content"
+      >DCC has
+      <a
+        href="https://cannabis.ca.gov/applicants/application-resources/"
+        data-type="page"
+        data-id="698"
+        >resources</a
+      >
+      to help you create the documents you need during the license process. If
+      you have questions about the requirements, email the
+      <a
+        href="mailto:licensing@cannabis.ca.gov"
+        onmousedown="_gaq.push(['_trackEvent', 'Email Clicks', 'Click', 'licensing@cannabis.ca.gov', 0, 0]); _gaq.push(['b._trackEvent', 'Email Clicks', 'Click', 'licensing@cannabis.ca.gov', 0, 0]);"
+        >DCC licensing team</a
+      >.</span
+    >
+  </li>
+</ol>
+```
+
+</html-preview>
+
 ## Specs
 
-| Property | Value |
-| --- | --- |
-| Machine name | ds-step-list |
-| JavaScript | no |
-| SCSS | ./src/index.scss |
+| Property     | Value            |
+| ------------ | ---------------- |
+| Machine name | ds-step-list     |
+| JavaScript   | no               |
+| SCSS         | ./src/index.scss |
 
 ## Project installation
 
@@ -39,7 +94,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **Sample markup** from the component to your HTML.
-1. Adjust text as needed.
+3. Adjust text as needed.
 
 ## CSS variables
 
@@ -51,7 +106,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ```css
 :root {
-  --primary-color: #064E66;
+  --primary-color: #064e66;
 }
 ```
 
@@ -77,7 +132,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 ## Progressive enhancement
 
-This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
 ## Content Model
 

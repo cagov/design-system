@@ -1,4 +1,3 @@
-
 # Feature card
 
 The feature card highlights an action you want people to take or important or recent information on the homepage. It is the first thing a visitor sees. It always includes:
@@ -33,13 +32,55 @@ Do not use the feature card to make an image carousel. Carousels frustrate peopl
 
 Do not put a lot of content in your feature card. Too much content is hard to read. It will also lengthen the feature card and cause awkward whitespace.
 
+## Demo and sample markup
+
+<html-preview>
+
+```html preview
+<div
+  class="wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero"
+>
+  <div>
+    <div class="cagov-stack cagov-p-2 cagov-featured-sidebar">
+      <h2>We’re making changes to better serve you</h2>
+      <div class="cagov-hero-body-content">
+        <p>
+          California has merged the three state cannabis authorities into
+          a&nbsp;single,&nbsp;new Department of Cannabis Control.
+        </p>
+
+        <div class="wp-block-button">
+          <a
+            class="wp-block-button__link"
+            href="https://cannabis.ca.gov/about-us/consolidation/"
+            >Learn more</a
+          >
+        </div>
+      </div>
+    </div>
+    <div>
+      <img
+        loading="lazy"
+        class="cagov-featured-image"
+        src="https://cannabis.ca.gov/wp-content/uploads/sites/2/2021/06/cannabis-buds-hero-1024x683.jpg"
+        alt=""
+        width="1024"
+        height="683"
+      />
+    </div>
+  </div>
+</div>
+```
+
+</html-preview>
+
 ## Specs
 
-| Property | Value |
-| --- | --- |
-| Machine name | ds-feature-card |
-| JavaScript | no |
-| SCSS | ./src/index.scss |
+| Property     | Value            |
+| ------------ | ---------------- |
+| Machine name | ds-feature-card  |
+| JavaScript   | no               |
+| SCSS         | ./src/index.scss |
 
 ## Project installation
 
@@ -47,7 +88,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **Sample markup** from the component to your HTML.
-1. Modify with your own text, alt text, and image.
+3. Modify with your own text, alt text, and image.
 
 ## CSS variables
 
@@ -59,7 +100,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ```css
 :root {
-  --primary-color: #064E66;
+  --primary-color: #064e66;
 }
 ```
 
@@ -90,26 +131,27 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 ## Progressive enhancement
 
-This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
 ## Content Model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
-| Name | Attribute name | Data type | Field type | Selector | Additional info |
-| --- | --- | --- | --- | --- | --- |
-| Title | title | string | Plain text | h2 |  |
-| Description | body | string | Plain text | p |  |
-| Image | mediaURL | string | Plain text | img.cagov-featured-image[src] | 750x500  pixel maximum width and height are supported. |
-| Image caption | mediaAlt | string | Plain text | img.cagov-featured-image[alt] |  |
-| Button label | buttontext | string | Plain text | a |  |
-| Button url | buttonurl | string | Plain text | .wp-block-button a[href] |  |
-
+| Name          | Attribute name | Data type | Field type | Selector                      | Additional info                                       |
+| ------------- | -------------- | --------- | ---------- | ----------------------------- | ----------------------------------------------------- |
+| Title         | title          | string    | Plain text | h2                            |                                                       |
+| Description   | body           | string    | Plain text | p                             |                                                       |
+| Image         | mediaURL       | string    | Plain text | img.cagov-featured-image[src] | 750x500 pixel maximum width and height are supported. |
+| Image caption | mediaAlt       | string    | Plain text | img.cagov-featured-image[alt] |                                                       |
+| Button label  | buttontext     | string    | Plain text | a                             |                                                       |
+| Button url    | buttonurl      | string    | Plain text | .wp-block-button a[href]      |                                                       |
 
 ## Contributor/developer documentation
 
 From the command line at the root of this project you can run:
+
 ```
 npm run start
 ```
-Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by ```preview.html```
+
+Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by `preview.html`

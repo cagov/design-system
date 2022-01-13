@@ -1,4 +1,3 @@
-
 # Link grid
 
 The link grid organizes links that function as calls to action (CTAs) or highlight topics. This helps people find priority user needs and topics. The grid can also be used by content creators to lead users to specific content.
@@ -19,13 +18,77 @@ Avoid using more than 9 links. The link grid is intended to highlight the most i
 
 Because the grid collapses into one column on mobile, large grids may occupy several screens. This can hide lower links.
 
+## Demo and sample markup
+
+<html-preview>
+
+```html preview
+<div class="cagov-grid">
+  <a href="linkurl" class="no-deco cagov-card">
+    <span class="card-text">card title here</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      enable-background="new 0 0 24 24"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <g>
+        <path d="M0,0h24v24H0V0z" fill="none" />
+      </g>
+      <g>
+        <polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+      </g>
+    </svg>
+  </a>
+  <a href="linkurl" class="no-deco cagov-card">
+    <span class="card-text"
+      >this is an example of a very long text string card title here</span
+    >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      enable-background="new 0 0 24 24"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <g>
+        <path d="M0,0h24v24H0V0z" fill="none" />
+      </g>
+      <g>
+        <polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+      </g>
+    </svg>
+  </a>
+  <a href="linkurl" class="no-deco cagov-card">
+    <span class="card-text">card title 3 here</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      enable-background="new 0 0 24 24"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <g>
+        <path d="M0,0h24v24H0V0z" fill="none" />
+      </g>
+      <g>
+        <polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
+      </g>
+    </svg>
+  </a>
+</div>
+```
+
+</html-preview>
+
 ## Specs
 
-| Property | Value |
-| --- | --- |
-| Machine name | ds-button-grid |
-| JavaScript | no |
-| SCSS | ./src/index.scss |
+| Property     | Value            |
+| ------------ | ---------------- |
+| Machine name | ds-button-grid   |
+| JavaScript   | no               |
+| SCSS         | ./src/index.scss |
 
 ## Project installation
 
@@ -34,7 +97,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 1. Include **SCSS** in your compiler.
 2. Add the **Sample markup** from the component to your HTML.
 
-3. Modify the **Sample markup** with your URLs and card text as needed.  Refer to the Content model section for notes on mapping your data to the **Sample markup**.
+3. Modify the **Sample markup** with your URLs and card text as needed. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
 
 ## CSS variables
 
@@ -49,7 +112,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ```css
 :root {
-  --primary-color: #064E66;
+  --primary-color: #064e66;
 }
 ```
 
@@ -80,13 +143,13 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 ## Progressive enhancement
 
-This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
 ## Content Model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
-| Name | Attribute name | Data type | Field type | Selector |
-| --- | --- | --- | --- | --- |
-| Title | title | string | Plain text | .card-text |
-| Url | url | string | URL | a.cagov-card[href] |
+| Name  | Attribute name | Data type | Field type | Selector           |
+| ----- | -------------- | --------- | ---------- | ------------------ |
+| Title | title          | string    | Plain text | .card-text         |
+| Url   | url            | string    | URL        | a.cagov-card[href] |
