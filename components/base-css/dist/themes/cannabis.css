@@ -2220,6 +2220,11 @@ article {
   margin: 0 auto;
 }
 
+.single-column.single-column-wide {
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+}
+
 .has-sidebar-left .single-column {
   max-width: var(--w-lg, 1176px);
   margin: 0 auto;
