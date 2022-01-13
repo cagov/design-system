@@ -1,6 +1,10 @@
 # CHANGELOG for ds-statewide-footer
 `ds-statewide-footer`
 
+
+# 1.0.7 
+* Added aria-hidden attribute to cagov svg icon, so it is hidden from assistive technologies.
+
 # 1.0.6 
 * Aligned copyright line to container end with with new class, also added to sample markup
 
