@@ -22,7 +22,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 ## Sample markup
 
 ```html preview
-<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+<div id="skip-to-content"><a href="#body-content">Skip to content</a></div>
 ```
 
 
