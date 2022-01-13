@@ -495,7 +495,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--gray-300`
 - `--primary-dark-color`
@@ -516,9 +516,9 @@ All CSS variables define their own fallback value so you do not have to use addi
 ### Review items specific to the site navigation accessibility
 
 - Make sure that site navigation is contained within the `nav` tag that has `aria-label=”Site Navigation”` and `role=”navigation”` attributes in it.
-- If navigation is using dropdowns make sure that first level nav item has `aria-expanded=”true”` attribute when dropdown is expanded and `aria-expanded=”false”` when dropdown is collapsed. Make sure that dropdown toggle trigger is a button. Dropdown container is also needs to have `aria-hidden` attribute, which should change its value between `true` and `false` depending on its visibility. Also, make sure that dropdown links are out of focus when it’s in collapsed state, which means each link needs to have `tabindex=”-1”` attribute. And vise versa, when dropdown is expanded each link inside of the dropdown should not have any `tabindex` attribute.
+- If navigation is using dropdowns make sure that first level nav item has `aria-expanded=”true”` attribute when dropdown is expanded and `aria-expanded=”false”` when dropdown is collapsed. Make sure that dropdown toggle trigger is a button. Dropdown container also needs to have `aria-hidden` attribute, which should change its value between `true` and `false` depending on its visibility. Also, make sure that dropdown links are out of focus when it’s in collapsed state, which means each link needs to have `tabindex=”-1”` attribute. And vice versa, when dropdown is expanded each link inside of the dropdown should not have any `tabindex` attribute.
 - Arrow svg icon inside of the dropdown trigger button needs to have `aria-hidden=”true”` attribute.
-- Make sure that site navigation links have solid, 2px outline that is using `—-highlight-color` variable on focused state.
+- Make sure that site navigation links have a solid, 2px outline that is using `—-highlight-color` variable on focused state.
 
 ### Standard accessibility review
 
@@ -533,7 +533,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
@@ -542,7 +542,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This component uses a custom element defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements). If the JavaScript for this component is not delivered or supported, the component will not display. This component does not currently perform the desired progressive enhancement because it is critical to site interaction. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 The site navigation component renders parent and child link lists.
 
@@ -559,7 +559,7 @@ Here is an abbreviated example of the data necessary to render this component wi
 | Cultivation                         | /licensees/cultivation/                                        | 20        | 2                | 0          | Drop down |
 | Manufacturing                       | /licensees/manufacturing/                                      | 20        | 2                | 1          | Drop down |
 
-For example, in the WordPress CMS integration, content editors can manage menu links through the normal menu system, and then [data](https://github.com/cagov/cannabis.ca.gov/blob/main/src/templates/wordpress/menu/headerMenu.json) is pulled from the WordPress menu system using an [API plugin](https://github.com/cagov/pantheon-mirror-cannabis-ca-gov/tree/main/wp-content/plugins/wp-rest-api-v2-menus) into a static site building website. This happens by way of GitHub, which acts as a local flat file JSON database for a static site generator (11ty). In the build process of the static site, we then then use a [templating system](https://github.com/cagov/cannabis.ca.gov/blob/main/src/templates/_includes/nav-component.njk) to map the JSON data for the menu to the first two levels of the menu to the site navigation. Similar patterns can work for other publishing systems. If you are interested to help, [reach out through our contact form](/support).
+For example, in the WordPress CMS integration, content editors can manage menu links through the normal menu system, and then [data](https://github.com/cagov/cannabis.ca.gov/blob/main/src/templates/wordpress/menu/headerMenu.json) is pulled from the WordPress menu system using an [API plugin](https://github.com/cagov/pantheon-mirror-cannabis-ca-gov/tree/main/wp-content/plugins/wp-rest-api-v2-menus) into a static site building website. This happens by way of GitHub, which acts as a local flat file JSON database for a static site generator (11ty). In the build process of the static site, we then use a [templating system](https://github.com/cagov/cannabis.ca.gov/blob/main/src/templates/_includes/nav-component.njk) to map the JSON data for the menu to the first two levels of the menu to the site navigation. Similar patterns can work for other publishing systems. If you are interested in helping, [contact us through the Support page](/support).
 
 ## Contributor/Developer documentation
 
