@@ -1,6 +1,6 @@
 # Feature card
 
-The feature card highlights an action you want people to take or important or recent information on the homepage. It is the first thing a visitor sees. It always includes:
+The feature card highlights an action you want people to take or important information on the homepage. It is the first thing a visitor sees. It always includes:
 
 - Title
 - Brief description
@@ -92,7 +92,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-color`
 
@@ -109,7 +109,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 ### Review items specific to the feature card accessibility
 
 - Make sure that feature card image has `alt` attribute with text describing the image.
-- make sure that feature card CTA link button has have solid, 2px outline that is using `—-highlight-color` variable on focused state.
+- Make sure that feature card CTA link button has solid, 2px outline that is using `—-highlight-color` variable on focused state.
 
 ### Standard accessibility review
 
@@ -124,7 +124,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
@@ -133,7 +133,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
@@ -154,4 +154,4 @@ From the command line at the root of this project you can run:
 npm run start
 ```
 
-Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by `preview.html`
+This will start the web-dev server and will launch a new page linking to the components. Select **hero** to get the page created by `preview.html`
