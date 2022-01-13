@@ -1,0 +1,14 @@
+{
+  "site": {
+    "name": "California Design System",
+    "keywords": "California, government, design system"
+  },
+  "page": {
+    "title": "California Design System",
+    "description": "California Design System",
+    "social_image_path": "/assets/img/thumbnail.png",
+    "social_image_width": 500,
+    "social_image_height": 500,
+    "social_image_alt_text": "California Design System"
+  }
+}

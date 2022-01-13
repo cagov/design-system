@@ -14,13 +14,13 @@
   <!-- OG tags -->
  	<meta name="author" content="State of California" />
 	<meta name="description" content="{{ metadata.page_description | striptags }}" />
-	<meta name="keywords" content="California, government, drought, drought.ca.gov" />
-  <link rel="canonical" href="{{ metadata.canonical_url | changeDomain(domain) }}" />
-  <meta property="og:url" content="{{ metadata.canonical_url | changeDomain(domain) }}" />
+	<meta name="keywords" content="{{ metadata.keywords }}" />
+  <link rel="canonical" href="{{ metadata.canonical_url }}" />
+  <meta property="og:url" content="{{ metadata.canonical_url }}" />
   <meta property="og:description" content="{{ metadata.open_graph_description | striptags }}" />
   <meta property="og:title" content="{{ metadata.open_graph_title }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{{ metadata.page_social_image_url | changeDomain(domain) }}" />
+  <meta property="og:image" content="{{ metadata.page_social_image_url }}" />
   <meta property="og:image:width" content="{{ metadata.page_social_image_width }}" />
   <meta property="og:image:height" content="{{ metadata.page_social_image_height }}" />
   <meta property="og:image:alt" content="{{ metadata.page_social_image_alt }}" />
@@ -28,11 +28,11 @@
   <meta property="og:site_name" content="{{ metadata.site_name }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ metadata.twitter_title }}" />
-  <meta name="twitter:image" content="{{ metadata.page_social_image_url | changeDomain(domain) }}" />
+  <meta name="twitter:image" content="{{ metadata.page_social_image_url }}" />
   <meta name="twitter:image:width" content="{{ metadata.page_social_image_width }}" />
   <meta name="twitter:image:height" content="{{ metadata.page_social_image_height }}" />
-  <link title="fav icon" rel="icon" href="/assets/img/cagov_favicon.ico">
-  <link rel="shortcut icon" href="/assets/img/cagov_favicon.ico">
+  <link title="fav icon" rel="icon" href="/assets/img/favicon.ico">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
   <!-- Google Analytics performance -->
   <link rel="preconnect" href="https://www.google-analytics.com/">
 
