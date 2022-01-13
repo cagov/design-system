@@ -1,10 +1,10 @@
-# Visual Design
+# Visual design style guide
 
-The visual design of the CA.gov Design System is inspired by the Design System principles. Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.
+These recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.
 
 ## Color
 
-We don’t dictate which colors should be used so that we allow every agency to maintain their unique character, but we have the following system to ensure  consistency across websites. 
+We do not dictate which colors should be used so that we allow every agency to maintain their unique character, but we have the following system to ensure  consistency across websites. 
 
 It consists of 3 base colors. Each base color has three variations. These variations are designed to offer flexibility while ensuring a consistent, visually pleasing, and accessible look.
 
@@ -27,9 +27,7 @@ In respect to accessibility, color choice is intended to align with Web Content 
   </table>
 </span>
 
-For CA.gov, that looks like this. This is also the default color palette for any new digital service.
-
-While there is no official color palette for CA.gov, the primary, secondary and highlight color are selected to reflect the latest CA.gov initiatives such as covid19.ca.gov and alpha.ca.gov. 
+This is the default color palette for any new digital service.
 
 <span class="cagov-table">
   <table>
@@ -104,7 +102,7 @@ In addition to the 3 colors above, we standardize colors used for global UI elem
   <p>0 1 2 3 4 5 6 7 8 9</p>
 </div>
 
-We use Public Sans, a strong, neutral typeface for interfaces, text, and headings, which was designed by the USWDS.
+We use Public Sans, a strong, neutral typeface for interfaces, text, and headings, which was designed by the United States Web Design System.
 
 Our base font size is 18px with a line spacing of 32px. To generate the rest of the values, we use the golden ratio (1.6) as a guide.
 
@@ -117,15 +115,15 @@ We use photos and illustrations for communicating information. We adhere to the 
 
 ## Icons
 
-We currently use icons from the State Web Template. You can read more about them here.
+We currently use [icons from the State Web Template](https://template.webstandards.ca.gov/sample/icon-fonts.html). We are working on making them available through the Design System.
 
 ## Accessibility
 
 Design plays a critical role in ensuring that our digital services are accessible. In practice, this means:
 - Ensure sufficient contrast between text and its background.
-- Don’t use color as the only visual means of conveying information.
+- Do not use color as the only visual means of conveying information.
 - Provide visual focus indication for keyboard focus.
-- Don’t make people hover to find things.
+- Do not make people hover to find things.
 - Clear and descriptive labels for forms and navigation
 - Feedback that’s easy to identify and understand 
 - Create responsive design

@@ -2,7 +2,7 @@
 
 Design systems are often created as a single monolithic package. All parts, whether desired or not, come as a whole and the entire system is a dependency of the parent project.
 
-In contrast, California’s Design System is a collection of independent components. With [web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) as the base, they’re less likely to cause dependency issues or CSS conflicts. This means you can choose which ones you need. 
+In contrast, the State of California’s Design System is a collection of independent components. With [web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) as the base, they’re less likely to cause dependency issues or CSS conflicts. This means you can choose which ones you need. 
 
 The independent components are also themeable. We use CSS variables with default values as design tokens. 
 
@@ -18,7 +18,7 @@ Right now, the Design System components are in use on pilot sites like:
 * [drought.ca.gov](https://drought.ca.gov/)
 * [cannabis.ca.gov](https://cannabis.ca.gov/)
 
-There's still a lot of work ahead to develop and refine the components, but we cannot do it in a vacuum. We need feedback from anyone that comes in contact with the components. 
+There’s still a lot of work ahead to develop and refine the components, but we cannot do it in a vacuum. We need feedback from anyone that comes in contact with the components. 
 
 Some things we want to include in our next phase are:
 

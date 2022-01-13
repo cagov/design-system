@@ -1,11 +1,11 @@
-# Get Started
+# Get started
 
 
-What you need to know about California’s Design System depends on your role and discipline. 
+What you need to know about the Design System depends on your role and discipline. 
 
 ## Developers
 
-Learn [what’s different](/technical-approach/) about California’s Design System approach and how to install the components.
+Learn [what’s different](/technical-approach/) about California’s Design System approach and how to install components.
 
 ## UX and visual designers
 
@@ -17,7 +17,7 @@ Get familiar with the [guidelines for content design](/style/content/).
 
 ## Everyone
 
-Everyone can benefit from getting familiar with the [Design System principles](/principles/). 
+Everyone can benefit from the [Design System principles](/principles/). 
 
 ## Need help getting started?
 

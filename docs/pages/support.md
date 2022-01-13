@@ -1,6 +1,6 @@
 # Support
 
-Get help from the design system team or post questions and share technical information with fellow developers.
+Get help from the Design System team, post questions, and share technical information with fellow developers.
 
 ## Get in touch
 
