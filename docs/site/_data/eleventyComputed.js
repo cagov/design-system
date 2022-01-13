@@ -36,7 +36,7 @@ module.exports = {
       }
       return defaults.site.keywords;
     },
-    page_social_image_url: (article) => {
+    social_image_url: (article) => {
       const path =
         article?.social_image_path || defaults.page.social_image_path;
       return buildURL(path, root);

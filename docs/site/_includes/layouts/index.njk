@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <title>{{ title }}</title> 
-  <link rel="preload" href="/fonts/publicsans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin ></link>
-  <link rel="preload" href="/fonts/publicsans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin ></link>
+  <link rel="preload" href="/fonts/publicsans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/publicsans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin />
   <meta charset="utf-8">
 	<!-- http://t.co/dKP3o1e -->
-	<meta name="HandheldFriendly" content="True">
+	<meta name="HandheldFriendly" content="True" />
 	<!-- for Blackberry, AvantGo -->
-	<meta name="MobileOptimized" content="320">
+	<meta name="MobileOptimized" content="320" />
 	<!-- for Windows mobile -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   <!-- OG tags -->
  	<meta name="author" content="State of California" />
 	<meta name="description" content="{{ metadata.page_description | striptags }}" />
@@ -20,21 +20,22 @@
   <meta property="og:description" content="{{ metadata.open_graph_description | striptags }}" />
   <meta property="og:title" content="{{ metadata.open_graph_title }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{{ metadata.page_social_image_url }}" />
-  <meta property="og:image:width" content="{{ metadata.page_social_image_width }}" />
-  <meta property="og:image:height" content="{{ metadata.page_social_image_height }}" />
-  <meta property="og:image:alt" content="{{ metadata.page_social_image_alt }}" />
+  <meta property="og:image" content="{{ metadata.social_image_url }}" />
+  <meta property="og:image:width" content="{{ metadata.social_image_width }}" />
+  <meta property="og:image:height" content="{{ metadata.social_image_height }}" />
+  <meta property="og:image:alt" content="{{ metadata.social_image_alt_text }}" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="{{ metadata.site_name }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ metadata.twitter_title }}" />
-  <meta name="twitter:image" content="{{ metadata.page_social_image_url }}" />
-  <meta name="twitter:image:width" content="{{ metadata.page_social_image_width }}" />
-  <meta name="twitter:image:height" content="{{ metadata.page_social_image_height }}" />
+  <meta name="twitter:image" content="{{ metadata.social_image_url }}" />
+  <meta name="twitter:image:width" content="{{ metadata.social_image_width }}" />
+  <meta name="twitter:image:height" content="{{ metadata.social_image_height }}" />
+  <meta property="twitter:image:alt" content="{{ metadata.social_image_alt_text }}" />
   <link title="fav icon" rel="icon" href="/assets/img/favicon.ico">
-  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" />
   <!-- Google Analytics performance -->
-  <link rel="preconnect" href="https://www.google-analytics.com/">
+  <link rel="preconnect" href="https://www.google-analytics.com/" />
 
   {% block meta %}
   {% endblock %}

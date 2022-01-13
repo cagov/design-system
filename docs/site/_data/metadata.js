@@ -4,7 +4,7 @@ const defaults = require('./defaults.json');
 // See ./eleventyComputed.js.
 module.exports = {
   site_name: defaults.site.name,
-  page_social_image_width: 500,
-  page_social_image_height: 500,
-  page_social_image_alt: 'California Design System',
+  social_image_width: defaults.page.social_image_width,
+  social_image_height: defaults.page.social_image_height,
+  social_image_alt_text: defaults.page.social_image_alt_text,
 };

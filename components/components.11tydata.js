@@ -6,9 +6,26 @@ const defaults = require('../docs/site/_data/defaults.json');
 const getComponentSlug = (article) =>
   article.page.filePathStem.match(/\/components\/(.+?)\/.+/)[1];
 
+const normalizePagename = (basename) => {
+  if (basename.toLowerCase() === 'readme') {
+    return 'Readme';
+  }
+  if (basename.toLowerCase() === 'changelog') {
+    return 'Changelog';
+  }
+  if (basename.toLowerCase() === 'use-cases') {
+    return 'Use cases';
+  }
+  return basename;
+};
+
 module.exports = {
   layout: 'component-page',
   tags: ['component'],
+  metadata: {
+    social_image_width: 200,
+    social_image_height: 150,
+  },
   eleventyComputed: {
     // componentSlug gets the folder name for the page's component.
     componentSlug: (article) => getComponentSlug(article),
@@ -39,16 +56,7 @@ module.exports = {
         pagename += `${component.name}: `;
       }
 
-      if (filename.toLowerCase() === 'readme') {
-        pagename += 'Readme';
-      }
-      if (filename.toLowerCase() === 'changelog') {
-        pagename += 'Changelog';
-      }
-      if (filename.toLowerCase() === 'use-cases') {
-        pagename += 'Use cases';
-      }
-
+      pagename += normalizePagename(filename);
       return pagename;
     },
     description: (article) => {
@@ -60,6 +68,28 @@ module.exports = {
       }
 
       return defaults.page.description;
+    },
+    metadata: {
+      social_image_path: (article) => {
+        const componentSlug = getComponentSlug(article);
+        const component = components[componentSlug];
+
+        if (component) {
+          return component.icon;
+        }
+
+        return defaults.page.social_image_path;
+      },
+      social_image_alt_text: (article) => {
+        const componentSlug = getComponentSlug(article);
+        const component = components[componentSlug];
+
+        if (component) {
+          return `Illustration of the ${component.name} component`;
+        }
+
+        return defaults.page.social_image_alt_text;
+      },
     },
   },
 };
