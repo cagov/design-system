@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.css",
   "scripts": {
+    "build": "sass src/index.scss index.css",
+    "prepublishOnly": "npm run build && npm test",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
-    "build": "sass src/index.scss index.css"
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
   },
   "keywords": [],
   "author": "",

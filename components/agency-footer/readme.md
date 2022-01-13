@@ -13,8 +13,6 @@ The site footer is a set of links that go on all the pages of the website. It is
   - LinkedIn
   - Email
 
-The site footer allows you to put links and information on every page. This is usually general info about the department or subject.
-
 ## When and how to use it
 
 The site footer goes on all pages of your website. This is a required component when using the Design System.
@@ -257,9 +255,9 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ### Review items specific to the site footer accessibility
 
-- Make sure that site footer's section tag has 'aria-label="agency footer"' attribute is there.
-- If you use footer logo image in your site footer make sure image has alt text
-- if you are using footer social links make sure that inks are using sr-only link description. For instance: `<span class="sr-only">Facebook</span>`
+- Make sure that site footer's section tag has `aria-label="agency footer"` attribute is there.
+- If you use footer logo image in your site footer make sure image has alt text.
+- If you are using footer social links make sure that inks are using sr-only link description. For instance: `<span class="sr-only">Facebook</span>`
 - Make sure that social svg icons have `aria-hidden="true"` attributes added to them.
 
 ### Standard accessibility review
@@ -275,7 +273,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))

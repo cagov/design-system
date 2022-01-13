@@ -321,8 +321,8 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ### Review items specific to the site header accessibility
 
-- If you are using search component make sure it has span label saying that is “google custom search”, make sure that span has `sr-only` class and `id` attribute that is referenced in search input box `aria-labelledby` attribute. Also, make sure that google search submit button has span with class `sr-only` and the word “submit” in it.
-- if you are using search and menu components make sure that mobile buttons that activate those components have no focus in the desktop view. Also, make sure that they have correct `area-expanded` attributes whenever the sections that they are controlling are either expanded or collapsed.
+- If you are using search component make sure it has span label saying that is  “google custom search”, make sure that span  has `sr-only` class and `id` attribute  that is referenced in search input box `aria-labelledby` attribute. Also, make sure that google search submit button has span with class `sr-only` and the word “submit” in it.
+- If you are using search and menu components make sure that mobile buttons that activate those components have no focus in the desktop view. Also, make sure that they have correct `area-expanded` attributes  whenever the sections that they are controlling are either expanded or collapsed.
 - If you are using site logo image make sure it has proper alt text.
 - Make sure that all links and buttons have solid, 2px outline that is using `—-highlight-color` variable on focused state.
 
@@ -348,7 +348,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 This component requires the following content assets and configuration variables.
 
