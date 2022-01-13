@@ -3,11 +3,17 @@
     {%- for component in collection -%}
       <div class="component-card">
         <div class="component-card-img">
-          <img src="/img/ds-{{ component.slug }}.png">
+          <img src="{{ component.icon }}"/>
         </div>
-        <a class="component-card-link" href="/components/{{ component.slug }}/readme">{{ component.name }}</a>
-        <p class="component-card-status">{{ component.status }}</p>
-        <p class="component-card-blurb">{{ component.blurb }}</p>
+        <a class="component-card-link" href="/components/{{ component.slug }}/readme">
+          {{ component.name }}
+        </a>
+        <p class="component-card-status">
+          {{ component.status }}
+        </p>
+        <p class="component-card-blurb">
+          {{ component.blurb }}
+        </p>
       </div>
     {%- endfor -%}
   </section>
