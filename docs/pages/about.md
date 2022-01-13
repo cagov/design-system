@@ -1,5 +1,5 @@
-# About the design system
-It can be challenging to connect government services to Californians who need them most. We have to consider a wide range of experiences, abilities, education, and technical literacy. With the State of California’s Design System, we help make digital information and services easier to use. Our design system increases equity, unity, compassion, and trust.
+# About the Design System
+It can be challenging to connect government services to Californians who need them most. We have to consider a wide range of experiences, abilities, education, and technical literacy. With the State of California’s Design System, we help make digital information and services easier to use. The Design System increases equity, unity, compassion, and trust.
 
 ## Our vision 
 Create a seamless digital experience for Californians to access the services they need. 
@@ -31,9 +31,10 @@ Over the years, and with each state template release, we’ve improved the acces
 Alpha was the first effort to reimagine how government understands, builds and provides digital services. The primary goal was to create a better digital experience for all Californians. The CA.gov Alpha team adopted agile principles allowing them to quickly iterate on feedback while [blogging their story](https://digital.ca.gov/blog/) out in the open. 
 
 ### COVID-19
-In response to the pandemic, the CA.gov Alpha team developed the COVID-19 emergency response website. The Alpha team collaborated with the HHS Office of Innovation and the California Department of Technology.
+In response to the pandemic, the team developed the COVID-19 emergency response website. The team collaborated with the HHS Office of Innovation and the California Department of Technology.
 
-Developed as California’s source of truth in the battle against the Coronavirus, the team created a scalable website. It was accessible, stable, and easy to update in a fast changing public health crisis. And it was built in four days!
+Developed as California’s source of truth in the battle against the coronavirus, the team created a scalable website. It was accessible, stable, and easy to update in a fast changing public health crisis. And it was built in four days!
+
 The team also broadened the definition of accessibility for state government. Reimagining performance as accessibility,  Alpha considers performance as a core component of accessibility. 
 
 ## The future
