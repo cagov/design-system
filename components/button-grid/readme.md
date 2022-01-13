@@ -1,12 +1,12 @@
 # Link grid
 
-The link grid organizes links that function as calls to action (CTAs) or highlight topics. This helps people find priority user needs and topics. The grid can also be used by content creators to lead users to specific content.
+The link grid organizes links that function as calls to action (CTAs) or highlight topics. It guides people to important services and topics. The grid can also be used by content creators to lead users to specific content.
 
 When viewed on a computer, the grid is a maximum of 3 links wide. On mobile devices, this grid collapses into a single column.
 
 ## When and how to use it
 
-Use the link grid to highlight top user needs. Organize the links in a way that makes sense for people’s primary needs.
+Use the link grid to highlight the top things people need. Organize the links in a way that makes sense for people’s primary needs.
 
 The link grid is typically used on the homepage of a site so visitors can find and get to useful content quickly.
 
@@ -101,7 +101,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-color`
 - `—highlight-color`
@@ -136,7 +136,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
@@ -145,7 +145,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
