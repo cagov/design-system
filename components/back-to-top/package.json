@@ -10,7 +10,7 @@
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",    
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],
@@ -24,5 +24,8 @@
     "@open-wc/testing": "^3.0.1",
     "@web/test-runner-puppeteer": "^0.10.2",
     "sass": "^1.38.0"
+  },
+  "dependencies": {
+    "rollup-plugin-import-css": "^3.0.2"
   }
 }

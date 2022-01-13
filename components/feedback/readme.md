@@ -30,9 +30,7 @@ Do not use the page feedback component on pages that are part of a transactional
 <html-preview>
 
 ```html preview
-<cagov-feedback
-  data-endpoint-url="https://fa-go-feedback-001.azurewebsites.net/sendfeedback"
-></cagov-feedback>
+<cagov-feedback data-endpoint-url="https://fa-go-feedback-001.azurewebsites.net/sendfeedback"></cagov-feedback>
 ```
 
 </html-preview>
