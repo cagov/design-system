@@ -11,7 +11,7 @@ The PDF icon is the letters _PDF_ surrounded by a box outline.
 
 These icons tell people they are leaving the current website in some way.
 
-In the case of PDF links, this can be important for people on mobile devices. They may not want to open a PDF for various reasons (use up their data, do not want to download a file, etc). It’s also important for those who use screen readers, as it will announce, “This is a PDF file.”
+In the case of PDF links, this can be important for people on mobile devices. They may not want to open a PDF for various reasons (use up their data, do not want to download a file, etc.). It’s also important for those who use screen readers, as it will announce, “This is a PDF file.”
 
 If a link is both external and a PDF, only the PDF icon will appear. It’s more important to tell people they’re going to a PDF than it is to tell them that it’s not hosted on the same site.
 
@@ -61,11 +61,11 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ### Other dependencies
 
-This component is uses icons from the [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Please include the font library in your project to ensure the icons appear.
+This component uses icons from the [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Include the font library in your project to ensure the icons appear.
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-color`
 - `--primary-dark-color`
@@ -110,7 +110,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
