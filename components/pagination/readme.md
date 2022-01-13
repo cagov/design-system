@@ -29,10 +29,7 @@ Do not use pagination:
 <html-preview>
 
 ```html preview
-<cagov-pagination
-  data-current-page="5"
-  data-total-pages="99"
-></cagov-pagination>
+<cagov-pagination data-current-page="5" data-total-pages="99"></cagov-pagination>
 ```
 
 </html-preview>
