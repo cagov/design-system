@@ -1,4 +1,3 @@
-
 # Page alert
 
 The page alert gives people important and sometimes time-sensitive information that we need them to read before anything else. It goes beneath the site navigation on any page.
@@ -34,20 +33,35 @@ Do not put more than one page alert on a page.
 
 Do not use page alerts to simply highlight important content. They are for information that is new, critical, and temporary.
 
+## Demo and sample markup
+
+<html-preview>
+
+```html preview
+<div class="main">
+  <cagov-page-alert
+    data-icon="ca-gov-icon-bell"
+    data-message='Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href="/about-us/grant-funding/local-jurisdiction-assistance-grant-program/">Learn more</a>.'
+  ></cagov-page-alert>
+</div>
+```
+
+</html-preview>
+
 ## Specs
 
-| Property | Value |
-| --- | --- |
-| Machine name | ds-page-alert |
-| JavaScript | yes |
-| SCSS | ./src/index.scss |
+| Property     | Value            |
+| ------------ | ---------------- |
+| Machine name | ds-page-alert    |
+| JavaScript   | yes              |
+| SCSS         | ./src/index.scss |
 
 ## Project installation
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
 1. `npm i @cagov/[machine-name]`
-2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s ***JavaScript****  in your page or compiler.
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **\*JavaScript\*\*** in your page or compiler.
 3. Include **SCSS** in your Sass compiler.
 4. Add the **Sample markup** to your HTML.
 5. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
@@ -62,13 +76,13 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ```css
 :root {
-  --primary-color: #064E66;
+  --primary-color: #064e66;
 }
 ```
 
 ### Other dependencies
 
-This component is uses icons from the  [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html).  Please include the font library in your project to ensure the icons appear.
+This component is uses icons from the [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Please include the font library in your project to ensure the icons appear.
 
 ## Accessibility
 
@@ -99,23 +113,13 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 ## Progressive enhancement
 
-This component uses a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support custom elements. If the JavaScript for this component is not delivered or supported, the component will not display. This is the desired behavior because this component is not critical for site interaction. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
-
-## Sample markup
-
-```html
-<link rel="stylesheet" href="https://california.azureedge.net/cdt/CAWeb/combined-css/1.0.1/dist/cagov.css">
-
-<main>
-<cagov-page-alert data-icon="ca-gov-icon-bell" data-message="Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href=&quot;/about-us/grant-funding/local-jurisdiction-assistance-grant-program/&quot;>Learn more</a>."></cagov-page-alert>
-</main>
-```
+This component uses a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support custom elements. If the JavaScript for this component is not delivered or supported, the component will not display. This is the desired behavior because this component is not critical for site interaction. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
 ## Content Model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
-| Name | Attribute name | Data type | Field type |
-| --- | --- | --- | --- |
-| Icon | data-icon | string | Plain text, Any CaGov font, by class name. |
-| Message | data-message | string | Rich text |
+| Name    | Attribute name | Data type | Field type                                 |
+| ------- | -------------- | --------- | ------------------------------------------ |
+| Icon    | data-icon      | string    | Plain text, Any CaGov font, by class name. |
+| Message | data-message   | string    | Rich text                                  |

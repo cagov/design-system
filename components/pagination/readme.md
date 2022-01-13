@@ -1,4 +1,3 @@
-
 # Pagination
 
 Pagination provides an easy way to navigate large ordered lists without lots of scrolling. It splits web content into numbered pages.
@@ -25,33 +24,44 @@ Do not use pagination:
 - For content that is not in an ordered list (for example, by date or relevancy)
 - For a list of steps
 
+## Demo and sample markup
+
+<html-preview>
+
+```html preview
+<cagov-pagination
+  data-current-page="5"
+  data-total-pages="99"
+></cagov-pagination>
+```
+
+</html-preview>
+
 ## Specs
 
-| Property | Value |
-| --- | --- |
-| Machine name | ds-pagination |
-| JavaScript | yes |
-| SCSS | ./src/scss/index.scss |
+| Property     | Value                 |
+| ------------ | --------------------- |
+| Machine name | ds-pagination         |
+| JavaScript   | yes                   |
+| SCSS         | ./src/scss/index.scss |
 
 ## Project installation
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
 1. `npm i @cagov/[machine-name]`
-2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s ***JavaScript****  in your page or compiler.
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **\*JavaScript\*\*** in your page or compiler.
 3. Include **SCSS** in your Sass compiler.
 4. Add the **Sample markup** to your HTML.
 5. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
-1. If directly importing, be sure to reference the js file at  `./dist/index.js`
-2. Connect pagination to content block
+6. If directly importing, be sure to reference the js file at `./dist/index.js`
+7. Connect pagination to content block
 
 ### **Event registration**
 
 The component tracks the current page and triggers custom events on page clicks. You can subscribe to events on this element to watch for clicks. This element does not modify outside content, responding to events and changing body content as desired is left up to your application logic. The following event format is sent on click:
 
-`new CustomEvent("paginationClick", {
-  detail: currentPage,
-})`
+`new CustomEvent("paginationClick", { detail: currentPage, })`
 
 ## CSS variables
 
@@ -63,7 +73,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ```css
 :root {
-  --primary-color: #064E66;
+  --primary-color: #064e66;
 }
 ```
 
@@ -95,10 +105,13 @@ Components in Beta status must pass the following accessibility reviews every ti
 ## Sample markup
 
 ```html
-<cagov-pagination data-current-page="5" data-total-pages="99"></cagov-pagination>
+<cagov-pagination
+  data-current-page="5"
+  data-total-pages="99"
+></cagov-pagination>
 ```
 
-## **Data attributes**
+## Data attributes
 
 This component accepts attributes for the number of pages and current page. These are watched for changes and the component re-renders if these attributes change
 
@@ -113,4 +126,4 @@ It also accepts optional strings for all the text so it can be used in multiple 
 
 ## Progressive enhancement
 
-This component uses a custom element defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements). If the JavaScript for this component is not delivered or supported, the component will not display. This component does not currently perform the desired progressive enhancement because it is critical to site interaction. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+This component uses a custom element defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements). If the JavaScript for this component is not delivered or supported, the component will not display. This component does not currently perform the desired progressive enhancement because it is critical to site interaction. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.

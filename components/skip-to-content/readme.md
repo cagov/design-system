@@ -12,14 +12,225 @@ Always use skip to content.
 
 Do not modify skip to content when you install it.
 
+## Demo and sample markup
+
+<html-preview>
+
+```html preview
+<!--skip-to-content-->
+<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+<!--end skip-to-content-->
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<p>
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  amet ligula.
+</p>
+
+<p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+<div id="main-content">
+  MAIN
+  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
+    sit amet ligula.
+  </p>
+
+  <p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
+    sit amet ligula.
+  </p>
+
+  <p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
+    sit amet ligula.
+  </p>
+
+  <p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
+    sit amet ligula.
+  </p>
+
+  <p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
+    sit amet ligula.
+  </p>
+
+  <p>Curabitur aliquet quam id dui posuere blandit.</p>
+
+  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
+</div>
+```
+
+</html-preview>
+
 ## Specs
 
-| Property | Value |
-| --- | --- |
+| Property     | Value              |
+| ------------ | ------------------ |
 | Machine name | ds-skip-to-content |
-| JavaScript | no |
-| SCSS | ./src/index.scss |
-|  |  |
+| JavaScript   | no                 |
+| SCSS         | ./src/index.scss   |
+|              |                    |
 
 ## Project installation
 
@@ -27,7 +238,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **Sample markup** from the component just after the opening body tag of your HTML.
-3. Add  `id=”main-content"`to the HTML tag at the top of the main content of the page. 
+3. Add `id=”main-content"`to the HTML tag at the top of the main content of the page.
 
 ## Accessibility
 
@@ -56,16 +267,12 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 ## Progressive enhancement
 
-This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
 ## Content Model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
-| Name | Attribute name | Data type | Field type | Selector | Default value |
-| --- | --- | --- | --- | --- | --- |
-| Label | skip-to-content | string | Plain text | div#main-content a  | Skip to content |
-
-
-
-
+| Name  | Attribute name  | Data type | Field type | Selector           | Default value   |
+| ----- | --------------- | --------- | ---------- | ------------------ | --------------- |
+| Label | skip-to-content | string    | Plain text | div#main-content a | Skip to content |
