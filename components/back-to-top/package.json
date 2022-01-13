@@ -1,11 +1,12 @@
 {
   "name": "@cagov/ds-back-to-top",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "",
   "main": "index.css",
   "type": "module",
   "scripts": {
-    "build": "sass src/index.scss index.css",
+    "build:js": "rollup --config rollup.config.js",
+    "build": "npm run build:js && sass src/index.scss index.css",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",

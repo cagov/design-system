@@ -15,8 +15,6 @@ describe('CAGOV Accordion', function unitTest() {
     const startHTML = await response.text();
     const el = await fixture(`<div>${startHTML}</div>`); // use a prent div because referring to el.querySelector below
 
-    console.log(el)
-
     expect(
       el.querySelector('.accordion-card-header').getAttribute('aria-expanded'),
     ).to.equal('false');
