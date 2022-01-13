@@ -4,7 +4,7 @@ cagov-highlight-section article .container {
   margin-left: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   padding-bottom: 2rem;
 }
 cagov-highlight-section article .btn-primary-outline {
@@ -49,11 +49,14 @@ cagov-highlight-section article .highlight-body .highlight-image img {
 cagov-highlight-section article .highlight-body .highlight-text {
   background-color: #ffffff;
   padding: 1.5rem;
-  padding-bottom: 2rem;
+  padding-top: 0.75rem;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+cagov-highlight-section article .highlight-body .highlight-text h1, cagov-highlight-section article .highlight-body .highlight-text h2, cagov-highlight-section article .highlight-body .highlight-text h3 {
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {

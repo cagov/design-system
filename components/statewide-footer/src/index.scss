@@ -67,5 +67,10 @@ footer {
 	footer .container {
 		flex-direction: row;
 		align-items: center;
+
+		&.flex-col-end {
+			flex-direction: column;
+			align-items: end;
+		}
 	}
 }

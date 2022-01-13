@@ -5,3 +5,4 @@ import '../../../components/plus/index.js';
 import '../../../components/minus/index.js';
 import '../../../components/accordion/dist/index.js';
 import './component-sidebar.js';
+import '../../../components/feedback/dist/index.js';

@@ -2,6 +2,9 @@
 
 `ds-agency-footer`
 
+# 1.0.3
+* Added visible gray-300 top and bottom borders 
+
 # 1.0.2
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.
