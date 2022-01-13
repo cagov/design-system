@@ -1,6 +1,9 @@
 # CHANGELOG for ds-statewide-footer
 `ds-statewide-footer`
 
+# 1.0.6 
+* Aligned copyright line to container end with with new class, also added to sample markup
+
 # 1.0.5
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.
