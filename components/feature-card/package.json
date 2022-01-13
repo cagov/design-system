@@ -9,9 +9,10 @@
     "url": "https://github.com/cagov/design-system/tree/main/components/feature-card"
   },
   "scripts": {
+    "build": "echo \"No build specified.\"",
+    "prepublishOnly": "npm run build && npm test",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
-    "build": "echo \"No build specified.\""
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
   },
   "keywords": [],
   "author": "",
