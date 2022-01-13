@@ -11,7 +11,7 @@ It always includes:
   - Accessibility (policies)
 - The copyright notice. It appears at the very bottom of the statewide footer.
 
-You can opt to include additional links, like:
+You can include additional links, like:
 
 - Contact us
 - Statewide accessibility information
@@ -165,7 +165,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
@@ -174,20 +174,20 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 The content for this component is fixed and can be used as-is, as described in the installation instructions.
 
-For the URL links, please refer to the latest version of the component for the most up-to-date URLs.
+For the URL links, refer to the latest version of the component for the most up-to-date URLs.
 
 These links are managed by [ca.gov](http://ca.gov). Additional information about these requirements can be found in the CA State Webstandards.
 
 | Page                        | URL                                             | Required  | Order |
 | --------------------------- | ----------------------------------------------- | --------- | ----- |
 | CA.gov home                 | https://www.ca.gov                              | Yes       | 1     |
-| Conditions of Use           | https://www.ca.gov/use/                         | Yes       | 2     |
-| Privacy Policy              | https://www.ca.gov/privacy-policy/              | Yes       | 3     |
+| Conditions of use           | https://www.ca.gov/use/                         | Yes       | 2     |
+| Privacy policy              | https://www.ca.gov/privacy-policy/              | Yes       | 3     |
 | Accessibility               | https://www.ca.gov/accessibility/               | Yes       | 4     |
-| Contact Us                  | URL to Contact page for your organization       | As needed |       |
+| Contact us                  | URL to Contact page for your organization       | As needed |       |
 | Accessibility certification | URL to the required certified, hosted PDF file. | As needed |       |
 | Legal content               |                                                 | As needed |       |
