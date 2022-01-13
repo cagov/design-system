@@ -51,7 +51,7 @@ A need has been identified for a new component. The need comes from either:
 Components in research are going through initial testing to determine:
 
 * If there is a broad need throughout the state’s digital ecosystem for the component
-* Whether or not the component will be a permanent part of the Design System
+* If the component will be a permanent part of the Design System
 
 The component meets minimal or no accessibility requirements.
 
@@ -61,8 +61,8 @@ A _In research_ component has matured and is ready for wider adoption and use ca
 
 Alpha components must pass the following accessibility reviews every time a new version is published:
 
-* Tested with the axe accessibility tool and passes all automated AA level checks 
-* Reviewed with the VoiceOver screen reader on desktop
+* Tested with the axe accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) AA level checks 
+* Reviewed with the [VoiceOver screen reader](https://www.apple.com/voiceover/info/guide/_1121.html) on desktop
 * Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only 
 * Reviewed component layout on a variety of screen sizes
 
@@ -74,7 +74,7 @@ Beta components must pass the following accessibility reviews every time a new v
 
 * Tested with the axe accessibility tool and passes all automated AA level checks 
 * Reviewed with the VoiceOver screen reader on desktop
-* Reviewed with the TalkBack screen reader on mobile. 
+* Reviewed with the [TalkBack screen reader](https://support.google.com/accessibility/android/answer/6283677?hl=en) on mobile 
 * Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only 
 
 ### Production
