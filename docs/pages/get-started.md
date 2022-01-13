@@ -1,8 +1,3 @@
----
-title: Get Started
-description: What you need to know about California’s Design System depends on your role and discipline. 
----
-
 # Get Started
 
 
