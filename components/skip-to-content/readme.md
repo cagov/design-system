@@ -1,13 +1,23 @@
-# Navigation components >> Skip to content >> Readme || 10
+# Skip to content
 
-This is a CSS only module that bypasses header and main navigation links an goes directly to the main content of the Web page. It is a first interactive item in the Web page, which links to the beginning of the main content. Activating the link sets focus beyond the other content to the main content.
+The skip to content component is an accessibility feature required on every page. It allows people to jump to the main content below the statewide header and the navigation.
+
+Skip to content is used by people who tab through navigation or use screen readers. It does not appear for other users.
+
+## When and how to use it
+
+Always use skip to content.
+
+### How not to use it
+
+Do not modify skip to content when you install it.
 
 ## Specs
 
 | Property | Value |
 | --- | --- |
 | Machine name | ds-skip-to-content |
-| JavaScript | false |
+| JavaScript | no |
 | SCSS | ./src/index.scss |
 |  |  |
 
@@ -19,11 +29,42 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 2. Add the **Sample markup** from the component just after the opening body tag of your HTML.
 3. Add  `id=”main-content"`to the HTML tag at the top of the main content of the page. 
 
-## Sample markup
+## Accessibility
 
-```html preview
-<div id="skip-to-content"><a href="#body-content">Skip to content</a></div>
-```
+### Review items specific to the skip to content accessibility
+
+- Make sure that skip to the content link is the first item to appears on focus when you tab through a webpage and has solid, 2px outline that is using `—-highlight-color` variable.
+- Make sure that skip to content id reference `href=”#main-content”` is matching actual `id` attribute in main content div.
+
+### Standard accessibility review
+
+Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+
+- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
+- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
+- Reviewed component layout on a variety of screen sizes
+
+Components in Beta status must pass the following accessibility reviews every time a new version is published:
+
+- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Reviewed with the VoiceOver screen reader on desktop
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
+- Reviewed component layout on a variety of screen sizes
+- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
+
+## Progressive enhancement
+
+This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+
+## Content Model
+
+This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
+
+| Name | Attribute name | Data type | Field type | Selector | Default value |
+| --- | --- | --- | --- | --- | --- |
+| Label | skip-to-content | string | Plain text | div#main-content a  | Skip to content |
 
 
 

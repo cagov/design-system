@@ -1,16 +1,31 @@
-# Structural components >> Statewide header >> Readme || 10
 
-This CSS only module contains the styles required to create the list of steps in the following graphic:
+# Statewide header
 
-<img src="https://raw.githubusercontent.com/cagov/design-system/main/components/statewide-header/img/statewide-header-screenshot.png" />
+The statewide header puts the Design system standard header at the very top of your site. . Having a common header tells people that the website is an official product of the State of California, which increases user trust.
 
+It includes:
+
+- The ca.gov logo, which links to https://www.ca.gov
+- The text “Official website of the State of California” (on desktop) or “State of California” (on mobile)
+
+## When and how to use it
+
+Always use the statewide header. Place it at the top of the website, above the department branding (site header) and all other content.
+
+If you want to include a translation widget in the statewide header, [contact us through the Support page](/support) to find out how you can do so.
+
+### How not to use it
+
+Do not add other elements to or change the statewide header. Use it only as designed.
+
+Do not combine the statewide header with depatment name or logo, navigation, or information. This is contained in the department branding (site header).
 
 ## Specs
 
 | Property | Value |
 | --- | --- |
 | Machine name | ds-statewide-header |
-| JavaScript | false |
+| JavaScript | no |
 | SCSS | ./src/index.scss |
 
 ## Project installation
@@ -19,7 +34,6 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **Sample markup** from the component to your HTML.
-1. Adjust links as needed.
 
 ## Sample markup
 
@@ -64,10 +78,54 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ## CSS variables
 
-There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
 
-- var(--gray-100, #f9f9fa);
-- var(--gray-200, #ededef);
-- var(--secondary-color, #cf5d28);
-- var(--primary-dark-color, #4a1106);
-- var(--primary-color, #064e66);
+- `--primary-color`
+- `—-primary-dark-color`
+- `--secondary-color`
+- `--gray-200`
+- `--gray-100`
+
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+
+```css
+:root {
+  --primary-color: #064E66;
+}
+```
+
+## Accessibility
+
+### Review items specific to the statewide header accessibility
+
+- Make sure that statewide header’s links have solid, 2px outline that is using `—-highlight-color` variable on focused state.
+- Make sure that cagov-logo link has `title` or `aria-label` attribute in it, so screen readers users would understand what is that link about.
+- Make sure that svg icon inside of the cagov-logo has `aria-hidden=”true”` attribute, so it is hidden from assistive technologies.
+
+### Standard accessibility review
+
+Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+
+- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
+- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
+- Reviewed component layout on a variety of screen sizes
+
+Components in Beta status must pass the following accessibility reviews every time a new version is published:
+
+- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Reviewed with the VoiceOver screen reader on desktop
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
+- Reviewed component layout on a variety of screen sizes
+- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
+
+## Progressive enhancement
+
+This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+
+## Content Model
+
+Use this component as-is. It is fixed and includes all necessary content. 
+
+The official tag is a string that may require that you verify that it translates successfully.
