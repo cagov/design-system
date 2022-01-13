@@ -11,7 +11,10 @@ class CAGovPageAlert extends window.HTMLElement {
     document
       .querySelector('cagov-page-alert .close-button')
       .addEventListener('click', () => {
+        document.querySelector('.cagov-page-alert').setAttribute("aria-hidden", "true");
+        document.querySelector('cagov-page-alert .close-button').setAttribute("tabindex", "-1");
         document.querySelector('cagov-page-alert').style.display = 'none';
+
       });
   }
 
