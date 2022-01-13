@@ -2,6 +2,9 @@
 
 `ds-card-grid`
 
+# 2.0.2
+* Added `aria-hidden="true"` attribute to link arrow svg icons.
+
 # 2.0.1
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.

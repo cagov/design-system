@@ -965,24 +965,101 @@ window.googleTranslateElementInit = () => {
  * @cssprop --secondary-color - #fec02f
  * @cssprop --w-lg - '1176px'
  */
+
+// Function determining if it's mobile view (max 767px)
+function mobileView() {
+  const mobileElement = document.querySelector('.branding .grid-mobile-icons');
+  if (mobileElement) {
+    return getComputedStyle(mobileElement).display !== 'none';
+  }
+  return false;
+}
 class CAGOVOverlayNav extends window.HTMLElement {
   connectedCallback() {
     document
       .querySelector('.cagov-nav.open-menu')
       .addEventListener('click', this.toggleMainMenu.bind(this));
+
+    // Mobile search events
     const mobileSearchBtn = document.querySelector(
       '.cagov-nav.mobile-search .search-btn',
     );
     if (mobileSearchBtn) {
-      mobileSearchBtn.addEventListener('click', () => {
-        document
-          .querySelector('.search-container--small')
-          .classList.toggle('hidden-search');
-        document
-          .querySelector('.search-container--small .site-search input')
-          .focus();
-      });
+      mobileSearchBtn.setAttribute('aria-expanded', 'false');
+      document
+        .querySelector('.search-container--small .site-search input')
+        .setAttribute('tabindex', '-1');
+      document
+        .querySelector(
+          '.search-container--small .site-search button.search-submit',
+        )
+        .setAttribute('tabindex', '-1');
+      document
+        .querySelector('.search-container--small')
+        .setAttribute('aria-hidden', 'true');
+      if (mobileView()) {
+        mobileSearchBtn.addEventListener('click', () => {
+          document
+            .querySelector('.search-container--small')
+            .classList.toggle('hidden-search');
+          const searchactive = document
+            .querySelector('.search-container--small')
+            .classList.contains('hidden-search');
+          if (searchactive) {
+            mobileSearchBtn.setAttribute('aria-expanded', 'false');
+            document
+              .querySelector('.search-container--small .site-search input')
+              .setAttribute('tabindex', '-1');
+            document
+              .querySelector(
+                '.search-container--small .site-search button.search-submit',
+              )
+              .setAttribute('tabindex', '-1');
+            document
+              .querySelector('.search-container--small')
+              .setAttribute('aria-hidden', 'true');
+          } else {
+            mobileSearchBtn.setAttribute('aria-expanded', 'true');
+            document
+              .querySelector('.search-container--small .site-search input')
+              .focus();
+            document
+              .querySelector('.search-container--small .site-search input')
+              .removeAttribute('tabindex');
+            document
+              .querySelector(
+                '.search-container--small .site-search button.search-submit',
+              )
+              .removeAttribute('tabindex');
+            document
+              .querySelector('.search-container--small')
+              .setAttribute('aria-hidden', 'false');
+          }
+        });
+      }
     }
+
+    // reset mobile search on resize
+    window.addEventListener('resize', () => {
+      document
+        .querySelector('.search-container--small')
+        .classList.add('hidden-search');
+      document
+        .querySelector('.cagov-nav.mobile-search .search-btn')
+        .setAttribute('aria-expanded', 'false');
+      document
+        .querySelector('.search-container--small .site-search input')
+        .setAttribute('tabindex', '-1');
+      document
+        .querySelector(
+          '.search-container--small .site-search button.search-submit',
+        )
+        .setAttribute('tabindex', '-1');
+      document
+        .querySelector('.search-container--small')
+        .setAttribute('aria-hidden', 'true');
+    });
+
     this.expansionListeners();
     document.addEventListener('keydown', this.escapeMainMenu.bind(this));
     document.body.addEventListener('click', this.bodyClick.bind(this));
@@ -1125,6 +1202,12 @@ class CAGovPageAlert extends window.HTMLElement {
     document
       .querySelector('cagov-page-alert .close-button')
       .addEventListener('click', () => {
+        document
+          .querySelector('.cagov-page-alert')
+          .setAttribute('aria-hidden', 'true');
+        document
+          .querySelector('cagov-page-alert .close-button')
+          .setAttribute('tabindex', '-1');
         document.querySelector('cagov-page-alert').style.display = 'none';
       });
   }

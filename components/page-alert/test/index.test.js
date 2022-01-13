@@ -24,6 +24,9 @@ describe('Page Alert', function unitTest() {
 
     // verify now that page alert is dismissed
     await expect(el).to.have.style('display', 'none');
+    await expect(
+      el.querySelector('.cagov-page-alert').getAttribute('aria-hidden'),
+    ).to.equal('true');
 
     await expect(el).to.be.accessible();
   });
