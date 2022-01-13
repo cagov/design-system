@@ -1,5 +1,8 @@
 /* agency footer */
 section.agency-footer {
+	border-top: solid 1px var(--gray-300, #e1e0e3);
+  border-bottom: solid 1px var(--gray-300, #e1e0e3);
+
 	.container {
 		display: flex;
 		flex-wrap: wrap;

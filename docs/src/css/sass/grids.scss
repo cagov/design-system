@@ -19,7 +19,7 @@
   text-decoration: none;
   font-weight: 700;
 }
-.cagov-cluster-3 {
+.cagov-cluster-3, .cagov-cluster-big-2 {
   .cagov-stack-card {
     border-radius: 5px;  
   }
@@ -34,10 +34,8 @@
     justify-content: space-around;
   }
   .cagov-card-body {
-    padding: 2rem;
+    padding: 1.5rem;
     p {
-      margin-top: 1rem;
-      font-size: 1.5rem; /* is this redundant, should be usable body copy */
       line-height: 2rem;
     }
   }
