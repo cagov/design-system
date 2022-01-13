@@ -113,7 +113,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 ## Data attributes
 
-This component accepts attributes for the number of pages and current page. These are watched for changes and the component re-renders if these attributes change
+This component accepts attributes for the number of pages and current page. These changes are monitored and the component re-renders if these attributes change:
 
 - `data-current-page="5"`
 - `data-total-pages="99"`
