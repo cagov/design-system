@@ -1,10 +1,10 @@
 # Page feedback
 
-The page feedback component lets people react to specific pages on your website. It puts the question, "Did you find this page useful?" above the department footer on every page. It has buttons to reply Yes/No, followed by a comment field.
+The page feedback component lets people react to specific pages on your website. It puts the question, "Did you find this page useful?" above the department footer on every page. It has buttons to reply **Yes** or **No**, followed by a comment field.
 
 The page feedback component is intended to:
 
-- Let people alert us to bugs or out-of-date content
+- Let people point out bugs or out-of-date content
 - Inform iterations to content pages
 - Determine hierarchy and priority of information
 - Identify themes in user sentiment
@@ -101,7 +101,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This component uses a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support custom elements. If the JavaScript for this component is not delivered or supported, the component will not display. This is the desired behavior because this component is not critical for site interaction. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
