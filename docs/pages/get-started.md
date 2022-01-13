@@ -1,4 +1,4 @@
-# Get Started
+# Get started
 
 
 What you need to know about the Design System depends on your role and discipline. 
