@@ -34,5 +34,11 @@ If a component includes javascript and uses a build step all built files will be
 
 - /dist/
 
+Components that use custom elements include a <a href="https://github.com/open-wc/custom-elements-manifest">custom elements manifest</a> to describe their attributes and optional parameters.
+
+- custom-elements.json
+
+This file is generated using the @custom-elements/analyzer package which reviews the JSDoc formatted comments in component code.
+
 The build is run and the distribution folder is deployed to our CDN as a prepublish step.
 
