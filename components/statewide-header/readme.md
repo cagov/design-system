@@ -1,6 +1,6 @@
 # Statewide header
 
-The statewide header puts the Design system standard header at the very top of your site. . Having a common header tells people that the website is an official product of the State of California, which increases user trust.
+The statewide header puts a standard header at the very top of your site. Having a common header tells people that the website is an official product of the State of California, which increases user trust.
 
 It includes:
 
@@ -17,7 +17,7 @@ If you want to include a translation widget in the statewide header, [contact us
 
 Do not add other elements to or change the statewide header. Use it only as designed.
 
-Do not combine the statewide header with depatment name or logo, navigation, or information. This is contained in the department branding (site header).
+Do not combine the statewide header with depatment name or logo, navigation, or information. This is contained in the site header.
 
 ## Demo and sample markup
 
@@ -146,7 +146,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
@@ -155,7 +155,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 Use this component as-is. It is fixed and includes all necessary content.
 
