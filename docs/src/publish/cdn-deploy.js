@@ -32,26 +32,26 @@ const getFilePaths = (dir) => {
 getFilePaths(directoryToUpload);
 
 // upload to S3
-const uploadToS3 = (dir, _path) =>
+const uploadToS3 = (dir, filePath) =>
   new Promise((resolve, reject) => {
-    const key = keyPrefix + _path.split(`${dir}/`)[1];
+    const key = keyPrefix + filePath.split(`${dir}/`)[1];
     const params = {
       Bucket: bucketName,
       Key: key,
-      Body: fs.readFileSync(_path),
+      Body: fs.readFileSync(filePath),
     };
     s3.putObject(params, (err) => {
       if (err) {
         reject(err);
       } else {
         console.log(`uploaded ${params.Key} to ${params.Bucket}`);
-        resolve(_path);
+        resolve(filePath);
       }
     });
   });
 
-const uploadPromises = filePaths.map((_path) =>
-  uploadToS3(directoryToUpload, _path),
+const uploadPromises = filePaths.map((filePath) =>
+  uploadToS3(directoryToUpload, filePath),
 );
 Promise.all(uploadPromises)
   .then((result) => {
