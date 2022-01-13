@@ -1,16 +1,45 @@
-# Content components >> Page alert >> Readme || 10
 
-Page alert provides brief, important or time-sensitive information. Yellow background color is used to grab users attention and create sense of importance and urgency. Page alert box usually appears beneath the site navigation on the homepage. It can include a hyperlink, but not a button or image.
+# Page alert
 
-<img src="https://github.com/cagov/design-system/blob/page-alert/components/page-alert/img/page-alert.jpg?raw=true" alt="Page alert sample">
+The page alert gives people important and sometimes time-sensitive information that we need them to read before anything else. It goes beneath the site navigation on any page.
 
+The page alert is a yellow band that extends across the width of the page. It includes:
+
+- An icon, selected from a list of options
+- A text field, which includes the ability to link to other pages
+- A close icon (an X in a circle) that allows people to remove the alert
+
+## When and how to use it
+
+Use page alerts sparingly. They alarm people and distract from other content.
+
+Be concise with your page alert content. Use a link to send people to a page with the details.
+
+Only use one page alert on a page. Make sure the alert is relevant to the page it is on. Only duplicate the alert on other pages if it applies to those pages.
+
+Use page alerts to tell people about:
+
+- Services that are down
+- Open application periods
+- Approaching deadlines
+- Planned or unplanned maintenance
+
+Choose an icon that supports the tone of your alert.
+
+### How not to use it
+
+Do not put page alerts on every page on your site. If people see page alerts too often, they will start to ignore them and not read page alert content.
+
+Do not put more than one page alert on a page.
+
+Do not use page alerts to simply highlight important content. They are for information that is new, critical, and temporary.
 
 ## Specs
 
 | Property | Value |
 | --- | --- |
 | Machine name | ds-page-alert |
-| JavaScript | true |
+| JavaScript | yes |
 | SCSS | ./src/index.scss |
 
 ## Project installation
@@ -18,19 +47,59 @@ Page alert provides brief, important or time-sensitive information. Yellow backg
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
 1. `npm i @cagov/[machine-name]`
-2. Use `import`[¹](/footnotes/#footnote1) or `require` to include **JavaScript**.  
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s ***JavaScript****  in your page or compiler.
 3. Include **SCSS** in your Sass compiler.
 4. Add the **Sample markup** to your HTML.
-1. Note that the `<cagov-page-alert>` tag must be inside the `<main>` tag.
+5. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
 
-### Custom element data endpoints
+## CSS variables
 
-- **data-icon** (CAGov icon's class name goes here, CAGov icon library and its classes can be found here: https://template.webstandards.ca.gov/sample/icon-fonts.html)
-- **data-message** (page alert's text and links go here)
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+
+- `--cagov-highlight`
+
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+
+```css
+:root {
+  --primary-color: #064E66;
+}
+```
 
 ### Other dependencies
 
-Page alert is using [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html). You can use any icon from CAGov font library for your page alert icon by simply adding icon class into data-icon endpoint.
+This component is uses icons from the  [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html).  Please include the font library in your project to ensure the icons appear.
+
+## Accessibility
+
+### Review items specific to the page alert accessibility
+
+- if you are using svg icon at the beginning of the page alert text make sure it has `aria-hidden=”true”` attribute, so screen readers ignore it.
+- Make sure that close button has `aria-label="Close page alert”` so screen reader users would understand the purpose of the button.
+- When page alert is dismissed make sure that button has `aria-hidden=”true”` attribute, so the users would not tab to it.
+- Make sure that page alert links and buttons have have solid, 2px outline that is using `—-highlight-color` variable on focused state.
+
+### Standard accessibility review
+
+Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+
+- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
+- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
+- Reviewed component layout on a variety of screen sizes
+
+Components in Beta status must pass the following accessibility reviews every time a new version is published:
+
+- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Reviewed with the VoiceOver screen reader on desktop
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
+- Reviewed component layout on a variety of screen sizes
+- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
+
+## Progressive enhancement
+
+This component uses a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support custom elements. If the JavaScript for this component is not delivered or supported, the component will not display. This is the desired behavior because this component is not critical for site interaction. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
 ## Sample markup
 
@@ -42,19 +111,11 @@ Page alert is using [CAGov font library](https://template.webstandards.ca.gov/sa
 </main>
 ```
 
-## Custom element data endpoint
+## Content Model
 
-- data-icon (CAGov icon's class name goes here, CAGov icon library and its classes can be found here: https://template.webstandards.ca.gov/sample/icon-fonts.html)
-- data-message (page alert's text and links go here)
+This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
-## Expected variables
-
-There are some colors that should be defined by the containing page. Here are the CSS variable names and their fallback values used when not defined:
-
-- var(--cagov-highlight, #fec02f);
-
-## Base-css classes used
-
-class `visually-hidden` is used in the close button for the screen reader's text.
-
-¹ To use `import`, files must be served from a [webserver](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) such as Apache, Nginx, or [http-server](https://www.npmjs.com/package/http-server). The `file://` protocol will cause CORS errors in some browsers.
+| Name | Attribute name | Data type | Field type |
+| --- | --- | --- | --- |
+| Icon | data-icon | string | Plain text, Any CaGov font, by class name. |
+| Message | data-message | string | Rich text |

@@ -1,15 +1,30 @@
-# Content components >> Link grid >> Readme || 10
 
-The card grid depends on individual cards and lays them out in a grid
+# Link grid
 
-<img src="img/card-grid.png">
+The link grid organizes links that function as calls to action (CTAs) or highlight topics. This helps people find priority user needs and topics. The grid can also be used by content creators to lead users to specific content.
+
+When viewed on a computer, the grid is a maximum of 3 links wide. On mobile devices, this grid collapses into a single column.
+
+## When and how to use it
+
+Use the link grid to highlight top user needs. Organize the links in a way that makes sense for people’s primary needs.
+
+The link grid is typically used on the homepage of a site so visitors can find and get to useful content quickly.
+
+Only use the link grid if you have two or more links to add to it.
+
+### How not to use it
+
+Avoid using more than 9 links. The link grid is intended to highlight the most important content. The recommended maximum grid size is 3 rows by 3 columns.
+
+Because the grid collapses into one column on mobile, large grids may occupy several screens. This can hide lower links.
 
 ## Specs
 
 | Property | Value |
 | --- | --- |
 | Machine name | ds-button-grid |
-| JavaScript | false |
+| JavaScript | no |
 | SCSS | ./src/index.scss |
 
 ## Project installation
@@ -19,54 +34,59 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 1. Include **SCSS** in your compiler.
 2. Add the **Sample markup** from the component to your HTML.
 
-3. Modify the **Sample markup** with your URLs and card text as needed.  
+3. Modify the **Sample markup** with your URLs and card text as needed.  Refer to the Content model section for notes on mapping your data to the **Sample markup**.
 
-## Sample markup
+## CSS variables
 
-```
-<div class="cagov-grid">
-  <a href="linkurl" class="no-deco cagov-card">
-    <h3>card title here</h3>
-    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
-      width="24px">
-      <g>
-        <path d="M0,0h24v24H0V0z" fill="none" />
-      </g>
-      <g>
-        <polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" />
-      </g>
-    </svg>
-  </a>
-  <!-- ... design expects 3 cards usually -->
-</div>
-```
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
 
-## Audits
+- `--primary-color`
+- `—highlight-color`
+- `—gray-100`
+- `—gray-300`
 
-Running the lighthouse audits against this HTML & CSS should produce no issues
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
 
-<img src="img/grid-audit.png">
-
-## Contributor/Developer documentation
-
-From the command line at the root of this project you can run:
-```
-npm run start
-```
-Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by ```preview.html```
-
-### CSS variables
-
-There are some colors that should be defined by the containing page. 
-
-- The header text color, bottom border color and fill  of the svg use a default value but if the css variable is defined
-
-Expected definition is:
-
-```
+```css
 :root {
-  --primary-color: #33705B;
-  --gray-100: #f9f9fa;
-  --gray-200: #ededef;
+  --primary-color: #064E66;
 }
 ```
+
+## Accessibility
+
+### Review items specific to the link grid accessibility
+
+- Make sure that button has solid, 2px outline that is using `—-highlight-color` variable on focused state.
+- Make sure that svg arrow inside of each link has `aria-hidden=”true”` attribute.
+
+### Standard accessibility review
+
+Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+
+- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
+- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
+- Reviewed component layout on a variety of screen sizes
+
+Components in Beta status must pass the following accessibility reviews every time a new version is published:
+
+- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Reviewed with the VoiceOver screen reader on desktop
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
+- Reviewed component layout on a variety of screen sizes
+- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
+
+## Progressive enhancement
+
+This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+
+## Content Model
+
+This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
+
+| Name | Attribute name | Data type | Field type | Selector |
+| --- | --- | --- | --- | --- |
+| Title | title | string | Plain text | .card-text |
+| Url | url | string | URL | a.cagov-card[href] |
