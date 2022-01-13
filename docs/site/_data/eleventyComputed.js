@@ -38,7 +38,7 @@ module.exports = {
     },
     social_image_url: (article) => {
       const path =
-        article?.social_image_path || defaults.page.social_image_path;
+        article.metadata?.social_image_path || defaults.page.social_image_path;
       return buildURL(path, root);
     },
   },
