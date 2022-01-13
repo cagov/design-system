@@ -68,8 +68,8 @@ module.exports = (html, outputPath) => {
     const component = components[componentSlug];
     if (component) {
       const $ = cheerio.load(result);
-      const h2 = $('div.entry-content h2:first-of-type');
-      if (h2.length) {
+      const h1 = $('div.entry-content h1:first-of-type');
+      if (h1.length) {
         const metadata = {
           component,
           outputPath: outputPath.toLowerCase(),
@@ -87,7 +87,7 @@ module.exports = (html, outputPath) => {
         };
 
         const devStageHtml = devStageTemplate(metadata);
-        h2.before(devStageHtml);
+        h1.after(devStageHtml);
         result = $.html();
       }
     }
