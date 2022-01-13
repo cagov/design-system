@@ -1,6 +1,6 @@
 # Page alert
 
-The page alert gives people important and sometimes time-sensitive information that we need them to read before anything else. It goes beneath the site navigation on any page.
+The page alert gives people important and sometimes time-sensitive information that they need to read, before anything else. It goes beneath the site navigation on any page.
 
 The page alert is a yellow band that extends across the width of the page. It includes:
 
@@ -68,7 +68,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--cagov-highlight`
 
@@ -82,7 +82,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ### Other dependencies
 
-This component is uses icons from the [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Please include the font library in your project to ensure the icons appear.
+This component uses icons from the [CAGov font library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Include the font library in your project to ensure the icons appear.
 
 ## Accessibility
 
@@ -106,7 +106,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
@@ -115,7 +115,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This component uses a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support custom elements. If the JavaScript for this component is not delivered or supported, the component will not display. This is the desired behavior because this component is not critical for site interaction. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
