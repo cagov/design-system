@@ -1,6 +1,11 @@
 # CHANGELOG for ds-statewide-header
 `ds-statewide-header`
 
+
+# 1.0.12
+* Made cagov logo linked to ca.gov website.
+* Added aria-hidden=”true” attribute to the ca.gov svg icon, so it is hidden from assistive technologies.
+
 # 1.0.11
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.
