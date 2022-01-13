@@ -1,0 +1,14 @@
+{
+  "In research": {
+    "description": ""
+  },
+  "Alpha": {
+    "description": "This component is currently in Alpha. Alpha means that the component has not been thorougly tested by developers. <a href='#'>Learn more.</a>"
+  },
+  "Beta": {
+    "description": ""
+  },
+  "Production": {
+    "description": ""
+  }
+}
