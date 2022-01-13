@@ -30,10 +30,6 @@ Do not modify the link icon when you install it.
 <html-preview>
 
 ```html preview
-<link
-  rel="stylesheet"
-  href="https://california.azureedge.net/cdt/CAWeb/combined-css/1.0.1/dist/cagov.css"
-/>
 <a href="link.pdf">This is pdf link.</a>
 <a href="https://google.com">This is an external link.</a>
 ```
