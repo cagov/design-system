@@ -2,13 +2,13 @@
 
 The regulatory outline replicates the ordering of California government code. It is a list that automatically uses the following pattern:
 
-    (a)(b)(c)
+(a)(b)(c)
 
-         (1)(2)(3)
+&nbsp;&nbsp; (1)(2)(3)
 
-            (A)(B)(C)
+&nbsp;&nbsp;&nbsp;&nbsp; (A)(B)(C)
 
-                (i)(ii)(iii)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (i)(ii)(iii)
 
 ## When and how to use it
 
