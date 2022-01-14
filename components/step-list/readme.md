@@ -6,10 +6,10 @@ The step list is a numbered list. It has:
 - Lines connecting all the circled numbers
 - A title for each step
 - Detail for each step
-  - You can use hyperlinks in the detail space.
-  - You cannot use bullet points in the detail space.
+  - You can use hyperlinks in the detail space
+  - You cannot use bullet points in the detail space
 
-The step list shows all the steps in a process. State processes can be complicated and opaque. The step list makes these processes visible, even when some steps do not require people to act.
+State processes can be complicated and opaque. The step list shows all the steps in a process. The step list makes these processes visible, even when some steps do not require people to act.
 
 ## When and how to use it
 
@@ -98,7 +98,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--highlight-color`
 
@@ -125,7 +125,7 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
+- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 - Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
@@ -134,6 +134,6 @@ Components in Beta status must pass the following accessibility reviews every ti
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
-This component uses the `ol.cagov-step-list` class. It will work on `ul` elements, but would not be semantically correct, so please use `ol`.
+This component uses the `ol.cagov-step-list` class. It will work on `ul` elements, but would not be semantically correct. Use `ol` with this component.
