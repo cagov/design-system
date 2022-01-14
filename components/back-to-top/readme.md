@@ -192,11 +192,11 @@ This component has no extra guidance. Use the component as specified.
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
-1. `npm i @cagov/[machine-name]`
-2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **\*JavaScript\*\*** in your page or compiler.
+1. `npm i @cagov/ds-back-to-top`
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
 3. Include **SCSS** in your Sass compiler.
-4. Add the **Sample markup** to your HTML.
-5. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
+4. Add the **sample markup** to your HTML.
+5. Refer to the Content model section for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 

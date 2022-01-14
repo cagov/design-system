@@ -230,8 +230,8 @@ Do not include more than one social media account per platform.
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **Sample markup** from the component to your HTML.
-3. Place your own site links within the `<div class="footer-secondary-links">` element. Your social media links go within `<div class="footer-social-links">`. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
+2. Add the **sample markup** from the component to your HTML.
+3. Place your own site links within the `<div class="footer-secondary-links">` element. Your social media links go within `<div class="footer-social-links">`. Refer to the Content model section for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 

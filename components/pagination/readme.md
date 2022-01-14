@@ -49,11 +49,11 @@ Do not use pagination:
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
-1. `npm i @cagov/[machine-name]`
-2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **\*JavaScript\*\*** in your page or compiler.
+1. `npm i @cagov/ds-pagination`
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
 3. Include **SCSS** in your Sass compiler.
-4. Add the **Sample markup** to your HTML.
-5. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
+4. Add the **sample markup** to your HTML.
+5. Refer to the Content model section for notes on mapping your data to the **sample markup**.
 6. If directly importing, be sure to reference the js file at `./dist/index.js`
 7. Connect pagination to content block
 
@@ -92,15 +92,6 @@ As a component in Alpha status, this component must pass the following accessibi
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-## Sample markup
-
-```html
-<cagov-pagination
-  data-current-page="5"
-  data-total-pages="99"
-></cagov-pagination>
-```
 
 ## Data attributes
 
