@@ -1,14 +1,28 @@
 # Visual design style guide
 
-These recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.
+The visual design of the Design System is inspired by the [Design System principles](/principles). Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.
+
+## Our approach to visual design
+1. **Accessible**</br>Visual design plays a critical role in ensuring a website is accessible. Always have sufficient contrast between text and backgrounds. Do not rely on color alone for visual communication.
+2. **Economical**</br>Create focused and light-weight designs that avoid unnecessary decoration. This ensures services are delivered equitably across all devices and bandwidths.
+3. **Readable**</br> Use highly legible fonts and organize information intuitively. This makes information clear and easy to read.
+4. **Consistent**</br>Use visual elements to create familiarity and continuity across different state websites.
+5. **Versatile**</br> While consistency is critical, we recognize that each website has its own needs. The Victims Compensation Board should have a different style of communication than the Arts Council.
+6. **Official**</br>People use visual cues to determine if a website is trustworthy. Create designs that reinforce that a website is an official product of the government.
+7. **Conversational**</br>Approachable and friendly designs help people feel welcomed. Use visual design (color, composition, graphics) to lower barriers between people and the state.
+
 
 ## Color
 
-We do not dictate which colors should be used so that we allow every agency to maintain their unique character, but we have the following system to ensure  consistency across websites. 
+We do not dictate which colors you should use. This allows every department to maintain their unique identity. Instead, we use a system to ensure consistency across websites.
 
 It consists of 3 base colors. Each base color has three variations. These variations are designed to offer flexibility while ensuring a consistent, visually pleasing, and accessible look.
 
-In respect to accessibility, color choice is intended to align with Web Content Accessibility Guideline (WCAG) 2.1 Level AA which requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text and a  contrast ratio of at least 3:1 for graphics and user interface components.
+With respect to accessibility, choose colors in alignment with Web Content Accessibility Guideline (WCAG) 2.1 Level AA. It requires a contrast ratio of at least:
+
+- 4.5:1 for normal text
+- 3:1 for large text
+- 3:1 for graphics and user interface components
 
 <span class="cagov-table">
   <table width="100%">
@@ -27,7 +41,7 @@ In respect to accessibility, color choice is intended to align with Web Content 
   </table>
 </span>
 
-This is the default color palette for any new digital service.
+Here’s what that looks like for recent CA.gov initiatives such as covid19.ca.gov and alpha.ca.gov. This is the default color palette for any new digital service.
 
 <span class="cagov-table">
   <table>
@@ -57,6 +71,8 @@ This is the default color palette for any new digital service.
 
 In addition to the 3 colors above, we standardize colors used for global UI elements such as notifications.
 
+### Grayscale
+
 <span class="cagov-table">
   <table class="partial-borders">
     <tr class="bgcolor-chips">
@@ -80,6 +96,8 @@ In addition to the 3 colors above, we standardize colors used for global UI elem
   </table>
 </span>
 
+### System status colors
+
 <span class="cagov-table">
   <table>
     <tr class="bgcolor-chips">
@@ -102,29 +120,61 @@ In addition to the 3 colors above, we standardize colors used for global UI elem
   <p>0 1 2 3 4 5 6 7 8 9</p>
 </div>
 
-We use Public Sans, a strong, neutral typeface for interfaces, text, and headings, which was designed by the United States Web Design System.
+We use [Public Sans](https://public-sans.digital.gov/), a strong, neutral typeface for interfaces, text, and headings, which was designed by the [United States Web Design System](https://designsystem.digital.gov/).
 
 Our base font size is 18px with a line spacing of 32px. To generate the rest of the values, we use the golden ratio (1.6) as a guide.
 
-## Images
+<span class="cagov-table">
+  <table width="100%">
+    <tr>
+      <th>Text Content</th><th>Properties</th>
+    </tr>
+    <tr>
+      <td>Heading 1</td><td>Font size: 47px</br>Font size: calc(2.4rem + 0.1vw);</br>Font weight: Bold</br>Line height: 74px</td>
+    </tr>
+    <tr>
+      <td>Heading 2</td><td>Font size: 37px</br>Font size: calc(1.94rem + 0.1vw);</br>Font weight: Bold</br>Line height: 59px</td>
+    </tr>
+    <tr>
+      <td>Heading 3</td><td>Font size: 29px</br>Font size: calc(1.54rem + 0.1vw);</br>Font weight: Bold</br>Line height: 48px</td>
+    </tr>
+    <tr>
+      <td>Heading 4</td><td>Font size: 23px</br>Font size: calc(1.25rem + 0.1vw);</br>Font weight: Bold</br>Line height: 39px</td>
+    </tr>
+    <tr>
+      <td>Heading 5</td><td>Font size: 18px</br>Font size: calc(1rem + 0.1vw);</br>Font weight: Bold</br>Line height: 32px</td>
+    </tr>
+    <tr>
+      <td>Paragraph</td><td>Font size: 18px</br>Font size: calc(0.7rem + 0.1vw);</br>Font weight: Normal</br>Line height: 32px</td>
+    </tr>
+    <tr>
+      <td>Paragraph large (for lead text)</td><td>Font size: 23px</br>Font size: calc(1rem + 0.1vw);</br>Font weight: Normal</br>Line height: 39px</td>
+    </tr>
+    <tr>
+      <td>Paragraph small (for captions)</td><td>Font size: 14px</br>Font size: calc(0.65rem + 0.1vw);</br>Font weight: Normal</br>Line height: 26px</td>
+    </tr>
+  </table>
+</span>
 
-We use photos and illustrations for communicating information. We adhere to the following guidelines.
-- Avoid using images as unnecessary decoration.
-- All images should be 3:2 unless their proportions have significance. 
-- Use alt text whenever adding images.
+## Imagery
 
-## Icons
+We use photos and illustrations for visualizing information. We follow these guidelines:
+- Do not use images as unnecessary decoration.
+- Use an aspect ratio of 3:2 for all images. The exception is if the proportions of the subject of the image have significance. For example, an image of a driver’s license or an image of an application form. 
+- Use alt text whenever adding images. Alt text makes websites more accessible and helps with search engine optimization. Read more about writing alt text on the [United States Government Accessibility for Teams guide](accessibility.digital.gov).
 
 We currently use [icons from the State Web Template](https://template.webstandards.ca.gov/sample/icon-fonts.html). We are working on making them available through the Design System.
 
 ## Accessibility
 
-Design plays a critical role in ensuring that our digital services are accessible. In practice, this means:
-- Ensure sufficient contrast between text and its background.
+We develop visual design that’s accessible and inclusive of all Californians. We aim to meet the W3C Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards to comply with the requirements of Section 508. In practice, this means:
+- Ensure sufficient color contrast between text and its background.
 - Do not use color as the only visual means of conveying information.
-- Provide visual focus indication for keyboard focus.
-- Do not make people hover to find things.
-- Clear and descriptive labels for forms and navigation
-- Feedback that’s easy to identify and understand 
-- Create responsive design
-- Headings and subheadings for a more meaningful text
+- Provide visual focus indication for keyboard navigation.
+- Do not make people hover their cursor to find things.
+- Establish clear visual hierarchy by designing recognizable headings and creating descriptive labels for forms and navigation.
+- Use a highly legible font like Public Sans in appropriate font size, line height, and line length that allow for comfortable reading and comprehension.
+- Use icons purposefully as visual cues to connect to information or ideas. 
+- Give visual feedback that’s easy to identify and understand. 
+- Create responsive design.
+
