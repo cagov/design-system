@@ -109,7 +109,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 ### Component-specific accessibility review
 
 - Make sure that feature card image has `alt` attribute with text describing the image.
-- Make sure that feature card CTA link button has solid, 2px outline that is using `--highlight-color` variable on focused state.
+- Make sure that feature card CTA link button has solid, 2px outline that uses `--highlight-color` variable on focused state.
 
 ### Standard accessibility review
 
