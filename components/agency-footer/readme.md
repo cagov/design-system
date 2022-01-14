@@ -20,7 +20,6 @@ The site footer goes on all pages of your website.
 Examples of links that go in the site footer include:
 
 - General department info
-- Contact information
 - Department accessibility information
 - Careers page
 
@@ -35,6 +34,8 @@ Do not use the site footer:
 - For primary calls to action
 - As secondary navigation
 - To link to information that meets primary user needs
+
+Do not put any contact information in the site footer. This goes in the [statewide footer](/components/statewide-footer/readme/)
 
 Do not include more than one social media account per platform.
 
