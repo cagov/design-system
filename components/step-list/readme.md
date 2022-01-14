@@ -76,7 +76,7 @@ Do not use the step list to create a list of items that are not ordered. Use bul
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **Sample markup** from the component to your HTML.
+2. Add the **sample markup** from the component to your HTML.
 3. Adjust text as needed.
 
 ## CSS variables

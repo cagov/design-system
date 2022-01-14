@@ -49,11 +49,11 @@ Do not use the page feedback component on pages that are part of a transactional
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
-1. `npm i @cagov/[machine-name]`
-2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **\*JavaScript\*\*** in your page or compiler.
+1. `npm i @cagov/ds-feedback`
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
 3. Include **SCSS** in your Sass compiler.
-4. Add the **Sample markup** to your HTML.
-5. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
+4. Add the **sample markup** to your HTML.
+5. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ### Other information
 
@@ -97,6 +97,8 @@ As a component in Alpha status, this component must pass the following accessibi
 ## Progressive enhancement
 
 This component uses a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support custom elements. If the JavaScript for this component is not delivered or supported, the component will not display. This is the desired behavior because this component is not critical for site interaction. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+
+<a name="content-model"></a>
 
 ## Content model
 

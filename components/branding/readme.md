@@ -284,7 +284,7 @@ Do not modify the site header beyond adding the site name and a logo.
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **Sample markup** from the component to your HTML.
+2. Add the **sample markup** from the component to your HTML.
 3. Edit the “logo”, “logo-state”, and “logo-department” elements to meet your own department’s branding needs.
 4. Connect the search form to your own system.
 
