@@ -18,7 +18,7 @@ Do not modify skip to content when you install it.
 
 ```html preview
 <!--skip-to-content-->
-<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+<div id="skip-to-content"><a href="#body-content">Skip to content</a></div>
 <!--end skip-to-content-->
 
 <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
@@ -150,7 +150,7 @@ Do not modify skip to content when you install it.
 
 <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
 
-<div id="main-content">
+<div id="body-content">
   MAIN
   <p>Nulla quis lorem ut libero malesuada feugiat.</p>
   <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
@@ -238,14 +238,14 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **sample markup** from the component just after the opening body tag of your HTML.
-3. Add `id=”main-content"`to the HTML tag at the top of the main content of the page.
+3. Add `id=body-content"`to the HTML tag at the top of the main content of the page.
 
 ## Accessibility
 
 ### Component-specific accessibility review
 
 - Make sure the skip to the content link is the first item to appear on focus when you tab through a webpage and has solid, 2px outline that uses `--highlight-color` variable.
-- Make sure that skip to content id reference `href=”#main-content”` is matching actual `id` attribute in main content div.
+- Make sure that skip to content id reference `href=”#body-content”` is matching actual `id` attribute in main content div.
 
 ### Standard accessibility review
 
@@ -266,4 +266,4 @@ This component uses the following data attributes. We provide this information t
 
 | Name  | Attribute name  | Data type | Field type | Selector           | Default value   |
 | ----- | --------------- | --------- | ---------- | ------------------ | --------------- |
-| Label | skip-to-content | string    | Plain text | div#main-content a | Skip to content |
+| Label | skip-to-content | string    | Plain text | div#skip-to-content a | Skip to content |
