@@ -15,7 +15,7 @@ The site footer is a set of links that go on all the pages of the website. It is
 
 ## When and how to use it
 
-The site footer goes on all pages of your website. This is a required component when using the Design System.
+The site footer goes on all pages of your website.
 
 Examples of links that go in the site footer include:
 
@@ -234,7 +234,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-color`
 - `--primary-dark-color`
@@ -264,7 +264,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 Components in Alpha status must pass the following accessibility reviews every time a new version is published:
 
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
