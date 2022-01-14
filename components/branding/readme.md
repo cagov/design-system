@@ -15,7 +15,7 @@ The search connects with whatever site search you set up on your site.
 
 ## When and how to use it
 
-The site header goes on all pages of your website. This is a required component when using the Design System.
+The site header goes on all pages of your website.
 
 If you use a logo in your site header, make sure that any text in it is legible. Look at how much and where any white space is.
 
@@ -292,7 +292,7 @@ Note: There are two versions of the markup, one with and one without a logo.
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--org-name-state-font`
 - `--org-name-state-font-size`
@@ -309,7 +309,7 @@ The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/U
 - `--gray-100`
 - `--gray-300`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
 
 ```css
 :root {
@@ -319,30 +319,21 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ## Accessibility
 
-### Review items specific to the site header accessibility
+### Component-specific accessibility review
 
 - If you are using search component make sure it has span label saying that is  “google custom search”, make sure that span  has `sr-only` class and `id` attribute  that is referenced in search input box `aria-labelledby` attribute. Also, make sure that google search submit button has span with class `sr-only` and the word “submit” in it.
 - If you are using search and menu components make sure that mobile buttons that activate those components have no focus in the desktop view. Also, make sure that they have correct `area-expanded` attributes  whenever the sections that they are controlling are either expanded or collapsed.
 - If you are using site logo image make sure it has proper alt text.
-- Make sure that all links and buttons have solid, 2px outline that is using `—-highlight-color` variable on focused state.
+- Make sure that all links and buttons have solid, 2px outline that uses `—-highlight-color` variable on focused state.
 
 ### Standard accessibility review
 
 Components in Alpha status must pass the following accessibility reviews every time a new version is published:
 
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
 
 ## Progressive enhancement
 
