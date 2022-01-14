@@ -8,18 +8,15 @@ It always includes:
 - A set of standard links:
   - Conditions of use
   - Privacy policy
-  - Accessibility (policies)
+  - Accessibility
+  - Contact page for your organization
 - The copyright notice. It appears at the very bottom of the statewide footer.
-
-You can include additional links, like:
-
-- Contact us
-- Statewide accessibility information
-- Legal content
 
 ## When and how to use it
 
 The statewide footer is a required Design System component. Place it at the bottom of the website, below the agency footer and all other content.
+
+Provide a contact page that's relevant to your site. Do not send them to the general [CA.gov contact page](https://ca.gov/contact/) unless it's appropriate to do so.
 
 Do not add other types of links to the statewide footer. Add them to the site footer instead.
 
@@ -179,5 +176,4 @@ These links are managed by [ca.gov](http://ca.gov). Additional information about
 | Conditions of use           | https://www.ca.gov/use/                   | Yes       | 2     |
 | Privacy policy              | https://www.ca.gov/privacy-policy/        | Yes       | 3     |
 | Accessibility               | https://www.ca.gov/accessibility/         | Yes       | 4     |
-| Contact us                  | URL to Contact page for your organization | As needed |       |
-| Legal content               |                                           | As needed |       |
+| Contact us                  | URL to Contact page for your organization | Yes       | 5     |
