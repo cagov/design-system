@@ -96,7 +96,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **sample markup** from the component to your HTML.
-3. Modify the **sample markup** with your URLs and card text as needed. Refer to the Content model section for notes on mapping your data to the **sample markup**.
+3. Modify the **sample markup** with your URLs and card text as needed. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 
@@ -134,6 +134,8 @@ As a component in Alpha status, this component must pass the following accessibi
 ## Progressive enhancement
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+
+<a name="content-model"></a>
 
 ## Content model
 

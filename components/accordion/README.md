@@ -295,8 +295,8 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 1. `npm i @cagov/ds-accordion`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
 3. Include **SCSS** in your Sass compiler.
-5. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
 4. Add the **sample markup** to your HTML.
+5. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 
@@ -336,6 +336,8 @@ As a component in Alpha status, this component must pass the following accessibi
 This component defaults to open. If no script on the page executes, the visitor will not be blocked from viewing content. Once the JavaScript executes, the accordion collapses to the desired state by default. If you want the accordion to be open instead of closed when the page loads, add the attribute `aria-expanded="true"`.
 
 This component uses a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support custom elements. If the JavaScript for this component is not delivered or supported the component falls back to plain HTML. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+
+<a name="content-model"></a>
 
 ## Content model
 
