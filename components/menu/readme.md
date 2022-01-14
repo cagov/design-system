@@ -609,9 +609,9 @@ CSS
 ### Component-specific accessibility review
 
 - Make sure that site navigation is contained within the `nav` tag that has `aria-label=”Site Navigation”` and `role=”navigation”` attributes in it.
-- If navigation is using dropdowns make sure that first level nav item has `aria-expanded=”true”` attribute when dropdown is expanded and `aria-expanded=”false”` when dropdown is collapsed. Make sure that dropdown toggle trigger is a button. Dropdown container also needs to have `aria-hidden` attribute, which should change its value between `true` and `false` depending on its visibility. Also, make sure that dropdown links are out of focus when it’s in collapsed state, which means each link needs to have `tabindex=”-1”` attribute. And vice versa, when dropdown is expanded each link inside of the dropdown should not have any `tabindex` attribute.
+- If the navigation uses dropdowns, make sure that first level nav item has `aria-expanded=”true”` attribute when dropdown is expanded and `aria-expanded=”false”` when dropdown is collapsed. Make sure that dropdown toggle trigger is a button. Dropdown container also needs to have `aria-hidden` attribute, which should change its value between `true` and `false` depending on its visibility. Also, make sure that dropdown links are out of focus when it’s in collapsed state, which means each link needs to have `tabindex=”-1”` attribute. And vice versa, when dropdown is expanded each link inside of the dropdown should not have any `tabindex` attribute.
 - Arrow svg icon inside of the dropdown trigger button needs to have `aria-hidden=”true”` attribute.
-- Make sure that site navigation links have a solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that site navigation links have solid, 2px outline that uses `--highlight-color` variable on focused state.
 
 ### Standard accessibility review
 
