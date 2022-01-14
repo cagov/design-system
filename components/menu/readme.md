@@ -503,7 +503,7 @@ The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/U
 - `--highlight-color`
 - `--w-lg`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
 
 ```css
 :root {
@@ -513,30 +513,114 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ## Accessibility
 
-### Review items specific to the site navigation accessibility
+### Page feedback
+Readme
+Changelog
+
+Development stage
+
+1
+    In research
+2
+    Alpha
+3
+    Beta
+4
+    Production
+
+Alpha components have not been thorougly tested by developers. Learn more about component maturity.
+
+The page feedback component lets people react to specific pages on your website. It puts the question, "Did you find this page useful?" above the department footer on every page. It has buttons to reply Yes or No, followed by a comment field.
+
+The page feedback component is intended to:
+
+    Let people point out bugs or out-of-date content
+    Inform iterations to content pages
+    Determine hierarchy and priority of information
+    Identify themes in user sentiment
+    Pinpoint missing or confusing content
+    Identify specific spikes in feedback related to events
+
+Page feedback responses are collected in a Google Analytics report. It does not collect information about the people who submit feedback.
+When and how to use it
+
+When you install the page feedback component, it is automatically added to every page on your site.
+
+Monitor the information you receive through page feedback so you know user sentiment and can catch problems early.
+
+If you’re interested in using page feedback on your site, contact us through the Support page to get more information.
+How not to use it
+
+Do not use the page feedback component on pages that are part of a transactional process flow. This can distract people from finishing their task.
+Demo and sample markup
+Did you find what you were looking for?
+
+HTML
+
+<cagov-feedback
+  data-endpoint-url="https://fa-go-feedback-001.azurewebsites.net/sendfeedback"
+></cagov-feedback>
+
+Specs
+Property	Value
+Machine name	ds-feedback
+JavaScript	yes
+SCSS	./src/css/index.scss
+Project installation
+
+The instructions assume familiarity with npm
+package management tool, modern JavaScript techniques, and Sass
+
+.
+
+    npm i @cagov/[machine-name]
+    Use import¹ or require to include the component’s *JavaScript** in your page or compiler.
+    Include SCSS in your Sass compiler.
+    Add the Sample markup to your HTML.
+    Refer to the Content model section for notes on mapping your data to the Sample markup.
+
+Other information
+
+    The page feedback component requires the data-endpoint-url="" attribute for the endpoint to POST data to if the user submits a comment.
+    The component also accepts optional text strings to support multiple languages.
+    If you use the endpoint from the markup, data will be collected in a central Office of Digital Innovation (ODI) database and can be retrieved via API or Google Data Studio dashboard.
+    The endpoint URL for any state website is supplied by ODI and can be obtained upon request.
+    If you want to use this frontend component with your own backend service you can supply your own endpoint and the page feedback web component will POST the following fields on submit: comment, helpful, url, userAgent
+    The component will send Google Analytics events when the initial Yes/No buttons are clicked and will submit the full form response including the comment, whether they clicked that the page was helpful or not and their user agent.
+
+CSS variables
+
+The following CSS variables
+
+are used in this component:
+
+    --primary-dark-color
+
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+
+CSS
+
+:root {
+  --primary-color: #064e66;
+}
+
+## Accessibility
+
+### Component-specific accessibility review
 
 - Make sure that site navigation is contained within the `nav` tag that has `aria-label=”Site Navigation”` and `role=”navigation”` attributes in it.
 - If navigation is using dropdowns make sure that first level nav item has `aria-expanded=”true”` attribute when dropdown is expanded and `aria-expanded=”false”` when dropdown is collapsed. Make sure that dropdown toggle trigger is a button. Dropdown container also needs to have `aria-hidden` attribute, which should change its value between `true` and `false` depending on its visibility. Also, make sure that dropdown links are out of focus when it’s in collapsed state, which means each link needs to have `tabindex=”-1”` attribute. And vice versa, when dropdown is expanded each link inside of the dropdown should not have any `tabindex` attribute.
 - Arrow svg icon inside of the dropdown trigger button needs to have `aria-hidden=”true”` attribute.
-- Make sure that site navigation links have a solid, 2px outline that is using `—-highlight-color` variable on focused state.
+- Make sure that site navigation links have a solid, 2px outline that uses `--highlight-color` variable on focused state.
 
 ### Standard accessibility review
 
-Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+As a component in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
 
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
 
 ## Progressive enhancement
 
