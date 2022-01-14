@@ -6,11 +6,12 @@
   "customElements": "custom-elements.json",
   "type": "module",
   "scripts": {
-    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
     "build:sass": "sass src/css/index.scss src/css/index.css",
     "build:js": "rollup --config rollup.config.js",
-    "build": "npm run build:sass && npm run build:js"
+    "build": "npm run build:sass && npm run build:js",
+    "prepublishOnly": "npm run build && npm test",
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
   },
   "devDependencies": {
     "@open-wc/testing": "^3.0.1",

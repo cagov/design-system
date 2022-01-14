@@ -7,6 +7,7 @@
   "scripts": {
     "build": "sass src/index.scss dist/index.css",
     "build:wp": "sass src/index.wordpress.scss dist/index.wordpress.css",
+    "prepublishOnly": "npm run build && npm test",
     "test": "web-test-runner test/test.index.js --node-resolve",
     "test:visual": "web-test-runner test/test.index.js --node-resolve --config test/test.config.js"
   },

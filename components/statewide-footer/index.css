@@ -60,6 +60,11 @@ footer .container {
     flex-direction: row;
     align-items: center;
   }
+  .footer-secondary-links.flex-col-end,
+footer .container.flex-col-end {
+    flex-direction: column;
+    align-items: end;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

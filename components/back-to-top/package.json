@@ -5,9 +5,10 @@
   "main": "index.css",
   "type": "module",
   "scripts": {
-    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
+    "build": "sass src/index.scss index.css",
+    "prepublishOnly": "npm run build && npm test",
     "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",    
-    "build": "sass src/index.scss index.css"
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],
   "author": "",

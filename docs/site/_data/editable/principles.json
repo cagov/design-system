@@ -12,7 +12,7 @@
   "3": {
     "name": "Prioritize accessibility",
     "description": "Make your services accessible for all Californians. Think about people who have been traditionally excluded, like people who use screen readers or reside in low bandwidth regions.",
-    "example": "Our <a href='/style/design/'>visual design style guide</a> includes direction on how to create accessible design. All design system components are <a href='https://www.w3.org/TR/WCAG21/'>WCAG 2.1 compliant</a>."
+    "example": "Our <a href='/style/design/'>visual design style guide</a> includes direction on how to create accessible design. All production-level components are <a href='https://www.w3.org/TR/WCAG21/'>WCAG 2.1 compliant</a>."
   },
   "4": {
     "name": "Be concise",
@@ -27,7 +27,7 @@
   "6": {
     "name": "Iterate, then iterate again",
     "description": "Services and products are never finished. Rigorously test and refine your work to make sure it’s robust and useful.",
-    "example": "We continuously look at data and improve Design System components. Our Alpha, Beta, and Production labels show what development track each component is in."
+    "example": "We continuously look at data and improve Design System components. Our In research, Alpha, Beta, and Production labels show what development track each component is in."
   },
   "7": {
     "name": "Be consistent, but not uniform",
@@ -41,7 +41,7 @@
   },
   "9": {
     "name": "Make things open",
-    "description": "As part of our commitment to transparency and collaboration, our default state is to share. Our Design System work is open to the public.",
+    "description": "As part of our commitment to transparency and collaboration, our default state is to share. Design System work is open to the public.",
     "example": "All of the <a href='https://github.com/cagov/design-system'>Design System code</a> is open source and hosted on <a href='https://github.com'>Github</a>. This means anyone can see how it's built, suggest improvements, or adapt it for their own purposes."
   }
 }

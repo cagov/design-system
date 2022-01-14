@@ -36,7 +36,7 @@ jobs:
         run: |
           npm install
           npm run site:build
-          DOMAIN=${URLSAFE_BRANCH_NAME}.pr.designsystem.webstandards.ca.gov npm run build
+          ROOT=https://${URLSAFE_BRANCH_NAME}.pr.designsystem.webstandards.ca.gov npm run build
       - name: Write robots.txt
         run: |
           echo 'User-agent: *' > docs/robots.txt

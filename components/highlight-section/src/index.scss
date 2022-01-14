@@ -6,7 +6,7 @@ cagov-highlight-section {
 			margin-left: auto;
 			padding-left: 1rem;
 			padding-right: 1rem;
-			padding-top: 2rem;
+			padding-top: 1.5rem;
 			padding-bottom: 2rem;
 		}
 		// TO_DO: consider adding .btn class with common button mixing to base-css button.scss
@@ -53,11 +53,15 @@ cagov-highlight-section {
 			.highlight-text {
 				background-color: #ffffff;
 				padding: 1.5rem;
-				padding-bottom: 2rem;
+				padding-top: 0.75rem;
 				border-top-left-radius: 0px;
 				border-top-right-radius: 0px;
 				border-bottom-left-radius: 5px;
 				border-bottom-right-radius: 5px;
+
+				h1, h2, h3 {
+					margin-top: 0;
+				}
 			}
 		}
 	}

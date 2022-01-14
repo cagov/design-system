@@ -1,7 +1,10 @@
 .github
 .husky
-components/**/!(*.md|*.11tydata.*)
 test
+components/index.html
+components/readme.md
+components/*/*.(json|html|js|css|scss)
+components/*/*/**/*
 package.json
 package-lock.json
 README.md

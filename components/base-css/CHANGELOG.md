@@ -1,6 +1,9 @@
 # CHANGELOG for ds-base-css
 `ds-base-css`
 
+# 1.0.4
+* reduce top margin on h2
+
 # 1.0.13
 * Added reponsive font size functionality. (added font increase ratio variable based based on the dimensions of the browser viewport)
 

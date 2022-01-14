@@ -1,5 +1,6 @@
 ---
 permalink: /
+title: California Design System
 ---
 
 <div class="full-bleed full-bleed--highlight1">
@@ -55,7 +56,7 @@ permalink: /
     <div class="cagov-stack cagov-featured-sidebar cagov-pr-2">
       <h2>What design systems do</h2>
     </div>
-    <div>
+    <div class="cagov-mb-1">
       <p class="cagov-section-highlight cagov-mb-3">Design systems provide solutions to common problems digital teams face. They combine UX principles, interface components, and code. Teams work faster, design better, and focus on new problems instead of old ones.</p>
       <div class="cagov-cluster-3">
         <span>
@@ -92,7 +93,7 @@ permalink: /
 </div>
 
 {% set principleNumber = range(1, 9) | random %}
-{% set principle = principles[principleNumber] %}
+{% set principle = editable.principles[principleNumber] %}
 
 <div>
   <cagov-highlight-section>
@@ -109,9 +110,7 @@ permalink: /
             <h3>{{ principle.name }}</h3>
             <h4 class="mt-0">Principle {{ principleNumber }}</h4>
             <p>{{ principle.description }}</p>
-            <div class="wp-button">
-              <a class="btn-primary-outline" href="/principles/">See all the principles</a>
-            </div>
+            <a class="btn-primary-outline d-inline-block" href="/principles/">See all the principles</a>
           </div>
         </section>
       </div>
@@ -148,6 +147,9 @@ permalink: /
                   <option value="Send me updates on the Design System">
                     Send me updates on the Design System
                   </option>
+                  <option value="Test">
+                    Test
+                  </option>
                 </select>
               </div>
             </div>
@@ -171,20 +173,20 @@ permalink: /
     <div class="cagov-card-head">
       <img src="/img/example-cannabis.png" alt="cannabis.ca.gov website homepage" />
     </div>
-    <div class="cagov-card-body">
+    <div class="cagov-card-body pt-0">
       <h3>Department of Cannabis Control</h3>
       <p>This site is the first implementation of Design System components. It proved the design system model works for state departments.</p>
-      <p><a href="" class="cagov-border-link">Visit website</a></p>
+      <p><a href="https://cannabis.ca.gov/" class="cagov-border-link">Visit website</a></p>
     </div>
   </div>
   <div class="cagov-stack-card">
     <div class="cagov-card-head">
       <img src="/img/example-covid.png" alt="covid19.ca.gov website homepage" />
     </div>
-    <div class="cagov-card-body">
+    <div class="cagov-card-body pt-0">
       <h3>COVID19.ca.gov</h3>
       <p>We built the page feedback component so state departments could get direct thoughts from Californians. COVID19.ca.gov was the initial testing ground for this innovative component.</p>
-      <p><a href="" class="cagov-border-link">Visit website</a></p>
+      <p><a href="https://covid19.ca.gov/" class="cagov-border-link">Visit website</a></p>
     </div>
   </div>
 </div>

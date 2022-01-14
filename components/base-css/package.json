@@ -1,12 +1,13 @@
 {
   "name": "@cagov/ds-base-css",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "",
   "main": "src/_core.scss",
   "scripts": {
+    "build": "sass src/themes/_cannabis.scss dist/themes/cannabis.css && sass src/themes/_drought.scss dist/themes/drought.css && sass src/themes/_cagov.scss dist/themes/cagov.css",
+    "prepublishOnly": "npm run build && npm test",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
-    "build": "sass src/themes/_cannabis.scss dist/themes/cannabis.css && sass src/themes/_drought.scss dist/themes/drought.css && sass src/themes/_cagov.scss dist/themes/cagov.css"
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
   },
   "keywords": [],
   "author": "",
