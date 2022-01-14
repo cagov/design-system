@@ -83,11 +83,11 @@ All CSS variables define their own fallback value so you do not have to use addi
 ### Component-specific accessibility review
 
 - Make sure that add feedback `textarea` has `id` attribute that is referenced in its label’s `for` attribute.
-- Make sure that page feedback buttons and input fields have solid, 2px outline that uses `---highlight-color` variable on focused state.
+- Make sure that page feedback buttons and input fields have solid, 2px outline that uses `--highlight-color` variable on focused state.
 
 ### Standard accessibility review
 
-As a omponents in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
+As a component in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
 
 - Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
