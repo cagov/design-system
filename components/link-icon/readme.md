@@ -17,7 +17,7 @@ If a link is both external and a PDF, only the PDF icon will appear. It’s more
 
 ## When and how to use it
 
-This is a default component when using the Design System. Use it whenever you implement the Design System as it addresses some accessibility issues.
+This is a required component when using the Design System. Use it whenever you implement the Design System as it addresses some accessibility issues.
 
 Once an engineer has installed this feature, content creators do not need to take separate action to apply either link icon.
 
@@ -30,7 +30,7 @@ Do not modify the link icon when you install it.
 <html-preview>
 
 ```html preview
-<a href="link.pdf">This is pdf link.</a>
+<a href="link.pdf">This is a PDF link.</a>
 <a href="https://google.com">This is an external link.</a>
 ```
 
@@ -66,7 +66,7 @@ The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/U
 - `--primary-color`
 - `--primary-dark-color`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
 
 ```css
 :root {
@@ -89,27 +89,18 @@ svg ~, // links that are using SVG icons
 
 ## Accessibility
 
-### Review items specific to the link icon accessibility
+### Component-specific accessibility review
 
 - Make sure that link icon span has `aria-hidden="true”` attribute.
 
 ### Standard accessibility review
 
-Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+As a component in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
 
 - Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
 
 ## Progressive enhancement
 
