@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build:js": "rollup --config rollup.config.js",
-    "build": "npm run build:js && sass src/index.scss index.css",
+    "build": "sass src/index.scss index.css && npm run build:js",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",

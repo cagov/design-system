@@ -26,15 +26,6 @@ import styles from './css/index.css';
  * @cssprop --primary-color - Default value of #064E66, used for background
  */
 export class CAGovFeedback extends window.HTMLElement {
-  constructor() {
-    super();
-    if (document.querySelector('api-viewer')) {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('href', './src/css/index.css');
-      document.querySelector('api-viewer').shadowRoot.appendChild(link);
-    }
-  }
 
   connectedCallback() {
     const question = this.dataset.question

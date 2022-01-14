@@ -2,6 +2,10 @@
 
 `ds-dropdown-menu`
 
+# 2.0.0
+* The JS now contains the CSS
+* Publish to CDN on npm prepublish hook
+
 # 1.0.16
 * Fixed mobile search button accessiblity (in index.js).
 

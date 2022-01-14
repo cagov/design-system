@@ -340,10 +340,8 @@ This component uses the following data attributes. We provide this information t
 
 Run: `npm run start` to preview elements. This will launch local server with links to component demo pages.
 
-The documentation is generated using the <a href="https://github.com/webcomponents/custom-elements-manifest">custom elements manifest schema</a> draft standard <a href="https://github.com/runem/web-component-analyzer">analyzer</a> command. Here is an example run outside the accordion directory:
+The custom element manifest is generated using the <a href="https://github.com/webcomponents/custom-elements-manifest">custom elements manifest schema</a> draft standard <a href="https://github.com/runem/web-component-analyzer">analyzer</a> command. Here is an example run outside the accordion directory:
 
 ```
 wca analyze accordion --format json --outFile accordion/custom-elements.json
 ```
-
-Then the <a href="https://github.com/web-padawan/api-viewer-element">api viewer element</a> references the generated custom-elements.json and builds a live preview playground with docs.

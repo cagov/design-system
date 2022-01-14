@@ -26,12 +26,6 @@ var styles$2 =
 class CaGovAccordion extends window.HTMLElement {
   constructor() {
     super();
-    if (document.querySelector('api-viewer')) {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('href', './src/css/index.css');
-      document.querySelector('api-viewer').shadowRoot.appendChild(link);
-    }
   }
 
   connectedCallback() {
@@ -784,12 +778,6 @@ var styles$1 =
 class CAGovFeedback extends window.HTMLElement {
   constructor() {
     super();
-    if (document.querySelector('api-viewer')) {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('href', './src/css/index.css');
-      document.querySelector('api-viewer').shadowRoot.appendChild(link);
-    }
   }
 
   connectedCallback() {
@@ -1326,12 +1314,6 @@ var styles =
 class CAGovPagination extends window.HTMLElement {
   constructor() {
     super();
-    if (document.querySelector('api-viewer')) {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('href', './src/css/index.css');
-      document.querySelector('api-viewer').shadowRoot.appendChild(link);
-    }
   }
 
   // add jsdoc event

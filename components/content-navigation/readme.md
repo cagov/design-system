@@ -17,24 +17,7 @@ Do not use this component to replace or duplicate site navigation.
 <html-preview>
 
 ```html preview
-<cagov-content-navigation
-  data-selector=".main"
-  data-type="wordpress"
-  data-label="On this page"
-></cagov-content-navigation>
-
-<div class="main">
-  <h2>Hello world</h2>
-  <h2>Hello world 1</h2>
-  <h2>Hello world 2</h2>
-  <h2>Hello world 3</h2>
-  <h2>Hello world 4</h2>
-  <h2>Hello world 5</h2>
-  <h2>Hello world 6</h2>
-  <h2>Hello world 7</h2>
-  <h2>Hello world 8</h2>
-  <h2>Hello world 9</h2>
-</div>
+<cagov-content-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-content-navigation>
 ```
 
 </html-preview>
