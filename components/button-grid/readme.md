@@ -119,7 +119,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ### Component-specific accessibility review
 
-- Make sure that the button has solid, 2px outline that is using `--highlight-color` variable on focused state.
+- Make sure that the button has solid, 2px outline that uses `--highlight-color` variable on focused state.
 - Make sure that the svg arrow inside of each link has `aria-hidden=”true”` attribute.
 
 ### Standard accessibility review
