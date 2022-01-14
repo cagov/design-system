@@ -23,7 +23,6 @@ import styles from './css/index.css';
  *
  */
 export class CaGovAccordion extends window.HTMLElement {
-
   connectedCallback() {
     this.classList.add('prog-enhanced');
     this.expandTarget = this.querySelector('.accordion-card-container');

@@ -14,7 +14,6 @@ import styles from './css/index.css';
  * @cssprop --primary-color - Default value of #064E66, used for text, border color
  */
 export class CAGovPagination extends window.HTMLElement {
-
   connectedCallback() {
     this.currentPage = parseInt(
       this.dataset.currentPage ? this.dataset.currentPage : '1',

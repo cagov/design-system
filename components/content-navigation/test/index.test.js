@@ -13,7 +13,7 @@ describe('CAGOV Content navigation', function unitTest() {
     }
 
     const startHTML = await response.text();
-    console.log(startHTML)
+    console.log(startHTML);
 
     const el = await fixture(`<div>
     ${startHTML}

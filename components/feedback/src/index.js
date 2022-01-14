@@ -26,7 +26,6 @@ import styles from './css/index.css';
  * @cssprop --primary-color - Default value of #064E66, used for background
  */
 export class CAGovFeedback extends window.HTMLElement {
-
   connectedCallback() {
     const question = this.dataset.question
       ? this.dataset.question
