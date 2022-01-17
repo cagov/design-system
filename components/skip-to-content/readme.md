@@ -237,39 +237,30 @@ Do not modify skip to content when you install it.
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **Sample markup** from the component just after the opening body tag of your HTML.
+2. Add the **sample markup** from the component just after the opening body tag of your HTML.
 3. Add `id=”main-content"`to the HTML tag at the top of the main content of the page.
 
 ## Accessibility
 
-### Review items specific to the skip to content accessibility
+### Component-specific accessibility review
 
-- Make sure that skip to the content link is the first item to appears on focus when you tab through a webpage and has solid, 2px outline that is using `—-highlight-color` variable.
+- Make sure the skip to the content link is the first item to appear on focus when you tab through a webpage and has solid, 2px outline that uses `--highlight-color` variable.
 - Make sure that skip to content id reference `href=”#main-content”` is matching actual `id` attribute in main content div.
 
 ### Standard accessibility review
 
-Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+As a component in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
 
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
 
 ## Progressive enhancement
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+## Content model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 

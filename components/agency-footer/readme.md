@@ -15,12 +15,11 @@ The site footer is a set of links that go on all the pages of the website. It is
 
 ## When and how to use it
 
-The site footer goes on all pages of your website. This is a required component when using the Design System.
+The site footer goes on all pages of your website.
 
 Examples of links that go in the site footer include:
 
 - General department info
-- Contact information
 - Department accessibility information
 - Careers page
 
@@ -35,6 +34,8 @@ Do not use the site footer:
 - For primary calls to action
 - As secondary navigation
 - To link to information that meets primary user needs
+
+Do not put any contact information in the site footer. This goes in the [statewide footer](/components/statewide-footer/readme/)
 
 Do not include more than one social media account per platform.
 
@@ -229,21 +230,21 @@ Do not include more than one social media account per platform.
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **Sample markup** from the component to your HTML.
-3. Place your own site links within the `<div class="footer-secondary-links">` element. Your social media links go within `<div class="footer-social-links">`. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
+2. Add the **sample markup** from the component to your HTML.
+3. Place your own site links within the `<div class="footer-secondary-links">` element. Your social media links go within `<div class="footer-social-links">`. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-color`
-- `—primary-dark-color`
-- `—primary-hover-color`
-- `—highlight-color`
-- `—w-lg`
-- `—gray-100`
+- `--primary-dark-color`
+- `--primary-hover-color`
+- `--highlight-color`
+- `--w-lg`
+- `--gray-100`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
 
 ```css
 :root {
@@ -253,7 +254,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ## Accessibility
 
-### Review items specific to the site footer accessibility
+### Component-specific accessibility review
 
 - Make sure that site footer's section tag has `aria-label="agency footer"` attribute is there.
 - If you use footer logo image in your site footer make sure image has alt text.
@@ -262,25 +263,19 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ### Standard accessibility review
 
-Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+As a component in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
 
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
+-
 
 ## Progressive enhancement
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+
+<a name="content-model"></a>
 
 ## Content model
 

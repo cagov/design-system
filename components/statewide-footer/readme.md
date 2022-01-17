@@ -8,18 +8,15 @@ It always includes:
 - A set of standard links:
   - Conditions of use
   - Privacy policy
-  - Accessibility (policies)
+  - Accessibility
+  - Contact page for your organization
 - The copyright notice. It appears at the very bottom of the statewide footer.
-
-You can include additional links, like:
-
-- Contact us
-- Statewide accessibility information
-- Legal content
 
 ## When and how to use it
 
-Always use the statewide footer. Place it at the bottom of the website, below the agency footer and all other content.
+The statewide footer is a required Design System component. Place it at the bottom of the website, below the agency footer and all other content.
+
+Provide a contact page that's relevant to your site. Do not send them to the general [CA.gov contact page](https://ca.gov/contact/) unless it's appropriate to do so.
 
 Do not add other types of links to the statewide footer. Add them to the site footer instead.
 
@@ -120,22 +117,22 @@ Do not combine the statewide footer with department logo, department links, or s
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **Sample markup** from the component to your HTML.
+2. Add the **sample markup** from the component to your HTML.
 3. Adjust links as needed.
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-dark-color`
 - `--w-lg`
 - `--black`
 - `--gray-200`
 - `--primary-color`
-- `—-primary-dark-color`
+- `--primary-dark-color`
 - `--highlight-color`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
 
 ```css
 :root {
@@ -145,30 +142,21 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ## Accessibility
 
-### Review items specific to the statewide footer accessibility
+### Component-specific accessibility review
 
-- Make sure that statewide footer’s links have solid, 2px outline that is using `—-highlight-color` variable on focused state.
+- Make sure that statewide footer’s links have solid, 2px outline that uses `--highlight-color` variable on focused state.
 - Make sure that cagov-logo link has `title` or `aria-label` attribute in it, so screen readers users would understand what is that link about.
 - Make sure that svg icon inside of the cagov-logo has `aria-hidden=”true”` attribute, so it is hidden from assistive technologies.
 - Make sure that all statewide footer elements are contained inside of the `footer` tag, which is a important semantic landmark for assistive technologies.
 
 ### Standard accessibility review
 
-Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+As a component in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
 
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
 
 ## Progressive enhancement
 
@@ -180,14 +168,12 @@ The content for this component is fixed and can be used as-is, as described in t
 
 For the URL links, refer to the latest version of the component for the most up-to-date URLs.
 
-These links are managed by [ca.gov](http://ca.gov). Additional information about these requirements can be found in the CA State Webstandards.
+These links are managed by [ca.gov](http://ca.gov). Additional information about these requirements can be found in the CA State Web Standards.
 
-| Page                        | URL                                             | Required  | Order |
-| --------------------------- | ----------------------------------------------- | --------- | ----- |
-| CA.gov home                 | https://www.ca.gov                              | Yes       | 1     |
-| Conditions of use           | https://www.ca.gov/use/                         | Yes       | 2     |
-| Privacy policy              | https://www.ca.gov/privacy-policy/              | Yes       | 3     |
-| Accessibility               | https://www.ca.gov/accessibility/               | Yes       | 4     |
-| Contact us                  | URL to Contact page for your organization       | As needed |       |
-| Accessibility certification | URL to the required certified, hosted PDF file. | As needed |       |
-| Legal content               |                                                 | As needed |       |
+| Page                        | URL                                       | Required  | Order |
+| --------------------------- | ----------------------------------------- | --------- | ----- |
+| CA.gov home                 | https://www.ca.gov                        | Yes       | 1     |
+| Conditions of use           | https://www.ca.gov/use/                   | Yes       | 2     |
+| Privacy policy              | https://www.ca.gov/privacy-policy/        | Yes       | 3     |
+| Accessibility               | https://www.ca.gov/accessibility/         | Yes       | 4     |
+| Contact us                  | URL to Contact page for your organization | Yes       | 5     |

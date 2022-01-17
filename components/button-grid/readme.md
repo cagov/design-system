@@ -1,12 +1,12 @@
 # Link grid
 
-The link grid organizes links that function as calls to action (CTAs) or highlight topics. This helps people find priority user needs and topics. The grid can also be used by content creators to lead users to specific content.
+The link grid organizes links that function as calls to action (CTAs) or highlight topics. It guides people to important services and topics. The grid can also be used by content creators to lead users to specific content.
 
 When viewed on a computer, the grid is a maximum of 3 links wide. On mobile devices, this grid collapses into a single column.
 
 ## When and how to use it
 
-Use the link grid to highlight top user needs. Organize the links in a way that makes sense for people’s primary needs.
+Use the link grid to highlight the top things people need. Organize the links in a way that makes sense for people’s primary needs.
 
 The link grid is typically used on the homepage of a site so visitors can find and get to useful content quickly.
 
@@ -95,20 +95,19 @@ Because the grid collapses into one column on mobile, large grids may occupy sev
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **Sample markup** from the component to your HTML.
-
-3. Modify the **Sample markup** with your URLs and card text as needed. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
+2. Add the **sample markup** from the component to your HTML.
+3. Modify the **sample markup** with your URLs and card text as needed. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-color`
 - `—highlight-color`
-- `—gray-100`
-- `—gray-300`
+- `--gray-100`
+- `--gray-300`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
 
 ```css
 :root {
@@ -118,34 +117,27 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ## Accessibility
 
-### Review items specific to the link grid accessibility
+### Component-specific accessibility review
 
-- Make sure that button has solid, 2px outline that is using `—-highlight-color` variable on focused state.
-- Make sure that svg arrow inside of each link has `aria-hidden=”true”` attribute.
+- Make sure that the button has solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that the svg arrow inside of each link has `aria-hidden=”true”` attribute.
 
 ### Standard accessibility review
 
-Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+As a component in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
 
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile.
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
 
 ## Progressive enhancement
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
 
-## Content Model
+<a name="content-model"></a>
+
+## Content model
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 

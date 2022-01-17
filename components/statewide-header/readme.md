@@ -9,7 +9,7 @@ It includes:
 
 ## When and how to use it
 
-Always use the statewide header. Place it at the top of the website, above the department branding (site header) and all other content.
+The statewide footer is a required Design System component. Place it at the top of the website, above the department branding (site header) and all other content.
 
 If you want to include a translation widget in the statewide header, [contact us through the Support page](/support) to find out how you can do so.
 
@@ -105,19 +105,19 @@ Do not combine the statewide header with depatment name or logo, navigation, or 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **Sample markup** from the component to your HTML.
+2. Add the **sample markup** from the component to your HTML.
 
 ## CSS variables
 
-The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component
+The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--primary-color`
-- `—-primary-dark-color`
+- `--primary-dark-color`
 - `--secondary-color`
 - `--gray-200`
 - `--gray-100`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
 
 ```css
 :root {
@@ -127,29 +127,20 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ## Accessibility
 
-### Review items specific to the statewide header accessibility
+### Component-specific accessibility review
 
-- Make sure that statewide header’s links have solid, 2px outline that is using `—-highlight-color` variable on focused state.
+- Make sure that statewide header’s links have solid, 2px outline that uses `—-highlight-color` variable on focused state.
 - Make sure that cagov-logo link has `title` or `aria-label` attribute in it, so screen readers users would understand what is that link about.
 - Make sure that svg icon inside of the cagov-logo has `aria-hidden=”true”` attribute, so it is hidden from assistive technologies.
 
 ### Standard accessibility review
 
-Components in Alpha status must pass the following accessibility reviews every time a new version is published:
+As a component in Alpha status, this component must pass the following accessibility reviews every time a new version is published:
 
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
+- Tested with the [axe](https://www.deque.com/axe/) accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
-
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
 
 ## Progressive enhancement
 

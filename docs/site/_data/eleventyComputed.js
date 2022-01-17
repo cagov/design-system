@@ -1,4 +1,4 @@
-const defaults = require('./defaults.json');
+const defaults = require('./editable/defaults.json');
 const root = require('./root.js');
 
 const buildURL = (path, domain) => {
