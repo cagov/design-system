@@ -17,24 +17,7 @@ Do not use this component to replace or duplicate site navigation.
 <html-preview>
 
 ```html preview
-<cagov-content-navigation
-  data-selector=".main"
-  data-type="wordpress"
-  data-label="On this page"
-></cagov-content-navigation>
-
-<div class="main">
-  <h2>Hello world</h2>
-  <h2>Hello world 1</h2>
-  <h2>Hello world 2</h2>
-  <h2>Hello world 3</h2>
-  <h2>Hello world 4</h2>
-  <h2>Hello world 5</h2>
-  <h2>Hello world 6</h2>
-  <h2>Hello world 7</h2>
-  <h2>Hello world 8</h2>
-  <h2>Hello world 9</h2>
-</div>
+<cagov-content-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-content-navigation>
 ```
 
 </html-preview>
@@ -53,9 +36,8 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. `npm i @cagov/ds-content-navigation`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
-3. Include **SCSS** in your Sass compiler.
-4. Add the **sample markup** to your HTML.
-5. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
+3. Add the **sample markup** to your HTML.
+4. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 

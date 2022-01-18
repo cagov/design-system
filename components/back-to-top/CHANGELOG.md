@@ -2,6 +2,8 @@
 
 `ds-back-to-to`
 
+# 2.0.0
+* bundle the CSS in the JS
 # 1.0.2
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.

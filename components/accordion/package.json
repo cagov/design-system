@@ -1,11 +1,11 @@
 {
   "name": "@cagov/ds-accordion",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Accordions are expandable sections of content. Each section contains a heading (H2 or H3), a plus button (+), and more body text when opened.",
   "main": "dist/index.js",
   "scripts": {
     "build:js": "rollup --config rollup.config.js",
-    "build": "npm run build:js && sass src/index.scss src/css/index.css",
+    "build": "sass src/index.scss src/css/index.css && npm run build:js",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",

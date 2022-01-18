@@ -15,7 +15,28 @@
 
 <body>
 
-  <cagov-feedback data-endpoint-url="https://fa-go-feedback-001.azurewebsites.net/sendfeedback"></cagov-feedback>
+<div class="component-test-container">
+</div>
+
+  <div class="main">
+    <h2>Hello world</h2>
+    <h2>Hello world 1</h2>
+    <h2>Hello world 2</h2>
+    <h2>Hello world 3</h2>
+    <h2>Hello world 4</h2>
+    <h2>Hello world 5</h2>
+    <h2>Hello world 6</h2>
+    <h2>Hello world 7</h2>
+    <h2>Hello world 8</h2>
+    <h2>Hello world 9</h2>
+  </div>
+
+
+<script>
+  fetch('./template.html')
+    .then(response => response.text())
+    .then((string) => { document.querySelector('.component-test-container').innerHTML = string; });
+</script>
 
 </body>
 

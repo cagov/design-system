@@ -1,4 +1,5 @@
-import styles from '../index.css';
+var styles =
+  '/* CONTENT NAVIGATION */\nsidebar cagov-content-navigation .label {\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28.2px;\n  padding: 0;\n  margin: 0;\n  padding-bottom: 16px;\n}\n\nsidebar cagov-content-navigation ul,\nsidebar cagov-content-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),\nsidebar cagov-content-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {\n  margin: 0;\n  text-indent: 0;\n  padding: 0;\n}\n\nsidebar cagov-content-navigation ul li {\n  padding-top: 14px;\n  padding-bottom: 18px;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  border-bottom: 1px solid var(--gray-300, #e1e0e3);\n  line-height: 28.2px;\n  list-style: none;\n}\nsidebar cagov-content-navigation ul li:first-child {\n  border-top: 1px solid var(--gray-300, #e1e0e3);\n}\nsidebar cagov-content-navigation ul li a {\n  text-decoration: none;\n}\nsidebar cagov-content-navigation ul li a:hover {\n  text-decoration: underline;\n}\n\n@media only screen and (max-width: 992px) {\n  cagov-content-navigation .label {\n    display: none;\n  }\n\n  .sidebar-container {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n  }\n\n  cagov-content-navigation ul li a {\n    font-size: 16px;\n    line-height: 24px;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 /**
  * Content Navigation web component
@@ -337,10 +338,6 @@ class CAGovContentNavigation extends window.HTMLElement {
 
   getHeaderTags() {
     const { selector } = this.dataset;
-    // const { editor } = this.dataset;
-    // const { label } = this.dataset;
-    // let display = this.dataset.display;
-    const display = 'render';
     // const { callback } = this.dataset; // Editor only right now
 
     const h = ['h2'];
@@ -349,7 +346,7 @@ class CAGovContentNavigation extends window.HTMLElement {
       // Pull out the header tags, in order & render as links with anchor tags
       // auto convert h tags with tag names
       if (selector !== undefined && selector !== null) {
-        if (display === 'render') {
+        {
           const selectorContent = document.querySelector(selector);
           if (selectorContent !== null) {
             const outline = CAGovContentNavigation.outliner(selectorContent);

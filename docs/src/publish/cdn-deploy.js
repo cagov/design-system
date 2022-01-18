@@ -11,6 +11,10 @@ const currentPackageInfo = JSON.parse(
 const packageName = currentPackageInfo.name.replace('@cagov/', '');
 const packageVersion = currentPackageInfo.version;
 const keyPrefix = `components/${packageName}/v${packageVersion}/dist/`;
+const contentTypeMap = new Map();
+contentTypeMap.set('js', 'text/javascript');
+contentTypeMap.set('css', 'text/css');
+contentTypeMap.set('json', 'application/json');
 
 const directoryToUpload = `${process.cwd()}/dist`;
 const bucketName = 'cdn.designsystem.webstandards.ca.gov';
@@ -40,6 +44,12 @@ const uploadToS3 = (dir, filePath) =>
       Key: key,
       Body: fs.readFileSync(filePath),
     };
+    // get file extenstion, match to content type, tell S3 or it may apply invalid mime type interfering with usage
+    const fileExt = key.split('.').pop();
+    if (contentTypeMap.get(fileExt) !== undefined) {
+      params.ContentType = contentTypeMap.get(fileExt);
+    }
+
     s3.putObject(params, (err) => {
       if (err) {
         reject(err);
