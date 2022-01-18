@@ -88,9 +88,11 @@ class CAGOVOverlayNav extends window.HTMLElement {
       document
         .querySelector('.search-container--small')
         .classList.add('hidden-search');
-      document
-        .querySelector('.cagov-nav.mobile-search .search-btn')
-        .setAttribute('aria-expanded', 'false');
+      if (mobileSearchBtn) {
+        document
+          .querySelector('.cagov-nav.mobile-search .search-btn')
+          .setAttribute('aria-expanded', 'false');
+      }
       document
         .querySelector('.search-container--small .site-search input')
         .setAttribute('tabindex', '-1');
