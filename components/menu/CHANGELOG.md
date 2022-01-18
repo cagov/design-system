@@ -2,6 +2,9 @@
 
 `ds-dropdown-menu`
 
+# 2.0.1
+* Add defensive check for mobile search element
+
 # 2.0.0
 * The JS now contains the CSS
 * Publish to CDN on npm prepublish hook
