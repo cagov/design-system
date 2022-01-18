@@ -1,3 +1,8 @@
+---
+title: Content style guide
+description: The State of California Design System uses these principles to create great content.
+---
+
 # Content style guide
 
 Great content takes work. The good news is that anyone can do it.
@@ -7,7 +12,7 @@ Great content takes work. The good news is that anyone can do it.
 These 7 principles contain strategies and tips to help you write excellent content.
 
 * [Focus on user needs and principles](/style/content/focus-on-user-needs-services/)
-* [Know your audience and meet them where they are](/style/content/know-your-audience/)
+* [Meet your audience where they are](/style/content/meet-your-audience-where-they-are/)
 * [Build in accessibility from the start](/style/content/build-accessibility-from-start/)
 * [Be concise](/style/content/be-concise/)
 * [Write in plain language](/style/content/write-in-plain-language/)
