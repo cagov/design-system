@@ -1,11 +1,12 @@
 const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
 const hljs = require('highlight.js');
 
 const md = markdownIt({
   html: true,
   breaks: true,
   linkify: true,
-});
+}).use(markdownItAnchor);
 
 /**
  * Encloses syntax-highlighted code blocks in <pre> and <code> tags.
