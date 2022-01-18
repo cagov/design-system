@@ -294,9 +294,8 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. `npm i @cagov/ds-accordion`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
-3. Include **SCSS** in your Sass compiler.
-4. Add the **sample markup** to your HTML.
-5. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
+3. Add the **sample markup** to your HTML.
+4. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 
@@ -305,11 +304,7 @@ The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/U
 - `--primary-color`
 - `--hover-color`
 
-<<<<<<< HEAD
-All CSS variables define their own fallback value, so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “—primary-color”:
-=======
 All CSS variables define their own fallback value, so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
->>>>>>> main
 
 ```css
 :root {
@@ -335,18 +330,6 @@ As a component in Alpha status, this component must pass the following accessibi
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 
-<<<<<<< HEAD
-Components in Beta status must pass the following accessibility reviews every time a new version is published:
-
-- Tested with the `[axe](https://www.deque.com/axe/)` accessibility tool and passes all automated [WCAG](https://www.w3.org/TR/WCAG21/) Level AA checks
-- Reviewed with the VoiceOver screen reader on desktop
-- Reviewed with the [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en) screen reader on mobile
-- Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
-- Reviewed component layout on a variety of screen sizes
-- Reviewed component display using content in English, Spanish, Simplified Chinese, German, and Arabic (using right to left display (RTL))
-
-=======
->>>>>>> main
 ## Progressive enhancement
 
 This component defaults to open. If no script on the page executes, the visitor will not be blocked from viewing content. Once the JavaScript executes, the accordion collapses to the desired state by default. If you want the accordion to be open instead of closed when the page loads, add the attribute `aria-expanded="true"`.

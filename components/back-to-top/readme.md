@@ -41,9 +41,8 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. `npm i @cagov/ds-back-to-top`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
-3. Include **SCSS** in your Sass compiler.
-4. Add the **sample markup** to your HTML.
-5. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
+3. Add the **sample markup** to your HTML.
+4. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 
