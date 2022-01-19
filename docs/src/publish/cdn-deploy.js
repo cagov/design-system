@@ -56,7 +56,7 @@ addToFilePaths(cssToUpload);
 const uploadToS3 = (dir, filePath) =>
   new Promise((resolve, reject) => {
     let key = keyPrefix + filePath.split(`${dir}/`)[1];
-    if(filePath.indexOf('.css') > -1) {
+    if (filePath.indexOf('.css') > -1) {
       key = cssKey;
     }
     const params = {
