@@ -125,4 +125,8 @@ md.renderer.rules.fence = (tokens, idx) => {
   return defaultWrap(rawCode);
 };
 
+/** Override table markup so we can apply a parent class. */
+md.renderer.rules.table_open = () => '<div class="cagov-table"><table>';
+md.renderer.rules.table_close = () => '</table></div>';
+
 module.exports = md;
