@@ -23,7 +23,7 @@ const bucketName = 'cdn.designsystem.webstandards.ca.gov';
 const filePaths = [];
 
 function addToFilePaths(filePath) {
-  if(fs.existsSync(filePath)) {
+  if (fs.existsSync(filePath)) {
     const stat = fs.statSync(filePath);
     if (stat.isFile()) {
       filePaths.push(filePath);
@@ -31,11 +31,9 @@ function addToFilePaths(filePath) {
   }
 }
 
-
-
 // get file paths
 const getFilePaths = (dir) => {
-  if(fs.existsSync(dir)) {
+  if (fs.existsSync(dir)) {
     fs.readdirSync(dir).forEach((name) => {
       const filePath = path.join(dir, name);
       const stat = fs.statSync(filePath);
@@ -44,7 +42,7 @@ const getFilePaths = (dir) => {
       } else {
         addToFilePaths(filePath);
       }
-    });  
+    });
   }
 };
 
@@ -79,7 +77,10 @@ const uploadToS3 = (dir, filePath) =>
   });
 
 const uploadPromises = filePaths.map((filePath) =>
-  uploadToS3( (filePath.indexOf('.css') > -1) ? cssToUpload : directoryToUpload, filePath),
+  uploadToS3(
+    filePath.indexOf('.css') > -1 ? cssToUpload : directoryToUpload,
+    filePath,
+  ),
 );
 Promise.all(uploadPromises)
   .then((result) => {
