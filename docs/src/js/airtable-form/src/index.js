@@ -9,6 +9,8 @@ class CaGovAirtableForm extends window.HTMLElement {
     super();
     const defaultOptions = {
       parentSelector: 'cagov-airtable-form',
+      formSelector: 'cagov-airtable-form form',
+      responseSelector: 'cagov-airtable-form .response',
       formFieldSelector: '.form-field [data-airtable-field]',
       formSubmitSelector: '.airtable-form-submit[data-airtable-form-id]',
     };
@@ -44,8 +46,9 @@ class CaGovAirtableForm extends window.HTMLElement {
   async submitForm() {
     const serverResponse = await CaGovAirtableFormSubmit.init(this.options);
     console.log(serverResponse);
-    document.querySelector(this.options.parentSelector).innerHTML =
+    document.querySelector(this.options.responseSelector).innerHTML =
       this.options.responseSuccess;
+    document.querySelector(this.options.formSelector).innerHTML = "";
   }
 }
 

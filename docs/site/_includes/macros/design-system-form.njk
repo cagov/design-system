@@ -1,12 +1,13 @@
-{% macro contactUsForm() %}
+{% macro designSystemContact(pageSource) %}
 <cagov-airtable-form
 data-airtable-service-endpoint="https://fa-go-design-system-cagov-airtable-form.azurewebsites.net/api/AirtableFormTrigger?code=Zu6Ck/103KrMh2mp/7CANtN3dMrtHMpjdhayZm82OnGava5/A1urvQ=="
 data-airtable-database="app4B5KqaCTSHAdCS"
 data-airtable-table="Contact us responses"
 data-response-success="Thanks!
-We'll be in touch soon. Until then, take a look at our <a href=''>digital product development principles</a> to start thinking about how you can work with the Design System."
-data-response-error="Uh oh! Looks like there was a problem connecting and <strong>your request was not submitted</strong>. Please try again later, and if it does not resolve, please contact us on <a href='https://github.com/cagov/design-system/issues/new?assignees=&labels=Support&template=02-support.md&title=Support%3A+'>Github</a>.<br/> Until then, take a look at our <a href=''>digital product development principles</a> to start thinking about how you can work with the Design System.">
-    <div id="interest-form">
+We'll be in touch soon. Until then, take a look at our <a href='/principles'>digital product development principles</a> to start thinking about how you can work with the Design System."
+data-response-error="Uh oh! Looks like there was a problem connecting and <strong>your request was not submitted</strong>. Please try again later, and if it does not resolve, please contact us on <a href='https://github.com/cagov/design-system/issues/new?assignees=&labels=Support&template=02-support.md&title=Support%3A+'>Github</a>.<br/> Until then, take a look at our <a href='/principles'>digital product development principles</a> to start thinking about how you can work with the Design System.">
+<div class="response"></div>
+<form id="contact-us-form">
     <div class="required form-field">
         <label class="required" for="name">Your name</label>
         <input type="text" id="name" name="name" data-airtable-field="Name" placeholder="Name" required>
@@ -32,9 +33,9 @@ data-response-error="Uh oh! Looks like there was a problem connecting and <stron
         </div>
     </div>
     <div class="form-field">
-        <label for="request">About yourself</label>
+        <label for="about-yourself">About yourself</label>
         <div class="form-select">
-        <select id="request" data-airtable-field="About yourself">
+        <select id="about-yourself" data-airtable-field="About yourself">
             <option value="Content designer">
             Content designer
             </option>
@@ -54,12 +55,16 @@ data-response-error="Uh oh! Looks like there was a problem connecting and <stron
         </div>
     </div>
     <div class="form-field">
-        <label for="request">Feedback / Comments</label>
-        <textarea name="Message"></textarea>
+        <label for="comments">Feedback / Comments</label>
+        <textarea name="comments" data-airtable-field="Comments"></textarea>
+    </div>
+    <div class="hidden form-field">
+        <label for="form-source">Form source</label>
+        <input type="hidden" id="form-source" name="form-source" data-airtable-field="Form source" value="{{ pageSource | safe }}" required>
     </div>
     <div class="wp-block-button">
         <button class="wp-block-button__link airtable-form-submit" id="airtable-form-submit">Submit</button>
     </div>
-    </div>
+</form>
 </cagov-airtable-form>
 {% endmacro %}

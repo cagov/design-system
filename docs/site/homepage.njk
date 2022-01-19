@@ -119,16 +119,18 @@ title: California Design System
 </div>
 
 <div class="full-bleed-content-area get-involved">
-    <div class="get-involved-content">
+    <div class="get-involved-content homepage-form">
       <h2>Be a part of the Design System</h2>
       <p>We'd love to talk about how we can partner with you.</p>
       <div class="get-involved-content-form">
-      {%- from "macros/contact-us-form.njk" import contactUsForm -%}
-      {{ contactUsForm() }}
+      {%- from "macros/design-system-form.njk" import designSystemContact -%}
+      {{ designSystemContact("Home page") }}
       </div>
     </div>
+    <div class="get-involved-image">
+      <img src="/img/desk-work-sketch.svg" alt="sketch of person working at computer desk">
+    </div>
 </div>
-
 
 <h2>Who's using the Design System</h2>
 <div class="cagov-cluster-big-2">

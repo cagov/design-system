@@ -42,12 +42,15 @@
 .cagov-bold {
   font-weight: bold;
 }
-
 .get-involved {
   padding-top: 1rem;
   padding-bottom: 1.5rem;
   gap: 2rem;
   flex-wrap: wrap-reverse;
+  
+  &.form-background-light {
+    background-color: var(--gray-100, #F9F9FA);
+  }
   &-content {
     flex-grow: 2;
   }
@@ -87,6 +90,9 @@
   }
   .form-field {
     margin-bottom: 1rem;
+  }
+  .form-field.hidden{
+    display: none;
   }
   .form-select {
     position: relative;
