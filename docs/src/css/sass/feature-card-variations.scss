@@ -42,12 +42,15 @@
 .cagov-bold {
   font-weight: bold;
 }
-
 .get-involved {
   padding-top: 1rem;
   padding-bottom: 1.5rem;
   gap: 2rem;
   flex-wrap: wrap-reverse;
+  
+  &.form-background-light {
+    background-color: var(--gray-100, #F9F9FA);
+  }
   &-content {
     flex-grow: 2;
   }
@@ -63,16 +66,33 @@
   label, input, select {
     display: block;
   }
-  input, select {
+  input, select, textarea {
     padding: .5rem;
     border-radius: 5px;
+    border: 1px var(--gray-400, #D3D2D6) solid;
+  }
+  input, textarea {
+    width: 100%;
+    // max-width: 660px;
   }
   select {
     appearance: none;
-    width: 100%;
+    width: calc(100% + 1px);
+    // max-width: 660px;
+  }
+  .required label {
+      font-weight: bold;
+  }
+  .required label:after {
+      color: var(--secondary-dark-color, red);
+      content: ' *';
+      display:inline;
   }
   .form-field {
     margin-bottom: 1rem;
+  }
+  .form-field.hidden{
+    display: none;
   }
   .form-select {
     position: relative;

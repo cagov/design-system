@@ -10,3 +10,4 @@ import '../../../components/pagination/dist/index.js';
 import '../../../components/link-icon/src/index.js';
 
 import './component-sidebar.js';
+import './airtable-form/src/index.js';

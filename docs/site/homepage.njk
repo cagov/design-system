@@ -118,54 +118,19 @@ title: California Design System
   </cagov-highlight-section>
 </div>
 
-<div class="full-bleed full-bleed--highlight2">
-  <div class="full-bleed-content-area get-involved">
-    <div class="get-involved-content">
+<div class="full-bleed-content-area get-involved">
+    <div class="get-involved-content homepage-form">
       <h2>Be a part of the Design System</h2>
       <p>We'd love to talk about how we can partner with you.</p>
       <div class="get-involved-content-form">
-        <cagov-airtable-form
-          data-airtable-service-endpoint="https://fa-go-design-system-cagov-airtable-form.azurewebsites.net/api/AirtableFormTrigger?code=Zu6Ck/103KrMh2mp/7CANtN3dMrtHMpjdhayZm82OnGava5/A1urvQ=="
-          data-airtable-database="app4B5KqaCTSHAdCS"
-          data-airtable-table="01 - Design System Launch"
-          data-response-success="Submitted"
-          data-response-error="Nope"
-        >
-          <form>
-            <div class="form-field">
-              <label for="name">Your name</label>
-              <input type="text" id="name" name="name" data-airtable-field="Name" placeholder="Name" required>
-            </div>         
-            <div class="form-field">
-              <label for="email">Your email</label>
-              <input type="email" id="email" name="email" data-airtable-field="Email" placeholder="Email address" required>
-            </div>
-            <div class="form-field">
-              <label for="request">How can we help you?</label>
-              <div class="form-select">
-                <select id="request" data-airtable-field="Request">
-                  <option value="Send me updates on the Design System">
-                    Send me updates on the Design System
-                  </option>
-                  <option value="Test">
-                    Test
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div class="wp-block-button">
-              <button class="wp-block-button__link airtable-form-submit" id="airtable-form-submit">Submit</button>
-            </div>
-          </form>
-        </cagov-airtable-form>
+      {%- from "macros/design-system-form.njk" import designSystemContact -%}
+      {{ designSystemContact("Home page") }}
       </div>
     </div>
     <div class="get-involved-image">
       <img src="/img/desk-work-sketch.svg" alt="sketch of person working at computer desk">
     </div>
-  </div>
 </div>
-
 
 <h2>Who's using the Design System</h2>
 <div class="cagov-cluster-big-2">
