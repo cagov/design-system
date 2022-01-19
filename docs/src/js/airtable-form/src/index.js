@@ -48,7 +48,7 @@ class CaGovAirtableForm extends window.HTMLElement {
     console.log(serverResponse);
     document.querySelector(this.options.responseSelector).innerHTML =
       this.options.responseSuccess;
-    document.querySelector(this.options.formSelector).innerHTML = "";
+    document.querySelector(this.options.formSelector).innerHTML = '';
   }
 }
 
