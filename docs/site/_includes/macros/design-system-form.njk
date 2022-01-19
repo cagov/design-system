@@ -19,7 +19,7 @@ data-response-error="Uh oh! Looks like there was a problem connecting and <stron
     <div class="form-field">
         <label for="request">How can we help you?</label>
         <div class="form-select">
-        <select id="request" data-airtable-field="Request">
+        <select id="request" name="request" data-airtable-field="Request">
             <option value="Send me updates on the Design System">
             Send me updates on the Design System
             </option>
@@ -35,7 +35,7 @@ data-response-error="Uh oh! Looks like there was a problem connecting and <stron
     <div class="form-field">
         <label for="about-yourself">About yourself</label>
         <div class="form-select">
-        <select id="about-yourself" data-airtable-field="About yourself">
+        <select id="about-yourself" name="about-yourself" data-airtable-field="About yourself">
             <option value="Content designer">
             Content designer
             </option>
@@ -56,7 +56,7 @@ data-response-error="Uh oh! Looks like there was a problem connecting and <stron
     </div>
     <div class="form-field">
         <label for="comments">Feedback / Comments</label>
-        <textarea name="comments" data-airtable-field="Comments"></textarea>
+        <textarea id="comments" name="comments" data-airtable-field="Comments"></textarea>
     </div>
     <div class="hidden form-field">
         <label for="form-source">Form source</label>
