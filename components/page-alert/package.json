@@ -2,11 +2,13 @@
   "name": "@cagov/ds-page-alert",
   "version": "1.0.2",
   "description": "",
-  "main": "index.css",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "build": "sass src/index.scss index.css",
-    "prepublishOnly": "npm run build && npm test",
+    "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
+    "html:preview": "node ../../docs/src/publish/dynamic-html.js",
+    "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve",
     "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
   },

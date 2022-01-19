@@ -12,7 +12,7 @@ describe('CAGOVRegulatoryOutline', () => {
     document.getElementsByTagName('head')[0].appendChild(csslink);
 
     // import our element starting HTML from the component's template file
-    const response = await fetch('../src/template.html');
+    const response = await fetch('../template.html');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

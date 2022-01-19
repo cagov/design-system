@@ -32,6 +32,7 @@ Do not modify the link icon when you install it.
 ```html preview
 <a href="link.pdf">This is a PDF link.</a>
 <a href="https://google.com">This is an external link.</a>
+
 ```
 
 </html-preview>
