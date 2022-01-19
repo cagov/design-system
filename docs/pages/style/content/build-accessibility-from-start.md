@@ -1,3 +1,8 @@
+---
+title: Build in accessibility from the start
+description: Accessibility goes beyond the technical components of a website. It’s about including everyone who has a right to information.
+---
+
 # Build in accessibility from the start
 
 We write for all Californians, not most Californians.
@@ -87,7 +92,7 @@ Link text like **click here**, **read more**, and **more** are not useful to peo
 
 ### Add alt text to images
 
-Screen readers look for alt text. Add useful alt text to images so screen readers can describe images to people who use them.
+Screen readers look for alt text. [Add useful alt text to images](https://accessibility.huit.harvard.edu/describe-content-images) so screen readers can describe images to people who use them.
 
 ## Share your thoughts
 
