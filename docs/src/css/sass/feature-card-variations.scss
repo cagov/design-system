@@ -63,13 +63,19 @@
   label, input, select {
     display: block;
   }
-  input, select {
+  input, select, textarea {
     padding: .5rem;
     border-radius: 5px;
+    border: 1px var(--gray-400, #D3D2D6) solid;
+  }
+  input, textarea {
+    width: 100%;
+    // max-width: 660px;
   }
   select {
     appearance: none;
-    width: 100%;
+    width: calc(100% + 1px);
+    // max-width: 660px;
   }
   .form-field {
     margin-bottom: 1rem;
