@@ -79,6 +79,7 @@ export class CaGovBackToTop extends window.HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === 'data-hide-after') {
+      console.log('changing hide timer to '+newValue)
       this.options.hideAfter = Number(newValue);
     }
     if (name === 'data-label') {
@@ -114,6 +115,7 @@ export class CaGovBackToTop extends window.HTMLElement {
       returnTopButton.removeAttribute('tabindex');
 
       timer = setTimeout(() => {
+        console.log('setting timer to '+this.options.hideAfter)
         returnTopButton.classList.remove('is-visible');
         returnTopButton.setAttribute('aria-hidden', 'true');
         returnTopButton.setAttribute('tabindex', '-1');
