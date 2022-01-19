@@ -1,3 +1,8 @@
+---
+title: A different approach
+description: Learn about the technical approach of the design system.
+---
+
 # A different approach
 
 Design systems are often created as a single monolithic package. All parts, whether desired or not, come as a whole and the entire system is a dependency of the parent project.
