@@ -6,7 +6,7 @@ This can help people with mobility issues navigate the page more easily. It also
 
 The back to top button is especially helpful for people using mobile devices. It decreases the swiping they have to do to get back to the top of a page.
 
-The button disappears after 7 seconds. If someone scrolls again, it will reappear.
+The button appears when the user has scrolled past the first screen and begins to scroll back up. It disappears after 7 seconds. If someone scrolls again, it will reappear.
 
 ## When and how to use it
 
