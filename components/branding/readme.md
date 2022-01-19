@@ -170,6 +170,12 @@ Do not modify the site header beyond adding the site name and a logo.
   </div>
 </div>
 <!--end branding-->
+```
+
+</html-preview>
+
+```html preview
+
 
 <!--branding without logo-->
 <div class="branding">
@@ -268,8 +274,6 @@ Do not modify the site header beyond adding the site name and a logo.
 </div>
 <!--end branding-->
 ```
-
-</html-preview>
 
 ## Specs
 

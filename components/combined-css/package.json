@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.css",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0",
     "build:js": "rollup --config rollup.config.js",
-    "build": "npm run build:js && sass --no-source-map src/_cannabis.scss dist/cannabis.css && sass --no-source-map src/_drought.scss dist/drought.css && sass --no-source-map src/_cagov.scss dist/cagov.css"
-  },
+    "build": "npm run build:js && sass --no-source-map src/_cannabis.scss dist/cannabis.css && sass --no-source-map src/_drought.scss dist/drought.css && sass --no-source-map src/_cagov.scss dist/cagov.css",
+    "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
+    "prepublishOnly": "npm run build && npm run cdn:publish",
+    "test": "echo \"No test specified\" && exit 0"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",

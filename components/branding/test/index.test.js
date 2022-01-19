@@ -12,13 +12,13 @@ describe('CAGOV Branding', function unitTest() {
     csslink.media = 'all';
     document.getElementsByTagName('head')[0].appendChild(csslink);
 
-    const response = await fetch('test/test.fixture.html');
+    const response = await fetch('../template.html');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const startHTML = await response.text();
-    const el = await fixture(startHTML);
+    const el = await fixture(`${startHTML}`);
 
     await expect(el).to.be.accessible();
   });
