@@ -46,7 +46,7 @@
   padding-top: 1rem;
   padding-bottom: 1.5rem;
   gap: 2rem;
-  flex-wrap: wrap-reverse;
+  flex-wrap: nowrap;
   
   &.form-background-light {
     background-color: var(--gray-100, #F9F9FA);
@@ -113,4 +113,10 @@
       pointer-events: none;
     }
   }
+}
+
+@media (max-width: 800px) {
+  .get-involved {
+    flex-wrap: wrap-reverse;
+  }  
 }
