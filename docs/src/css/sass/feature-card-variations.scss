@@ -77,6 +77,14 @@
     width: calc(100% + 1px);
     // max-width: 660px;
   }
+  .required label {
+      font-weight: bold;
+  }
+  .required label:after {
+      color: var(--secondary-dark-color, red);
+      content: ' *';
+      display:inline;
+  }
   .form-field {
     margin-bottom: 1rem;
   }

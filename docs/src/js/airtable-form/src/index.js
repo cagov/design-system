@@ -30,7 +30,7 @@ class CaGovAirtableForm extends window.HTMLElement {
     const submitForm = this.submitForm.bind(this);
     // This will work with just one form element per page.
     document
-      .querySelector('cagov-airtable-form form .airtable-form-submit')
+      .querySelector('cagov-airtable-form .airtable-form-submit')
       .addEventListener(
         'click',
         async (e) => {
