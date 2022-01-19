@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-highlight-section",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "THe Highlight Section is a great way to showcase small bits of important information, and can be used to display services or features. ",
   "main": "index.css",
   "type": "module",

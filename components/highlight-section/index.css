@@ -55,7 +55,9 @@ cagov-highlight-section article .highlight-body .highlight-text {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-cagov-highlight-section article .highlight-body .highlight-text h1, cagov-highlight-section article .highlight-body .highlight-text h2, cagov-highlight-section article .highlight-body .highlight-text h3 {
+cagov-highlight-section article .highlight-body .highlight-text h1,
+cagov-highlight-section article .highlight-body .highlight-text h2,
+cagov-highlight-section article .highlight-body .highlight-text h3 {
   margin-top: 0;
 }
 
@@ -87,6 +89,7 @@ cagov-highlight-section article .highlight-body .highlight-text h1, cagov-highli
     border-top-right-radius: 5px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 5px;
+    width: 100%;
   }
 }
 @media (min-width: 1600px) {
