@@ -1,3 +1,8 @@
+---
+title: Visual design style guide
+description: These recommended approaches make Design System websites visually appealing, easy to use, and accessible.
+---
+
 # Visual design style guide
 
 The visual design of the Design System is inspired by the [Design System principles](/principles). Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.
