@@ -1,3 +1,8 @@
+---
+title: Get started
+description: Learn how to get started with using the design system. 
+---
+
 # Get started
 
 
