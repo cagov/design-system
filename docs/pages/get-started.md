@@ -1,6 +1,6 @@
 ---
 title: Get started
-description: Learn how to get started with using the design system. 
+description: Learn how you can get started with using the California Design System. 
 ---
 
 # Get started
