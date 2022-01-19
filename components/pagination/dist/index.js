@@ -91,19 +91,6 @@ var styles =
  * @cssprop --primary-color - Default value of #064E66, used for text, border color
  */
 class CAGovPagination extends window.HTMLElement {
-  constructor() {
-    super();
-    if (document.querySelector('api-viewer')) {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('href', './src/css/index.css');
-      document.querySelector('api-viewer').shadowRoot.appendChild(link);
-    }
-  }
-
-  // add jsdoc event
-  // add jsdoc event to feedback too
-
   connectedCallback() {
     this.currentPage = parseInt(
       this.dataset.currentPage ? this.dataset.currentPage : '1',

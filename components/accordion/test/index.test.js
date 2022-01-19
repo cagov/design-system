@@ -7,13 +7,13 @@ import '../dist/index.js';
 describe('CAGOV Accordion', function unitTest() {
   this.timeout(9000);
   it('works', async () => {
-    const response = await fetch('test/test.fixture.html');
+    const response = await fetch('../template.html');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const startHTML = await response.text();
-    const el = await fixture(startHTML);
+    const el = await fixture(`<div>${startHTML}</div>`); // use a prent div because referring to el.querySelector below
 
     expect(
       el.querySelector('.accordion-card-header').getAttribute('aria-expanded'),

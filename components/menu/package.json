@@ -1,8 +1,8 @@
 {
   "name": "@cagov/ds-dropdown-menu",
-  "version": "1.0.16",
+  "version": "2.0.1",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "type": "module",
   "customElements": "custom-elements.json",
   "repository": {
@@ -10,8 +10,11 @@
     "url": "https://github.com/cagov/design-system/tree/main/components/menu"
   },
   "scripts": {
-    "build": "sass src/index.scss index.css",
-    "prepublishOnly": "npm run build && npm test",
+    "build:js": "rollup --config rollup.config.js",
+    "build": "sass src/index.scss index.css && npm run build:js",
+    "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
+    "html:preview": "node ../../docs/src/publish/dynamic-html.js",
+    "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve",
     "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
   },
@@ -23,5 +26,8 @@
     "@web/test-runner": "^0.13.16",
     "@web/test-runner-puppeteer": "^0.10.1",
     "sass": "^1.38.1"
+  },
+  "dependencies": {
+    "rollup-plugin-import-css": "^3.0.2"
   }
 }

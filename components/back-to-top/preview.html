@@ -16,14 +16,14 @@
 
 <body>
 
-<!--BACK TO TOP BUTTON custom element-->
-
-<div style="height: 2000px; width:100px; background-color: blue;">
-    <cagov-back-to-top data-hide-after="1000" data-label="Back to top">
-    </cagov-back-to-top>
+<div class="component-test-container" style="height: 2000px; width:100px; background-color: blue;">
 </div>
 
-
+<script>
+  fetch('./template.html')
+    .then(response => response.text())
+    .then((string) => { document.querySelector('.component-test-container').innerHTML = string; });
+</script>
 </body>
 
 </html>

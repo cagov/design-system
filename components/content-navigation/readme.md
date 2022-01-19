@@ -17,24 +17,7 @@ Do not use this component to replace or duplicate site navigation.
 <html-preview>
 
 ```html preview
-<cagov-content-navigation
-  data-selector=".main"
-  data-type="wordpress"
-  data-label="On this page"
-></cagov-content-navigation>
-
-<div class="main">
-  <h2>Hello world</h2>
-  <h2>Hello world 1</h2>
-  <h2>Hello world 2</h2>
-  <h2>Hello world 3</h2>
-  <h2>Hello world 4</h2>
-  <h2>Hello world 5</h2>
-  <h2>Hello world 6</h2>
-  <h2>Hello world 7</h2>
-  <h2>Hello world 8</h2>
-  <h2>Hello world 9</h2>
-</div>
+<cagov-content-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-content-navigation>
 ```
 
 </html-preview>
@@ -51,11 +34,10 @@ Do not use this component to replace or duplicate site navigation.
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
-1. `npm i @cagov/[machine-name]`
-2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **\*JavaScript\*\*** in your page or compiler.
-3. Include **SCSS** in your Sass compiler.
-4. Add the **Sample markup** to your HTML.
-5. Refer to the Content model section for notes on mapping your data to the **Sample markup**.
+1. `npm i @cagov/ds-content-navigation`
+2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
+3. Add the **sample markup** to your HTML.
+4. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
 ## CSS variables
 
@@ -92,6 +74,8 @@ As a component in Alpha status, this component must pass the following accessibi
 ## Progressive enhancement
 
 This component uses a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support custom elements. If the JavaScript for this component is not delivered or supported, the component will not display. This is the desired behavior because this component is not critical for site interaction. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
+
+<a name="content-model"></a>
 
 ## Content model
 

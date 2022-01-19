@@ -2,7 +2,10 @@
 
 `ds-accordion`
 
-#1.0.9
+# 1.0.10
+* Remove unnecessary constructor, auto synch sample markup docs with markup used in test
+
+# 1.0.9
 * Add prepublish hook which writes latest sample HTML into readme from template.html
 * Update description to match latest design system docs
 # 1.0.8

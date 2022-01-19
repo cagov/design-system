@@ -23,16 +23,6 @@ import styles from './css/index.css';
  *
  */
 export class CaGovAccordion extends window.HTMLElement {
-  constructor() {
-    super();
-    if (document.querySelector('api-viewer')) {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('href', './src/css/index.css');
-      document.querySelector('api-viewer').shadowRoot.appendChild(link);
-    }
-  }
-
   connectedCallback() {
     this.classList.add('prog-enhanced');
     this.expandTarget = this.querySelector('.accordion-card-container');

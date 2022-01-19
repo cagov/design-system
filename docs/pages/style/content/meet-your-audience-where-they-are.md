@@ -1,4 +1,9 @@
-# Know your audience and meet them where they are
+---
+title: Meet your audience where they are
+description: Knowing who they are and what they need helps you design for them.
+---
+
+# Meet your audience where they are
 
 All your content is for someone. Knowing who they are and what they need helps you design for them.
 

@@ -2,6 +2,9 @@
 
 `ds-feedback`
 
+# 1.0.12
+* Remove unnecessary constructor, synch readme markup with test markup on publish
+
 # 1.0.11
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.

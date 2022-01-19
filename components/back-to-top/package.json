@@ -1,13 +1,16 @@
 {
   "name": "@cagov/ds-back-to-top",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.css",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "sass src/index.scss index.css",
-    "prepublishOnly": "npm run build && npm test",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",    
+    "build:js": "rollup --config rollup.config.js",
+    "build": "sass src/index.scss index.css && npm run build:js",
+    "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
+    "html:preview": "node ../../docs/src/publish/dynamic-html.js",
+    "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
+    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],
@@ -21,5 +24,8 @@
     "@open-wc/testing": "^3.0.1",
     "@web/test-runner-puppeteer": "^0.10.2",
     "sass": "^1.38.0"
+  },
+  "dependencies": {
+    "rollup-plugin-import-css": "^3.0.2"
   }
 }

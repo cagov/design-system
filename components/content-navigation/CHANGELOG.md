@@ -1,6 +1,9 @@
-# Navigation components >> Page navigation >> Changelog || 30
+# Changelog
 
 `ds-content-navigation`
+
+# 2.0.0
+* bundle the CSS in the JS
 
 # 1.0.8
 * Added label to sidebar menu for accessibility.

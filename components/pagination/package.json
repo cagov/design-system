@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-pagination",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "",
   "main": "dist/index.js",
   "customElements": "custom-elements.json",
@@ -9,7 +9,9 @@
     "build:sass": "sass src/css/index.scss src/css/index.css",
     "build:js": "rollup --config rollup.config.js",
     "build": "npm run build:sass && npm run build:js",
-    "prepublishOnly": "npm run build && npm test",
+    "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
+    "html:preview": "node ../../docs/src/publish/dynamic-html.js",
+    "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve",
     "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
   },

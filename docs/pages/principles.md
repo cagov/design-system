@@ -1,5 +1,7 @@
 ---
 layout: single-column
+title: Principles
+description: The principles behind the State of California Design System.
 ---
 
 {%- from "macros/principles-page-item.njk" import principlesPageItem -%}
@@ -8,20 +10,20 @@ layout: single-column
 
 We’ve researched the needs of Californians and created these principles to help state departments create great websites, services, and products.
 
-{{ principlesPageItem(principles, 1) }}
+{{ principlesPageItem(editable.principles, 1) }}
 
-{{ principlesPageItem(principles, 2) }}
+{{ principlesPageItem(editable.principles, 2) }}
 
-{{ principlesPageItem(principles, 3) }}
+{{ principlesPageItem(editable.principles, 3) }}
 
-{{ principlesPageItem(principles, 4) }}
+{{ principlesPageItem(editable.principles, 4) }}
 
-{{ principlesPageItem(principles, 5) }}
+{{ principlesPageItem(editable.principles, 5) }}
 
-{{ principlesPageItem(principles, 6) }}
+{{ principlesPageItem(editable.principles, 6) }}
 
-{{ principlesPageItem(principles, 7) }}
+{{ principlesPageItem(editable.principles, 7) }}
 
-{{ principlesPageItem(principles, 8) }}
+{{ principlesPageItem(editable.principles, 8) }}
 
-{{ principlesPageItem(principles, 9) }}
+{{ principlesPageItem(editable.principles, 9) }}
