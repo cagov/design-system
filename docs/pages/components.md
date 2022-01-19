@@ -1,6 +1,6 @@
 ---
 layout: component-index
-title: Design System Components
+title: Components
 description: Components are the structural elements of the State of California Design System. They meet common user needs and can be reused across websites.
 ---
 

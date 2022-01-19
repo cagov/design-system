@@ -6,19 +6,6 @@ const defaults = require('../docs/site/_data/editable/defaults.json');
 const getComponentSlug = (article) =>
   article.page.filePathStem.match(/\/components\/(.+?)\/.+/)[1];
 
-const normalizePagename = (basename) => {
-  if (basename.toLowerCase() === 'readme') {
-    return 'Readme';
-  }
-  if (basename.toLowerCase() === 'changelog') {
-    return 'Changelog';
-  }
-  if (basename.toLowerCase() === 'use-cases') {
-    return 'Use cases';
-  }
-  return basename;
-};
-
 module.exports = {
   layout: 'component-page',
   tags: ['component'],
@@ -49,22 +36,20 @@ module.exports = {
     title: (article) => {
       const componentSlug = getComponentSlug(article);
       const component = components[componentSlug];
-      const filename = article.page.fileSlug;
-      let pagename = '';
+      // const filename = article.page.fileSlug;
 
       if (component) {
-        pagename += `${component.name}: `;
+        return `${component.title} | ${defaults.site.name}`;
       }
 
-      pagename += normalizePagename(filename);
-      return pagename;
+      return defaults.site.name;
     },
     description: (article) => {
       const componentSlug = getComponentSlug(article);
       const component = components[componentSlug];
 
       if (component) {
-        return component.blurb;
+        return component.description;
       }
 
       return defaults.page.description;

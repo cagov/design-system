@@ -13,6 +13,12 @@ const buildURL = (path, domain) => {
 module.exports = {
   // Note that several metadata properties do not need to be in EleventyComputed.
   // See ./metadata.js for more.
+  title: (article) => {
+    if ('title' in article && article.title !== '') {
+      return `${article.title} | ${defaults.site.name}`;
+    }
+    return defaults.site.name;
+  },
   metadata: {
     canonical_url: (article) => buildURL(article.permalink, root),
     page_description: (article) =>
