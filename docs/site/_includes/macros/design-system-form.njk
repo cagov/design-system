@@ -20,14 +20,17 @@ data-response-error="Uh oh! Looks like there was a problem connecting and <stron
         <label for="request">How can we help you?</label>
         <div class="form-select">
         <select id="request" name="request" data-airtable-field="Request">
+            <option disabled selected value="Select an option">
+                Select an option
+            </option>
             <option value="Send me updates on the Design System">
-            Send me updates on the Design System
+                Send me updates on the Design System
             </option>
             <option value="I need help getting started">
-            I need help getting started
+                I need help getting started
             </option>
             <option value="I want to collaborate">
-            I want to collaborate
+                I want to collaborate
             </option>
         </select>
         </div>
@@ -36,26 +39,29 @@ data-response-error="Uh oh! Looks like there was a problem connecting and <stron
         <label for="about-yourself">About yourself</label>
         <div class="form-select">
         <select id="about-yourself" name="about-yourself" data-airtable-field="About yourself">
+            <option disabled selected value="Select an option">
+                Select an option
+            </option>
             <option value="Content designer">
-            Content designer
+                Content designer
             </option>
             <option value="Engineer">
-            Engineer
+                Engineer
             </option>
             <option value="Developer">
-            Developer
+                Developer
             </option>
             <option value="Designer">
-            Designer
+                Designer
             </option>
             <option value="Product owner">
-            Product owner
+                Product owner
             </option>
         </select>
         </div>
     </div>
     <div class="form-field">
-        <label for="comments">Feedback / Comments</label>
+        <label for="comments">What interests you about the design system?</label>
         <textarea id="comments" name="comments" data-airtable-field="Comments"></textarea>
     </div>
     <div class="hidden form-field">
