@@ -5,16 +5,11 @@ description: Get help from the State of California Design System team, post ques
 
 # Contact us
 
+Have a question? Email us for help with general inquiries, feedback, or bugs.
+
 {%- from "macros/contact-us-form-wrapper.njk" import wrappedContactForm -%}
 {{ wrappedContactForm("Contact us") }}
 
-## Support
-Get help from the Design System team, post questions, and share technical information with fellow developers.
-
-## Get in touch
-
-Email us for support with general inquiries, feedback, or bugs.
-
-## Ask other developers
+## Get support from other developers
 
 Post questions on [GitHub](https://github.com/cagov/design-system/issues/new/choose) and leverage our digital community.
