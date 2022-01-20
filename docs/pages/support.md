@@ -1,3 +1,8 @@
+---
+title: Contact us
+description: Get help from the State of California Design System team, post questions, and share technical information with fellow developers.
+---
+
 # Contact us
 
 {%- from "macros/contact-us-form-wrapper.njk" import wrappedContactForm -%}
