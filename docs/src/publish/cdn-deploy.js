@@ -11,6 +11,7 @@ const currentPackageInfo = JSON.parse(
 const packageName = currentPackageInfo.name.replace('@cagov/', '');
 const packageVersion = currentPackageInfo.version;
 const keyPrefix = `components/${packageName}/v${packageVersion}/dist/`;
+const cssKey = `components/${packageName}/v${packageVersion}/index.css`;
 const contentTypeMap = new Map();
 contentTypeMap.set('js', 'text/javascript');
 contentTypeMap.set('css', 'text/css');
@@ -54,7 +55,10 @@ addToFilePaths(cssToUpload);
 // upload to S3
 const uploadToS3 = (dir, filePath) =>
   new Promise((resolve, reject) => {
-    const key = keyPrefix + filePath.split(`${dir}/`)[1];
+    let key = keyPrefix + filePath.split(`${dir}/`)[1];
+    if (filePath.indexOf('.css') > -1) {
+      key = cssKey;
+    }
     const params = {
       Bucket: bucketName,
       Key: key,
