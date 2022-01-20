@@ -1,3 +1,8 @@
+---
+title: About the Design System
+description: Learn about the vision, mission, and history about the Design System.  
+keywords: about, about us, history, mission, vision
+---
 # About the Design System
 It can be challenging to connect government services to Californians who need them most. We have to consider a wide range of experiences, abilities, education, and technical literacy. With the State of California’s Design System, we help make digital information and services easier to use. The Design System increases equity, unity, compassion, and trust.
 
