@@ -1,6 +1,6 @@
 ---
 title: A different approach
-description: Learn about the technical approach of the design system.
+description: An introduction to the technical approach of the California Design System.
 ---
 
 # A different approach
