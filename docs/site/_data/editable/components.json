@@ -7,7 +7,8 @@
     "blurb": "Widget that lets people provide feedback on page content",
     "description": "Widget that lets people provide feedback on page content",
     "slug": "feedback",
-    "icon": "/img/ds-feedback.png"
+    "icon": "/img/ds-feedback.png",
+    "svg": "svg/page-feedback.svg"
   },
   "agency-footer": {
     "name": "Site footer",
@@ -18,6 +19,7 @@
     "description": "Customizable links and social media icons at the bottom of all pages",
     "slug": "agency-footer",
     "icon": "/img/ds-agency-footer.png",
+    "svg": "svg/site-footer.svg",
     "new": true
   },
   "branding": {
@@ -28,7 +30,8 @@
     "blurb": "The site name and logo with an optional search bar at the top of all pages",
     "description": "The site name and logo with an optional search bar at the top of all pages",
     "slug": "branding",
-    "icon": "/img/ds-branding.png"
+    "icon": "/img/ds-branding.png",
+    "svg": "svg/site-header.svg"
   },
   "statewide-footer": {
     "name": "Statewide footer",
@@ -38,7 +41,8 @@
     "blurb": "State of California standard footer",
     "description": "State of California standard footer",
     "slug": "statewide-footer",
-    "icon": "/img/ds-statewide-footer.png"
+    "icon": "/img/ds-statewide-footer.png",
+    "svg": "svg/statewide-footer.svg"
   },
   "statewide-header": {
     "name": "Statewide header",
@@ -48,7 +52,8 @@
     "blurb": "State of California standard header",
     "description": "State of California standard header",
     "slug": "statewide-header",
-    "icon": "/img/ds-statewide-header.png"
+    "icon": "/img/ds-statewide-header.png",
+    "svg": "svg/statewide-header.svg"
   },
   "back-to-top": {
     "name": "Back to top button",
@@ -58,7 +63,8 @@
     "blurb": "A button that lets people go back to the top of the page without scrolling",
     "description": "A button that lets people go back to the top of the page without scrolling",
     "slug": "back-to-top",
-    "icon": "/img/ds-back-to-top.png"
+    "icon": "/img/ds-back-to-top.png",
+    "svg": "svg/back-to-top-button.svg"
   },
   "link-icon": {
     "name": "Link icon",
@@ -68,7 +74,8 @@
     "blurb": "Icons that tell people if a link goes to another website or a PDF",
     "description": "Icons that tell people if a link goes to another website or a PDF",
     "slug": "link-icon",
-    "icon": "/img/ds-link-icon.png"
+    "icon": "/img/ds-link-icon.png",
+    "svg": "svg/link-icon.svg"
   },
   "content-navigation": {
     "name": "Page navigation",
@@ -78,7 +85,8 @@
     "blurb": "Links on the left side of a page that go directly to major sections of a page",
     "description": "Links on the left side of a page that go directly to major sections of a page",
     "slug": "content-navigation",
-    "icon": "/img/ds-content-navigation.png"
+    "icon": "/img/ds-content-navigation.png",
+    "svg": "svg/page-navigation.svg"
   },
   "pagination": {
     "name": "Pagination",
@@ -88,7 +96,8 @@
     "blurb": "Splits ordered lists into numbered pages shown one at a time",
     "description": "Splits ordered lists into numbered pages shown one at a time",
     "slug": "pagination",
-    "icon": "/img/ds-pagination.png"
+    "icon": "/img/ds-pagination.png",
+    "svg": "svg/pagination.svg"
   },
   "menu": {
     "name": "Site navigation",
@@ -98,7 +107,8 @@
     "blurb": "Links and dropdown menus at the top of every page that let people move around the site",
     "description": "Links and dropdown menus at the top of every page that let people move around the site",
     "slug": "menu",
-    "icon": "/img/ds-menu.png"
+    "icon": "/img/ds-menu.png",
+    "svg": "svg/site-navigation.svg"
   },
   "skip-to-content": {
     "name": "Skip to content",
@@ -108,7 +118,8 @@
     "blurb": "Accessibility feature that lets people skip the header content",
     "description": "Accessibility feature that lets people skip the header content",
     "slug": "skip-to-content",
-    "icon": "/img/ds-skip-to-content.png"
+    "icon": "/img/ds-skip-to-content.png",
+    "svg": "svg/skip-to-content.svg"
   },
   "base-css": {
     "name": "Base CSS",
@@ -118,7 +129,8 @@
     "blurb": "Blurb.",
     "description": "Blurb.",
     "slug": "base-css",
-    "icon": "/img/ds-base-css.png"
+    "icon": "/img/ds-base-css.png",
+    "svg": "svg/base-css.svg"
   },
   "accordion": {
     "name": "Accordion",
@@ -128,7 +140,8 @@
     "blurb": "An expandable section of content that lets people choose what they want to see",
     "description": "An expandable section of content that lets people choose what they want to see",
     "slug": "accordion",
-    "icon": "/img/ds-accordion.png"
+    "icon": "/img/ds-accordion.png",
+    "svg": "svg/accordion.svg"
   },
   "feature-card": {
     "name": "Feature card",
@@ -138,7 +151,8 @@
     "blurb": "A highlight space on the homepage with text, image, and a button",
     "description": "A highlight space on the homepage with text, image, and a button",
     "slug": "feature-card",
-    "icon": "/img/ds-feature-card.png"
+    "icon": "/img/ds-feature-card.png",
+    "svg": "svg/feature-card.svg"
   },
   "button-grid": {
     "name": "Link grid",
@@ -148,7 +162,8 @@
     "blurb": "Grid of call-to-action buttons for top user tasks and needs",
     "description": "Grid of call-to-action buttons for top user tasks and needs",
     "slug": "button-grid",
-    "icon": "/img/ds-button-grid.png"
+    "icon": "/img/ds-button-grid.png",
+    "svg": "svg/link-grid.svg"
   },
   "page-alert": {
     "name": "Page alert",
@@ -158,7 +173,8 @@
     "blurb": "A space for high-priority information that can include an icon and links",
     "description": "A space for high-priority information that can include an icon and links",
     "slug": "page-alert",
-    "icon": "/img/ds-page-alert.png"
+    "icon": "/img/ds-page-alert.png",
+    "svg": "svg/page-alert.svg"
   },
   "regulatory-outline": {
     "name": "Regulatory outline",
@@ -168,7 +184,8 @@
     "blurb": "A list that replicates the ordering of government code",
     "description": "A list that replicates the ordering of government code",
     "slug": "regulatory-outline",
-    "icon": "/img/ds-regulatory-outline.png"
+    "icon": "/img/ds-regulatory-outline.png",
+    "svg": "svg/regulatory-outline.svg"
   },
   "step-list": {
     "name": "Step list",
@@ -178,6 +195,7 @@
     "blurb": "A numbered list that shows the steps in a process",
     "description": "A numbered list that shows the steps in a process",
     "slug": "step-list",
-    "icon": "/img/ds-step-list.png"
+    "icon": "/img/ds-step-list.png",
+    "svg": "svg/step-list.svg"
   }
 }
