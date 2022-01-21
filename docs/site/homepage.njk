@@ -15,8 +15,8 @@ description: The California Design System makes it easy for state digital teams 
             <a class="wp-block-button__link" href="/get-started/">Get started</a>
           </div>
         </div>
-      </div>
-      <div><img class="cagov-featured-image" src="/img/feature-sketch.svg" alt="sketch of people collaborating" width="1024" height="683"></div>
+      </div class="cagov-mt-2">
+      <div><img class="cagov-featured-image" src="/img/hero-bear-nature.svg" alt="california bear with abstract shapes" width="1024" height="683"></div>
     </div>
   </div>
 </div>
@@ -25,7 +25,7 @@ description: The California Design System makes it easy for state digital teams 
 <div class="cagov-cluster-3">
   <div class="cagov-stack-card">
     <div class="cagov-card-head">
-      <img src="/img/target-sketch.svg" alt="sketch of dart in target" />
+      <img src="/img/abstract-principles.svg" alt="abstract shapes in circles" />
     </div>
     <div class="cagov-card-body">
       <a href="/principles/" class="cagov-section-highlight cagov-section-highlight-link">Principles</a>
@@ -34,7 +34,7 @@ description: The California Design System makes it easy for state digital teams 
   </div>
   <div class="cagov-stack-card">
     <div class="cagov-card-head">
-      <img src="/img/guides-sketch.svg" alt="sketch of checklist" />
+      <img src="/img/abstract-guides.svg" alt="abstract shapes and lines" />
     </div>
     <div class="cagov-card-body">
       <a href="/style/content/" class="cagov-section-highlight cagov-section-highlight-link">Content and design guides</a>
@@ -43,7 +43,7 @@ description: The California Design System makes it easy for state digital teams 
   </div>
   <div class="cagov-stack-card">
     <div class="cagov-card-head">
-      <img src="/img/library-sketch.svg" alt="sketch of control panel" />
+      <img src="/img/abstract-component-library.svg" alt="many colored circles" />
     </div>
     <div class="cagov-card-body">
       <a href="/components/" class="cagov-section-highlight cagov-section-highlight-link">Component library</a>
@@ -105,7 +105,7 @@ description: The California Design System makes it easy for state digital teams 
         </header>
         <section class="highlight-body">
           <div class="highlight-image bg-primary-lightest">
-            <img src="https://california.azureedge.net/cdt/statetemplate/5.6.0/images/color.png" alt="highlight section demo"/>
+            <img src="/img/principles-stacked.svg" alt="highlight section demo"/>
           </div>
           <div class="highlight-text">
             <h3>{{ principle.name }}</h3>
@@ -119,18 +119,20 @@ description: The California Design System makes it easy for state digital teams 
   </cagov-highlight-section>
 </div>
 <div class="full-bleed full-bleed--highlight2">
+  <div class="full-bleed-content-area--block">
+    <h2 class="d-block pt-1 mb-0">Be a part of the Design System</h2>
+  </div>
   <div class="full-bleed-content-area get-involved">
-      <div class="get-involved-content homepage-form">
-        <h2>Be a part of the Design System</h2>
-        <p>We'd love to talk about how we can partner with you.</p>
-        <div class="get-involved-content-form">
-        {%- from "macros/design-system-form.njk" import designSystemContact -%}
-        {{ designSystemContact("Home page") }}
-        </div>
+    <div class="get-involved-content homepage-form">
+      <p>We'd love to talk about how we can partner with you.</p>
+      <div class="get-involved-content-form">
+      {%- from "macros/design-system-form.njk" import designSystemContact -%}
+      {{ designSystemContact("Home page") }}
       </div>
-      <div class="get-involved-image">
-        <img src="/img/desk-work-sketch.svg" alt="sketch of person working at computer desk">
-      </div>
+    </div>
+    <div class="get-involved-image">
+      <img src="/img/partner-design-system.svg" alt="abstract orrery">
+    </div>
   </div>
 </div>
 
