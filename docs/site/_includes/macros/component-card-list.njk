@@ -3,17 +3,19 @@
     {%- for component in collection -%}
       <div class="component-card">
         <div class="component-card-img">
-          <img src="{{ component.icon }}"/>
+          {%- include component.svg -%}
         </div>
-        <a class="component-card-link" href="/components/{{ component.slug }}/readme">
-          {{ component.name }}
-        </a>
-        <p class="component-card-status">
-          {{ component.status }}
-        </p>
-        <p class="component-card-blurb">
-          {{ component.blurb }}
-        </p>
+        <div class="component-card-content">
+          <a class="component-card-link" href="/components/{{ component.slug }}/readme">
+            {{ component.name }}
+          </a>
+          <p class="component-card-status">
+            {{ component.status }}
+          </p>
+          <p class="component-card-blurb">
+            {{ component.blurb }}
+          </p>
+        </div>
       </div>
     {%- endfor -%}
   </section>

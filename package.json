@@ -21,6 +21,7 @@
     "site:watch:dev": "cross-env NODE_ENV=development eleventy --serve --incremental",
     "site:start": "npm run site:watch",
     "site:dev": "npm run site:watch:dev",
+    "site:convert:illustrations": "node docs/src/11ty/format-illustrations.js",
     "build": "echo \"WARN: no build specified\" && exit 0"
   },
   "repository": {
@@ -62,6 +63,7 @@
     "glob": "^7.2.0",
     "highlight.js": "^11.3.1",
     "markdown-it": "^12.3.0",
-    "markdown-it-anchor": "^8.4.1"
+    "markdown-it-anchor": "^8.4.1",
+    "sharp": "^0.29.3"
   }
 }

@@ -10,8 +10,8 @@ module.exports = {
   layout: 'component-page',
   tags: ['component'],
   metadata: {
-    social_image_width: 200,
-    social_image_height: 150,
+    social_image_width: 1200,
+    social_image_height: 630,
   },
   eleventyComputed: {
     // componentSlug gets the folder name for the page's component.

@@ -7,9 +7,11 @@
     "blurb": "Widget that lets people provide feedback on page content",
     "description": "Details about the page feedback component, including how to use it and the steps to install it.",
     "slug": "feedback",
-    "icon": "/img/ds-feedback.png"
+    "icon": "/illustrations/png/page-feedback.png",
+    "svg": "svg/page-feedback.svg"
   },
   "agency-footer": {
+    "new": true,
     "name": "Site footer",
     "title": "Site footer",
     "type": "structural",
@@ -17,8 +19,8 @@
     "blurb": "Customizable links and social media icons at the bottom of all pages",
     "description": "Details about the site footer component, including how to use it and the steps to install it.",
     "slug": "agency-footer",
-    "icon": "/img/ds-agency-footer.png",
-    "new": true
+    "icon": "/illustrations/png/site-footer.png",
+    "svg": "svg/site-footer.svg"
   },
   "branding": {
     "name": "Site header",
@@ -28,7 +30,8 @@
     "blurb": "The site name and logo with an optional search bar at the top of all pages",
     "description": "Details about the site header component, including how to use it and the steps to install it.",
     "slug": "branding",
-    "icon": "/img/ds-branding.png"
+    "icon": "/illustrations/png/site-header.png",
+    "svg": "svg/site-header.svg"
   },
   "statewide-footer": {
     "name": "Statewide footer",
@@ -38,7 +41,8 @@
     "blurb": "State of California standard footer",
     "description": "Details about the statewide footer component, including how to use it and the steps to install it.",
     "slug": "statewide-footer",
-    "icon": "/img/ds-statewide-footer.png"
+    "icon": "/illustrations/png/statewide-footer.png",
+    "svg": "svg/statewide-footer.svg"
   },
   "statewide-header": {
     "name": "Statewide header",
@@ -48,7 +52,8 @@
     "blurb": "State of California standard header",
     "description": "Details about the statewide header component, including how to use it and the steps to install it.",
     "slug": "statewide-header",
-    "icon": "/img/ds-statewide-header.png"
+    "icon": "/illustrations/png/statewide-header.png",
+    "svg": "svg/statewide-header.svg"
   },
   "back-to-top": {
     "name": "Back to top button",
@@ -58,7 +63,8 @@
     "blurb": "A button that lets people go back to the top of the page without scrolling",
     "description": "Details about the back to top component, including how to use it and the steps to install it.",
     "slug": "back-to-top",
-    "icon": "/img/ds-back-to-top.png"
+    "icon": "/illustrations/png/back-to-top-button.png",
+    "svg": "svg/back-to-top-button.svg"
   },
   "link-icon": {
     "name": "Link icon",
@@ -68,7 +74,8 @@
     "blurb": "Icons that tell people if a link goes to another website or a PDF",
     "description": "Details about the link icon component, including how to use it and the steps to install it.",
     "slug": "link-icon",
-    "icon": "/img/ds-link-icon.png"
+    "icon": "/illustrations/png/link-icon.png",
+    "svg": "svg/link-icon.svg"
   },
   "content-navigation": {
     "name": "Page navigation",
@@ -78,7 +85,8 @@
     "blurb": "Links on the left side of a page that go directly to major sections of a page",
     "description": "Details about the page navigation component, including how to use it and the steps to install it.",
     "slug": "content-navigation",
-    "icon": "/img/ds-content-navigation.png"
+    "icon": "/illustrations/png/page-navigation.png",
+    "svg": "svg/page-navigation.svg"
   },
   "pagination": {
     "name": "Pagination",
@@ -88,7 +96,8 @@
     "blurb": "Splits ordered lists into numbered pages shown one at a time",
     "description": "Details about the pagination component, including how to use it and the steps to install it.",
     "slug": "pagination",
-    "icon": "/img/ds-pagination.png"
+    "icon": "/illustrations/png/pagination.png",
+    "svg": "svg/pagination.svg"
   },
   "menu": {
     "name": "Site navigation",
@@ -98,7 +107,8 @@
     "blurb": "Links and dropdown menus at the top of every page that let people move around the site",
     "description": "Details about the site navigation component, including how to use it and the steps to install it.",
     "slug": "menu",
-    "icon": "/img/ds-menu.png"
+    "icon": "/illustrations/png/site-navigation.png",
+    "svg": "svg/site-navigation.svg"
   },
   "skip-to-content": {
     "name": "Skip to content",
@@ -108,7 +118,8 @@
     "blurb": "Accessibility feature that lets people skip the header content",
     "description": "Details about the skip to content component, including how to use it and the steps to install it.",
     "slug": "skip-to-content",
-    "icon": "/img/ds-skip-to-content.png"
+    "icon": "/illustrations/png/skip-to-content.png",
+    "svg": "svg/skip-to-content.svg"
   },
   "base-css": {
     "name": "Base CSS",
@@ -118,7 +129,8 @@
     "blurb": "Base CSS",
     "description": "Details about the base CSS, including how to use it and the steps to install it.",
     "slug": "base-css",
-    "icon": "/img/ds-base-css.png"
+    "icon": "/illustrations/png/base-css.png",
+    "svg": "svg/base-css.svg"
   },
   "accordion": {
     "name": "Accordion",
@@ -128,7 +140,8 @@
     "blurb": "An expandable section of content that lets people choose what they want to see",
     "description": "Details about the accordion component, including how to use it and the steps to install it.",
     "slug": "accordion",
-    "icon": "/img/ds-accordion.png"
+    "icon": "/illustrations/png/accordion.png",
+    "svg": "svg/accordion.svg"
   },
   "feature-card": {
     "name": "Feature card",
@@ -138,7 +151,8 @@
     "blurb": "A highlight space on the homepage with text, image, and a button",
     "description": "Details about the feature card component, including how to use it and the steps to install it.",
     "slug": "feature-card",
-    "icon": "/img/ds-feature-card.png"
+    "icon": "/illustrations/png/feature-card.png",
+    "svg": "svg/feature-card.svg"
   },
   "button-grid": {
     "name": "Link grid",
@@ -148,7 +162,8 @@
     "blurb": "Grid of call-to-action buttons for top user tasks and needs",
     "description": "Details about the link grid component, including how to use it and the steps to install it.",
     "slug": "button-grid",
-    "icon": "/img/ds-button-grid.png"
+    "icon": "/illustrations/png/link-grid.png",
+    "svg": "svg/link-grid.svg"
   },
   "page-alert": {
     "name": "Page alert",
@@ -158,7 +173,8 @@
     "blurb": "A space for high-priority information that can include an icon and links",
     "description": "Details about the page alert component, including how to use it and the steps to install it.",
     "slug": "page-alert",
-    "icon": "/img/ds-page-alert.png"
+    "icon": "/illustrations/png/page-alert.png",
+    "svg": "svg/page-alert.svg"
   },
   "regulatory-outline": {
     "name": "Regulatory outline",
@@ -168,7 +184,8 @@
     "blurb": "A list that replicates the ordering of government code",
     "description": "Details about the regulatory outline component, including how to use it and the steps to install it.",
     "slug": "regulatory-outline",
-    "icon": "/img/ds-regulatory-outline.png"
+    "icon": "/illustrations/png/regulatory-outline.png",
+    "svg": "svg/regulatory-outline.svg"
   },
   "step-list": {
     "name": "Step list",
@@ -178,6 +195,7 @@
     "blurb": "A numbered list that shows the steps in a process",
     "description": "Details about the step list component, including how to use it and the steps to install it.",
     "slug": "step-list",
-    "icon": "/img/ds-step-list.png"
+    "icon": "/illustrations/png/step-list.png",
+    "svg": "svg/step-list.svg"
   }
 }
