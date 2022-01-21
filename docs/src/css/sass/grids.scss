@@ -32,6 +32,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    &.cagov-card-head--blue {
+      background: #b3c9eb;
+    }
   }
   .cagov-card-body {
     padding: 1.5rem;
