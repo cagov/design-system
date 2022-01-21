@@ -1,6 +1,6 @@
 ---
 title: Content style guide
-description: The State of California Design System uses these principles to create great content.
+description: The California Design System uses these principles to create great content.
 ---
 
 # Content style guide
