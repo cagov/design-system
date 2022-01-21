@@ -5,7 +5,7 @@
     "type": "structural",
     "status": "Alpha",
     "blurb": "Widget that lets people provide feedback on page content",
-    "description": "Widget that lets people provide feedback on page content",
+    "description": "Details about the page feedback component, including how to use it and the steps to install it.",
     "slug": "feedback",
     "icon": "/img/ds-feedback.png"
   },
@@ -15,7 +15,7 @@
     "type": "structural",
     "status": "Alpha",
     "blurb": "Customizable links and social media icons at the bottom of all pages",
-    "description": "Customizable links and social media icons at the bottom of all pages",
+    "description": "Details about the site footer component, including how to use it and the steps to install it.",
     "slug": "agency-footer",
     "icon": "/img/ds-agency-footer.png",
     "new": true
@@ -26,7 +26,7 @@
     "type": "structural",
     "status": "Alpha",
     "blurb": "The site name and logo with an optional search bar at the top of all pages",
-    "description": "The site name and logo with an optional search bar at the top of all pages",
+    "description": "Details about the site header component, including how to use it and the steps to install it.",
     "slug": "branding",
     "icon": "/img/ds-branding.png"
   },
@@ -36,7 +36,7 @@
     "type": "structural",
     "status": "Alpha",
     "blurb": "State of California standard footer",
-    "description": "State of California standard footer",
+    "description": "Details about the statewide footer component, including how to use it and the steps to install it.",
     "slug": "statewide-footer",
     "icon": "/img/ds-statewide-footer.png"
   },
@@ -46,7 +46,7 @@
     "type": "structural",
     "status": "Alpha",
     "blurb": "State of California standard header",
-    "description": "State of California standard header",
+    "description": "Details about the statewide header component, including how to use it and the steps to install it.",
     "slug": "statewide-header",
     "icon": "/img/ds-statewide-header.png"
   },
@@ -56,7 +56,7 @@
     "type": "navigation",
     "status": "Alpha",
     "blurb": "A button that lets people go back to the top of the page without scrolling",
-    "description": "A button that lets people go back to the top of the page without scrolling",
+    "description": "Details about the back to top component, including how to use it and the steps to install it.",
     "slug": "back-to-top",
     "icon": "/img/ds-back-to-top.png"
   },
@@ -66,7 +66,7 @@
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Icons that tell people if a link goes to another website or a PDF",
-    "description": "Icons that tell people if a link goes to another website or a PDF",
+    "description": "Details about the link icon component, including how to use it and the steps to install it.",
     "slug": "link-icon",
     "icon": "/img/ds-link-icon.png"
   },
@@ -76,7 +76,7 @@
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Links on the left side of a page that go directly to major sections of a page",
-    "description": "Links on the left side of a page that go directly to major sections of a page",
+    "description": "Details about the page navigation component, including how to use it and the steps to install it.",
     "slug": "content-navigation",
     "icon": "/img/ds-content-navigation.png"
   },
@@ -86,7 +86,7 @@
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Splits ordered lists into numbered pages shown one at a time",
-    "description": "Splits ordered lists into numbered pages shown one at a time",
+    "description": "Details about the pagination component, including how to use it and the steps to install it.",
     "slug": "pagination",
     "icon": "/img/ds-pagination.png"
   },
@@ -96,7 +96,7 @@
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Links and dropdown menus at the top of every page that let people move around the site",
-    "description": "Links and dropdown menus at the top of every page that let people move around the site",
+    "description": "Details about the site navigation component, including how to use it and the steps to install it.",
     "slug": "menu",
     "icon": "/img/ds-menu.png"
   },
@@ -106,7 +106,7 @@
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Accessibility feature that lets people skip the header content",
-    "description": "Accessibility feature that lets people skip the header content",
+    "description": "Details about the skip to content component, including how to use it and the steps to install it.",
     "slug": "skip-to-content",
     "icon": "/img/ds-skip-to-content.png"
   },
@@ -115,8 +115,8 @@
     "title": "Base CSS",
     "type": "visual",
     "status": "Alpha",
-    "blurb": "Blurb.",
-    "description": "Blurb.",
+    "blurb": "Base CSS",
+    "description": "Details about the base CSS, including how to use it and the steps to install it.",
     "slug": "base-css",
     "icon": "/img/ds-base-css.png"
   },
@@ -126,7 +126,7 @@
     "type": "content",
     "status": "Alpha",
     "blurb": "An expandable section of content that lets people choose what they want to see",
-    "description": "An expandable section of content that lets people choose what they want to see",
+    "description": "Details about the accordion component, including how to use it and the steps to install it.",
     "slug": "accordion",
     "icon": "/img/ds-accordion.png"
   },
@@ -136,7 +136,7 @@
     "type": "content",
     "status": "Alpha",
     "blurb": "A highlight space on the homepage with text, image, and a button",
-    "description": "A highlight space on the homepage with text, image, and a button",
+    "description": "Details about the feature card component, including how to use it and the steps to install it.",
     "slug": "feature-card",
     "icon": "/img/ds-feature-card.png"
   },
@@ -146,7 +146,7 @@
     "type": "content",
     "status": "Alpha",
     "blurb": "Grid of call-to-action buttons for top user tasks and needs",
-    "description": "Grid of call-to-action buttons for top user tasks and needs",
+    "description": "Details about the link grid component, including how to use it and the steps to install it.",
     "slug": "button-grid",
     "icon": "/img/ds-button-grid.png"
   },
@@ -156,7 +156,7 @@
     "type": "content",
     "status": "Alpha",
     "blurb": "A space for high-priority information that can include an icon and links",
-    "description": "A space for high-priority information that can include an icon and links",
+    "description": "Details about the page alert component, including how to use it and the steps to install it.",
     "slug": "page-alert",
     "icon": "/img/ds-page-alert.png"
   },
@@ -166,7 +166,7 @@
     "type": "content",
     "status": "Alpha",
     "blurb": "A list that replicates the ordering of government code",
-    "description": "A list that replicates the ordering of government code",
+    "description": "Details about the regulatory outline component, including how to use it and the steps to install it.",
     "slug": "regulatory-outline",
     "icon": "/img/ds-regulatory-outline.png"
   },
@@ -176,7 +176,7 @@
     "type": "content",
     "status": "Alpha",
     "blurb": "A numbered list that shows the steps in a process",
-    "description": "A numbered list that shows the steps in a process",
+    "description": "Details about the step list component, including how to use it and the steps to install it.",
     "slug": "step-list",
     "icon": "/img/ds-step-list.png"
   }
