@@ -1,7 +1,7 @@
 ---
 layout: single-column
 title: Principles
-description: The principles behind the State of California Design System.
+description: The principles behind the California Design System.
 ---
 
 {%- from "macros/principles-page-item.njk" import principlesPageItem -%}
