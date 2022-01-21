@@ -1,5 +1,4 @@
 const cagovBuildSystem = require('@cagov/11ty-build-system');
-const builds = require('./docs/src/11ty/builds.js');
 const markdown = require('./docs/src/11ty/markdown.js');
 const devStageTransform = require('./docs/src/11ty/development-stage-transform.js');
 
@@ -27,7 +26,6 @@ module.exports = function (eleventyConfig) {
             outfile: '_site_dist/built.js',
           },
         },
-        ...builds,
       ],
     },
   });
@@ -36,8 +34,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addPassthroughCopy({ 'docs/src/assets': 'assets' });
-  eleventyConfig.addPassthroughCopy({ 'docs/src/assets/img/*': 'img' });
+  eleventyConfig.addPassthroughCopy({
+    'docs/src/assets/illustrations': 'illustrations',
+  });
+  eleventyConfig.addPassthroughCopy({ 'docs/src/assets/img': 'img' });
   eleventyConfig.addPassthroughCopy({ 'docs/src/css/fonts': 'fonts' });
   eleventyConfig.addPassthroughCopy({ '_site_dist/*': '/' });
   eleventyConfig.addPassthroughCopy({ '_build_dist/*': 'builds' });
