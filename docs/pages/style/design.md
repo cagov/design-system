@@ -1,6 +1,6 @@
 ---
 title: Visual design style guide
-description: These recommended approaches make Design System websites visually appealing, easy to use, and accessible.
+description: These recommended approaches make California Design System websites visually appealing, easy to use, and accessible.
 ---
 
 # Visual design style guide
