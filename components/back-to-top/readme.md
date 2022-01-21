@@ -6,7 +6,7 @@ This can help people with mobility issues navigate the page more easily. It also
 
 The back to top button is especially helpful for people using mobile devices. It decreases the swiping they have to do to get back to the top of a page.
 
-The button appears when the user has scrolled past the first screen and begins to scroll back up. It disappears after 7 seconds. If someone scrolls again, it will reappear.
+The button appears when the user has scrolled past the first screen and begins to scroll back up. It disappears after 7 seconds by default. If someone scrolls again, it will reappear. If the user reaches the top of the page at any point, the button will disappear right away.
 
 ## When and how to use it
 
@@ -18,9 +18,11 @@ This component has no extra guidance. Use the component as specified.
 
 ## Demo and sample markup
 
+The back to top component is integrated into this site and appears at the bottom right of the screen during a pause in scroll activity if you have scrolled down past the first screen and have begun to scroll back up.
+
 <html-preview>
 
-```html preview
+```html
 <cagov-back-to-top data-hide-after="7000" data-label="Back to top">
 </cagov-back-to-top>
 ```
