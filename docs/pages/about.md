@@ -1,6 +1,6 @@
 ---
 title: About the Design System
-description: Learn about the vision, mission, and history about the Design System.  
+description: Learn about the vision, mission, and history of the California Design System.  
 keywords: about, about us, history, mission, vision
 ---
 # About the Design System
