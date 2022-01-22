@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const fs = require('fs').promises;
 const path = require('path');
 
-const backgroundColor = '#f9f9fa';
+const backgroundColor = '#F5F5FA';
 const originalSvgPath = 'docs/src/assets/illustrations/svg';
 
 fs.readdir(originalSvgPath).then((files) =>
