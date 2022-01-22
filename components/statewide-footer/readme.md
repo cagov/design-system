@@ -96,7 +96,7 @@ Do not combine the statewide footer with department logo, department links, or s
       </div>
     </div>
     <div class="container pt-0">
-      <p class="copyright">Copyright © 2021 State of California</p>
+      <p class="copyright">Copyright © 2022 State of California</p>
     </div>
   </div>
 </footer>
