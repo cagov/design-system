@@ -1,6 +1,6 @@
 ---
 name: Proposal
-about: Design system 01 - Describe a design system project or component
+about: Design system 01 - Propose a design system project or component
 title: 'Proposal for: '
 labels: Component, Component Definition, Proposal
 assignees: ''

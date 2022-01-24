@@ -1,6 +1,6 @@
 ---
 name: UX Review
-about: Design system 02 - Checklist of what we review for each component
+about: Design system 02 - UX checklist for reviewing a design system component
 title: 'UX Review: '
 labels: Component, Component Review, UX Review
 assignees: ''
