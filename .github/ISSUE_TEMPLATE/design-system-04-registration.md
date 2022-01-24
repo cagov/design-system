@@ -1,6 +1,6 @@
 ---
 name: Component registration
-about: Design system 04 - Add a component to the design system
+about: Design system 04 - Register a new component in the design system
 title: 'Register component: '
 labels: Component, Component Review, Registration, Metadata
 assignees: ''
