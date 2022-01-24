@@ -33,7 +33,7 @@ Some things we want to include in our next phase are:
 * More robust accessibility testing
 * Standardized file names across components
 
-Learn how to [contribute or tell us your ideas](/support/). 
+Learn how to [contribute or tell us your ideas](/contact-us/). 
 
 ## Component installation
 

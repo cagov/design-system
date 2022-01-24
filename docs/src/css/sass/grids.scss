@@ -25,11 +25,14 @@
 .cagov-stack-card {
   background-color: #f9f9fa;
   .cagov-card-head {
-    background: #b3c9eb;
+    background: #FFECC1;
     min-height: 176px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    &.cagov-card-head--blue {
+      background: #b3c9eb;
+    }
   }
   .cagov-card-body {
     padding: 1.5rem;

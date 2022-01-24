@@ -59,6 +59,17 @@ The component tracks the current page and triggers custom events on page clicks.
 
 `new CustomEvent("paginationClick", { detail: currentPage, })`
 
+Here is an example of subscribing to that event, then taking actions to retrieve new page content based on the page number clicked and changing the url to reflect the new state
+
+- The function writePostsHTML would be your own function that makes whatever call your application needs to retrieve the content for the page in question and write it into the DOM
+
+```js
+document.querySelector('cagov-pagination').addEventListener('paginationClick', function (e) { 
+  writePostsHTML(e.detail);
+  history.replaceState({page: 3}, `${document.title} page ${e.detail}`, `?page=${e.detail}`)
+  }, false);
+```
+
 ## CSS variables
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:

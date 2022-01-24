@@ -7,15 +7,21 @@
   background: #FFECC1;
 }
 .full-bleed--highlight2 {
-  background: #FFD9B3;
+  background: #003484;
+  color:#fff;
 }
 .full-bleed-content-area {
   padding: 0 20px;
   display: flex;
   background: transparent;
 }
+.full-bleed-content-area--block {
+  padding: 0 20px;
+  display: block;
+  background: transparent;
+}
 @media screen and (min-width: 1024px) {
-  .full-bleed-content-area {
+  .full-bleed-content-area, .full-bleed-content-area--block {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -38,6 +44,9 @@
 .cagov-py-2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.cagov-pt-2 {
+  padding-top: 2rem;
 }
 .cagov-bold {
   font-weight: bold;

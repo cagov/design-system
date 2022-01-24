@@ -38,12 +38,12 @@ Do not use page alerts to simply highlight important content. They are for infor
 <html-preview>
 
 ```html preview
-<div class="main">
-  <cagov-page-alert
-    data-icon="ca-gov-icon-bell"
-    data-message='Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href="/about-us/grant-funding/local-jurisdiction-assistance-grant-program/">Learn more</a>.'
-  ></cagov-page-alert>
-</div>
+<cagov-page-alert
+  data-icon="ca-gov-icon-bell"
+  data-message='Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href="/about-us/grant-funding/local-jurisdiction-assistance-grant-program/">Learn more</a>.'
+></cagov-page-alert>
+
+
 ```
 
 </html-preview>
@@ -62,7 +62,6 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. `npm i @cagov/ds-page-alert`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
-3. Include **SCSS** in your Sass compiler.
 4. Add the **sample markup** to your HTML.
 5. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
