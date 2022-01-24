@@ -7,7 +7,6 @@ import '../dist/index.js';
 describe('Page Alert', function unitTest() {
   this.timeout(20000);
   it('works', async () => {
-
     const response = await fetch('../template.html');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

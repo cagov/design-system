@@ -3,9 +3,9 @@
  * Supported endpoints: Wordpress v2
  */
 
- import styles from './index.css';
- 
- class CAGovPageAlert extends window.HTMLElement {
+import styles from './index.css';
+
+class CAGovPageAlert extends window.HTMLElement {
   connectedCallback() {
     this.message = this.dataset.message || '';
     this.icon = this.dataset.icon || '';
