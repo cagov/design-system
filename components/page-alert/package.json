@@ -1,11 +1,13 @@
 {
   "name": "@cagov/ds-page-alert",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "sass src/index.scss index.css",
+    "build:sass": "sass src/index.scss src/index.css",
+    "build:js": "rollup --config rollup.config.js",
+    "build": "npm run build:sass && npm run build:js",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@open-wc/testing": "^3.0.0-next.2",
     "@web/test-runner-puppeteer": "^0.10.1",
+    "rollup-plugin-import-css": "^3.0.2",
     "sass": "^1.38.1"
   }
 }
