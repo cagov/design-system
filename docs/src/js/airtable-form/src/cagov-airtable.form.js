@@ -57,7 +57,7 @@ const CaGovAirtableFormSubmit = {
       body: JSON.stringify(data),
     })
       .then((body) => {
-        // console.log('data', body);
+        console.log('data', body);
       })
       .catch((error) => console.error('error', error));
     console.log('response', response);
