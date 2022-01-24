@@ -39,6 +39,7 @@ section.agency-footer .footer-secondary-links a {
   padding-bottom: 0.5rem;
 }
 section.agency-footer .footer-social-links {
+  white-space: nowrap;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
 }
