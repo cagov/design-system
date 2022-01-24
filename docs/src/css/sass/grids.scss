@@ -11,21 +11,19 @@
     grid-gap: 1.5rem;
   }
 }
-.cagov-section-highlight {
-  font-size: 23px; /* got these numbers from figma, weird they are not divisible by 4 */
-  line-height: 39px;
-}
+
 .cagov-section-highlight-link {
   text-decoration: none;
   font-weight: 700;
 }
-.cagov-cluster-3, .cagov-cluster-big-2 {
+.cagov-cluster-3,
+.cagov-cluster-big-2 {
   .cagov-stack-card {
-    border-radius: 5px;  
+    border-radius: 5px;
   }
 }
 .cagov-stack-card {
-  background-color: #F9F9FA;
+  background-color: #f9f9fa;
   .cagov-card-head {
     background: #b3c9eb;
     min-height: 176px;
@@ -65,7 +63,7 @@
     .cagov-card-body {
       border-radius: 0 0 5px 5px;
     }
- }
+  }
 }
 
 /* utility class added for this section */
