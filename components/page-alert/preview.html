@@ -14,8 +14,16 @@
   <body>
 
     <div class="main">
-      <cagov-page-alert data-icon="ca-gov-icon-bell" data-message="Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href=&quot;/about-us/grant-funding/local-jurisdiction-assistance-grant-program/&quot;>Learn more</a>."></cagov-page-alert>
+
+      <div class="component-test-container"></div>
+
     </div>
+
+    <script>
+      fetch('./template.html')
+        .then(response => response.text())
+        .then((string) => { document.querySelector('.component-test-container').innerHTML = string; });
+    </script>
 
   </body>
 
