@@ -36,6 +36,7 @@ class CaGovAirtableForm extends window.HTMLElement {
       .addEventListener(
         'click',
         async (e) => {
+          // e.target.classList.add("inactive");
           e.preventDefault();
           submitForm();
         },

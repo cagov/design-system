@@ -1,6 +1,6 @@
 ---
 name: Technical Review
-about: Checklist for reviewing a design system component
+about: Design system 03 - Checklist for reviewing a design system component
 title: 'Technical Review: '
 labels: Component, Component Review, Technical Review
 assignees: ''
