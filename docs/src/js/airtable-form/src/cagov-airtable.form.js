@@ -56,10 +56,10 @@ const CaGovAirtableFormSubmit = {
       },
       body: JSON.stringify(data),
     })
-    .then((body) => {
-      console.log('data', body);
-    })
-    .catch((error) => console.error('error', error));
+      .then((body) => {
+        console.log('data', body);
+      })
+      .catch((error) => console.error('error', error));
     console.log('response', response);
     // Forcing success until can sort out error response system with FaaS
     return {

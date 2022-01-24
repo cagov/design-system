@@ -39,23 +39,23 @@ class CaGovAirtableForm extends window.HTMLElement {
         async (e) => {
           e.preventDefault();
           try {
-            if (e.target.classList.contains("form-submitted") === false) {
+            if (e.target.classList.contains('form-submitted') === false) {
               submitForm(e);
             } else {
-              console.log("Form already submitted");
+              console.log('Form already submitted');
             }
           } catch (error) {
-            console.error("Error submitting form", error);
+            console.error('Error submitting form', error);
           } finally {
-            console.log("Form submission cycle complete");
+            console.log('Form submission cycle complete');
           }
         },
         false,
       );
   }
 
-  async submitForm(e) {    
-    e.target.classList.add("inactive", "form-submitted");
+  async submitForm(e) {
+    e.target.classList.add('inactive', 'form-submitted');
     const serverResponse = await CaGovAirtableFormSubmit.init(this.options);
     console.log(serverResponse);
     document.querySelector(this.options.responseSelector).innerHTML =
