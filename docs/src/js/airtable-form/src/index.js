@@ -30,21 +30,32 @@ class CaGovAirtableForm extends window.HTMLElement {
     // Get dataset variables
 
     const submitForm = this.submitForm.bind(this);
+
     // This will work with just one form element per page.
     document
       .querySelector('cagov-airtable-form .airtable-form-submit')
       .addEventListener(
         'click',
         async (e) => {
-          // e.target.classList.add("inactive");
           e.preventDefault();
-          submitForm();
+          try {
+            if (e.target.classList.contains('form-submitted') === false) {
+              submitForm(e);
+            } else {
+              console.log('Form already submitted');
+            }
+          } catch (error) {
+            console.error('Error submitting form', error);
+          } finally {
+            console.log('Form submission cycle complete');
+          }
         },
         false,
       );
   }
 
-  async submitForm() {
+  async submitForm(e) {
+    e.target.classList.add('inactive', 'form-submitted');
     const serverResponse = await CaGovAirtableFormSubmit.init(this.options);
     console.log(serverResponse);
     document.querySelector(this.options.responseSelector).innerHTML =

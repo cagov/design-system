@@ -59,7 +59,9 @@
   padding-bottom: 1.5rem;
   gap: 2rem;
   flex-wrap: nowrap;
-  
+  button.inactive.wp-block-button__link {
+    background-color: var(--gray-700, #a09fa7);
+  }
   &.form-background-light {
     background-color: var(--gray-100, #F9F9FA);
   }
