@@ -9,6 +9,9 @@
 .full-bleed--highlight2 {
   background: #003484;
   color:#fff;
+  a {
+    color:#fff;
+  }
 }
 .full-bleed-content-area {
   padding: 0 20px;
@@ -60,6 +63,7 @@
   &.form-background-light {
     background-color: var(--gray-100, #F9F9FA);
   }
+
   &-content {
     flex-grow: 2;
   }
@@ -79,15 +83,14 @@
     padding: .5rem;
     border-radius: 5px;
     border: 1px var(--gray-400, #D3D2D6) solid;
+    color: var(--black, #000000);
   }
   input, textarea {
     width: 100%;
-    // max-width: 660px;
   }
   select {
     appearance: none;
     width: calc(100% + 1px);
-    // max-width: 660px;
   }
   .required label {
       font-weight: bold;
