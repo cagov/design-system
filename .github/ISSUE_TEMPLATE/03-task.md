@@ -1,6 +1,6 @@
 ---
 name: Task
-about: Standard task template
+about: Add a task
 title: 'Task: '
 labels: Task
 assignees: ''
