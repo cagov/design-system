@@ -59,7 +59,7 @@ The component meets minimal or no accessibility requirements.
 
 ### Alpha
 
-A _In research_ component has matured and is ready for wider adoption and use cases. The component is a candidate for permanent status as part of the Design System.
+An _In research_ component has matured and is ready for wider adoption and use cases. The component is a candidate for permanent status as part of the Design System.
 
 Alpha components must pass the following accessibility reviews every time a new version is published:
 
