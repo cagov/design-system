@@ -35,7 +35,7 @@ Do not use the site footer:
 - As secondary navigation
 - To link to information that meets primary user needs
 
-Do not put any contact information in the site footer. This goes in the [statewide footer](/components/statewide-footer/readme/)
+Do not put any contact information in the site footer. This goes in the [statewide footer](/components/statewide-footer/readme/).
 
 Do not include more than one social media account per platform.
 
