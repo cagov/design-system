@@ -1,5 +1,5 @@
 
-## Scripts for contributers
+## Scripts for contributors
 
 ### Develop
 
