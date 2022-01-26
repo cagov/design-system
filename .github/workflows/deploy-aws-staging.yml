@@ -21,7 +21,10 @@ jobs:
         run: |
           npm install
           npm run site:build
-
+      - name: Write robots.txt
+        run: |
+          echo 'User-agent: *' > _site/robots.txt
+          echo 'Disallow: /' >> _site/robots.txt
       # Push built site files to S3 production bucket    
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1

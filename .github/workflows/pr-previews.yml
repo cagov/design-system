@@ -39,8 +39,8 @@ jobs:
           ROOT=https://${URLSAFE_BRANCH_NAME}.pr.designsystem.webstandards.ca.gov npm run build
       - name: Write robots.txt
         run: |
-          echo 'User-agent: *' > docs/robots.txt
-          echo 'Disallow: /' >> docs/robots.txt
+          echo 'User-agent: *' > _site/robots.txt
+          echo 'Disallow: /' >> _site/robots.txt
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
