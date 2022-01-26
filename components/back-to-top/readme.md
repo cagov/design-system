@@ -53,8 +53,8 @@ The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/U
 - `--primary-color`
 - `--primary-dark-color`
 - `--highlight-color`
-- `--body-text`
-- `--body-text-mobile`
+- `--font-size-2`
+- `--font-size-1`
 - `--gray-100`
 
 All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
