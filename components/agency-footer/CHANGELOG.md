@@ -2,6 +2,9 @@
 
 `ds-agency-footer`
 
+# 1.0.4
+* Force social media icons onto the same line on Safari. 
+
 # 1.0.3
 * Added visible gray-300 top and bottom borders 
 
