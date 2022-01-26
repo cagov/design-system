@@ -132,7 +132,7 @@ Do not modify the site header beyond adding the site name and a logo.
     </div>
 
     <div class="search-container grid-search">
-      <form class="site-search" action="/serp/">
+      <form class="site-search">
         <span class="sr-only" id="SearchInput">Custom Google Search</span>
         <input
           type="text"
@@ -235,7 +235,7 @@ Do not modify the site header beyond adding the site name and a logo.
     </div>
 
     <div class="search-container grid-search">
-      <form class="site-search" action="/serp/">
+      <form class="site-search">
         <span class="sr-only" id="SearchInput">Custom Google Search</span>
         <input
           type="text"
