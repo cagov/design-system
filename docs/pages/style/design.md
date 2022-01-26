@@ -5,7 +5,7 @@ description: These recommended approaches make California Design System websites
 
 # Visual design style guide
 
-<p class="text-lead">The visual design of the Design System is inspired by the [Design System principles](/principles). Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.</p>
+<p class="text-lead">The visual design of the Design System is inspired by the <a href="/principles/">Design System principles</a>. Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.</p>
 
 ## Our approach to visual design
 1. **Accessible**</br>Visual design plays a critical role in ensuring a website is accessible. Always have sufficient contrast between text and backgrounds. Do not rely on color alone for visual communication.
