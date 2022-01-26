@@ -1,9 +1,9 @@
 {
   "In research": {
-    "description": "In research components have not been thoroughly tested by developers. <a href='#'>Learn more about component maturity.</a>"
+    "description": "In research components have not been thoroughly tested by developers. <a href='https://designsystem.webstandards.ca.gov/components/#component-maturity'>Learn more about component maturity.</a>"
   },
   "Alpha": {
-    "description": "Alpha components have not been thoroughly tested by developers. <a href='#'>Learn more about component maturity.</a>"
+    "description": "Alpha components have not been thoroughly tested by developers. <a href='https://designsystem.webstandards.ca.gov/components/#component-maturity'>Learn more about component maturity.</a>"
   },
   "Beta": {
     "description": "<a href='#'>Learn more about component maturity.</a>"

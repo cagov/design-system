@@ -5,7 +5,7 @@ description: These recommended approaches make California Design System websites
 
 # Visual design style guide
 
-The visual design of the Design System is inspired by the [Design System principles](/principles). Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.
+<p class="text-lead">The visual design of the Design System is inspired by the [Design System principles](/principles). Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.</p>
 
 ## Our approach to visual design
 1. **Accessible**</br>Visual design plays a critical role in ensuring a website is accessible. Always have sufficient contrast between text and backgrounds. Do not rely on color alone for visual communication.
@@ -166,7 +166,7 @@ Our base font size is 18px with a line spacing of 32px. To generate the rest of 
 We use photos and illustrations for visualizing information. We follow these guidelines:
 - Do not use images as unnecessary decoration.
 - Use an aspect ratio of 3:2 for all images. The exception is if the proportions of the subject of the image have significance. For example, an image of a driver’s license or an image of an application form. 
-- Use alt text whenever adding images. Alt text makes websites more accessible and helps with search engine optimization. Read more about writing alt text on the [United States Government Accessibility for Teams guide](https://accessibility.digital.gov/content-design/images/).
+- Use alt text whenever adding images. Alt text makes websites more accessible and helps with search engine optimization. Read more about writing alt text in [Harvard University's digital accessibility guidelines](https://accessibility.huit.harvard.edu/describe-content-images).
 
 We currently use [icons from the State Web Template](https://template.webstandards.ca.gov/sample/icon-fonts.html). We are working on making them available through the Design System.
 
