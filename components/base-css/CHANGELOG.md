@@ -1,7 +1,9 @@
 # CHANGELOG for ds-base-css
 `ds-base-css`
 
-# 1.0.4
+# 1.0.15
+* Added new design tockens. Added new utility classes.
+# 1.0.14
 * reduce top margin on h2
 
 # 1.0.13

@@ -1,19 +1,19 @@
 /* Typography global styles */
 body {
   font-family: var(--site-font, "Public Sans", sans-serif);
-  font-size: var(--body-text, 1.125rem);
-  font-weight: var(--font-weight-regular, 400);
-  line-height: 1.5;
+  font-size: var(--font-size-2, 1.125rem);
+  font-weight: var(--font-weight-4, 400);
+  line-height: var(--font-lineheight-3, 1.5);
   color: var(--black, #000);
   @media (min-width: 768px) {
-    font-size: calc(var(--body-text) + var(--ratio));
+    font-size: calc(var(--font-size-2) + var(--ratio));
   }
 }
 
 /* TYPOGRAPHY */
 h1.page-title {
   margin: 0 0 0 0;
-  padding: 0 0 24px 0;
+  padding: 0 0 var(--s-3) 0;
 }
 
 main {
@@ -24,28 +24,28 @@ main {
 
 // paragraph margin
 p {
-  margin-bottom: calc(1rem + var(--ratio));
+  margin-bottom: calc(var(--s-2) + var(--ratio));
 }
 
 /* New styles, need home */
 ul,
 ol {
-  margin-bottom: calc(1rem + var(--ratio));
+  margin-bottom: calc(var(--s-2) + var(--ratio));
 }
 
 ul li,
 ol li {
-  margin-bottom: calc(0.5rem + var(--ratio));
+  margin-bottom: calc(var(--s-1) + var(--ratio));
 }
 
 main ol li,
 main ul li {
-  margin-left: 32px;
+  margin-left: var(--s-4, 2rem);
 }
 
 main ol li {
   padding: 0 16px;
-  margin-bottom: calc(0.5rem + var(--ratio));
+  margin-bottom: calc(var(--s-1) + var(--ratio));
 }
 
 /* Update position list element */
@@ -56,88 +56,88 @@ main ol li {
 
 h1,
 .h1 {
-  font-size: calc(2.9375rem + var(--ratio));
-  margin-top: calc(3rem + var(--ratio));
-  margin-bottom: calc(2rem + var(--ratio));
-  font-weight: var(--font-weight-bold, 700);
+  font-size: calc(var(--font-size-10) + var(--ratio));
+  margin-top: calc(var(--s-5) + var(--ratio));
+  margin-bottom: calc(var(--s-4) + var(--ratio));
+  font-weight: var(--font-weight-7, 700);
 }
 
 h2,
 .h2 {
-  font-size: calc(2.3175rem + var(--ratio));
-  margin-top: calc(1.5rem + var(--ratio));
-  margin-bottom: calc(1.5rem + var(--ratio));
-  font-weight: var(--font-weight-bold, 700);
+  font-size: calc(var(--font-size-8) + var(--ratio));
+  margin-top: calc(var(--s-3) + var(--ratio));
+  margin-bottom: calc(var(--s-3) + var(--ratio));
+  font-weight: var(--font-weight-7, 700);
 }
 
 h3,
 .h3 {
-  font-size: calc(1.8125rem + var(--ratio));
-  margin-top: calc(1.5rem + var(--ratio));
-  margin-bottom: calc(1rem + var(--ratio));
-  font-weight: var(--font-weight-bold, 700);
+  font-size: calc(var(--font-size-6) + var(--ratio));
+  margin-top: calc(var(--s-3) + var(--ratio));
+  margin-bottom: calc(var(--s-2) + var(--ratio));
+  font-weight: var(--font-weight-7, 700);
 }
 
 h4,
 .h4 {
-  font-size: calc(1.4375rem + var(--ratio));
-  margin-top: calc(1.5rem + var(--ratio));
-  margin-bottom: calc(1rem + var(--ratio));
-  font-weight: var(--font-weight-bold, 700);
+  font-size: calc(var(--font-size-4) + var(--ratio));
+  margin-top: calc(var(--s-3) + var(--ratio));
+  margin-bottom: calc(var(--s-2) + var(--ratio));
+  font-weight: var(--font-weight-7, 700);
 }
 
 h5,
 .h5 {
-  font-size: calc(1.125rem + var(--ratio));
-  margin-top: calc(1.5rem + var(--ratio));
-  margin-bottom: calc(1rem + var(--ratio));
-  font-weight: var(--font-weight-bold, 700);
+  font-size: calc(var(--font-size-2) + var(--ratio));
+  margin-top: calc(var(--s-3) + var(--ratio));
+  margin-bottom: calc(var(--s-2) + var(--ratio));
+  font-weight: var(--font-weight-7, 700);
 }
 
 h6,
 .h6 {
-  font-size: calc(0.75rem + var(--ratio));
-  margin-top: calc(1.5rem + var(--ratio));
-  margin-bottom: calc(1rem + var(--ratio));
-  font-weight: var(--font-weight-bold, 700);
+  font-size: calc(var(--font-size-sm) + var(--ratio));
+  margin-top: calc(var(--s-3) + var(--ratio));
+  margin-bottom: calc(var(--s-2) + var(--ratio));
+  font-weight: var(--font-weight-7, 700);
 }
 
 .text-lead,
 .lead {
-  font-size: var(--lead-text, 1.4375rem);
-  font-size: calc(var(--lead-text) + var(--ratio));
+  font-size: var(--font-size-4, 1.4375rem);
+  font-size: calc(var(--font-size-4) + var(--ratio));
 }
 .text-small,
 .text-sm {
-  font-size: var(--small-text, 0.875rem);
-  font-size: calc(var(--small-text) + var(--ratio));
+  font-size: var(--font-size-sm, 0.875rem);
+  font-size: calc(var(--font-size-sm) + var(--ratio));
 }
 
 // Mobile headings
 @media (max-width: 767px) {
   h1,
   .h1 {
-    font-size: 2.625rem;
+    font-size: var(--font-size-9, 2.625rem);
   }
 
   h2,
   .h2 {
-    font-size: 2.0625rem;
+    font-size: var(--font-size-7, 2.0625rem);
   }
 
   h3,
   .h3 {
-    font-size: 1.625rem;
+    font-size: var(--font-size-5, 1.625rem);
   }
 
   h4,
   .h4 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-3, 1.25rem);
   }
 
   h5,
   .h5 {
-    font-size: 1rem;
+    font-size: var(--font-size-1, 1rem);
   }
 
   h2:first-child,
@@ -147,11 +147,11 @@ h6,
 
   .text-lead,
   .lead {
-    font-size: var(--lead-text-mobile, 1.25rem);
+    font-size: var(--font-size-3, 1.25rem);
   }
   .text-small,
   .text-sm {
-    font-size: var(--small-text-mobile, 0.875rem);
+    font-size: var(--font-size-sm, 0.875rem);
   }
 }
 
@@ -161,18 +161,18 @@ ul.list-highlight {
   li {
     list-style: none;
     background-color: var(--gray-100, #f9f9fa);
-    padding: 24px;
-    margin-bottom: calc(1rem + var(--ratio));
+    padding: var(--s-3, 24px);
+    margin-bottom: calc(var(--s-2) + var(--ratio));
     margin-left: 0;
-    font-size: calc(1.75rem + var(--ratio));
-    font-weight: var(--font-weight-bold, 700);
+    font-size: calc(var(--font-size-5) + var(--ratio));
+    font-weight: var(--font-weight-7, 700);
     span.has-black-color {
       margin-top: calc(1rem + var(--ratio));
-      font-size: var(--body-text, 1.125rem);
-      font-size: calc(var(--body-text) + var(--ratio));
-      font-weight: var(--font-weight-regular, 400);
+      font-size: var(--font-size-2, 1.125rem);
+      font-size: calc(var(--font-size-2) + var(--ratio));
+      font-weight: var(--font-weight-4, 400);
       display: block;
-      line-height: 1.6;
+      line-height: var(--font-lineheight-3, 1.5);
     }
   }
 }
@@ -196,6 +196,6 @@ figure {
   border: none;
   figcaption {
     padding-left: 0;
-    font-size: calc(0.875rem + var(--ratio));
+    font-size: calc(var(--font-size-sm) + var(--ratio));
   }
 }

@@ -6,8 +6,8 @@ samp {
   color: var(--gray-900, #3f3e4d);
   padding: 2.5px 5px;
   border-radius: 6px;
-  font-size: var(--body-text, 1.125rem);
-  font-size: calc(var(--body-text) + var(--ratio));
+  font-size: var(--font-size-2, 1.125rem);
+  font-size: calc(var(--font-size-2) + var(--ratio));
 }
 
 pre > code {
@@ -16,5 +16,3 @@ pre > code {
   overflow-x: auto;
   margin: 24px 0;
 }
-
-
