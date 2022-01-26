@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "",
   "main": "index.css",
+  "type": "module",
   "scripts": {
     "build": "sass src/index.scss index.css",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
