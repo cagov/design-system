@@ -2675,6 +2675,7 @@ body {
   font-weight: var(--font-weight-4, 400);
   line-height: var(--font-lineheight-3, 1.5);
   color: var(--black, #000);
+  overflow-x: hidden;
 }
 @media (min-width: 768px) {
   body {
@@ -4345,6 +4346,12 @@ figure figcaption {
 /* every-layout.dev layout classes */
 .stack * + * {
   margin-top: 1.5rem;
+}
+
+/* Full bleed */
+.full-bleed {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
 }
 
 /* all utility css classes that can be used (shortcodes) */
