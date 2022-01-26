@@ -1,25 +1,28 @@
+$cagov-regulatory-outline-margin: var(--s-2, 24px);
+
 ol.cagov-regulatory-outline {
   &,
   & ol {
     counter-reset: section;
     list-style-type: none;
-    margin-left: 32px;
-    padding-left: 32px;
+    margin-left: $cagov-regulatory-outline-margin;
+    padding-left: $cagov-regulatory-outline-margin;
 
     li {
       counter-increment: section;
       list-style-type: none;
-      margin: 16px 0;
+      margin: calc($cagov-regulatory-outline-margin * 0.5) 0;
+      padding: 0;
       position: relative;
 
       &::before {
-        content: "(" counter(section, lower-alpha) ") ";
-        width: 100px;
-        margin-left: -32px;
-        padding-right: 32px;
+        content: '(' counter(section, lower-alpha) ') ';
+        width: calc($cagov-regulatory-outline-margin * 3);
+        margin-left: calc($cagov-regulatory-outline-margin * -1);
+        padding-right: calc($cagov-regulatory-outline-margin * 0.5);
         display: inline-block;
         position: absolute;
-        left: -50px;
+        left: calc($cagov-regulatory-outline-margin * -2);
         white-space: nowrap;
         text-align: right;
       }
@@ -27,16 +30,16 @@ ol.cagov-regulatory-outline {
 
     ol li {
       &:before {
-        content: "(" counter(section, decimal) ") ";
+        content: '(' counter(section, decimal) ') ';
       }
 
       ol li {
         &:before {
-          content: "(" counter(section, upper-alpha) ") ";
+          content: '(' counter(section, upper-alpha) ') ';
         }
 
         ol li:before {
-          content: "(" counter(section, lower-roman) ") ";
+          content: '(' counter(section, lower-roman) ') ';
         }
       }
     }

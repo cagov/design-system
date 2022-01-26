@@ -1,23 +1,24 @@
 ol.cagov-regulatory-outline, ol.cagov-regulatory-outline ol {
   counter-reset: section;
   list-style-type: none;
-  margin-left: 32px;
-  padding-left: 32px;
+  margin-left: var(--s-2, 24px);
+  padding-left: var(--s-2, 24px);
 }
 ol.cagov-regulatory-outline li, ol.cagov-regulatory-outline ol li {
   counter-increment: section;
   list-style-type: none;
-  margin: 16px 0;
+  margin: calc(var(--s-2, 24px) * 0.5) 0;
+  padding: 0;
   position: relative;
 }
 ol.cagov-regulatory-outline li::before, ol.cagov-regulatory-outline ol li::before {
   content: "(" counter(section, lower-alpha) ") ";
-  width: 100px;
-  margin-left: -32px;
-  padding-right: 32px;
+  width: calc(var(--s-2, 24px) * 3);
+  margin-left: calc(var(--s-2, 24px) * -1);
+  padding-right: calc(var(--s-2, 24px) * 0.5);
   display: inline-block;
   position: absolute;
-  left: -50px;
+  left: calc(var(--s-2, 24px) * -2);
   white-space: nowrap;
   text-align: right;
 }
