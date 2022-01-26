@@ -8,6 +8,7 @@ body {
   @media (min-width: 768px) {
     font-size: calc(var(--font-size-2) + var(--ratio));
   }
+  overflow-x: hidden; // fixes scroll bar caused by full-bleed class
 }
 
 /* TYPOGRAPHY */
