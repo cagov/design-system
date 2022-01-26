@@ -19,7 +19,7 @@ When you install the page feedback component, it is automatically added to every
 
 Monitor the information you receive through page feedback so you know user sentiment and can catch problems early.
 
-If you’re interested in using page feedback on your site, [contact us through the Support page](/contact-us) to get more information.
+If you’re interested in using page feedback on your site, [reach us through the Contact us page](/contact-us) to get more information.
 
 ### How not to use it
 
