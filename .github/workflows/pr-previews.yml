@@ -35,8 +35,7 @@ jobs:
       - name: Build 11ty
         run: |
           npm install
-          npm run site:build
-          ROOT=https://${URLSAFE_BRANCH_NAME}.pr.designsystem.webstandards.ca.gov npm run build
+          ROOT=https://${URLSAFE_BRANCH_NAME}.pr.designsystem.webstandards.ca.gov npm run site:build
       - name: Write robots.txt
         run: |
           echo 'User-agent: *' > _site/robots.txt

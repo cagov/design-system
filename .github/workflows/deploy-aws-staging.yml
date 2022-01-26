@@ -20,7 +20,7 @@ jobs:
       - name: Build Site
         run: |
           npm install
-          npm run site:build
+          ROOT=https://staging.designsystem.webstandards.ca.gov npm run site:build
       - name: Write robots.txt
         run: |
           echo 'User-agent: *' > _site/robots.txt
