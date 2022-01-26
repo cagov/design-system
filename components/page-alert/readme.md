@@ -40,7 +40,7 @@ Do not use page alerts to simply highlight important content. They are for infor
 ```html preview
 <cagov-page-alert
   data-icon="ca-gov-icon-bell"
-  data-message='Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href="/about-us/grant-funding/local-jurisdiction-assistance-grant-program/">Learn more</a>.'
+  data-message='Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href="#">Learn more</a>.'
 ></cagov-page-alert>
 
 
