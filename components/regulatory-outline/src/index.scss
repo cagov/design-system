@@ -16,6 +16,7 @@ ol.cagov-regulatory-outline {
       position: relative;
 
       &::before {
+        background-color: transparent;
         content: '(' counter(section, lower-alpha) ') ';
         width: calc($cagov-regulatory-outline-margin * 3);
         margin-left: calc($cagov-regulatory-outline-margin * -1);
