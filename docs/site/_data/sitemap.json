@@ -1,0 +1,6 @@
+{
+  "urls": {
+    "/markdown/": { "exclude": true },
+    "/front-matter/": { "exclude": true }
+  }
+}
