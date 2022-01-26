@@ -16,7 +16,7 @@ If possible, rewrite information from regulations or government code using plain
 
 If you must put regulations or government code on your webpage, use the regulatory outline. It allows you to publish properly formatted regulations without using PDFs, which may not meet accessibility standards.
 
-To use the regulatory outline, apply the `cagov-regulatory-outline` class to the list. You can also go into code editor view and apply `.cagov-regulatory-outline <ol>` to the tag. All child `<li>` and `<ol>` tags will inherit the appropriate list styles up to 4 levels deep.
+To use the regulatory outline, apply the `cagov-regulatory-outline` class to the `<ol>` tag. All child `<li>` and `<ol>` tags will inherit the appropriate list styles up to 4 levels deep.
 
 ### How not to use it
 
@@ -235,7 +235,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Include **SCSS** in your compiler.
 2. Add the **sample markup** from the component to your HTML.
-3. You may need to adjust `margin-left` depending on your default font size.
+3. You may need to adjust `$cagov-regulatory-outline-margin` depending on your default font size.
 
 ## Progressive enhancement
 
@@ -244,11 +244,3 @@ This is an HTML- and CSS-only component. JavaScript is not required. It uses [CS
 ## Content model
 
 This component requires `ol.cagov-regulatory-outline`. It will not work with `ul`.
-
-## Contributor/Developer documenation
-
-`npm run build` - Generate css from scss files.
-
-`npm run test` - Run headless tests with [Open Web Components](https://open-wc.org/).
-
-`npm run test:visual` - Run headed tests with [Open Web Components](https://open-wc.org/).
