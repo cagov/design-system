@@ -2,7 +2,7 @@
 `ds-base-css`
 
 # 1.0.15
-* Added new design tockens. Added new utility classes.
+* Added new design tokens. Added new utility classes.
 # 1.0.14
 * reduce top margin on h2
 
