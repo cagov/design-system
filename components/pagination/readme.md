@@ -100,19 +100,6 @@ As a component in Alpha status, this component must pass the following accessibi
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
 
-## Data attributes
-
-This component accepts attributes for the number of pages and current page. These changes are monitored and the component re-renders if these attributes change:
-
-- `data-current-page="5"`
-- `data-total-pages="99"`
-
-It also accepts optional strings for all the text so it can be used in multiple languages:
-
-- `data-previous="Previous"`
-- `data-next="Next"`
-- `data-page="Page"`
-
 ## Progressive enhancement
 
 This component uses a custom element defined in JavaScript in addition to HTML and CSS. Edge, Firefox, Safari, and Chrome support [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements). If the JavaScript for this component is not delivered or supported, the component will not display. This component does not currently perform the desired progressive enhancement because it is critical to site interaction. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.
@@ -121,4 +108,17 @@ This component uses a custom element defined in JavaScript in addition to HTML a
 
 ## Content model
 
-@todo
+This component accepts data attributes for the number of pages and current page. These changes are monitored and the component re-renders if these attributes change:
+
+| Name | Attribute name | Data type | Field type |
+| --- | --- | --- | --- |
+| Current page | data-current-page | string | Integer (default is 1) |
+| Total pages | data-total-pages | string | Integer (default is 1) |
+
+It also accepts optional strings for all the text so it can be used in multiple languages:
+
+| Name | Attribute name | Data type | Field type |
+| --- | --- | --- | --- |
+| Previous | data-previous | string | Plain text (default is "&#60;") |
+| Next | data-next | string | Plain text (default is "&#62;") |
+| Page | data-page | string | Plain text (default is "Page") |
