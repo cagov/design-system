@@ -1,5 +1,4 @@
-var styles =
-  '/* CONTENT NAVIGATION */\nsidebar cagov-content-navigation .label {\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28.2px;\n  padding: 0;\n  margin: 0;\n  padding-bottom: 16px;\n}\n\nsidebar cagov-content-navigation ul,\nsidebar cagov-content-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),\nsidebar cagov-content-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {\n  margin: 0;\n  text-indent: 0;\n  padding: 0;\n}\n\nsidebar cagov-content-navigation ul li {\n  padding-top: 14px;\n  padding-bottom: 18px;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  border-bottom: 1px solid var(--gray-300, #e1e0e3);\n  line-height: 28.2px;\n  list-style: none;\n}\nsidebar cagov-content-navigation ul li:first-child {\n  border-top: 1px solid var(--gray-300, #e1e0e3);\n}\nsidebar cagov-content-navigation ul li a {\n  text-decoration: none;\n}\nsidebar cagov-content-navigation ul li a:hover {\n  text-decoration: underline;\n}\n\n@media only screen and (max-width: 992px) {\n  cagov-content-navigation .label {\n    display: none;\n  }\n\n  .sidebar-container {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n  }\n\n  cagov-content-navigation ul li a {\n    font-size: 16px;\n    line-height: 24px;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+var styles = "/* CONTENT NAVIGATION */\nsidebar cagov-content-navigation .label {\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28.2px;\n  padding: 0;\n  margin: 0;\n  padding-bottom: 16px;\n}\n\nsidebar cagov-content-navigation ul,\nsidebar cagov-content-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),\nsidebar cagov-content-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {\n  margin: 0;\n  text-indent: 0;\n  padding: 0;\n}\n\nsidebar cagov-content-navigation ul li {\n  padding-top: 14px;\n  padding-bottom: 18px;\n  margin-left: 0;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  border-bottom: 1px solid var(--gray-300, #e1e0e3);\n  line-height: 28.2px;\n  list-style: none;\n}\nsidebar cagov-content-navigation ul li:first-child {\n  border-top: 1px solid var(--gray-300, #e1e0e3);\n}\nsidebar cagov-content-navigation ul li a {\n  text-decoration: none;\n}\nsidebar cagov-content-navigation ul li a:hover {\n  text-decoration: underline;\n}\n\n@media only screen and (max-width: 992px) {\n  cagov-content-navigation .label {\n    display: none;\n  }\n\n  .sidebar-container {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n  }\n\n  cagov-content-navigation ul li a {\n    font-size: 16px;\n    line-height: 24px;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n";
 
 /**
  * Content Navigation web component
@@ -10,6 +9,9 @@ var styles =
  * @attr {string} [data-type] - "wordpress";
  * @attr {string} [data-label] - "On this page";
  */
+
+
+
 class CAGovContentNavigation extends window.HTMLElement {
   connectedCallback() {
     this.type = 'wordpress';
@@ -42,59 +44,59 @@ class CAGovContentNavigation extends window.HTMLElement {
               : Date.now;
           var c =
             ((l = o.navigator.userAgent),
-            new RegExp(['MSIE ', 'Trident/', 'Edge/'].join('|')).test(l)
-              ? 1
-              : 0);
+              new RegExp(['MSIE ', 'Trident/', 'Edge/'].join('|')).test(l)
+                ? 1
+                : 0);
           (o.scroll = o.scrollTo =
             function () {
               void 0 !== arguments[0] &&
                 (!0 !== f(arguments[0])
                   ? h.call(
-                      o,
-                      t.body,
-                      void 0 !== arguments[0].left
-                        ? ~~arguments[0].left
-                        : o.scrollX || o.pageXOffset,
-                      void 0 !== arguments[0].top
-                        ? ~~arguments[0].top
-                        : o.scrollY || o.pageYOffset,
-                    )
+                    o,
+                    t.body,
+                    void 0 !== arguments[0].left
+                      ? ~~arguments[0].left
+                      : o.scrollX || o.pageXOffset,
+                    void 0 !== arguments[0].top
+                      ? ~~arguments[0].top
+                      : o.scrollY || o.pageYOffset,
+                  )
                   : i.scroll.call(
-                      o,
-                      void 0 !== arguments[0].left
-                        ? arguments[0].left
-                        : typeof arguments[0] !== 'object'
+                    o,
+                    void 0 !== arguments[0].left
+                      ? arguments[0].left
+                      : typeof arguments[0] !== 'object'
                         ? arguments[0]
                         : o.scrollX || o.pageXOffset,
-                      void 0 !== arguments[0].top
-                        ? arguments[0].top
-                        : void 0 !== arguments[1]
+                    void 0 !== arguments[0].top
+                      ? arguments[0].top
+                      : void 0 !== arguments[1]
                         ? arguments[1]
                         : o.scrollY || o.pageYOffset,
-                    ));
+                  ));
             }),
             (o.scrollBy = function () {
               void 0 !== arguments[0] &&
                 (f(arguments[0])
                   ? i.scrollBy.call(
-                      o,
-                      void 0 !== arguments[0].left
-                        ? arguments[0].left
-                        : typeof arguments[0] !== 'object'
+                    o,
+                    void 0 !== arguments[0].left
+                      ? arguments[0].left
+                      : typeof arguments[0] !== 'object'
                         ? arguments[0]
                         : 0,
-                      void 0 !== arguments[0].top
-                        ? arguments[0].top
-                        : void 0 !== arguments[1]
+                    void 0 !== arguments[0].top
+                      ? arguments[0].top
+                      : void 0 !== arguments[1]
                         ? arguments[1]
                         : 0,
-                    )
+                  )
                   : h.call(
-                      o,
-                      t.body,
-                      ~~arguments[0].left + (o.scrollX || o.pageXOffset),
-                      ~~arguments[0].top + (o.scrollY || o.pageYOffset),
-                    ));
+                    o,
+                    t.body,
+                    ~~arguments[0].left + (o.scrollX || o.pageXOffset),
+                    ~~arguments[0].top + (o.scrollY || o.pageYOffset),
+                  ));
             }),
             (e.prototype.scroll = e.prototype.scrollTo =
               function () {
@@ -119,13 +121,13 @@ class CAGovContentNavigation extends window.HTMLElement {
                       void 0 !== arguments[0].left
                         ? ~~arguments[0].left
                         : typeof arguments[0] !== 'object'
-                        ? ~~arguments[0]
-                        : this.scrollLeft,
+                          ? ~~arguments[0]
+                          : this.scrollLeft,
                       void 0 !== arguments[0].top
                         ? ~~arguments[0].top
                         : void 0 !== arguments[1]
-                        ? ~~arguments[1]
-                        : this.scrollTop,
+                          ? ~~arguments[1]
+                          : this.scrollTop,
                     );
                   }
               }),
@@ -133,19 +135,19 @@ class CAGovContentNavigation extends window.HTMLElement {
               void 0 !== arguments[0] &&
                 (!0 !== f(arguments[0])
                   ? this.scroll({
-                      left: ~~arguments[0].left + this.scrollLeft,
-                      top: ~~arguments[0].top + this.scrollTop,
-                      behavior: arguments[0].behavior,
-                    })
+                    left: ~~arguments[0].left + this.scrollLeft,
+                    top: ~~arguments[0].top + this.scrollTop,
+                    behavior: arguments[0].behavior,
+                  })
                   : i.elementScroll.call(
-                      this,
-                      void 0 !== arguments[0].left
-                        ? ~~arguments[0].left + this.scrollLeft
-                        : ~~arguments[0] + this.scrollLeft,
-                      void 0 !== arguments[0].top
-                        ? ~~arguments[0].top + this.scrollTop
-                        : ~~arguments[1] + this.scrollTop,
-                    ));
+                    this,
+                    void 0 !== arguments[0].left
+                      ? ~~arguments[0].left + this.scrollLeft
+                      : ~~arguments[0] + this.scrollLeft,
+                    void 0 !== arguments[0].top
+                      ? ~~arguments[0].top + this.scrollTop
+                      : ~~arguments[1] + this.scrollTop,
+                  ));
             }),
             (e.prototype.scrollIntoView = function () {
               if (!0 !== f(arguments[0])) {
@@ -154,7 +156,7 @@ class CAGovContentNavigation extends window.HTMLElement {
                     ;
                     o !== t.body &&
                     !1 ===
-                      ((e = p((l = o), 'Y') && a(l, 'Y')),
+                    ((e = p((l = o), 'Y') && a(l, 'Y')),
                       (r = p(l, 'X') && a(l, 'X')),
                       e || r);
 
@@ -169,22 +171,22 @@ class CAGovContentNavigation extends window.HTMLElement {
                 const r = this.getBoundingClientRect();
                 l !== t.body
                   ? (h.call(
-                      this,
-                      l,
-                      l.scrollLeft + r.left - e.left,
-                      l.scrollTop + r.top - e.top,
-                    ),
+                    this,
+                    l,
+                    l.scrollLeft + r.left - e.left,
+                    l.scrollTop + r.top - e.top,
+                  ),
                     o.getComputedStyle(l).position !== 'fixed' &&
-                      o.scrollBy({
-                        left: e.left,
-                        top: e.top,
-                        behavior: 'smooth',
-                      }))
-                  : o.scrollBy({
-                      left: r.left,
-                      top: r.top,
+                    o.scrollBy({
+                      left: e.left,
+                      top: e.top,
                       behavior: 'smooth',
-                    });
+                    }))
+                  : o.scrollBy({
+                    left: r.left,
+                    top: r.top,
+                    behavior: 'smooth',
+                  });
               } else
                 i.scrollIntoView.call(
                   this,
@@ -213,8 +215,8 @@ class CAGovContentNavigation extends window.HTMLElement {
           return t === 'Y'
             ? o.clientHeight + c < o.scrollHeight
             : t === 'X'
-            ? o.clientWidth + c < o.scrollWidth
-            : void 0;
+              ? o.clientWidth + c < o.scrollWidth
+              : void 0;
         }
         function a(t, l) {
           const e = o.getComputedStyle(t, null)[`overflow${l}`];
@@ -410,6 +412,29 @@ if (customElements.get('cagov-content-navigation') === undefined) {
   );
 }
 
+
+
 const style = document.createElement('style');
 style.textContent = styles;
 document.querySelector('head').appendChild(style);
+
+// Function determining if it's mobile view (max 767px)
+function mobileView() {
+  const mobileElement = document.querySelector('.branding .grid-mobile-icons');
+  if (mobileElement) {
+    return getComputedStyle(mobileElement).display !== 'none';
+  }
+  return false;
+}
+
+function insertAfter(referenceNode, newNode) {
+  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+const contentnav = document.querySelector(".sidebar-container");
+const h1Header = document.querySelector('h1');
+
+if (mobileView()) {
+  if (contentnav && h1Header) {
+    insertAfter(h1Header, contentnav);
+  }
+}
