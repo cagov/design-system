@@ -14,214 +14,26 @@ Do not modify skip to content when you install it.
 
 ## Demo and sample markup
 
-<html-preview>
-
 ```html preview
-<!--skip-to-content-->
-<div id="skip-to-content"><a href="#body-content">Skip to content</a></div>
-<!--end skip-to-content-->
+<!-- Sample markup begins here. -->
+<div id="skip-to-content">
+  <a href="#body-content-demo">Skip to content</a>
+</div>
 
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+<!-- The following mark-up is strictly for demonstration purposes. -->
+<p>To preview this accessibility feature, try the following.</p>
+  
+<ol>
+  <li>Click on the above "Demo and sample markup" heading.</li>
+  <li>Press the tab button on your keyboard.</li>
+  <li>The "Skip to content" link should appear at the top of this preview.</li>
+  <li>Click it.</li>
+</ol>
 
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>Nulla quis lorem ut libero malesuada feugiat.</p>
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<p>
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-  amet ligula.
-</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-<div id="body-content">
-  MAIN
-  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
-    sit amet ligula.
-  </p>
-
-  <p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
-    sit amet ligula.
-  </p>
-
-  <p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
-    sit amet ligula.
-  </p>
-
-  <p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
-    sit amet ligula.
-  </p>
-
-  <p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
-    sit amet ligula.
-  </p>
-
-  <p>Curabitur aliquet quam id dui posuere blandit.</p>
-
-  <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-  <p>Nulla quis lorem ut libero malesuada feugiat.</p>
+<div id="body-content-demo">
+  <p>The page will scroll to this paragraph.</p>
 </div>
 ```
-
-</html-preview>
 
 ## Specs
 
@@ -230,7 +42,6 @@ Do not modify skip to content when you install it.
 | Machine name | ds-skip-to-content |
 | JavaScript   | no                 |
 | SCSS         | ./src/index.scss   |
-|              |                    |
 
 ## Project installation
 
