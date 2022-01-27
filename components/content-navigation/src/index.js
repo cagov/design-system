@@ -359,8 +359,8 @@ class CAGovContentNavigation extends window.HTMLElement {
     if (headers !== undefined && headers !== null && headers.length > 0) {
       headers.forEach((tag) => {
         // @TODO fix Logic
-        let tagId = tag.getAttribute('id');
-        let tagName = tag.getAttribute('name');
+        const tagId = tag.getAttribute('id');
+        const tagName = tag.getAttribute('name');
 
         const title = tag.innerHTML;
 
@@ -369,14 +369,17 @@ class CAGovContentNavigation extends window.HTMLElement {
         // If id not set already, create an id to jump to.
         if (tagId === undefined || tagId === null) {
           anchorLabel = tagId;
-        } else if ((tagId === undefined || tagId === null) && (tagName === undefined || tagName === null)) {
+        } else if (
+          (tagId === undefined || tagId === null) &&
+          (tagName === undefined || tagName === null)
+        ) {
           anchorLabel = tagName;
         } else {
           anchorLabel = tag.innerHTML;
         }
 
         // Convert anchor label content to remove breaking characters.
-        let anchor = anchorLabel
+        const anchor = anchorLabel
           .toLowerCase()
           .trim()
           .replace(/ /g, '-')
