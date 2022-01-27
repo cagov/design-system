@@ -29,38 +29,16 @@ Do not use the regulatory outline for content that is not regulations or governm
 ```html preview
 <ol class="cagov-regulatory-outline">
   <li>
-    LEVEL ONE A law enforcement agency may only use a person under 21 years of
+    A law enforcement agency may only use a person under 21 years of
     age to attempt to purchase alcoholic beverages for delivery to apprehend
-    licensees, or employees or agents of licensees, who deliver alcoholic
-    beverages to minors (persons under 21 years of age), and to reduce
-    deliveries of alcoholic beverages to minors, in a fashion that promotes
-    fairness. For purposes of this section, fairness is defined as compliance
-    with all the conditions set forth in subdivision (e).
+    licensees, ...
   </li>
   <li>
     For purposes of this section, “delivery” shall mean any transfer of
     alcoholic beverages by a licensee, or an employee or agent of a licensee, to
-    a person under 21 years of age, pursuant to an order made by internet,
-    telephone, other electronic means, or any method of ordering other than in
-    person at the licensed premises.
+    a person under 21 years of age, ...
   </li>
-  <li>
-    For purposes of this section, “agent” shall mean any entity or person the
-    licensee uses to deliver alcoholic beverages to persons who place orders by
-    internet, telephone, other electronic means, or any method of ordering other
-    than in person at the licensed premises, whether by contract or agreement,
-    even if not an employee of the licensee, including but not limited to a
-    third-party delivery person or service.
-  </li>
-  <li>
-    For purposes of this section, “minor decoy” shall mean a person used by law
-    enforcement pursuant to Business and Professions Code section 25658(f).
-  </li>
-  <li>
-    The following minimum standards shall apply to actions filed pursuant to
-    Business and Professions Code Section 25658 in which it is alleged a minor
-    decoy has been furnished an alcoholic beverage by delivery:
-  </li>
+  
   <li>
     The following minimum standards shall apply to actions filed pursuant to
     Business and Professions Code Section 25658 in which it is alleged a minor
@@ -68,33 +46,9 @@ Do not use the regulatory outline for content that is not regulations or governm
 
     <ol>
       <li>
-        LEVEL TWO A law enforcement agency may only use a person under 21 years
+        A law enforcement agency may only use a person under 21 years
         of age to attempt to purchase alcoholic beverages for delivery to
-        apprehend licensees, or employees or agents of licensees, who deliver
-        alcoholic beverages to minors (persons under 21 years of age), and to
-        reduce deliveries of alcoholic beverages to minors, in a fashion that
-        promotes fairness. For purposes of this section, fairness is defined as
-        compliance with all the conditions set forth in subdivision (e).
-      </li>
-      <li>
-        For purposes of this section, “delivery” shall mean any transfer of
-        alcoholic beverages by a licensee, or an employee or agent of a
-        licensee, to a person under 21 years of age, pursuant to an order made
-        by internet, telephone, other electronic means, or any method of
-        ordering other than in person at the licensed premises.
-      </li>
-      <li>
-        For purposes of this section, “agent” shall mean any entity or person
-        the licensee uses to deliver alcoholic beverages to persons who place
-        orders by internet, telephone, other electronic means, or any method of
-        ordering other than in person at the licensed premises, whether by
-        contract or agreement, even if not an employee of the licensee,
-        including but not limited to a third-party delivery person or service.
-      </li>
-      <li>
-        For purposes of this section, “minor decoy” shall mean a person used by
-        law enforcement pursuant to Business and Professions Code section
-        25658(f).
+        apprehend licensees...
       </li>
       <li>
         The following minimum standards shall apply to actions filed pursuant to
@@ -113,58 +67,20 @@ Do not use the regulatory outline for content that is not regulations or governm
             in subdivision (e).
           </li>
           <li>
-            For purposes of this section, “delivery” shall mean any transfer of
-            alcoholic beverages by a licensee, or an employee or agent of a
-            licensee, to a person under 21 years of age, pursuant to an order
-            made by internet, telephone, other electronic means, or any method
-            of ordering other than in person at the licensed premises.
-          </li>
-          <li>
-            For purposes of this section, “agent” shall mean any entity or
-            person the licensee uses to deliver alcoholic beverages to persons
-            who place orders by internet, telephone, other electronic means, or
-            any method of ordering other than in person at the licensed
-            premises, whether by contract or agreement, even if not an employee
-            of the licensee, including but not limited to a third-party delivery
-            person or service.
-          </li>
-          <li>
-            For purposes of this section, “minor decoy” shall mean a person used
-            by law enforcement pursuant to Business and Professions Code section
-            25658(f).
-          </li>
-          <li>
             The following minimum standards shall apply to actions filed
             pursuant to Business and Professions Code Section 25658 in which it
             is alleged a minor decoy has been furnished an alcoholic beverage by
             delivery:
             <ol>
               <li>
-                LEVEL FOUR A law enforcement agency may only use a person under
-                21 years of age to attempt to purchase alcoholic beverages for
-                delivery to apprehend licensees, or employees or agents of
-                licensees, who deliver alcoholic beverages to minors (persons
-                under 21 years of age), and to reduce deliveries of alcoholic
-                beverages to minors, in a fashion that promotes fairness. For
-                purposes of this section, fairness is defined as compliance with
-                all the conditions set forth in subdivision (e).
+                A law enforcement agency may only use a person under
+                21 years of age to attempt ...
               </li>
               <li>
-                For purposes of this section, “delivery” shall mean any transfer
-                of alcoholic beverages by a licensee, or an employee or agent of
-                a licensee, to a person under 21 years of age, pursuant to an
-                order made by internet, telephone, other electronic means, or
-                any method of ordering other than in person at the licensed
-                premises.
+                For purposes of this section, ...
               </li>
               <li>
-                For purposes of this section, “agent” shall mean any entity or
-                person the licensee uses to deliver alcoholic beverages to
-                persons who place orders by internet, telephone, other
-                electronic means, or any method of ordering other than in person
-                at the licensed premises, whether by contract or agreement, even
-                if not an employee of the licensee, including but not limited to
-                a third-party delivery person or service.
+                For purposes of this section, “agent” ...
               </li>
               <li>
                 For purposes of this section, “minor decoy” shall mean a person
@@ -173,14 +89,7 @@ Do not use the regulatory outline for content that is not regulations or governm
               </li>
 
               <li>
-                A law enforcement agency may only use a person under 21 years of
-                age to attempt to purchase alcoholic beverages for delivery to
-                apprehend licensees, or employees or agents of licensees, who
-                deliver alcoholic beverages to minors (persons under 21 years of
-                age), and to reduce deliveries of alcoholic beverages to minors,
-                in a fashion that promotes fairness. For purposes of this
-                section, fairness is defined as compliance with all the
-                conditions set forth in subdivision (e).
+                A law enforcement agency may only ...
               </li>
               <li>
                 For purposes of this section, “delivery” shall mean any transfer
@@ -193,11 +102,7 @@ Do not use the regulatory outline for content that is not regulations or governm
               <li>
                 For purposes of this section, “agent” shall mean any entity or
                 person the licensee uses to deliver alcoholic beverages to
-                persons who place orders by internet, telephone, other
-                electronic means, or any method of ordering other than in person
-                at the licensed premises, whether by contract or agreement, even
-                if not an employee of the licensee, including but not limited to
-                a third-party delivery person or service.
+                persons who place orders by internet ...
               </li>
               <li>
                 For purposes of this section, “minor decoy” shall mean a person
@@ -208,7 +113,7 @@ Do not use the regulatory outline for content that is not regulations or governm
                 The following minimum standards shall apply to actions filed
                 pursuant to Business and Professions Code Section 25658 in which
                 it is alleged a minor decoy has been furnished an alcoholic
-                beverage by delivery:
+                beverage by delivery.
               </li>
             </ol>
           </li>
