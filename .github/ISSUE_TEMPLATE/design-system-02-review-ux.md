@@ -2,7 +2,7 @@
 name: UX Review
 about: Design system 02 - UX checklist for reviewing a design system component
 title: 'UX Review: '
-labels: Component, Component Review, UX Review
+labels: Process - Component Review, Process - UX Review
 assignees: ''
 ---
 

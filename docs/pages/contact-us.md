@@ -12,4 +12,4 @@ Have a question? Email us for help with general inquiries, feedback, or bugs.
 
 ## Get support from developers
 
-Post questions on [GitHub](https://github.com/cagov/design-system/issues/new/choose) and leverage our digital community.
+Post questions on [GitHub](https://github.com/cagov/design-system) and leverage our digital community.
