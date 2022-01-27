@@ -305,20 +305,13 @@ class CAGovContentNavigation extends window.HTMLElement {
             const target = document.querySelector(hashval);
             if (target !== null) {
               const position = target.getBoundingClientRect();
+              
+              window.scrollTo({
+                // Handle accessible smoothing behavior in CSS
+                left: position.left,
+                top: position.top - 200,
+              });
 
-              const prefersReducedMotion = window.matchMedia(
-                '(prefers-reduced-motion)',
-              ).matches;
-
-              console.log('prefersReducedMotion', prefersReducedMotion);
-
-              // if (!prefersReducedMotion) {
-                window.scrollTo({
-                  // behavior: 'smooth', // Requires companion CSS at html level
-                  left: position.left,
-                  top: position.top - 200,
-                });
-              // }
               window.history.pushState(null, null, hashval);
             }
           } catch (error) {
