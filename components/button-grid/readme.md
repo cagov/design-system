@@ -24,8 +24,8 @@ Because the grid collapses into one column on mobile, large grids may occupy sev
 
 ```html preview
 <div class="cagov-grid">
-  <a href="linkurl" class="no-deco cagov-card">
-    <span class="card-text">card title here</span>
+  <a href="#" class="no-deco cagov-card">
+    <span class="card-text">Link 1</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       enable-background="new 0 0 24 24"
@@ -41,10 +41,8 @@ Because the grid collapses into one column on mobile, large grids may occupy sev
       </g>
     </svg>
   </a>
-  <a href="linkurl" class="no-deco cagov-card">
-    <span class="card-text"
-      >this is an example of a very long text string card title here</span
-    >
+  <a href="#" class="no-deco cagov-card">
+    <span class="card-text">Link 2, showing what longer text looks like</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       enable-background="new 0 0 24 24"
@@ -60,8 +58,8 @@ Because the grid collapses into one column on mobile, large grids may occupy sev
       </g>
     </svg>
   </a>
-  <a href="linkurl" class="no-deco cagov-card">
-    <span class="card-text">card title 3 here</span>
+  <a href="#l" class="no-deco cagov-card">
+    <span class="card-text">Link 3</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       enable-background="new 0 0 24 24"
