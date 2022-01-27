@@ -310,7 +310,7 @@ class CAGovContentNavigation extends window.HTMLElement {
                 '(prefers-reduced-motion)',
               ).matches;
 
-              // console.log("prefersReducedMotion", prefersReducedMotion);
+              console.log('prefersReducedMotion', prefersReducedMotion);
               if (!prefersReducedMotion) {
                 window.scrollTo({
                   behavior: 'smooth',
@@ -344,7 +344,6 @@ class CAGovContentNavigation extends window.HTMLElement {
     // const { callback } = this.dataset; // Editor only right now
 
     const h = ['h2'];
-    // const headings = [];
     for (let i = 0; i < h.length; i += 1) {
       // Pull out the header tags, in order & render as links with anchor tags
       // auto convert h tags with tag names
@@ -367,6 +366,7 @@ class CAGovContentNavigation extends window.HTMLElement {
     if (headers !== undefined && headers !== null && headers.length > 0) {
       headers.forEach((tag) => {
         let tagId = tag.getAttribute('id');
+        let tagName = tag.getAttribute('name');
         const title = tag.innerHTML;
         // Alt: [a-zA-Z\u00C0-\u017F]+,\s[a-zA-Z\u00C0-\u017F]+
         let anchor = tag.innerHTML
@@ -398,6 +398,10 @@ class CAGovContentNavigation extends window.HTMLElement {
         if (tagId === undefined || tagId === null) {
           tagId = anchor;
           tag.setAttribute('id', tagId);
+        }
+        if (tagName === undefined || tagName === null) {
+          tagName = anchor;
+          tag.setAttribute('name', tagName);
         }
       });
       return `<ul>${output}</ul>`;
