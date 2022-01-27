@@ -1,8 +1,8 @@
 ---
 name: Proposal
 about: Design system 01 - Propose a design system project or component
-title: 'Proposal for: '
-labels: Component, Component Definition, Proposal
+title: 'Proposal: '
+labels: Process - New Component, Process - Proposal
 assignees: ''
 ---
 
