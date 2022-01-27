@@ -129,6 +129,11 @@
   }
 }
 
+.cagov-stack-card {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 @media (max-width: 800px) {
   .get-involved {
     flex-wrap: wrap-reverse;
