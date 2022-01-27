@@ -12,7 +12,7 @@ const CaGovAirtableFormSubmit = {
       if (field.required === true) {
         if (CaGovAirtableFormSubmit.validateFieldData(field.value) === false) {
           submit = false;
-          console.log("Required field not filled out");
+          console.log('Required field not filled out');
         }
       }
       return false;
@@ -38,7 +38,7 @@ const CaGovAirtableFormSubmit = {
   updateFormFeedback: () => {},
 
   validateFieldData: (value) => {
-    if (value !== null && value !== "") {
+    if (value !== null && value !== '') {
       return true;
     }
     return false;
