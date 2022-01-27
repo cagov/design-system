@@ -52,11 +52,11 @@ This example is too official, which can be hard to understand and confusing:
 
 This example is too informal, so readers may not trust it as a source of truth:
 
-_Listen up: you’ve got to get your application in before the end of the month. Don’t wait! Do it ASAP._
+> Listen up: you’ve got to get your application in before the end of the month. Don’t wait! Do it ASAP.
 
 This example strikes the right balance between being conversational and official:
 
-_Apply between August 1 and September 30._
+> Apply between August 1 and September 30.
 
 ### Voice checklist
 
