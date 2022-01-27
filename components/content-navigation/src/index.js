@@ -311,13 +311,13 @@ class CAGovContentNavigation extends window.HTMLElement {
               ).matches;
 
               console.log('prefersReducedMotion', prefersReducedMotion);
-              if (!prefersReducedMotion) {
+              // if (!prefersReducedMotion) {
                 window.scrollTo({
                   behavior: 'smooth',
                   left: position.left,
                   top: position.top - 200,
                 });
-              }
+              // }
 
               window.history.pushState(null, null, hashval);
             }
