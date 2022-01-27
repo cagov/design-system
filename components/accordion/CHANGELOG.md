@@ -20,7 +20,7 @@ This package was previously published under the name @cagov/accordion which has 
 ## 2.0.11
 * Fixed "allbuttons is not defined" console error.
 
-# 2.0.10
+## 2.0.10
 * Fixed tabindex for the links that are inside of the accordions that are open by default.
 
 ## 2.0.9
