@@ -56,11 +56,21 @@ class CaGovAirtableForm extends window.HTMLElement {
 
   async submitForm(e) {
     e.target.classList.add('inactive', 'form-submitted');
+
     const serverResponse = await CaGovAirtableFormSubmit.init(this.options);
-    console.log(serverResponse);
-    document.querySelector(this.options.responseSelector).innerHTML =
-      this.options.responseSuccess;
-    document.querySelector(this.options.formSelector).innerHTML = '';
+    // console.log("serverResponse", serverResponse);
+
+    if (serverResponse && serverResponse.complete === true) {
+      document.querySelector(this.options.formSelector).innerHTML = '';
+      document.querySelector(this.options.responseSelector).innerHTML =
+        this.options.responseSuccess;
+      document
+        .querySelector(this.options.responseSelector)
+        .classList.add('form-responded');
+    } else {
+      // Required fields not filled out, reset form classes
+      e.target.classList.remove('inactive', 'form-submitted');
+    }
   }
 }
 
