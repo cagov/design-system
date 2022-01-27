@@ -18,6 +18,12 @@ Do not use this component to replace or duplicate site navigation.
 
 ```html preview
 <cagov-content-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-content-navigation>
+
+<div class="main">
+  <h2>First heading</h2>
+  <h2>Second heading</h2>
+  <h2>Third heading</h2>
+</div>
 ```
 
 </html-preview>
