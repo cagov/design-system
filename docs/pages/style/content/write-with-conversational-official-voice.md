@@ -48,7 +48,7 @@ A conversational tone and an official one can seem like they’re opposites of e
 
 This example is too official, which can be hard to understand and confusing:
 
-_It is required that all people seeking to apply must do so prior to the deadline set by law of September 30. No applications shall be accepted after this date._
+> It is required that all people seeking to apply must do so prior to the deadline set by law of September 30. No applications shall be accepted after this date.
 
 This example is too informal, so readers may not trust it as a source of truth:
 
