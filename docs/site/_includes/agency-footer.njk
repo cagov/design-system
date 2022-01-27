@@ -7,7 +7,9 @@ ga('send', 'pageview');
 </script>
 <script async defer src='https://www.google-analytics.com/analytics.js'></script>
 
-<cagov-feedback class="cagov-mb-2 d-block" data-endpoint-url="https://fa-go-feedback-001.azurewebsites.net/sendfeedback"></cagov-feedback>
+{% if page.url !== "/error.html" %}
+  <cagov-feedback class="cagov-mb-2 d-block" data-endpoint-url="https://fa-go-feedback-001.azurewebsites.net/sendfeedback"></cagov-feedback>
+{% endif %}
 
 <section aria-label="agency footer" class="agency-footer">
   <div class="container">
