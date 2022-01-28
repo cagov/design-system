@@ -39,10 +39,18 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy({ 'docs/src/assets/img': 'img' });
   eleventyConfig.addPassthroughCopy({ 'docs/src/css/fonts': 'fonts' });
-  eleventyConfig.addPassthroughCopy({ 'components/base-css/dist/themes': 'css' });
-  eleventyConfig.addPassthroughCopy({ 'components/accordion/template.html': 'css/accordion.html' });
-  eleventyConfig.addPassthroughCopy({ 'components/button-grid/template.html': 'css/button-grid.html' });
-  eleventyConfig.addPassthroughCopy({ 'components/step-list/template.html': 'css/step-list.html' });
+  eleventyConfig.addPassthroughCopy({
+    'components/base-css/dist/themes': 'css',
+  });
+  eleventyConfig.addPassthroughCopy({
+    'components/accordion/template.html': 'css/accordion.html',
+  });
+  eleventyConfig.addPassthroughCopy({
+    'components/button-grid/template.html': 'css/button-grid.html',
+  });
+  eleventyConfig.addPassthroughCopy({
+    'components/step-list/template.html': 'css/step-list.html',
+  });
   eleventyConfig.addPassthroughCopy({ '_site_dist/*': '/' });
   eleventyConfig.addPassthroughCopy({ '_build_dist/*': 'builds' });
 
