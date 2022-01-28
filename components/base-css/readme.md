@@ -4,7 +4,7 @@ This is a package of universal style rules for the Design System.
 
 ## Preview
 
-<a href="http://ca-design-system.s3-website-us-west-1.amazonaws.com/components/base-css/preview.html">http://ca-design-system.s3-website-us-west-1.amazonaws.com/components/base-css/preview.html</a>
+<a href="/components/base-css/preview/">preview</a>
 
 ## Theming
 
