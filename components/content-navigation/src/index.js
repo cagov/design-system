@@ -358,9 +358,8 @@ class CAGovContentNavigation extends window.HTMLElement {
     let output = '';
     if (headers !== undefined && headers !== null && headers.length > 0) {
       headers.forEach((tag) => {
-
-        let tagId = tag.getAttribute('id');
-        let tagName = tag.getAttribute('name');
+        const tagId = tag.getAttribute('id');
+        const tagName = tag.getAttribute('name');
 
         const title = tag.innerHTML;
 
@@ -400,10 +399,9 @@ class CAGovContentNavigation extends window.HTMLElement {
         output += `<li><a data-content-navigation href="#${encodeURI(
           anchor,
         )}">${title}</a></li>`;
-        
+
         tag.setAttribute('id', anchor);
         tag.setAttribute('name', anchor);
-
       });
       return `<ul>${output}</ul>`;
     }
