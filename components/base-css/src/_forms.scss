@@ -13,9 +13,9 @@ textarea,
 input {
   background-color: var(--white, #fff);
   color: var(--black, #000) !important;
-  font-size: var(--body-text, 1.125rem);
-  font-size: calc(var(--body-text) + var(--ratio));
-  font-weight: var(--font-weight-regular, 400);
+  font-size: var(--font-size-2, 1.125rem);
+  font-size: calc(var(--font-size-2) + var(--ratio));
+  font-weight: var(--font-weight-4, 400);
   &:focus {
     outline: 2px solid var(--secondary-color, #fec02f);
   }

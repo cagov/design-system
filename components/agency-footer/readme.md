@@ -146,6 +146,8 @@ Do not include more than one social media account per platform.
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
           y="0px"
+          width="24px"
+          height="24px"
           viewbox="0 0 24 24"
           style="enable-background:new 0 0 24 24;"
           xml:space="preserve"

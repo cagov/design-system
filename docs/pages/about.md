@@ -16,7 +16,7 @@ Build a design system that empowers state government to develop accessible, equi
 The Design System is being brought to you with the sponsorship and support from the Governor’s Office, Government Operations Agency, the California Department of Technology, and the Office of Digital Innovation. 
 
 Leveraging the efforts of three pivotal digital contributions, we reflect on the journey that led us here and look to a bright future.  
-* [CAWeb Standards](https://caweb.cdt.ca.gov/) 
+* [CAWeb Standards](https://webstandards.ca.gov/) 
 * The [Alpha Project](https://alpha.ca.gov/), and 
 * The [COVID-19](https://covid19.ca.gov/) website
 

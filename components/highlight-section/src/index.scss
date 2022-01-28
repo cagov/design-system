@@ -16,8 +16,8 @@ cagov-highlight-section {
 			cursor: pointer;
 			user-select: none;
 			color: var(--primary-color, #004abc);
-			font-weight: var(--font-weight-regular, 400);
-			font-size: var(--body-text, 1.125rem);
+			font-weight: var(--font-weight-4, 400);
+			font-size: var(--font-size-2, 1.125rem);
 			border: 1px solid var(--primary-color, #004abc);
 			border-radius: 5px;
 			padding: var(--spacing-base, 0.5rem);
@@ -102,7 +102,7 @@ cagov-highlight-section {
 	}
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
 	cagov-highlight-section article .container {
 		padding-left: 10rem;
 		padding-right: 10rem;

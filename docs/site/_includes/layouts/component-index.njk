@@ -49,7 +49,7 @@
               />
             </svg>
           </button>
-          <div class="component-sidebar-menu-content">
+          <nav class="component-sidebar-menu-content" aria-label="Components Navigation" aria-hidden="false">
             <p class="component-sidebar-heading">Structural components</p>
             {{ sidebarComponentSection(componentSets.structural) }}
             <p class="component-sidebar-heading">Navigation components</p>
@@ -58,7 +58,7 @@
             {{ sidebarComponentSection(componentSets.visual) }}
             <p class="component-sidebar-heading">Content components</p>
             {{ sidebarComponentSection(componentSets.content) }}
-          </div>
+          </nav>
         </div>
         <div class="everylayout">
           <main id="body-content" class="main-primary">

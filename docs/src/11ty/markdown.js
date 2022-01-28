@@ -6,7 +6,7 @@ const md = markdownIt({
   html: true,
   breaks: true,
   linkify: true,
-}).use(markdownItAnchor);
+}).use(markdownItAnchor, { level: 2 });
 
 /**
  * Encloses syntax-highlighted code blocks in <pre> and <code> tags.

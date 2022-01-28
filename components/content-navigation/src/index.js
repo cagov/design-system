@@ -305,7 +305,7 @@ class CAGovContentNavigation extends window.HTMLElement {
             const target = document.querySelector(hashval);
             if (target !== null) {
               const position = target.getBoundingClientRect();
-              
+
               window.scrollTo({
                 // Handle accessible smoothing behavior in CSS
                 left: position.left,
@@ -358,11 +358,28 @@ class CAGovContentNavigation extends window.HTMLElement {
     let output = '';
     if (headers !== undefined && headers !== null && headers.length > 0) {
       headers.forEach((tag) => {
+
         let tagId = tag.getAttribute('id');
         let tagName = tag.getAttribute('name');
+
         const title = tag.innerHTML;
-        // Alt: [a-zA-Z\u00C0-\u017F]+,\s[a-zA-Z\u00C0-\u017F]+
-        let anchor = tag.innerHTML
+
+        let anchorLabel = null;
+
+        // If id not set already, create an id to jump to.
+        if (tagId === undefined || tagId === null) {
+          anchorLabel = tagId;
+        } else if (
+          (tagId === undefined || tagId === null) &&
+          (tagName === undefined || tagName === null)
+        ) {
+          anchorLabel = tagName;
+        } else {
+          anchorLabel = tag.innerHTML;
+        }
+
+        // Convert anchor label content to remove breaking characters.
+        const anchor = anchorLabel
           .toLowerCase()
           .trim()
           .replace(/ /g, '-')
@@ -377,25 +394,16 @@ class CAGovContentNavigation extends window.HTMLElement {
           // which escapes UTF-8 characters.
           // If we want to do this with allowed characters only
           // .replace(/a-zA-ZÃ€-Ã–Ã™-Ã¶Ã¹-Ã¿Ä€-Å¾á¸€-á»¿0-9/g,"")
+          // Alt: [a-zA-Z\u00C0-\u017F]+,\s[a-zA-Z\u00C0-\u017F]+
           .replace(/a-zA-ZÃ€-Ã–Ã™-Ã¶Ã¹-Ã¿Ä€-Å¾á¸€-á»¿0-9\u00A0-\u017F/g, '');
-
-        // If id not set already, create an id to jump to.
-        if (tagId !== undefined && tagId !== null) {
-          anchor = tagId;
-        }
 
         output += `<li><a data-content-navigation href="#${encodeURI(
           anchor,
         )}">${title}</a></li>`;
+        
+        tag.setAttribute('id', anchor);
+        tag.setAttribute('name', anchor);
 
-        if (tagId === undefined || tagId === null) {
-          tagId = anchor;
-          tag.setAttribute('id', tagId);
-        }
-        if (tagName === undefined || tagName === null) {
-          tagName = anchor;
-          tag.setAttribute('name', tagName);
-        }
       });
       return `<ul>${output}</ul>`;
     }

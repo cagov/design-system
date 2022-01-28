@@ -11,7 +11,7 @@ It includes:
 
 The statewide footer is a required Design System component. Place it at the top of the website, above the department branding (site header) and all other content.
 
-If you want to include a translation widget in the statewide header, [contact us through the Support page](/contact-us) to find out how you can do so.
+If you want to include a translation widget in the statewide header, [reach out through our Contact us page](/contact-us) to find out how you can do so.
 
 ### How not to use it
 

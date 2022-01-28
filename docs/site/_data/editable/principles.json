@@ -37,7 +37,7 @@
   "8": {
     "name": "Optimize performance",
     "description": "Not every Californian has a high-end device. When you build services and products, think about people on a range of devices and internet speeds.",
-    "example": "Websites built with the design system have a Lighthouse performance score X% higher than the average CA.gov website."
+    "example": "Websites built by the Office of Digital Innovation with Design System components have Lighthouse scores of 90 or more when throttled to low mobile CPU or Fast 3G bandwidth settings."
   },
   "9": {
     "name": "Make things open",

@@ -36,6 +36,10 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    svg {
+      height: 100%;
+      width: 100%;
+    }
   }
   &-content {
     padding: 1rem;
@@ -186,6 +190,7 @@
   border: solid 1px #A09FA7;
   background-color: #f9f9fa;
   padding: 1rem;
+  margin: 1rem 0;
   &-demo {
     border: solid 1px #A09FA7;
     background-color: white;
