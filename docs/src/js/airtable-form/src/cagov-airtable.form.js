@@ -3,7 +3,6 @@ const CaGovAirtableFormSubmit = {
     const formFields = document.querySelectorAll(
       `${options.parentSelector} ${options.formFieldSelector}`,
     );
-    // console.log('formFields', formFields);
     let submit = true;
     const fields = {};
     Object.keys(formFields).map((index) => {
@@ -11,14 +10,15 @@ const CaGovAirtableFormSubmit = {
       const airtableFieldName = field.getAttribute('data-airtable-field');
       fields[airtableFieldName] = field.value;
       if (field.required === true) {
-        if (CaGovAirtableFormSubmit.validateFieldData(field) === false) {
+        if (CaGovAirtableFormSubmit.validateFieldData(field.value) === false) {
           submit = false;
+          console.log('Required field not filled out');
         }
       }
       return false;
     });
 
-    if (submit) {
+    if (submit === true) {
       const requestData = { options, fields };
       try {
         return CaGovAirtableFormSubmit.postData(options.endpoint, requestData);
@@ -38,7 +38,7 @@ const CaGovAirtableFormSubmit = {
   updateFormFeedback: () => {},
 
   validateFieldData: (value) => {
-    if (value !== null) {
+    if (value !== null && value !== '') {
       return true;
     }
     return false;
