@@ -159,5 +159,33 @@ $desktop-min: 1176px;
   --gray-800: #3f3e4d;
   --gray-900: #3f3e4d;
   --black: #000;
-  
+
+  // Animations and transitions
+  --animation-duration-1: 0.1s;
+  --animation-duration-2: 0.2s;
+  --animation-duration-3: 0.3s;
+  --animation-duration-4: 0.4s;
+  --animation-duration-5: 0.5s;
+  --animation-duration-6: 0.6s;
+  --animation-duration-7: 0.7s;
+  --animation-duration-8: 0.8s;
+  --animation-duration-9: 0.9s;
+  --animation-duration-10: 1s;
+  --transform-scale-1: scale3d(1.01, 1.01, 1.01);
+  --transform-scale-2: scale3d(1.02, 1.02, 1.02);
+  --transform-scale-3: scale3d(1.03, 1.03, 1.03);
+  --transform-scale-4: scale3d(1.04, 1.04, 1.04);
+  --transform-scale-5: scale3d(1.05, 1.05, 1.05);
+  --transform-scale-6: scale3d(1.06, 1.06, 1.06);
+  --transform-scale-7: scale3d(1.07, 1.07, 1.07);
+  --transform-scale-8: scale3d(1.08, 1.08, 1.08);
+  --transform-scale-9: scale3d(1.09, 1.09, 1.09);
+  --transform-scale-10: scale3d(1.1, 1.1, 1.1);
+
+  // Easing
+  --ease-1: cubic-bezier(0.25, 0, 0.5, 1);
+  --ease-2: cubic-bezier(0.25, 0, 0.4, 1);
+  --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+  --ease-4: cubic-bezier(0.25, 0, 0.2, 1);
+  --ease-5: cubic-bezier(0.25, 0, 0.1, 1);
 }

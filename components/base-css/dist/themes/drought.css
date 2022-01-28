@@ -146,6 +146,31 @@
   --gray-800: #3f3e4d;
   --gray-900: #3f3e4d;
   --black: #000;
+  --animation-duration-1: 0.1s;
+  --animation-duration-2: 0.2s;
+  --animation-duration-3: 0.3s;
+  --animation-duration-4: 0.4s;
+  --animation-duration-5: 0.5s;
+  --animation-duration-6: 0.6s;
+  --animation-duration-7: 0.7s;
+  --animation-duration-8: 0.8s;
+  --animation-duration-9: 0.9s;
+  --animation-duration-10: 1s;
+  --transform-scale-1: scale3d(1.01, 1.01, 1.01);
+  --transform-scale-2: scale3d(1.02, 1.02, 1.02);
+  --transform-scale-3: scale3d(1.03, 1.03, 1.03);
+  --transform-scale-4: scale3d(1.04, 1.04, 1.04);
+  --transform-scale-5: scale3d(1.05, 1.05, 1.05);
+  --transform-scale-6: scale3d(1.06, 1.06, 1.06);
+  --transform-scale-7: scale3d(1.07, 1.07, 1.07);
+  --transform-scale-8: scale3d(1.08, 1.08, 1.08);
+  --transform-scale-9: scale3d(1.09, 1.09, 1.09);
+  --transform-scale-10: scale3d(1.1, 1.1, 1.1);
+  --ease-1: cubic-bezier(0.25, 0, 0.5, 1);
+  --ease-2: cubic-bezier(0.25, 0, 0.4, 1);
+  --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+  --ease-4: cubic-bezier(0.25, 0, 0.2, 1);
+  --ease-5: cubic-bezier(0.25, 0, 0.1, 1);
 }
 
 /* spasing, margin and padding values */
@@ -2735,7 +2760,7 @@ h1,
 h2,
 .h2 {
   font-size: calc(var(--font-size-8) + var(--ratio));
-  margin-top: calc(var(--s-3) + var(--ratio));
+  margin-top: calc(var(--s-4) + var(--ratio));
   margin-bottom: calc(var(--s-3) + var(--ratio));
   font-weight: var(--font-weight-7, 700);
 }
@@ -4001,6 +4026,39 @@ figure figcaption {
   background-color: var(--white) !important;
 }
 
+.bg-0 {
+  background: none !important;
+}
+
+.bg-alpha-0 {
+  background-color: transparent !important;
+}
+
+.bg-alpha-40 {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.bg-alpha-50 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.bg-alpha-70 {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.bg-alpha-60 {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.bg-alpha-80 {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.bg-alpha-90 {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* MISC */
 .mb-2,
 .cagov-mb-2 {
   margin-bottom: 2rem;
@@ -4352,6 +4410,122 @@ figure figcaption {
 .full-bleed {
   margin-left: calc(50% - 50vw);
   width: 100vw;
+}
+
+/* overflow */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+/* ease transform */
+.transition-1 {
+  transition: all var(--animation-duration-1);
+}
+
+.transition-2 {
+  transition: all var(--animation-duration-2);
+}
+
+.transition-3 {
+  transition: all var(--animation-duration-3);
+}
+
+.transition-4 {
+  transition: all var(--animation-duration-4);
+}
+
+.transition-5 {
+  transition: all var(--animation-duration-5);
+}
+
+.transition-6 {
+  transition: all var(--animation-duration-6);
+}
+
+.transition-7 {
+  transition: all var(--animation-duration-7);
+}
+
+.transition-8 {
+  transition: all var(--animation-duration-8);
+}
+
+.transition-9 {
+  transition: all var(--animation-duration-9);
+}
+
+.transition-10 {
+  transition: all var(--animation-duration-10);
+}
+
+/* ease */
+.ease-1 {
+  transition-timing-function: var(--ease-1);
+}
+
+.ease-2 {
+  transition-timing-function: var(--ease-2);
+}
+
+.ease-3 {
+  transition-timing-function: var(--ease-3);
+}
+
+.ease-4 {
+  transition-timing-function: var(--ease-4);
+}
+
+.ease-5 {
+  transition-timing-function: var(--ease-5);
+}
+
+/* scale on hover */
+.transform-scale-1-hover:hover {
+  transform: var(--transform-scale-1);
+}
+
+.transform-scale-2-hover:hover {
+  transform: var(--transform-scale-2);
+}
+
+.transform-scale-3-hover:hover {
+  transform: var(--transform-scale-3);
+}
+
+.transform-scale-4-hover:hover {
+  transform: var(--transform-scale-4);
+}
+
+.transform-scale-5-hover:hover {
+  transform: var(--transform-scale-5);
+}
+
+.transform-scale-6-hover:hover {
+  transform: var(--transform-scale-6);
+}
+
+.transform-scale-7-hover:hover {
+  transform: var(--transform-scale-7);
+}
+
+.transform-scale-8-hover:hover {
+  transform: var(--transform-scale-8);
+}
+
+.transform-scale-9-hover:hover {
+  transform: var(--transform-scale-9);
+}
+
+.transform-scale-10-hover:hover {
+  transform: var(--transform-scale-10);
 }
 
 /* all utility css classes that can be used (shortcodes) */

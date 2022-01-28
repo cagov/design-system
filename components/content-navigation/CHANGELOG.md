@@ -2,6 +2,9 @@
 
 `ds-content-navigation`
 
+# 2.0.1
+* Inserting content navigation after h1 in mobile. Removed default margin left from list items.
+
 # 2.0.0
 * bundle the CSS in the JS
 

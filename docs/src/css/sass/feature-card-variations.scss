@@ -145,6 +145,11 @@ cagov-airtable-form .form-responded {
   min-height: 320px;
 }
 
+.cagov-stack-card {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 @media (max-width: 800px) {
   .contact-us {
     flex-wrap: wrap-reverse;

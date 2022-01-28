@@ -19,6 +19,7 @@ sidebar cagov-content-navigation ul:not([class*="menu"]):not([class*="nav"]):not
 sidebar cagov-content-navigation ul li {
   padding-top: 14px;
   padding-bottom: 18px;
+  margin-left: 0;
   margin-top: 0px;
   margin-bottom: 0px;
   border-bottom: 1px solid var(--gray-300, #e1e0e3);
