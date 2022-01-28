@@ -55,7 +55,7 @@ Do not use the step list to create a list of items that are not ordered. Use bul
     <span class="has-inline-color cagov-step-list-content">
       DCC has resources to help you create the documents you need during the 
       license process. If you have questions about the requirements, email the
-      <a href="mailto:licensing@cannabis.ca.gov">DCC licensing team</a>.
+      <a href="#">DCC licensing team</a>.
     </span>
   </li>
 </ol>
