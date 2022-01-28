@@ -1,0 +1,49 @@
+name: Deploy design system development site 
+# site:  http://development.designsystems.webstandards.ca.gov.s3-website-us-west-1.amazonaws.com
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: n1hility/cancel-previous-runs@v2
+        with: 
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@master
+      - name: Use Node.js 16.13.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13.1
+      - name: Build Site
+        run: |
+          npm install
+          ROOT=http://development.designsystems.webstandards.ca.gov.s3-website-us-west-1.amazonaws.com npm run site:build
+      - name: Write robots.txt
+        run: |
+          echo 'User-agent: *' > _site/robots.txt
+          echo 'Disallow: /' >> _site/robots.txt
+      # Push built site files to S3 production bucket    
+      - name: Deploy to S3
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: 'development.designsystem.webstandards.ca.gov'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'us-west-1'   # optional: defaults to us-east-1
+          SOURCE_DIR: ./_site # only move built directory
+
+      # Invalidate Cloudfront production distribution
+      # - name: invalidate
+      #   uses: chetan/invalidate-cloudfront-action@v1.3
+      #   env:
+      #     DISTRIBUTION: 'E2O0XCM4WXKTF8'
+      #     PATHS: '/*'
+      #     AWS_REGION: 'us-west-1'
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}    
