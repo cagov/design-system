@@ -17,63 +17,38 @@ data-response-error="<br/><strong>Uh oh!</strong> Looks like there was a problem
         <input type="email" id="email" name="email" data-airtable-field="Email" placeholder="Email address" required>
     </div>
     <div class="form-field">
-        <label for="request">How can we help you?</label>
+        <label for="role">Your main role</label>
         <div class="form-select">
-        <select id="request" name="request" data-airtable-field="Request">
-            <option disabled selected value="">
-                Select an option
-            </option>
-            <option value="Send me updates on the Design System">
-                Send me updates on the Design System
-            </option>
-            <option value="I need help getting started">
-                I need help getting started
-            </option>
-            <option value="I want to collaborate">
-                I want to collaborate
-            </option>
-            <option value="I want to report a bug or give feedback">
-                I want to report a bug or give feedback
-            </option>
-            <option value="Other">
-                Other
-            </option>
-        </select>
+            <select id="role" name="role" data-airtable-field="Role">
+                <option disabled selected value="">
+                    Select an option
+                </option>
+                <option value="Analytics">
+                    Analytics
+                </option>
+                <option value="Content">
+                    Content
+                </option>
+                <option value="Design">
+                    Design
+                </option>
+                <option value="Development">
+                    Development
+                </option>
+                <option value="Product">
+                    Product
+                </option>
+                <option value="Research">
+                    Research
+                </option>
+                <option value="Other">
+                    Other
+                </option>
+            </select>
         </div>
     </div>
     <div class="form-field">
-        <label for="about-yourself">About yourself</label>
-        <div class="form-select">
-        <select id="about-yourself" name="about-yourself" data-airtable-field="About yourself">
-            <option disabled selected value="">
-                Select an option
-            </option>
-            <option value="Content designer">
-                Content designer
-            </option>
-            <option value="Engineer">
-                Engineer
-            </option>
-            <option value="Developer">
-                Developer
-            </option>
-            <option value="Designer">
-                Designer
-            </option>
-            <option value="UX Researcher">
-                UX Researcher
-            </option>
-            <option value="Product owner">
-                Product owner
-            </option>
-            <option value="Other">
-                Other
-            </option>
-        </select>
-        </div>
-    </div>
-    <div class="form-field">
-        <label for="comments">What interests you about the design system?</label>
+        <label for="comments">How can we help?</label>
         <textarea id="comments" name="comments" data-airtable-field="Comments"></textarea>
     </div>
     <div class="hidden form-field">

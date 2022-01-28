@@ -5,7 +5,7 @@ description: Get help from the State of California Design System team, post ques
 
 # Contact us
 
-Have a question? Email us for help with general inquiries, feedback, or bugs.
+Have a question? Contact us for help with general inquiries, feedback, or bugs.
 
 {%- from "macros/contact-us-form-wrapper.njk" import wrappedContactForm -%}
 {{ wrappedContactForm("Contact us") }}
