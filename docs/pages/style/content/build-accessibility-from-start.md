@@ -5,7 +5,7 @@ description: Accessibility goes beyond the technical components of a website. It
 
 # Build in accessibility from the start
 
-We write for all Californians, not most Californians.
+<p class="text-lead">We write for all Californians, not most Californians.</p>
 
 We must create content that:
 
