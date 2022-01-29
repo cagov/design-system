@@ -5,7 +5,7 @@ description: Do the hard work to make content simple for people to understand.
 
 # Write in plain language
 
-We do the hard work to make content simple for people to understand.
+<p class="text-lead">We do the hard work to make content simple for people to understand.</p>
 
 ## Standards
 
