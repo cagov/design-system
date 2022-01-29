@@ -5,7 +5,7 @@ description: Give reliable information with confidence.
 
 # Write with a conversational and official voice
 
-Give reliable information with confidence.
+<p class="text-lead">Give reliable information with confidence.</p>
 
 ## Why this is important
 
