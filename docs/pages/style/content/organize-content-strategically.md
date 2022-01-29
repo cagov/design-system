@@ -5,7 +5,7 @@ description: Well-organized content helps readers find what they’re looking fo
 
 # Organize content strategically
 
-Well-organized content helps readers find what they’re looking for.
+<p class="text-lead">Well-organized content helps readers find what they’re looking for.</p>
 
 ## Standards
 
