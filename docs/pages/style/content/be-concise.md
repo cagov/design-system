@@ -5,7 +5,7 @@ description: Simple writing supports equal outcomes.
 
 # Be concise
 
-Government content is notorious for being long and complicated. It does not have to be. Simple writing supports equal outcomes.
+<p class="text-lead">Government content is notorious for being long and complicated. It does not have to be. Simple writing supports equal outcomes.</p>
 
 ## Standards
 
