@@ -8,7 +8,7 @@ description: Components are the structural elements of the California Design Sys
 
 # Components
 
-Components are the structural elements of the Design System. They meet common user needs and can be reused across websites.
+<p class="text-lead">Components are the structural elements of the Design System. They meet common user needs and can be reused across websites.</p>
 
 Our components are:
 
