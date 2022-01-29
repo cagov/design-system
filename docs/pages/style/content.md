@@ -5,7 +5,7 @@ description: The California Design System uses these principles to create great 
 
 # Content style guide
 
-Great content takes work. The good news is that anyone can do it.
+<p class="text-lead">Great content takes work. The good news is that anyone can do it.</p>
 
 ## Content principles
 
