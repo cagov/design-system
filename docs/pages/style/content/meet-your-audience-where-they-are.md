@@ -5,7 +5,7 @@ description: Knowing who they are and what they need helps you design for them.
 
 # Meet your audience where they are
 
-All your content is for someone. Knowing who they are and what they need helps you design for them.
+<p class="text-lead">All your content is for someone. Knowing who they are and what they need helps you design for them.</p>
 
 ## Why this is important
 
