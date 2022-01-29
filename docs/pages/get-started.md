@@ -5,8 +5,7 @@ description: Learn how you can get started with using the California Design Syst
 
 # Get started
 
-
-What you need to know about the Design System depends on your role and discipline. 
+<p class="text-lead">What you need to know about the Design System depends on your role and discipline.</p> 
 
 ## Developers
 
