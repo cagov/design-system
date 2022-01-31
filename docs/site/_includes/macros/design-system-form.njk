@@ -38,6 +38,9 @@ data-response-error="<br/><strong>Uh oh!</strong> Looks like there was a problem
                 <option value="Product">
                     Product
                 </option>
+                <option value="Program">
+                    Program
+                </option>
                 <option value="Research">
                     Research
                 </option>
@@ -47,13 +50,13 @@ data-response-error="<br/><strong>Uh oh!</strong> Looks like there was a problem
             </select>
         </div>
     </div>
-    <div class="form-field">
+    <div class="required form-field">
         <label for="comments">How can we help?</label>
-        <textarea id="comments" name="comments" data-airtable-field="Comments"></textarea>
+        <textarea id="comments" name="comments" required data-airtable-field="Comments"></textarea>
     </div>
     <div class="hidden form-field">
         <label for="form-source">Form source</label>
-        <input type="hidden" id="form-source" name="form-source" data-airtable-field="Form source" value="{{ pageSource | safe }}" required>
+        <input type="hidden" id="form-source" name="form-source" data-airtable-field="Form source" value="{{ pageSource | safe }}">
     </div>
     <div class="wp-block-button">
         <button class="wp-block-button__link airtable-form-submit" id="airtable-form-submit">Submit</button>
