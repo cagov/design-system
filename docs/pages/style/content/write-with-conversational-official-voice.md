@@ -63,6 +63,7 @@ This example strikes the right balance between being conversational and official
 Check your writing against these traits to make sure it’s conversational and official.
 
 | **Be**                  | **Do not be**                                               |
+| ----------------------- | ----------------------------------------------------------- | 
 | A source of truth       | A source of opinions                                        |
 | Informative             | Judgmental                                                  |
 | Welcoming to everyone   | Overbearing                                                 |
