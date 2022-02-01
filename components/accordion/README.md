@@ -2,7 +2,7 @@
 
 Accordions are expandable sections of content. Each section contains a heading (H2 or H3), a plus button (+), and more body text when opened.
 
-Accordions hide information unless someone opens them. This requires an extra action, which means readers have to do extra work to get this information. People cannot scan for information that’s in an accordion.
+Accordions keep pages looking clean by hiding information that most people do not need to see.
 
 ## When and how to use it
 
@@ -30,7 +30,7 @@ Do not use accordions:
 - To make a page look shorter
 - Inside other accordions
 
-When possible, keep content scannable by putting it in body content and not hidden in an accordion.
+Accordions hide information unless someone opens them. This requires an extra action, which means readers have to do extra work to get this information. If most people need to see the content, put it in body content so people can scan for it.
 
 ## Demo and sample markup
 
