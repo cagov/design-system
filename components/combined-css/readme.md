@@ -14,7 +14,7 @@ A combined css is composed of:
 ```
 @import "../../base-css/src/themes/_cagov.scss";
 @import "../../accordion/src/index.scss";
-@import "../../agency-footer/src/index.scss";
+@import "../../site-footer/src/index.scss";
 @import "../../back-to-top/src/index.scss";
 @import "../../branding/src/index.scss";
 @import "../../button-grid/src/index.scss";

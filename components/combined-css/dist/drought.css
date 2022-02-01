@@ -4700,11 +4700,11 @@ cagov-accordion.prog-enhanced .accordion-alpha .plus-minus {
   }
 }
 /* agency footer */
-section.agency-footer {
+section.site-footer {
   border-top: solid 1px var(--gray-300, #e1e0e3);
   border-bottom: solid 1px var(--gray-300, #e1e0e3);
 }
-section.agency-footer .container {
+section.site-footer .container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -4713,53 +4713,53 @@ section.agency-footer .container {
   margin: 0 auto;
   padding: 16px;
 }
-section.agency-footer a {
+section.site-footer a {
   color: var(--primary-color, #064e66);
 }
-section.agency-footer a:hover {
+section.site-footer a:hover {
   color: var(--primary-hover-color, #043747);
 }
-section.agency-footer a:focus {
+section.site-footer a:focus {
   outline: 2px solid var(--highlight-color, #fec02f);
 }
-section.agency-footer .footer-logo:not(:empty) {
+section.site-footer .footer-logo:not(:empty) {
   width: 54px;
   margin-right: 24px;
 }
-section.agency-footer .footer-logo:not(:empty) img {
+section.site-footer .footer-logo:not(:empty) img {
   width: 100%;
 }
-section.agency-footer .footer-secondary-links {
+section.site-footer .footer-secondary-links {
   display: flex;
   flex-direction: column;
   font-size: 1.125rem;
 }
-section.agency-footer .footer-secondary-links a {
+section.site-footer .footer-secondary-links a {
   margin-right: 1.7rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-section.agency-footer .footer-social-links {
+section.site-footer .footer-social-links {
   white-space: nowrap;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
 }
-section.agency-footer .footer-social-links a {
+section.site-footer .footer-social-links a {
   text-decoration: none;
   padding-right: 0.3rem;
   padding-left: 0.3rem;
   transition: all 0.3s ease;
 }
-section.agency-footer .footer-social-links a svg path {
+section.site-footer .footer-social-links a svg path {
   fill: var(--primary-color, #064e66);
 }
-section.agency-footer .footer-social-links a:hover svg path {
+section.site-footer .footer-social-links a:hover svg path {
   fill: var(--primary-dark-color, #1e1569);
 }
 
 @media (min-width: 991px) {
   .footer-secondary-links,
-section.agency-footer .container {
+section.site-footer .container {
     flex-direction: row !important;
     align-items: center;
   }
@@ -5793,6 +5793,7 @@ cagov-pagination .cagov-pagination__link-inactive {
 }
 
 main a:hover .external-link-icon svg path,
+.site-footer a:hover .external-link-icon svg path,
 .agency-footer a:hover .external-link-icon svg path {
   fill: var(--primary-dark-color, #003484);
 }
