@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-combined-css",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "",
   "main": "index.css",
   "scripts": {
@@ -9,7 +9,7 @@
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "prepublishOnly": "npm run build && npm run cdn:publish",
     "test": "echo \"No test specified\" && exit 0"
-    },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
