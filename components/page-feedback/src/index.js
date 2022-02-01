@@ -5,7 +5,7 @@ import styles from './css/index.css';
  * Page feedback web component that asks if you found what you were looking for,
  * then prompts for comments
  *
- * @element cagov-feedback
+ * @element cagov-page-feedback
  *
  * @fires ratedPage - custom event with object with detail value of whether the user
  *                    clicked yes or no to the first question: {detail: "yes"}.
@@ -25,7 +25,7 @@ import styles from './css/index.css';
  *
  * @cssprop --primary-color - Default value of #064E66, used for background
  */
-export class CAGovFeedback extends window.HTMLElement {
+export class CAGovPageFeedback extends window.HTMLElement {
   connectedCallback() {
     const question = this.dataset.question
       ? this.dataset.question
@@ -135,7 +135,7 @@ export class CAGovFeedback extends window.HTMLElement {
     });
   }
 }
-window.customElements.define('cagov-feedback', CAGovFeedback);
+window.customElements.define('cagov-page-feedback', CAGovPageFeedback);
 const style = document.createElement('style');
 style.textContent = styles;
 document.querySelector('head').appendChild(style);

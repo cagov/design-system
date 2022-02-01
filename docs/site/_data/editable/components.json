@@ -1,12 +1,12 @@
 {
-  "feedback": {
+  "page-feedback": {
     "name": "Page feedback",
     "title": "Page feedback",
     "type": "structural",
     "status": "Alpha",
     "blurb": "Widget that lets people provide feedback on page content",
     "description": "Details about the page feedback component, including how to use it and the steps to install it.",
-    "slug": "feedback",
+    "slug": "page-feedback",
     "icon": "/illustrations/png/page-feedback.png",
     "svg": "svg/page-feedback.svg"
   },

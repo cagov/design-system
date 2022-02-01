@@ -1,20 +1,21 @@
-cagov-feedback {
+cagov-page-feedback {
   width: 100%;
 }
-cagov-feedback .feedback-form {
-  background: var(--primary-color, #004abc);
+cagov-page-feedback .feedback-form {
+  background: var(--primary-dark-color, #003484);
   padding: 1rem;
   border-radius: 0.3125rem;
   max-width: var(--w-lg, 1176px);
   margin: 0 auto;
 }
-cagov-feedback .feedback-form-question {
+cagov-page-feedback .feedback-form-question {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-cagov-feedback .feedback-form-label {
+cagov-page-feedback .feedback-form-label {
   color: #fff;
+  background-color: var(--primary-dark-color, #003484);
   font-size: 1.125rem;
   display: block;
   margin-right: 1rem;
@@ -23,14 +24,14 @@ cagov-feedback .feedback-form-label {
   width: auto;
 }
 @media (max-width: 768px) {
-  cagov-feedback .feedback-form-label {
+  cagov-page-feedback .feedback-form-label {
     line-height: unset;
     margin-bottom: 1rem;
   }
 }
-cagov-feedback .feedback-form-button {
+cagov-page-feedback .feedback-form-button {
   padding: 1rem;
-  color: var(--primary-color, #004abc);
+  color: var(--primary-dark-color, #003484);
   border: none;
   border-radius: 0.3rem;
   transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
@@ -44,27 +45,27 @@ cagov-feedback .feedback-form-button {
   right: auto;
   background: #fff;
 }
-cagov-feedback .feedback-form-button:hover {
+cagov-page-feedback .feedback-form-button:hover {
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
   text-decoration: underline;
 }
-cagov-feedback .feedback-form-button:focus {
+cagov-page-feedback .feedback-form-button:focus {
   box-shadow: 0 0 0 2px #fff;
 }
-cagov-feedback .feedback-form-button .feedback-yes {
+cagov-page-feedback .feedback-form-button .feedback-yes {
   margin-right: 1rem;
 }
-cagov-feedback .feedback-form-add {
+cagov-page-feedback .feedback-form-add {
   padding-top: 0;
   display: none;
 }
 @media (max-width: 768px) {
-  cagov-feedback .feedback-form-add {
+  cagov-page-feedback .feedback-form-add {
     text-align: left;
     padding-top: 0;
   }
 }
-cagov-feedback .feedback-form-add-grid {
+cagov-page-feedback .feedback-form-add-grid {
   position: relative;
   margin-top: 1rem;
   display: inline-flex;
@@ -72,25 +73,25 @@ cagov-feedback .feedback-form-add-grid {
   align-items: flex-start;
 }
 @media (max-width: 768px) {
-  cagov-feedback .feedback-form-add-grid {
+  cagov-page-feedback .feedback-form-add-grid {
     display: block;
   }
 }
-cagov-feedback .feedback-form-textarea {
+cagov-page-feedback .feedback-form-textarea {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
-  color: var(--primary-color, #004abc);
+  color: var(--primary-dark-color, #003484);
   max-width: 90%;
   height: 127px;
   width: 600px;
 }
-cagov-feedback .feedback-form-thanks {
+cagov-page-feedback .feedback-form-thanks {
   display: none;
   color: #fff;
 }
-cagov-feedback .feedback-form-error {
+cagov-page-feedback .feedback-form-error {
   position: relative;
   top: 100%;
   left: 0;
@@ -98,3 +99,5 @@ cagov-feedback .feedback-form-error {
   font-weight: 300;
   text-align: left;
 }
+
+/*# sourceMappingURL=index.css.map */

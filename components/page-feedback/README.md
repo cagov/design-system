@@ -30,7 +30,7 @@ Do not use the page feedback component on pages that are part of a transactional
 <html-preview>
 
 ```html preview
-<cagov-feedback data-endpoint-url="https://fa-go-feedback-001.azurewebsites.net/sendfeedback"></cagov-feedback>
+<cagov-page-feedback data-endpoint-url="https://fa-go-feedback-001.azurewebsites.net/sendfeedback"></cagov-page-feedback>
 ```
 
 </html-preview>
@@ -47,7 +47,7 @@ Do not use the page feedback component on pages that are part of a transactional
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
-1. `npm i @cagov/ds-feedback`
+1. `npm i @cagov/ds-page-feedback`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
 3. Add the **sample markup** to your HTML.
 4. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.

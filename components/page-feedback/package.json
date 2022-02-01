@@ -1,6 +1,6 @@
 {
-  "name": "@cagov/ds-feedback",
-  "version": "1.0.12",
+  "name": "@cagov/ds-page-feedback",
+  "version": "1.1.0",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
