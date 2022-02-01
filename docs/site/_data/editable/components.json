@@ -10,14 +10,14 @@
     "icon": "/illustrations/png/page-feedback.png",
     "svg": "svg/page-feedback.svg"
   },
-  "agency-footer": {
+  "site-footer": {
     "name": "Site footer",
     "title": "Site footer",
     "type": "structural",
     "status": "Alpha",
     "blurb": "Customizable links and social media icons at the bottom of all pages",
     "description": "Details about the site footer component, including how to use it and the steps to install it.",
-    "slug": "agency-footer",
+    "slug": "site-footer",
     "icon": "/illustrations/png/site-footer.png",
     "svg": "svg/site-footer.svg"
   },
