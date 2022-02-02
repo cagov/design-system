@@ -1,4 +1,4 @@
-# Accordion Changelog
+# Accordion changelog
 
 <a href="https://www.npmjs.com/package/@cagov/ds-accordion">https://www.npmjs.com/package/@cagov/ds-accordion</a>
 
