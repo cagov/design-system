@@ -1,6 +1,6 @@
 {
-  "name": "@cagov/ds-branding",
-  "version": "1.0.8",
+  "name": "@cagov/ds-site-header",
+  "version": "1.1.0",
   "description": "",
   "main": "index.css",
   "scripts": {
@@ -15,7 +15,7 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cagov/design-system/components/branding/"
+    "url": "https://github.com/cagov/design-system/components/site-header/"
   },
   "license": "ISC",
   "devDependencies": {

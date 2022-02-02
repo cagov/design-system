@@ -2,7 +2,7 @@ import { expect, fixture } from '@open-wc/testing';
 /* this test file can be run on command line with npm run test
    or with visual debug via npm run test:visual */
 
-describe('CAGOV Branding', function unitTest() {
+describe('CAGOV Site header', function unitTest() {
   this.timeout(9000);
   it('works', async () => {
     const csslink = document.createElement('link');

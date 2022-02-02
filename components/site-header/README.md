@@ -28,8 +28,8 @@ Do not modify the site header beyond adding the site name and a logo.
 <html-preview>
 
 ```html preview
-<!--branding with logo-->
-<div class="branding">
+<!--site-header with logo-->
+<div class="site-header">
   <!-- Note the `with-logo` class next to `container`. Add this when you're including a logo. -->
   <div class="container with-logo">
     <a href="/" class="grid-logo" aria-label="DCC logo">
@@ -169,7 +169,7 @@ Do not modify the site header beyond adding the site name and a logo.
     </div>
   </div>
 </div>
-<!--end branding-->
+<!--end site-header-->
 ```
 
 </html-preview>
@@ -177,8 +177,8 @@ Do not modify the site header beyond adding the site name and a logo.
 ```html preview
 
 
-<!--branding without logo-->
-<div class="branding">
+<!--site-header without logo-->
+<div class="site-header">
   <div class="container">
     <a class="grid-org-name" href="/">
       <span class="org-name-state"> State of California </span>
@@ -272,14 +272,14 @@ Do not modify the site header beyond adding the site name and a logo.
     </div>
   </div>
 </div>
-<!--end branding-->
+<!--end site-header-->
 ```
 
 ## Specs
 
 | Property     | Value            |
 | ------------ | ---------------- |
-| Machine name | ds-branding      |
+| Machine name | ds-site-header   |
 | JavaScript   | no               |
 | SCSS         | ./src/index.scss |
 

@@ -1,7 +1,7 @@
 $mobile: 768px;
 $mobile-min: 767px;
 
-.branding {
+.site-header {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--white, #fff);
@@ -259,8 +259,8 @@ $mobile-min: 767px;
   }
 }
 
-.branding,
-cagov-navoverlay {
+.site-header,
+cagov-site-navigation {
   .search-container {
     .site-search {
       display: flex;
@@ -331,7 +331,7 @@ cagov-navoverlay {
     display: none !important;
   }
 
-  .branding {
+  .site-header {
     .container {
       grid-template-columns: auto 1fr;
       grid-template-rows: auto;
