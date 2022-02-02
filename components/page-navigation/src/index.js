@@ -297,30 +297,28 @@ class CAGovPageNavigation extends window.HTMLElement {
       }
     }
 
-    document
-      .querySelectorAll('a[data-page-navigation]')
-      .forEach((anchor) => {
-        anchor.addEventListener('click', (e) => {
-          const hashval = decodeURI(anchor.getAttribute('href'));
-          try {
-            const target = document.querySelector(hashval);
-            if (target !== null) {
-              const position = target.getBoundingClientRect();
+    document.querySelectorAll('a[data-page-navigation]').forEach((anchor) => {
+      anchor.addEventListener('click', (e) => {
+        const hashval = decodeURI(anchor.getAttribute('href'));
+        try {
+          const target = document.querySelector(hashval);
+          if (target !== null) {
+            const position = target.getBoundingClientRect();
 
-              window.scrollTo({
-                // Handle accessible smoothing behavior in CSS
-                left: position.left,
-                top: position.top - 200,
-              });
+            window.scrollTo({
+              // Handle accessible smoothing behavior in CSS
+              left: position.left,
+              top: position.top - 200,
+            });
 
-              window.history.pushState(null, null, hashval);
-            }
-          } catch (error) {
-            console.error(error);
+            window.history.pushState(null, null, hashval);
           }
-          e.preventDefault();
-        });
+        } catch (error) {
+          console.error(error);
+        }
+        e.preventDefault();
       });
+    });
 
     return null;
   }
@@ -408,10 +406,7 @@ class CAGovPageNavigation extends window.HTMLElement {
 }
 
 if (customElements.get('cagov-page-navigation') === undefined) {
-  window.customElements.define(
-    'cagov-page-navigation',
-    CAGovPageNavigation,
-  );
+  window.customElements.define('cagov-page-navigation', CAGovPageNavigation);
 }
 
 const style = document.createElement('style');

@@ -39,7 +39,7 @@ A combined js is composed of:
 ```
 import '../../accordion/dist/index.js';
 import '../../back-to-top/dist/index.js';
-import '../../content-navigation/dist/index.js';
+import '../../page-navigation/dist/index.js';
 import '../../page-feedback/dist/index.js';
 import '../../google-translate/index.js';
 import '../../menu/src/index.js';
