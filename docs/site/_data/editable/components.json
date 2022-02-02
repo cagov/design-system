@@ -21,14 +21,14 @@
     "icon": "/illustrations/png/site-footer.png",
     "svg": "svg/site-footer.svg"
   },
-  "branding": {
+  "site-header": {
     "name": "Site header",
     "title": "Site header",
     "type": "structural",
     "status": "Alpha",
     "blurb": "The site name and logo with an optional search bar at the top of all pages",
     "description": "Details about the site header component, including how to use it and the steps to install it.",
-    "slug": "branding",
+    "slug": "site-header",
     "icon": "/illustrations/png/site-header.png",
     "svg": "svg/site-header.svg"
   },
@@ -98,14 +98,14 @@
     "icon": "/illustrations/png/pagination.png",
     "svg": "svg/pagination.svg"
   },
-  "menu": {
+  "site-navigation": {
     "name": "Site navigation",
     "title": "Site navigation",
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Links and dropdown menus at the top of every page that let people move around the site",
     "description": "Details about the site navigation component, including how to use it and the steps to install it.",
-    "slug": "menu",
+    "slug": "site-navigation",
     "icon": "/illustrations/png/site-navigation.png",
     "svg": "svg/site-navigation.svg"
   },
