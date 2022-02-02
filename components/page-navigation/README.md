@@ -17,7 +17,7 @@ Do not use this component to replace or duplicate site navigation.
 <html-preview>
 
 ```html preview
-<cagov-content-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-content-navigation>
+<cagov-page-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-page-navigation>
 
 <div class="main">
   <h2>First heading</h2>
@@ -32,7 +32,7 @@ Do not use this component to replace or duplicate site navigation.
 
 | Property     | Value                 |
 | ------------ | --------------------- |
-| Machine name | ds-content-navigation |
+| Machine name | ds-page-navigation    |
 | JavaScript   | yes                   |
 | SCSS         | ./src/index.scss      |
 
@@ -40,7 +40,7 @@ Do not use this component to replace or duplicate site navigation.
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
-1. `npm i @cagov/ds-content-navigation`
+1. `npm i @cagov/ds-page-navigation`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
 3. Add the **sample markup** to your HTML.
 4. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.

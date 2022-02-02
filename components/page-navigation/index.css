@@ -1,5 +1,5 @@
-/* CONTENT NAVIGATION */
-sidebar cagov-content-navigation .label {
+/* PAGE NAVIGATION */
+sidebar cagov-page-navigation .label {
   font-weight: 700;
   font-size: 24px;
   line-height: 28.2px;
@@ -8,15 +8,15 @@ sidebar cagov-content-navigation .label {
   padding-bottom: 16px;
 }
 
-sidebar cagov-content-navigation ul,
-sidebar cagov-content-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),
-sidebar cagov-content-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {
+sidebar cagov-page-navigation ul,
+sidebar cagov-page-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),
+sidebar cagov-page-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {
   margin: 0;
   text-indent: 0;
   padding: 0;
 }
 
-sidebar cagov-content-navigation ul li {
+sidebar cagov-page-navigation ul li {
   padding-top: 14px;
   padding-bottom: 18px;
   margin-left: 0;
@@ -26,18 +26,18 @@ sidebar cagov-content-navigation ul li {
   line-height: 28.2px;
   list-style: none;
 }
-sidebar cagov-content-navigation ul li:first-child {
+sidebar cagov-page-navigation ul li:first-child {
   border-top: 1px solid var(--gray-300, #e1e0e3);
 }
-sidebar cagov-content-navigation ul li a {
+sidebar cagov-page-navigation ul li a {
   text-decoration: none;
 }
-sidebar cagov-content-navigation ul li a:hover {
+sidebar cagov-page-navigation ul li a:hover {
   text-decoration: underline;
 }
 
 @media only screen and (max-width: 992px) {
-  cagov-content-navigation .label {
+  cagov-page-navigation .label {
     display: none;
   }
 
@@ -47,7 +47,7 @@ sidebar cagov-content-navigation ul li a:hover {
     max-width: 100%;
   }
 
-  cagov-content-navigation ul li a {
+  cagov-page-navigation ul li a {
     font-size: 16px;
     line-height: 24px;
   }

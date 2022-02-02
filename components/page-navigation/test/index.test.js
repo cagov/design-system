@@ -4,7 +4,7 @@ import { expect, fixture } from '@open-wc/testing';
 
 import '../dist/index.js';
 
-describe('CAGOV Content navigation', function unitTest() {
+describe('CAGOV Page navigation', function unitTest() {
   this.timeout(5000);
   it('works', async () => {
     const response = await fetch('../template.html');
@@ -13,7 +13,7 @@ describe('CAGOV Content navigation', function unitTest() {
     }
 
     const startHTML = await response.text();
-    console.log(startHTML);
+    // console.log(startHTML);
 
     const el = await fixture(`<div>
     ${startHTML}

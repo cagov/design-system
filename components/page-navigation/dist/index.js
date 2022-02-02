@@ -1,16 +1,16 @@
-import styles from '../index.css';
+var styles = "/* PAGE NAVIGATION */\nsidebar cagov-page-navigation .label {\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28.2px;\n  padding: 0;\n  margin: 0;\n  padding-bottom: 16px;\n}\n\nsidebar cagov-page-navigation ul,\nsidebar cagov-page-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),\nsidebar cagov-page-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {\n  margin: 0;\n  text-indent: 0;\n  padding: 0;\n}\n\nsidebar cagov-page-navigation ul li {\n  padding-top: 14px;\n  padding-bottom: 18px;\n  margin-left: 0;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  border-bottom: 1px solid var(--gray-300, #e1e0e3);\n  line-height: 28.2px;\n  list-style: none;\n}\nsidebar cagov-page-navigation ul li:first-child {\n  border-top: 1px solid var(--gray-300, #e1e0e3);\n}\nsidebar cagov-page-navigation ul li a {\n  text-decoration: none;\n}\nsidebar cagov-page-navigation ul li a:hover {\n  text-decoration: underline;\n}\n\n@media only screen and (max-width: 992px) {\n  cagov-page-navigation .label {\n    display: none;\n  }\n\n  .sidebar-container {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n  }\n\n  cagov-page-navigation ul li a {\n    font-size: 16px;\n    line-height: 24px;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n";
 
 /**
- * Content Navigation web component
+ * Page Navigation web component
  *
- * @element cagov-content-navigation
+ * @element cagov-page-navigation
  *
  * @attr {string} [data-selector] - "main";
  * @attr {string} [data-type] - "wordpress";
  * @attr {string} [data-label] - "On this page";
  */
 
-class CAGovContentNavigation extends window.HTMLElement {
+class CAGovPageNavigation extends window.HTMLElement {
   connectedCallback() {
     this.type = 'wordpress';
 
@@ -284,7 +284,7 @@ class CAGovContentNavigation extends window.HTMLElement {
     }
     let content = null;
     if (markup !== null) {
-      content = `<nav aria-labelledby="content-navigation-label"> <div id="content-navigation-label" class="label">${label}</div> ${markup}</nav>`;
+      content = `<nav aria-labelledby="page-navigation-label"> <div id="page-navigation-label" class="label">${label}</div> ${markup}</nav>`;
     }
 
     this.template({ content }, 'wordpress');
@@ -298,7 +298,7 @@ class CAGovContentNavigation extends window.HTMLElement {
     }
 
     document
-      .querySelectorAll('a[data-content-navigation]')
+      .querySelectorAll('a[data-page-navigation]')
       .forEach((anchor) => {
         anchor.addEventListener('click', (e) => {
           const hashval = decodeURI(anchor.getAttribute('href'));
@@ -331,10 +331,6 @@ class CAGovContentNavigation extends window.HTMLElement {
 
   getHeaderTags() {
     const { selector } = this.dataset;
-    // const { editor } = this.dataset;
-    // const { label } = this.dataset;
-    // let display = this.dataset.display;
-    const display = 'render';
     // const { callback } = this.dataset; // Editor only right now
 
     const h = ['h2'];
@@ -342,10 +338,10 @@ class CAGovContentNavigation extends window.HTMLElement {
       // Pull out the header tags, in order & render as links with anchor tags
       // auto convert h tags with tag names
       if (selector !== undefined && selector !== null) {
-        if (display === 'render') {
+        {
           const selectorContent = document.querySelector(selector);
           if (selectorContent !== null) {
-            const outline = CAGovContentNavigation.outliner(selectorContent);
+            const outline = CAGovPageNavigation.outliner(selectorContent);
             return outline;
           }
         }
@@ -367,12 +363,9 @@ class CAGovContentNavigation extends window.HTMLElement {
         let anchorLabel = null;
 
         // If id not set already, create an id to jump to.
-        if (tagId === undefined || tagId === null) {
+        if (tagId) {
           anchorLabel = tagId;
-        } else if (
-          (tagId === undefined || tagId === null) &&
-          (tagName === undefined || tagName === null)
-        ) {
+        } else if (tagName) {
           anchorLabel = tagName;
         } else {
           anchorLabel = tag.innerHTML;
@@ -397,7 +390,7 @@ class CAGovContentNavigation extends window.HTMLElement {
           // Alt: [a-zA-Z\u00C0-\u017F]+,\s[a-zA-Z\u00C0-\u017F]+
           .replace(/a-zA-ZÃ€-Ã–Ã™-Ã¶Ã¹-Ã¿Ä€-Å¾á¸€-á»¿0-9\u00A0-\u017F/g, '');
 
-        output += `<li><a data-content-navigation href="#${encodeURI(
+        output += `<li><a data-page-navigation href="#${encodeURI(
           anchor,
         )}">${title}</a></li>`;
 
@@ -410,10 +403,10 @@ class CAGovContentNavigation extends window.HTMLElement {
   }
 }
 
-if (customElements.get('cagov-content-navigation') === undefined) {
+if (customElements.get('cagov-page-navigation') === undefined) {
   window.customElements.define(
-    'cagov-content-navigation',
-    CAGovContentNavigation,
+    'cagov-page-navigation',
+    CAGovPageNavigation,
   );
 }
 
