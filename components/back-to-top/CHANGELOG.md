@@ -1,9 +1,8 @@
-# Navigation components >> Back to top button >> Changelog || 30
-
-`ds-back-to-to`
+# Back to top button changelog
 
 # 2.0.0
-* bundle the CSS in the JS
+* Bundle the CSS in the JS
+* 
 # 1.0.2
 * Linted and formatted code per root eslint/prettier settings.
 * Added unit test.
@@ -13,4 +12,3 @@
 
 # 1.0.0
 * Initial commit
-
