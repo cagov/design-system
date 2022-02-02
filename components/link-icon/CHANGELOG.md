@@ -5,6 +5,7 @@
 ## 1.0.1
 
 - Vertically external link icon.
+- Update preview.
 
 ## 1.0.0
 
