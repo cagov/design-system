@@ -76,14 +76,14 @@
     "icon": "/illustrations/png/link-icon.png",
     "svg": "svg/link-icon.svg"
   },
-  "content-navigation": {
+  "page-navigation": {
     "name": "Page navigation",
     "title": "Page navigation",
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Links on the left side of a page that go directly to major sections of a page",
     "description": "Details about the page navigation component, including how to use it and the steps to install it.",
-    "slug": "content-navigation",
+    "slug": "page-navigation",
     "icon": "/illustrations/png/page-navigation.png",
     "svg": "svg/page-navigation.svg"
   },
