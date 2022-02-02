@@ -32,7 +32,6 @@ Do not modify the link icon when you install it.
 ```html preview
 <a href="http://www.parks.ca.gov/pages/23071/files/calargemap2012.pdf">PDF link to California State Parks map</a>
 <a href="https://google.com">External link to Google</a>
-
 ```
 
 </html-preview>
