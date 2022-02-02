@@ -16,10 +16,10 @@ A combined css is composed of:
 @import "../../accordion/src/index.scss";
 @import "../../site-footer/src/index.scss";
 @import "../../back-to-top/src/index.scss";
-@import "../../branding/src/index.scss";
+@import "../../site-header/src/index.scss";
 @import "../../button-grid/src/index.scss";
 @import "../../feature-card/src/index.scss";
-@import "../../menu/src/index.scss";
+@import "../../site-navigation/src/index.scss";
 @import "../../pagination/src/css/index.scss";
 @import "../../link-icon/src/index.scss";
 @import "../../regulatory-outline/src/index.scss";

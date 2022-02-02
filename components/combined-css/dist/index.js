@@ -977,7 +977,7 @@ window.googleTranslateElementInit = () => {
 /**
  * Dropdown menu web component
  *
- * @element cagov-navoverlay
+ * @element cagov-site-navigation
  *
  * @cssprop --primary-color - Default value of #064E66, used for background
  * @cssprop --gray-300 - #e1e0e3
@@ -988,13 +988,15 @@ window.googleTranslateElementInit = () => {
 
 // Function determining if it's mobile view (max 767px)
 function mobileView() {
-  const mobileElement = document.querySelector('.branding .grid-mobile-icons');
+  const mobileElement = document.querySelector(
+    '.site-header .grid-mobile-icons',
+  );
   if (mobileElement) {
     return getComputedStyle(mobileElement).display !== 'none';
   }
   return false;
 }
-class CAGOVOverlayNav extends window.HTMLElement {
+class CAGovSiteNavigation extends window.HTMLElement {
   connectedCallback() {
     document
       .querySelector('.cagov-nav.open-menu')
@@ -1144,7 +1146,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
   }
 
   bodyClick(event) {
-    if (!event.target.closest('cagov-navoverlay')) {
+    if (!event.target.closest('cagov-site-navigation')) {
       this.closeAllMenus();
     }
   }
@@ -1209,7 +1211,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
     });
   }
 }
-window.customElements.define('cagov-navoverlay', CAGOVOverlayNav);
+window.customElements.define('cagov-site-navigation', CAGovSiteNavigation);
 
 var styles$1 =
   '/* Page alert */\n.icon-select {\n  height: 48px;\n  padding: 0 0px 0 16px;\n}\n\n.editor-styles-wrapper .message-body {\n  padding: 0 32px;\n}\n\n.editor-styles-wrapper .cagov-page-alert {\n  min-height: 64px;\n  height: auto;\n}\n\n.cagov-page-alert {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 8px 16px;\n  width: 100%;\n  min-height: 46px;\n  height: auto;\n  background: rgba(254, 192, 47, 0.2);\n  border: 1px solid var(--cagov-highlight, #fec02f);\n  box-sizing: border-box;\n  border-radius: 5px;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin: 32px 0px;\n}\n.cagov-page-alert .icon {\n  line-height: 1.5rem;\n  background: none;\n}\n.cagov-page-alert .close-button {\n  background: none;\n  margin-left: auto;\n  border: none;\n  cursor: pointer !important;\n}\n.cagov-page-alert .body {\n  line-height: 1.5rem;\n  padding: 0 16px;\n  background: none;\n}\n@media only screen and (max-width: 600px) {\n  .cagov-page-alert {\n    min-height: 46px;\n    height: auto;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
