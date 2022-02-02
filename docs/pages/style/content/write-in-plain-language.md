@@ -28,13 +28,12 @@ Check reading levels with the [Hemingway Editor](http://hemingwayapp.com/). Elim
 * Use simple words.
   * Your content still needs to be accurate. Do not sacrifice clarity for simplicity.
 * Explain jargon when you have to use it. This includes proper nouns and government-centric terms.
-* Spell out an acronym the first time you use it on a page.
-  * Add the acronym in parentheses after the full name. Use the acronym afterwards.
-  * If the name only appears once on the page, do not add the acronym.
-  * If an acronym is better known than the full name, use it instead.
-  * Do not assume because the term is familiar in your workplace that everyone knows it. When in doubt, spell out the acronym.
-* Use [positive phrases](https://www.plainlanguage.gov/guidelines/concise/use-positive-language/) instead of negative ones. They’re easier to understand.
-  * For example: write **lack** instead of **do not have**.
+* When using an acronym, spell out its full name first, followed by the acronym in parentheses. Afterwards, use just the acronym.
+  * If the name only appears once on the page, do not include the acronym.
+  * If an acronym is better known to your audience than the full name (like CDC), use the acronym only. When in doubt, spell out the full name.
+* Tell people what they need to do instead of telling them what happens if they do not do something. It's easier for them to understand.
+  * For example, write **You must apply by February 10** instead of **If you do not apply by February 10, your application will not be accepted**.
+  * One way to avoid this is by removing [double negatives](https://www.plainlanguage.gov/guidelines/concise/use-positive-language/).
 * Use [active voice](https://plainlanguage.gov/guidelines/conversational/use-active-voice/) and strong verbs.
   * Do not use [hidden verbs](https://plainlanguage.gov/guidelines/words/avoid-hidden-verbs/).
 * Do not use gerunds with **is** or **are**. A gerund is a verb that ends in -ing. 
