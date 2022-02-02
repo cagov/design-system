@@ -153,14 +153,14 @@
     "icon": "/illustrations/png/feature-card.png",
     "svg": "svg/feature-card.svg"
   },
-  "button-grid": {
+  "link-grid": {
     "name": "Link grid",
     "title": "Link grid",
     "type": "content",
     "status": "Alpha",
     "blurb": "Grid of call-to-action buttons for top user tasks and needs",
     "description": "Details about the link grid component, including how to use it and the steps to install it.",
-    "slug": "button-grid",
+    "slug": "link-grid",
     "icon": "/illustrations/png/link-grid.png",
     "svg": "svg/link-grid.svg"
   },
