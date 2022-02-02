@@ -2476,6 +2476,26 @@ article {
     align-items: flex-start;
   }
 }
+/* Scrolling default */
+:root {
+  --animation-duration: 1s;
+  --transiton-duration: 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --animation-duration: 0;
+    --transiton-duration: 0;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
 /* html, body, main and all the website level base styes */
 /* Gutenberg Block alignment */
 /* Class applied to most external element of a gutenberg block component. Controls spacing between blocks. */
@@ -2573,6 +2593,174 @@ main .wp-block-image img {
   font-weight: bold;
   display: inline-block;
   border: none;
+}
+
+button {
+  display: inline-block;
+  font-size: var(--font-size-2);
+  padding: var(--s-1);
+  line-height: var(--font-lineheight-3);
+  border-radius: var(--radius-2);
+  border: var(--border-1) solid;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all var(--ease-2) var(--animation-duration-3);
+  color: var(--primary-color);
+  background-color: var(--white);
+  border-color: var(--primary-color);
+}
+button:hover {
+  color: var(--primary-dark-color);
+  background-color: var(--white);
+  border-color: var(--primary-dark-color);
+}
+button:focus {
+  outline: var(--border-2) solid var(--highlight-color);
+}
+
+.btn-primary {
+  display: inline-block;
+  font-size: var(--font-size-2);
+  padding: var(--s-1);
+  line-height: var(--font-lineheight-3);
+  border-radius: var(--radius-2);
+  border: var(--border-1) solid;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all var(--ease-2) var(--animation-duration-3);
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  color: var(--white);
+  background-color: var(--primary-dark-color);
+  border-color: var(--primary-dark-color);
+}
+.btn-primary:focus {
+  outline: var(--border-2) solid var(--highlight-color);
+}
+
+.btn-primary-outline {
+  display: inline-block;
+  font-size: var(--font-size-2);
+  padding: var(--s-1);
+  line-height: var(--font-lineheight-3);
+  border-radius: var(--radius-2);
+  border: var(--border-1) solid;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all var(--ease-2) var(--animation-duration-3);
+  color: var(--primary-color);
+  background-color: var(--white);
+  border-color: var(--primary-color);
+}
+.btn-primary-outline:hover {
+  color: var(--primary-dark-color);
+  background-color: var(--white);
+  border-color: var(--primary-dark-color);
+}
+.btn-primary-outline:focus {
+  outline: var(--border-2) solid var(--highlight-color);
+}
+
+.btn-disabled {
+  display: inline-block;
+  font-size: var(--font-size-2);
+  padding: var(--s-1);
+  line-height: var(--font-lineheight-3);
+  border-radius: var(--radius-2);
+  border: var(--border-1) solid;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all var(--ease-2) var(--animation-duration-3);
+  pointer-events: none !important;
+  color: var(--white);
+  background-color: var(--gray-700);
+  border-color: var(--gray-700);
+}
+.btn-disabled:hover {
+  color: var(--white);
+  background-color: var(--gray-700);
+  border-color: var(--gray-700);
+}
+
+.btn-disabled-outline {
+  display: inline-block;
+  font-size: var(--font-size-2);
+  padding: var(--s-1);
+  line-height: var(--font-lineheight-3);
+  border-radius: var(--radius-2);
+  border: var(--border-1) solid;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all var(--ease-2) var(--animation-duration-3);
+  pointer-events: none !important;
+  color: var(--gray-700);
+  background-color: var(--white);
+  border-color: var(--gray-700);
+}
+.btn-disabled-outline:hover {
+  color: var(--gray-700);
+  background-color: var(--white);
+  border-color: var(--gray-700);
+}
+
+/* ACTION BUTTONS */
+.btn-action-primary {
+  display: inline-block;
+  padding: var(--s-2);
+  border-radius: var(--radius-2);
+  border: var(--border-1) solid;
+  border-bottom: var(--border-4) solid;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--ease-2) var(--animation-duration-3);
+  border-color: var(--primary-color);
+  background-color: var(--white);
+  width: 100%;
+}
+.btn-action-primary .btn-action-title {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-7);
+  color: var(--primary-color);
+  padding-right: var(--s-4);
+  position: relative;
+  display: block;
+}
+.btn-action-primary .btn-action-title::after {
+  font-family: "CaGov" !important;
+  content: "5";
+  position: absolute;
+  right: -0.5rem;
+  top: 1px;
+}
+.btn-action-primary .btn-action-text {
+  color: var(--black);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-4);
+  display: block;
+}
+.btn-action-primary:hover {
+  border-color: var(--primary-dark-color);
+  background-color: var(--gray-100);
+}
+.btn-action-primary:hover .btn-action-title {
+  color: var(--primary-dark-color);
+}
+.btn-action-primary:hover .btn-action-text {
+  color: var(--black);
 }
 
 /* buttons generic styles */
