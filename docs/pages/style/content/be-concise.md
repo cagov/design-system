@@ -36,10 +36,12 @@ When there is less to read, it’s easier for people to complete their task.
 Here’s an example of how to make content more concise:
 
 **Complicated**
-If an individual has a payment to submit to the Treasurer’s Office of Department of Weights and Measures that accompanies their license renewal, this payment must be submitted through the online portal at the same time of the submission of their application to the Department.
+
+> If an individual has a payment to submit to the Treasurer’s Office of Department of Weights and Measures that accompanies their license renewal, this payment must be submitted through the online portal at the same time of the submission of their application to the Department.
 
 **Concise**
-You must pay your license fee when you renew your license. Use the Department of Weights and Measures online portal to renew and pay.
+
+> You must pay your license fee when you renew your license. Use the Department of Weights and Measures online portal to renew and pay.
 
 Plainlanguage.gov has more tips for [writing concise content](https://www.plainlanguage.gov/guidelines/concise/). You can also see examples of how to improve government writing.
 
