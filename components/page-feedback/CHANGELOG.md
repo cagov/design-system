@@ -2,6 +2,7 @@
 
 ## 1.1.0
 * Changed name of package from `ds-feedback` to `ds-page-feedback`.
+* Changed name of custom element to `<cagov-page-feedback>`.
 
 ## 1.0.12
 * Remove unnecessary constructor, synch readme markup with test markup on publish

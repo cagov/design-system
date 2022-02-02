@@ -2,6 +2,7 @@
 
 ## 2.1.0
 * Renamed package from `ds-dropdown-menu` to `ds-site-navigation`.
+* Changed name of custom element to `<cagov-site-navigation>`.
 
 ## 2.0.1
 * Add defensive check for mobile search element

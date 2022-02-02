@@ -4,7 +4,7 @@
 ## 2.0.0
 
 * Fixes breaking changes with components that now offer CSS via JS.
-* Incorporates several renamed components.
+* Incorporates several renamed components. See separate changelogs within each component for implementation details.
   * `ds-feedback` is now `ds-page-feedback`.
   * `ds-agency-footer` is now `ds-site-footer`.
   * `ds-branding` is now `ds-site-header`.

@@ -2,6 +2,7 @@
 
 ## 1.1.0
 * Changed name from `ds-agency-footer` to `ds-site-footer`.
+* Changed name of CSS class `agency-footer` to `site-footer`.
 
 ## 1.0.4
 * Force social media icons onto the same line on Safari. 

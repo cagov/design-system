@@ -2,6 +2,7 @@
 
 ## 1.1.0
 * Renamed package from `ds-branding` to `ds-site-header`.
+* Renamed CSS class `branding` to `site-header`.
 
 ## 1.0.8
 * Separated `gap` on .mobile-icons into `column-gap` and `row-gap`.
