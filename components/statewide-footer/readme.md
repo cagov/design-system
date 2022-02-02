@@ -41,8 +41,8 @@ Do not combine the statewide footer with department logo, department links, or s
         xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px"
         y="0px"
-        width="34px"
-        height="34px"
+        width="33px"
+        height="24px"
         viewBox="0 0 44 34"
         style="enable-background:new 0 0 44 34;"
         xml:space="preserve"
@@ -94,9 +94,9 @@ Do not combine the statewide footer with department logo, department links, or s
         <a href="https://www.ca.gov/accessibility/">Accessibility</a>
         <a href="#">Contact Us</a>
       </div>
-    </div>
-    <div class="container pt-0">
-      <p class="copyright">Copyright © 2022 State of California</p>
+      <p class="copyright">Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script> State of California
+      </p>
     </div>
   </div>
 </footer>
