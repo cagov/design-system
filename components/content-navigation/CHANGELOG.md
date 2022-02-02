@@ -2,6 +2,9 @@
 
 `ds-content-navigation`
 
+# 2.0.2
+* Added --s-3 (24px) margin button to nav element. Made sure navigation is changing semantic order on resize.
+
 # 2.0.1
 * Inserting content navigation after h1 in mobile. Removed default margin left from list items.
 
