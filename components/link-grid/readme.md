@@ -84,7 +84,7 @@ Because the grid collapses into one column on mobile, large grids may occupy sev
 
 | Property     | Value            |
 | ------------ | ---------------- |
-| Machine name | ds-button-grid   |
+| Machine name | ds-link-grid     |
 | JavaScript   | no               |
 | SCSS         | ./src/index.scss |
 

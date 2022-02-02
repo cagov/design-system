@@ -17,7 +17,7 @@ A combined css is composed of:
 @import "../../site-footer/src/index.scss";
 @import "../../back-to-top/src/index.scss";
 @import "../../site-header/src/index.scss";
-@import "../../button-grid/src/index.scss";
+@import "../../link-grid/src/index.scss";
 @import "../../feature-card/src/index.scss";
 @import "../../site-navigation/src/index.scss";
 @import "../../pagination/src/css/index.scss";
