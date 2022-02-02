@@ -4,7 +4,7 @@ The statewide footer puts a standard footer at the very bottom of your site. Hav
 
 It always includes:
 
-- The ca.gov logo on the left that links to the ca.gov site.
+- The CA.gov logo on the left that links to the CA.gov site.
 - A set of standard links:
   - Conditions of use
   - Privacy policy
@@ -168,7 +168,7 @@ The content for this component is fixed and can be used as-is, as described in t
 
 For the URL links, refer to the latest version of the component for the most up-to-date URLs.
 
-These links are managed by [ca.gov](http://ca.gov). Additional information about these requirements can be found in the CA State Web Standards.
+These links are managed by [CA.gov](http://ca.gov). Additional information about these requirements can be found in the CA State Web Standards.
 
 | Page                        | URL                                       | Required  | Order |
 | --------------------------- | ----------------------------------------- | --------- | ----- |
