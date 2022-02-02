@@ -1,7 +1,7 @@
 /**
  * Dropdown menu web component
  *
- * @element cagov-navoverlay
+ * @element cagov-site-navigation
  *
  * @cssprop --primary-color - Default value of #064E66, used for background
  * @cssprop --gray-300 - #e1e0e3
@@ -12,13 +12,15 @@
 
 // Function determining if it's mobile view (max 767px)
 function mobileView() {
-  const mobileElement = document.querySelector('.branding .grid-mobile-icons');
+  const mobileElement = document.querySelector(
+    '.site-header .grid-mobile-icons',
+  );
   if (mobileElement) {
     return getComputedStyle(mobileElement).display !== 'none';
   }
   return false;
 }
-class CAGOVOverlayNav extends window.HTMLElement {
+class CAGovSiteNavigation extends window.HTMLElement {
   connectedCallback() {
     document
       .querySelector('.cagov-nav.open-menu')
@@ -168,7 +170,7 @@ class CAGOVOverlayNav extends window.HTMLElement {
   }
 
   bodyClick(event) {
-    if (!event.target.closest('cagov-navoverlay')) {
+    if (!event.target.closest('cagov-site-navigation')) {
       this.closeAllMenus();
     }
   }
@@ -233,4 +235,4 @@ class CAGOVOverlayNav extends window.HTMLElement {
     });
   }
 }
-window.customElements.define('cagov-navoverlay', CAGOVOverlayNav);
+window.customElements.define('cagov-site-navigation', CAGovSiteNavigation);

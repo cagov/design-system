@@ -32,10 +32,10 @@ Do not link to PDFs in the site navigation.
 <html-preview>
 
 ```html preview
-<!--the branding html has to be present for menu testing because cannabis puts the menu triggers outside of the module -->
-    <!--branding-->
+<!--the site-header html has to be present for menu testing because cannabis puts the menu triggers outside of the module -->
+    <!--site-header-->
     <div>
-    <div class="branding">
+    <div class="site-header">
       <div class="container">
         <div class="cagov-nav mobile-icons">
           <button class="menu-trigger cagov-nav open-menu" aria-label="Navigation menu" aria-haspopup="true" aria-expanded="false"
@@ -50,9 +50,9 @@ Do not link to PDFs in the site navigation.
         </div>
       </div>
     </div>
-    <!--end branding-->
+    <!--end site-header-->
     
-  <cagov-navoverlay>
+  <cagov-site-navigation>
   <div class="container">
     <div class="search-container search-container--small hidden-search">
       <form class="site-search" action="/serp/">
@@ -260,7 +260,7 @@ Do not link to PDFs in the site navigation.
       </div>
     </nav>
   </div>
-</cagov-navoverlay>
+</cagov-site-navigation>
 
 </div>
 ```
@@ -269,17 +269,17 @@ Do not link to PDFs in the site navigation.
 
 ## Specs
 
-| Property     | Value            |
-| ------------ | ---------------- |
-| Machine name | ds-dropdown-menu |
-| JavaScript   | yes              |
-| SCSS         | ./src/index.scss |
+| Property     | Value              |
+| ------------ | ------------------ |
+| Machine name | ds-site-navigation |
+| JavaScript   | yes                |
+| SCSS         | ./src/index.scss   | 
 
 ## Project installation
 
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool, modern JavaScript techniques, and [Sass](https://sass-lang.com/).
 
-1. `npm i @cagov/ds-dropdown-menu`
+1. `npm i @cagov/ds-site-navigation`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
 3. Include **SCSS** in your Sass compiler.
 4. Add the **sample markup** to your HTML.

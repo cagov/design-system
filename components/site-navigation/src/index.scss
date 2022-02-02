@@ -93,7 +93,7 @@ $desktop: 1176px;
   }
 }
 
-cagov-navoverlay {
+cagov-site-navigation {
   .container {
     padding: 0;
     margin: 0;
@@ -106,7 +106,7 @@ cagov-navoverlay {
 }
 
 /* EXPANDED MENU SYTLES */
-cagov-navoverlay {
+cagov-site-navigation {
   border-bottom: 1px solid var(--gray-300, #e1e0e3);
   background-color: #ffffff;
   a.expanded-menu-section-header-link {
@@ -346,7 +346,7 @@ cagov-navoverlay {
     }
   }
 }
-cagov-navoverlay.display-menu {
+cagov-site-navigation.display-menu {
   overflow: hidden;
   .expanded-menu {
     transform: translateX(0);
@@ -391,7 +391,7 @@ cagov-navoverlay.display-menu {
     }
   }
 }
-cagov-navoverlay {
+cagov-site-navigation {
   .expanded-menu-close-mobile {
     &-svg {
       width: 1rem;
