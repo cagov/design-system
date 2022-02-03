@@ -23,6 +23,7 @@
     "site:watch": "eleventy --serve",
     "start": "npm run site:start",
     "test:serve": "npm run site:build && npx http-server _site/",
+    "test:setup": "npx playwright install-deps chromium && npx playwright install",
     "test:site": "npx playwright test test/index.spec.mjs",
     "test:visual": "web-test-runner **/*.test.js --node-resolve --config test/test.config.js",
     "test": "web-test-runner **/*.test.js --node-resolve"
