@@ -40,3 +40,8 @@ Each component is published to npm. The following steps are run in a pre-publish
 - The latest version of the component is written to our CDN so it can be included with a script tag
 
 We welcome your component modification requests or suggestions. Create a pull request or open an issue in this repository.
+
+## Local site testing
+
+Playwright is used to run accessibility tests against local site urls.
+This starts up with `http-server' instead of 11ty because axe-playwright flags the browser-sync element that is injected into 11ty's default local serve mode as an accessibility violation for not being included in a landmark element.

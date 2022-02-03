@@ -22,6 +22,8 @@
     "site:watch:dev": "cross-env NODE_ENV=development eleventy --serve --incremental",
     "site:watch": "eleventy --serve",
     "start": "npm run site:start",
+    "test:serve": "npm run site:build && npx http-server _site/",
+    "test:site": "npx playwright test test/index.spec.mjs",
     "test:visual": "web-test-runner **/*.test.js --node-resolve --config test/test.config.js",
     "test": "web-test-runner **/*.test.js --node-resolve"
   },
@@ -39,10 +41,12 @@
   "devDependencies": {
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "^3.0.0-next.2",
+    "@playwright/test": "^1.18.1",
     "@web/dev-server": "^0.1.17",
     "@web/test-runner": "^0.13.16",
     "@web/test-runner-puppeteer": "^0.10.1",
     "aws-sdk": "^2.1055.0",
+    "axe-playwright": "^1.1.9",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
