@@ -1,6 +1,8 @@
-# Changelog
+# Link icon Changelog
 
-`ds-link-icon`
+## 1.1.0
+
+* Add compatibility with renamed `ds-site-footer` component.
 
 ## 1.0.1
 

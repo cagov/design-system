@@ -1,0 +1,361 @@
+$mobile: 768px;
+$mobile-min: 767px;
+
+.site-header {
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--white, #fff);
+  border-bottom: 1px solid var(--gray-300, #e1e0e3);
+
+  .container {
+    max-width: var(--w-lg, "1176px");
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "org-name mobile-icons";
+    column-gap: 0.5rem;
+    row-gap: 0.25rem;
+    justify-items: start;
+
+    &.with-logo {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "logo mobile-icons"
+        "org-name org-name";
+    }
+
+    .search-container {
+      display: none;
+    }
+  }
+
+  .grid-logo {
+    grid-area: logo;
+    align-self: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .grid-org-name {
+    grid-area: org-name;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+
+    transition: all 0.3s;
+    color: var(--black, #000);
+    text-decoration: none;
+    &:focus {
+      outline: 2px solid var(--highlight-color, #fec02f);
+    }
+  }
+
+  .grid-search {
+    grid-area: search;
+    align-self: center;
+    justify-self: end;
+    min-width: 40%;
+    position: relative;
+    left: 4px;
+  }
+
+  .grid-mobile-icons {
+    grid-area: mobile-icons;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .org-name-state {
+    display: block;
+    font-family: var(--org-name-state-font, "Public Sans", sans-serif);
+    font-size: var(--org-name-state-font-size, 1rem);
+    font-weight: var(--org-name-state-font-weight, 500);
+    line-height: var(--org-name-state-line-height, 1.2);
+    text-transform: var(--org-name-state-text-transform, none);
+  }
+
+  .org-name-dept {
+    display: block;
+    font-family: var(--org-name-dept-font, "Public Sans", sans-serif);
+    font-size: var(--org-name-dept-font-size, 1.75rem);
+    font-weight: var(--org-name-dept-font-weight, 700);
+    line-height: var(--org-name-dept-line-height, 1.2);
+    text-transform: var(--org-name-dept-text-transform, none);
+  }
+
+  // Mobile icons
+  .mobile-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    column-gap: 24px;
+    row-gap: 12px;
+  }
+
+  .mobile-search {
+    margin: 0 !important;
+  }
+
+  button.search-btn,
+  button.menu-btn {
+    padding: 0 !important;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    align-items: center;
+    background: transparent;
+    overflow: visible;
+    padding: 10px;
+    color: var(--primary-color, #064e66);
+
+    &:hover {
+      color: var(--primary-dark-color, #043747);
+
+      .blue {
+        fill: var(--primary-dark-color, #043747);
+      }
+    }
+    &:focus {
+      color: var(--primary-dark-color, #043747);
+      outline: 2px solid var(--highlight-color, #fdb81e);
+    }
+
+    svg {
+      display: inline-block;
+    }
+
+    .blue {
+      fill: var(--primary-color, #064e66);
+    }
+  }
+
+  .menu-trigger {
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: 0.3s;
+    transform-origin: top left;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    color: var(--primary-color, #064e66);
+    display: flex;
+    align-items: center;
+    .is-fixed {
+      position: fixed;
+    }
+    right: 0;
+    transition: 0.3s;
+    transform-origin: center center;
+    @mixin phone {
+      @media (max-width: #{$mobile-min}) {
+        z-index: 2000;
+      }
+    }
+
+    @mixin tablet {
+      @media (min-width: #{$mobile}) {
+        z-index: 2000;
+      }
+    }
+    .hamburger-inner {
+      background-color: var(--primary-color, #064e66);
+    }
+
+    &:hover {
+      color: var(--primary-dark-color, #043747);
+      .hamburger-inner {
+        &:before,
+        &:after {
+          background-color: var(--primary-dark-color, #043747);
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    padding: 0.15rem 0.15rem;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    position: relative;
+    top: -2px;
+    height: 20px;
+    transition: all 0.2s ease-in-out;
+    vertical-align: middle;
+    z-index: 10000;
+    margin-right: 0.5rem;
+    &-box {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      position: relative;
+    }
+    &-inner {
+      display: block;
+      top: 50%;
+      width: 20px;
+      margin-top: -1px;
+      transition-duration: 0.22s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      &,
+      &:before,
+      &:after {
+        height: 2px;
+        border-radius: 0;
+        position: absolute;
+        transition-property: transform, width, background-color;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+      }
+      &:before,
+      &:after {
+        width: 20px;
+        content: "";
+        display: block;
+      }
+      &:before {
+        top: -6px;
+        transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in, width 0.1s 0.12s ease-out;
+      }
+      &:after {
+        bottom: -6px;
+        transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+          width 0.1s 0.12s ease-out;
+      }
+    }
+  }
+}
+
+.display-menu {
+  .cagov-nav.hamburger {
+    .hamburger-inner {
+      transform: rotate(225deg);
+      transition-delay: 0.12s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      width: 12px;
+      &,
+      &:before,
+      &:after {
+        width: 20px !important;
+      }
+      &:before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+      }
+      &:after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+  }
+}
+
+.site-header,
+cagov-site-navigation {
+  .search-container {
+    .site-search {
+      display: flex;
+      position: relative;
+      // submit input
+      .search-textfield {
+        border: 1px solid;
+        border-color: var(--primary-color, #004abc);
+        border-radius: 4px;
+        padding: 10px;
+        width: 100%;
+        font-size: 1rem;
+        &:focus {
+          outline: 2px solid var(--highlight-color, #fec02f);
+          outline-offset: -2px;
+        }
+      }
+      // submit button
+      .search-submit {
+        position: relative;
+        right: 5px;
+        outline-offset: -2px;
+        background-color: var(--primary-color, #004abc);
+        border: 1px solid var(--primary-color, #004abc);
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding: 7px 14px 4px 14px;
+        &:hover {
+          background-color: var(--primary-dark-color, #003484);
+          border-color: var(--primary-dark-color, #003484);
+        }
+        &:focus {
+          outline: 2px solid var(--highlight-color, #fec02f);
+        }
+        svg path {
+          fill: var(--white, #fff);
+        }
+      }
+
+      .search-close {
+        color: var(--primary-color, #004abc);
+        text-decoration: underline;
+        border: none;
+        background-color: var(--gray-100, #f9f9fa);
+        padding: 0 15px 0 15px;
+        &:hover {
+          color: var(--primary-dark-color, #003484);
+          text-decoration: none;
+        }
+        &:focus {
+          outline: 2px solid var(--highlight-color, #fec02f);
+        }
+      }
+    }
+  }
+  .search-container--small {
+    padding-left: 16px;
+    padding-right: 16px;
+    &.hidden-search {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: #{$mobile}) {
+  .mobile-icons,
+  .search-close {
+    display: none !important;
+  }
+
+  .site-header {
+    .container {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "org-name search";
+      &.with-logo {
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "logo org-name search";
+      }
+    }
+    .search-container {
+      display: block !important;
+    }
+  }
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}

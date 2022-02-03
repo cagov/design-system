@@ -30,6 +30,7 @@
 }
 
 main a:hover .external-link-icon svg path,
+.site-footer a:hover .external-link-icon svg path,
 .agency-footer a:hover .external-link-icon svg path {
   fill: var(--primary-dark-color, #003484);
 }
