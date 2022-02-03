@@ -15,11 +15,11 @@ Page feedback responses are collected in a Google Analytics report. It does not 
 
 ## When and how to use it
 
-When you install the page feedback component, it is automatically added to every page on your site.
+When you install the page feedback component, it's automatically added to every page on your site.
 
 Monitor the information you receive through page feedback so you know user sentiment and can catch problems early.
 
-If you’re interested in using page feedback on your site, [reach out through the Contact us page](/contact-us) to get more information.
+We're still working on data services that supports the page feedback component. If you're interested in using page feedback, [reach out through the Contact us page](/contact-us). We'd like to hear more about your needs as we work on these services.
 
 ### How not to use it
 
