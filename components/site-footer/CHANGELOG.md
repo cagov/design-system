@@ -1,4 +1,4 @@
-# Agency footer Changelog
+# Site footer changelog
 
 ## 1.1.0
 * Changed name from `ds-agency-footer` to `ds-site-footer`.
