@@ -1,5 +1,9 @@
 # Statewide header changelog
 
+
+## 1.0.13
+* Changed ca.gov logo dimensions to 33px by 24px to make it consistent with statewide-footer's icon.
+
 ## 1.0.12
 * Made cagov logo linked to ca.gov website.
 * Added aria-hidden=”true” attribute to the ca.gov svg icon, so it is hidden from assistive technologies.

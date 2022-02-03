@@ -39,7 +39,7 @@
 }
 .official-header svg {
   padding: 0;
-  width: 38px;
+  width: 33px;
 }
 .official-header svg .ca {
   fill: var(--cagov-highlight, #fec02f);
