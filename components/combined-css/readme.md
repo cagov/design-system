@@ -14,28 +14,20 @@ A combined css is composed of:
 ```
 @import "../../base-css/src/themes/_cagov.scss";
 @import "../../accordion/src/index.scss";
-@import "../../agency-footer/src/index.scss";
+@import "../../site-footer/src/index.scss";
 @import "../../back-to-top/src/index.scss";
-@import "../../branding/src/index.scss";
-@import "../../card-grid/src/index.scss";
-@import "../../content-navigation/src/index.scss";
-@import "../../external-link-icon/src/index.scss";
+@import "../../site-header/src/index.scss";
+@import "../../link-grid/src/index.scss";
 @import "../../feature-card/src/index.scss";
-@import "../../feature-card/src/index.scss";
-@import "../../feedback/src/css/index.scss";
-@import "../../menu/src/index.scss";
-@import "../../menu/src/index.scss";
-@import "../../page-alert/src/index.scss";
+@import "../../site-navigation/src/index.scss";
 @import "../../pagination/src/css/index.scss";
-@import "../../pdf-icon/src/index.scss";
+@import "../../link-icon/src/index.scss";
 @import "../../regulatory-outline/src/index.scss";
 @import "../../skip-to-content/src/index.scss";
 @import "../../statewide-footer/src/index.scss";
-@import "../../statewide-header/src/index.scss";
 @import "../../step-list/src/index.scss";
 @import "../../table/src/index.scss";
 @import "../../table/src/index.wordpress.scss";
-
 ```
 
 ## JavaScript
@@ -46,19 +38,17 @@ A combined js is composed of:
 
 ```
 import '../../accordion/dist/index.js';
-import '../../back-to-top/src/index.js';
-import '../../content-navigation/src/index.js';
-import '../../external-link-icon/src/index.js';
-import '../../feedback/dist/index.js';
+import '../../back-to-top/dist/index.js';
+import '../../page-navigation/dist/index.js';
+import '../../page-feedback/dist/index.js';
 import '../../google-translate/index.js';
 import '../../menu/src/index.js';
-import '../../page-alert/src/index.js';
+import '../../page-alert/dist/index.js';
 import '../../pagination/dist/index.js';
-import '../../pdf-icon/src/index.js';
+import '../../link-icon/src/index.js';
 import '../../plus/index.js';
 import '../../minus/index.js';
 import '../../statewide-header/src/index.js';
-
 ```
 
 
