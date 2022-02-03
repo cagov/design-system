@@ -1,0 +1,25 @@
+{
+  "name": "@cagov/ds-icons",
+  "version": "1.0.4",
+  "description": "",
+  "main": "index.css",
+  "type": "module",
+  "scripts": {
+    "build": "font-blast src/CAGov.svg src && sprite",
+    "sprite": "svg-sprite-generate -d src/svg -o src/allicons.svg",
+    "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
+    "html:preview": "node ../../docs/src/publish/dynamic-html.js",
+    "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@open-wc/testing": "^3.0.1",
+    "@web/test-runner-puppeteer": "^0.10.2",
+    "font-blast": "^0.7.0",
+    "sass": "^1.38.0",
+    "svg-sprite-generator": "^0.0.7"
+  }
+}
