@@ -26,6 +26,10 @@ jobs:
           echo 'User-agent: *' > _site/robots.txt
           echo 'Allow: /' >> _site/robots.txt
           echo 'Sitemap: https://designsystem.webstandards.ca.gov/sitemap.xml' >> docs/robots.txt
+      - name: Run site accessibility tests
+        run: |
+          npm run test:setup
+          npm run test:site
       # Push built site files to S3 production bucket    
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
