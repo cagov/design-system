@@ -1,4 +1,4 @@
-# Content components >> Accordion >> Use cases || 15
+# Accordion use cases
 
 ## Open/closed
 
@@ -68,6 +68,3 @@ export const demoClosed = () => html`
 ### alpha.ca.gov
 
 <img src="https://github.com/cagov/storybook-ca-gov/raw/main/packages/%40cagov/accordion/stories/accordion.png" />
-
-
-
