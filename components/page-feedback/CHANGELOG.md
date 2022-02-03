@@ -1,4 +1,4 @@
-# Page feedback Changelog
+# Page feedback changelog
 
 ## 1.1.0
 * Changed name of package from `ds-feedback` to `ds-page-feedback`.
