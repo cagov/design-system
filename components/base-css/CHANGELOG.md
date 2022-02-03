@@ -1,9 +1,10 @@
 # Base CSS changelog
 
-## 1.0.15
-* Added new design tokens. Added new utility classes.
 
-## 1.0.14
+# 1.0.15
+* Added new design tokens. Added new utility classes. Added buttons styles.
+
+# 1.0.14
 * reduce top margin on h2
 
 ## 1.0.13

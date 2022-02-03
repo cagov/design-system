@@ -9,7 +9,7 @@ footer {
 		box-sizing: border-box;
 		max-width: var(--w-lg, 1176px);
 		margin: 0 auto;
-		padding: 16px;
+		padding: var(--s-2);
 	}
 	a {
 		&:hover {
@@ -25,9 +25,13 @@ footer {
 		flex-direction: column;
 
 		a {
-			margin-right: 24px;
-			padding-top: 0.5rem;
-			padding-bottom: 0.5rem;
+			margin-right: var(--s-3);
+			padding-top: var(--s-1);
+			padding-bottom: var(--s-1);
+			span.external-link-icon,
+			span.ca-gov-icon-external-link {
+				display: none;
+			}
 			&:hover {
 				text-decoration: none;
 			}
@@ -45,12 +49,15 @@ footer {
 	}
 
 	.cagov-logo {
-		padding: 0 24px 0 0;
+		padding: 0 var(--s-3) 0 0;
 	}
 
 	.bg-light-grey a,
 	.copyright {
 		color: var(--black, #000);
+		padding-top: var(--s-1);
+		padding-bottom: var(--s-1);
+		margin-bottom: 0;
 	}
 }
 
@@ -65,6 +72,7 @@ footer {
 @media (min-width: 991px) {
 	.footer-secondary-links,
 	footer .container {
+		margin-right: auto;
 		flex-direction: row;
 		align-items: center;
 
