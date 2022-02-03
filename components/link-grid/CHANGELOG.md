@@ -1,4 +1,4 @@
-# Link grid Changelog
+# Link grid changelog
 
 ## 2.1.0
 * Renamed package from `ds-button-grid` to `ds-link-grid`.
