@@ -10,7 +10,7 @@
 * Added reponsive font size functionality. (added font increase ratio variable based based on the dimensions of the browser viewport)
 
 ## 1.0.12
-* Updated CAGov font with new icons.
+* Updated CA.gov font with new icons.
 
 ## 1.0.10
 * Added _grid.scss file with grid classes (.card-grid-2, .card-grid-3,.card-grid-4). Also, added linting testing to the component.
@@ -34,7 +34,7 @@
 * Added missing gray colors to the variables.scss
 
 ## 1.0.3
-* Added ca.gov main colors that are used in ca.gov logo in statewide header and footer to the root variables
+* Added CA.gov main colors that are used in CA.gov logo in statewide header and footer to the root variables
 
 ## 1.0.2
 * Updated typography.scss with new updated font sizes, added new figcaption styles, updated color scheme files with latest color values
