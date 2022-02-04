@@ -52,7 +52,7 @@ Do not put a lot of content in your feature card. Too much content is hard to re
         <div class="wp-block-button">
           <a
             class="wp-block-button__link"
-            href="https://cannabis.ca.gov/about-us/consolidation/"
+            href="#"
             >Learn more</a
           >
         </div>
