@@ -14,7 +14,11 @@ module.exports = {
   // Note that several metadata properties do not need to be in EleventyComputed.
   // See ./metadata.js for more.
   title: (article) => {
-    if ('title' in article && article.title !== '') {
+    if (
+      'title' in article &&
+      article.title !== '' &&
+      article.title !== defaults.site.name
+    ) {
       return `${article.title} | ${defaults.site.name}`;
     }
     return defaults.site.name;
