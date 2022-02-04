@@ -1,7 +1,6 @@
 /* Links global styles */
 a {
   color: var(--primary-color, #004abc);
-  text-underline-position: under;
 
   &:hover {
     color: var(--primary-dark-color, #003484);
