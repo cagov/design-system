@@ -1,4 +1,4 @@
-import { puppeteerLauncher } from '@web/test-runner-puppeteer';
+import { puppeteerLauncher } from '@web/test-runner-playwright';
 
 /*
 export default {

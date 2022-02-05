@@ -2,6 +2,10 @@
 
 <a href="https://www.npmjs.com/package/@cagov/ds-accordion">https://www.npmjs.com/package/@cagov/ds-accordion</a>
 
+## 2.0.0
+* Rewrite to use the details element which expands and collapses without requiring javascript. The javascript remains only for the animation. This radically improves progressive enhancement while reducing code size. 
+* Make use of :defined to enhance design styles. This is available after the custom element's javascript has been executed.
+
 ## 1.0.9
 * Add prepublish hook which writes latest sample HTML into readme from template.html
 * Update description to match latest design system docs
