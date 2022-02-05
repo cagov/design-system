@@ -35,18 +35,12 @@ Do not use page alerts to simply highlight important content. They are for infor
 
 ## Demo and sample markup
 
-<html-preview>
-
-```html preview
+```html preview reset
 <cagov-page-alert
   data-icon="ca-gov-icon-bell"
   data-message='Notice: DCC is soliciting proposals for the Local Jurisdiction Assistance Grant Program. <a href="#">Learn more</a>.'
 ></cagov-page-alert>
-
-
 ```
-
-</html-preview>
 
 ## Specs
 
