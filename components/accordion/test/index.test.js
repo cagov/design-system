@@ -15,15 +15,11 @@ describe('CAGOV Accordion', function unitTest() {
     const startHTML = await response.text();
     const el = await fixture(`<div>${startHTML}</div>`); // use a prent div because referring to el.querySelector below
 
-    expect(
-      el.querySelector('details').hasAttribute('open'),
-    ).to.equal(false);
+    expect(el.querySelector('details').hasAttribute('open')).to.equal(false);
 
     el.querySelector('summary').click();
 
-    expect(
-      el.querySelector('details').hasAttribute('open'),
-    ).to.equal(true);
+    expect(el.querySelector('details').hasAttribute('open')).to.equal(true);
 
     await expect(el).to.be.accessible();
   });
