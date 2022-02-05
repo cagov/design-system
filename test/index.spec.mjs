@@ -6,7 +6,7 @@ import {
 
 let testLocation = "http://localhost:8080";
 
-let pageUrls = ["/", "/get-started/","/components/","/components/content-navigation/readme/"];
+let pageUrls = ["/", "/get-started/","/components/","/components/page-navigation/readme/"];
 
 pageUrls.forEach(pageUrl => {
 
