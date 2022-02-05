@@ -1,0 +1,24 @@
+name: Eleventy PR Validation
+on:
+  pull_request:
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: n1hility/cancel-previous-runs@v2
+        with: 
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@master
+      - name: Use Node.js 16.13.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13.1
+      - name: Build Site
+        run: |
+          npm install
+          ROOT=https://designsystem.webstandards.ca.gov npm run site:build
+      - name: Run site accessibility tests
+        run: |
+          npm run test:setup
+          npm run test:site
