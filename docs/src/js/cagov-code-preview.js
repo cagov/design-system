@@ -21,7 +21,7 @@ class CaGovCodePreview extends window.HTMLElement {
       button.addEventListener('click', () => {
         this.demo.innerHTML = this.originalCode;
       });
-      
+
       this.root.prepend(button);
     }
   }
