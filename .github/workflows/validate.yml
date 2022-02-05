@@ -1,4 +1,4 @@
-name: Eleventy PR Validation
+name: Accessibility test PR validation
 on:
   pull_request:
 
