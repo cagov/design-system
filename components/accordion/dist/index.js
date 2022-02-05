@@ -1,22 +1,14 @@
-var styles =
-  '/* accordion component specific classes */\ncagov-accordion .cagov-accordion-card {\n  border-radius: 0.3rem !important;\n  margin-bottom: 0;\n  min-height: 3rem;\n  margin-top: 0.5rem;\n  border: solid 1px #ededef !important;\n}\n\ncagov-accordion .accordion-card-container {\n  display: block;\n  overflow: hidden;\n}\n\ncagov-accordion button.accordion-card-header {\n  display: flex;\n  justify-content: left;\n  align-items: center;\n  padding: 0 0 0 1rem;\n  background-clip: border-box;\n  background-color: #ededef;\n  border: none;\n  position: relative;\n  width: 100%;\n  line-height: 3rem;\n}\n\ncagov-accordion.prog-enhanced button.accordion-card-header {\n  cursor: pointer;\n}\n\ncagov-accordion .accordion-title {\n  text-align: left;\n  margin-bottom: 0;\n  color: var(--primary-color, #064e66);\n  margin-right: auto;\n  width: 90%;\n  padding: 0 0.5rem 0 0 !important;\n  font-size: 1.125rem;\n  font-weight: bold;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container {\n  height: 0px;\n  transition: height 0.3s ease;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container .card-body {\n  padding-left: 1rem;\n  margin-top: 8px;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container .card-body ul {\n  margin-left: 16px;\n  margin-right: 16px;\n}\n\ncagov-accordion .collapsed {\n  display: block;\n  overflow: hidden;\n  visibility: hidden;\n}\n\n.accordion-title h4,\n.accordion-title h3,\n.accordion-title h2 {\n  padding: 0 !important;\n  margin-top: 0 !important;\n  margin-bottom: 0 !important;\n  font-size: 1.2rem !important;\n  font-weight: 700;\n  color: var(--primary-color, #064e66);\n  text-align: left !important;\n}\n\nbutton.accordion-card-header:hover {\n  background-color: var(--hover-color, #f9f9fa);\n}\n\nbutton.accordion-card-header:hover .accordion-title {\n  text-decoration: underline;\n}\n\nbutton.accordion-card-header:hover .accordion-title:hover {\n  text-decoration: underline;\n}\n\nbutton.accordion-card-header:focus {\n  outline-offset: -2px;\n}\n\n.accordion-icon svg line {\n  stroke-width: 4px;\n}\n\ncagov-accordion.prog-enhanced .accordion-alpha .plus-minus {\n  width: 2.125rem;\n  height: 2.125rem;\n  border: none;\n  overflow: hidden;\n  margin-left: 1rem;\n  color: var(--primary-color, #064e66);\n  align-self: flex-start;\n  margin-top: 8px;\n}\n\n.prog-enhanced .accordion-alpha .plus-minus svg {\n  fill: var(--primary-color, #064e66);\n  width: 25px;\n  height: 25px;\n}\n\n.prog-enhanced .accordion-alpha-open cagov-plus .accordion-icon {\n  display: none !important;\n}\n\n.prog-enhanced .accordion-alpha-open cagov-minus .accordion-icon {\n  display: block !important;\n}\n\n@media only screen and (max-width: 767px) {\n  .accordion-alpha-open + .accordion-card-container {\n    height: 100% !important;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+var styles = "/* v3 styles: new section */\ncagov-accordion details {\n  border-radius: 0.3rem !important;\n  margin-bottom: 0;\n  min-height: 3rem;\n  margin-top: 0.5rem;\n  border: solid 1px #ededef !important;\n}\n\ncagov-accordion:defined details {\n  transition: height 0.2s;\n  height: 3rem;\n  overflow: hidden;\n}\n\n/* let it be open initially if details has open attribute */\ncagov-accordion:defined details[open] {\n  height: auto;\n}\n\ncagov-accordion:defined summary::-webkit-details-marker {\n  display: none;\n}\n\ndetails summary {\n  cursor: pointer;\n  padding: 0 0 0 1rem;\n  background-color: #ededef;\n  position: relative;\n  line-height: 3rem;\n  margin: 0;\n  color: var(--primary-color, #064e66);\n  font-size: 1.125rem;\n  font-weight: bold;\n}\n\ncagov-accordion:defined details summary {\n  list-style: none;\n  /* hide default expansion triangle after js executes */\n  border-radius: 5px 5px 0 0;\n}\n\ncagov-accordion:defined details summary:focus {\n  outline-offset: -2px;\n  outline: solid 2px var(--highlight-color, #fbad23) !important;\n}\n\ndetails .accordion-body {\n  padding: 0 0 1rem 1rem;\n}\n\ncagov-accordion:defined details .cagov-open-indicator {\n  background-color: var(--primary-color, #064e66);\n  height: 6px;\n  width: 26px;\n  border-radius: 3px;\n  position: absolute;\n  right: 1rem;\n  top: 1.2rem;\n}\n\ncagov-accordion:defined details .cagov-open-indicator:before {\n  display: block;\n  content: \"\";\n  position: absolute;\n  top: 4px;\n  left: 5px;\n  width: 2px;\n  height: 22px;\n  border-radius: 3px;\n  border: none;\n  box-shadow: 7px -12px 0 2px var(--primary-color, #064e66);\n  background: none;\n}\n\ncagov-accordion:defined details[open] .cagov-open-indicator:before {\n  display: none;\n}\n\n/* legacy */\n/* accordion component specific classes */\ncagov-accordion .cagov-accordion-card {\n  border-radius: 0.3rem !important;\n  margin-bottom: 0;\n  min-height: 3rem;\n  margin-top: 0.5rem;\n  border: solid 1px #ededef !important;\n}\n\ncagov-accordion .accordion-title {\n  text-align: left;\n  margin-bottom: 0;\n  color: var(--primary-color, #064e66);\n  margin-right: auto;\n  width: 90%;\n  padding: 0 0.5rem 0 0 !important;\n  font-size: 1.125rem;\n  font-weight: bold;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container {\n  height: 0px;\n  transition: height 0.3s ease;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container .card-body {\n  padding-left: 1rem;\n  margin-top: 8px;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container .card-body ul {\n  margin-left: 16px;\n  margin-right: 16px;\n}\n\n.accordion-title h4,\n.accordion-title h3,\n.accordion-title h2 {\n  padding: 0 !important;\n  margin-top: 0 !important;\n  margin-bottom: 0 !important;\n  font-size: 1.2rem !important;\n  font-weight: 700;\n  color: var(--primary-color, #064e66);\n  text-align: left !important;\n}\n\nbutton.accordion-card-header:hover {\n  background-color: var(--hover-color, #f9f9fa);\n}\n\nbutton.accordion-card-header:hover .accordion-title {\n  text-decoration: underline;\n}\n\nbutton.accordion-card-header:hover .accordion-title:hover {\n  text-decoration: underline;\n}\n\nbutton.accordion-card-header:focus {\n  outline-offset: -2px;\n}\n\n@media only screen and (max-width: 767px) {\n  .accordion-alpha-open + .accordion-card-container {\n    height: 100% !important;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n";
 
 /**
  * Accordion web component that collapses and expands content inside itself on click.
  *
  * @element cagov-accordion
  *
- * @prop {class string} prog-enhanced -
- * The element is open before any javascript executes so content
- * can be read if an error occurs that prevents js execution.
- * The prog-enhanced class is added to the element once javascript
- * begins to execute. This triggers default collabsed state.
  *
- * @fires click - Default value, will be defined by this.dataset.eventType.
+ * @fires click - Default events which may be listened to in order to discover most popular accordions
  *
- * @attr {string} [data-event-type=click] - dataset defined value for event type fired on click.
- * @attr {string} aria=expanded=true -
- * set on the internal element .accordion-card-header.
+ * @attr {string} open - set on the internal details element
  * If this is true the accordion will be open before any user interaction.
  *
  * @cssprop --primary-color - Default value of #1f2574, used for all colors of borders and fills
@@ -25,107 +17,38 @@ var styles =
  */
 class CaGovAccordion extends window.HTMLElement {
   connectedCallback() {
-    this.classList.add('prog-enhanced');
-    this.expandTarget = this.querySelector('.accordion-card-container');
-    this.expandButton = this.querySelector('.accordion-card-header');
-    if (this.expandButton) {
-      this.expandButton.addEventListener('click', this.listen.bind(this));
-    }
-    this.activateButton = this.querySelector('.accordion-card-header');
-    this.eventType = this.dataset.eventType ? this.dataset.eventType : 'click';
-
-    // Detect if accordion should open by default
-    const expanded = this.activateButton.getAttribute('aria-expanded');
-    if (expanded === 'true') {
-      this.triggerAccordionClick(); // Open the accordion.
-      const allLinks = this.querySelectorAll('.accordion-card-container a');
-      const allbuttons = this.querySelectorAll(
-        '.accordion-card-container button',
-      );
-      for (let i = 0; i < allLinks.length; i += 1) {
-        allLinks[i].removeAttribute('tabindex'); // remove tabindex from all the links
-      }
-      for (let i = 0; i < allbuttons.length; i += 1) {
-        allbuttons[i].removeAttribute('tabindex'); // remove tabindex from all the buttons
-      }
+    this.summaryEl = this.querySelector('summary');
+    // trigger the opening and closing height change animation on summary click
+    this.summaryEl.addEventListener('click',this.listen.bind(this));
+    this.summaryEl.insertAdjacentHTML('beforeend',`<div class="cagov-open-indicator" aria-hidden="true" />`);
+                       
+    this.detailsEl = this.querySelector('details');
+    this.bodyEl = this.parentNode.querySelector('.accordion-body');
+    // apply initial height
+    if(this.detailsEl.hasAttribute('open')) {
+      // if open get scrollHeight
+      this.detailsEl.style.height = `${parseInt(this.bodyEl.scrollHeight + 48, 10)}px`;
     } else {
-      // making sure that all links inside of the accordion container are having tabindex -1
-      const allLinks = this.querySelectorAll('.accordion-card-container a');
-      const allbuttons = this.querySelectorAll(
-        '.accordion-card-container button',
-      );
-      for (let i = 0; i < allLinks.length; i += 1) {
-        allLinks[i].setAttribute('tabindex', '-1');
-      }
-
-      for (let i = 0; i < allbuttons.length; i += 1) {
-        allbuttons[i].setAttribute('tabindex', '-1');
-      }
+      // else apply 3.1rem
+      this.detailsEl.style.height = `3.1rem`;
     }
   }
-
+  
   listen() {
-    if (!this.cardBodyHeight) {
-      this.cardBodyHeight = this.querySelector('.card-body').clientHeight + 24;
-    }
-    if (this.expandTarget.clientHeight > 0) {
-      this.closeAccordion();
+    if(this.detailsEl.hasAttribute('open')){
+      // was open, now closing
+      this.detailsEl.style.height = `3.1rem`;
     } else {
-      this.expandAccordion();
-    }
-  }
-
-  triggerAccordionClick() {
-    const event = new MouseEvent(this.eventType, {
-      view: window,
-      bubbles: true,
-      cancelable: true,
-    });
-    this.expandButton.dispatchEvent(event);
-  }
-
-  closeAccordion() {
-    this.expandTarget.style.height = '0px';
-    this.expandTarget.setAttribute('aria-hidden', 'true');
-    this.querySelector('.accordion-card-header').classList.remove(
-      'accordion-alpha-open',
-    );
-    this.activateButton.setAttribute('aria-expanded', 'false');
-    const allLinks = this.querySelectorAll('.accordion-card-container a');
-    const allbuttons = this.querySelectorAll(
-      '.accordion-card-container button',
-    );
-    for (let i = 0; i < allLinks.length; i += 1) {
-      allLinks[i].setAttribute('tabindex', '-1'); // tabindex to all links
-    }
-    for (let i = 0; i < allbuttons.length; i += 1) {
-      allbuttons[i].setAttribute('tabindex', '-1'); // tabindex to all buttons
-    }
-  }
-
-  expandAccordion() {
-    this.expandTarget.style.height = `${this.cardBodyHeight}px`;
-    this.expandTarget.setAttribute('aria-hidden', 'false');
-    this.querySelector('.accordion-card-header').classList.add(
-      'accordion-alpha-open',
-    );
-    this.querySelector('.accordion-card-container').classList.remove(
-      'collapsed',
-    );
-    this.activateButton.setAttribute('aria-expanded', 'true');
-    const allLinks = this.querySelectorAll('.accordion-card-container a');
-    const allbuttons = this.querySelectorAll(
-      '.accordion-card-container button',
-    );
-    for (let i = 0; i < allLinks.length; i += 1) {
-      allLinks[i].removeAttribute('tabindex'); // remove tabindex from all the links
-    }
-    for (let i = 0; i < allbuttons.length; i += 1) {
-      allbuttons[i].removeAttribute('tabindex'); // remove tabindex from all the buttons
+      // was closed, opening
+      requestAnimationFrame(() => { // delay so the desired height is readable in all browsers
+        console.log(this.bodyEl.scrollHeight);    
+        this.detailsEl.style.height = `${parseInt(this.bodyEl.scrollHeight + 48, 10)}px`;
+      });
     }
   }
 }
 window.customElements.define('cagov-accordion', CaGovAccordion);
+
 const style = document.createElement('style');
 style.textContent = styles;
 document.querySelector('head').appendChild(style);
