@@ -26,16 +26,16 @@ Do not combine the statewide header with depatment name or logo, navigation, or 
 ```html preview
 <div class="official-header">
   <div class="container">
+    <a href="https://ca.gov" title="ca.gov logo" target="_blank">
     <div class="official-logo">
-      <svg
-        title="ca.gov logo"
+      <svg aria-hidden=”true”
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px"
         y="0px"
-        width="44px"
-        height="34px"
+        width="33px"
+        height="24px"
         viewBox="0 0 44 34"
         style="enable-background:new 0 0 44 34;"
         xml:space="preserve"
@@ -80,6 +80,7 @@ Do not combine the statewide header with depatment name or logo, navigation, or 
           />
         </g>
       </svg>
+      </a>
       <p class="official-tag">
         <span class="desktop-only">Official website of the</span> State of
         California
