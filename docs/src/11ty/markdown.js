@@ -15,7 +15,7 @@ const md = markdownIt({
  * @returns {String} HTML
  */
 const preWrap = (hljsHtml) =>
-  `<pre><code class="hljs">${hljsHtml}</code></pre>`;
+  `<pre><code tabindex="0" class="hljs">${hljsHtml}</code></pre>`;
 
 /**
  * Displays the code block's language alongside the code.

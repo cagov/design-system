@@ -67,7 +67,7 @@
 <body>
   <div id="skip-to-content"><a href="#body-content">Skip to content</a></div>
 
-  <div class="header-container">
+  <header class="header-container">
     {% block statewideHeader %}
       {% include "statewide-header.njk" %}
     {% endblock %}
@@ -79,7 +79,7 @@
     {% block siteNavigation %}
       {% include "site-navigation.njk" %}
     {% endblock %}
-  </div>
+  </header>
 
   {% block content %}
     {{ content | safe }}
