@@ -1,7 +1,12 @@
 # Statewide footer changelog
 
+<<<<<<< HEAD
 ## 1.0.7 
 * Added aria-hidden attribute to CA.gov svg icon, so it is hidden from assistive technologies.
+=======
+# 1.0.8 
+* Updated copyright positioning. Changed ca.gov icon width to 33px to mach figma prototype. Removed link icons from the footer links.
+>>>>>>> 595698f067f39ab88a0e6e9f8f3b840d0f53cffd
 
 ## 1.0.6 
 * Aligned copyright line to container end with with new class, also added to sample markup

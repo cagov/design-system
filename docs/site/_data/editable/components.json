@@ -1,34 +1,34 @@
 {
-  "feedback": {
+  "page-feedback": {
     "name": "Page feedback",
     "title": "Page feedback",
     "type": "structural",
     "status": "Alpha",
     "blurb": "Widget that lets people provide feedback on page content",
     "description": "Details about the page feedback component, including how to use it and the steps to install it.",
-    "slug": "feedback",
+    "slug": "page-feedback",
     "icon": "/illustrations/png/page-feedback.png",
     "svg": "svg/page-feedback.svg"
   },
-  "agency-footer": {
+  "site-footer": {
     "name": "Site footer",
     "title": "Site footer",
     "type": "structural",
     "status": "Alpha",
     "blurb": "Customizable links and social media icons at the bottom of all pages",
     "description": "Details about the site footer component, including how to use it and the steps to install it.",
-    "slug": "agency-footer",
+    "slug": "site-footer",
     "icon": "/illustrations/png/site-footer.png",
     "svg": "svg/site-footer.svg"
   },
-  "branding": {
+  "site-header": {
     "name": "Site header",
     "title": "Site header",
     "type": "structural",
     "status": "Alpha",
     "blurb": "The site name and logo with an optional search bar at the top of all pages",
     "description": "Details about the site header component, including how to use it and the steps to install it.",
-    "slug": "branding",
+    "slug": "site-header",
     "icon": "/illustrations/png/site-header.png",
     "svg": "svg/site-header.svg"
   },
@@ -76,14 +76,14 @@
     "icon": "/illustrations/png/link-icon.png",
     "svg": "svg/link-icon.svg"
   },
-  "content-navigation": {
+  "page-navigation": {
     "name": "Page navigation",
     "title": "Page navigation",
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Links on the left side of a page that go directly to major sections of a page",
     "description": "Details about the page navigation component, including how to use it and the steps to install it.",
-    "slug": "content-navigation",
+    "slug": "page-navigation",
     "icon": "/illustrations/png/page-navigation.png",
     "svg": "svg/page-navigation.svg"
   },
@@ -98,14 +98,14 @@
     "icon": "/illustrations/png/pagination.png",
     "svg": "svg/pagination.svg"
   },
-  "menu": {
+  "site-navigation": {
     "name": "Site navigation",
     "title": "Site navigation",
     "type": "navigation",
     "status": "Alpha",
     "blurb": "Links and dropdown menus at the top of every page that let people move around the site",
     "description": "Details about the site navigation component, including how to use it and the steps to install it.",
-    "slug": "menu",
+    "slug": "site-navigation",
     "icon": "/illustrations/png/site-navigation.png",
     "svg": "svg/site-navigation.svg"
   },
@@ -153,14 +153,14 @@
     "icon": "/illustrations/png/feature-card.png",
     "svg": "svg/feature-card.svg"
   },
-  "button-grid": {
+  "link-grid": {
     "name": "Link grid",
     "title": "Link grid",
     "type": "content",
     "status": "Alpha",
     "blurb": "Grid of call-to-action buttons for top user tasks and needs",
     "description": "Details about the link grid component, including how to use it and the steps to install it.",
-    "slug": "button-grid",
+    "slug": "link-grid",
     "icon": "/illustrations/png/link-grid.png",
     "svg": "svg/link-grid.svg"
   },
