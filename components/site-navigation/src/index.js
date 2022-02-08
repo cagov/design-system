@@ -109,7 +109,6 @@ class CAGovSiteNavigation extends window.HTMLElement {
       // reset navigation on resize
       this.closeAllMenus();
       this.closeMainMenu();
-
     });
 
     this.expansionListeners();
