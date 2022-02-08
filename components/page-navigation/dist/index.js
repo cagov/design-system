@@ -1,5 +1,4 @@
-var styles =
-  '/* PAGE NAVIGATION */\nsidebar cagov-page-navigation .label {\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28.2px;\n  padding: 0;\n  margin: 0;\n  padding-bottom: 16px;\n}\n\nsidebar cagov-page-navigation ul,\nsidebar cagov-page-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),\nsidebar cagov-page-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {\n  margin: 0;\n  text-indent: 0;\n  padding: 0;\n}\n\nsidebar cagov-page-navigation ul li {\n  padding-top: 14px;\n  padding-bottom: 18px;\n  margin-left: 0;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  border-bottom: 1px solid var(--gray-300, #e1e0e3);\n  line-height: 28.2px;\n  list-style: none;\n}\nsidebar cagov-page-navigation ul li:first-child {\n  border-top: 1px solid var(--gray-300, #e1e0e3);\n}\nsidebar cagov-page-navigation ul li a {\n  text-decoration: none;\n}\nsidebar cagov-page-navigation ul li a:hover {\n  text-decoration: underline;\n}\n\n@media only screen and (max-width: 992px) {\n  cagov-page-navigation .label {\n    display: none;\n  }\n\n  .sidebar-container {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n  }\n\n  cagov-page-navigation ul li a {\n    font-size: 16px;\n    line-height: 24px;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+var styles = "/* PAGE NAVIGATION */\ncagov-page-navigation .label {\n  font-weight: var(--font-weight-7);\n  font-size: var(--font-size-4);\n  line-height: var(--font-lineheight-3);\n  padding: 0;\n  margin: 0;\n  padding-bottom: var(--s-2);\n}\n\ncagov-page-navigation ul,\ncagov-page-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),\ncagov-page-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {\n  margin: 0;\n  text-indent: 0;\n  padding: 0;\n}\n\ncagov-page-navigation nav {\n  margin-bottom: var(--s-3);\n}\ncagov-page-navigation nav ul li {\n  padding-top: var(--s-2);\n  padding-bottom: var(--s-2);\n  margin-left: 0;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  border-bottom: 1px solid var(--gray-300, #e1e0e3);\n  line-height: var(--font-lineheight-3);\n  list-style: none;\n}\ncagov-page-navigation nav ul li:first-child {\n  border-top: 1px solid var(--gray-300, #e1e0e3);\n}\ncagov-page-navigation nav ul li a {\n  text-decoration: none;\n}\ncagov-page-navigation nav ul li a:hover {\n  text-decoration: underline;\n}\n\n@media only screen and (max-width: 992px) {\n  cagov-page-navigation .label {\n    display: none;\n  }\n\n  .sidebar-container {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n  }\n\n  cagov-page-navigation ul li a {\n    font-size: var(--font-size-1);\n    line-height: var(--font-lineheight-3);\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n";
 
 /**
  * Page Navigation web component
@@ -43,59 +42,59 @@ class CAGovPageNavigation extends window.HTMLElement {
               : Date.now;
           var c =
             ((l = o.navigator.userAgent),
-            new RegExp(['MSIE ', 'Trident/', 'Edge/'].join('|')).test(l)
-              ? 1
-              : 0);
+              new RegExp(['MSIE ', 'Trident/', 'Edge/'].join('|')).test(l)
+                ? 1
+                : 0);
           (o.scroll = o.scrollTo =
             function () {
               void 0 !== arguments[0] &&
                 (!0 !== f(arguments[0])
                   ? h.call(
-                      o,
-                      t.body,
-                      void 0 !== arguments[0].left
-                        ? ~~arguments[0].left
-                        : o.scrollX || o.pageXOffset,
-                      void 0 !== arguments[0].top
-                        ? ~~arguments[0].top
-                        : o.scrollY || o.pageYOffset,
-                    )
+                    o,
+                    t.body,
+                    void 0 !== arguments[0].left
+                      ? ~~arguments[0].left
+                      : o.scrollX || o.pageXOffset,
+                    void 0 !== arguments[0].top
+                      ? ~~arguments[0].top
+                      : o.scrollY || o.pageYOffset,
+                  )
                   : i.scroll.call(
-                      o,
-                      void 0 !== arguments[0].left
-                        ? arguments[0].left
-                        : typeof arguments[0] !== 'object'
+                    o,
+                    void 0 !== arguments[0].left
+                      ? arguments[0].left
+                      : typeof arguments[0] !== 'object'
                         ? arguments[0]
                         : o.scrollX || o.pageXOffset,
-                      void 0 !== arguments[0].top
-                        ? arguments[0].top
-                        : void 0 !== arguments[1]
+                    void 0 !== arguments[0].top
+                      ? arguments[0].top
+                      : void 0 !== arguments[1]
                         ? arguments[1]
                         : o.scrollY || o.pageYOffset,
-                    ));
+                  ));
             }),
             (o.scrollBy = function () {
               void 0 !== arguments[0] &&
                 (f(arguments[0])
                   ? i.scrollBy.call(
-                      o,
-                      void 0 !== arguments[0].left
-                        ? arguments[0].left
-                        : typeof arguments[0] !== 'object'
+                    o,
+                    void 0 !== arguments[0].left
+                      ? arguments[0].left
+                      : typeof arguments[0] !== 'object'
                         ? arguments[0]
                         : 0,
-                      void 0 !== arguments[0].top
-                        ? arguments[0].top
-                        : void 0 !== arguments[1]
+                    void 0 !== arguments[0].top
+                      ? arguments[0].top
+                      : void 0 !== arguments[1]
                         ? arguments[1]
                         : 0,
-                    )
+                  )
                   : h.call(
-                      o,
-                      t.body,
-                      ~~arguments[0].left + (o.scrollX || o.pageXOffset),
-                      ~~arguments[0].top + (o.scrollY || o.pageYOffset),
-                    ));
+                    o,
+                    t.body,
+                    ~~arguments[0].left + (o.scrollX || o.pageXOffset),
+                    ~~arguments[0].top + (o.scrollY || o.pageYOffset),
+                  ));
             }),
             (e.prototype.scroll = e.prototype.scrollTo =
               function () {
@@ -120,13 +119,13 @@ class CAGovPageNavigation extends window.HTMLElement {
                       void 0 !== arguments[0].left
                         ? ~~arguments[0].left
                         : typeof arguments[0] !== 'object'
-                        ? ~~arguments[0]
-                        : this.scrollLeft,
+                          ? ~~arguments[0]
+                          : this.scrollLeft,
                       void 0 !== arguments[0].top
                         ? ~~arguments[0].top
                         : void 0 !== arguments[1]
-                        ? ~~arguments[1]
-                        : this.scrollTop,
+                          ? ~~arguments[1]
+                          : this.scrollTop,
                     );
                   }
               }),
@@ -134,19 +133,19 @@ class CAGovPageNavigation extends window.HTMLElement {
               void 0 !== arguments[0] &&
                 (!0 !== f(arguments[0])
                   ? this.scroll({
-                      left: ~~arguments[0].left + this.scrollLeft,
-                      top: ~~arguments[0].top + this.scrollTop,
-                      behavior: arguments[0].behavior,
-                    })
+                    left: ~~arguments[0].left + this.scrollLeft,
+                    top: ~~arguments[0].top + this.scrollTop,
+                    behavior: arguments[0].behavior,
+                  })
                   : i.elementScroll.call(
-                      this,
-                      void 0 !== arguments[0].left
-                        ? ~~arguments[0].left + this.scrollLeft
-                        : ~~arguments[0] + this.scrollLeft,
-                      void 0 !== arguments[0].top
-                        ? ~~arguments[0].top + this.scrollTop
-                        : ~~arguments[1] + this.scrollTop,
-                    ));
+                    this,
+                    void 0 !== arguments[0].left
+                      ? ~~arguments[0].left + this.scrollLeft
+                      : ~~arguments[0] + this.scrollLeft,
+                    void 0 !== arguments[0].top
+                      ? ~~arguments[0].top + this.scrollTop
+                      : ~~arguments[1] + this.scrollTop,
+                  ));
             }),
             (e.prototype.scrollIntoView = function () {
               if (!0 !== f(arguments[0])) {
@@ -155,7 +154,7 @@ class CAGovPageNavigation extends window.HTMLElement {
                     ;
                     o !== t.body &&
                     !1 ===
-                      ((e = p((l = o), 'Y') && a(l, 'Y')),
+                    ((e = p((l = o), 'Y') && a(l, 'Y')),
                       (r = p(l, 'X') && a(l, 'X')),
                       e || r);
 
@@ -170,22 +169,22 @@ class CAGovPageNavigation extends window.HTMLElement {
                 const r = this.getBoundingClientRect();
                 l !== t.body
                   ? (h.call(
-                      this,
-                      l,
-                      l.scrollLeft + r.left - e.left,
-                      l.scrollTop + r.top - e.top,
-                    ),
+                    this,
+                    l,
+                    l.scrollLeft + r.left - e.left,
+                    l.scrollTop + r.top - e.top,
+                  ),
                     o.getComputedStyle(l).position !== 'fixed' &&
-                      o.scrollBy({
-                        left: e.left,
-                        top: e.top,
-                        behavior: 'smooth',
-                      }))
-                  : o.scrollBy({
-                      left: r.left,
-                      top: r.top,
+                    o.scrollBy({
+                      left: e.left,
+                      top: e.top,
                       behavior: 'smooth',
-                    });
+                    }))
+                  : o.scrollBy({
+                    left: r.left,
+                    top: r.top,
+                    behavior: 'smooth',
+                  });
               } else
                 i.scrollIntoView.call(
                   this,
@@ -214,8 +213,8 @@ class CAGovPageNavigation extends window.HTMLElement {
           return t === 'Y'
             ? o.clientHeight + c < o.scrollHeight
             : t === 'X'
-            ? o.clientWidth + c < o.scrollWidth
-            : void 0;
+              ? o.clientWidth + c < o.scrollWidth
+              : void 0;
         }
         function a(t, l) {
           const e = o.getComputedStyle(t, null)[`overflow${l}`];
@@ -412,7 +411,7 @@ document.querySelector('head').appendChild(style);
 
 // Function determining if it's mobile view (max 767px)
 function mobileView() {
-  const mobileElement = document.querySelector('.branding .grid-mobile-icons');
+  const mobileElement = document.querySelector('.site-header .grid-mobile-icons');
   if (mobileElement) {
     return getComputedStyle(mobileElement).display !== 'none';
   }
@@ -422,11 +421,29 @@ function mobileView() {
 function insertAfter(referenceNode, newNode) {
   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
+
+function insertBefore(el, referenceNode) {
+  referenceNode.parentNode.insertBefore(el, referenceNode);
+}
 const contentnav = document.querySelector('.sidebar-container');
 const h1Header = document.querySelector('h1');
+const contentLayout = document.querySelector('.main-content');
 
 if (mobileView()) {
   if (contentnav && h1Header) {
     insertAfter(h1Header, contentnav);
   }
 }
+
+function changeOrder() {
+  if (mobileView()) {
+    if (h1Header && contentnav) {
+      insertAfter(h1Header, contentnav);
+    }
+  } else if (contentnav && contentLayout) {
+    insertBefore(contentnav, contentLayout);
+  }
+}
+
+// reset semantic order on resize
+window.addEventListener('resize', changeOrder);

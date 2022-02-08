@@ -1,5 +1,9 @@
 # Page navigation changelog
 
+## 2.1.1
+* Added --s-3 (24px) margin button to nav element. Made sure navigation is changing semantic order on resize.
+* Removed sidebar selector from the scss since custom component should be enough for identification.
+
 ## 2.1.0
 * Renamed package from `ds-content-navigation` to `ds-page-navigation`.
 * Renamed custom element name from `<cagov-content-navigation>` to `<cagov-page-navigation>`.
