@@ -1,5 +1,7 @@
 # Site navigation changelog
 
+## 2.1.1
+* Reset navigation on resize.
 ## 2.1.0
 * Renamed package from `ds-dropdown-menu` to `ds-site-navigation`.
 * Changed name of custom element to `<cagov-site-navigation>`.
