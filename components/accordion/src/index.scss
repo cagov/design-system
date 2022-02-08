@@ -1,74 +1,78 @@
-/* v3 styles: new section */
+/* initial styles */
 cagov-accordion details {
   border-radius: var(--radius-2, 5px) !important;
 	margin-bottom: 0;
 	min-height: var(--s-5, 3rem);
 	margin-top: 0.5rem;
-	border: solid var(--border-1, 1px)var(--gray-200, #ededef) !important;
+	border: solid var(--border-1, 1px) var(--gray-200, #ededef) !important;
+
+	summary {
+		cursor: pointer;
+		padding: 0 0 0 var(--s-2, 1rem);
+		background-color: var(--gray-200, #ededef);
+		position: relative;
+		line-height: var(--s-5, 3rem);
+		margin: 0;
+		
+		color: var(--primary-color, #064e66);
+		font-size: var(--font-size-2, 1.125rem);
+		font-weight: bold;
+	}
+	.accordion-body {
+  	padding: var(--s-2, 1rem);
+	}
 }
 
-cagov-accordion:defined details {
-  transition: height var(--animation-duration-2, .2s);
-  height: var(--s-5, 3rem);
-  overflow: hidden;
-}
+/* styles applied after custom element javascript runs */
+cagov-accordion:defined {
+	details {
+		transition: height var(--animation-duration-2, .2s);
+		height: var(--s-5, 3rem);
+		overflow: hidden;
+	}
 
-/* let it be open initially if details has open attribute */
-cagov-accordion:defined details[open] {
-  height: auto;
-}
+	/* let it be open initially if details has open attribute */
+	details[open] {
+		height: auto;
+	}
 
-cagov-accordion:defined summary::-webkit-details-marker {display: none; }
+	summary::-webkit-details-marker {display: none; }
 
-details summary {
-  cursor: pointer;
-	padding: 0 0 0 var(--s-2, 1rem);
-	background-color: #ededef;
-	position: relative;
-	line-height: var(--s-5, 3rem);
-  margin: 0;
-  
-  color: var(--primary-color, #064e66);
-  font-size: var(--font-size-2, 1.125rem);
-  font-weight: bold;
-}
+	details summary {
+		list-style: none; /* hide default expansion triangle after js executes */
+		border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;
+	}
 
-cagov-accordion:defined details summary {
-  list-style: none; /* hide default expansion triangle after js executes */
-  border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;
-}
+	details summary:focus {
+		outline-offset: -2px;
+		outline: solid 2px var(--highlight-color,#fbad23)!important;
+	}
 
-cagov-accordion:defined details summary:focus {
-  outline-offset: -2px;
-  outline: solid 2px var(--highlight-color,#fbad23)!important;
-}
+	details .cagov-open-indicator {
+		background-color: var(--primary-color, #064e66);
+		height: 6px;
+		width: 26px;
+		border-radius: var(--border-3, 3px);
+		position: absolute;
+		right: var(--s-2, 1rem);
+		top: 1.2rem;
+	}
 
-details .accordion-body {
-  padding: var(--s-2, 1rem);
-}
+	details .cagov-open-indicator:before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 4px;
+		left: 5px;
+		width: 2px;
+		height: 22px;
+		border-radius: var(--border-3, 3px);
+		border: none;
+		box-shadow: 7px -12px 0 2px var(--primary-color, #064e66);
+		background: none;
+	}
 
-cagov-accordion:defined details .cagov-open-indicator {
-  background-color: var(--primary-color, #064e66);
-  height: 6px;
-  width: 26px;
-  border-radius: var(--border-3, 3px);
-  position: absolute;
-  right: var(--s-2, 1rem);
-  top: 1.2rem;
-}
-cagov-accordion:defined details .cagov-open-indicator:before {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 5px;
-  width: 2px;
-  height: 22px;
-  border-radius: var(--border-3, 3px);
-  border: none;
-  box-shadow: 7px -12px 0 2px var(--primary-color, #064e66);
-	background: none;
-}
-cagov-accordion:defined details[open] .cagov-open-indicator:before {
-  display: none;
+	details[open] .cagov-open-indicator:before {
+		display: none;
+	}
 }
