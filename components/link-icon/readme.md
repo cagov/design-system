@@ -5,13 +5,13 @@ The link icon adds an icon next to links that go:
 - Outside your website (an external link)
 - To a PDF
 
-The external link icon is a box with an arrow pointing to the upper-right corner.
+The external link icon is a box with an arrow pointing to the upper-right corner. For people using a screen reader, it will announce the full URL.
 
-The PDF icon is the letters _PDF_ surrounded by a box outline.
+The PDF icon is the letters _PDF_ surrounded by a box outline. For people using a screen reader, it will announce that the link is a PDF file. 
 
 These icons tell people they are leaving the current website in some way.
 
-In the case of PDF links, this can be important for people on mobile devices. They may not want to open a PDF for various reasons (use up their data, do not want to download a file, etc.). It’s also important for those who use screen readers, as it will announce, “This is a PDF file.”
+Knowing that a link goes a PDF lets people decide if they want to open it. This may be helpful to people using mobile devices with limited data plans.
 
 If a link is both external and a PDF, only the PDF icon will appear. It’s more important to tell people they’re going to a PDF than it is to tell them that it’s not hosted on the same site.
 
