@@ -1,0 +1,21 @@
+{
+  "name": "@cagov/ds-icons",
+  "version": "0.0.1",
+  "description": "A utility component for mangaging icons in the Design System.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "get-font && split-svg && sprite",
+    "get-font": "wget https://template.webstandards.ca.gov/fonts/CaGov.svg --directory-prefix=src/original",
+    "split-svg": "font-blast src/original/CaGov.svg dist",
+    "sprite": "svg-sprite-generate -d dist/svg -o dist/allicons.svg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/tree/main/components/icons"
+  },
+  "devDependencies": {
+    "font-blast": "^0.7.0",
+    "svg-sprite-generator": "^0.0.7"
+  }
+}
