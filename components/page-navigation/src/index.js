@@ -42,59 +42,59 @@ class CAGovPageNavigation extends window.HTMLElement {
               : Date.now;
           var c =
             ((l = o.navigator.userAgent),
-              new RegExp(['MSIE ', 'Trident/', 'Edge/'].join('|')).test(l)
-                ? 1
-                : 0);
+            new RegExp(['MSIE ', 'Trident/', 'Edge/'].join('|')).test(l)
+              ? 1
+              : 0);
           (o.scroll = o.scrollTo =
             function () {
               void 0 !== arguments[0] &&
                 (!0 !== f(arguments[0])
                   ? h.call(
-                    o,
-                    t.body,
-                    void 0 !== arguments[0].left
-                      ? ~~arguments[0].left
-                      : o.scrollX || o.pageXOffset,
-                    void 0 !== arguments[0].top
-                      ? ~~arguments[0].top
-                      : o.scrollY || o.pageYOffset,
-                  )
+                      o,
+                      t.body,
+                      void 0 !== arguments[0].left
+                        ? ~~arguments[0].left
+                        : o.scrollX || o.pageXOffset,
+                      void 0 !== arguments[0].top
+                        ? ~~arguments[0].top
+                        : o.scrollY || o.pageYOffset,
+                    )
                   : i.scroll.call(
-                    o,
-                    void 0 !== arguments[0].left
-                      ? arguments[0].left
-                      : typeof arguments[0] !== 'object'
+                      o,
+                      void 0 !== arguments[0].left
+                        ? arguments[0].left
+                        : typeof arguments[0] !== 'object'
                         ? arguments[0]
                         : o.scrollX || o.pageXOffset,
-                    void 0 !== arguments[0].top
-                      ? arguments[0].top
-                      : void 0 !== arguments[1]
+                      void 0 !== arguments[0].top
+                        ? arguments[0].top
+                        : void 0 !== arguments[1]
                         ? arguments[1]
                         : o.scrollY || o.pageYOffset,
-                  ));
+                    ));
             }),
             (o.scrollBy = function () {
               void 0 !== arguments[0] &&
                 (f(arguments[0])
                   ? i.scrollBy.call(
-                    o,
-                    void 0 !== arguments[0].left
-                      ? arguments[0].left
-                      : typeof arguments[0] !== 'object'
+                      o,
+                      void 0 !== arguments[0].left
+                        ? arguments[0].left
+                        : typeof arguments[0] !== 'object'
                         ? arguments[0]
                         : 0,
-                    void 0 !== arguments[0].top
-                      ? arguments[0].top
-                      : void 0 !== arguments[1]
+                      void 0 !== arguments[0].top
+                        ? arguments[0].top
+                        : void 0 !== arguments[1]
                         ? arguments[1]
                         : 0,
-                  )
+                    )
                   : h.call(
-                    o,
-                    t.body,
-                    ~~arguments[0].left + (o.scrollX || o.pageXOffset),
-                    ~~arguments[0].top + (o.scrollY || o.pageYOffset),
-                  ));
+                      o,
+                      t.body,
+                      ~~arguments[0].left + (o.scrollX || o.pageXOffset),
+                      ~~arguments[0].top + (o.scrollY || o.pageYOffset),
+                    ));
             }),
             (e.prototype.scroll = e.prototype.scrollTo =
               function () {
@@ -119,13 +119,13 @@ class CAGovPageNavigation extends window.HTMLElement {
                       void 0 !== arguments[0].left
                         ? ~~arguments[0].left
                         : typeof arguments[0] !== 'object'
-                          ? ~~arguments[0]
-                          : this.scrollLeft,
+                        ? ~~arguments[0]
+                        : this.scrollLeft,
                       void 0 !== arguments[0].top
                         ? ~~arguments[0].top
                         : void 0 !== arguments[1]
-                          ? ~~arguments[1]
-                          : this.scrollTop,
+                        ? ~~arguments[1]
+                        : this.scrollTop,
                     );
                   }
               }),
@@ -133,19 +133,19 @@ class CAGovPageNavigation extends window.HTMLElement {
               void 0 !== arguments[0] &&
                 (!0 !== f(arguments[0])
                   ? this.scroll({
-                    left: ~~arguments[0].left + this.scrollLeft,
-                    top: ~~arguments[0].top + this.scrollTop,
-                    behavior: arguments[0].behavior,
-                  })
+                      left: ~~arguments[0].left + this.scrollLeft,
+                      top: ~~arguments[0].top + this.scrollTop,
+                      behavior: arguments[0].behavior,
+                    })
                   : i.elementScroll.call(
-                    this,
-                    void 0 !== arguments[0].left
-                      ? ~~arguments[0].left + this.scrollLeft
-                      : ~~arguments[0] + this.scrollLeft,
-                    void 0 !== arguments[0].top
-                      ? ~~arguments[0].top + this.scrollTop
-                      : ~~arguments[1] + this.scrollTop,
-                  ));
+                      this,
+                      void 0 !== arguments[0].left
+                        ? ~~arguments[0].left + this.scrollLeft
+                        : ~~arguments[0] + this.scrollLeft,
+                      void 0 !== arguments[0].top
+                        ? ~~arguments[0].top + this.scrollTop
+                        : ~~arguments[1] + this.scrollTop,
+                    ));
             }),
             (e.prototype.scrollIntoView = function () {
               if (!0 !== f(arguments[0])) {
@@ -154,7 +154,7 @@ class CAGovPageNavigation extends window.HTMLElement {
                     ;
                     o !== t.body &&
                     !1 ===
-                    ((e = p((l = o), 'Y') && a(l, 'Y')),
+                      ((e = p((l = o), 'Y') && a(l, 'Y')),
                       (r = p(l, 'X') && a(l, 'X')),
                       e || r);
 
@@ -169,22 +169,22 @@ class CAGovPageNavigation extends window.HTMLElement {
                 const r = this.getBoundingClientRect();
                 l !== t.body
                   ? (h.call(
-                    this,
-                    l,
-                    l.scrollLeft + r.left - e.left,
-                    l.scrollTop + r.top - e.top,
-                  ),
+                      this,
+                      l,
+                      l.scrollLeft + r.left - e.left,
+                      l.scrollTop + r.top - e.top,
+                    ),
                     o.getComputedStyle(l).position !== 'fixed' &&
-                    o.scrollBy({
-                      left: e.left,
-                      top: e.top,
-                      behavior: 'smooth',
-                    }))
+                      o.scrollBy({
+                        left: e.left,
+                        top: e.top,
+                        behavior: 'smooth',
+                      }))
                   : o.scrollBy({
-                    left: r.left,
-                    top: r.top,
-                    behavior: 'smooth',
-                  });
+                      left: r.left,
+                      top: r.top,
+                      behavior: 'smooth',
+                    });
               } else
                 i.scrollIntoView.call(
                   this,
@@ -213,8 +213,8 @@ class CAGovPageNavigation extends window.HTMLElement {
           return t === 'Y'
             ? o.clientHeight + c < o.scrollHeight
             : t === 'X'
-              ? o.clientWidth + c < o.scrollWidth
-              : void 0;
+            ? o.clientWidth + c < o.scrollWidth
+            : void 0;
         }
         function a(t, l) {
           const e = o.getComputedStyle(t, null)[`overflow${l}`];
@@ -415,7 +415,9 @@ document.querySelector('head').appendChild(style);
 
 // Function determining if it's mobile view (max 767px)
 function mobileView() {
-  const mobileElement = document.querySelector('.site-header .grid-mobile-icons');
+  const mobileElement = document.querySelector(
+    '.site-header .grid-mobile-icons',
+  );
   if (mobileElement) {
     return getComputedStyle(mobileElement).display !== 'none';
   }
