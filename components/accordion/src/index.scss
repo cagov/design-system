@@ -1,15 +1,15 @@
 /* v3 styles: new section */
 cagov-accordion details {
-  border-radius: 0.3rem !important;
+  border-radius: var(--radius-2, 5px) !important;
 	margin-bottom: 0;
-	min-height: 3rem;
+	min-height: var(--s-5, 3rem);
 	margin-top: 0.5rem;
-	border: solid 1px #ededef !important;
+	border: solid var(--border-1, 1px)var(--gray-200, #ededef) !important;
 }
 
 cagov-accordion:defined details {
-  transition: height .2s;
-  height: 3rem;
+  transition: height var(--animation-duration-2, .2s);
+  height: var(--s-5, 3rem);
   overflow: hidden;
 }
 
@@ -22,20 +22,20 @@ cagov-accordion:defined summary::-webkit-details-marker {display: none; }
 
 details summary {
   cursor: pointer;
-	padding: 0 0 0 1rem;
+	padding: 0 0 0 var(--s-2, 1rem);
 	background-color: #ededef;
 	position: relative;
-	line-height: 3rem;
+	line-height: var(--s-5, 3rem);
   margin: 0;
   
   color: var(--primary-color, #064e66);
-  font-size: 1.125rem;
+  font-size: var(--font-size-2, 1.125rem);
   font-weight: bold;
 }
 
 cagov-accordion:defined details summary {
   list-style: none; /* hide default expansion triangle after js executes */
-  border-radius: 5px 5px 0 0;
+  border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;
 }
 
 cagov-accordion:defined details summary:focus {
@@ -44,16 +44,16 @@ cagov-accordion:defined details summary:focus {
 }
 
 details .accordion-body {
-  padding: 0 0 1rem 1rem;
+  padding: var(--s-2, 1rem);
 }
 
 cagov-accordion:defined details .cagov-open-indicator {
   background-color: var(--primary-color, #064e66);
   height: 6px;
   width: 26px;
-  border-radius: 3px;
+  border-radius: var(--border-3, 3px);
   position: absolute;
-  right: 1rem;
+  right: var(--s-2, 1rem);
   top: 1.2rem;
 }
 cagov-accordion:defined details .cagov-open-indicator:before {
@@ -64,80 +64,11 @@ cagov-accordion:defined details .cagov-open-indicator:before {
   left: 5px;
   width: 2px;
   height: 22px;
-  border-radius: 3px;
+  border-radius: var(--border-3, 3px);
   border: none;
   box-shadow: 7px -12px 0 2px var(--primary-color, #064e66);
 	background: none;
 }
 cagov-accordion:defined details[open] .cagov-open-indicator:before {
   display: none;
-}
-
-
-
-/* legacy */
-/* accordion component specific classes */
-cagov-accordion .cagov-accordion-card {
-	border-radius: 0.3rem !important;
-	margin-bottom: 0;
-	min-height: 3rem;
-	margin-top: 0.5rem;
-	border: solid 1px #ededef !important;
-}
-
-cagov-accordion .accordion-title {
-	text-align: left;
-	margin-bottom: 0;
-	color: var(--primary-color, #064e66);
-	margin-right: auto;
-	width: 90%;
-	padding: 0 0.5rem 0 0 !important;
-	font-size: 1.125rem;
-	font-weight: bold;
-}
-
-cagov-accordion.prog-enhanced .accordion-card-container {
-	height: 0px;
-	transition: height 0.3s ease;
-}
-cagov-accordion.prog-enhanced .accordion-card-container .card-body {
-	padding-left: 1rem;
-	margin-top: 8px;
-}
-
-cagov-accordion.prog-enhanced .accordion-card-container .card-body ul {
-	margin-left: 16px;
-	margin-right: 16px;
-}
-
-.accordion-title h4,
-.accordion-title h3,
-.accordion-title h2 {
-	padding: 0 !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-	font-size: 1.2rem !important;
-	font-weight: 700;
-	color: var(--primary-color, #064e66);
-	text-align: left !important;
-}
-
-button.accordion-card-header:hover {
-	background-color: var(--hover-color, #f9f9fa);
-}
-button.accordion-card-header:hover .accordion-title {
-	text-decoration: underline;
-}
-button.accordion-card-header:hover .accordion-title:hover {
-	text-decoration: underline;
-}
-
-button.accordion-card-header:focus {
-	outline-offset: -2px;
-}
-
-@media only screen and (max-width: 767px) {
-	.accordion-alpha-open + .accordion-card-container {
-		height: 100% !important;
-	}
 }
