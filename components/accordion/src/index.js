@@ -24,6 +24,10 @@ export class CaGovAccordion extends window.HTMLElement {
       'beforeend',
       `<div class="cagov-open-indicator" aria-hidden="true" />`,
     );
+    this.closedHeight = "3.1rem";
+    if(this.dataset.cssHeight) {
+      this.closedHeight = this.dataset.cssHeight;
+    }
 
     this.detailsEl = this.querySelector('details');
     this.bodyEl = this.querySelector('.accordion-body');
@@ -36,14 +40,14 @@ export class CaGovAccordion extends window.HTMLElement {
       )}px`;
     } else {
       // else apply 3.1rem
-      this.detailsEl.style.height = `3.1rem`;
+      this.detailsEl.style.height = this.closedHeight;
     }
   }
 
   listen() {
     if (this.detailsEl.hasAttribute('open')) {
       // was open, now closing
-      this.detailsEl.style.height = `3.1rem`;
+      this.detailsEl.style.height = this.closedHeight;
     } else {
       // was closed, opening
       requestAnimationFrame(() => {
