@@ -29,17 +29,16 @@ export class CaGovAccordion extends window.HTMLElement {
 
     this.setHeight();
 
-    window.addEventListener('resize', this.debounce(() => this.setHeight()).bind(this));
-
+    window.addEventListener(
+      'resize',
+      this.debounce(() => this.setHeight()).bind(this),
+    );
   }
 
   setHeight() {
     requestAnimationFrame(() => {
       // delay so the desired height is readable in all browsers
-      this.closedHeight = `${parseInt(
-        this.summaryEl.scrollHeight + 2,
-        10,
-      )}px`;
+      this.closedHeight = `${parseInt(this.summaryEl.scrollHeight + 2, 10)}px`;
 
       // apply initial height
       if (this.detailsEl.hasAttribute('open')) {
@@ -51,7 +50,7 @@ export class CaGovAccordion extends window.HTMLElement {
       } else {
         // else apply closed height
         this.detailsEl.style.height = this.closedHeight;
-        console.log('just set closed height to '+this.closedHeight)
+        console.log(`just set closed height to ${this.closedHeight}`);
       }
     });
   }
@@ -72,14 +71,15 @@ export class CaGovAccordion extends window.HTMLElement {
     }
   }
 
-  debounce(func, timeout = 300){
+  debounce(func, timeout = 300) {
     let timer;
     return (...args) => {
       clearTimeout(timer);
-      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+      timer = setTimeout(() => {
+        func.apply(this, args);
+      }, timeout);
     };
   }
-  
 }
 window.customElements.define('cagov-accordion', CaGovAccordion);
 
