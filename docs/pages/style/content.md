@@ -9,12 +9,12 @@ description: The California Design System uses these principles to create great 
 
 These 7 principles contain strategies and tips to help you write excellent content.
 
-* [Focus on user needs and principles](/style/content/focus-on-user-needs-services/)
+* [Focus on user needs and services](/style/content/focus-on-user-needs-services/)
 * [Meet your audience where they are](/style/content/meet-your-audience-where-they-are/)
 * [Build in accessibility from the start](/style/content/build-accessibility-from-start/)
 * [Be concise](/style/content/be-concise/)
 * [Write in plain language](/style/content/write-in-plain-language/)
-* [Write in a conversational and official voice](/style/content/write-with-conversational-official-voice/)
+* [Write with a conversational and official voice](/style/content/write-with-conversational-official-voice/)
 * [Organize content strategically](/style/content/organize-content-strategically/)
 
 ## Our inspiration
