@@ -5,3 +5,7 @@
   {% if has["use-cases"] %}<meta itemprop="additionalProperty" content="has:use-cases">{% endif %}
   {% if has["changelog"] %}<meta itemprop="additionalProperty" content="has:changelog">{% endif %}
 {% endblock %}
+
+{% block componentPageTitle %}
+{# Titles are in the markdown on component pages, so remove it from the template. #}
+{% endblock %}

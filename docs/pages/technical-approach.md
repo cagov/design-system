@@ -3,8 +3,6 @@ title: A different approach
 description: An introduction to the technical approach of the California Design System.
 ---
 
-# A different approach
-
 Design systems are often created as a single monolithic package. All parts, whether desired or not, come as a whole and the entire system is a dependency of the parent project.
 
 In contrast, the State of California’s Design System is a collection of independent components. With [web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) as the base, they’re less likely to cause dependency issues or CSS conflicts. This means you can choose which ones you need. 

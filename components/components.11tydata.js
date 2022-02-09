@@ -33,17 +33,6 @@ module.exports = {
         changelog: matches.includes('changelog.md'),
       };
     },
-    title: (article) => {
-      const componentSlug = getComponentSlug(article);
-      const component = components[componentSlug];
-      // const filename = article.page.fileSlug;
-
-      if (component) {
-        return `${component.title} | ${defaults.site.name}`;
-      }
-
-      return defaults.site.name;
-    },
     description: (article) => {
       const componentSlug = getComponentSlug(article);
       const component = components[componentSlug];
@@ -55,6 +44,17 @@ module.exports = {
       return defaults.page.description;
     },
     metadata: {
+      page_title: (article) => {
+        const componentSlug = getComponentSlug(article);
+        const component = components[componentSlug];
+        // const filename = article.page.fileSlug;
+
+        if (component) {
+          return `${component.title} | ${defaults.site.name}`;
+        }
+
+        return defaults.site.name;
+      },
       social_image_path: (article) => {
         const componentSlug = getComponentSlug(article);
         const component = components[componentSlug];

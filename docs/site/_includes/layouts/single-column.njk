@@ -1,20 +1,13 @@
 {% extends "layouts/index.njk" %}
 {% block content %}
-  <div id="page-container" class="page-container-ds">
-    <div id="main-content" class="main-content-ds single-column">
-      <div class="breadcrumb"></div>
-      <div class="ds-content-layout">
-        <main class="main-primary">
-          <div id="body-content">
-            <article id="post-{{ page.fileSlug }}">
-              <div class="entry-content">
-                {{ content | safe }}
-              </div>
-            </article>
-            <span class="return-top hidden-print"></span>
-          </div>
-        </main>
+  <main id="body-content" class="cagov-main">
+    <article id="post-{{ page.fileSlug }}" class="cagov-article with-single-column">
+      <h1 class="page-title">
+        {{ title | safe }}
+      </h1>
+      <div class="cagov-content">
+        {{ content | safe }}
       </div>
-    </div>
-  </div>
+    </article>
+  </main>
 {% endblock %}

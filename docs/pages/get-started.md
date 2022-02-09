@@ -3,8 +3,6 @@ title: Get started
 description: Learn how you can get started with using the California Design System. 
 ---
 
-# Get started
-
 <p class="text-lead">What you need to know about the Design System depends on your role and discipline.</p> 
 
 ## Developers
