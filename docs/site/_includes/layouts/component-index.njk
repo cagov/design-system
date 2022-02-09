@@ -33,12 +33,6 @@
 {% block content %}
   <main id="body-content" class="cagov-main">
     <article id="post-{{ componentSlug }}-{{ page.fileSlug }}" class="cagov-article with-sidebar with-site-nav">
-      {% block componentPageTitle %}
-        <h1 class="page-title title-cell">
-          {{ title | safe }}
-        </h1>
-      {% endblock %}
-
       <div class="component-sidebar sidebar-cell" style="z-index: 1;">
         <button class="component-sidebar-menu-button">
           <svg class="component-sidebar-menu-boxes" width="25" height="25" fill="#004abc" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -67,6 +61,11 @@
       </div>
 
       <div class="cagov-content content-cell">
+        {% block componentPageTitle %}
+          <h1 class="page-title">
+            {{ title | safe }}
+          </h1>
+        {% endblock %}
         {{ content | safe }}
       </div>
     </article>
