@@ -32,7 +32,7 @@ function linkAnnotator() {
     'main a, .agency-footer a, .site-footer a, footer a',
   );
   externalLink.forEach((element) => {
-    const anchorLink = element.href.indexOf('#') == 0;
+    const anchorLink = element.href.indexOf('#') === 0;
     const localHost = element.href.indexOf('localhost') > -1;
     const localEmail = element.href.indexOf('@') > -1;
     const linkElement = element;
