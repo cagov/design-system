@@ -106,6 +106,9 @@ class CAGovSiteNavigation extends window.HTMLElement {
       document
         .querySelector('.search-container--small')
         .setAttribute('aria-hidden', 'true');
+      // reset navigation on resize
+      this.closeAllMenus();
+      this.closeMainMenu();
     });
 
     this.expansionListeners();
