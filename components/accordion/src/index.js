@@ -24,24 +24,36 @@ export class CaGovAccordion extends window.HTMLElement {
       'beforeend',
       `<div class="cagov-open-indicator" aria-hidden="true" />`,
     );
-    this.closedHeight = "3.1rem";
-    if(this.dataset.cssHeight) {
-      this.closedHeight = this.dataset.cssHeight;
-    }
-
     this.detailsEl = this.querySelector('details');
     this.bodyEl = this.querySelector('.accordion-body');
-    // apply initial height
-    if (this.detailsEl.hasAttribute('open')) {
-      // if open get scrollHeight
-      this.detailsEl.style.height = `${parseInt(
-        this.bodyEl.scrollHeight + 48,
+
+    this.setHeight();
+
+    window.addEventListener('resize', this.debounce(() => this.setHeight()).bind(this));
+
+  }
+
+  setHeight() {
+    requestAnimationFrame(() => {
+      // delay so the desired height is readable in all browsers
+      this.closedHeight = `${parseInt(
+        this.summaryEl.scrollHeight + 2,
         10,
       )}px`;
-    } else {
-      // else apply 3.1rem
-      this.detailsEl.style.height = this.closedHeight;
-    }
+
+      // apply initial height
+      if (this.detailsEl.hasAttribute('open')) {
+        // if open get scrollHeight
+        this.detailsEl.style.height = `${parseInt(
+          this.bodyEl.scrollHeight + 48,
+          10,
+        )}px`;
+      } else {
+        // else apply closed height
+        this.detailsEl.style.height = this.closedHeight;
+        console.log('just set closed height to '+this.closedHeight)
+      }
+    });
   }
 
   listen() {
@@ -59,6 +71,15 @@ export class CaGovAccordion extends window.HTMLElement {
       });
     }
   }
+
+  debounce(func, timeout = 300){
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+  }
+  
 }
 window.customElements.define('cagov-accordion', CaGovAccordion);
 

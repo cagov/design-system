@@ -51,7 +51,7 @@ Accordions hide information unless someone opens them. This requires an extra ac
 </cagov-accordion>
 <cagov-accordion>
   <details>
-    <summary>Lorem ipsum</summary>
+    <summary>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</summary>
     <div class="accordion-body">
       <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf</p>
       <p>moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
