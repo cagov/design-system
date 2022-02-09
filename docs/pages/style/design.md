@@ -125,40 +125,42 @@ In addition to the 3 colors above, we standardize colors used for global UI elem
   <p>0 1 2 3 4 5 6 7 8 9</p>
 </div>
 
-We use [Public Sans](https://public-sans.digital.gov/), a strong, neutral typeface for interfaces, text, and headings, which was designed by the [United States Web Design System](https://designsystem.digital.gov/).
+The Design Systems uses [Public Sans](https://public-sans.digital.gov/), a strong, neutral typeface for interfaces, text, and headings, which was designed by the [United States Web Design System](https://designsystem.digital.gov/).
 
-Our base font size is 18px with a line spacing of 32px. To generate the rest of the values, we use the golden ratio (1.6) as a guide.
+The base font size is 18px. Variable font sizes are used to improve readability on larger screens.
+
+The line height is a ratio of 1.75 to the base font size. For each ascending level,  the ratio is decreased by ⅛. As a result, larger headings have smaller line-height ratios which improves readability.
 
 <span class="cagov-table">
-  <table width="100%">
-    <tr>
-      <th>Text Content</th><th>Properties</th>
-    </tr>
-    <tr>
-      <td>Heading 1</td><td>Font size: 47px</br>Font size: calc(2.4rem + 0.1vw);</br>Font weight: Bold</br>Line height: 74px</td>
-    </tr>
-    <tr>
-      <td>Heading 2</td><td>Font size: 37px</br>Font size: calc(1.94rem + 0.1vw);</br>Font weight: Bold</br>Line height: 59px</td>
-    </tr>
-    <tr>
-      <td>Heading 3</td><td>Font size: 29px</br>Font size: calc(1.54rem + 0.1vw);</br>Font weight: Bold</br>Line height: 48px</td>
-    </tr>
-    <tr>
-      <td>Heading 4</td><td>Font size: 23px</br>Font size: calc(1.25rem + 0.1vw);</br>Font weight: Bold</br>Line height: 39px</td>
-    </tr>
-    <tr>
-      <td>Heading 5</td><td>Font size: 18px</br>Font size: calc(1rem + 0.1vw);</br>Font weight: Bold</br>Line height: 32px</td>
-    </tr>
-    <tr>
-      <td>Paragraph</td><td>Font size: 18px</br>Font size: calc(0.7rem + 0.1vw);</br>Font weight: Normal</br>Line height: 32px</td>
-    </tr>
-    <tr>
-      <td>Paragraph large (for lead text)</td><td>Font size: 23px</br>Font size: calc(1rem + 0.1vw);</br>Font weight: Normal</br>Line height: 39px</td>
-    </tr>
-    <tr>
-      <td>Paragraph small (for captions)</td><td>Font size: 14px</br>Font size: calc(0.65rem + 0.1vw);</br>Font weight: Normal</br>Line height: 26px</td>
-    </tr>
-  </table>
+    <table width="100%">
+      <tr>
+        <th>Text Content</th><th>Properties</th>
+      </tr>
+      <tr>
+        <td>Heading 1</td><td>Font size (Desktop): 2.9375rem + 0.1vw</br>Font size (Mobile): 2.625rem</br>Font weight: Bold</br>Line height: 74px</td>
+      </tr>
+      <tr>
+        <td>Heading 2</td><td>Font size (Desktop): 2.3175rem + 0.1vw</br>Font size (Mobile): 2.0625rem</br>Font weight: Bold</br>Line height: 59px</td>
+      </tr>
+      <tr>
+        <td>Heading 3</td><td>Font size (Desktop): 1.8125rem + 0.1vw</br>Font size (Mobile): 1.625rem</br>Font weight: Bold</br>Line height: 48px</td>
+      </tr>
+      <tr>
+        <td>Heading 4</td><td>Font size (Desktop): 1.4375rem + 0.1vw</br>Font size (Mobile): 1.25rem</br>Font weight: Bold</br>Line height: 39px</td>
+      </tr>
+      <tr>
+        <td>Heading 5</td><td>Font size (Desktop): 1.125rem + 0.1vw</br>Font size (Mobile): 1rem</br>Font weight: Bold</br>Line height: 32px</td>
+      </tr>
+      <tr>
+        <td>Paragraph</td><td>Font size (Desktop): 1.125rem + 0.1vw</br>Font size (Mobile): 1rem</br>Font weight: Normal</br>Line height: 32px</td>
+      </tr>
+      <tr>
+        <td>Paragraph large (for lead text)</td><td>Font size (Desktop): 1.4375rem + 0.1vw</br>Font size (Mobile): 1.25rem</br>Font weight: Normal</br>Line height: 39px</td>
+      </tr>
+      <tr>
+        <td>Paragraph small (for captions)</td><td>Font size (Desktop): 0.875rem + 0.1vw</br>Font size (Mobile): 0.875rem</br>Font weight: Normal</br>Line height: 26px</td>
+      </tr>
+    </table>
 </span>
 
 ## Imagery
