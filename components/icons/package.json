@@ -5,10 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "run-s get-font split-svg sprite",
+    "build": "run-s get-font split-svg sprite-all",
     "get-font": "wget https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg --directory-prefix=src/original",
     "split-svg": "font-blast src/original/CaGov.svg dist",
-    "sprite": "svg-sprite-generate -d dist/svg -o dist/allicons.svg"
+    "sprite-all": "svg-sprite-generate -d dist/svg -o dist/allicons.svg",
+    "sprite": "node scripts/sprite.js --ids=accessible arrow"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "font-blast": "^0.7.0",
     "npm-run-all": "^4.1.5",
-    "svg-sprite-generator": "^0.0.7"
+    "svg-sprite-generator": "^0.0.7",
+    "yargs": "^17.3.1"
   }
 }
