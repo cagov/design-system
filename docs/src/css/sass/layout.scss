@@ -1,0 +1,60 @@
+.cagov-main {
+  max-width: var(--w-lg, 1176px);
+  margin: 0 auto;
+}
+
+.cagov-article {
+  margin: var(--s-4, 2rem) 0;
+  padding: 0 var(--s-2, 1rem);
+}
+
+.cagov-article.with-single-column {
+  max-width: var(--w-page-content, 876px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cagov-article.with-sidebar {
+  display: grid;
+  column-gap: var(--s-6, 4rem);
+  grid-template-columns: 16rem minmax(0, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "sidebar title"
+    "sidebar content";
+}
+
+.title-cell { grid-area: title; }
+.sidebar-cell { grid-area: sidebar; }
+.content-cell { grid-area: content; }
+
+@media only screen and (max-width: 767px) {
+  .cagov-article.with-sidebar {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+  .cagov-article.with-page-nav {
+    grid-template-areas: 
+      "title"
+      "sidebar"
+      "content";
+    .cagov-content {
+      margin-top: var(--s-2, 1rem);
+    }
+  }
+  .cagov-article.with-site-nav {
+    padding: 0;
+    margin-top: 0;
+    grid-template-areas:
+      "sidebar" 
+      "title"
+      "content";
+    .cagov-content {
+      padding: 0 var(--s-2, 1rem);
+    }
+    .page-title {
+      padding-left: var(--s-2, 1rem);
+      padding-right: var(--s-2, 1rem);
+    }
+  }
+}
