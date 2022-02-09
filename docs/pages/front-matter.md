@@ -1,4 +1,6 @@
-# Article front matter
+---
+title: Article front matter
+---
 
 We can add data to articles through use of [front matter](https://www.11ty.dev/docs/data-frontmatter/). Here's a full example; all fields are optional.
 

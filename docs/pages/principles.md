@@ -6,8 +6,6 @@ description: The principles behind the California Design System.
 
 {%- from "macros/principles-page-item.njk" import principlesPageItem -%}
 
-# Principles
-
 <p class="text-lead">We’ve researched the needs of Californians and created these principles to help state departments create great websites, services, and products.</p>
 
 {{ principlesPageItem(editable.principles, 1) }}

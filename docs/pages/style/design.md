@@ -3,8 +3,6 @@ title: Visual design style guide
 description: These recommended approaches make California Design System websites visually appealing, easy to use, and accessible.
 ---
 
-# Visual design style guide
-
 <p class="text-lead">The visual design of the Design System is inspired by the <a href="/principles/">Design System principles</a>. Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.</p>
 
 ## Our approach to visual design

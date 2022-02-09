@@ -3,8 +3,6 @@ title: Build in accessibility from the start
 description: Accessibility goes beyond the technical components of a website. It’s about including everyone who has a right to information.
 ---
 
-# Build in accessibility from the start
-
 <p class="text-lead">We write for all Californians, not most Californians.</p>
 
 We must create content that:

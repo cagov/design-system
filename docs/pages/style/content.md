@@ -3,8 +3,6 @@ title: Content style guide
 description: The California Design System uses these principles to create great content.
 ---
 
-# Content style guide
-
 <p class="text-lead">Great content takes work. The good news is that anyone can do it.</p>
 
 ## Content principles
