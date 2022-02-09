@@ -40,23 +40,6 @@
   transition: all var(--ease-2) var(--animation-duration-3);
 }
 
-// default button
-button {
-  @include btn;
-  color: var(--primary-color);
-  background-color: var(--white);
-  border-color: var(--primary-color);
-
-  &:hover {
-    color: var(--primary-dark-color);
-    background-color: var(--white);
-    border-color: var(--primary-dark-color);
-  }
-  &:focus {
-    outline: var(--border-2) solid var(--highlight-color);
-  }
-}
-
 // Primary buttons
 .btn-primary {
   @include btn;
