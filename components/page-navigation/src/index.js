@@ -412,24 +412,3 @@ if (customElements.get('cagov-page-navigation') === undefined) {
 const style = document.createElement('style');
 style.textContent = styles;
 document.querySelector('head').appendChild(style);
-
-// Function determining if it's mobile view (max 767px)
-function mobileView() {
-  const mobileElement = document.querySelector('.branding .grid-mobile-icons');
-  if (mobileElement) {
-    return getComputedStyle(mobileElement).display !== 'none';
-  }
-  return false;
-}
-
-function insertAfter(referenceNode, newNode) {
-  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
-const contentnav = document.querySelector('.sidebar-container');
-const h1Header = document.querySelector('h1');
-
-if (mobileView()) {
-  if (contentnav && h1Header) {
-    insertAfter(h1Header, contentnav);
-  }
-}

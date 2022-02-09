@@ -1,5 +1,8 @@
 # Page navigation changelog
 
+## 2.1.1
+* Removed JS-based insertion of this widget below H1 on the page.
+
 ## 2.1.0
 * Renamed package from `ds-content-navigation` to `ds-page-navigation`.
 * Renamed custom element name from `<cagov-content-navigation>` to `<cagov-page-navigation>`.
