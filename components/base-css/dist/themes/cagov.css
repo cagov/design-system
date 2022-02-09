@@ -2595,31 +2595,6 @@ main .wp-block-image img {
   border: none;
 }
 
-button {
-  display: inline-block;
-  font-size: var(--font-size-2);
-  padding: var(--s-1);
-  line-height: var(--font-lineheight-3);
-  border-radius: var(--radius-2);
-  border: var(--border-1) solid;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  transition: all var(--ease-2) var(--animation-duration-3);
-  color: var(--primary-color);
-  background-color: var(--white);
-  border-color: var(--primary-color);
-}
-button:hover {
-  color: var(--primary-dark-color);
-  background-color: var(--white);
-  border-color: var(--primary-dark-color);
-}
-button:focus {
-  outline: var(--border-2) solid var(--highlight-color);
-}
-
 .btn-primary {
   display: inline-block;
   font-size: var(--font-size-2);
