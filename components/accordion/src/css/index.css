@@ -8,7 +8,7 @@ cagov-accordion details {
 }
 cagov-accordion details summary {
   cursor: pointer;
-  padding: 0 0 0 var(--s-2, 1rem);
+  padding: 0 var(--s-5, 3rem) 0 var(--s-2, 1rem);
   background-color: var(--gray-200, #ededef);
   position: relative;
   line-height: var(--s-5, 3rem);

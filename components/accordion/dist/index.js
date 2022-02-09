@@ -1,4 +1,4 @@
-var styles = "/* initial styles */\ncagov-accordion details {\n  border-radius: var(--radius-2, 5px) !important;\n  margin-bottom: 0;\n  min-height: var(--s-5, 3rem);\n  margin-top: 0.5rem;\n  border: solid var(--border-1, 1px) var(--gray-200, #ededef) !important;\n}\ncagov-accordion details summary {\n  cursor: pointer;\n  padding: 0 0 0 var(--s-2, 1rem);\n  background-color: var(--gray-200, #ededef);\n  position: relative;\n  line-height: var(--s-5, 3rem);\n  margin: 0;\n  color: var(--primary-color, #064e66);\n  font-size: var(--font-size-2, 1.125rem);\n  font-weight: bold;\n}\ncagov-accordion details .accordion-body {\n  padding: var(--s-2, 1rem);\n}\n\n/* styles applied after custom element javascript runs */\ncagov-accordion:defined {\n  /* let it be open initially if details has open attribute */\n}\ncagov-accordion:defined details {\n  transition: height var(--animation-duration-2, 0.2s);\n  height: var(--s-5, 3rem);\n  overflow: hidden;\n}\ncagov-accordion:defined details[open] {\n  height: auto;\n}\ncagov-accordion:defined summary::-webkit-details-marker {\n  display: none;\n}\ncagov-accordion:defined details summary {\n  list-style: none;\n  /* hide default expansion triangle after js executes */\n  border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;\n}\ncagov-accordion:defined details summary:focus {\n  outline-offset: -2px;\n  outline: solid 2px var(--highlight-color, #fbad23) !important;\n}\ncagov-accordion:defined details .cagov-open-indicator {\n  background-color: var(--primary-color, #064e66);\n  height: 6px;\n  width: 26px;\n  border-radius: var(--border-3, 3px);\n  position: absolute;\n  right: var(--s-2, 1rem);\n  top: 1.2rem;\n}\ncagov-accordion:defined details .cagov-open-indicator:before {\n  display: block;\n  content: \"\";\n  position: absolute;\n  top: 4px;\n  left: 5px;\n  width: 2px;\n  height: 22px;\n  border-radius: var(--border-3, 3px);\n  border: none;\n  box-shadow: 7px -12px 0 2px var(--primary-color, #064e66);\n  background: none;\n}\ncagov-accordion:defined details[open] .cagov-open-indicator:before {\n  display: none;\n}\n\n/*# sourceMappingURL=index.css.map */\n";
+var styles = "/* initial styles */\ncagov-accordion details {\n  border-radius: var(--radius-2, 5px) !important;\n  margin-bottom: 0;\n  min-height: var(--s-5, 3rem);\n  margin-top: 0.5rem;\n  border: solid var(--border-1, 1px) var(--gray-200, #ededef) !important;\n}\ncagov-accordion details summary {\n  cursor: pointer;\n  padding: 0 var(--s-5, 3rem) 0 var(--s-2, 1rem);\n  background-color: var(--gray-200, #ededef);\n  position: relative;\n  line-height: var(--s-5, 3rem);\n  margin: 0;\n  color: var(--primary-color, #064e66);\n  font-size: var(--font-size-2, 1.125rem);\n  font-weight: bold;\n}\ncagov-accordion details .accordion-body {\n  padding: var(--s-2, 1rem);\n}\n\n/* styles applied after custom element javascript runs */\ncagov-accordion:defined {\n  /* let it be open initially if details has open attribute */\n}\ncagov-accordion:defined details {\n  transition: height var(--animation-duration-2, 0.2s);\n  height: var(--s-5, 3rem);\n  overflow: hidden;\n}\ncagov-accordion:defined details[open] {\n  height: auto;\n}\ncagov-accordion:defined summary::-webkit-details-marker {\n  display: none;\n}\ncagov-accordion:defined details summary {\n  list-style: none;\n  /* hide default expansion triangle after js executes */\n  border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;\n}\ncagov-accordion:defined details summary:focus {\n  outline-offset: -2px;\n  outline: solid 2px var(--highlight-color, #fbad23) !important;\n}\ncagov-accordion:defined details .cagov-open-indicator {\n  background-color: var(--primary-color, #064e66);\n  height: 6px;\n  width: 26px;\n  border-radius: var(--border-3, 3px);\n  position: absolute;\n  right: var(--s-2, 1rem);\n  top: 1.2rem;\n}\ncagov-accordion:defined details .cagov-open-indicator:before {\n  display: block;\n  content: \"\";\n  position: absolute;\n  top: 4px;\n  left: 5px;\n  width: 2px;\n  height: 22px;\n  border-radius: var(--border-3, 3px);\n  border: none;\n  box-shadow: 7px -12px 0 2px var(--primary-color, #064e66);\n  background: none;\n}\ncagov-accordion:defined details[open] .cagov-open-indicator:before {\n  display: none;\n}\n\n/*# sourceMappingURL=index.css.map */\n";
 
 /**
  * Accordion web component that collapses and expands content inside itself on click.
@@ -24,24 +24,36 @@ class CaGovAccordion extends window.HTMLElement {
       'beforeend',
       `<div class="cagov-open-indicator" aria-hidden="true" />`,
     );
-    this.closedHeight = "3.1rem";
-    if(this.dataset.cssHeight) {
-      this.closedHeight = this.dataset.cssHeight;
-    }
-
     this.detailsEl = this.querySelector('details');
     this.bodyEl = this.querySelector('.accordion-body');
-    // apply initial height
-    if (this.detailsEl.hasAttribute('open')) {
-      // if open get scrollHeight
-      this.detailsEl.style.height = `${parseInt(
-        this.bodyEl.scrollHeight + 48,
+
+    this.setHeight();
+
+    window.addEventListener('resize', this.debounce(() => this.setHeight()).bind(this));
+
+  }
+
+  setHeight() {
+    requestAnimationFrame(() => {
+      // delay so the desired height is readable in all browsers
+      this.closedHeight = `${parseInt(
+        this.summaryEl.scrollHeight + 2,
         10,
       )}px`;
-    } else {
-      // else apply 3.1rem
-      this.detailsEl.style.height = this.closedHeight;
-    }
+
+      // apply initial height
+      if (this.detailsEl.hasAttribute('open')) {
+        // if open get scrollHeight
+        this.detailsEl.style.height = `${parseInt(
+          this.bodyEl.scrollHeight + 48,
+          10,
+        )}px`;
+      } else {
+        // else apply closed height
+        this.detailsEl.style.height = this.closedHeight;
+        console.log('just set closed height to '+this.closedHeight);
+      }
+    });
   }
 
   listen() {
@@ -59,6 +71,15 @@ class CaGovAccordion extends window.HTMLElement {
       });
     }
   }
+
+  debounce(func, timeout = 300){
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+  }
+  
 }
 window.customElements.define('cagov-accordion', CaGovAccordion);
 
