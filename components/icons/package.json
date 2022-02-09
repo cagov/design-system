@@ -9,7 +9,7 @@
     "get-font": "wget https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg --directory-prefix=src/original",
     "split-svg": "font-blast src/original/CaGov.svg dist",
     "sprite-all": "svg-sprite-generate -d dist/svg -o dist/allicons.svg",
-    "sprite": "node scripts/sprite.js --ids=accessible arrow"
+    "sprite": "node scripts/sprite.js --i=$npm_config_ids"
   },
   "repository": {
     "type": "git",
