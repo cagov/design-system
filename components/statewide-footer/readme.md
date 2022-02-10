@@ -24,7 +24,7 @@ Do not add other types of links to the statewide footer. Add them to the site fo
 
 Do not add other elements to or change the statewide footer. Use it only as designed.
 
-Do not combine the statewide footer with department logo, department links, or social media icons. This is contained in the agency footer.
+Do not combine the statewide footer with site logo, site links (including a contact page), or social media icons. These are contained in the [site footer](https://designsystem.webstandards.ca.gov/components/site-footer/readme/).
 
 ## Demo and sample markup
 
@@ -176,4 +176,3 @@ These links are managed by [CA.gov](http://ca.gov). Additional information about
 | Conditions of use           | https://www.ca.gov/use/                   | Yes       | 2     |
 | Privacy policy              | https://www.ca.gov/privacy-policy/        | Yes       | 3     |
 | Accessibility               | https://www.ca.gov/accessibility/         | Yes       | 4     |
-| Contact us                  | URL to Contact page for your organization | Yes       | 5     |
