@@ -48,6 +48,11 @@
     max-width: 40%;
   }  
 }
+.cagov-featured-sidebar {
+  h1 { 
+    padding-bottom: var(--s-2,1rem)
+  }
+}
 
 /* utility classes added for this section */
 .cagov-mt-2 {
