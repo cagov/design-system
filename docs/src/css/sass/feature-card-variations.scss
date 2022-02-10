@@ -42,6 +42,13 @@
   min-height: 5rem;
 }
 
+/* The title on the homepage is long and needs more space as an H1 */
+@media (min-width: 1176px) {
+  .cagov-featured-sidebar {
+    max-width: 40%;
+  }  
+}
+
 /* utility classes added for this section */
 .cagov-mt-2 {
   margin-top: 1.5rem;
