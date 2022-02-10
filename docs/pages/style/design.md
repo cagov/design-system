@@ -3,8 +3,6 @@ title: Visual design style guide
 description: These recommended approaches make California Design System websites visually appealing, easy to use, and accessible.
 ---
 
-# Visual design style guide
-
 <p class="text-lead">The visual design of the Design System is inspired by the <a href="/principles/">Design System principles</a>. Our recommended approaches will make your website visually appealing while still being easy to use and accessible. It includes guidelines that ensure your website is consistent with other websites using the Design System.</p>
 
 ## Our approach to visual design
@@ -163,6 +161,23 @@ The line height is a ratio of 1.75 to the base font size. For each ascending lev
     </table>
 </span>
 
+
+## Buttons
+We use Design System's buttons styles for actions in forms, surveys, dialogs and other call to action sections.
+### Primary buttons
+Primary buttons are using theme's primary color in their background or as border outline. Use class <code>btn-primary</code> for primary color background variation and `btn-primary-outline` for primary color outline variation. You can also add complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. 
+<button class="btn-primary m-t-2 m-r-2">Primary</button> <a href="#" class="btn-primary-outline m-t-2">Primary outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+
+
+### Disabled buttons
+Disabled button is using class <code>btn-disabled</code>. Disabled buttons should include the <code>aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies. Also, to be safe, add a <code>tabindex="-1"</code> attribute to your disabled button.
+<button class="btn-disabled m-t-2 m-r-2" aria-disabled="true" tabindex="-1">Disabled</button> <a href="#" class="btn-disabled-outline m-t-2" aria-disabled="true" tabindex="-1">Disabled link <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+
+
+### Action buttons
+We use action buttons in our call to action sections to guide users towards some goal. Action button consist of two span elements: action button title and action button text. Action button can be created by adding class `btn-action-primary` to a link or button element. Also, make sure you add span with class `btn-action-title` and add your link title text into it. For the links short description text add span with class `btn-action-text`.
+<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Some link</span><span class="btn-action-text">Some description text</span></a>
+<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Some link</span></a>
 ## Imagery
 
 We use photos and illustrations for visualizing information. We follow these guidelines:

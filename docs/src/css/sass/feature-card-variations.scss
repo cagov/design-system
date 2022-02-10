@@ -37,6 +37,23 @@
   }  
 }
 
+.vector-bear {
+  object-fit: contain;
+  min-height: 5rem;
+}
+
+/* The title on the homepage is long and needs more space as an H1 */
+@media (min-width: 1176px) {
+  .cagov-featured-sidebar {
+    max-width: 40%;
+  }  
+}
+.cagov-featured-sidebar {
+  h1 { 
+    padding-bottom: var(--s-2,1rem)
+  }
+}
+
 /* utility classes added for this section */
 .cagov-mt-2 {
   margin-top: 1.5rem;

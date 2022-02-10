@@ -67,7 +67,7 @@ module.exports = (html, outputPath) => {
     const component = components[componentSlug];
     if (component) {
       const $ = cheerio.load(result);
-      const h1 = $('div.entry-content h1:first-of-type');
+      const h1 = $('div.cagov-content h1:first-of-type');
       if (h1.length) {
         const metadata = {
           component,

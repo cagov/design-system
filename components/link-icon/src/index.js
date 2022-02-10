@@ -29,10 +29,10 @@ function linkAnnotator() {
 
   // Looping thru all links inside of the main content body, agency footer and statewide footer
   const externalLink = document.querySelectorAll(
-    'main a, .agency-footer a, footer a',
+    'main a, .agency-footer a, .site-footer a, footer a',
   );
   externalLink.forEach((element) => {
-    const anchorLink = element.href.indexOf('#') > -1;
+    const anchorLink = element.href.indexOf('#') === 0;
     const localHost = element.href.indexOf('localhost') > -1;
     const localEmail = element.href.indexOf('@') > -1;
     const linkElement = element;

@@ -1,7 +1,11 @@
 # Base CSS changelog
 
+
+## 1.0.16
+* Removed default button style.
+
 ## 1.0.15
-* Added new design tokens. Added new utility classes.
+* Added new design tokens. Added new utility classes. Added buttons styles.
 
 ## 1.0.14
 * reduce top margin on h2

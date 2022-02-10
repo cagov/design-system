@@ -13,13 +13,13 @@
   }
 }
 /* fix h1 on markdown pages */
-.entry-content h1:first-of-type {
+.cagov-content h1:first-of-type {
   margin: 0;
   padding: 0 0 24px 0;
 }
 /* For the BETA tag that appears in the site header */
 .org-name-dept sup {
-  color: var(--secondary-color, #ff8000);
+  color: var(--secondary-dark-color, #B35A00);
   font-size: 0.6em;
 }
 /* Prevent images from overflowing on the component pages */

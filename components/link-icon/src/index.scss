@@ -21,8 +21,9 @@
   display: inline-block;
   padding: 0;
   position: relative;
-  left: 1px;
-  top: -2px;
+  left: 4px;
+  margin-right: 2px;
+  top: 1px;
   text-decoration: none;
   width: 0.8em;
   svg path {
@@ -31,6 +32,7 @@
 }
 
 main a,
+.site-footer a,
 .agency-footer a {
   &:hover {
     .external-link-icon svg path {

@@ -13,14 +13,18 @@ const buildURL = (path, domain) => {
 module.exports = {
   // Note that several metadata properties do not need to be in EleventyComputed.
   // See ./metadata.js for more.
-  title: (article) => {
-    if ('title' in article && article.title !== '') {
-      return `${article.title} | ${defaults.site.name}`;
-    }
-    return defaults.site.name;
-  },
   metadata: {
     canonical_url: (article) => buildURL(article.permalink, root),
+    page_title: (article) => {
+      if (
+        'title' in article &&
+        article.title !== '' &&
+        article.title !== defaults.site.name
+      ) {
+        return `${article.title} | ${defaults.site.name}`;
+      }
+      return defaults.site.name;
+    },
     page_description: (article) =>
       article.metadata?.page_description ||
       article?.description ||
@@ -31,10 +35,14 @@ module.exports = {
       defaults.page.description,
     open_graph_title: (article) =>
       article.metadata?.open_graph_title ||
+      article.metadata?.page_title ||
       article?.title ||
       defaults.page.title,
     twitter_title: (article) =>
-      article.metadata?.twitter_title || article?.title || defaults.page.title,
+      article.metadata?.twitter_title ||
+      article.metadata?.page_title ||
+      article?.title ||
+      defaults.page.title,
     keywords: (article) => {
       if (article?.keywords) {
         // Combine any article keywords with site default keywords.

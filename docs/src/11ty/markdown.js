@@ -15,7 +15,7 @@ const md = markdownIt({
  * @returns {String} HTML
  */
 const preWrap = (hljsHtml) =>
-  `<pre><code class="hljs">${hljsHtml}</code></pre>`;
+  `<pre><code tabindex="0" class="hljs">${hljsHtml}</code></pre>`;
 
 /**
  * Displays the code block's language alongside the code.
@@ -57,13 +57,15 @@ const scriptWrap = (js, hljsHtml) => `
  * The same HTML string that's formatted by highlight.js.
  * @returns {String} HTML
  */
-const previewWrap = (rawHtml, hljsHtml) => `
-  <div class="code-preview">
-    <div class="code-preview-demo">
-      ${rawHtml}
+const previewWrap = (rawHtml, hljsHtml, instructions) => `
+  <cagov-code-preview data-instructions="${instructions.join(',')}">
+    <div class="code-preview">
+      <div class="code-preview-demo">
+        ${rawHtml}
+      </div>
+      ${codeWrap(hljsHtml, 'HTML')}
     </div>
-    ${codeWrap(hljsHtml, 'HTML')}
-  </div>
+  </cagov-code-preview>
 `;
 
 /**
@@ -85,7 +87,7 @@ md.renderer.rules.fence = (tokens, idx) => {
 
   // info is the list of meta/labels supplied with the code block in markdown.
   const info = token.info ? md.utils.unescapeAll(token.info).trim() : '';
-  const [lang, instruction] = info.split(/\s+/g);
+  const [lang, command, ...instructions] = info.split(/\s+/g);
 
   // This is the raw code block as supplied in the markdown.
   const rawCode = token.content;
@@ -102,13 +104,13 @@ md.renderer.rules.fence = (tokens, idx) => {
       const highlightedCode = hljs.highlight(rawCode, hljsOptions).value;
 
       // This is a special JS preview block.
-      if (instruction === 'script') {
+      if (command === 'script') {
         return scriptWrap(rawCode, highlightedCode);
       }
 
       // This is a special HTML demo block.
-      if (instruction === 'preview') {
-        return previewWrap(rawCode, highlightedCode);
+      if (command === 'preview') {
+        return previewWrap(rawCode, highlightedCode, instructions);
       }
 
       // Remove the XML blurb when it's HTML. Highlight.js wrinkle.

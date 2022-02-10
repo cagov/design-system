@@ -1,6 +1,17 @@
 # CHANGELOG for ds-compiled-css
 `ds-compiled-css`
 
+## 2.0.0
+
+* Fixes breaking changes with components that now offer CSS via JS.
+* Incorporates several renamed components. See separate changelogs within each component for implementation details.
+  * `ds-feedback` is now `ds-page-feedback`.
+  * `ds-agency-footer` is now `ds-site-footer`.
+  * `ds-branding` is now `ds-site-header`.
+  * `ds-menu` is now `ds-site-navigation`.
+  * `ds-content-navigation` is now `ds-page-navigation`.
+  * `ds-button-grid` is now `ds-link-grid`.
+
 # 1.0.5
 * Step list border color is now changed to highlight-color. Fixed mobile search accessibility. Fixed page-alert dismiss button accessibility.
 

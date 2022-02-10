@@ -3,8 +3,6 @@ title: Organize content strategically
 description: Well-organized content helps readers find what they’re looking for.
 ---
 
-# Organize content strategically
-
 <p class="text-lead">Well-organized content helps readers find what they’re looking for.</p>
 
 ## Standards

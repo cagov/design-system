@@ -1,0 +1,54 @@
+/* PAGE NAVIGATION */
+sidebar cagov-page-navigation .label {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.2px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+sidebar cagov-page-navigation ul,
+sidebar cagov-page-navigation ol:not([class*="menu"]):not([class*="nav"]):not([class*="footer-links"]),
+sidebar cagov-page-navigation ul:not([class*="menu"]):not([class*="nav"]):not([class*="footer-links"]) {
+  margin: 0;
+  text-indent: 0;
+  padding: 0;
+}
+
+sidebar cagov-page-navigation ul li {
+  padding-top: 14px;
+  padding-bottom: 18px;
+  margin-left: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid var(--gray-300, #e1e0e3);
+  line-height: 28.2px;
+  list-style: none;
+  &:first-child {
+    border-top: 1px solid var(--gray-300, #e1e0e3);
+  }
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  cagov-page-navigation .label {
+    display: none;
+  }
+
+  .sidebar-container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+  cagov-page-navigation ul li a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

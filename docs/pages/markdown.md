@@ -1,4 +1,6 @@
-# Markdown preview tests
+---
+title: Markdown preview tests
+---
 
 Here's a page for documenting and testing our markdown preview capabilities.
 
