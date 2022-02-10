@@ -6,6 +6,8 @@
 * Tweaks for design and content fixes
 * Some accessibility bugs on site fixed
 * Added reset feature to component demos
+* Component folder names updated for consistency along with npm package names, custom element names and css classes
+* Page titles now pulled from meta data
 
 ## 1.0.0 
 
