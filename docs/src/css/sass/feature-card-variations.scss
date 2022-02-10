@@ -44,7 +44,7 @@
 
 /* The title on the homepage is long and needs more space as an H1 */
 @media (min-width: 1176px) {
-  .cagov-featured-sidebar {
+  .cagov-featured-sidebar.max-w-40 {
     max-width: 40%;
   }  
 }
