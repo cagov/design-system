@@ -29,7 +29,7 @@ const generateFile = async () => {
   // Create cagov-icon components.
   glob.sync(cagovGenerateIconDemo.dir).forEach((fileName) => {
     const svgID = path.basename(fileName, path.extname(fileName));
-    cagovGenerateIconDemo.iconComponents += `<a href="cagov-icons-svg/${svgID}.svg" download="${svgID}.svg">${svgID}</a><cagov-icon data-icon="${svgID}"></cagov-icon>`;
+    cagovGenerateIconDemo.iconComponents += `<a href="/cagov-icons-svg/${svgID}.svg" download="${svgID}.svg">${svgID}</a><cagov-icon data-icon="${svgID}"></cagov-icon>`;
   });
 
   // After getting the mega svg, generate the file.
