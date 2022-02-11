@@ -1,4 +1,3 @@
-// import { fs } from fs;
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { exec } from 'child_process';
