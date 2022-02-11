@@ -196,5 +196,16 @@
     "slug": "step-list",
     "icon": "/illustrations/png/step-list.png",
     "svg": "svg/step-list.svg"
+  },
+  "icons": {
+    "name": "Icons",
+    "title": "Icons",
+    "type": "visual",
+    "status": "Alpha",
+    "blurb": "icons",
+    "description": "icons",
+    "slug": "icons",
+    "icon": "/illustrations/png/step-list.png",
+    "svg": "svg/step-list.svg"
   }
 }

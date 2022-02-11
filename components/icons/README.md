@@ -4,3 +4,5 @@
 - `-ids` : A space-separated list of icon ids.
 
 For example: `npm run sprite -ids=accessibility arrow-down left`
+
+{% include 'layouts/icon-demo.njk' %}

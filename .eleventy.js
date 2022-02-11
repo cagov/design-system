@@ -56,7 +56,9 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy({ '_site_dist/*': '/' });
   eleventyConfig.addPassthroughCopy({ '_build_dist/*': 'builds' });
-
+  eleventyConfig.addPassthroughCopy({
+    'components/icons/dist/svg': 'cagov-icons-svg',
+  });
   return {
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
