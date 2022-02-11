@@ -19,7 +19,7 @@ if (argv.ids) {
   const inputEnd = `.svg`;
   const inputSeparator = `${inputEnd},${inputStart}`;
   const input = inputStart + argv.ids.join(inputSeparator) + inputEnd;
-  const output = 'cagov-select-sprite.svg';
+  const output = 'cagov-icon-subset.svg';
 
   // Run command.
   const cmd = `svg-sprite-generate -l ${input} -o ${output}`;
