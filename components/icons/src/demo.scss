@@ -1,0 +1,26 @@
+.cagov-icon-demo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3em;
+  text-align: center;
+
+  @media screen and (min-width: 500px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cagov-icon-demo--card {
+  svg,
+  a {
+    display: block;
+    margin: 0 auto 1em;
+  }
+
+  svg {
+    max-width: 100%;
+
+    @media screen and (min-width: 500px) {
+      max-width: 100px;
+    }
+  }
+}

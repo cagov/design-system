@@ -10,9 +10,10 @@ const generateFile = async () => {
     iconComponents: '',
     destiniationFile: '../../docs/site/_includes/layouts/icon-demo.njk',
     getMarkup: (allIconsSVG, components) => `
-        <style>svg {fill:inherit}</style>
         ${allIconsSVG}
-        ${components}
+        <div class="cagov-icon-demo">
+          ${components} 
+        </div>
         `,
   };
 
@@ -29,7 +30,10 @@ const generateFile = async () => {
   // Create cagov-icon components.
   glob.sync(cagovGenerateIconDemo.dir).forEach((fileName) => {
     const svgID = path.basename(fileName, path.extname(fileName));
-    cagovGenerateIconDemo.iconComponents += `<a href="/cagov-icons-svg/${svgID}.svg" download="${svgID}.svg">${svgID}</a><cagov-icon data-icon="${svgID}"></cagov-icon>`;
+    cagovGenerateIconDemo.iconComponents += `<div class=cagov-icon-demo--card>
+      <cagov-icon data-icon="${svgID}"></cagov-icon>
+      <a href="/cagov-icons-svg/${svgID}.svg" download="${svgID}.svg">Download<br>${svgID}.svg</a>
+    </div>`;
   });
 
   // After getting the mega svg, generate the file.

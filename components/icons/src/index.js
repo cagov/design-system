@@ -6,7 +6,7 @@ export class CAGovIcon extends window.HTMLElement {
 
   template() {
     console.log(this.icon);
-    this.innerHTML = `<svg><use href="#${this.icon}"/><svg>`;
+    this.innerHTML = `<svg aria-hidden="true"><use href="#${this.icon}"/><svg>`;
   }
 }
 window.customElements.define('cagov-icon', CAGovIcon);
