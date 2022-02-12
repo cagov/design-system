@@ -26,7 +26,6 @@ if (argv.ids) {
 
   // Report.
   console.log('Attempting to combine SVGs...');
-  console.log(argv.ids);
   console.log(`...from ${inputStart} to ${output} `);
 
   exec(cmd);
