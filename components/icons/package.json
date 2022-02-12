@@ -5,12 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "run-s get-font split-svg sprite-all",
-    "get-font": "wget https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg --directory-prefix=src/original",
-    "split-svg": "font-blast src/original/CaGov.svg dist",
-    "sprite-all": "svg-sprite-generate -d dist/svg -o dist/allicons.svg",
+    "build": "run-s build:get-font build:split-svg build:sprite-all",
+    "build:get-font": "wget https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg -N --directory-prefix=fonts",
+    "build:split-svg": "font-blast fonts/CaGov.svg dist",
+    "build:sprite-all": "svg-sprite-generate -d dist/svg -o dist/allicons.svg",
+    "demo": "node scripts/generate-demo.js ",
     "sprite": "node scripts/sprite.js --i=$npm_config_ids",
-    "demo": "node scripts/generate-demo.js "
+    "all": "run-s build demo && cd ../../ && npm run site:build"
   },
   "repository": {
     "type": "git",

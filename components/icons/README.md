@@ -22,7 +22,7 @@ There are several methods for icluding icons in your project.
 
 5. Include the generated sprite and index.js in your project or page.
 
-6. Place inline with `<cagov-icon data-icon="[id]"></cagov-icon>`
+6. Place individual icon inline with `<cagov-icon data-icon="[id]"></cagov-icon>`
 
 ### Sample markup and demo
 
@@ -40,9 +40,11 @@ There are several methods for icluding icons in your project.
 
 1.`npm install icons`.
 
-2. Reference the font file and compiled css in your project or page.
+2. Make sure `fonts` folder is accessible to your web app or copy to a new location.
 
-3. Place inline with `<span class="ca-gov-icon-[id]" aria-hidden="true"></span>`
+3. Reference the compiled CSS in your project or page. Note the file paths in the CSS.
+
+4. Place individual icon inline with `<span class="ca-gov-icon-[id]" aria-hidden="true"></span>`
 
 ### Sample markup and demo
 
