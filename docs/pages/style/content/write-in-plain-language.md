@@ -15,6 +15,8 @@ We recommend a sixth grade reading level because:
 * Kids who translate English content for their non-English-speaking parents can do this more easily.
 * Machine translation at this reading level is more accurate.
 
+There's even a plain language requirement in [state law](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=6219.&lawCode=GOV).
+
 ## Why this is important
 
 Plain language lowers reading barriers and is clear and accessible to everyone, including readers with disabilities and limited English fluency. Plain language removes the struggle from finding and acting on information.
