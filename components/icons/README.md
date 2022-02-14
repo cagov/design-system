@@ -16,7 +16,7 @@ There are several methods for icluding icons in your project.
 
    - `-ids` : A space-separated list of icon ids.
 
-   - Example: `npm run sprite -ids=accessibility arrow-down left`
+   - Example: `npm run sprite -ids=gear arrow-down left`
 
 4. The generated sprite will be called `cagov-icon-subset.svg`.
 
@@ -29,7 +29,7 @@ There are several methods for icluding icons in your project.
 <html-preview>
 
 ```html preview
-<cagov-icon data-icon="accessibility"></cagov-icon>
+<cagov-icon data-icon="gear"></cagov-icon>
 <cagov-icon data-icon="arrow-down"></cagov-icon>
 <cagov-icon data-icon="left"></cagov-icon>
 ```
