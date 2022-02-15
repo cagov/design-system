@@ -51,7 +51,7 @@ There are several methods for icluding icons in your project.
 <html-preview>
 
 ```html preview
-<span class="ca-gov-icon-gear" aria-hidden="true"></span>
+<span class="ca-gov-icon-accessibility" aria-hidden="true"></span>
 <span class="ca-gov-icon-drive" aria-hidden="true"></span>
 <span class="ca-gov-icon-fire" aria-hidden="true"></span>
 ```
@@ -62,7 +62,9 @@ Pros: Easy to use
 
 Cons: Requires loading the entire 500 icon font
 
-## Accessibility
+<!-- If the title is simply `Accessibility`, the display of the accessibility icon breaks. -->
+
+## Accessibility recommendations
 
 Icons can be decorative or functional. Decorative icons should have aria-hidden=true. Functional icons should announce text to screen readers.
 
