@@ -1,5 +1,8 @@
 # Page navigation changelog
 
+## 2.1.2
+* Ensure the browser's focus follows the link, for accessibility purposes.
+
 ## 2.1.1
 * Removed JS-based insertion of this widget below H1 on the page.
 
