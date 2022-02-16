@@ -46,71 +46,180 @@ With respect to accessibility, choose colors in alignment with Web Content Acces
 
 Here’s what that looks like for recent CA.gov initiatives such as covid19.ca.gov and alpha.ca.gov. This is the default color palette for any new digital service.
 
-<span class="cagov-table">
-  <table>
-    <tr>
-      <th>Base Color</th><th>Dark</th><th>Light</th><th>Very Light</th>
-    </tr>
-    <tr class="bgcolor-chips">
-      <td style="background-color: #004ABC;"></td><td style="background-color: #003484;"></td><td style="background-color: #4d80d0;"></td><td style="background-color: #b3c9eb;"></td>
-    </tr>
-    <tr>
-      <td>Primary color: #004ABC</td><td>30% shade: #003484</td><td>30% tint: #4d80d0</td><td>70% tint: #b3c9eb</td>
-    </tr>
-    <tr class="bgcolor-chips">
-      <td style="background-color: #FF8000;"></td><td style="background-color: #b35a00;"></td><td style="background-color: #ffa64d;"></td><td style="background-color: #ffd9b3;"></td>
-    </tr>
-    <tr>
-      <td>Secondary color: #FF8000</td><td>30% shade: #b35a00</td><td>30% tint: #ffa64d</td><td>70% tint: #ffd9b3</td>
-    </tr>
-    <tr class="bgcolor-chips">
-      <td style="background-color: #FEC02F;"></td><td style="background-color: #b28621;"></td><td style="background-color: #fed36d;"></td><td style="background-color: #ffecc1;"></td>
-    </tr>
-    <tr>
-      <td>Highlight color: #FEC02F</td><td>30% shade: #b28621</td><td>30% tint: #fed36d</td><td>70% tint: #ffecc1</td>
-    </tr>
-  </table>
-</span>
+### Primary color 
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-primary-color radius-round w-7 h-7 m-x-a"></div>
+    <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary color</p>
+    <p class="font-size-1">#004ABC</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-primary-dark-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary dark color</p>
+      <p class="font-size-1">#003484</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-primary-light-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary light color</p>
+      <p class="font-size-1">#4d80d0</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-primary-lightest-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary lightest color</p>
+      <p class="font-size-1">#b3c9eb</p>
+  </div>
+</div>
+
+
+### Seondary color 
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-secondary-color radius-round w-7 h-7 m-x-a"></div>
+    <p class="font-size-1 m-t-2 m-b-0 text-bold">Seondary color</p>
+    <p class="font-size-1">#FF8000</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-secondary-dark-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Seondary dark color</p>
+      <p class="font-size-1">#b28621</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-secondary-light-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Seondary light color</p>
+      <p class="font-size-1">#ffa64d</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-secondary-lightest-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Seondary lightest color</p>
+      <p class="font-size-1">#ffd9b3</p>
+  </div>
+</div>
+
+
+### Highlight color 
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-highlight-color radius-round w-7 h-7 m-x-a"></div>
+    <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight color</p>
+    <p class="font-size-1">#FEC02F</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-highlight-dark-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight dark color</p>
+      <p class="font-size-1">#b35a00</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-highlight-light-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight light color</p>
+      <p class="font-size-1">#fed36d</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-highlight-lightest-color radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight lightest color</p>
+      <p class="font-size-1">#ffecc1</p>
+  </div>
+</div>
+
+
+<hr class="m-y-5">
 
 In addition to the 3 colors above, we standardize colors used for global UI elements such as notifications.
 
-### Grayscale
 
-<span class="cagov-table">
-  <table class="partial-borders">
-    <tr class="bgcolor-chips">
-      <td style="background-color: #FFFFFF;"></td><td style="background-color: #F9F9FA;"></td><td style="background-color: #E1E0E3;"></td><td style="background-color: #D3D2D6;"></td>
-    </tr>
-    <tr>
-      <td>White:<br>#FFFFFF</td><td>Gray 100: #F9F9FA</td><td>Gray 300: #E1E0E3</td><td>Gray 400: #D3D2D6</td>
-    </tr>
-    <tr class="bgcolor-chips">
-      <td style="background-color: #C4C3CB;"></td><td style="background-color: #B3B3B8;"></td><td style="background-color: #A09FA7;"></td><td style="background-color: #6C6B77;"></td>
-    </tr>
-    <tr>
-      <td>Gray 500: #C4C3CB</td><td>Gray 600: #B3B3B8</td><td>Gray 700: #A09FA7</td><td>Gray 800: #6C6B77</td>
-    </tr>
-    <tr class="bgcolor-chips">
-      <td style="background-color: #3F3E4D;"></td><td style="background-color: #000000;"></td>
-    </tr>
-    <tr>
-      <td>Gray 900: #3F3E4D</td><td>Black:<br>#000000</td>
-    </tr>
-  </table>
-</span>
+
+### Grayscale
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-white-color radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
+    <p class="font-size-1 m-t-2 m-b-0 text-bold">White</p>
+    <p class="font-size-1">#FFFFFF</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-100 radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 100</p>
+      <p class="font-size-1">#f9f9fa</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-200 radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 200</p>
+      <p class="font-size-1">#ededef</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-300 radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 300</p>
+      <p class="font-size-1">#e1e0e3</p>
+  </div>
+</div>
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-gray-400 radius-round w-7 h-7 m-x-a"></div>
+    <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 400</p>
+    <p class="font-size-1">#d3d2d6</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-500 radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 500</p>
+      <p class="font-size-1">#c4c3c8</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-600 radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 600</p>
+      <p class="font-size-1">#b3b2b8</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-700 radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 700</p>
+      <p class="font-size-1">#a09fa7</p>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-gray-800 radius-round w-7 h-7 m-x-a"></div>
+    <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 800</p>
+    <p class="font-size-1">#6c6b77</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-900 radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 900</p>
+      <p class="font-size-1">#3f3e4d</p>
+  </div>
+    <div class="text-center p-t-3">
+    <div class="bg-black radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Black</p>
+      <p class="font-size-1">#000000</p>
+  </div>
+  <div></div>
+
+</div>
+
+
 
 ### System status colors
 
-<span class="cagov-table">
-  <table>
-    <tr class="bgcolor-chips">
-      <td style="background-color: #008542;"></td><td style="background-color: #B71234;"></td><td style="background-color: #ffd700;"></td><td style="background-color: #000080;"></td>
-    </tr>
-    <tr>
-      <td>Success:<br>#008542</td><td>Danger:<br>#B71234</td><td>Warning:<br>#ffd700</td><td>Info:<br>#000080</td>
-    </tr>
-  </table>
-</span>
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-success radius-round w-7 h-7 m-x-a"></div>
+    <p class="font-size-1 m-t-2 m-b-0 text-bold">Success</p>
+    <p class="font-size-1">#008542</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-danger radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Danger</p>
+      <p class="font-size-1">#B71234</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-warning radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Warning</p>
+      <p class="font-size-1">#ffd700</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-info radius-round w-7 h-7 m-x-a"></div>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Info</p>
+      <p class="font-size-1">#000080</p>
+  </div>
+</div>
+
 
 ## Typography
 

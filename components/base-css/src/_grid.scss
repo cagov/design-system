@@ -5,7 +5,7 @@
   .card-grid-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc(min(376px, 100%)), 1fr));
-    grid-gap: 1.5rem;
+    grid-gap: var(--s-3, 1.5rem);
   }
 }
 
@@ -14,7 +14,7 @@
   .card-grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc(min(300px, 100%)), 1fr));
-    grid-gap: 1.5rem;
+    grid-gap: var(--s-3, 1.5rem);
   }
 }
 
@@ -23,6 +23,35 @@
   .card-grid-4 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc(min(250px, 100%)), 1fr));
-    grid-gap: 1.5rem;
+    grid-gap: var(--s-3, 1.5rem);
+  }
+}
+
+.grid-container {
+  display: grid;
+  gap: var(--s-3, 1.5rem);
+  // columns in mobile
+  @media (min-width: 576px) {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+// medium devices
+.grid-md-container {
+  display: grid;
+  gap: var(--s-3, 1.5rem);
+  @media (min-width: 768px) {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+// larger devices
+.grid-lg-container {
+  display: grid;
+  gap: var(--s-3, 1.5rem);
+  @media (min-width: 992px) {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
   }
 }
