@@ -5,13 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "run-s build:get-font build:split-svg build:sprite-all",
-    "build:get-font": "node scripts/generateIcons.js",
-    "build:split-svg": "font-blast fonts/CaGov.svg dist",
+    "build": "run-s icons build:sprite-all",
+    "icons": "node scripts/generateIcons.js",
     "build:sprite-all": "node scripts/generateSprite.js",
     "demo": "node scripts/generateDemo.js ",
     "sprite-some": "node scripts/generateSprite.js --i=$npm_config_ids",
-    "all": "run-s build demo && cd ../../ && npm run site:build"
+    "all": "run-s build demo && cd ../../ && npm run site:build",
+    "clear": "rm -rf dist src/fonts/CAGov.svg"
   },
   "repository": {
     "type": "git",
