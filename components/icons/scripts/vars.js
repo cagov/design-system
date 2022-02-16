@@ -4,10 +4,12 @@ const vars = {
     'https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg',
 
   // This component.
-  componentFontAll: 'fonts/CaGov.svg',
+  componentDir: 'dist',
+  componentDirFonts: 'src/fonts',
+  componentFontAll: 'src/fonts/CaGov.svg',
   componentFileSome: 'cagovSomeIcons.svg',
   componentFileAll: 'dist/allIcons.svg',
-  componentDir: 'dist',
+
   componentSubdir: 'dist/svg',
   componentTextLabel: 'Download',
   componentPatternEach: 'dist/svg/*.svg',

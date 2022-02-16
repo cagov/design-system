@@ -1,6 +1,7 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { exec } from 'child_process';
+import vars from './vars.js';
 
 // Set up arguments for the command line.
 const { argv } = yargs(hideBin(process.argv))
@@ -15,11 +16,11 @@ const { argv } = yargs(hideBin(process.argv))
 // Parse arguments and run through svg-generate command.
 if (argv.ids) {
   // Inputs and outputs.
-  const inputStart = 'dist/svg/';
+  const inputStart = `${vars.componentSubdir}/`;
   const inputEnd = `.svg`;
   const inputSeparator = `${inputEnd},${inputStart}`;
   const input = inputStart + argv.ids.join(inputSeparator) + inputEnd;
-  const output = 'cagov-icon-subset.svg';
+  const output = vars.componentFileSome;
 
   // Run command.
   const cmd = `svg-sprite-generate -l ${input} -o ${output}`;
