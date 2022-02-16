@@ -51,7 +51,7 @@ Here’s what that looks like for recent CA.gov initiatives such as covid19.ca.g
   <div class="text-center p-t-3">
     <div class="bg-primary-color radius-round w-7 h-7 m-x-a"></div>
     <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary color</p>
-    <p class="font-size-1">#004ABC</p>
+    <p class="font-size-1">#004abc</p>
   </div>
   <div class="text-center p-t-3">
     <div class="bg-primary-dark-color radius-round w-7 h-7 m-x-a"></div>
@@ -71,26 +71,26 @@ Here’s what that looks like for recent CA.gov initiatives such as covid19.ca.g
 </div>
 
 
-### Seondary color 
+### Secondary color 
 <div class="grid-container">
   <div class="text-center p-t-3">
     <div class="bg-secondary-color radius-round w-7 h-7 m-x-a"></div>
-    <p class="font-size-1 m-t-2 m-b-0 text-bold">Seondary color</p>
+    <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary color</p>
     <p class="font-size-1">#FF8000</p>
   </div>
   <div class="text-center p-t-3">
     <div class="bg-secondary-dark-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Seondary dark color</p>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary dark color</p>
       <p class="font-size-1">#b28621</p>
   </div>
   <div class="text-center p-t-3">
     <div class="bg-secondary-light-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Seondary light color</p>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary light color</p>
       <p class="font-size-1">#ffa64d</p>
   </div>
   <div class="text-center p-t-3">
     <div class="bg-secondary-lightest-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Seondary lightest color</p>
+      <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary lightest color</p>
       <p class="font-size-1">#ffd9b3</p>
   </div>
 </div>
@@ -101,7 +101,7 @@ Here’s what that looks like for recent CA.gov initiatives such as covid19.ca.g
   <div class="text-center p-t-3">
     <div class="bg-highlight-color radius-round w-7 h-7 m-x-a"></div>
     <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight color</p>
-    <p class="font-size-1">#FEC02F</p>
+    <p class="font-size-1">#fec02f</p>
   </div>
   <div class="text-center p-t-3">
     <div class="bg-highlight-dark-color radius-round w-7 h-7 m-x-a"></div>
@@ -132,7 +132,7 @@ In addition to the 3 colors above, we standardize colors used for global UI elem
   <div class="text-center p-t-3">
     <div class="bg-white-color radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
     <p class="font-size-1 m-t-2 m-b-0 text-bold">White</p>
-    <p class="font-size-1">#FFFFFF</p>
+    <p class="font-size-1">#ffffff</p>
   </div>
   <div class="text-center p-t-3">
     <div class="bg-gray-100 radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
@@ -206,7 +206,7 @@ In addition to the 3 colors above, we standardize colors used for global UI elem
   <div class="text-center p-t-3">
     <div class="bg-danger radius-round w-7 h-7 m-x-a"></div>
       <p class="font-size-1 m-t-2 m-b-0 text-bold">Danger</p>
-      <p class="font-size-1">#B71234</p>
+      <p class="font-size-1">#b71234</p>
   </div>
   <div class="text-center p-t-3">
     <div class="bg-warning radius-round w-7 h-7 m-x-a"></div>
