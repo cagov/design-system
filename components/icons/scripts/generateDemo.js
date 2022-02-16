@@ -2,13 +2,17 @@ import glob from 'glob';
 import path from 'path';
 import fs from 'fs';
 import fileGetContents from 'file-get-contents';
+import vars from './vars.js';
 
-const generateFile = async () => {
+const generateDemo = async () => {
   // Controller.
-  const cagovGenerateIconDemo = {
-    dir: 'dist/svg/*.svg',
+  const demo = {
+    pattern: vars.componentPatternEach,
     iconComponents: '',
-    destiniationFile: '../../docs/site/_includes/layouts/icon-demo.njk',
+    siteFileTemplate: vars.siteFileTemplate,
+    siteDir: vars.siteDir,
+    label: vars.componentTextLabel,
+    iconSprite: vars.componentFileAll,
     getMarkup: (allIconsSVG, components) => `
         ${allIconsSVG}
         <div class="cagov-icon-demo">
@@ -19,7 +23,7 @@ const generateFile = async () => {
 
   // Create demo.html
   const writeFile = (code) => {
-    fs.writeFile(cagovGenerateIconDemo.destiniationFile, code, (error) => {
+    fs.writeFile(demo.siteFileTemplate, code, (error) => {
       if (error) {
         return console.log(error);
       }
@@ -28,24 +32,19 @@ const generateFile = async () => {
   };
 
   // Create cagov-icon components.
-  glob.sync(cagovGenerateIconDemo.dir).forEach((fileName) => {
+  glob.sync(demo.pattern).forEach((fileName) => {
     const svgID = path.basename(fileName, path.extname(fileName));
-    cagovGenerateIconDemo.iconComponents += `<div class=cagov-icon-demo--card>
+    demo.iconComponents += `<div class=cagov-icon-demo--card>
       <cagov-icon data-icon="${svgID}"></cagov-icon>
-      <a href="/cagov-icons-svg/${svgID}.svg" download="${svgID}.svg">Download<br>${svgID}.svg</a>
+      <a href="${demo.siteDir}${svgID}.svg" download="${svgID}.svg">${demo.label}<br>${svgID}.svg</a>
     </div>`;
   });
 
   // After getting the mega svg, generate the file.
-  await fileGetContents('dist/allicons.svg')
-    .then((contents) =>
-      cagovGenerateIconDemo.getMarkup(
-        contents,
-        cagovGenerateIconDemo.iconComponents,
-      ),
-    )
+  await fileGetContents(demo.iconSprite)
+    .then((contents) => demo.getMarkup(contents, demo.iconComponents))
     .then((wholeFile) => writeFile(wholeFile));
 };
 
 // Create a file with everything.
-generateFile();
+generateDemo();
