@@ -5,7 +5,7 @@ const vars = {
 
   // This component.
   componentDir: 'dist',
-  componentDirFonts: 'src/fonts',
+  componentDirFonts: 'src/fonts/',
   componentFontAll: 'src/fonts/CaGov.svg',
   componentFileSome: 'cagovSomeIcons.svg',
   componentFileAll: 'dist/allIcons.svg',
