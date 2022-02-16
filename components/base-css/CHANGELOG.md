@@ -1,5 +1,9 @@
 # Base CSS changelog
 
+## 1.0.17
+* Added more utility classes (flex for medium and larger devises, height and width classes, more text clasees). 
+* Added grid container classes.
+* Added system status color variables and utility classes.
 
 ## 1.0.16
 * Removed default button style.

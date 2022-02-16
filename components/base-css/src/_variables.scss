@@ -156,9 +156,15 @@ $desktop-min: 1176px;
   --gray-500: #c4c3c8;
   --gray-600: #b3b2b8;
   --gray-700: #a09fa7;
-  --gray-800: #3f3e4d;
+  --gray-800: #6c6b77;
   --gray-900: #3f3e4d;
   --black: #000;
+
+  // System status colors
+  --success: #008542;
+  --danger: #b71234;
+  --warning: #ffd700;
+  --info: #000080;
 
   // Animations and transitions
   --animation-duration-1: 0.1s;
