@@ -6,7 +6,9 @@ References [Version 5.6.1 of the CAGov Icon Library](https://california.azureedg
 
 There are several methods for icluding icons in your project.
 
-## Method 1: Minimal sprite and javascript (Recommended)
+## Method 1
+
+### Minimal sprite and JavaScript (Recommended)
 
 1. Identify all the icons you will need for your project by id using the <a href="#icon-library">Icon library</a> below.
 
@@ -29,14 +31,19 @@ There are several methods for icluding icons in your project.
 <html-preview>
 
 ```html preview
-<cagov-icon data-icon="gear"></cagov-icon>
+<!--Decorative-->
 <cagov-icon data-icon="arrow-down"></cagov-icon>
-<cagov-icon data-icon="left"></cagov-icon>
+<cagov-icon data-icon="drive"></cagov-icon>
+<!--Functional-->
+<cagov-icon data-icon="gear" data-sr="Settings"></cagov-icon>
+<cagov-icon data-icon="left" data-sr="Next Page"></cagov-icon>
 ```
 
 </html-preview>
 
-## Method 2: Icon font and CSS.
+## Method 2
+
+### Icon font and CSS.
 
 1.`npm install icons`.
 
@@ -53,7 +60,8 @@ There are several methods for icluding icons in your project.
 ```html preview
 <span class="ca-gov-icon-accessibility" aria-hidden="true"></span>
 <span class="ca-gov-icon-drive" aria-hidden="true"></span>
-<span class="ca-gov-icon-fire" aria-hidden="true"></span>
+<span class="ca-gov-icon-ferry" aria-hidden="true"></span>
+<span class="ca-gov-icon-van" aria-hidden="true"></span>
 ```
 
 </html-preview>
@@ -66,7 +74,7 @@ Cons: Requires loading the entire 500 icon font
 
 ## Accessibility recommendations
 
-Icons can be decorative or functional. Decorative icons should have aria-hidden=true. Functional icons should announce text to screen readers.
+These icons are decorative by default and use the `aria-hidden` attribute. Associated text can be made available to screen readers using [Method 1](#method-1) and the attribute pattern `data-sr="My descriptive text."`
 
 ## Theming
 
