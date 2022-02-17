@@ -5,7 +5,7 @@ const vars = {
 
   // This component.
   componentDir: 'dist',
-  componentDirFonts: 'src/fonts/',
+  componentDirFonts: 'src/fonts/', // If changed, update .eleventy.js
   componentFontAll: 'src/fonts/CaGov.svg',
   componentFileSome: 'cagovSomeIcons.svg',
   componentFileAll: 'dist/allIcons.svg',
@@ -15,7 +15,7 @@ const vars = {
   componentPatternEach: 'dist/svg/*.svg',
 
   // DS Website.
-  siteDir: '/cagov-icons-svg/',
+  siteDir: '/cagov-icons-svg/', // If changed, update .eleventy.js
   siteFileTemplate: '../../docs/site/_includes/layouts/icon-demo.njk',
 };
 
