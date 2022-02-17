@@ -13,12 +13,26 @@ const generateDemo = async () => {
     siteDir: vars.siteDir,
     label: vars.componentTextLabel,
     iconSprite: vars.componentFileAll,
-    getMarkup: (allIconsSVG, components) => `
-        ${allIconsSVG}
+    getMarkup: (sprite, components) => {
+      // Remove xml declaration.
+      let strippedSprite = sprite.replace(
+        '<?xml version="1.0" encoding="utf-8"?>',
+        '',
+      );
+
+      // Hide sprite.
+      strippedSprite = strippedSprite.replace(
+        '<svg ',
+        '<svg style="display:none;" ',
+      );
+      // Return entire demo.
+      return `
+        ${strippedSprite}
         <div class="cagov-icon-demo">
           ${components} 
         </div>
-        `,
+        `;
+    },
   };
 
   // Create demo.html
