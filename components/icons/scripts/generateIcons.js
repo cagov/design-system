@@ -4,8 +4,6 @@ import util from 'util';
 import vars from './vars.js';
 import generateSprite from './generateSprite.js';
 
-// svg-sprite-generate -d dist/svg -o dist/allicons.svg",
-
 const urlToSVG = util.promisify(wget);
 
 const generateIcons = async () => {

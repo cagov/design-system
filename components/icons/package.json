@@ -5,13 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "run-s icons build:sprite-all",
-    "icons": "node scripts/generateIcons.js",
-    "build:sprite-all": "node scripts/generateSprite.js",
-    "demo": "node scripts/generateDemo.js ",
-    "sprite-some": "node scripts/generateSprite.js --i=$npm_config_ids",
-    "all": "run-s build demo && cd ../../ && npm run site:build",
-    "clear": "rm -rf dist src/fonts/CAGov.svg"
+    "build": "echo 'no build command. See project README.'",
+    "build:sprite-some": "node scripts/generateSprite.js --i=$npm_config_ids",
+    "dev:demo": "node scripts/generateDemo.js ",
+    "dev:icons": "node scripts/generateIcons.js",
+    "dev:clear-cache": "run-s dev:icons dev:demo && cd ../../ && npm run site:build",
+    "dev:rm": "rm -rf dist src/fonts/CAGov.svg"
   },
   "repository": {
     "type": "git",
