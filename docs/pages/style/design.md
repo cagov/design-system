@@ -76,7 +76,7 @@ Here’s what that looks like for recent CA.gov initiatives such as covid19.ca.g
   <div class="text-center p-t-3">
     <div class="bg-secondary-color radius-round w-7 h-7 m-x-a"></div>
     <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary color</p>
-    <p class="font-size-1">#FF8000</p>
+    <p class="font-size-1">#ff8000</p>
   </div>
   <div class="text-center p-t-3">
     <div class="bg-secondary-dark-color radius-round w-7 h-7 m-x-a"></div>
