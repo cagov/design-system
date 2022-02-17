@@ -1,10 +1,17 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { exec } from 'child_process';
+import path from 'path';
 import vars from './vars.js';
 
 // Default command.
-let cmd = `svg-sprite-generate -d ${vars.componentSubdir} -o ${vars.componentFileAll}`;
+
+const __dirname = path.dirname('svg-sprite-generate');
+
+let cmd = `${path.resolve(
+  __dirname,
+  'node_modules/.bin/svg-sprite-generate',
+)} -d ${vars.componentSubdir} -o ${vars.componentFileAll}`;
 
 // Set up arguments for the command line.
 const { argv } = yargs(hideBin(process.argv))
@@ -29,13 +36,18 @@ if (argv.ids) {
   cmd = `svg-sprite-generate -l ${input} -o ${output}`;
 
   // Report.
-  console.log('Attempting to combine SVGs...');
-  console.log(`...from ${inputStart} to ${output} `);
+  console.log(`==> CAGOV: ${input} ==> ${output}`);
 }
 
 // Run command.
-exec(cmd, (error) => {
+exec(cmd, (error, stdout, stderr) => {
   if (error) {
     console.log(`error: ${error.message}`);
+    return;
   }
+  if (stderr) {
+    console.log(`stderr: ${stderr}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);
 });
