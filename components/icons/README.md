@@ -21,7 +21,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. Identify all the icons you will need for your project by id using the <a href="#icon-library">Icon library</a> below.
 
-2. `npm install`
+2. `npm install @cagov/ds-icons`
 
 3. Run the command `npm run build:sprite-some -ids=[ids]` to generate a the sprite
 
@@ -66,13 +66,13 @@ Recommended for projects that use 1-9 icons.
 
 ### Icon font and CSS.
 
-Recommended for projects where modifying HTML and Javascript is challenging.
+Recommended for projects where content authors need to be able to add any font inline using only HTML.
 
 2. Copy the `src/fonts` folder to your web app.
 
-3. Copy the `dist/icon-font.css` folder to your web app.
+3. Copy the `src/icon-font.css` file to your web app.
 
-4. Include the CSS in your project or page. The CSS must be at the directory level as the `fonts` folder.
+4. Include the CSS in your project or page. The CSS must be at the same directory level as the `fonts` folder.
 
 5. Place individual icon in HTML using `<span class="ca-gov-icon-[id]" aria-hidden="true"></span>`
 
