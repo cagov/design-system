@@ -1,20 +1,25 @@
 # Contributors
 
-## Generate the files
+## Development
 
-- `npm run build`: Builds the mega sprite and individual SVGs from the hosted icon font. You should only have to run this when new versions of the font are released.
-  Check the version in the `get-font` script.
+- `npm run build:sprite-some`: A utility command for developers to create sprite with a subset of icons.
+
+- `npm run dev:clear-cache`: Regenerates all the assets needed related to icons and cleares the website design cache.
+
+- `npm run dev:demo`: Regenerates the icon library.
+
+- `npm run dev:icons`: Regenerates the icon set from the hosted CA.gov font. You should only have to run this when new versions of the font are released.
 
 ## About fonts
 
 - Currently the fonts in the fonts folder and icon-font.scss and are hard coded. Ideally we'd create a script so they can be downloaded from source if need be.
 
-## Manage the website demo
+## Design system icon library management
 
-- `npm run demo`: Create the demo template at `/docs/site/_includes/layouts/icon-demo.njk`.
+- The icon library is written to `/docs/site/_includes/layouts/icon-demo.njk`.
 
-- SVGs are transfered to the destination site via `/.eleventy.js`
+- SVGs and font files are transfered via pass through at `/.eleventy.js`
 
-- demo.css is included at `docs/src/css/sass/index.scss` npm run site:build to update.
+- `demo.scss` is included at `docs/src/css/sass/index.scss`
 
-- Components is index.js JS is included at docs/src/css/sass/index.scss import '../../../components/icons/src/index.js';
+- Component's JS is included at `/docs/src/js/sass/index.js`';

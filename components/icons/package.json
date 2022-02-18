@@ -7,10 +7,9 @@
   "scripts": {
     "build": "echo 'no build command. See project README.'",
     "build:sprite-some": "node scripts/generateSprite.js --i=$npm_config_ids",
-    "dev:demo": "node scripts/generateDemo.js ",
-    "dev:icons": "node scripts/generateIcons.js",
     "dev:clear-cache": "run-s dev:icons dev:demo && cd ../../ && npm run site:build",
-    "dev:rm": "rm -rf dist src/fonts/CAGov.svg"
+    "dev:demo": "node scripts/generateDemo.js ",
+    "dev:icons": "node scripts/generateIcons.js"
   },
   "repository": {
     "type": "git",
