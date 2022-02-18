@@ -1,4 +1,4 @@
-.cagov-icon-demo {
+.cagov-icon-library {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
@@ -13,7 +13,7 @@
   }
 }
 
-.cagov-icon-demo--card {
+.cagov-icon-library--card {
   svg,
   a {
     display: block;

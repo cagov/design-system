@@ -4,9 +4,9 @@ import fs from 'fs';
 import fileGetContents from 'file-get-contents';
 import vars from './vars.js';
 
-const generateDemo = async () => {
+const generateLibrary = async () => {
   // Controller.
-  const demo = {
+  const library = {
     pattern: vars.componentPatternEach,
     iconComponents: '',
     siteFileTemplate: vars.siteFileTemplate,
@@ -25,19 +25,19 @@ const generateDemo = async () => {
         '<svg ',
         '<svg style="display:none;" ',
       );
-      // Return entire demo.
+      // Return entire library.
       return `
         ${strippedSprite}
-        <div class="cagov-icon-demo">
+        <div class="cagov-icon-library">
           ${components} 
         </div>
         `;
     },
   };
 
-  // Create demo.html
+  // Writes icon-library.njk
   const writeFile = (code) => {
-    fs.writeFile(demo.siteFileTemplate, code, (error) => {
+    fs.writeFile(library.siteFileTemplate, code, (error) => {
       if (error) {
         return console.log(error);
       }
@@ -46,19 +46,19 @@ const generateDemo = async () => {
   };
 
   // Create cagov-icon components.
-  glob.sync(demo.pattern).forEach((fileName) => {
+  glob.sync(library.pattern).forEach((fileName) => {
     const svgID = path.basename(fileName, path.extname(fileName));
-    demo.iconComponents += `<div class=cagov-icon-demo--card>
+    library.iconComponents += `<div class=cagov-icon-library--card>
       <cagov-icon data-icon="${svgID}"></cagov-icon>
-      <a href="${demo.siteDir}${svgID}.svg" download="${svgID}.svg">${demo.label}<br>${svgID}.svg</a>
+      <a href="${library.siteDir}${svgID}.svg" download="${svgID}.svg">${library.label}<br>${svgID}.svg</a>
     </div>`;
   });
 
   // After getting the mega svg, generate the file.
-  await fileGetContents(demo.iconSprite)
-    .then((contents) => demo.getMarkup(contents, demo.iconComponents))
+  await fileGetContents(library.iconSprite)
+    .then((contents) => library.getMarkup(contents, library.iconComponents))
     .then((wholeFile) => writeFile(wholeFile));
 };
 
 // Create a file with everything.
-generateDemo();
+generateLibrary();

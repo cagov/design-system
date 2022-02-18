@@ -23,11 +23,11 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 2. `npm install @cagov/ds-icons`
 
-3. Run the command `npm run build:sprite-some -ids=[ids]` to generate a the sprite
+3. Run the command `npm run dev:sprite-some -ids=[ids]` to generate a the sprite
 
    - `-ids` : A space-separated list of icon ids.
 
-   - Example: `npm run build:sprite-some -ids=gear arrow-down left`
+   - Example: `npm run dev:sprite-some -ids=gear arrow-down left`
 
 4. The generated sprite will be called `cagovSomeIcons.svg`.
 
@@ -110,4 +110,4 @@ As a component in Alpha status, this component must pass the following accessibi
 
 Download individual svgs using the links below.
 
-{% include 'layouts/icon-demo.njk' %}
+{% include 'layouts/icon-library.njk' %}

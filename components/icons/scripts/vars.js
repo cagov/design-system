@@ -16,7 +16,7 @@ const vars = {
 
   // DS Website.
   siteDir: '/cagov-icons-svg/', // If changed, update .eleventy.js
-  siteFileTemplate: '../../docs/site/_includes/layouts/icon-demo.njk',
+  siteFileTemplate: '../../docs/site/_includes/layouts/icon-library.njk',
 };
 
 export default vars;

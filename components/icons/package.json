@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "echo 'no build command. See project README.'",
-    "build:sprite-some": "node scripts/generateSprite.js --i=$npm_config_ids",
-    "dev:clear-cache": "run-s dev:icons dev:demo && cd ../../ && npm run site:build",
-    "dev:demo": "node scripts/generateDemo.js ",
+    "dev:sprite-some": "node scripts/generateSprite.js --i=$npm_config_ids",
+    "dev:clear-cache": "run-s dev:icons dev:library && cd ../../ && npm run site:build",
+    "dev:library": "node scripts/generateLibrary.js ",
     "dev:icons": "node scripts/generateIcons.js",
     "dev:font-sass": "sass src/icon-font.scss src/icon-font.css"
   },
