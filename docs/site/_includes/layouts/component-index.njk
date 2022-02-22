@@ -61,11 +61,14 @@
       </div>
 
       <div class="cagov-content content-cell">
-        {% block componentPageTitle %}
-          <h1 class="page-title">
-            {{ title | safe }}
-          </h1>
+        <h1 class="page-title">
+          {{ title | safe }}
+        </h1>
+
+        {% block componentDevStage %}
+          {# We will populate this on the individual component pages. #}
         {% endblock %}
+        
         {{ content | safe }}
       </div>
     </article>

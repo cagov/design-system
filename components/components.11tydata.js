@@ -3,9 +3,6 @@ const path = require('path');
 const components = require('../docs/site/_data/editable/components.json');
 const defaults = require('../docs/site/_data/editable/defaults.json');
 
-const getComponentSlug = (article) =>
-  article.page.filePathStem.match(/\/components\/(.+?)\/.+/)[1];
-
 module.exports = {
   layout: 'component-page',
   tags: ['component'],
@@ -14,15 +11,21 @@ module.exports = {
     social_image_height: 630,
   },
   eleventyComputed: {
-    // componentSlug gets the folder name for the page's component.
-    componentSlug: (article) => getComponentSlug(article),
+    // This component's folder name, or slug.
+    componentSlug: (article) =>
+      article.page.filePathStem.match(/\/components\/(.+?)\/.+/)[1],
+    // This component's content data for the 11ty site.
+    component: (article) => components[article.componentSlug],
+    // This component's title.
+    title: (article) => article.component.name,
+    // This component's description.
+    description: (article) => article.component.description,
     // Need to ensure the permalink is always lower-case, even though some docs are not.
     permalink: (article) =>
       `${article.page.filePathStem.toLowerCase()}/index.html`,
-    // The `has` object checks to see if the component has various .md files.
+    // The `has` object checks to see if this component has various .md files.
     has: (article) => {
-      const componentSlug = getComponentSlug(article);
-      const pattern = `components/${componentSlug}/*.md`;
+      const pattern = `components/${article.componentSlug}/*.md`;
       const matches = glob
         .sync(pattern, { nocase: true })
         .map((file) => path.basename(file).toLowerCase());
@@ -33,48 +36,12 @@ module.exports = {
         changelog: matches.includes('changelog.md'),
       };
     },
-    description: (article) => {
-      const componentSlug = getComponentSlug(article);
-      const component = components[componentSlug];
-
-      if (component) {
-        return component.description;
-      }
-
-      return defaults.page.description;
-    },
     metadata: {
-      page_title: (article) => {
-        const componentSlug = getComponentSlug(article);
-        const component = components[componentSlug];
-        // const filename = article.page.fileSlug;
-
-        if (component) {
-          return `${component.title} | ${defaults.site.name}`;
-        }
-
-        return defaults.site.name;
-      },
-      social_image_path: (article) => {
-        const componentSlug = getComponentSlug(article);
-        const component = components[componentSlug];
-
-        if (component) {
-          return component.icon;
-        }
-
-        return defaults.page.social_image_path;
-      },
-      social_image_alt_text: (article) => {
-        const componentSlug = getComponentSlug(article);
-        const component = components[componentSlug];
-
-        if (component) {
-          return `Illustration of the ${component.name} component`;
-        }
-
-        return defaults.page.social_image_alt_text;
-      },
+      page_title: (article) =>
+        `${article.component.title} | ${defaults.site.name}`,
+      social_image_path: (article) => article.component.icon,
+      social_image_alt_text: (article) =>
+        `Illustration of the ${article.component.name} component`,
     },
   },
 };

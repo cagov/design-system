@@ -6,6 +6,36 @@
   {% if has["changelog"] %}<meta itemprop="additionalProperty" content="has:changelog">{% endif %}
 {% endblock %}
 
-{% block componentPageTitle %}
-{# Titles are in the markdown on component pages, so remove it from the template. #}
+{% macro componentDocumentTab(name, stem, slug) %}
+  {% if stem in page.url | lower %}
+    <span class="component-document-tabs-selected" aria-current="page">
+      {{ name }}
+    </span>
+  {% elif has[stem] %}
+    <a class="component-document-tabs-link" href="/components/{{ slug }}/{{ stem }}/">
+      {{ name }}
+    </a>
+  {% endif %}
+{% endmacro %}
+
+{% block componentDevStage %}
+  <div class="component-document-tabs">
+    {{ componentDocumentTab('Readme', 'readme', component.slug) }}
+    {{ componentDocumentTab('Use cases', 'use-cases', component.slug) }}
+    {{ componentDocumentTab('Changelog', 'changelog', component.slug) }}
+  </div>
+  <div class="component-development-stage">
+    <p class="component-development-stage-heading">Development stage</p>
+    <dl class="component-development-stage-grid">
+      {% for stageName, componentStage in editable.componentStages %}
+        <div class="{{ 'current-development-stage' if component.status === stageName }}">
+          <dt>{{ loop.index }}</dt>
+          <dd>{{ stageName }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+    <p class="component-development-stage-description">
+      {{ editable.componentStages[component.status].description | safe }}
+    </p>
+  </div>
 {% endblock %}
