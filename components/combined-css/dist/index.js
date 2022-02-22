@@ -623,6 +623,8 @@ class CAGovPageNavigation extends window.HTMLElement {
               top: position.top - 200,
             });
 
+            target.focus();
+
             window.history.pushState(null, null, hashval);
           }
         } catch (error) {
