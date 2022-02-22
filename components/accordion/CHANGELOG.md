@@ -3,7 +3,7 @@
 <a href="https://www.npmjs.com/package/@cagov/ds-accordion">https://www.npmjs.com/package/@cagov/ds-accordion</a>
 
 ## 1.0.9
-* Add prepublish hook which writes latest sample HTML into readme from template.html
+* Add prepublish hook which writes latest sample HTML into README from template.html
 * Update description to match latest design system docs
 
 ## 1.0.8
