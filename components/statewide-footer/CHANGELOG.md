@@ -20,7 +20,7 @@
 * Updated statewide footer container's padding to 16px instead of 1rem to make it consistent with other components.
 
 ## 1.0.2
-* Changed space between ca.gov icon and first link to 24px. Made distance from the footer's top to the ca.gov logo 16px in mobile.
+* Changed space between CA.gov icon and first link to 24px. Made distance from the footer's top to the CA.gov logo 16px in mobile.
 
 ## 1.0.1
 * Updated CA.gov logo to have CA.gov colors, not the colors of the department/agency. Removed link from the CA.gov icon since there is actual spelled out link to the CA.gov website next to it.
