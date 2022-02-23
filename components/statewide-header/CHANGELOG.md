@@ -1,5 +1,9 @@
 # Statewide header changelog
 
+## 1.0.14
+
+- Moved screen reader announcement to CA.gov SVG.
+
 ## 1.0.13
 * Changed ca.gov logo dimensions to 33px by 24px to make it consistent with statewide-footer's icon.
 
