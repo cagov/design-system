@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const readmeFile = './readme.md';
+const readmeFile = './README.md';
 const htmlFile = './template.html';
 
 try {
@@ -25,6 +25,6 @@ ${markdownCodeDelim}
   fs.writeFileSync(readmeFile, finalReadme, 'utf8');
 } catch (e) {
   console.log(e);
-  // called from prepublish, exit if readme cannot be updated
+  // called from prepublish, exit if README cannot be updated
   process.exit(1);
 }
