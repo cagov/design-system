@@ -15,7 +15,7 @@ State processes can be complicated and opaque. The step list shows all the steps
 
 Use the step list when you need more than one sentence to explain the steps in a process.
 
-Introduce the step list with a heading so people know what process the step list describes. You can add a paragraph block between the heading and the step list, but this is optional.
+Introduce the step list with a heading so people know what process the step list describes. You can add a paragraph block between the heading and the step list, but this is optional. Keep this paragraph concise.
 
 The step list emphasizes important processes. Use it sparingly on your website. If you have a process where most steps can be explained in one sentence, use a regular numbered list instead.
 
