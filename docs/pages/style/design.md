@@ -135,28 +135,28 @@ The line height is a ratio of 1.75 to the base font size. For each ascending lev
         <th>Text Content</th><th>Properties</th>
       </tr>
       <tr>
-        <td>Heading 1</td><td>Font size (Desktop): 2.9375rem + 0.1vw</br>Font size (Mobile): 2.625rem</br>Font weight: Bold</br>Line height: 74px</td>
+        <td>Heading 1</td><td>Font size (Desktop): 2.9375rem + 0.1vw</br>Font size (Mobile): 2.625rem</br>Font weight: Bold</br>Line height: 1.25</td>
       </tr>
       <tr>
-        <td>Heading 2</td><td>Font size (Desktop): 2.3175rem + 0.1vw</br>Font size (Mobile): 2.0625rem</br>Font weight: Bold</br>Line height: 59px</td>
+        <td>Heading 2</td><td>Font size (Desktop): 2.3175rem + 0.1vw</br>Font size (Mobile): 2.0625rem</br>Font weight: Bold</br>Line height: 1.375</td>
       </tr>
       <tr>
-        <td>Heading 3</td><td>Font size (Desktop): 1.8125rem + 0.1vw</br>Font size (Mobile): 1.625rem</br>Font weight: Bold</br>Line height: 48px</td>
+        <td>Heading 3</td><td>Font size (Desktop): 1.8125rem + 0.1vw</br>Font size (Mobile): 1.625rem</br>Font weight: Bold</br>Line height: 1.5</td>
       </tr>
       <tr>
-        <td>Heading 4</td><td>Font size (Desktop): 1.4375rem + 0.1vw</br>Font size (Mobile): 1.25rem</br>Font weight: Bold</br>Line height: 39px</td>
+        <td>Heading 4</td><td>Font size (Desktop): 1.4375rem + 0.1vw</br>Font size (Mobile): 1.25rem</br>Font weight: Bold</br>Line height: 1.625</td>
       </tr>
       <tr>
-        <td>Heading 5</td><td>Font size (Desktop): 1.125rem + 0.1vw</br>Font size (Mobile): 1rem</br>Font weight: Bold</br>Line height: 32px</td>
+        <td>Heading 5</td><td>Font size (Desktop): 1.125rem + 0.1vw</br>Font size (Mobile): 1rem</br>Font weight: Bold</br>Line height: 1.75</td>
       </tr>
       <tr>
-        <td>Paragraph</td><td>Font size (Desktop): 1.125rem + 0.1vw</br>Font size (Mobile): 1rem</br>Font weight: Normal</br>Line height: 32px</td>
+        <td>Paragraph</td><td>Font size (Desktop): 1.125rem + 0.1vw</br>Font size (Mobile): 1rem</br>Font weight: Normal</br>Line height: 1.75</td>
       </tr>
       <tr>
-        <td>Paragraph large (for lead text)</td><td>Font size (Desktop): 1.4375rem + 0.1vw</br>Font size (Mobile): 1.25rem</br>Font weight: Normal</br>Line height: 39px</td>
+        <td>Paragraph large (for lead text)</td><td>Font size (Desktop): 1.4375rem + 0.1vw</br>Font size (Mobile): 1.25rem</br>Font weight: Normal</br>Line height: 1.625</td>
       </tr>
       <tr>
-        <td>Paragraph small (for captions)</td><td>Font size (Desktop): 0.875rem + 0.1vw</br>Font size (Mobile): 0.875rem</br>Font weight: Normal</br>Line height: 26px</td>
+        <td>Paragraph small (for captions)</td><td>Font size (Desktop): 0.875rem + 0.1vw</br>Font size (Mobile): 0.875rem</br>Font weight: Normal</br>Line height: 1.875</td>
       </tr>
     </table>
 </span>
