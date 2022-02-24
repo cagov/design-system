@@ -2,7 +2,7 @@
   "1": {
     "name": "Design for people's needs",
     "description": "Put the needs of Californians first in everything you do. Make your guiding question, “What does someone need to do?”",
-    "example": "The <a href='/components/feedback/readme/'>page feedback component</a> makes it easy to learn about the needs of your audience."
+    "example": "The <a href='/components/page-feedback/readme/'>page feedback component</a> makes it easy to learn about the needs of your audience."
   },
   "2": {
     "name": "Do the hard work to make it simple and elegant",
