@@ -42,7 +42,7 @@ Do not put a lot of content in your feature card. Too much content is hard to re
 >
   <div>
     <div class="cagov-stack cagov-p-2 cagov-featured-sidebar">
-      <h2>We’re making changes to better serve you</h2>
+      <h1>We’re making changes to better serve you</h1>
       <div class="cagov-hero-body-content">
         <p>
           California has merged the three state cannabis authorities into
@@ -52,7 +52,7 @@ Do not put a lot of content in your feature card. Too much content is hard to re
         <div class="wp-block-button">
           <a
             class="wp-block-button__link"
-            href="#"
+            href="https://cannabis.ca.gov/about-us/consolidation/"
             >Learn more</a
           >
         </div>
@@ -60,7 +60,6 @@ Do not put a lot of content in your feature card. Too much content is hard to re
     </div>
     <div>
       <img
-        loading="lazy"
         class="cagov-featured-image"
         src="https://cannabis.ca.gov/wp-content/uploads/sites/2/2021/06/cannabis-buds-hero-1024x683.jpg"
         alt=""

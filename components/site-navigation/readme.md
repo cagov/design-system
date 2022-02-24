@@ -87,7 +87,7 @@ Do not link to PDFs in the site navigation.
                   Applicants
                 </span>
                 <span class="expanded-menu-section-header-arrow">
-                  <svg width="11" height="7"
+                  <svg aria-hidden=true width="11" height="7"
                     class="expanded-menu-section-header-arrow-svg" viewBox="0 0 11 7" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -99,15 +99,15 @@ Do not link to PDFs in the site navigation.
             </strong>
             <div class="expanded-menu-dropdown">
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">How to apply for or renew a license</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/how-to-apply-renew/" tabindex="-1">How to apply for or renew a license</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">License types</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/license-types/" tabindex="-1">License types</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Application and license fees</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/application-license-fees/" tabindex="-1">Application and license fees</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Application resources</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/application-resources/" tabindex="-1">Application resources</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Access the license portals</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/access-license-portals/" tabindex="-1">Access the license portals</a>
               
             </div>
           </div>
@@ -133,21 +133,21 @@ Do not link to PDFs in the site navigation.
             </strong>
             <div class="expanded-menu-dropdown">
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Cultivation</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/cultivation/" tabindex="-1">Cultivation</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Manufacturing</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/manufacturing/" tabindex="-1">Manufacturing</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Distribution</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/distribution/" tabindex="-1">Distribution</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Testing laboratories</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/testing-laboratories/" tabindex="-1">Testing laboratories</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Retail</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/retail/" tabindex="-1">Retail</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Events</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/events/" tabindex="-1">Events</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Track and Trace</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/track-and-trace/" tabindex="-1">Track and Trace</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Requirements for cannabis goods</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/requirements-cannabis-goods/" tabindex="-1">Requirements for cannabis goods</a>
               
             </div>
           </div>
@@ -173,13 +173,13 @@ Do not link to PDFs in the site navigation.
             </strong>
             <div class="expanded-menu-dropdown">
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">What’s legal</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/whats-legal/" tabindex="-1">What’s legal</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Medicinal cannabis</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/medicinal-cannabis/" tabindex="-1">Medicinal cannabis</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Responsible cannabis use</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/responsible-cannabis-use/" tabindex="-1">Responsible cannabis use</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Talking to young people about cannabis</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/talking-young-people-about-cannabis/" tabindex="-1">Talking to young people about cannabis</a>
               
             </div>
           </div>
@@ -205,15 +205,15 @@ Do not link to PDFs in the site navigation.
             </strong>
             <div class="expanded-menu-dropdown">
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Laws and regulations</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/laws-and-regulations/" tabindex="-1">Laws and regulations</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Running a business in California</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/running-business/" tabindex="-1">Running a business in California</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">File a complaint</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/file-complaint/" tabindex="-1">File a complaint</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Disaster relief programs</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/disaster-relief-programs/" tabindex="-1">Disaster relief programs</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Search for a licensed business</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/search-for-licensed-business/" tabindex="-1">Search for a licensed business</a>
               
             </div>
           </div>
@@ -239,19 +239,19 @@ Do not link to PDFs in the site navigation.
             </strong>
             <div class="expanded-menu-dropdown">
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">About DCC</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/about-dcc/" tabindex="-1">About DCC</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Announcements</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/announcements/" tabindex="-1">Announcements</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">DCC events</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/dcc-events/" tabindex="-1">DCC events</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Public awareness campaigns</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/public-awareness-campaigns/" tabindex="-1">Public awareness campaigns</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Scientific research</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/scientific-research/" tabindex="-1">Scientific research</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Grant funding</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/grant-funding/" tabindex="-1">Grant funding</a>
               
-                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="#" tabindex="-1">Contact us</a>
+                <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/contact-us/" tabindex="-1">Contact us</a>
               
             </div>
           </div>

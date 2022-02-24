@@ -26,13 +26,21 @@ Do not use pagination:
 
 ## Demo and sample markup
 
-<html-preview>
+First, add the HTML.
 
 ```html preview
 <cagov-pagination data-current-page="5" data-total-pages="99"></cagov-pagination>
 ```
 
-</html-preview>
+Next, register an event to respond to clicks.
+
+```js script
+const paginator = document.querySelector('cagov-pagination');
+
+paginator.addEventListener('paginationClick', function (e) {
+  alert(`You requested page ${e.detail}.`);
+});
+```
 
 ## Specs
 

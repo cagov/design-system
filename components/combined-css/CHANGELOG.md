@@ -1,6 +1,11 @@
 # CHANGELOG for ds-compiled-css
 `ds-compiled-css`
 
+
+## 2.0.1
+
+* Added missing statewide-header and highlight-section scss imports.
+
 ## 2.0.0
 
 * Fixes breaking changes with components that now offer CSS via JS.

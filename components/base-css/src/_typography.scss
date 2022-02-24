@@ -61,6 +61,7 @@ h1,
   margin-top: calc(var(--s-5) + var(--ratio));
   margin-bottom: calc(var(--s-4) + var(--ratio));
   font-weight: var(--font-weight-7, 700);
+  line-height: var(--font-lineheight-1);
 }
 
 h2,
@@ -69,6 +70,7 @@ h2,
   margin-top: calc(var(--s-4) + var(--ratio));
   margin-bottom: calc(var(--s-3) + var(--ratio));
   font-weight: var(--font-weight-7, 700);
+  line-height: var(--font-lineheight-2);
 }
 
 h3,
@@ -77,6 +79,7 @@ h3,
   margin-top: calc(var(--s-3) + var(--ratio));
   margin-bottom: calc(var(--s-2) + var(--ratio));
   font-weight: var(--font-weight-7, 700);
+  line-height: var(--font-lineheight-3);
 }
 
 h4,
@@ -85,6 +88,7 @@ h4,
   margin-top: calc(var(--s-3) + var(--ratio));
   margin-bottom: calc(var(--s-2) + var(--ratio));
   font-weight: var(--font-weight-7, 700);
+  line-height: var(--font-lineheight-4);
 }
 
 h5,
@@ -93,6 +97,7 @@ h5,
   margin-top: calc(var(--s-3) + var(--ratio));
   margin-bottom: calc(var(--s-2) + var(--ratio));
   font-weight: var(--font-weight-7, 700);
+  line-height: var(--font-lineheight-5);
 }
 
 h6,
@@ -101,6 +106,7 @@ h6,
   margin-top: calc(var(--s-3) + var(--ratio));
   margin-bottom: calc(var(--s-2) + var(--ratio));
   font-weight: var(--font-weight-7, 700);
+  line-height: var(--font-lineheight-5);
 }
 
 .text-lead,

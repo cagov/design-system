@@ -76,6 +76,31 @@
   padding-bottom: 1.5rem;
   gap: 2rem;
   flex-wrap: nowrap;
+
+  .contact-us-form {
+    width: calc(50% - 12px);
+    gap: 24px;
+  }
+
+  .contact-us-image {
+    width: calc(50% - 12px);
+  }
+  
+  button.wp-block-button__link {
+    background-color: var(--cagov-highlight, #FEC02F);
+    color: var(--cagov-primary-dark, #003484);
+    cursor: pointer;
+  }
+  button.wp-block-button__link:hover {
+    background-color: var(--cagov-highlight-light, #fed36d);
+  }
+  &.form-background-light button.wp-block-button__link {
+    background-color: var(--cagov-primary, #003484);
+    color: var(--white, #FFFFFF);
+  }
+  &.form-background-light button.wp-block-button__link:hover {
+    background-color: var(--cagov-primary-dark, #003484);
+  }
   button.inactive.wp-block-button__link {
     background-color: var(--gray-700, #a09fa7);
   }

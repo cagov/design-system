@@ -14,10 +14,10 @@ Do not use this component to replace or duplicate site navigation.
 
 ## Demo and sample markup
 
-<html-preview>
-
 ```html preview
-<cagov-page-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-page-navigation>
+<sidebar>
+  <cagov-page-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-page-navigation>
+</sidebar>
 
 <div class="main">
   <h2>First heading</h2>
@@ -25,8 +25,6 @@ Do not use this component to replace or duplicate site navigation.
   <h2>Third heading</h2>
 </div>
 ```
-
-</html-preview>
 
 ## Specs
 

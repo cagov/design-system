@@ -17,6 +17,7 @@ class CaGovCodePreview extends window.HTMLElement {
     if (this.allowReset) {
       const button = document.createElement('button');
       button.classList.add('code-preview-reset-button');
+      button.classList.add('btn-primary');
       button.innerHTML = 'Reset demo';
       button.addEventListener('click', () => {
         this.demo.innerHTML = this.originalCode;

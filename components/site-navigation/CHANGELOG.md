@@ -1,5 +1,9 @@
 # Site navigation changelog
 
+## 2.1.2
+
+- Reset navigation on resize.
+
 ## 2.1.1
 * Reset navigation on resize.
 ## 2.1.0
