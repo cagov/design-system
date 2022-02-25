@@ -50,7 +50,6 @@ export class CaGovAccordion extends window.HTMLElement {
       } else {
         // else apply closed height
         this.detailsEl.style.height = this.closedHeight;
-        console.log(`just set closed height to ${this.closedHeight}`);
       }
     });
   }
