@@ -138,11 +138,14 @@ $desktop-min: 1176px;
   --font-lineheight-1: 1.25;
   --font-lineheight-2: 1.375;
   --font-lineheight-3: 1.5;
-  --font-lineheight-4: 1.75;
-  --font-lineheight-5: 2;
+  --font-lineheight-4: 1.625;
+  --font-lineheight-5: 1.75;
+  --font-lineheight-6: 2;
 
   // cagov main colors
+  --cagov-highlight-light: #fed36d;
   --cagov-highlight: #fec02f;
+  --cagov-highlight-dark: #b28621;
   --cagov-primary: #004abc;
   --cagov-primary-dark: #003484;
   --cagov-secondary: #ff8000;
@@ -156,9 +159,15 @@ $desktop-min: 1176px;
   --gray-500: #c4c3c8;
   --gray-600: #b3b2b8;
   --gray-700: #a09fa7;
-  --gray-800: #3f3e4d;
+  --gray-800: #6c6b77;
   --gray-900: #3f3e4d;
   --black: #000;
+
+  // System status colors
+  --success: #008542;
+  --danger: #b71234;
+  --warning: #ffd700;
+  --info: #000080;
 
   // Animations and transitions
   --animation-duration-1: 0.1s;

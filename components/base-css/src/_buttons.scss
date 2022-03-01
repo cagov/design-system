@@ -159,3 +159,52 @@
     }
   }
 }
+
+// next and previous buttons
+.btn-hover-right,
+.btn-hover-left {
+  position: relative;
+  span.btn-text {
+    cursor: pointer;
+    display: inline-block;
+    transition: var(--animation-duration-5);
+  }
+}
+
+.btn-hover-right span[class*="ca-gov-icon-"] {
+  position: absolute;
+  opacity: 0;
+  top: var(--s-1);
+  right: -4px;
+  transition: var(--animation-duration-5);
+}
+
+.btn-hover-right:hover,
+.btn-hover-right:focus {
+  span.btn-text {
+    padding-right: var(--s-3);
+  }
+  span[class*="ca-gov-icon-"] {
+    opacity: 1;
+    right: var(--s-1);
+  }
+}
+
+.btn-hover-left span[class*="ca-gov-icon-"] {
+  position: absolute;
+  opacity: 0;
+  top: var(--s-1);
+  left: -4px;
+  transition: var(--animation-duration-5);
+}
+
+.btn-hover-left:hover,
+.btn-hover-left:focus {
+  span.btn-text {
+    padding-left: var(--s-3);
+  }
+  span[class*="ca-gov-icon-"] {
+    opacity: 1;
+    left: var(--s-1);
+  }
+}
