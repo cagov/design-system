@@ -7,7 +7,7 @@
 * Make use of :defined to enhance design styles. This is available after the custom element's javascript has been executed.
 
 ### Upgrade notes 2.0.0
-* **Updated markup structure** please refer to the [README](components/accordion/README.md) for the latest markup  example. [See diff](link-to-the-diff) 
+* **Updated markup structure** please refer to the [README](components/accordion/README.md) for the latest markup  example. [See diff](https://github.com/cagov/design-system/pull/698/files#diff-24fcc3b7dc89f0002c127de7c93d334e359cff57a359d69d1a4a7c07002e4c9e) 
 * When performing this component update, existing accordion markup content will need to be mapped to the new HTML structure in content. Any integrations will also need to update structure and content implementations. 
 
 ## 1.0.9
