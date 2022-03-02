@@ -141,8 +141,8 @@ This component uses the following data attributes. We provide this information t
 
 | Name  | Attribute name | Data type | Field type | Selector         |
 | ----- | -------------- | --------- | ---------- | ---------------- |
-| Title | title          | string    | Rich text  | .accordion-title |
-| Body  | body           | string    | Rich text  | .card-body       |
+| Title | title          | string    | Rich text  | summary          |
+| Body  | body           | string    | Rich text  | .accordion-body  |
 
 ## Contributor/Developer documentation
 

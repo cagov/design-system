@@ -6,6 +6,10 @@
 * Rewrite to use the details element which expands and collapses without requiring javascript. The javascript remains only for the animation. This radically improves progressive enhancement while reducing code size. 
 * Make use of :defined to enhance design styles. This is available after the custom element's javascript has been executed.
 
+### Upgrade notes 2.0.0
+* **Updated markup structure** please refer to the [README](components/accordion/README.md) for the latest markup  example. [See diff](link-to-the-diff) 
+* When performing this component update, existing accordion markup content will need to be mapped to the new HTML structure in content. Any integrations will also need to update structure and content implementations. 
+
 ## 1.0.9
 * Add prepublish hook which writes latest sample HTML into readme from template.html
 * Update description to match latest design system docs
