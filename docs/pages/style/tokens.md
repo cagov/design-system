@@ -142,7 +142,7 @@ description: Design tokens are useful to create predictable, consistent web desi
 
 ## Color tokens
 ### CA&#46;gov theme colors
-Theme colors (primary, secondary, and highlight) change depending the color scheme a website uses. There are following color schemes available in the California Design System:
+Theme colors (primary, secondary, and highlight) change depending the color scheme a website uses. The following color schemes are available in the California Design System:
 - CA&#46;gov
 - Cannabis
 - Drought
