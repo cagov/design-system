@@ -623,6 +623,8 @@ class CAGovPageNavigation extends window.HTMLElement {
               top: position.top - 200,
             });
 
+            target.focus();
+
             window.history.pushState(null, null, hashval);
           }
         } catch (error) {
@@ -720,27 +722,6 @@ if (customElements.get('cagov-page-navigation') === undefined) {
 const style$3 = document.createElement('style');
 style$3.textContent = styles$3;
 document.querySelector('head').appendChild(style$3);
-
-// Function determining if it's mobile view (max 767px)
-function mobileView$1() {
-  const mobileElement = document.querySelector('.branding .grid-mobile-icons');
-  if (mobileElement) {
-    return getComputedStyle(mobileElement).display !== 'none';
-  }
-  return false;
-}
-
-function insertAfter(referenceNode, newNode) {
-  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
-const contentnav = document.querySelector('.sidebar-container');
-const h1Header = document.querySelector('h1');
-
-if (mobileView$1()) {
-  if (contentnav && h1Header) {
-    insertAfter(h1Header, contentnav);
-  }
-}
 
 function ratingsTemplate(
   question,
@@ -1077,6 +1058,9 @@ class CAGovSiteNavigation extends window.HTMLElement {
       document
         .querySelector('.search-container--small')
         .setAttribute('aria-hidden', 'true');
+      // reset navigation on resize
+      this.closeAllMenus();
+      this.closeMainMenu();
     });
 
     this.expansionListeners();
@@ -1472,7 +1456,7 @@ function linkAnnotator() {
     'main a, .agency-footer a, .site-footer a, footer a',
   );
   externalLink.forEach((element) => {
-    const anchorLink = element.href.indexOf('#') > -1;
+    const anchorLink = element.href.indexOf('#') === 0;
     const localHost = element.href.indexOf('localhost') > -1;
     const localEmail = element.href.indexOf('@') > -1;
     const linkElement = element;
