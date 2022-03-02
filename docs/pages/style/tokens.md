@@ -3,7 +3,7 @@ title: Design tokens
 description: Design tokens are useful to create predictable, consistent web design elements, layouts and components.
 ---
 
-<p class="text-lead">The California Design System web design is built from consistent elements of style we call design tokens. Design tokens are set of css-variables that constitute elements of color, typography, spacing units, etc. Design tokens are useful to create predictable, consistent web design elements, layouts and components.</p>
+<p class="text-lead">The California Design System web design is built from consistent elements of style we call design tokens. Design tokens are set of css-variables that constitute elements like color, typography, and spacing units. Design tokens allow us to create predictable, consistent web design elements, layouts, and components.</p>
 
 ## Responsive tokens
 ### Container width
@@ -141,8 +141,13 @@ description: Design tokens are useful to create predictable, consistent web desi
 <hr class="border-1 border-gray-600 m-y-5">
 
 ## Color tokens
-### Cagov theme colors
-Please note that theme colors (primary, secondary and highlight) will change depending a color scheme that a website is using. Currently, there are following color schemes available in the California Design System: cagov, cannabis and drought. Color scheme files are available in following directory: `components/base-css/src/colorschemes/`.
+### CA&#46;gov theme colors
+Theme colors (primary, secondary, and highlight) change depending the color scheme a website uses. There are following color schemes available in the California Design System:
+- CA&#46;gov
+- Cannabis
+- Drought
+
+Color scheme files are available in following directory: `components/base-css/src/colorschemes/`.
 #### Primary colors
 
 <div class="grid-container">
@@ -268,8 +273,8 @@ Please note that theme colors (primary, secondary and highlight) will change dep
 </div>
 
 
-### Cagov main colors
-Cagov main colors are used in `ca.gov` logo or other `ca.gov` branding elements
+### CA&#46;gov main colors
+CA&#46;gov main colors are used in the CA&#46;gov logo and other CA&#46;gov branding elements.
 <div class="grid-container">
 <div class="code-block"><p class="code-block-language">Variables</p><pre><code class="hljs"><span class="hljs-code">--cagov-highlight: #fec02f;
 --cagov-primary: #004abc;
@@ -504,11 +509,11 @@ Cagov main colors are used in `ca.gov` logo or other `ca.gov` branding elements
 
 <div class="d-grid gap-3" style="grid-template-columns: max-content 1fr; align-items: center;">
 <code class="font-size-1">var(--font-weight-3)</code>
-<span class="font-size-6 font-weight-3">Don't design for designers, design for people.</span>
+<span class="font-size-6 font-weight-3">Do not design for designers. Design for people.</span>
 <code class="font-size-1">var(--font-weight-4)</code>
-<span class="font-size-6 font-weight-4">Don't design for designers, design for people.</span>
+<span class="font-size-6 font-weight-4">Do not design for designers. Design for people.</span>
 <code class="font-size-1">var(--font-weight-7)</code>
-<span class="font-size-6 font-weight-7">Don't design for designers, design for people.</span>
+<span class="font-size-6 font-weight-7">Do not design for designers. Design for people.</span>
 </div>
 
 
@@ -571,7 +576,7 @@ Cagov main colors are used in `ca.gov` logo or other `ca.gov` branding elements
 </div>
 
 ### Responsive font ratio
-Responsive font ratio is viewport width value that is used for responsive font size calculations.
+Responsive font ratio is the viewport width value that's used for responsive font size calculations.
 <div class="grid-container">
 <div class="code-block"><p class="code-block-language">Variables</p><pre><code class="hljs"><span class="hljs-code">--ratio: 0.1vw;
 </span></code></pre>
@@ -599,7 +604,7 @@ Responsive font ratio is viewport width value that is used for responsive font s
 
 
 ### Site logo font variables
-Site logo font variables are used specifically to stylize a website's logotype in site-header component.
+Site logo font variables are used to stylize a website's logotype in the site-header component.
 <div class="grid-container">
 <div class="code-block"><p class="code-block-language">Variables</p><pre><code class="hljs"><span class="hljs-code">--org-name-state-font: "Public Sans";
 --org-name-state-font-size: 1rem;
