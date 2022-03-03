@@ -11,7 +11,7 @@ The webpage structural shell usually includes common components like the:
 - Site header
 - Site navigation
 - Site footer
-- Statewide foter
+- Statewide footer
 - Navigation
 
 ## Webpage code template
