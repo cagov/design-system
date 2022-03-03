@@ -8,12 +8,11 @@ cagov-accordion details {
 
 	summary {
 		cursor: pointer;
-		padding: 0 var(--s-5, 3rem) 0 var(--s-2, 1rem);
+		padding: var(--s-1, .5rem) var(--s-5, 3rem) var(--s-1, .5rem) var(--s-2, 1rem);
 		background-color: var(--gray-200, #ededef);
 		position: relative;
-		line-height: var(--s-5, 3rem);
+	  line-height: var(--s-4, 2rem);
 		margin: 0;
-		
 		color: var(--primary-color, #064e66);
 		font-size: var(--font-size-2, 1.125rem);
 		font-weight: bold;
@@ -50,8 +49,8 @@ cagov-accordion:defined {
 
 	details .cagov-open-indicator {
 		background-color: var(--primary-color, #064e66);
-		height: 6px;
-		width: 26px;
+		height: 4px;
+		width: 18px;
 		border-radius: var(--border-3, 3px);
 		position: absolute;
 		right: var(--s-2, 1rem);
@@ -62,13 +61,13 @@ cagov-accordion:defined {
 		display: block;
 		content: '';
 		position: absolute;
-		top: 4px;
-		left: 5px;
+		top: 6px;
+		left: 1px;
 		width: 2px;
-		height: 22px;
+		height: 16px;
 		border-radius: var(--border-3, 3px);
 		border: none;
-		box-shadow: 7px -12px 0 2px var(--primary-color, #064e66);
+		box-shadow: 7px -12px 0 1px var(--primary-color, #064e66);
 		background: none;
 	}
 
