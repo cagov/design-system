@@ -33,7 +33,7 @@ Over the years, and with each state template release, we’ve improved the acces
 
 ### Alpha
 
-Alpha was the first effort to reimagine how government understands, builds and provides digital services. The primary goal was to create a better digital experience for all Californians. The CA.gov Alpha team adopted agile principles allowing them to quickly iterate on feedback while [blogging their story](https://digital.ca.gov/blog/) out in the open. 
+Alpha was the first effort to reimagine how government understands, builds and provides digital services. The primary goal was to create a better digital experience for all Californians. The CA&#46;gov Alpha team adopted agile principles allowing them to quickly iterate on feedback while [blogging their story](https://digital.ca.gov/blog/) out in the open. 
 
 ### COVID-19
 In response to the pandemic, the team developed the COVID-19 emergency response website. The team collaborated with the HHS Office of Innovation and the California Department of Technology.
