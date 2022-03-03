@@ -1,12 +1,21 @@
 ---
-title: Basic web page structure
-description: The basic structure of the Caliofornia Design System web page.
+title: Basic webpage structure
+description: The basic structure of the Caliofornia Design System webpage.
 ---
 
-<p class="text-lead">California Design System web page structure consists of various components and building blocks. Several common components such as statewide header, site header, site navigation, site footer, statewide foter, navigation are usually part of the essential CA Desing System web page stuctural shell.</p>
+<p class="text-lead">The California Design System webpage structure consists of various components and building blocks.</p>
 
-## Web page code template
-Code below shows basic CA Design System web page structure:
+The webpage structural shell usually includes common components like the:
+
+- Statewide header
+- Site header
+- Site navigation
+- Site footer
+- Statewide foter
+- Navigation
+
+## Webpage code template
+This code shows the basic CA Design System webpage structure:
 
 <html-preview>
 
@@ -56,8 +65,8 @@ Code below shows basic CA Design System web page structure:
 
 ## Main content layout options
 
-### Landing page layout (full width)
-Landing layout is using full width content container. It usually works for home pages or landing pages. To use this layout make sure to add class `landing` to `#main-content` div.
+### Landing page layout (full-width)
+The landing layout uses the full-width content container. It usually works for homepages or landing pages. To use this layout, add the `landing` class to the `#main-content` div.
 
 <div class="cagov-article with-sidebar gap-3 p-x-0">
 <div class="m-t-3">
@@ -82,7 +91,7 @@ Landing layout is using full width content container. It usually works for home 
 
 
 ### Single column layout
-Single column layout is single column content container that has maximum width of 876px and is centered horizontally. It usually works for regular content pages.
+The single column layout is a single column content container that has a maximum width of 876px and is centered horizontally. It usually works for regular content pages.
 
 <div class="cagov-article with-sidebar gap-3 p-x-0">
 	<div class="m-t-3">
@@ -107,7 +116,7 @@ Single column layout is single column content container that has maximum width o
 
 
 ### Left sidebar layout
-Left sidebar layout is two column layout with left sidebar column and the main content column. This layout works for long pages that potentially can use page navigation.
+The left sidebar layout is a two column layout with a left sidebar column and the main content column. This layout works for long pages that can potentially use page navigation.
 
 <div class="cagov-article with-sidebar gap-3 p-x-0">
 	<div class="m-t-3">
@@ -137,5 +146,3 @@ Left sidebar layout is two column layout with left sidebar column and the main c
 </html-preview>
 </div>
 </div>
-
-
