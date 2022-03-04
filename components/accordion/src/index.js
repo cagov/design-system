@@ -19,6 +19,7 @@ export class CaGovAccordion extends window.HTMLElement {
   connectedCallback() {
     this.summaryEl = this.querySelector('summary');
     // trigger the opening and closing height change animation on summary click
+    this.setHeight();
     this.summaryEl.addEventListener('click', this.listen.bind(this));
     this.summaryEl.insertAdjacentHTML(
       'beforeend',
@@ -26,8 +27,6 @@ export class CaGovAccordion extends window.HTMLElement {
     );
     this.detailsEl = this.querySelector('details');
     this.bodyEl = this.querySelector('.accordion-body');
-
-    this.setHeight();
 
     window.addEventListener(
       'resize',
@@ -38,13 +37,14 @@ export class CaGovAccordion extends window.HTMLElement {
   setHeight() {
     requestAnimationFrame(() => {
       // delay so the desired height is readable in all browsers
-      this.closedHeight = `${parseInt(this.summaryEl.scrollHeight + 2, 10)}px`;
+      this.closedHeightInt = parseInt(this.summaryEl.scrollHeight + 2, 10);
+      this.closedHeight = `${this.closedHeightInt}px`;
 
       // apply initial height
       if (this.detailsEl.hasAttribute('open')) {
         // if open get scrollHeight
         this.detailsEl.style.height = `${parseInt(
-          this.bodyEl.scrollHeight + 48,
+          this.bodyEl.scrollHeight + this.closedHeightInt,
           10,
         )}px`;
       } else {
@@ -63,7 +63,7 @@ export class CaGovAccordion extends window.HTMLElement {
       requestAnimationFrame(() => {
         // delay so the desired height is readable in all browsers
         this.detailsEl.style.height = `${parseInt(
-          this.bodyEl.scrollHeight + 48,
+          this.bodyEl.scrollHeight + this.closedHeightInt,
           10,
         )}px`;
       });
