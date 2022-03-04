@@ -7,7 +7,7 @@ description: Learn how you can get started with using the California Design Syst
 
 ## Developers
 
-Learn [what’s different](/technical-approach/) about California’s Design System approach and how to install components. Learn about [Design System web page structure](/structure/) and layout options. 
+Learn [what’s different](/technical-approach/) about California’s Design System approach and how to install components. Learn about [Design System webpage structure](/structure/) and layout options. 
 
 ## UX and visual designers
 
