@@ -1,6 +1,6 @@
 # Accordion
 
-Accordions are expandable sections of content. Each section contains a heading (H2 or H3), a plus button (+), and more body text when opened.
+Accordions are expandable sections of content. Each section contains a summary element, and more body text when opened.
 
 Accordions keep pages looking clean by hiding information that most people do not need to see.
 
@@ -39,31 +39,29 @@ Accordions hide information unless someone opens them. This requires an extra ac
 ```html preview
 <cagov-accordion>
   <details>
-    <summary>Lorem ipsum</summary>
+    <summary>Title 1</summary>
     <div class="accordion-body">
-      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf</p>
-      <p>moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
-      <p><button>Hello</button></p>
-      <p><button>Goodbye</button></p>
-      <p>Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda</p>
+      <p>A couple buttons are included inside this accordion to demonstrate that when the accordion is closed they are automatically not in the keyboard focus order but when the accordion opens they become the next available elements in the keyboard navigation sequence after the accordion's summary element.</p>
+      <p><button class="btn-primary">Button 1</button></p>
+      <p><button class="btn-primary">Button 2</button></p>
     </div>
   </details>
 </cagov-accordion>
 <cagov-accordion>
   <details>
-    <summary>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</summary>
+    <summary>Title 2 multiline lorem ipsum is useful because it has a more-or-less normal distribution of letters</summary>
     <div class="accordion-body">
-      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf</p>
-      <p>moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
-      <p>Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda</p>
+      <ul>
+        <li>Anim pariatur cliche reprehenderit</li>
+        <li>moon officia aute, non cupidatat</li>
+      </ul>
     </div>
   </details>
 </cagov-accordion>
 <cagov-accordion>
   <details>
-    <summary>Lorem ipsum</summary>
+    <summary>Title 3 lorem ipsum dolor sit amet</summary>
     <div class="accordion-body">
-      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf</p>
       <p>moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
       <p>Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda</p>
     </div>
