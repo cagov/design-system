@@ -28,7 +28,7 @@ jobs:
         run: echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF})" >> $GITHUB_ENV
       - name: Escape branch name for URL
         shell: bash
-        run: echo "URLSAFE_BRANCH_NAME=$(echo ${BRANCH_NAME} | sed 's|[^A-Za-z0-9-]|-|g' | sed -E 's|-*([A-Za-z0-9]*.*[A-Za-z0-9]+)-*|\1|')" >> $GITHUB_ENV
+        run: echo "URLSAFE_BRANCH_NAME=$(echo ${BRANCH_NAME} | sed 's|[^A-Za-z0-9-]|-|g' | sed -E 's|-*([A-Za-z0-9]*.*[A-Za-z0-9]+)-*|\1|' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
       - name: Report escaped branch name
         shell: bash
         run: echo ${URLSAFE_BRANCH_NAME}
