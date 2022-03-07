@@ -49,8 +49,8 @@ cagov-accordion:defined {
 
 	details .cagov-open-indicator {
 		background-color: var(--primary-color, #064e66);
-		height: 4px;
-		width: 18px;
+		height: 2px;
+		width: 15px;
 		border-radius: var(--border-3, 3px);
 		position: absolute;
 		right: var(--s-2, 1rem);
@@ -62,12 +62,12 @@ cagov-accordion:defined {
 		content: '';
 		position: absolute;
 		top: 6px;
-		left: 1px;
+		left: 0px;
 		width: 2px;
-		height: 16px;
+		height: 15px;
 		border-radius: var(--border-3, 3px);
 		border: none;
-		box-shadow: 7px -12px 0 1px var(--primary-color, #064e66);
+		box-shadow: 6.5px -12px 0 0px var(--primary-color, #064e66);
 		background: none;
 	}
 
