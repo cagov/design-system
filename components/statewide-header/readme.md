@@ -4,7 +4,7 @@ The statewide header puts a standard header at the very top of your site. Having
 
 It includes:
 
-- The CA.gov logo, which links to https://www.ca.gov
+- The CA<span>.</span>gov logo, which links to https://www.ca.gov
 - The text “Official website of the State of California” (on desktop) or “State of California” (on mobile)
 
 ## When and how to use it
