@@ -44,7 +44,7 @@ With respect to accessibility, choose colors in alignment with Web Content Acces
   </table>
 </span>
 
-Here’s what that looks like for recent CA&#46;gov initiatives such as covid19.ca.gov and alpha.ca.gov. This is the default color palette for any new digital service.
+Here’s what that looks like for recent CA<span>.</span>gov initiatives such as covid19.ca.gov and alpha.ca.gov. This is the default color palette for any new digital service.
 
 ### Primary color 
 <div class="grid-container">
