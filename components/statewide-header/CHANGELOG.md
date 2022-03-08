@@ -2,14 +2,14 @@
 
 ## 1.0.14
 
-- Moved screen reader announcement to CA.gov SVG.
+- Moved screen reader announcement to CA<span>.</span>gov SVG.
 
 ## 1.0.13
-* Changed ca.gov logo dimensions to 33px by 24px to make it consistent with statewide-footer's icon.
+* Changed CA<span>.</span>gov logo dimensions to 33px by 24px to make it consistent with statewide-footer's icon.
 
 ## 1.0.12
-* Made CA.gov logo linked to CA.gov website.
-* Added aria-hidden=”true” attribute to the CA.gov svg icon, so it is hidden from assistive technologies.
+* Made CA<span>.</span>gov logo linked to CA<span>.</span>gov website.
+* Added aria-hidden=”true” attribute to the CA<span>.</span>gov svg icon, so it is hidden from assistive technologies.
 
 ## 1.0.11
 * Linted and formatted code per root eslint/prettier settings.
@@ -19,13 +19,13 @@
 * Updated statewide header container's left and right padding to 16px.
 
 ## 1.0.9
-* Removed sticky header feature until it's fully developed. Decrease spacing between CA.gov icon and tagline to 8px.
+* Removed sticky header feature until it's fully developed. Decrease spacing between CA<span>.</span>gov icon and tagline to 8px.
 
 ## 1.0.8
 * Added script and styles that toggles official header display on scroll. 
 
 ## 1.0.7
-* Making sure that CA.gov logo have CA.gov colors, not the colors of the department/agency. And removed link form CA.gov logo because people might click the CA.gov logo thinking they are going to the homepage 
+* Making sure that CA<span>.</span>gov logo have CA<span>.</span>gov colors, not the colors of the department/agency. And removed link form CA<span>.</span>gov logo because people might click the CA<span>.</span>gov logo thinking they are going to the homepage 
 
 ## 1.0.6
 * Renamed .ofiicial-logo to .official-logo. Should help prevent naming conflicts within existing markup.
