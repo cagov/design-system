@@ -13,7 +13,7 @@
 * Added new design tokens. Added new utility classes. Added buttons styles.
 
 ## 1.0.14
-* reduce top margin on h2
+* Reduce top margin on h2
 
 ## 1.0.13
 * Added reponsive font size functionality. (added font increase ratio variable based based on the dimensions of the browser viewport)
@@ -43,7 +43,7 @@
 * Added missing gray colors to the variables.scss
 
 ## 1.0.3
-* Added CA.gov main colors that are used in CA.gov logo in statewide header and footer to the root variables
+* Added CA<span>.</span>gov main colors that are used in CA<span>.</span>gov logo in statewide header and footer to the root variables
 
 ## 1.0.2
 * Updated typography.scss with new updated font sizes, added new figcaption styles, updated color scheme files with latest color values
