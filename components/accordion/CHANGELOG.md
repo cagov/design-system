@@ -2,6 +2,9 @@
 
 <a href="https://www.npmjs.com/package/@cagov/ds-accordion">https://www.npmjs.com/package/@cagov/ds-accordion</a>
 
+## 2.0.1
+* Bug fix for multiline summary expansion height determination
+* Design tweaks to open indicator icon
 ## 2.0.0
 * Rewrite to use the details element which expands and collapses without requiring javascript. The javascript remains only for the animation. This radically improves progressive enhancement while reducing code size. 
 * Make use of :defined to enhance design styles. This is available after the custom element's javascript has been executed.
