@@ -30,4 +30,4 @@
 
 ## 1.0.0
 
-- Initial release includes 18 components, principles, get started documentation, contact forms, design and content style guides. The component documentation is dynamically built from the component's readme doc and includes live interactive demos of the component.
+* Initial release includes 18 components, principles, get started documentation, contact forms, design and content style guides. The component documentation is dynamically built from the component's README doc and includes live interactive demos of the component.

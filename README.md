@@ -31,10 +31,10 @@ To run this project locally, checkout this repo and run these commands:
 
 This will start up a local server running the site you see at <a href="https://designsystem.webstandards.ca.gov">designsystem.webstandards.ca.gov</a>.
 
-You can find the components in the `/components` directory. The readme for each component is used to create the pages in the <a href="https://designsystem.webstandards.ca.gov/components/">Components section</a>. Interactive versions of each component are included in these pages.
+You can find the components in the `/components` directory. The README for each component is used to create the pages in the <a href="https://designsystem.webstandards.ca.gov/components/">Components section</a>. Interactive versions of each component are included in these pages.
 
 Each component is published to npm. The following steps are run in a pre-publish hook in the package.json script. New versions will not publish unless these steps complete:
-- The sample markup in the readme is matched to the sample markup used in the automated test
+- The sample markup in the README is matched to the sample markup used in the automated test
 - Any build steps like JavaScript concatenation or Sass compilation are run and resulting files are stored in the /dist folder
 - Automated tests are run including an axe accessibility checker
 - The latest version of the component is written to our CDN so it can be included with a script tag
