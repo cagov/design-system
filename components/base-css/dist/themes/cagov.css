@@ -1,21 +1,21 @@
 /* Cagov color scheme root variables */
 :root {
   /* Theme colors */
-  --primary-color: #004ABC;
+  --primary-color: #004abc;
   --primary-dark-color: #003484;
-  --primary-light-color: #4D80D0;
-  --primary-lightest-color: #B3C9EB;
+  --primary-light-color: #4d80d0;
+  --primary-lightest-color: #b3c9eb;
   --primary-hover-color: #003484;
-  --secondary-color: #FF8000;
-  --secondary-dark-color: #B35A00;
-  --secondary-light-color: #FFA64D;
-  --secondary-lightest-color: #FFD9B3;
-  --secondary-hover-color: #B35A00;
-  --highlight-color: #FEC02F;
-  --highlight-dark-color: #B28621;
-  --highlight-light-color: #FED36D;
-  --highlight-lightest-color: #FFECC1;
-  --secondary-hover-color: #B28621;
+  --secondary-color: #ff8000;
+  --secondary-dark-color: #b35a00;
+  --secondary-light-color: #ffa64d;
+  --secondary-lightest-color: #ffd9b3;
+  --secondary-hover-color: #b35a00;
+  --highlight-color: #fec02f;
+  --highlight-dark-color: #b28621;
+  --highlight-light-color: #fed36d;
+  --highlight-lightest-color: #ffecc1;
+  --highlight-hover-color: #b28621;
 }
 
 /* theme colors */
@@ -2745,6 +2745,53 @@ main .wp-block-image img {
   color: var(--black);
 }
 
+.btn-hover-right,
+.btn-hover-left {
+  position: relative;
+}
+.btn-hover-right span.btn-text,
+.btn-hover-left span.btn-text {
+  cursor: pointer;
+  display: inline-block;
+  transition: var(--animation-duration-5);
+}
+
+.btn-hover-right span[class*=ca-gov-icon-] {
+  position: absolute;
+  opacity: 0;
+  top: var(--s-1);
+  right: -4px;
+  transition: var(--animation-duration-5);
+}
+
+.btn-hover-right:hover span.btn-text,
+.btn-hover-right:focus span.btn-text {
+  padding-right: var(--s-3);
+}
+.btn-hover-right:hover span[class*=ca-gov-icon-],
+.btn-hover-right:focus span[class*=ca-gov-icon-] {
+  opacity: 1;
+  right: var(--s-1);
+}
+
+.btn-hover-left span[class*=ca-gov-icon-] {
+  position: absolute;
+  opacity: 0;
+  top: var(--s-1);
+  left: -4px;
+  transition: var(--animation-duration-5);
+}
+
+.btn-hover-left:hover span.btn-text,
+.btn-hover-left:focus span.btn-text {
+  padding-left: var(--s-3);
+}
+.btn-hover-left:hover span[class*=ca-gov-icon-],
+.btn-hover-left:focus span[class*=ca-gov-icon-] {
+  opacity: 1;
+  left: var(--s-1);
+}
+
 /* buttons generic styles */
 /* Code generic styles */
 code,
@@ -3947,6 +3994,26 @@ figure figcaption {
   color: var(--primary-dark-color) !important;
 }
 
+.primary-light-color {
+  color: var(--primary-light-color) !important;
+}
+
+.primary-light-color-hover:hover {
+  color: var(--primary-light-color) !important;
+}
+
+.primary-lightest-color {
+  color: var(--primary-lightest-color) !important;
+}
+
+.primary-lightest-color-hover:hover {
+  color: var(--primary-lightest-color) !important;
+}
+
+.primary-hover-color:hover {
+  color: var(--primary-hover-color) !important;
+}
+
 .secondary-color {
   color: var(--secondary-color) !important;
 }
@@ -3963,6 +4030,26 @@ figure figcaption {
   color: var(--secondary-dark-color) !important;
 }
 
+.secondary-light-color {
+  color: var(--secondary-light-color) !important;
+}
+
+.secondary-light-color-hover:hover {
+  color: var(--secondary-light-color) !important;
+}
+
+.secondary-lightest-color {
+  color: var(--secondary-lightest-color) !important;
+}
+
+.secondary-lightest-color-hover:hover {
+  color: var(--secondary-lightest-color) !important;
+}
+
+.secondary-hover-color:hover {
+  color: var(--secondary-hover-color) !important;
+}
+
 .highlight-color {
   color: var(--highlight-color) !important;
 }
@@ -3977,6 +4064,26 @@ figure figcaption {
 
 .highlight-dark-color-hover:hover {
   color: var(--highlight-dark-color) !important;
+}
+
+.highlight-light-color {
+  color: var(--highlight-light-color) !important;
+}
+
+.highlight-light-color-hover:hover {
+  color: var(--highlight-light-color) !important;
+}
+
+.highlight-lightest-color {
+  color: var(--highlight-lightest-color) !important;
+}
+
+.highlight-lightest-color-hover:hover {
+  color: var(--highlight-lightest-color) !important;
+}
+
+.highlight-hover-color:hover {
+  color: var(--highlight-hover-color) !important;
 }
 
 .white,
@@ -4000,7 +4107,11 @@ figure figcaption {
 }
 
 .gray-100 {
-  color: var(--grey-100) !important;
+  color: var(--gray-100) !important;
+}
+
+.gray-100-hover:hover {
+  color: var(--gray-100) !important;
 }
 
 .gray-100-hover:hover {
@@ -4008,7 +4119,11 @@ figure figcaption {
 }
 
 .gray-200 {
-  color: var(--grey-200) !important;
+  color: var(--gray-200) !important;
+}
+
+.gray-200-hover:hover {
+  color: var(--gray-200) !important;
 }
 
 .gray-200-hover:hover {
@@ -4016,7 +4131,11 @@ figure figcaption {
 }
 
 .gray-300 {
-  color: var(--grey-300) !important;
+  color: var(--gray-300) !important;
+}
+
+.gray-300-hover:hover {
+  color: var(--gray-300) !important;
 }
 
 .gray-300-hover:hover {
@@ -4024,7 +4143,11 @@ figure figcaption {
 }
 
 .gray-400 {
-  color: var(--grey-400) !important;
+  color: var(--gray-400) !important;
+}
+
+.gray-400-hover:hover {
+  color: var(--gray-400) !important;
 }
 
 .gray-400-hover:hover {
@@ -4032,7 +4155,11 @@ figure figcaption {
 }
 
 .gray-500 {
-  color: var(--grey-500) !important;
+  color: var(--gray-500) !important;
+}
+
+.gray-500-hover:hover {
+  color: var(--gray-500) !important;
 }
 
 .gray-500-hover:hover {
@@ -4040,7 +4167,11 @@ figure figcaption {
 }
 
 .gray-600 {
-  color: var(--grey-600) !important;
+  color: var(--gray-600) !important;
+}
+
+.gray-600-hover:hover {
+  color: var(--gray-600) !important;
 }
 
 .gray-600-hover:hover {
@@ -4048,7 +4179,11 @@ figure figcaption {
 }
 
 .gray-700 {
-  color: var(--grey-700) !important;
+  color: var(--gray-700) !important;
+}
+
+.gray-700-hover:hover {
+  color: var(--gray-700) !important;
 }
 
 .gray-700-hover:hover {
@@ -4056,7 +4191,11 @@ figure figcaption {
 }
 
 .gray-800 {
-  color: var(--grey-800) !important;
+  color: var(--gray-800) !important;
+}
+
+.gray-800-hover:hover {
+  color: var(--gray-800) !important;
 }
 
 .gray-800-hover:hover {
@@ -4064,7 +4203,43 @@ figure figcaption {
 }
 
 .gray-900 {
-  color: var(--grey-900) !important;
+  color: var(--gray-900) !important;
+}
+
+.gray-900-hover:hover {
+  color: var(--gray-900) !important;
+}
+
+.success-color {
+  color: var(--success) !important;
+}
+
+.success-color-hover:hover {
+  color: var(--success) !important;
+}
+
+.danger-color {
+  color: var(--danger) !important;
+}
+
+.danger-color-hover:hover {
+  color: var(--danger) !important;
+}
+
+.warning-color {
+  color: var(--warning) !important;
+}
+
+.warning-color-hover:hover {
+  color: var(--warning) !important;
+}
+
+.info-color {
+  color: var(--info) !important;
+}
+
+.info-color-hover:hover {
+  color: var(--info) !important;
 }
 
 .gray-900-hover:hover {
@@ -4135,6 +4310,10 @@ figure figcaption {
   background-color: var(--primary-lightest-color) !important;
 }
 
+.bg-primary-hover-color:hover {
+  background-color: var(--primary-hover-color) !important;
+}
+
 .bg-secondary-color {
   background-color: var(--secondary-color) !important;
 }
@@ -4167,6 +4346,10 @@ figure figcaption {
   background-color: var(--secondary-lightest-color) !important;
 }
 
+.bg-secondary-hover-color:hover {
+  background-color: var(--secondary-hover-color) !important;
+}
+
 .bg-highlight-color {
   background-color: var(--highlight-color) !important;
 }
@@ -4197,6 +4380,10 @@ figure figcaption {
 
 .bg-highlight-lightest-color-hover:hover {
   background-color: var(--highlight-lightest-color) !important;
+}
+
+.bg-highlight-hover-color:hover {
+  background-color: var(--highlight-hover-color) !important;
 }
 
 .bg-gray-100 {
@@ -4351,6 +4538,54 @@ figure figcaption {
   background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
+.bg-alpha-100 {
+  background-color: black !important;
+}
+
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-1 {
+  opacity: 0.1 !important;
+}
+
+.opacity-2 {
+  opacity: 0.2 !important;
+}
+
+.opacity-3 {
+  opacity: 0.3 !important;
+}
+
+.opacity-4 {
+  opacity: 0.4 !important;
+}
+
+.opacity-5 {
+  opacity: 0.5 !important;
+}
+
+.opacity-6 {
+  opacity: 0.6 !important;
+}
+
+.opacity-7 {
+  opacity: 0.7 !important;
+}
+
+.opacity-8 {
+  opacity: 0.8 !important;
+}
+
+.opacity-9 {
+  opacity: 0.9 !important;
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+}
+
 /* MISC */
 .mb-2,
 .cagov-mb-2 {
@@ -4429,6 +4664,10 @@ figure figcaption {
 
 /* width classes */
 .w-100 {
+  width: 100% !important;
+}
+
+.w-100-hover:hover {
   width: 100% !important;
 }
 
@@ -5409,7 +5648,7 @@ figure figcaption {
 }
 
 .font-lineheight-6 {
-  line-height: var(--font-lineheight-5) !important;
+  line-height: var(--font-lineheight-6) !important;
 }
 
 .underline {
@@ -5453,105 +5692,130 @@ figure figcaption {
 
 /* ease transform */
 .transition-1 {
-  transition: all var(--animation-duration-1);
+  transition: all var(--animation-duration-1) !important;
 }
 
 .transition-2 {
-  transition: all var(--animation-duration-2);
+  transition: all var(--animation-duration-2) !important;
 }
 
 .transition-3 {
-  transition: all var(--animation-duration-3);
+  transition: all var(--animation-duration-3) !important;
 }
 
 .transition-4 {
-  transition: all var(--animation-duration-4);
+  transition: all var(--animation-duration-4) !important;
 }
 
 .transition-5 {
-  transition: all var(--animation-duration-5);
+  transition: all var(--animation-duration-5) !important;
 }
 
 .transition-6 {
-  transition: all var(--animation-duration-6);
+  transition: all var(--animation-duration-6) !important;
 }
 
 .transition-7 {
-  transition: all var(--animation-duration-7);
+  transition: all var(--animation-duration-7) !important;
 }
 
 .transition-8 {
-  transition: all var(--animation-duration-8);
+  transition: all var(--animation-duration-8) !important;
 }
 
 .transition-9 {
-  transition: all var(--animation-duration-9);
+  transition: all var(--animation-duration-9) !important;
 }
 
 .transition-10 {
-  transition: all var(--animation-duration-10);
+  transition: all var(--animation-duration-10) !important;
 }
 
 /* ease */
 .ease-1 {
-  transition-timing-function: var(--ease-1);
+  transition-timing-function: var(--ease-1) !important;
 }
 
 .ease-2 {
-  transition-timing-function: var(--ease-2);
+  transition-timing-function: var(--ease-2) !important;
 }
 
 .ease-3 {
-  transition-timing-function: var(--ease-3);
+  transition-timing-function: var(--ease-3) !important;
 }
 
 .ease-4 {
-  transition-timing-function: var(--ease-4);
+  transition-timing-function: var(--ease-4) !important;
 }
 
 .ease-5 {
-  transition-timing-function: var(--ease-5);
+  transition-timing-function: var(--ease-5) !important;
 }
 
 /* scale on hover */
 .transform-scale-1-hover:hover {
-  transform: var(--transform-scale-1);
+  transform: var(--transform-scale-1) !important;
 }
 
 .transform-scale-2-hover:hover {
-  transform: var(--transform-scale-2);
+  transform: var(--transform-scale-2) !important;
 }
 
 .transform-scale-3-hover:hover {
-  transform: var(--transform-scale-3);
+  transform: var(--transform-scale-3) !important;
 }
 
 .transform-scale-4-hover:hover {
-  transform: var(--transform-scale-4);
+  transform: var(--transform-scale-4) !important;
 }
 
 .transform-scale-5-hover:hover {
-  transform: var(--transform-scale-5);
+  transform: var(--transform-scale-5) !important;
 }
 
 .transform-scale-6-hover:hover {
-  transform: var(--transform-scale-6);
+  transform: var(--transform-scale-6) !important;
 }
 
 .transform-scale-7-hover:hover {
-  transform: var(--transform-scale-7);
+  transform: var(--transform-scale-7) !important;
 }
 
 .transform-scale-8-hover:hover {
-  transform: var(--transform-scale-8);
+  transform: var(--transform-scale-8) !important;
 }
 
 .transform-scale-9-hover:hover {
-  transform: var(--transform-scale-9);
+  transform: var(--transform-scale-9) !important;
 }
 
 .transform-scale-10-hover:hover {
-  transform: var(--transform-scale-10);
+  transform: var(--transform-scale-10) !important;
+}
+
+/* Sadows */
+.shadow-1 {
+  box-shadow: var(--shadow-1) !important;
+}
+
+.shadow-2 {
+  box-shadow: var(--shadow-2) !important;
+}
+
+.shadow-3 {
+  box-shadow: var(--shadow-3) !important;
+}
+
+.shadow-4 {
+  box-shadow: var(--shadow-4) !important;
+}
+
+.shadow-5 {
+  box-shadow: var(--shadow-5) !important;
+}
+
+.shadow-6 {
+  box-shadow: var(--shadow-6) !important;
 }
 
 /* all utility css classes that can be used (shortcodes) */
