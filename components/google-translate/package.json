@@ -9,10 +9,8 @@
     "url": "https://github.com/cagov/design-system/tree/main/components/google-translate"
   },
   "scripts": {
-    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
-    "lint:eslint": "eslint --ext .js . --ignore-path .gitignore",
-    "lint:eslint:fix": "eslint --ext .js . --ignore-path .gitignore --fix",
-    "build": "echo \"No build specified.\""
+    "build": "echo \"No build specified.\"",
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],
   "author": "",
