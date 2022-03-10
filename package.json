@@ -4,6 +4,7 @@
   "description": "State of California Design System A work in progress!",
   "main": "index.js",
   "scripts": {
+    "component-audit": "node docs/src/js/component-audit.js",
     "build": "echo \"WARN: no build specified\" && exit 0",
     "dev": "npm run site:dev",
     "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
