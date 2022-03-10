@@ -7,9 +7,9 @@ This directory contains State of California design system components in research
 Each component is an npm package so has a package.json as well as readme and changelog files written in markdown and a test config in the root directory:
 
 - package.json
-- readme.md
-- changelog.md
-- test.config
+- README.md
+- CHANGELOG.md
+- test-config.js
 
 The raw markup expected to be used for a CSS only component is included in separate file:
 
@@ -24,8 +24,9 @@ Component source code is stored in a subdirectory:
 All components include a test that at minimum will load the component and run automated accessibility tests against it. Test code is in a subdirectory:
 
 - /test/
+- /test/index.test.js
 
-If a component does not use any javascript but uses sass the CSS source code will be in ```src/index.scss``` and output to the root directory:
+If a component does not use any JavaScript but uses sass the CSS source code will be in `src/index.scss` and output to the root directory:
 
 - index.css
 - index.css.map
@@ -41,4 +42,3 @@ Components that use custom elements include a <a href="https://github.com/open-w
 This file is generated using the @custom-elements/analyzer package which reviews the JSDoc formatted comments in component code.
 
 The build is run and the distribution folder is deployed to our CDN as a prepublish step.
-
