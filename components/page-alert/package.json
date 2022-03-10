@@ -11,8 +11,7 @@
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
-    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],
   "author": "",
