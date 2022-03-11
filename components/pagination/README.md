@@ -118,15 +118,23 @@ This component uses a custom element defined in JavaScript in addition to HTML a
 
 This component accepts data attributes for the number of pages and current page. These changes are monitored and the component re-renders if these attributes change:
 
-| Name | Attribute name | Data type | Field type |
-| --- | --- | --- | --- |
-| Current page | data-current-page | string | Integer (default is 1) |
-| Total pages | data-total-pages | string | Integer (default is 1) |
+| Name         | Attribute name    | Data type | Field type             |
+| ------------ | ----------------- | --------- | ---------------------- |
+| Current page | data-current-page | string    | Integer (default is 1) |
+| Total pages  | data-total-pages  | string    | Integer (default is 1) |
 
 It also accepts optional strings for all the text so it can be used in multiple languages:
 
-| Name | Attribute name | Data type | Field type |
-| --- | --- | --- | --- |
-| Previous | data-previous | string | Plain text (default is "&#60;") |
-| Next | data-next | string | Plain text (default is "&#62;") |
-| Page | data-page | string | Plain text (default is "Page") |
+| Name     | Attribute name | Data type | Field type                      |
+| -------- | -------------- | --------- | ------------------------------- |
+| Previous | data-previous  | string    | Plain text (default is "&#60;") |
+| Next     | data-next      | string    | Plain text (default is "&#62;") |
+| Page     | data-page      | string    | Plain text (default is "Page")  |
+
+## Contributor/developer documentation
+
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
+
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
+
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)
