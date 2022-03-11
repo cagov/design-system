@@ -15,23 +15,11 @@ describe('CAGOV Accordion', function unitTest() {
     const startHTML = await response.text();
     const el = await fixture(`<div>${startHTML}</div>`); // use a prent div because referring to el.querySelector below
 
-    expect(
-      el.querySelector('.accordion-card-header').getAttribute('aria-expanded'),
-    ).to.equal('false');
+    expect(el.querySelector('details').hasAttribute('open')).to.equal(false);
 
-    expect(
-      el.querySelector('.accordion-card-container a').getAttribute('tabindex'),
-    ).to.equal('-1');
+    el.querySelector('summary').click();
 
-    el.querySelector('.accordion-card-header').click();
-
-    expect(
-      el.querySelector('.accordion-card-header').getAttribute('aria-expanded'),
-    ).to.equal('true');
-
-    expect(
-      el.querySelector('.accordion-card-container a'),
-    ).to.not.have.attribute('tabindex');
+    expect(el.querySelector('details').hasAttribute('open')).to.equal(true);
 
     await expect(el).to.be.accessible();
   });

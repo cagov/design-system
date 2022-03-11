@@ -35,8 +35,8 @@ Learn how to [contribute or tell us your ideas](/contact-us/).
 
 ## Component installation
 
-The Design System components are individual packages that you can download. Each component has readme instructions for how to install it.
+The Design System components are individual packages that you can download. Each component has README instructions for how to install it.
 
 1. Browse the [components gallery](/components/).
 2. Choose the component you want.
-3. Follow the readme instructions to install.
+3. Follow the README instructions to install.

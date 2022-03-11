@@ -16,7 +16,6 @@
   }
   li:before {
     content: "";
-    font-family: "Public Sans";
     font-size: 1.75rem;
     font-weight: 700;
     padding: 0 13px 0 13px;
@@ -38,7 +37,7 @@
     display: block;
   }
   li:first-child:before {
-    padding: 0 16px 0 16px;
+    padding: 0 13px 0 13px;
   }
   li::before {
     counter-increment: step-list-count;
