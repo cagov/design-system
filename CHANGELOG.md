@@ -1,5 +1,14 @@
 # California Design System
 
+## 1.0.3
+- #584 - Capitalize README
+- #688 - Design tokens add a reference page
+- #694 - Update PR to allow capitalization in github branches
+- #698 - Accordion: Better multiline summaries, fixes to open indicator icon
+        ⚡️ Markup change since 2.0.0: accordion markup will need to be updated (`ds-accordion`, 2.0.1) 
+        [CHANGELOG](https://github.com/cagov/design-system/blob/main/components/accordion/CHANGELOG.md)
+- #703 - Step List: Adjust padding on `ds-step-list`
+
 ## 1.0.2
 
 - 507 - Home page contact form - Submit button now changes on mouse hover.
