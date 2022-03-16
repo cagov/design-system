@@ -3,6 +3,7 @@
 test
 components/index.html
 components/README.md
+components/UNIT-TESTS.md
 components/*/*.(json|html|js|css|scss)
 components/*/*/**/*
 package.json

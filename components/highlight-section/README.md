@@ -47,21 +47,9 @@ Component is also incorporates full bleed background.
         </cagov-highlight-section>
 ```
 
-## NPM install
-
-npm install @cagov/ds-highlight-section
-
-## Development
-
-From the command line at the root of this project you can run:
-```
-npm run start
-```
-Which will start the web-dev server and will launch a new page linking to the components, click on hero to get the page created by ```preview.html```
-
 ### Expected variables
 
-There are some colors that should be defined by the containing page. 
+There are some colors that should be defined by the containing page.
 
 Expected definition is:
 
@@ -81,3 +69,11 @@ Expected definition is:
 
 }
 ```
+
+## Contributor/developer documentation
+
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
+
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
+
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)

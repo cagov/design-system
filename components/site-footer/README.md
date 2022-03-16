@@ -170,3 +170,11 @@ This component uses the following data attributes. We provide this information t
 | Social Links Icon                   | String    | URL to SVG file (24x24 pixels)                           | .footer-social-links ul li a svg      | Facebook, Twitter, YouTube, Instagram, LinkedIn, Github |
 | Screen reader only link description | String    | Plain text                                               | sr-only                               |                                                         |
 | Social Links url                    | String    | URL                                                      | .footer-social-links ul li a[href]    |                                                         |
+
+## Contributor/developer documentation
+
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
+
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
+
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)
