@@ -49,7 +49,7 @@ module.exports = function (eleventyConfig) {
     'components/accordion/template.html': 'css/accordion.html',
   });
   eleventyConfig.addPassthroughCopy({
-    'components/button-grid/template.html': 'css/button-grid.html',
+    'components/link-grid/template.html': 'css/link-grid.html',
   });
   eleventyConfig.addPassthroughCopy({
     'components/step-list/template.html': 'css/step-list.html',
