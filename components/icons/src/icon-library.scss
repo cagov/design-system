@@ -9,7 +9,7 @@
   }
 
   @media screen and (min-width: 1028px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -19,12 +19,8 @@
     display: block;
     margin: 0 auto 1em;
   }
+}
 
-  svg {
-    max-width: 100%;
-
-    @media screen and (min-width: 767px) {
-      max-width: 100px;
-    }
-  }
+cagov-icon svg {
+  max-width: 100px;
 }
