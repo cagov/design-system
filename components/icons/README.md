@@ -1,8 +1,11 @@
 # Icons
 
 References [Version 5.6.1 of the CAGov Icon Library](https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg)
-
 There are several methods for including icons in your project.
+
+## When and how to use it
+
+### How not to use it
 
 ## Specs
 
@@ -11,9 +14,11 @@ There are several methods for including icons in your project.
 | Machine name | ds-icons |
 | JavaScript   | yes      |
 
-## Method 1
+## Project installation
 
-### Minimal sprite and JavaScript
+### Method 1
+
+#### Minimal sprite and JavaScript
 
 Recommended for projects that use 10 - 200 icons.
 
@@ -35,24 +40,28 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 6. Place individual icon inline with `<cagov-icon data-icon="[id]"></cagov-icon>`
 
-### Sample markup and demo
+### Demo and sample markup
 
 <html-preview>
 
 ```html preview
-<!--Decorative-->
-<cagov-icon data-icon="arrow-down"></cagov-icon>
-<cagov-icon data-icon="drive"></cagov-icon>
-<!--Functional-->
-<cagov-icon data-icon="gear" data-sr="Settings"></cagov-icon>
-<cagov-icon data-icon="left" data-sr="Next Page"></cagov-icon>
+<div
+  style="display:grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; text-align: center;"
+>
+  <!--Decorative-->
+  <cagov-icon data-icon="arrow-down"></cagov-icon>
+  <cagov-icon data-icon="drive"></cagov-icon>
+  <!--Functional-->
+  <cagov-icon data-icon="gear" data-sr="Settings"></cagov-icon>
+  <cagov-icon data-icon="left" data-sr="Next Page"></cagov-icon>
+</div>
 ```
 
 </html-preview>
 
-## Method 2
+### Method 2
 
-### Direct download and include.
+#### Direct download and include.
 
 Recommended for projects that use 1-9 icons.
 
@@ -62,9 +71,9 @@ Recommended for projects that use 1-9 icons.
 
 3. Copy/paste or reference the icon in your project.
 
-## Method 3
+### Method 3
 
-### Icon font and CSS.
+#### Icon font and CSS.
 
 Recommended for projects where content authors need to be able to add any font inline using only HTML.
 
@@ -76,7 +85,7 @@ Recommended for projects where content authors need to be able to add any font i
 
 5. Place individual icon in HTML using `<span class="ca-gov-icon-[id]" aria-hidden="true"></span>`
 
-### Sample markup and demo
+### Demo and sample markup
 
 <html-preview>
 
@@ -105,6 +114,10 @@ As a component in Alpha status, this component must pass the following accessibi
 - Reviewed with the [VoiceOver](https://www.apple.com/voiceover/info/guide/_1121.html) screen reader on desktop
 - Verified keyboard navigation and that all actionable elements of the component are reachable via keyboard commands only
 - Reviewed component layout on a variety of screen sizes
+
+## Contributor/developer documentation
+
+- [Icon Library Contributors Documentation](https://github.com/cagov/design-system/blob/main/components/icons/CONTRIBUTORS.md)
 
 ## Icon library
 
