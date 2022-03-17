@@ -202,10 +202,10 @@
     "title": "Icons",
     "type": "visual",
     "status": "Alpha",
-    "blurb": "icons",
+    "blurb": "Icons",
     "description": "icons",
     "slug": "icons",
-    "icon": "/illustrations/png/step-list.png",
-    "svg": "svg/step-list.svg"
+    "icon": "/illustrations/png/icons.png",
+    "svg": "svg/icons.svg"
   }
 }
