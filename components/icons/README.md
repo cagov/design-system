@@ -1,11 +1,25 @@
 # Icons
-
-References [Version 5.6.1 of the CAGov Icon Library](https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg)
-There are several methods for including icons in your project.
-
+Icons are visual cues that help people find key information and common actions. They visually describe what something does or how someone can interact with it. This reduces cognitive load by communicating meanings or actions simply and accurately. 
 ## When and how to use it
+Use icons as visual indicators to make key actions or information easier to find and understand. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.1 of the CAGov icon library](https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg) whenever possible. Use icons consistently to avoid confusion for readers and reduce cognitive load. Select an icon that is as closely tied to the specific information or action as possible. When its meaning is not commonly understood, pair it with a label or supporting text.
 
+The Design System uses a standard set of icons for common actions. Several components incorporate icons automatically. This ensures consistency, and fewer steps for content designers. Some examples include:
+- Expand icon in the [accordion](https://designsystem.webstandards.ca.gov/components/accordion/readme/) 
+- Hamburger icon in the [site navigation](https://designsystem.webstandards.ca.gov/components/site-navigation/readme/) menu for mobile devices
+- External and pdf link icons in the [link icon](https://designsystem.webstandards.ca.gov/components/link-icon/readme/) 
+- Social media icons in the [site footer](https://designsystem.webstandards.ca.gov/components/site-footer/readme/)
+- Up arrow icon in the [back to top button](https://designsystem.webstandards.ca.gov/components/back-to-top/readme/)
+
+For a [page alert](https://designsystem.webstandards.ca.gov/components/page-alert/readme/), choose an icon that supports the tone of the alert.
 ### How not to use it
+Do not use an icon:
+- That does not relate to the meaning or action
+- Without a label if it is not widely understood 
+- For more than one function
+- Where an image or graphic is more appropriate
+- For decoration
+- If it creates visual clutter (like using too many on a page)
+- As a shortcut to guide visitors to important information without structuring content strategically
 
 ## Specs
 
