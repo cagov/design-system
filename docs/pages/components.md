@@ -28,7 +28,7 @@ These components help people find and move through content.
 
 ## Visual components
 
-Intro paragraph to visual components.
+These components provide default visual styles and icons for a Design System website.
 
 {{ componentCardList(componentSets.visual) }}
 
