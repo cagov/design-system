@@ -11,7 +11,6 @@ const generateLibrary = async () => {
     iconComponents: '',
     siteFileTemplate: vars.siteFileTemplate,
     siteDir: vars.siteDir,
-    label: vars.componentTextLabel,
     iconSprite: vars.componentFileAll,
     getMarkup: (sprite, components) => {
       // Remove xml declaration.
@@ -50,7 +49,7 @@ const generateLibrary = async () => {
     const svgID = path.basename(fileName, path.extname(fileName)).toLowerCase();
     library.iconComponents += `<div class=cagov-icon-library--card>
       <cagov-icon data-icon="${svgID}"></cagov-icon>
-      <a href="${library.siteDir}${svgID}.svg" download="${svgID}.svg">${library.label}<br>${svgID}.svg</a>
+      <a href="${library.siteDir}${svgID}.svg" type="image/svg+xml" download="${svgID}.svg">${svgID}.svg</a>
     </div>`;
   });
 
