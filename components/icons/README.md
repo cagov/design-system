@@ -1,7 +1,16 @@
 # Icons
-Icons are visual cues that help people find key information and common actions. They visually describe what something does or how someone can interact with it. This reduces cognitive load by communicating meanings or actions simply and accurately. 
+Icons are visual cues that help people find key information and common actions. They visually represent:
+
+- An idea or thing
+- What something does
+- How someone can interact with it
+
+Icons reduce cognitive load by communicating meanings or actions simply and accurately.
+ 
 ## When and how to use it
-Use icons as visual indicators to make key actions or information easy to find. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.1 of the CAGov icon library](https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg) whenever possible. Use icons consistently to avoid confusion for readers and reduce cognitive load. Select an icon that is as closely tied to the specific information or action as possible. When its meaning is not commonly understood, pair it with a label or supporting text.
+Use icons as visual indicators to make key actions or information easy to find. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.1 of the CAGov icon library](https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg) whenever possible. 
+
+Use icons for the same purpose consistently to avoid confusion for visitors and reduce cognitive load. Select an icon that’s as closely tied to the specific information or action as possible. When it may not be clear what the icon means, pair it with a label or supporting text.
 
 The Design System uses a standard set of icons for common actions. Several components incorporate icons automatically. This ensures consistency, and fewer steps for content designers. Some examples include:
 - Expand icon in the [accordion](https://designsystem.webstandards.ca.gov/components/accordion/readme/) 
@@ -15,7 +24,7 @@ For a [page alert](https://designsystem.webstandards.ca.gov/components/page-aler
 Do not use an icon:
 - That does not relate to the meaning or action
 - Without a label if it is not widely understood 
-- For more than one function
+- For more than one function or concept
 - Where an image or graphic is more appropriate
 - For decoration
 - If it creates visual clutter (like using too many on a page)
