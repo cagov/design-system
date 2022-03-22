@@ -11,7 +11,6 @@ const vars = {
   componentFileAll: 'dist/allIcons.svg',
 
   componentSubdir: 'dist/svg',
-  componentTextLabel: 'Download',
   componentPatternEach: 'dist/svg/*.svg',
 
   // DS Website.
