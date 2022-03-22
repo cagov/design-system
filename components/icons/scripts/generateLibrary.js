@@ -47,7 +47,7 @@ const generateLibrary = async () => {
 
   // Create cagov-icon components.
   glob.sync(library.pattern).forEach((fileName) => {
-    const svgID = path.basename(fileName, path.extname(fileName));
+    const svgID = path.basename(fileName, path.extname(fileName)).toLowerCase();
     library.iconComponents += `<div class=cagov-icon-library--card>
       <cagov-icon data-icon="${svgID}"></cagov-icon>
       <a href="${library.siteDir}${svgID}.svg" download="${svgID}.svg">${library.label}<br>${svgID}.svg</a>
