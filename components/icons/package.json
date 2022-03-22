@@ -1,0 +1,29 @@
+{
+  "name": "@cagov/ds-icons",
+  "version": "0.0.1",
+  "description": "A utility component for mangaging CA State Template v5.6.1 icons in the Design System.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'no build command. See project README.'",
+    "dev:sprite-some": "node scripts/generateSpriteSome.js --i=$npm_config_ids",
+    "dev:clear-cache": "run-s dev:icons dev:library && cd ../../ && npm run site:build",
+    "dev:library": "node scripts/generateLibrary.js ",
+    "dev:icons": "node scripts/generateIcons.js",
+    "dev:font-sass": "sass src/icon-font.scss src/icon-font.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cagov/design-system/tree/main/components/icons"
+  },
+  "devDependencies": {
+    "file-get-contents": "^1.0.0",
+    "font-blast": "^0.7.0",
+    "glob": "^7.2.0",
+    "node-wget": "^0.4.3",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.49.8",
+    "svg-sprite-generator": "^0.0.7",
+    "yargs": "^17.3.1"
+  }
+}
