@@ -1,4 +1,5 @@
 # Icons
+
 Icons are visual cues that help people find key information and common actions. They visually represent:
 
 - An idea or thing
@@ -6,24 +7,29 @@ Icons are visual cues that help people find key information and common actions. 
 - How someone can interact with it
 
 Icons reduce cognitive load by communicating meanings or actions simply and accurately.
- 
+
 ## When and how to use it
-Use icons as visual indicators to make key actions or information easy to find. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.1 of the CAGov icon library](https://california.azureedge.net/cdt/statetemplate/5.6.1/fonts/CaGov.svg) whenever possible. 
+
+Use icons as visual indicators to make key actions or information easy to find. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.1 of the CAGov icon library]([Version 5.6.1 of the CAGov icon library](#icon-library) whenever possible.
 
 Use icons for the same purpose consistently to avoid confusion for visitors and reduce cognitive load. Select an icon that’s as closely tied to the specific information or action as possible. When it may not be clear what the icon means, pair it with a label or supporting text.
 
 The Design System uses a standard set of icons for common actions. Several components incorporate icons automatically. This ensures consistency, and fewer steps for content designers. Some examples include:
-- Expand icon in the [accordion](https://designsystem.webstandards.ca.gov/components/accordion/readme/) 
+
+- Expand icon in the [accordion](https://designsystem.webstandards.ca.gov/components/accordion/readme/)
 - Hamburger icon in the [site navigation](https://designsystem.webstandards.ca.gov/components/site-navigation/readme/) menu for mobile devices
-- External and pdf link icons in the [link icon](https://designsystem.webstandards.ca.gov/components/link-icon/readme/) 
+- External and pdf link icons in the [link icon](https://designsystem.webstandards.ca.gov/components/link-icon/readme/)
 - Social media icons in the [site footer](https://designsystem.webstandards.ca.gov/components/site-footer/readme/)
 - Up arrow icon in the [back to top button](https://designsystem.webstandards.ca.gov/components/back-to-top/readme/)
 
 For a [page alert](https://designsystem.webstandards.ca.gov/components/page-alert/readme/), choose an icon that supports the tone of the alert.
+
 ### How not to use it
+
 Do not use an icon:
+
 - That does not relate to the meaning or action
-- Without a label if it is not widely understood 
+- Without a label if it is not widely understood
 - For more than one function or concept
 - Where an image or graphic is more appropriate
 - For decoration
@@ -144,6 +150,6 @@ As a component in Alpha status, this component must pass the following accessibi
 
 ## Icon library
 
-Download individual svgs using the links below.
+Version 5.6.1 of the [CAGov icon library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Download individual svgs using the links below.
 
 {% include 'layouts/icon-library.njk' %}
