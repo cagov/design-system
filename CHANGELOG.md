@@ -2,7 +2,7 @@
 
 ## 1.0.4
 
-- #652 - fixed bugs on base-css preview and add e2e test
+- #652 - Fixed bugs on base-css preview and add e2e test
 - #608 - Added new icons (ds-icons) component
 - #610 - Added illustration for the 404 error page (bear with binoculars)
 - #678 - Added icon component illustration icon for documentation page link
