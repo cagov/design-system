@@ -1,5 +1,6 @@
 .github
 .husky
+.history
 test
 components/index.html
 components/README.md
