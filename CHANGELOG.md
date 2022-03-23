@@ -8,6 +8,7 @@
 - #678 - Added icon component illustration icon for documentation page link
 - #679 - Added icons component documentation
 - #757 - Removed "Download" from library links
+- #746 - Added Broadband for All website example to showcase design system implementation
 
 ## 1.0.3
 
