@@ -1,6 +1,16 @@
 # California Design System
 
+## 1.0.4
+
+- #652 - Fixed bugs on base-css preview and add e2e test
+- #608 - Added new icons (ds-icons) component
+- #610 - Added illustration for the 404 error page (bear with binoculars)
+- #678 - Added icon component illustration icon for documentation page link
+- #679 - Added icons component documentation
+- #757 - Removed "Download" from library links
+
 ## 1.0.3
+
 - #584 - Capitalize README
 - #688 - Design tokens add a reference page
 - #694 - Update PR to allow capitalization in github branches
