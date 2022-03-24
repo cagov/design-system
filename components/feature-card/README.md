@@ -138,10 +138,8 @@ This component uses the following data attributes. We provide this information t
 
 ## Contributor/developer documentation
 
-From the command line at the root of this project you can run:
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
 
-```
-npm run start
-```
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
 
-This will start the web-dev server and will launch a new page linking to the components. Select **hero** to get the page created by `preview.html`
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)

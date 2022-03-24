@@ -9,14 +9,12 @@
     "url": "https://github.com/cagov/design-system/tree/main/components/feedback"
   },
   "scripts": {
-    "build:sass": "sass src/css/index.scss src/css/index.css",
     "build:js": "rollup --config rollup.config.js",
-    "build": "npm run build:sass && npm run build:js",
+    "build": "sass src/css/index.scss src/css/index.css && npm run build:js",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
-    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "devDependencies": {
     "@open-wc/testing": "^3.0.1",

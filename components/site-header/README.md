@@ -352,3 +352,11 @@ This component requires the following content assets and configuration variables
 - Since the name of the website in part of the header, your logo does not need to include your name. You can use just the visual symbol, if you have one.
 - If the site title appears too close to the search bar, then your logo may be too wide.
 - Search feature will require a CX Google search id. Part of sitewide config settings, see `odi-publishing` examples.
+
+## Contributor/developer documentation
+
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
+
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
+
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)

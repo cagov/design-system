@@ -348,14 +348,12 @@ Here is an abbreviated example of the data necessary to render this component wi
 
 For example, in the WordPress CMS integration, content editors can manage menu links through the normal menu system, and then [data](https://github.com/cagov/cannabis.ca.gov/blob/main/src/templates/wordpress/menu/headerMenu.json) is pulled from the WordPress menu system using an [API plugin](https://github.com/cagov/pantheon-mirror-cannabis-ca-gov/tree/main/wp-content/plugins/wp-rest-api-v2-menus) into a static site building website. This happens by way of GitHub, which acts as a local flat file JSON database for a static site generator (11ty). In the build process of the static site, we then use a [templating system](https://github.com/cagov/cannabis.ca.gov/blob/main/src/templates/_includes/nav-component.njk) to map the JSON data for the menu to the first two levels of the menu to the site navigation. Similar patterns can work for other publishing systems. If you are interested in helping, [reach out through our Contact us page](/contact-us).
 
-## Contributor/Developer documentation
+## Contributor/developer documentation
 
-Run: `npm run start` at the repository root to preview elements. This will launch local server with links to component demo pages.
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
 
-The documentation is generated using the <a href="https://github.com/webcomponents/custom-elements-manifest">custom elements manifest schema</a> draft standard <a href="https://github.com/runem/web-component-analyzer">analyzer</a> command. Here is an example run outside the accordion directory:
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
 
-```
-wca analyze src --format json --outFile custom-elements.json
-```
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)
 
 ¹ To use `import`, files must be served from a [webserver](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) such as Apache, Nginx, or [http-server](https://www.npmjs.com/package/http-server). The `file://` protocol will cause CORS errors in some browsers.

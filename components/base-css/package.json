@@ -7,8 +7,7 @@
     "build": "sass src/themes/_cannabis.scss dist/themes/cannabis.css && sass src/themes/_drought.scss dist/themes/drought.css && sass src/themes/_cagov.scss dist/themes/cagov.css",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "prepublishOnly": "npm run build && npm test && npm run cdn:publish",
-    "test": "web-test-runner \"test/**/*.js\" --node-resolve",
-    "test:visual": "web-test-runner \"test/**/*.js\" --node-resolve --config test-config.js"
+    "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],
   "author": "",

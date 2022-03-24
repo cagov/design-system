@@ -142,10 +142,10 @@ This component uses the following data attributes. We provide this information t
 | Title | title          | string    | Rich text  | summary          |
 | Body  | body           | string    | Rich text  | .accordion-body  |
 
-## Contributor/Developer documentation
+## Contributor/developer documentation
 
-The custom elements manifest documentation is generated using the <a href="https://github.com/webcomponents/custom-elements-manifest">custom elements manifest schema</a> draft standard <a href="https://github.com/runem/web-component-analyzer">analyzer</a> command. Here is an example run outside the accordion directory:
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
 
-```
-wca analyze accordion --format json --outFile accordion/custom-elements.json
-```
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
+
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)

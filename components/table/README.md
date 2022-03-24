@@ -226,12 +226,10 @@ This CSS-only module contains styles for basic tables. `index.css` is for headle
 
 none.
 
-## Available commands for developers.
+## Contributor/developer documentation
 
-`npm run build` - Generate css from scss files.
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
 
-`npm run build:wp` - Generate Wordpress-friendly css from scss files.
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
 
-`npm run test` - Run headless tests with [Open Web Componenents](https://open-wc.org/).
-
-`npm run test:visual` Run headed tests with [Open Web Componenents](https://open-wc.org/).
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)

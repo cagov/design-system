@@ -111,3 +111,11 @@ This is an HTML- and CSS-only component. JavaScript is not required. It uses [CS
 ## Content model
 
 This component uses the `ol.cagov-step-list` class. It will work on `ul` elements, but would not be semantically correct. Use `ol` with this component.
+
+## Contributor/developer documentation
+
+- [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
+
+- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
+
+- [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)

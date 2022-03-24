@@ -49,13 +49,17 @@ module.exports = function (eleventyConfig) {
     'components/accordion/template.html': 'css/accordion.html',
   });
   eleventyConfig.addPassthroughCopy({
-    'components/button-grid/template.html': 'css/button-grid.html',
+    'components/link-grid/template.html': 'css/link-grid.html',
   });
   eleventyConfig.addPassthroughCopy({
     'components/step-list/template.html': 'css/step-list.html',
   });
   eleventyConfig.addPassthroughCopy({ '_site_dist/*': '/' });
   eleventyConfig.addPassthroughCopy({ '_build_dist/*': 'builds' });
+  eleventyConfig.addPassthroughCopy({
+    'components/icons/dist/svg': 'cagov-icons-svg',
+  });
+  eleventyConfig.addPassthroughCopy({ 'components/icons/src/fonts': 'fonts' });
 
   return {
     htmlTemplateEngine: 'njk',

@@ -196,5 +196,16 @@
     "slug": "step-list",
     "icon": "/illustrations/png/step-list.png",
     "svg": "svg/step-list.svg"
+  },
+  "icons": {
+    "name": "Icons",
+    "title": "Icons",
+    "type": "visual",
+    "status": "Alpha",
+    "blurb": "Visual indicators for important actions and information",
+    "description": "Details about using icons, including how to use them and the steps to install them.",
+    "slug": "icons",
+    "icon": "/illustrations/png/icons.png",
+    "svg": "svg/icons.svg"
   }
 }
