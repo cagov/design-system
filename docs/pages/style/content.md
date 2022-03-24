@@ -27,7 +27,3 @@ We were inspired by the work of teams that came before us, including:
 * [Public Digital](https://public.digital/)
 * [San Francisco Digital Services](https://digitalservices.sfgov.org/)
 * [U.S. Digital Service](https://www.usds.gov/)
-
-## Share your thoughts
-
-We’d love to hear what you thought of these principles and if you have suggestions on how we can improve them. Share through our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLScNllSkyD7sI7wQPQ9LkkfbRB4w7stEbEKuhrHVxYue-DPyQQ/viewform?usp=sf_link).
