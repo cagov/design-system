@@ -1,17 +1,11 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { exec } from 'child_process';
-import path from 'path';
 import vars from './vars.js';
 
 const generateSprite = () => {
-  const __dirname = path.dirname('svg-sprite-generate');
-
   // Default command.
-  let cmd = `${path.resolve(
-    __dirname,
-    'node_modules/.bin/svg-sprite-generate',
-  )} -d ${vars.componentSubdir} -o ${vars.componentFileAll}`;
+  let cmd = `svg-sprite-generate -d ${vars.componentSubdir} -o ${vars.componentFileAll}`;
 
   // Set up arguments for the command line.
   const { argv } = yargs(hideBin(process.argv))
