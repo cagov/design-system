@@ -2,9 +2,11 @@
   <section class="component-cards">
     {%- for component in collection -%}
       <div class="component-card">
-        <div class="component-card-img">
+        <a href="/components/{{ component.slug }}/readme">
+          <div class="component-card-img" >
           {%- include component.svg -%}
-        </div>
+          </div>
+        </a>
         <div class="component-card-content">
           <a class="component-card-link" href="/components/{{ component.slug }}/readme">
             {{ component.name }}
