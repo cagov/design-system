@@ -2,8 +2,8 @@
   <section class="component-cards">
     {%- for component in collection -%}
       <div class="component-card">
-        <a href="/components/{{ component.slug }}/readme">
-          <div class="component-card-img" >
+        <a href="/components/{{ component.slug }}/readme" aria-label="component svg">
+          <div class="component-card-img">
           {%- include component.svg -%}
           </div>
         </a>
