@@ -32,7 +32,3 @@ You cannot cover every situation or fix every aspect of a service. Focus on what
 Google Analytics tracks user behavior on websites. It’s an easy way to learn about your audience and how well you’re meeting their needs. Performing full user research is important, but Google Analytics can answer a lot of questions without having to interview people.
 
 Talk with your web engineers about enabling Google Analytics on your website.
-
-## Share your thoughts
-
-We’d love to hear what you thought of these principles and if you have suggestions on how we can improve them. Share through our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLScNllSkyD7sI7wQPQ9LkkfbRB4w7stEbEKuhrHVxYue-DPyQQ/viewform?usp=sf_link).
