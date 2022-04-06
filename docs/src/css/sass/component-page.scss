@@ -18,20 +18,23 @@
 }
 
 .component-card {
-  border: solid 1px #E1E0E3;
-  border-radius: .5rem;
+  border: solid 1px #e1e0e3;
+  border-radius: 0.5rem;
   &-link {
     text-decoration: none;
     display: block;
   }
-  &-status, &-link {
+  &-status,
+  &-link {
     font-weight: 700;
   }
-  &-blurb, &-status, &-link {
-    margin: .25rem 0;
+  &-blurb,
+  &-status,
+  &-link {
+    margin: 0.25rem 0;
   }
   &-img {
-    background-color: #F5F5FA;
+    background-color: #f5f5fa;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +50,8 @@
 }
 
 .component-sidebar {
-  &-heading, &-item {
+  &-heading,
+  &-item {
     margin: 1.5rem 0;
   }
   &-heading:first-child {
@@ -59,7 +63,7 @@
   &-item {
     display: flex;
     flex-direction: row;
-    column-gap: .5rem;
+    column-gap: 0.5rem;
   }
   &-selected {
     margin: 0;
@@ -69,10 +73,10 @@
     text-decoration: none;
   }
   &-link-new {
-    background-color: var(--secondary-color, #FF8000);
-    font-size: .8rem;
+    background-color: var(--secondary-color, #ff8000);
+    font-size: 0.8rem;
     color: white;
-    padding: .25rem .5rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 1rem;
   }
   &-document {
@@ -84,17 +88,17 @@
     &-selected {
       padding-left: calc(1rem - 3px);
       margin: 1.5rem 0;
-      border-left: solid 3px var(--secondary-color, #FF8000);
+      border-left: solid 3px var(--secondary-color, #ff8000);
     }
   }
   &-menu {
     &-content {
-      margin: .5rem 0
+      margin: 0.5rem 0;
     }
     &-button {
       display: none;
       align-items: center;
-      column-gap: .75rem;
+      column-gap: 0.75rem;
       width: 100%;
       border: none;
       padding: 1rem;
@@ -107,14 +111,14 @@
     }
     &-arrow {
       display: inline-block;
-      transform: rotate(270deg)
+      transform: rotate(270deg);
     }
   }
 }
 
 @media screen and (max-width: 767px) {
   .component-sidebar {
-    border-bottom: 1px solid var(--gray-300,#e1e0e3) !important;
+    border-bottom: 1px solid var(--gray-300, #e1e0e3) !important;
     margin-bottom: 1rem;
   }
   .component-sidebar-menu-button {
@@ -134,22 +138,23 @@
   display: flex;
   flex-direction: row;
   column-gap: 1rem;
-  border-bottom: solid 1px #E1E0E3;
+  border-bottom: solid 1px #e1e0e3;
   margin-bottom: 1.5rem;
   &-selected {
     font-weight: 700;
-    border-bottom: solid 3px var(--secondary-color, #FF8000);
+    border-bottom: solid 3px var(--secondary-color, #ff8000);
   }
   &-link {
     text-decoration: none;
   }
-  &-link, &-selected {
-    padding: .5rem;
+  &-link,
+  &-selected {
+    padding: 0.5rem;
   }
 }
 
 .component-development-stage {
-  border: solid 1px #A09FA7;
+  border: solid 1px #a09fa7;
   padding: 1rem;
   margin: 1.5rem 0;
   &-heading {
@@ -166,11 +171,11 @@
     div {
       display: flex;
       flex-direction: row;
-      column-gap: .5rem;
+      column-gap: 0.5rem;
       align-items: center;
       &.current-development-stage {
         dt {
-          background-color: var(--secondary-color, #FF8000);
+          background-color: var(--secondary-color, #ff8000);
           color: var(--black, #000000);
         }
         font-weight: 700;
@@ -179,7 +184,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: solid 1px var(--secondary-color, #FF8000);
+        border: solid 1px var(--secondary-color, #ff8000);
         border-radius: 50%;
         width: 2.25rem;
         height: 2.25rem;
@@ -196,12 +201,12 @@
 }
 
 .code-preview {
-  border: solid 1px #A09FA7;
+  border: solid 1px #a09fa7;
   background-color: #f9f9fa;
   padding: 1rem;
   margin: 1rem 0;
   &-demo {
-    border: solid 1px #A09FA7;
+    border: solid 1px #a09fa7;
     background-color: white;
     padding: 1rem;
   }
@@ -217,11 +222,11 @@
   margin: 1rem 0;
   &-language {
     background-color: #2b2b2b;
-    color: #A09FA7;
-    border-bottom: solid 1px #A09FA7;
+    color: #a09fa7;
+    border-bottom: solid 1px #a09fa7;
     font-style: italic;
     margin: 0;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
   code.hljs {
     margin: 0;
