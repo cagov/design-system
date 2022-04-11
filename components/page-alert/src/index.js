@@ -26,9 +26,14 @@ class CAGovPageAlert extends window.HTMLElement {
 
   template(data) {
     if (data !== undefined && data !== null && data.content !== null) {
-      this.innerHTML = `<div class="cagov-page-alert cagov-stack"><div class="icon" aria-hidden="true"><span class="${this.icon}"></span></div>
+      this.innerHTML = `<div class="cagov-page-alert cagov-stack">
+      <div class="icon" aria-hidden="true"><span class="${this.icon}"></span></div>
         <div class="body">${this.message}</div>
-        <button class="close-button"><span class="ca-gov-icon-close-line" aria-hidden="true"></span><span class="visually-hidden">Dismiss page alert</span></button></div>`;
+        <button class="close-button">
+          <span class="ca-gov-icon-close-line" aria-hidden="true"></span>
+          <span class="sr-only">Dismiss page alert</span>
+        </button>
+      </div>`;
     }
 
     return null;
