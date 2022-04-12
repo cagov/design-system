@@ -161,18 +161,8 @@
   display: none;
 }
 
-.mobile-only {
-  display: none;
-}
-
 @media screen and (min-width: 800px) {
   .desktop-only {
-    display: inline;
-  }
-}
-
-@media screen and (max-width: 799px) {
-  .mobile-only {
     display: inline;
   }
 }
