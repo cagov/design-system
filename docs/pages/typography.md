@@ -16,7 +16,7 @@ h5 {font-weight:  var(--font-weight-8, 800);}
 	h2 {font-size:  calc(var(--font-size-8) + var(--ratio));}
 	h3 {font-size:  calc(var(--font-size-6) + var(--ratio));}
 	h4 {font-size:  calc(var(--font-size-4) + var(--ratio));}
-	h5 {font-size:  calc(var(--font-size-2) + var(--ratio));}
+	h5 {font-size:  calc(var(--font-size-2) + var(--ratio)); letter-spacing:0.5px;}
 }
 </style>
 
