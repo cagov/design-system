@@ -111,7 +111,13 @@
     }
     &-arrow {
       display: inline-block;
-      transform: rotate(270deg);
+      transform: rotate(0deg);
+      transition: $slow;
+    }
+    &-arrow-transform {
+      transform: rotate(180deg);
+      display: block;
+      transition: $slow;
     }
   }
 }
