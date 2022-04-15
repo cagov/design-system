@@ -64,7 +64,7 @@ $desktop-min: 1176px;
   // border-radius
   --radius-round: 50%;
   --radius-1: 2px;
-  --radius-2: 5px;
+  --radius-2: 4px;
   --radius-3: 0.5rem;
   --radius-4: 1rem;
   --radius-5: 2rem;
@@ -143,31 +143,51 @@ $desktop-min: 1176px;
   --font-lineheight-6: 2;
 
   // cagov main colors
-  --cagov-highlight-light: #fed36d;
-  --cagov-highlight: #fec02f;
-  --cagov-highlight-dark: #b28621;
-  --cagov-primary: #004abc;
-  --cagov-primary-dark: #003484;
-  --cagov-secondary: #ff8000;
+  --cagov-highlight-light: #ffecc4;
+  --cagov-highlight: #ecb32d;
+  --cagov-highlight-dark: #ac8227;
+  --cagov-primary: #165ac2;
+  --cagov-primary-dark: #003688;
+  --cagov-secondary: #de6516;
 
   // Gray colors
   --white: #fff;
-  --gray-100: #f9f9fa;
-  --gray-200: #ededef;
-  --gray-300: #e1e0e3;
-  --gray-400: #d3d2d6;
-  --gray-500: #c4c3c8;
-  --gray-600: #b3b2b8;
-  --gray-700: #a09fa7;
-  --gray-800: #6c6b77;
-  --gray-900: #3f3e4d;
+  --gray-50: #fafafa;
+  --gray-100: #ededef;
+  --gray-200: #d4d4d7;
+  --gray-300: #bcbbc1;
+  --gray-400: #a4a3ab;
+  --gray-500: #898891;
+  --gray-600: #72717c;
+  --gray-700: #5e5e6a;
+  --gray-800: #4a4958;
+  --gray-900: #3b3a48;
   --black: #000;
 
   // System status colors
-  --success: #008542;
-  --danger: #b71234;
-  --warning: #ffd700;
-  --info: #000080;
+  --success-100: #e5f1e7;
+  --success-300: #9ac7a4;
+  --success-500: #489b62;
+  --success-700: #0f6d38;
+  --success-900: #154425;
+
+  --danger-100: #fce9e8;
+  --danger-300: #eeaba9;
+  --danger-500: #d5676a;
+  --danger-700: #b91b37;
+  --danger-900: #721923;
+
+  --warning-100: #ffef97;
+  --warning-300: #dcba00;
+  --warning-500: #a38900;
+  --warning-700: #6f5e00;
+  --warning-900: #463b00;
+
+  --info-100: #ededf6;
+  --info-300: #b9b9dc;
+  --info-500: #8585c2;
+  --info-700: #5555aa;
+  --info-900: #2b2b95;
 
   // Animations and transitions
   --animation-duration-1: 0.1s;

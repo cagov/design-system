@@ -2,7 +2,7 @@
 .wp-block-button__link {
   background-color: #33705b;
   /* defined here for when css vars are not supported */
-  background-color: var(--primary-color, #33705b);
+  background-color: var(--primary-700, #165ac2);
   color: white;
   padding: 0.5556rem;
   margin: 0 0 1rem 0;
@@ -14,7 +14,7 @@
 }
 .wp-block-button__link:hover {
   /* defined here for when css vars are not supported */
-  background-color: var(--primary-hover-color, #33705b);
+  background-color: var(--primary-900, #003688);
   /* variable used with fallback in case it is not defined */
   color: var(--white, #ffffff);
   padding: 0.5556rem;
@@ -29,7 +29,8 @@
 @mixin btn {
   display: inline-block;
   font-size: var(--font-size-2);
-  padding: var(--s-1);
+  font-weight: var(--font-weight-6);
+  padding: var(--s-1) var(--s-2);
   line-height: var(--font-lineheight-3);
   border-radius: var(--radius-2);
   border: var(--border-1) solid;
@@ -37,38 +38,82 @@
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  transition: all var(--ease-2) var(--animation-duration-3);
+  // transition: all var(--ease-2) var(--animation-duration-3);
 }
 
 // Primary buttons
 .btn-primary {
   @include btn;
   color: var(--white);
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: var(--primary-700);
+  border-color: var(--primary-700);
 
   &:hover {
-    color: var(--white);
-    background-color: var(--primary-dark-color);
-    border-color: var(--primary-dark-color);
+    background-color: var(--primary-900);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
   }
   &:focus {
-    outline: var(--border-2) solid var(--highlight-color);
+    outline: var(--border-2) solid var(--accent2-500);
+    background-color: var(--primary-900);
+    border-color: var(--primary-900);
   }
 }
 .btn-primary-outline {
   @include btn;
-  color: var(--primary-color);
-  background-color: var(--white);
-  border-color: var(--primary-color);
+  color: var(--primary-700);
+  background-color: transparent;
+  border-color: var(--primary-700);
 
   &:hover {
-    color: var(--primary-dark-color);
-    background-color: var(--white);
-    border-color: var(--primary-dark-color);
+    color: var(--primary-900);
+    border-color: var(--primary-900);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
   }
   &:focus {
-    outline: var(--border-2) solid var(--highlight-color);
+    color: var(--primary-900);
+    border-color: var(--primary-900);
+    outline: var(--border-2) solid var(--accent2-500);
+  }
+}
+
+// Accent1 buttons
+// btn accent1 variable can be found in /colorschemes/ scss files
+.btn-accent1 {
+  @include btn;
+  color: var(--btn-accent1-color);
+  background-color: var(--btn-accent1-bg);
+  border-color: var(--btn-accent1-bg);
+
+  &:hover {
+    background-color: var(--btn-accent1-color-hover);
+    border-color: var(--btn-accent1-color-hover);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    outline: var(--border-2) solid var(--accent2-500);
+    background-color: var(--btn-accent1-color-hover);
+    border-color: var(--btn-accent1-color-hover);
+  }
+}
+.btn-accent1-outline {
+  @include btn;
+  color: var(--btn-accent1-outline-color);
+  background-color: transparent;
+  border-color: var(--primary-700);
+
+  &:hover {
+    color: var(--primary-900);
+    border-color: var(--primary-900);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    color: var(--primary-900);
+    border-color: var(--primary-900);
+    outline: var(--border-2) solid var(--accent2-500);
   }
 }
 
@@ -127,7 +172,7 @@
 
 .btn-action-primary {
   @include actionbutton;
-  border-color: var(--primary-color);
+  border-color: var(--primary-700);
   background-color: var(--white);
   width: 100%;
   .btn-action-title {
@@ -149,7 +194,7 @@
     display: block;
   }
   &:hover {
-    border-color: var(--primary-dark-color);
+    border-color: var(--primary-900);
     background-color: var(--gray-100);
     .btn-action-title {
       color: var(--primary-dark-color);

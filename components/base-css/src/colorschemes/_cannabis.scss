@@ -1,6 +1,27 @@
 /* Colorscheme root variables */
 :root {
   /* Theme colors */
+
+  /* Theme colors */
+  --primary-100: #ccd6dc;
+  --primary-300: #b4cad1;
+  --primary-500: #518394;
+  --primary-700: #064e66; // brand color
+  --primary-900: #043747;
+
+  --accent1-100: #eceeeb;
+  --accent1-300: #c1c9c0;
+  --accent1-500: #6d826b;
+  --accent1-700: #2f4c2c; // brand color
+  --accent1-900: #21351f;
+
+  --accent2-100: #f7ebe6;
+  --accent2-300: #ecd0c4;
+  --accent2-500: #d39276;
+  --accent2-700: #c0633b; // brand color
+  --accent2-900: #864529;
+
+  // old color names
   --primary-color: #064e66;
   --primary-dark-color: #043747;
   --primary-light-color: #518394;
