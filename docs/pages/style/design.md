@@ -356,13 +356,13 @@ The line height is a ratio of 1.75 to the base font size. For each ascending lev
 
 
 ## Buttons
-We use Design System's buttons styles for actions in forms, surveys, dialogs and other call to action sections.
+We use the Design System's buttons styles for actions in forms, surveys, dialogs, and other call to action sections.
 ### Primary buttons
-Primary buttons are using theme's primary color in their background or as border outline. Use class <code>btn-primary</code> for primary color background variation and `btn-primary-outline` for primary color outline variation. You can also add complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. 
+Primary buttons use the theme's primary color in their background or as a border outline. Use class <code>btn-primary</code> for primary color background variation and `btn-primary-outline` for primary color outline variation. You can also add a complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. 
 <button class="btn-primary m-t-2 m-r-2">Primary</button> <a href="#" class="btn-primary-outline m-t-2">Primary outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
 
 ### Accent 1, Accent 2, and Light buttons
-Accent 1, Accent 2 and Light color buttons can be used only inside of the primary-900 or black backgrounds. These buttons are using theme's accent 1, accent 2 or light color in their background or as border outline. You can also add complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. To display these buttons use following css classes:
+Accent 1, Accent 2, and Light color buttons can be used only inside of the primary-900 or black backgrounds. These buttons use the theme's accent 1, accent 2 or light color in their background or as a border outline. You can also add a complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. To display these buttons use following css classes:
 <code>btn-accent1</code>, <code>btn-accent1-outline</code>
 <code>btn-accent2</code>, <code>btn-accent2-outline</code>
 <code>btn-light</code>, <code>btn-light-outline</code>
@@ -377,10 +377,10 @@ Accent 1, Accent 2 and Light color buttons can be used only inside of the primar
 
 
 ### Disabled buttons
-Disabled button is using class <code>btn-disabled</code>. Disabled buttons should include the <code>aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies. Also, to be safe, add a <code>tabindex="-1"</code> attribute to your disabled button.
+Disabled buttons use the class <code>btn-disabled</code>. Include include the <code>aria-disabled="true"</code> attribute with disabled buttons to indicate the state of the element to assistive technologies. To be safe, add a <code>tabindex="-1"</code> attribute to your disabled button.
 <button class="btn-disabled m-t-2 m-r-2" aria-disabled="true" tabindex="-1">Disabled</button> <a href="#" class="btn-disabled-outline m-t-2" aria-disabled="true" tabindex="-1">Disabled link <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
 
-Accent 1, Accent 2 and Light buttons also have disabled variations. Thay all have the same disabled styles. Use following css classes to display disabled button state:
+Accent 1, Accent 2, and Light buttons also have disabled versions. Thay all have the same disabled styles. Use the following css classes to display disabled button state:
 <code>btn-accent1-disabled</code>, <code>btn-accent1-disabled-outline</code>
 <code>btn-accent2-disabled</code>, <code>btn-accent2-disabled-outline</code>
 <code>btn-light-disabled</code>, <code>btn-light-disabled-outline</code>
@@ -390,7 +390,7 @@ Accent 1, Accent 2 and Light buttons also have disabled variations. Thay all hav
 
 
 ### Action buttons
-We use action buttons in our call to action sections to guide users towards some goal. Action button consist of two span elements: action button title and action button text. Action button can be created by adding class `btn-action-primary` to a link or button element. Also, make sure you add span with class `btn-action-title` and add your link title text into it. For the links short description text add span with class `btn-action-text`.
+We use action buttons in our call to action sections to guide users towards some goal. Action button consist of two span elements: action button title and action button text. You can create an action button by adding class `btn-action-primary` to a link or button element. Make sure you add a span with class `btn-action-title` with your link title text into it. For the link's short description text, add span with class `btn-action-text`.
 <a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Primary Action Link Title</span><span class="btn-action-text">Some description text</span></a>
 <a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Primary Action Link</span></a>
 <a href="#" class="btn-action-dark m-t-2"><span class="btn-action-title">Dark Action Link Title</span><span class="btn-action-text">Some description text</span></a>
