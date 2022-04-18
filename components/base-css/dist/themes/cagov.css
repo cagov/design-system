@@ -2726,6 +2726,7 @@ main .wp-block-image img {
   background-color: var(--primary-900);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   text-decoration: none;
+  color: var(--white);
 }
 .btn-primary:focus {
   background-color: var(--primary-900);
@@ -2786,6 +2787,7 @@ main .wp-block-image img {
   border-color: var(--accent1-300);
 }
 .btn-accent1:hover {
+  color: var(--primary-900);
   background-color: var(--accent1-100);
   border-color: var(--accent1-100);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -2850,6 +2852,7 @@ main .wp-block-image img {
   border-color: var(--accent2-300);
 }
 .btn-accent2:hover {
+  color: var(--primary-900);
   background-color: var(--accent2-100);
   border-color: var(--accent2-100);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -2914,6 +2917,7 @@ main .wp-block-image img {
   border-color: var(--white);
 }
 .btn-light:hover {
+  color: var(--primary-900);
   background-color: var(--gray-200);
   border-color: var(--gray-200);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);

@@ -1,5 +1,8 @@
 # Page feedback changelog
 
+## 1.1.1
+* Standardized components buttons styles.
+
 ## 1.1.0
 * Changed name of package from `ds-feedback` to `ds-page-feedback`.
 * Changed name of custom element to `<cagov-page-feedback>`.
