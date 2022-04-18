@@ -595,33 +595,33 @@ System status colors palette consist of four main colors spectrums, such as succ
 
 <div class="d-grid gap-3" style="grid-template-columns: max-content 1fr; align-items: center;">
 <code class="font-size-1">var(--font-size-xs)</code>
-<span class="font-size-xs">Hỗ trợ phí</span>
+<span class="font-size-xs">Design for people</span>
 <code class="font-size-1">var(--font-size-sm)</code>
-<span class="font-size-sm">Hỗ trợ phí</span>
+<span class="font-size-sm">Design for people</span>
 <code class="font-size-1">var(--font-size-1)</code>
-<span class="font-size-1">Hỗ trợ phí</span>
+<span class="font-size-1">Design for people</span>
 <code class="font-size-1">var(--font-size-2)</code>
-<span class="font-size-2">Hỗ trợ phí</span>
+<span class="font-size-2">Design for people</span>
 <code class="font-size-1">var(--font-size-3)</code>
-<span class="font-size-3">Hỗ trợ phí</span>
+<span class="font-size-3">Design for people</span>
 <code class="font-size-1">var(--font-size-4)</code>
-<span class="font-size-4">Hỗ trợ phí</span>
+<span class="font-size-4">Design for people</span>
 <code class="font-size-1">var(--font-size-5)</code>
-<span class="font-size-5">Hỗ trợ phí</span>
+<span class="font-size-5">Design for people</span>
 <code class="font-size-1">var(--font-size-6)</code>
-<span class="font-size-6">Hỗ trợ phí</span>
+<span class="font-size-6">Design for people</span>
 <code class="font-size-1">var(--font-size-7)</code>
-<span class="font-size-7">Hỗ trợ phí</span>
+<span class="font-size-7">Design for people</span>
 <code class="font-size-1">var(--font-size-8)</code>
-<span class="font-size-8">Hỗ trợ phí</span>
+<span class="font-size-8">Design for people</span>
 <code class="font-size-1">var(--font-size-9)</code>
-<span class="font-size-9">Hỗ trợ phí</span>
+<span class="font-size-9">Design for people</span>
 <code class="font-size-1">var(--font-size-10)</code>
-<span class="font-size-10">Hỗ trợ phí</span>
+<span class="font-size-10">Design for people</span>
 <code class="font-size-1">var(--font-size-11)</code>
-<span class="font-size-11">Hỗ trợ phí</span>
+<span class="font-size-11">Design for people</span>
 <code class="font-size-1">var(--font-size-12)</code>
-<span class="font-size-12">Hỗ trợ phí</span>
+<span class="font-size-12">Design for people</span>
 </div>
 
 
@@ -669,6 +669,8 @@ System status colors palette consist of four main colors spectrums, such as succ
 </span></code></pre>
 </div>
 
+This example uses Vietnamese language because it has marks above and below letters that could affect readability. This is important to consider in order to make your content accessible in multiple languages. 
+  
 <div class="code-block"><p class="code-block-language">Example</p><pre><code class="hljs"><span class="hljs-code">h1 {
   line-height: var(--font-lineheight-1);
 }
