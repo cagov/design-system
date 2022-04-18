@@ -54,9 +54,13 @@
     text-decoration: none;
   }
   &:focus {
-    outline: var(--border-2) solid var(--accent2-500);
     background-color: var(--primary-900);
     border-color: var(--primary-900);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 .btn-primary-outline {
@@ -75,45 +79,148 @@
     color: var(--primary-900);
     border-color: var(--primary-900);
     outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 
 // Accent1 buttons
-// btn accent1 variable can be found in /colorschemes/ scss files
 .btn-accent1 {
   @include btn;
-  color: var(--btn-accent1-color);
-  background-color: var(--btn-accent1-bg);
-  border-color: var(--btn-accent1-bg);
+  color: var(--primary-900);
+  background-color: var(--accent1-300);
+  border-color: var(--accent1-300);
 
   &:hover {
-    background-color: var(--btn-accent1-color-hover);
-    border-color: var(--btn-accent1-color-hover);
+    background-color: var(--accent1-100);
+    border-color: var(--accent1-100);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     text-decoration: none;
   }
   &:focus {
+    background-color: var(--accent1-100);
+    border-color: var(--accent1-100);
     outline: var(--border-2) solid var(--accent2-500);
-    background-color: var(--btn-accent1-color-hover);
-    border-color: var(--btn-accent1-color-hover);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 .btn-accent1-outline {
   @include btn;
-  color: var(--btn-accent1-outline-color);
+  color: var(--accent1-300);
   background-color: transparent;
-  border-color: var(--primary-700);
+  border-color: var(--accent1-300);
 
   &:hover {
-    color: var(--primary-900);
-    border-color: var(--primary-900);
+    color: var(--accent1-100);
+    border-color: var(--accent1-100);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     text-decoration: none;
   }
   &:focus {
-    color: var(--primary-900);
-    border-color: var(--primary-900);
+    color: var(--accent1-100);
+    border-color: var(--accent1-100);
     outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+// Accent1 buttons
+.btn-accent2 {
+  @include btn;
+  color: var(--primary-900);
+  background-color: var(--accent2-300);
+  border-color: var(--accent2-300);
+
+  &:hover {
+    background-color: var(--accent2-100);
+    border-color: var(--accent2-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    background-color: var(--accent2-100);
+    border-color: var(--accent2-100);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+.btn-accent2-outline {
+  @include btn;
+  color: var(--accent2-300);
+  background-color: transparent;
+  border-color: var(--accent2-300);
+
+  &:hover {
+    color: var(--accent2-100);
+    border-color: var(--accent2-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    color: var(--accent2-100);
+    border-color: var(--accent2-100);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+// Accent1 buttons
+.btn-light {
+  @include btn;
+  color: var(--primary-900);
+  background-color: var(--white);
+  border-color: var(--white);
+
+  &:hover {
+    background-color: var(--gray-200);
+    border-color: var(--gray-200);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    background-color: var(--gray-200);
+    border-color: var(--gray-200);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+.btn-light-outline {
+  @include btn;
+  color: var(--white);
+  background-color: transparent;
+  border-color: var(--white);
+
+  &:hover {
+    color: var(--gray-200);
+    border-color: var(--gray-200);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    color: var(--gray-200);
+    border-color: var(--gray-200);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 
@@ -124,26 +231,57 @@
   @include btn;
   pointer-events: none !important;
   color: var(--white);
-  background-color: var(--gray-700);
-  border-color: var(--gray-700);
+  background-color: var(--gray-600);
+  border-color: var(--gray-600);
 
   &:hover {
     color: var(--white);
-    background-color: var(--gray-700);
-    border-color: var(--gray-700);
+    background-color: var(--gray-600);
+    border-color: var(--gray-600);
   }
 }
 .btn-disabled-outline {
   @include btn;
   pointer-events: none !important;
-  color: var(--gray-700);
+  color: var(--gray-600);
   background-color: var(--white);
-  border-color: var(--gray-700);
+  border-color: var(--gray-600);
 
   &:hover {
-    color: var(--gray-700);
+    color: var(--gray-600);
     background-color: var(--white);
-    border-color: var(--gray-700);
+    border-color: var(--gray-600);
+  }
+}
+
+.btn-accent1-disabled,
+.btn-accent2-disabled,
+.btn-light-disabled {
+  @include btn;
+  pointer-events: none !important;
+  color: var(--primary-900);
+  background-color: var(--gray-300);
+  border-color: var(--gray-300);
+
+  &:hover {
+    color: var(--primary-900);
+    background-color: var(--gray-300);
+    border-color: var(--gray-300);
+  }
+}
+.btn-accent1-disabled-outline,
+.btn-accent2-disabled-outline,
+.btn-light-disabled-outline {
+  @include btn;
+  pointer-events: none !important;
+  color: var(--gray-300);
+  background-color: transparent;
+  border-color: var(--gray-300);
+
+  &:hover {
+    color: var(--gray-300);
+    background-color: transparent;
+    border-color: var(--gray-300);
   }
 }
 
@@ -158,7 +296,7 @@
   text-align: left;
   text-decoration: none;
   cursor: pointer;
-  transition: all var(--ease-2) var(--animation-duration-3);
+  // transition: all var(--ease-2) var(--animation-duration-3);
 }
 
 @mixin actionarrow {
@@ -178,7 +316,7 @@
   .btn-action-title {
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-7);
-    color: var(--primary-color);
+    color: var(--primary-700);
     padding-right: var(--s-4);
     position: relative;
     display: block;
@@ -196,8 +334,45 @@
   &:hover {
     border-color: var(--primary-900);
     background-color: var(--gray-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     .btn-action-title {
-      color: var(--primary-dark-color);
+      color: var(--primary-900);
+    }
+    .btn-action-text {
+      color: var(--black);
+    }
+  }
+}
+
+.btn-action-dark {
+  @include actionbutton;
+  border-color: var(--black);
+  background-color: var(--white);
+  width: 100%;
+  .btn-action-title {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-7);
+    color: var(--black);
+    padding-right: var(--s-4);
+    position: relative;
+    display: block;
+    // icon
+    &::after {
+      @include actionarrow;
+    }
+  }
+  .btn-action-text {
+    color: var(--black);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-4);
+    display: block;
+  }
+  &:hover {
+    border-color: var(--black);
+    background-color: var(--gray-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    .btn-action-title {
+      color: var(--black);
     }
     .btn-action-text {
       color: var(--black);

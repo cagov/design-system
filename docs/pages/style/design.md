@@ -361,16 +361,40 @@ We use Design System's buttons styles for actions in forms, surveys, dialogs and
 Primary buttons are using theme's primary color in their background or as border outline. Use class <code>btn-primary</code> for primary color background variation and `btn-primary-outline` for primary color outline variation. You can also add complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. 
 <button class="btn-primary m-t-2 m-r-2">Primary</button> <a href="#" class="btn-primary-outline m-t-2">Primary outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
 
+### Accent 1, Accent 2, and Light buttons
+Accent 1, Accent 2 and Light color buttons can be used only inside of the primary-900 or black backgrounds. These buttons are using theme's accent 1, accent 2 or light color in their background or as border outline. You can also add complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. To display these buttons use following css classes:
+<code>btn-accent1</code>, <code>btn-accent1-outline</code>
+<code>btn-accent2</code>, <code>btn-accent2-outline</code>
+<code>btn-light</code>, <code>btn-light-outline</code>
+<div class="bg-primary-900 p-t-3 p-b-4 p-x-3">
+<button class="btn-accent1 m-r-2">Accent 1</button> <a href="#" class="btn-accent1-outline">Accent 1 outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+<br>
+<button class="btn-accent2 m-t-2 m-r-2">Accent 2</button> <a href="#" class="btn-accent2-outline m-t-2">Accent 2 outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+<br>
+<button class="btn-light m-t-2 m-r-2">Light</button> <a href="#" class="btn-light-outline m-t-2">Light outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+</div>
+
+
 
 ### Disabled buttons
 Disabled button is using class <code>btn-disabled</code>. Disabled buttons should include the <code>aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies. Also, to be safe, add a <code>tabindex="-1"</code> attribute to your disabled button.
 <button class="btn-disabled m-t-2 m-r-2" aria-disabled="true" tabindex="-1">Disabled</button> <a href="#" class="btn-disabled-outline m-t-2" aria-disabled="true" tabindex="-1">Disabled link <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
 
+Accent 1, Accent 2 and Light buttons also have disabled variations. Thay all have the same disabled styles. Use following css classes to display disabled button state:
+<code>btn-accent1-disabled</code>, <code>btn-accent1-disabled-outline</code>
+<code>btn-accent2-disabled</code>, <code>btn-accent2-disabled-outline</code>
+<code>btn-light-disabled</code>, <code>btn-light-disabled-outline</code>
+<div class="bg-primary-900 p-t-3 p-b-4 p-x-3">
+<button class="btn-accent1-disabled m-r-2">Accent 1 Disabled</button> <a href="#" class="btn-accent1-disabled-outline">Accent 1 outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+</div>
+
 
 ### Action buttons
 We use action buttons in our call to action sections to guide users towards some goal. Action button consist of two span elements: action button title and action button text. Action button can be created by adding class `btn-action-primary` to a link or button element. Also, make sure you add span with class `btn-action-title` and add your link title text into it. For the links short description text add span with class `btn-action-text`.
-<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Some link</span><span class="btn-action-text">Some description text</span></a>
-<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Some link</span></a>
+<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Primary Action Link Title</span><span class="btn-action-text">Some description text</span></a>
+<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Primary Action Link</span></a>
+<a href="#" class="btn-action-dark m-t-2"><span class="btn-action-title">Dark Action Link Title</span><span class="btn-action-text">Some description text</span></a>
+<a href="#" class="btn-action-dark m-t-2"><span class="btn-action-title">Dark Action link</span></a>
 ## Imagery
 
 We use photos and illustrations for visualizing information. We follow these guidelines:
