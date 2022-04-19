@@ -668,8 +668,6 @@ System status colors palette consist of four main colors spectrums, such as succ
 --font-lineheight-6: 2;
 </span></code></pre>
 </div>
-
-This example uses Vietnamese language because it has marks above and below letters that could affect readability. This is important to consider in order to make your content accessible in multiple languages. 
   
 <div class="code-block"><p class="code-block-language">Example</p><pre><code class="hljs"><span class="hljs-code">h1 {
   line-height: var(--font-lineheight-1);
@@ -677,7 +675,9 @@ This example uses Vietnamese language because it has marks above and below lette
 </span></code></pre>
 </div>
 </div>
-
+  
+Line height can affect readability. This example uses text in Vietnamese because it has marks above and below letters. These marks could be hidden or hard to read if line height is too tight. This is important to consider for making your content accessible in other languages. 
+  
 <div class="grid-container">
   <div class="text-center p-t-3">
     <div class="bg-gray-200 p-a-3 m-x-a font-lineheight-xs">Đọc các tiêu chí vốn chủ sở hữu để xem liệu bạn có đủ điều kiện để được miễn giấy phép hoặc phí gia hạn hay không. </div>
