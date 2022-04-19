@@ -49,9 +49,9 @@ Owners can add, upgrade, or remove components
 
 more easily than if its code was part of the whole site. We learn a lot from other modular design systems like:
 
-- The <a href="https://designsystem.digital.gov/">U.S. Web Design S</a>ystem
-- Other systems also built with web components, like&nbsp;<a href="https://opensource.adobe.com/spectrum-web-components/">Adobe&rsquo;s Spectrum</a>
-- Systems with fantastic documentation for new contributors, like&nbsp;<a href="https://opensource.adobe.com/spectrum-web-components/">Clarity</a><
+- The <a href="https://designsystem.digital.gov/">U.S. Web Design System</a>
+- Other systems also built with web components, like<a href="https://opensource.adobe.com/spectrum-web-components/">Adobe&rsquo;s Spectrum</a>
+- Systems with fantastic documentation for new contributors, like&nbsp;<a href="https://opensource.adobe.com/spectrum-web-components/">Clarity</a>
 
 ### Components encapsulate code
 
