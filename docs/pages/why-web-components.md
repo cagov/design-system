@@ -83,7 +83,7 @@ We can use the :defined CSS selector to apply styling rules only when the custom
 
 We often communicate between components with <a href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">custom events</a>. This is not a web component-specific tool, but it works nicely with any DOM element, including our own custom elements. 
 
-One example is our reusable county search box component on COVID-19 site pages. It fires events with county details when a visitor chooses from an autocomplete list. Chart components that need to use the county can subscribe to the custom event fired by the search custom element. They then update the data as needed.
+One example is our reusable county search box component on <a href="https://covid19.ca.gov">COVID-19</a> site pages. It fires events with county details when a visitor chooses from an autocomplete list. Chart components that need to use the county can subscribe to the custom event fired by the search custom element. They then update the data as needed.
 
 ### Lots of other ways to communicate data between components
 
