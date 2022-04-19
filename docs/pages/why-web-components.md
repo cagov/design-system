@@ -50,7 +50,7 @@ Owners can add, upgrade, or remove components
 more easily than if its code was part of the whole site. We learn a lot from other modular design systems like:
 
 - The <a href="https://designsystem.digital.gov/">U.S. Web Design System</a>
-- Other systems also built with web components, like<a href="https://opensource.adobe.com/spectrum-web-components/">Adobe&rsquo;s Spectrum</a>
+- Other systems also built with web components, like <a href="https://opensource.adobe.com/spectrum-web-components/">Adobe&rsquo;s Spectrum</a>
 - Systems with fantastic documentation for new contributors, like&nbsp;<a href="https://opensource.adobe.com/spectrum-web-components/">Clarity</a>
 
 ### Components encapsulate code
@@ -71,7 +71,7 @@ If a component is not critical to a site&rsquo;s mission, we skip progressive en
 
 ## Features of web components we use
 
-Web components help limit development to the local scope of the custom element. There are good <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements%23using_the_lifecycle_callbacks">lifecycle tools</a> for building up and tearing down JavaScript features. In other words, no waiting for &quot;DOMContentLoaded&quot; or any other old hacks.
+Web components help limit development to the local scope of the custom element. There are good <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">lifecycle tools</a> for building up and tearing down JavaScript features. In other words, no waiting for &quot;DOMContentLoaded&quot; or any other old hacks.
 
 We use plain custom elements. This does not stop us from depending on advanced base classes, but we get a lot of mileage out of the supported API now.
 
@@ -118,7 +118,7 @@ You can suggest changes or new components by opening issues in the <a href="http
 - Articles on why web components are helpful especially in design systems
   - <a href="https://ionicframework.com/blog/5-reasons-web-components-are-perfect-for-design-systems/">5 reasons web components are perfect for design systems</a> by ionic, makers of the stencil.js web components tool
   - <a href="https://vaadin.com/blog/design-systems-and-standardized-web-components">Design systems and standards based web components</a> by Vaadin, makers of the Vaadin web component based design system
--Brad Frost on <a href="https://bradfrost.com/blog/link/why-we-use-web-components/">Why we use web components</a>
+  - Brad Frost on <a href="https://bradfrost.com/blog/link/why-we-use-web-components/">Why we use web components</a>
   - <a href="https://www.zaplabs.com/blog/engineering/building-web-applications-longevity-through-web-components">Building web applications with longevity through web components</a> from ZapLabs in 2018
-  - <a href="https://shoelace.style/?id%3Dnew-to-web-components">New to web components?</a> by Cory LaViska, author of web components based design system shoelace.style
+  - <a href="https://shoelace.style/?id=new-to-web-components">New to web components?</a> by Cory LaViska, author of web components based design system shoelace.style
   - New foundations being built on custom elements with projects like <a href="https://dev.to/open-wc/introducing-custom-elements-manifest-gkk ">Custom Elements Manifest</a>
