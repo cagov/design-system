@@ -15,25 +15,19 @@ Components are bite-sized sections of code that link together to create a websit
 
 Components help developers and designers save time. They help you avoid rewriting redundant code. You can also easily plug them into and remove them from code using HTML tags.
 
-The California Design System uses the minimal amount of tech required for each component. This is&nbsp;often just HTML &amp; CSS. When we need JavaScript, we take advantage of the component model built into the browser. We use the custom elements part of the web components specification. This allows us to define new HTML tags like &lt;cagov-accordion&gt or &lt;cagov-page-feedback&gt;, which are inert until upgraded by provided JavaScript.
+The California Design System uses the minimal amount of tech required for each component. This is&nbsp;often just HTML &amp; CSS. When we need JavaScript, we take advantage of the component model built into the browser. We use the custom elements part of the web components specification. This allows us to define new HTML tags like &lt;cagov-accordion&gt; or &lt;cagov-page-feedback&gt;, which are inert until upgraded by provided JavaScript.
 
 ### Examples of our components
 
-Here&rsquo;s the California Design System&rsquo;s button, card, and hero banner. 
+The homepage also uses the <a href="https://designsystem.webstandards.ca.gov/components/feature-card/readme/">feature card</a>&nbsp;component. This component requires only HTML & CSS. 
 
-
-
-
-
-This is a sample button on the Design System homepage. Form elements like this use standard HTML tags and classes defined in the <a href="https://designsystem.webstandards.ca.gov/components/base-css/readme/">base CSS</a> for styling.
-
-<img alt="" src="images/image1.png">
-
-Here we use three card components on the homepage. <img alt="" src="images/image2.png">
-
-The homepage also uses the <a href="https://designsystem.webstandards.ca.gov/components/feature-card/readme/">feature card</a>&nbsp;component. <img alt="" src="images/image3.png">
+<img alt="" src="/content/img/screenshot-feature.jpg">
 
 In some cases, we can embed components in other components. For example, we put a button in the feature card.
+
+We use the <a href="/components/page-feedback/readme/">page feedback component</a> at the bottom of every page. This component requires HTML, CSS and javascript. It uses a custom element tag associated with a javascript class.
+
+<img alt="" src="/content/img/screenshot-feedback.jpg">
 
 ## Web component advantages
 
@@ -93,13 +87,9 @@ One example is our reusable county search box component on COVID-19 site pages. 
 
 ### Lots of other ways to communicate data between components
 
-Web components provide lifecycle callbacks that respond to attribute changes. You can pass information in through attributes as strings. If you want to pass in a complex object, you can assign it to the custom element in the DOM via:
+Web components provide lifecycle callbacks that respond to attribute changes. You can pass information in through attributes as strings. If you want to pass in a complex object, you can assign it to the custom element in the DOM via: ``` document.querySelector("my-element").bigOjbect = myJSON; ```
 
-```
-document.querySelector(&lsquo;my-element&rsquo;).bigOjbect = &nbsp;myJSON<sup><a href="#cmnt4" id="cmnt_ref4">[d]</a></sup></p>
-```
-
-You can refer to this inside the component via: ```this.bigObject```
+You can refer to this inside the component via:  ``` this.bigObject ```
 
 Custom elements can read their own interior HTML. We translate components server-side by writing translated HTML inside the custom element. Complex elements like charts need translated strings for things like tooltips and legends.
 
