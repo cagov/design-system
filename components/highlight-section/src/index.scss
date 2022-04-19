@@ -9,31 +9,7 @@ cagov-highlight-section {
 			padding-top: 1.5rem;
 			padding-bottom: 2rem;
 		}
-		// TO_DO: consider adding .btn class with common button mixing to base-css button.scss
-		.btn-primary-outline {
-			text-align: center;
-			vertical-align: middle;
-			cursor: pointer;
-			user-select: none;
-			color: var(--primary-color, #004abc);
-			font-weight: var(--font-weight-4, 400);
-			font-size: var(--font-size-2, 1.125rem);
-			border: 1px solid var(--primary-color, #004abc);
-			border-radius: 5px;
-			padding: var(--spacing-base, 0.5rem);
-			background-color: #fff;
-			transition: all 0.5s;
-			text-decoration: none;
 
-			&:hover {
-				color: var(--primary-dark-color, #003484);
-				border: 1px solid var(--primary-dark-color, #003484);
-				background-color: var(--gray-200, #ededef);
-			}
-			&:focus {
-				outline: 2px solid var(--highlight-color, #fec02f);
-			}
-		}
 		.highlight-body {
 			display: flex;
 			flex-direction: column;

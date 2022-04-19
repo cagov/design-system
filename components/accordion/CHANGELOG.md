@@ -2,6 +2,9 @@
 
 <a href="https://www.npmjs.com/package/@cagov/ds-accordion">https://www.npmjs.com/package/@cagov/ds-accordion</a>
 
+
+## 2.0.2
+* Fixed new color palette accordions color contrast accessibility issues 
 ## 2.0.1
 * Bug fix for multiline summary expansion height determination
 * Design tweaks to open indicator icon

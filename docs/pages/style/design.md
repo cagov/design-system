@@ -17,208 +17,292 @@ description: These recommended approaches make California Design System websites
 
 ## Color
 
-We do not dictate which colors you should use. This allows every department to maintain their unique identity. Instead, we use a system to ensure consistency across websites.
+While the Design System sets some standard colors, you have freedom in creating a color palette for your site.
 
-It consists of 3 base colors. Each base color has three variations. These variations are designed to offer flexibility while ensuring a consistent, visually pleasing, and accessible look.
-
-With respect to accessibility, choose colors in alignment with Web Content Accessibility Guideline (WCAG) 2.1 Level AA. It requires a contrast ratio of at least:
+We’ve created recommendations on how to make an accessible color palette. We start by aligning with Web Content Accessibility Guideline (WCAG) 2.1 Level AA. It requires a color contrast ratio of at least:
 
 - 4.5:1 for normal text
 - 3:1 for large text
 - 3:1 for graphics and user interface components
 
-<span class="cagov-table">
-  <table width="100%">
-    <tr>
-      <th>Base Color</th><th>Dark</th><th>Light</th><th>Very Light</th>
-    </tr>
-    <tr>
-      <td>Primary color</td><td>30% shade</td><td>30% tint</td><td>70% tint</td>
-    </tr>
-    <tr>
-      <td>Secondary color</td><td>30% shade</td><td>30% tint</td><td>70% tint</td>
-    </tr>
-    <tr>
-      <td>Highlight color</td><td>30% shade</td><td>30% tint</td><td>70% tint</td>
-    </tr>
-  </table>
-</span>
+### Building an accessible color palette
+We used the <a href="https://en.wikipedia.org/wiki/CIELAB_color_space" target="_blank">CIELAB</a> color system to create our color palette. It’s based on the human perception of color and lightness. CIELAB makes it easy to craft color palettes in line with accessibility guidelines for color contrast. These variations offer design flexibility while ensuring a consistent, visually pleasing, and accessible look.
 
-Here’s what that looks like for recent CA<span>.</span>gov initiatives such as covid19.ca.gov and alpha.ca.gov. This is the default color palette for any new digital service.
+The Design System has preset system-level colors and customizable site-level colors.
 
-### Primary color 
+- System-level colors are named for how they’re used. For example, instead of <span class="text-bold">red</span>, we have <span class="text-bold">danger</span>. This helps everyone apply the same colors for things like alerts. People know when they see that color what kind of information they’re getting.
+- Product-level colors allow teams to apply brand colors in a meaningful way. 
+
+The CIELAB color system outputs 10 colors on a scale of 50-900 (50 being lightest and 900 being darkest). Simple websites may not need all these colors. But complex websites with data visualizations or illustrations may need a robust range. To start, we use a five-scale range of 100, 300, 500, 700, and 900 per base color.
+
+### Site-level palette
+
+Here’s an example of the color palette we use on the Design System website. It uses three base colors: one primary and two accent colors. Each color have range of 5 spectrum colors from lightest to darkest that should give web designers and developers enough flexibility.
+
 <div class="grid-container">
   <div class="text-center p-t-3">
-    <div class="bg-primary-color radius-round w-7 h-7 m-x-a"></div>
-    <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary color</p>
-    <p class="font-size-1">#004abc</p>
+    <div class="bg-cagov-primary radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">Primary</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-primary-dark-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary dark color</p>
-      <p class="font-size-1">#003484</p>
+    <div class="bg-cagov-secondary radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">Accent 1</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-primary-light-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary light color</p>
-      <p class="font-size-1">#4d80d0</p>
+    <div class="bg-cagov-highlight radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">Accent 2</p>
+  </div>
+</div>
+
+#### Primary
+
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-primary-100 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--primary-100</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-primary-lightest-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Primary lightest color</p>
-      <p class="font-size-1">#b3c9eb</p>
+    <div class="bg-primary-300 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--primary-300</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-primary-500 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--primary-500</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-primary-700 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--primary-700</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-primary-900 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--primary-900</p>
+  </div>
+</div>
+
+#### Accent 1
+
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-accent1-100 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--accent1-100</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-accent1-300 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--accent1-300</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-accent1-500 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--accent1-500</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-accent1-700 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--accent1-700</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-accent1-900 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--accent1-900</p>
   </div>
 </div>
 
 
-### Secondary color 
+#### Accent 2
+
 <div class="grid-container">
   <div class="text-center p-t-3">
-    <div class="bg-secondary-color radius-round w-7 h-7 m-x-a"></div>
-    <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary color</p>
-    <p class="font-size-1">#ff8000</p>
+    <div class="bg-accent2-100 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--accent2-100</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-secondary-dark-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary dark color</p>
-      <p class="font-size-1">#b28621</p>
+    <div class="bg-accent2-300 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--accent2-300</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-secondary-light-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary light color</p>
-      <p class="font-size-1">#ffa64d</p>
+    <div class="bg-accent2-500 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--accent2-500</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-secondary-lightest-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Secondary lightest color</p>
-      <p class="font-size-1">#ffd9b3</p>
+    <div class="bg-accent2-700 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--accent2-700</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-accent2-900 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--accent2-900</p>
   </div>
 </div>
 
 
-### Highlight color 
+### System-level palette
+System-level palette consist of four main system status colors spectrums, such as success, danger, warning, and info. System-level palette is consistent in all Design System color schemes. 
+#### Success
 <div class="grid-container">
   <div class="text-center p-t-3">
-    <div class="bg-highlight-color radius-round w-7 h-7 m-x-a"></div>
-    <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight color</p>
-    <p class="font-size-1">#fec02f</p>
+    <div class="bg-success-100 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--success-100</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-highlight-dark-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight dark color</p>
-      <p class="font-size-1">#b35a00</p>
+    <div class="bg-success-300 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--success-300</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-highlight-light-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight light color</p>
-      <p class="font-size-1">#fed36d</p>
+    <div class="bg-success-500 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--success-500</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-highlight-lightest-color radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Highlight lightest color</p>
-      <p class="font-size-1">#ffecc1</p>
+    <div class="bg-success-700 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--success-700</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-success-900 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--success-900</p>
+  </div>
+</div>
+
+#### Danger
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-danger-100 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--danger-100</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-danger-300 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--danger-300</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-danger-500 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--danger-500</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-danger-700 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--danger-700</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-danger-900 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--danger-900</p>
   </div>
 </div>
 
 
-<hr class="m-y-5">
-
-In addition to the 3 colors above, we standardize colors used for global UI elements such as notifications.
-
-
-
-### Grayscale
+#### Warning
 <div class="grid-container">
   <div class="text-center p-t-3">
-    <div class="bg-white-color radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
-    <p class="font-size-1 m-t-2 m-b-0 text-bold">White</p>
-    <p class="font-size-1">#ffffff</p>
+    <div class="bg-warning-100 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--warning-100</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-gray-100 radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 100</p>
-      <p class="font-size-1">#f9f9fa</p>
+    <div class="bg-warning-300 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--warning-300</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-gray-200 radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 200</p>
-      <p class="font-size-1">#ededef</p>
+    <div class="bg-warning-500 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--warning-500</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-gray-300 radius-round w-7 h-7 m-x-a border-1 border-gray-600"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 300</p>
-      <p class="font-size-1">#e1e0e3</p>
-  </div>
-</div>
-<div class="grid-container">
-  <div class="text-center p-t-3">
-    <div class="bg-gray-400 radius-round w-7 h-7 m-x-a"></div>
-    <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 400</p>
-    <p class="font-size-1">#d3d2d6</p>
+    <div class="bg-warning-700 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--warning-700</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-gray-500 radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 500</p>
-      <p class="font-size-1">#c4c3c8</p>
-  </div>
-  <div class="text-center p-t-3">
-    <div class="bg-gray-600 radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 600</p>
-      <p class="font-size-1">#b3b2b8</p>
-  </div>
-  <div class="text-center p-t-3">
-    <div class="bg-gray-700 radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 700</p>
-      <p class="font-size-1">#a09fa7</p>
+    <div class="bg-warning-900 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--warning-900</p>
   </div>
 </div>
 
+
+#### Info
 <div class="grid-container">
   <div class="text-center p-t-3">
-    <div class="bg-gray-800 radius-round w-7 h-7 m-x-a"></div>
-    <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 800</p>
-    <p class="font-size-1">#6c6b77</p>
+    <div class="bg-info-100 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--info-100</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-gray-900 radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Gray 900</p>
-      <p class="font-size-1">#3f3e4d</p>
+    <div class="bg-info-300 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--info-300</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-info-500 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--info-500</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-info-700 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--info-700</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-info-900 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--info-900</p>
+  </div>
+</div>
+
+#### Grayscale
+In our grayscale pallete we have included 10 spectrum colors for more design flexibility. 
+<div class="grid-container">
+  <div class="text-center p-t-3">
+    <div class="bg-white-color radius-round w-6 h-6 m-x-a border-1 border-gray-600"></div>
+    <p class="font-size-1">--white</p>
   </div>
     <div class="text-center p-t-3">
-    <div class="bg-black radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Black</p>
-      <p class="font-size-1">#000000</p>
+    <div class="bg-gray-50 radius-round w-6 h-6 m-x-a border-1 border-gray-600"></div>
+      <p class="font-size-1">--gray-50</p>
   </div>
-  <div></div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-100 radius-round w-6 h-6 m-x-a border-1 border-gray-600"></div>
+      <p class="font-size-1">--gray-100</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-200 radius-round w-6 h-6 m-x-a border-1 border-gray-600"></div>
+      <p class="font-size-1">--gray-200</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-300 radius-round w-6 h-6 m-x-a border-1 border-gray-600"></div>
+      <p class="font-size-1">--gray-300</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-gray-400 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--gray-400</p>
+  </div>
 
 </div>
 
-
-
-### System status colors
 
 <div class="grid-container">
+
   <div class="text-center p-t-3">
-    <div class="bg-success radius-round w-7 h-7 m-x-a"></div>
-    <p class="font-size-1 m-t-2 m-b-0 text-bold">Success</p>
-    <p class="font-size-1">#008542</p>
+    <div class="bg-gray-500 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--gray-500</p>
+  </div>
+
+  <div class="text-center p-t-3">
+    <div class="bg-gray-600 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--gray-600</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-danger radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Danger</p>
-      <p class="font-size-1">#b71234</p>
+    <div class="bg-gray-700 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--gray-700</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-warning radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Warning</p>
-      <p class="font-size-1">#ffd700</p>
+    <div class="bg-gray-800 radius-round w-6 h-6 m-x-a"></div>
+    <p class="font-size-1">--gray-800</p>
   </div>
   <div class="text-center p-t-3">
-    <div class="bg-info radius-round w-7 h-7 m-x-a"></div>
-      <p class="font-size-1 m-t-2 m-b-0 text-bold">Info</p>
-      <p class="font-size-1">#000080</p>
+    <div class="bg-gray-900 radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--gray-900</p>
+  </div>
+  <div class="text-center p-t-3">
+    <div class="bg-black radius-round w-6 h-6 m-x-a"></div>
+      <p class="font-size-1">--black</p>
   </div>
 </div>
+
+
+### Customizing colors
+
+If you use custom colors to match your branding, CIELAB may not exactly match your brand’s hex codes. Their colors are their best match for those colors and emotional tone. We encourage you to use CIELAB to ensure your site’s colors meet  accessibility standards.
+
+### Build your accessible color palette
+
+There are a few tools that can help you build color palettes based on colors you provide.
+
+- The Design System team uses <a href="https://accessiblepalette.com/">Accessible Palette</a> by Wildbit Labs to build our color palettes.
+- <a href="https://tailwind.ink/">Tailwind Ink</a>
+- CIELAB offers their own color <a href="https://cielab.io/">palette maker</a>.
 
 
 ## Typography
@@ -272,21 +356,45 @@ The line height is a ratio of 1.75 to the base font size. For each ascending lev
 
 
 ## Buttons
-We use Design System's buttons styles for actions in forms, surveys, dialogs and other call to action sections.
+We use the Design System's buttons styles for actions in forms, surveys, dialogs, and other call to action sections.
 ### Primary buttons
-Primary buttons are using theme's primary color in their background or as border outline. Use class <code>btn-primary</code> for primary color background variation and `btn-primary-outline` for primary color outline variation. You can also add complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. 
+Primary buttons use the theme's primary color in their background or as a border outline. Use class <code>btn-primary</code> for primary color background variation and `btn-primary-outline` for primary color outline variation. You can also add a complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. 
 <button class="btn-primary m-t-2 m-r-2">Primary</button> <a href="#" class="btn-primary-outline m-t-2">Primary outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+
+### Accent 1, Accent 2, and Light buttons
+Accent 1, Accent 2, and Light color buttons can be used only inside of the primary-900 or black backgrounds. These buttons use the theme's accent 1, accent 2 or light color in their background or as a border outline. You can also add a complimentary icon to it by using span with cagov icon font library class. Make sure you add `aria-hidden="true"` attribute to the icon span. To display these buttons use following css classes:
+<code>btn-accent1</code>, <code>btn-accent1-outline</code>
+<code>btn-accent2</code>, <code>btn-accent2-outline</code>
+<code>btn-light</code>, <code>btn-light-outline</code>
+<div class="bg-primary-900 p-t-3 p-b-4 p-x-3">
+<button class="btn-accent1 m-r-2">Accent 1</button> <a href="#" class="btn-accent1-outline">Accent 1 outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+<br>
+<button class="btn-accent2 m-t-2 m-r-2">Accent 2</button> <a href="#" class="btn-accent2-outline m-t-2">Accent 2 outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+<br>
+<button class="btn-light m-t-2 m-r-2">Light</button> <a href="#" class="btn-light-outline m-t-2">Light outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+</div>
+
 
 
 ### Disabled buttons
-Disabled button is using class <code>btn-disabled</code>. Disabled buttons should include the <code>aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies. Also, to be safe, add a <code>tabindex="-1"</code> attribute to your disabled button.
+Disabled buttons use the class <code>btn-disabled</code>. Include include the <code>aria-disabled="true"</code> attribute with disabled buttons to indicate the state of the element to assistive technologies. To be safe, add a <code>tabindex="-1"</code> attribute to your disabled button.
 <button class="btn-disabled m-t-2 m-r-2" aria-disabled="true" tabindex="-1">Disabled</button> <a href="#" class="btn-disabled-outline m-t-2" aria-disabled="true" tabindex="-1">Disabled link <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+
+Accent 1, Accent 2, and Light buttons also have disabled versions. Thay all have the same disabled styles. Use the following css classes to display disabled button state:
+<code>btn-accent1-disabled</code>, <code>btn-accent1-disabled-outline</code>
+<code>btn-accent2-disabled</code>, <code>btn-accent2-disabled-outline</code>
+<code>btn-light-disabled</code>, <code>btn-light-disabled-outline</code>
+<div class="bg-primary-900 p-t-3 p-b-4 p-x-3">
+<button class="btn-accent1-disabled m-r-2">Accent 1 Disabled</button> <a href="#" class="btn-accent1-disabled-outline">Accent 1 outline <span class="ca-gov-icon-gear" aria-hidden="true"></span></a>
+</div>
 
 
 ### Action buttons
-We use action buttons in our call to action sections to guide users towards some goal. Action button consist of two span elements: action button title and action button text. Action button can be created by adding class `btn-action-primary` to a link or button element. Also, make sure you add span with class `btn-action-title` and add your link title text into it. For the links short description text add span with class `btn-action-text`.
-<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Some link</span><span class="btn-action-text">Some description text</span></a>
-<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Some link</span></a>
+We use action buttons in our call to action sections to guide users towards some goal. Action button consist of two span elements: action button title and action button text. You can create an action button by adding class `btn-action-primary` to a link or button element. Make sure you add a span with class `btn-action-title` with your link title text into it. For the link's short description text, add span with class `btn-action-text`.
+<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Primary Action Link Title</span><span class="btn-action-text">Some description text</span></a>
+<a href="#" class="btn-action-primary m-t-2"><span class="btn-action-title">Primary Action Link</span></a>
+<a href="#" class="btn-action-dark m-t-2"><span class="btn-action-title">Dark Action Link Title</span><span class="btn-action-text">Some description text</span></a>
+<a href="#" class="btn-action-dark m-t-2"><span class="btn-action-title">Dark Action link</span></a>
 ## Imagery
 
 We use photos and illustrations for visualizing information. We follow these guidelines:

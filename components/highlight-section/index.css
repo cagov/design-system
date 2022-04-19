@@ -7,29 +7,6 @@ cagov-highlight-section article .container {
   padding-top: 1.5rem;
   padding-bottom: 2rem;
 }
-cagov-highlight-section article .btn-primary-outline {
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  color: var(--primary-color, #004abc);
-  font-weight: var(--font-weight-4, 400);
-  font-size: var(--font-size-2, 1.125rem);
-  border: 1px solid var(--primary-color, #004abc);
-  border-radius: 5px;
-  padding: var(--spacing-base, 0.5rem);
-  background-color: #fff;
-  transition: all 0.5s;
-  text-decoration: none;
-}
-cagov-highlight-section article .btn-primary-outline:hover {
-  color: var(--primary-dark-color, #003484);
-  border: 1px solid var(--primary-dark-color, #003484);
-  background-color: var(--gray-200, #ededef);
-}
-cagov-highlight-section article .btn-primary-outline:focus {
-  outline: 2px solid var(--highlight-color, #fec02f);
-}
 cagov-highlight-section article .highlight-body {
   display: flex;
   flex-direction: column;

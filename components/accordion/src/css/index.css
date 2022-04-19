@@ -4,18 +4,22 @@ cagov-accordion details {
   margin-bottom: 0;
   min-height: var(--s-5, 3rem);
   margin-top: 0.5rem;
-  border: solid var(--border-1, 1px) var(--gray-200, #ededef) !important;
+  border: solid var(--border-1, 1px) var(--gray-200, #d4d4d7) !important;
 }
 cagov-accordion details summary {
   cursor: pointer;
   padding: var(--s-1, 0.5rem) var(--s-5, 3rem) var(--s-1, 0.5rem) var(--s-2, 1rem);
-  background-color: var(--gray-200, #ededef);
+  background-color: var(--gray-50, #fafafa);
   position: relative;
   line-height: var(--s-4, 2rem);
   margin: 0;
-  color: var(--primary-color, #064e66);
+  color: var(--primary-700, #165ac2);
   font-size: var(--font-size-2, 1.125rem);
   font-weight: bold;
+}
+cagov-accordion details summary:hover {
+  background-color: var(--gray-100, #fafafa);
+  color: var(--primary-900, #003688);
 }
 cagov-accordion details .accordion-body {
   padding: var(--s-2, 1rem);
@@ -43,10 +47,11 @@ cagov-accordion:defined details summary {
 }
 cagov-accordion:defined details summary:focus {
   outline-offset: -2px;
-  outline: solid 2px var(--highlight-color, #fbad23) !important;
+  outline: solid 2px var(--accent2-500, #ac8227) !important;
+  background-color: var(--gray-100, #fafafa);
 }
 cagov-accordion:defined details .cagov-open-indicator {
-  background-color: var(--primary-color, #064e66);
+  background-color: var(--primary-700, #165ac2);
   height: 3px;
   width: 15px;
   border-radius: var(--border-3, 3px);
@@ -64,7 +69,7 @@ cagov-accordion:defined details .cagov-open-indicator:before {
   height: 15px;
   border-radius: var(--border-3, 3px);
   border: none;
-  box-shadow: 3px 0 0 0 var(--primary-color, #064e66);
+  box-shadow: 3px 0 0 0 var(--primary-700, #165ac2);
   background: none;
 }
 cagov-accordion:defined details[open] .cagov-open-indicator:before {

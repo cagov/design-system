@@ -1,21 +1,40 @@
 /* Cagov color scheme root variables */
 :root {
   /* Theme colors */
-  --primary-color: #004abc;
-  --primary-dark-color: #003484;
-  --primary-light-color: #4d80d0;
-  --primary-lightest-color: #b3c9eb;
-  --primary-hover-color: #003484;
+  --primary-100: #e7eef9;
+  --primary-300: #a3bee7;
+  --primary-500: #5a8ad4;
+  --primary-700: #165ac2; // brand color
+  --primary-900: #003688;
 
-  --secondary-color: #ff8000;
-  --secondary-dark-color: #b35a00;
-  --secondary-light-color: #ffa64d;
-  --secondary-lightest-color: #ffd9b3;
-  --secondary-hover-color: #b35a00;
+  --accent1-100: #ffead6;
+  --accent1-300: #ffa656;
+  --accent1-500: #de6516; // brand color
+  --accent1-700: #9c4510;
+  --accent1-900: #642a0a;
 
-  --highlight-color: #fec02f;
-  --highlight-dark-color: #b28621;
-  --highlight-light-color: #fed36d;
-  --highlight-lightest-color: #ffecc1;
-  --highlight-hover-color: #b28621;
+  --accent2-100: #ffecc4;
+  --accent2-300: #ecb32d; // brand color
+  --accent2-500: #ac8227;
+  --accent2-700: #775a20;
+  --accent2-900: #4a3918;
+
+  // old color names
+  --primary-color: #165ac2;
+  --primary-dark-color: #003688;
+  --primary-hover-color: #003688;
+  --primary-light-color: #a3bee7;
+  --primary-lightest-color: #e7eef9;
+
+  --secondary-color: #de6516;
+  --secondary-dark-color: #642a0a;
+  --secondary-hover-color: #642a0a;
+  --secondary-light-color: #ffa656;
+  --secondary-lightest-color: #ffead6;
+
+  --highlight-color: #ac8227;
+  --highlight-dark-color: #4a3918;
+  --highlight-hover-color: #4a3918;
+  --highlight-light-color: #ecb32d;
+  --highlight-lightest-color: #ffecc4;
 }
