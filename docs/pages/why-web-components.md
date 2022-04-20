@@ -43,7 +43,7 @@ Web components allow us to take our frontend widgets&nbsp;off this cycle&nbsp;of
 
 ### Easier component management
 
-Publishing each component individually lets us take advantage of separate versioning. Site owners get <a href="https://github.com/dependabot">dependabot</a>&nbsp;notifications when there are updates to each npm package. This comes with associated <a href="https://semver.org/">semver</a> compliant version numbers and published changelogs. Site owners can decide if they want to upgrade or ignore the change on their own timeline. Owners can add, upgrade, or remove components 
+Publishing each component individually lets us take advantage of separate versioning. Site owners can get <a href="https://github.com/dependabot">dependabot</a>&nbsp;notifications when there are updates to each npm package. This comes with associated <a href="https://semver.org/">semver</a> compliant version numbers and published changelogs. Site owners can decide if they want to upgrade or ignore the change on their own timeline. Owners can add, upgrade, or remove components 
 
 more easily than if its code was part of the whole site. We learn a lot from other modular design systems like:
 
@@ -63,7 +63,7 @@ We only need web components when we need JavaScript. We do not always need JavaS
 
 We cannot depend&nbsp;on every device supporting our web components, even if they work in the latest version of all browsers. Older devices get locked out of update cycles. Some people avoid freely available software updates. 
 
-Critical components should work even if the JavaScript fails. For example, accordions have always been progressively enhanced. Now they use details and summary elements. This lets people read the content, even if the JavaScript fails to execute. This failure state eliminates the extra styling or open/close animations.
+Critical components should work even if the JavaScript fails. We recently refactored our accordions. Now they use ```<details>``` and ```<summary>``` elements. This lets people read the content, even if the JavaScript fails to execute. This failure state eliminates the extra styling or open/close animations.
 
 If a component is not critical to a site&rsquo;s mission, we skip progressive enhancement. We have not made the <a href="https://designsystem.webstandards.ca.gov/components/page-feedback/readme/">page feedback</a> component progressively enhanced because it&#39;s not why people visit the page. That element is only visible when the visitor&rsquo;s browser successfully executes its code. We also use ```<script type=module>```, which is ignored by browsers that do not support ES6 components. In these cases, the network request is not even made. This stops the JavaScript from slowing down the basic experience.
 
@@ -75,7 +75,21 @@ We use plain custom elements. This does not stop us from depending on advanced b
 
 ### Applying CSS only to instantiated elements
 
-We can use the :defined CSS selector to apply styling rules only when the custom element&rsquo;s JavaScript has run. We import and deliver this CSS as part of the JavaScript package because it&rsquo;s only used in the js-powered version of the component
+We can use the :defined CSS selector to apply styling rules only when the custom element’s JavaScript has run.
+
+For example we reference the custom element inside our CSS file with and without :defined:
+
+```
+cagov-accordion {
+	/* these style rules are applied always */
+}
+
+cagov-accordion:defined {
+	/* these style rules are applied only after the JavaScript code associated with this element has been run */
+}
+```
+
+We import and deliver this CSS as part of the JavaScript package because it is only used in the js-powered version of the component.
 
 ### Custom events
 
