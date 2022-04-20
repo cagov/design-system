@@ -33,7 +33,7 @@ We use the <a href="/components/page-feedback/readme/">page feedback component</
 
 ### Web components work anywhere
 
-<a href="https://custom-elements-everywhere.com/">All framework support web components</a>. You get this component model with its API built into all browsers. If you still need to support Internet Explorer, a polyfill is available. We use <a href="https://github.com/webcomponents/polyfills/tree/master/packages/webcomponentsjs">@webcomponents/webcomponentsjs</a> on covid19.ca.gov.
+<a href="https://custom-elements-everywhere.com/">All framework support web components</a>. You get this component model with its API built into all browsers. If you still need to support Internet Explorer, a polyfill is available. We use the <a href="https://github.com/webcomponents/polyfills/tree/master/packages/webcomponentsjs">@webcomponents/webcomponentsjs</a> polyfill on covid19.ca.gov.
 
 ### Web components help ensure longevity of code
 
