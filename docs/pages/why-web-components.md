@@ -65,7 +65,7 @@ We cannot depend&nbsp;on every device supporting our web components, even if the
 
 Critical components should work even if the JavaScript fails. For example, accordions have always been progressively enhanced. Now they use details and summary elements. This lets people read the content, even if the JavaScript fails to execute. This failure state eliminates the extra styling or open/close animations.
 
-If a component is not critical to a site&rsquo;s mission, we skip progressive enhancement. We have not made the <a href="https://designsystem.webstandards.ca.gov/components/page-feedback/readme/">page feedback</a> component progressively enhanced because it&#39;s not why people visit the page. That element is only visible when the visitor&rsquo;s browser successfully executes its code. We also use script type=module, which is ignored by browsers that do not support ES6 components. In these cases, the network request is not even made. This stops the JavaScript from slowing down the basic experience.
+If a component is not critical to a site&rsquo;s mission, we skip progressive enhancement. We have not made the <a href="https://designsystem.webstandards.ca.gov/components/page-feedback/readme/">page feedback</a> component progressively enhanced because it&#39;s not why people visit the page. That element is only visible when the visitor&rsquo;s browser successfully executes its code. We also use ```<script type=module>```, which is ignored by browsers that do not support ES6 components. In these cases, the network request is not even made. This stops the JavaScript from slowing down the basic experience.
 
 ## Features of web components we use
 
