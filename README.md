@@ -45,7 +45,7 @@ We welcome your component modification requests or suggestions. Create a pull re
 
 Playwright is used to run end to end and accessibility tests against local site urls using axe.
 
-This set of tests is configured to be run against any open PR in our git actions: <a href=".github/workflows/validate.yml">validate.yml</a>.
+This set of tests is configured to be run against any open PR in our git actions: <a href="tree/main/.github/workflows/validate.yml">validate.yml</a>.
 
 They can be run locally with:
 
@@ -67,7 +67,7 @@ These component unit tests were created following <a href="https://open-wc.org/"
 
 ### Directory structure
 
-The code for all the components is in ```/components```. Each directory contains the entire package for each component published to npm. The markdown files in each component's directory provide the content used in the component gallery section of the <a href="https://designsystem.webstandards.ca.gov/">design system site</a>. Any modification to a component's code or documentation should be associated with a new version of the component being published. Publishing a new version of a component to npm will run the scripts that publish its code to the CA CDN.
+The code for all the components is in ```/components```. Each directory contains the entire package for each component published to npm. The markdown files in each component's directory provide the content used in the component gallery section of the <a href="https://designsystem.webstandards.ca.gov/">design system site</a>. Any modification to a component's code or documentation should be associated with a new version of the component being published. Publishing a new version of a component to npm will run the scripts that publish its code to the CA CDN. More information on component development in the <a href="/tree/main/components#readme">component readme</a>.
 
 The rest of the site content is in ```/docs```
 - ```/docs/pages```: markdown for additional pages 
