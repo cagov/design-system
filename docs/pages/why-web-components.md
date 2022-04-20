@@ -113,10 +113,10 @@ You can suggest changes or new components by opening issues in the <a href="http
   - Google&rsquo;s <a href="https://lit.dev/">Lit</a>
   - The <a href="https://open-wc.org/">Open-WC project</a>
   - Div RIOT's <a href="https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/">Webcomponents.dev</a>
-- Articles on why web components are helpful especially in design systems
-  - <a href="https://ionicframework.com/blog/5-reasons-web-components-are-perfect-for-design-systems/">5 reasons web components are perfect for design systems</a> by ionic, makers of the stencil.js web components tool
-  - <a href="https://vaadin.com/blog/design-systems-and-standardized-web-components">Design systems and standards based web components</a> by Vaadin, makers of the Vaadin web component based design system
-  - Brad Frost on <a href="https://bradfrost.com/blog/link/why-we-use-web-components/">Why we use web components</a>
-  - <a href="https://www.zaplabs.com/blog/engineering/building-web-applications-longevity-through-web-components">Building web applications with longevity through web components</a> from ZapLabs in 2018
-  - <a href="https://shoelace.style/?id=new-to-web-components">New to web components?</a> by Cory LaViska, author of web components based design system shoelace.style
-  - New foundations being built on custom elements with projects like <a href="https://dev.to/open-wc/introducing-custom-elements-manifest-gkk ">Custom Elements Manifest</a>
+- Articles supporting web components in design systems
+  - <a href="https://ionicframework.com/blog/5-reasons-web-components-are-perfect-for-design-systems/">5 reasons web components are perfect for design systems</a>
+  - <a href="https://vaadin.com/blog/design-systems-and-standardized-web-components">Design systems and standards based web components</a>
+  - <a href="https://bradfrost.com/blog/link/why-we-use-web-components/">Why we use web components</a>
+  - <a href="https://www.zaplabs.com/blog/engineering/building-web-applications-longevity-through-web-components">Building web applications with longevity through web components</a>
+  - <a href="https://shoelace.style/?id=new-to-web-components">New to web components?</a>
+  - <a href="https://dev.to/open-wc/introducing-custom-elements-manifest-gkk ">Introducing: Custom Elements Manifest</a>
