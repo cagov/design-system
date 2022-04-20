@@ -113,7 +113,7 @@ You can suggest changes or new components by opening issues in the <a href="http
   - Google&rsquo;s <a href="https://lit.dev/">Lit</a>
   - The <a href="https://open-wc.org/">Open-WC project</a>
   - Div RIOT's <a href="https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/">Webcomponents.dev</a>
-- Articlessupporting web components in design systems
+- Articles supporting web components in design systems
   - <a href="https://ionicframework.com/blog/5-reasons-web-components-are-perfect-for-design-systems/">5 reasons web components are perfect for design systems</a>
   - <a href="https://vaadin.com/blog/design-systems-and-standardized-web-components">Design systems and standards based web components</a>
   - <a href="https://bradfrost.com/blog/link/why-we-use-web-components/">Why we use web components</a>
