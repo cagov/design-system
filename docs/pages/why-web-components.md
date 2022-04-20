@@ -33,7 +33,7 @@ We use the <a href="/components/page-feedback/readme/">page feedback component</
 
 ### Web components work anywhere
 
-<a href="https://custom-elements-everywhere.com/">All framework support web components</a>. You get this component model with its API built into all browsers. If you still need to support Internet Explorer, a polyfill is available. We use @webcomponents/webcomponentsjs on covid19.ca.gov.
+<a href="https://custom-elements-everywhere.com/">All framework support web components</a>. You get this component model with its API built into all browsers. If you still need to support Internet Explorer, a polyfill is available. We use <a href="https://github.com/webcomponents/polyfills/tree/master/packages/webcomponentsjs">@webcomponents/webcomponentsjs</a> on covid19.ca.gov.
 
 ### Web components help ensure longevity of code
 
@@ -43,9 +43,7 @@ Web components allow us to take our frontend widgets&nbsp;off this cycle&nbsp;of
 
 ### Easier component management
 
-Publishing each component individually lets us take advantage of separate versioning. Site owners get <a href="https://github.com/dependabot">dependabot</a>&nbsp;notifications when there are updates to each npm package. This comes with associated <a href="https://semver.org/">semver</a> compliant version numbers and published changelogs. Site owners can decide if they want to upgrade or ignore the change on their own timeline.
-
-Owners can add, upgrade, or remove components 
+Publishing each component individually lets us take advantage of separate versioning. Site owners get <a href="https://github.com/dependabot">dependabot</a>&nbsp;notifications when there are updates to each npm package. This comes with associated <a href="https://semver.org/">semver</a> compliant version numbers and published changelogs. Site owners can decide if they want to upgrade or ignore the change on their own timeline. Owners can add, upgrade, or remove components 
 
 more easily than if its code was part of the whole site. We learn a lot from other modular design systems like:
 
