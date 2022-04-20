@@ -45,12 +45,14 @@ footer .bg-light-grey svg .gov {
 footer .cagov-logo {
   padding: 0 var(--s-3, 1.5rem) 0 0;
 }
-footer .bg-light-grey a,
+footer .footer-secondary-links a,
 footer .copyright {
   color: var(--black, #000);
   padding-top: var(--s-1, 0.5rem);
   padding-bottom: var(--s-1, 0.5rem);
-  margin-bottom: 0;
+}
+footer .copyright {
+  margin-top: 0;
 }
 
 .bg-light-grey {
