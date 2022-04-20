@@ -25,7 +25,7 @@ The homepage also uses the <a href="https://designsystem.webstandards.ca.gov/com
 
 In some cases, we can embed components in other components. For example, we put a button in the feature card.
 
-We use the <a href="/components/page-feedback/readme/">page feedback component</a> at the bottom of every page. This component requires HTML, CSS and javascript. It uses a custom element tag associated with a javascript class.
+We use the <a href="/components/page-feedback/readme/">page feedback component</a> at the bottom of every page. This component requires HTML, CSS and JavaScript. It uses a custom element tag associated with a JavaScript class.
 
 <img alt="" src="/content/img/screenshot-feedback.jpg">
 
