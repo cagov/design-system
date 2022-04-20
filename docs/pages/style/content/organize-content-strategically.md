@@ -30,6 +30,7 @@ Arrange what your readers are looking for so they’re likely to see it.
 * Break up large blocks of content into smaller chunks.
   * Small paragraphs are easier to read. They also signal when a new topic begins.
   * Empty space between paragraphs gives readers little breaks that make the content easier to read.
+  * The Nielsen Norman Group has a good guide on [how to chunk content](https://www.nngroup.com/articles/chunking/).
 * Bullet points and lists add visual variety to pages and are easy to scan.
   * Use a numbered list for processes and steps that occur in an order.
 * Limit how much content is on a single page or screen. Too much information can overwhelm readers.

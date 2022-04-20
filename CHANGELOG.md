@@ -1,5 +1,10 @@
 # California Design System
 
+## 1.0.5
+
+- #766 - Icons: Fixed script bug and updated docs
+- #774 - Images in cards made into links
+
 ## 1.0.4
 
 - #652 - Fixed bugs on base-css preview and add e2e test
