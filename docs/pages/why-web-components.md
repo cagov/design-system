@@ -104,12 +104,12 @@ You can suggest changes or new components by opening issues in the <a href="http
 ## Resources
 
 - <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> documentation from MDN
-- <a href="https://custom-elements-everywhere.com/">Custom elements everywhere</a> tracks all the frameworks that support all the aspects of custom elements
+- <a href="https://custom-elements-everywhere.com/">Custom elements everywhere</a> tracks the frameworks that support all the aspects of custom elements
 - Design systems built with web components
   - Microsoft&rsquo;s <a href="https://www.fast.design/">FAST design system</a>
   - SalesForce&rsquo;s <a href="https://www.lightningdesignsystem.com/">Lightning design system</a>
   - Adobe&rsquo;s <a href="https://opensource.adobe.com/spectrum-web-components/">Spectrum design system</a>
-  - The component.gallery site lets you sort their list of design systems by tech, here is the <a href="https://component.gallery/design-systems/?tech=Web%20Components">web components result set</a>
+  - The <a href="https://component.gallery/design-systems/?tech=Web%20Components">component.gallery</a>
 - Web component libraries and patterns
   - <a href="https://github.blog/2021-05-04-how-we-use-web-components-at-github/">How we use web components at GitHub</a>
   - Google&rsquo;s web components library: <a href="https://lit.dev/">lit.dev</a>
