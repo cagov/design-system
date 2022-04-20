@@ -15,7 +15,7 @@ Components are bite-sized sections of code that link together to create a websit
 
 Components help developers and designers save time. They help you avoid rewriting redundant code. You can also easily plug them into and remove them from code using HTML tags.
 
-The California Design System uses the minimal amount of tech required for each component. This is&nbsp;often just HTML &amp; CSS. When we need JavaScript, we take advantage of the component model built into the browser. We use the custom elements part of the web components specification. This allows us to define new HTML tags like &lt;cagov-accordion&gt; or &lt;cagov-page-feedback&gt;, which are inert until upgraded by provided JavaScript.
+The California Design System uses the minimal amount of tech required for each component. This is&nbsp;often just HTML &amp; CSS. When we need JavaScript, we take advantage of the component model built into the browser. We use the custom elements part of the web components specification. This allows us to define new HTML tags like ```<cagov-accordion>``` or ```<cagov-page-feedback>```, which are inert until upgraded by provided JavaScript.
 
 ### Examples of our components
 
