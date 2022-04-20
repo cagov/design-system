@@ -9,7 +9,7 @@ footer .container {
   box-sizing: border-box;
   max-width: var(--w-lg, 1176px);
   margin: 0 auto;
-  padding: var(--s-2);
+  padding: var(--s-2, 1rem);
 }
 footer a:hover {
   color: var(--primary-dark-color, #1e1569);
@@ -22,9 +22,9 @@ footer .footer-secondary-links {
   flex-direction: column;
 }
 footer .footer-secondary-links a {
-  margin-right: var(--s-3);
-  padding-top: var(--s-1);
-  padding-bottom: var(--s-1);
+  margin-right: var(--s-3, 1.5rem);
+  padding-top: var(--s-1, 0.5rem);
+  padding-bottom: var(--s-1, 0.5rem);
 }
 footer .footer-secondary-links a span.external-link-icon,
 footer .footer-secondary-links a span.ca-gov-icon-external-link {
@@ -43,13 +43,13 @@ footer .bg-light-grey svg .gov {
   fill: var(--cagov-primary-dark, #003484);
 }
 footer .cagov-logo {
-  padding: 0 var(--s-3) 0 0;
+  padding: 0 var(--s-3, 1.5rem) 0 0;
 }
 footer .bg-light-grey a,
 footer .copyright {
   color: var(--black, #000);
-  padding-top: var(--s-1);
-  padding-bottom: var(--s-1);
+  padding-top: var(--s-1, 0.5rem);
+  padding-bottom: var(--s-1, 0.5rem);
   margin-bottom: 0;
 }
 
@@ -62,13 +62,13 @@ footer .copyright {
 }
 
 @media (min-width: 991px) {
-  .footer-secondary-links,
+  footer .footer-secondary-links,
 footer .container {
     margin-right: auto;
     flex-direction: row;
     align-items: center;
   }
-  .footer-secondary-links.flex-col-end,
+  footer .footer-secondary-links.flex-col-end,
 footer .container.flex-col-end {
     flex-direction: column;
     align-items: end;

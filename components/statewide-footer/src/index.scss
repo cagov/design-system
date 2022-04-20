@@ -1,84 +1,87 @@
 /* footer */
 footer {
-	font-size: 1rem;
+  font-size: 1rem;
 
-	.container {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		box-sizing: border-box;
-		max-width: var(--w-lg, 1176px);
-		margin: 0 auto;
-		padding: var(--s-2);
-	}
-	a {
-		&:hover {
-			color: var(--primary-dark-color, #1e1569);
-		}
-		&:focus {
-			outline: 2px solid var(--highlight-color, #fec02f);
-		}
-	}
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: var(--w-lg, 1176px);
+    margin: 0 auto;
+    padding: var(--s-2, 1rem);
+  }
+  a {
+    &:hover {
+      color: var(--primary-dark-color, #1e1569);
+    }
+    &:focus {
+      outline: 2px solid var(--highlight-color, #fec02f);
+    }
+  }
 
-	.footer-secondary-links {
-		display: flex;
-		flex-direction: column;
+  .footer-secondary-links {
+    display: flex;
+    flex-direction: column;
 
-		a {
-			margin-right: var(--s-3);
-			padding-top: var(--s-1);
-			padding-bottom: var(--s-1);
-			span.external-link-icon,
-			span.ca-gov-icon-external-link {
-				display: none;
-			}
-			&:hover {
-				text-decoration: none;
-			}
-		}
-	}
+    a {
+      margin-right: var(--s-3, 1.5rem);
+      padding-top: var(--s-1, 0.5rem);
+      padding-bottom: var(--s-1, 0.5rem);
+      span.external-link-icon,
+      span.ca-gov-icon-external-link {
+        display: none;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 
-	.bg-light-grey svg {
-		padding: 0;
-		.ca {
-			fill: var(--cagov-highlight, #fec02f);
-		}
-		.gov {
-			fill: var(--cagov-primary-dark, #003484);
-		}
-	}
+  .bg-light-grey svg {
+    padding: 0;
+    .ca {
+      fill: var(--cagov-highlight, #fec02f);
+    }
+    .gov {
+      fill: var(--cagov-primary-dark, #003484);
+    }
+  }
 
-	.cagov-logo {
-		padding: 0 var(--s-3) 0 0;
-	}
+  .cagov-logo {
+    padding: 0 var(--s-3, 1.5rem) 0 0;
+  }
 
-	.bg-light-grey a,
-	.copyright {
-		color: var(--black, #000);
-		padding-top: var(--s-1);
-		padding-bottom: var(--s-1);
-		margin-bottom: 0;
-	}
+  .bg-light-grey a,
+  .copyright {
+    color: var(--black, #000);
+    padding-top: var(--s-1, 0.5rem);
+    padding-bottom: var(--s-1, 0.5rem);
+    margin-bottom: 0;
+  }
 }
 
 .bg-light-grey {
-	background-color: var(--gray-100, #f9f9fa);
+  background-color: var(--gray-100, #f9f9fa);
 }
 
 .pt-0 {
-	padding-top: 0 !important;
+  padding-top: 0 !important;
 }
 
+// Large screens.
 @media (min-width: 991px) {
-	.footer-secondary-links,
-	footer .container {
-		margin-right: auto;
-		flex-direction: row;
-		align-items: center;
+  footer {
+    .footer-secondary-links,
+    .container {
+      margin-right: auto;
+      flex-direction: row;
+      align-items: center;
 
-		&.flex-col-end {
-			flex-direction: column;
-			align-items: end;
-		}
-	}
+      &.flex-col-end {
+        flex-direction: column;
+        align-items: end;
+      }
+    }
+  }
 }
