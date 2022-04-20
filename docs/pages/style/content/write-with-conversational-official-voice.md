@@ -25,8 +25,6 @@ A conversational tone and an official one can seem like they’re opposites of e
 * Think about how much work someone would have to do to retell this information. This reveals content that is complicated.
   * Break ideas into small chunks for readers to help them understand.
 * Use common contractions like **you’ll**, **it’s**, and **we’ll**.
-  * Do not use contractions with “not,” like **don’t** and **aren’t**. When skimming, readers see **do** and **don’t** as the same.
-  * An exception is the familiar device **Do’s and don’ts**.
   * Do not use uncommon contractions like **this’ll**, **y’all**, and **ain’t**.
 * Refer to people as **you**, and the government or department as **we**, as long as it’s clear who **we** refers to. This lowers the feeling of a divide between people and the State.
   * For example: _If you need benefits, apply by May 23, 2021_. Do not say _The benefits application deadline is May 23, 2021_.
