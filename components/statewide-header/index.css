@@ -147,4 +147,10 @@
   display: none;
 }
 
+@media screen and (min-width: 800px) {
+  .desktop-only {
+    display: inline;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
