@@ -1,5 +1,15 @@
 # California Design System
 
+## 1.06
+
+- #807 - Updated "Skip to content" instructions with clearer instructions
+- #806 - Updated README to include additional information on tests, and directory structure
+- #805 - Hyperlinked the ca.gov icon in the sitewide footer
+- #802 - Added a new webpage ([Why web components](https://designsystem.webstandards.ca.gov/why-web-components)) explaining the uses of web components 
+- #799 - Standardized button styles on the homepage 
+- #799 - Updated color palette
+- #795 - Added additional heading font-weight options
+
 ## 1.0.5
 
 - #766 - Icons: Fixed script bug and updated docs
