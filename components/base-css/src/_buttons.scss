@@ -2,7 +2,7 @@
 .wp-block-button__link {
   background-color: #33705b;
   /* defined here for when css vars are not supported */
-  background-color: var(--primary-color, #33705b);
+  background-color: var(--primary-700, #165ac2);
   color: white;
   padding: 0.5556rem;
   margin: 0 0 1rem 0;
@@ -14,7 +14,7 @@
 }
 .wp-block-button__link:hover {
   /* defined here for when css vars are not supported */
-  background-color: var(--primary-hover-color, #33705b);
+  background-color: var(--primary-900, #003688);
   /* variable used with fallback in case it is not defined */
   color: var(--white, #ffffff);
   padding: 0.5556rem;
@@ -29,7 +29,8 @@
 @mixin btn {
   display: inline-block;
   font-size: var(--font-size-2);
-  padding: var(--s-1);
+  font-weight: var(--font-weight-6);
+  padding: var(--s-1) var(--s-2);
   line-height: var(--font-lineheight-3);
   border-radius: var(--radius-2);
   border: var(--border-1) solid;
@@ -37,38 +38,193 @@
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  transition: all var(--ease-2) var(--animation-duration-3);
+  // transition: all var(--ease-2) var(--animation-duration-3);
 }
 
 // Primary buttons
 .btn-primary {
   @include btn;
   color: var(--white);
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: var(--primary-700);
+  border-color: var(--primary-700);
 
   &:hover {
+    background-color: var(--primary-900);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
     color: var(--white);
-    background-color: var(--primary-dark-color);
-    border-color: var(--primary-dark-color);
   }
   &:focus {
-    outline: var(--border-2) solid var(--highlight-color);
+    background-color: var(--primary-900);
+    border-color: var(--primary-900);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 .btn-primary-outline {
   @include btn;
-  color: var(--primary-color);
-  background-color: var(--white);
-  border-color: var(--primary-color);
+  color: var(--primary-700);
+  background-color: transparent;
+  border-color: var(--primary-700);
 
   &:hover {
-    color: var(--primary-dark-color);
-    background-color: var(--white);
-    border-color: var(--primary-dark-color);
+    color: var(--primary-900);
+    border-color: var(--primary-900);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
   }
   &:focus {
-    outline: var(--border-2) solid var(--highlight-color);
+    color: var(--primary-900);
+    border-color: var(--primary-900);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+// Accent1 buttons
+.btn-accent1 {
+  @include btn;
+  color: var(--primary-900);
+  background-color: var(--accent1-300);
+  border-color: var(--accent1-300);
+
+  &:hover {
+    color: var(--primary-900);
+    background-color: var(--accent1-100);
+    border-color: var(--accent1-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    background-color: var(--accent1-100);
+    border-color: var(--accent1-100);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+.btn-accent1-outline {
+  @include btn;
+  color: var(--accent1-300);
+  background-color: transparent;
+  border-color: var(--accent1-300);
+
+  &:hover {
+    color: var(--accent1-100);
+    border-color: var(--accent1-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    color: var(--accent1-100);
+    border-color: var(--accent1-100);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+// Accent1 buttons
+.btn-accent2 {
+  @include btn;
+  color: var(--primary-900);
+  background-color: var(--accent2-300);
+  border-color: var(--accent2-300);
+
+  &:hover {
+    color: var(--primary-900);
+    background-color: var(--accent2-100);
+    border-color: var(--accent2-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    background-color: var(--accent2-100);
+    border-color: var(--accent2-100);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+.btn-accent2-outline {
+  @include btn;
+  color: var(--accent2-300);
+  background-color: transparent;
+  border-color: var(--accent2-300);
+
+  &:hover {
+    color: var(--accent2-100);
+    border-color: var(--accent2-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    color: var(--accent2-100);
+    border-color: var(--accent2-100);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+// Accent1 buttons
+.btn-light {
+  @include btn;
+  color: var(--primary-900);
+  background-color: var(--white);
+  border-color: var(--white);
+
+  &:hover {
+    color: var(--primary-900);
+    background-color: var(--gray-200);
+    border-color: var(--gray-200);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    background-color: var(--gray-200);
+    border-color: var(--gray-200);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+.btn-light-outline {
+  @include btn;
+  color: var(--white);
+  background-color: transparent;
+  border-color: var(--white);
+
+  &:hover {
+    color: var(--gray-200);
+    border-color: var(--gray-200);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  &:focus {
+    color: var(--gray-200);
+    border-color: var(--gray-200);
+    outline: var(--border-2) solid var(--accent2-500);
+    outline-offset: 2px;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 
@@ -79,26 +235,57 @@
   @include btn;
   pointer-events: none !important;
   color: var(--white);
-  background-color: var(--gray-700);
-  border-color: var(--gray-700);
+  background-color: var(--gray-600);
+  border-color: var(--gray-600);
 
   &:hover {
     color: var(--white);
-    background-color: var(--gray-700);
-    border-color: var(--gray-700);
+    background-color: var(--gray-600);
+    border-color: var(--gray-600);
   }
 }
 .btn-disabled-outline {
   @include btn;
   pointer-events: none !important;
-  color: var(--gray-700);
+  color: var(--gray-600);
   background-color: var(--white);
-  border-color: var(--gray-700);
+  border-color: var(--gray-600);
 
   &:hover {
-    color: var(--gray-700);
+    color: var(--gray-600);
     background-color: var(--white);
-    border-color: var(--gray-700);
+    border-color: var(--gray-600);
+  }
+}
+
+.btn-accent1-disabled,
+.btn-accent2-disabled,
+.btn-light-disabled {
+  @include btn;
+  pointer-events: none !important;
+  color: var(--primary-900);
+  background-color: var(--gray-300);
+  border-color: var(--gray-300);
+
+  &:hover {
+    color: var(--primary-900);
+    background-color: var(--gray-300);
+    border-color: var(--gray-300);
+  }
+}
+.btn-accent1-disabled-outline,
+.btn-accent2-disabled-outline,
+.btn-light-disabled-outline {
+  @include btn;
+  pointer-events: none !important;
+  color: var(--gray-300);
+  background-color: transparent;
+  border-color: var(--gray-300);
+
+  &:hover {
+    color: var(--gray-300);
+    background-color: transparent;
+    border-color: var(--gray-300);
   }
 }
 
@@ -113,7 +300,7 @@
   text-align: left;
   text-decoration: none;
   cursor: pointer;
-  transition: all var(--ease-2) var(--animation-duration-3);
+  // transition: all var(--ease-2) var(--animation-duration-3);
 }
 
 @mixin actionarrow {
@@ -127,13 +314,13 @@
 
 .btn-action-primary {
   @include actionbutton;
-  border-color: var(--primary-color);
+  border-color: var(--primary-700);
   background-color: var(--white);
   width: 100%;
   .btn-action-title {
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-7);
-    color: var(--primary-color);
+    color: var(--primary-700);
     padding-right: var(--s-4);
     position: relative;
     display: block;
@@ -149,10 +336,47 @@
     display: block;
   }
   &:hover {
-    border-color: var(--primary-dark-color);
+    border-color: var(--primary-900);
     background-color: var(--gray-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     .btn-action-title {
-      color: var(--primary-dark-color);
+      color: var(--primary-900);
+    }
+    .btn-action-text {
+      color: var(--black);
+    }
+  }
+}
+
+.btn-action-dark {
+  @include actionbutton;
+  border-color: var(--black);
+  background-color: var(--white);
+  width: 100%;
+  .btn-action-title {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-7);
+    color: var(--black);
+    padding-right: var(--s-4);
+    position: relative;
+    display: block;
+    // icon
+    &::after {
+      @include actionarrow;
+    }
+  }
+  .btn-action-text {
+    color: var(--black);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-4);
+    display: block;
+  }
+  &:hover {
+    border-color: var(--black);
+    background-color: var(--gray-100);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    .btn-action-title {
+      color: var(--black);
     }
     .btn-action-text {
       color: var(--black);

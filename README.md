@@ -41,7 +41,36 @@ Each component is published to npm. The following steps are run in a pre-publish
 
 We welcome your component modification requests or suggestions. Create a pull request or open an issue in this repository.
 
-## Local site testing
+### End to end testing
 
-Playwright is used to run accessibility tests against local site urls.
-This starts up with `http-server' instead of 11ty because axe-playwright flags the browser-sync element that is injected into 11ty's default local serve mode as an accessibility violation for not being included in a landmark element.
+Playwright is used to run end to end and accessibility tests against local site urls using axe.
+
+This set of tests is configured to be run against any open PR in our git actions: <a href="tree/main/.github/workflows/validate.yml">validate.yml</a>.
+
+They can be run locally with:
+
+```
+npm run test:site
+```
+
+If you run into test failures due to an axe detected accessibility violation the offending node will be part of the test failure output. You can get more information on this type of failure by using the axe chrome plugin and letting it evaluate the page locally during development.
+
+The playwright test setup uses `http-server' instead of 11ty because axe-playwright flags the browser-sync element that is injected into 11ty's default local serve mode as an accessibility violation for not being included in a landmark element. 
+
+### Unit tests
+
+Each component contains its own unit tests. The tests for all components are run in sequence when any commit is made in this repo via a husky pre-commit hook. When a package is published its own unit tests are run via an npm prepublish hook configured in the component's package.json
+
+You can run any components tests individually during development with the ```npm test``` command inside its directory.
+
+These component unit tests were created following <a href="https://open-wc.org/">Open Web Components</a> recommendations.
+
+### Directory structure
+
+The code for all the components is in ```/components```. Each directory contains the entire package for each component published to npm. The markdown files in each component's directory provide the content used in the component gallery section of the <a href="https://designsystem.webstandards.ca.gov/">design system site</a>. Any modification to a component's code or documentation should be associated with a new version of the component being published. Publishing a new version of a component to npm will run the scripts that publish its code to the CA CDN. More information on component development in the <a href="/tree/main/components#readme">component readme</a>.
+
+The rest of the site content is in ```/docs```
+- ```/docs/pages```: markdown for additional pages 
+- ```/docs/site```: templates for site layouts
+- ```/docs/src/css/sass/index.scss```: site CSS dependencies
+- ```/docs/src/js/index.js```: site JS dependencies

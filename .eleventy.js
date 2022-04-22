@@ -41,6 +41,9 @@ module.exports = function (eleventyConfig) {
     'docs/src/assets/illustrations': 'illustrations',
   });
   eleventyConfig.addPassthroughCopy({ 'docs/src/assets/img': 'img' });
+  eleventyConfig.addPassthroughCopy({
+    'docs/src/assets/article-content': 'content/img',
+  });
   eleventyConfig.addPassthroughCopy({ 'docs/src/css/fonts': 'fonts' });
   eleventyConfig.addPassthroughCopy({
     'components/base-css/dist/themes': 'css',

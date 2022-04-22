@@ -12,8 +12,8 @@ function ratingsTemplate(
   <div class="feedback-form cagov-stack">
     <div class="js-feedback-form feedback-form-question">
       <h2 class="feedback-form-label" id="feedback-rating">${question}</h2>
-      <button class="feedback-form-button js-feedback-yes feedback-yes" id="feedback-yes">${yes}</button>
-      <button class="feedback-form-button js-feedback-no" id="feedback-no">${no}</button>
+      <button class="btn-light m-r-2 js-feedback-yes feedback-yes" id="feedback-yes">${yes}</button>
+      <button class="btn-light js-feedback-no" id="feedback-no">${no}</button>
     </div>
           
     <div class="feedback-form-thanks js-feedback-thanks" role="alert">${thanksFeedback}</div>
@@ -22,7 +22,7 @@ function ratingsTemplate(
       <label class="feedback-form-label js-feedback-field-label" for="add-feedback">${commentPrompt}</label>
       <div class="feedback-form-add-grid">
         <textarea name="add-feedback" class="js-add-feedback feedback-form-textarea" id="add-feedback" rows="1"></textarea>
-        <button class="feedback-form-button js-feedback-submit" type="submit" id="feedback-submit">${submit}</button>
+        <button class="btn-light js-feedback-submit" type="submit" id="feedback-submit">${submit}</button>
       </div>
     </div>
 

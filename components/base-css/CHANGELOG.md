@@ -1,5 +1,10 @@
 # Base CSS changelog
 
+## 1.0.18
+* Updated color scheme to use new variables and color names.
+* Updated buttons styles and variables.
+* Added more font weight variations to _fonts.scss.
+
 ## 1.0.17
 * Added more utility classes (flex for medium and larger devises, height and width classes, more text clasees). 
 * Added grid container classes.

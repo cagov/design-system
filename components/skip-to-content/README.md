@@ -19,6 +19,7 @@ Do not modify skip to content when you install it.
 <div id="skip-to-content">
   <a href="#body-content-demo">Skip to content</a>
 </div>
+<!-- Sample markup ends here. -->
 
 <!-- The following mark-up is strictly for demonstration purposes. -->
 <p>To preview this accessibility feature, try the following.</p>
@@ -48,8 +49,8 @@ Do not modify skip to content when you install it.
 The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
 
 1. Include **SCSS** in your compiler.
-2. Add the **sample markup** from the component just after the opening body tag of your HTML.
-3. Add `id=body-content"`to the HTML tag at the top of the main content of the page.
+2. Add the markup from the component's `template.html` file just after the opening body tag of your HTML.
+3. Add `id="body-content"`to the HTML tag at the top of the main content of the page.
 
 ## Accessibility
 
@@ -75,9 +76,9 @@ This is an HTML- and CSS-only component. JavaScript is not required. It uses [CS
 
 This component uses the following data attributes. We provide this information to help with integrating the component into backend publishing systems or identifying content that may require translation.
 
-| Name  | Attribute name  | Data type | Field type | Selector           | Default value   |
-| ----- | --------------- | --------- | ---------- | ------------------ | --------------- |
-| Label | skip-to-content | string    | Plain text | div#skip-to-content a | Skip to content |
+| Name  | Attribute name  | Data type | Field type | Selector                           | Default value   |
+| ----- | --------------- | --------- | ---------- | ---------------------------------- | --------------- |
+| Label | skip-to-content | string    | Plain text | #skip-to-content a#body-content | Skip to content |
 
 ## Contributor/developer documentation
 

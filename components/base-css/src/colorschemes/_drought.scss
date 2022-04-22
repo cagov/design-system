@@ -1,6 +1,25 @@
 /* Drought color scheme */
 :root {
   /* Theme colors */
+  --primary-100: #f3eceb;
+  --primary-300: #d2bab5;
+  --primary-500: #965d52;
+  --primary-700: #691808; // brand color
+  --primary-900: #4a1106;
+
+  --accent1-100: #c1c1c1;
+  --accent1-300: #c1c1c1;
+  --accent1-500: #6f6f6f;
+  --accent1-700: #313131; // brand color
+  --accent1-900: #222222;
+
+  --accent2-100: #feebcb;
+  --accent2-300: #fee6bd;
+  --accent2-500: #fcc665;
+  --accent2-700: #fbad23; // brand color
+  --accent2-900: #b07919;
+
+  // old color names
   --primary-color: #691808;
   --primary-dark-color: #4a1106;
   --primary-light-color: #965d52;

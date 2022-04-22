@@ -1,5 +1,10 @@
 # Statewide footer changelog
 
+## 1.0.9 
+* Restored link to CA.gov. 
+* Added default values to CSS variable declarations. 
+* CSS changes to minimize regressions.
+
 ## 1.0.8 
 * Updated copyright positioning. Changed CA<span>.</span>gov icon width to 33px to mach figma prototype. Removed link icons from the footer links.
 
