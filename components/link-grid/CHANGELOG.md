@@ -1,5 +1,9 @@
 # Link grid changelog
 
+
+## 2.1.1
+* Updated color variables to go inline with new CEILAB color palette.
+
 ## 2.1.0
 * Renamed package from `ds-button-grid` to `ds-link-grid`.
 
