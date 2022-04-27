@@ -31,8 +31,8 @@
       ],
       "cssProperties": [
         {
-          "name": "--primary-color",
-          "description": "Default value of #064E66, used for text, border color"
+          "name": "--primary-700",
+          "description": "Default value of #165ac2, used for text, border color"
         }
       ]
     }

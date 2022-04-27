@@ -6,27 +6,46 @@ cagov-pagination {
     display: flex;
   }
   .cagov-pagination__item {
-    border: 1px solid #EDEDEF;
-    border-radius: .3rem;
-    margin: .25rem;
+    border: var(--border-1, 1px) solid var(--gray-100, #ededef);
+    border-radius: var(--radius-2, 4px);
+    margin: var(--s-sm, 0.25rem);
     a {
-      padding: .75rem .875rem;
+      padding: 0.75rem 0.875rem;
       display: inline-block;
-      color: var(--primary-color, #064E66);
+      color: var(--primary-700, #165ac2);
       text-decoration: none;
-    }
-    &:hover {
-      background: #F9F9FA;
-      a {
-        text-decoration: underline;
+      &:hover {
+        color: var(--primary-900, #003588);
+        background: var(--gray-50, #fafafa);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+      &:focus {
+        color: var(--primary-900, #003588);
+        background: var(--gray-50, #fafafa);
+        outline: var(--border-2) solid var(--accent2-500);
+        outline-offset: 2px;
+        text-decoration: none;
       }
     }
 
     &.cagov-pagination-current {
-      background-color: #064E66;
-      background-color: var(--primary-color, #064E66);
+      background-color: #165ac2;
+      background-color: var(--primary-700, #165ac2);
       a {
-        color: #fff;
+        color: var(--white, #ffffff);
+        &:hover {
+          background-color: var(--primary-900, 003588);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+          text-decoration: none;
+          color: var(--white, #ffffff);
+        }
+        &:focus {
+          background-color: var(--primary-900, 003588);
+          border-color: var(--primary-900, 003588);
+          outline: var(--border-2) solid var(--accent2-500);
+          outline-offset: 2px;
+        }
       }
     }
     &.cagov-pagination__overflow {
@@ -44,5 +63,4 @@ cagov-pagination {
     cursor: not-allowed;
     opacity: 0.5;
   }
-  
 }
