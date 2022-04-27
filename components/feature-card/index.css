@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+.cagov-with-sidebar .cagov-mb-1 {
+  margin-bottom: 1rem;
+}
+
 .cagov-with-sidebar > * > * {
   margin: 0;
   flex-grow: 1;
@@ -28,7 +32,7 @@
 
 /* generic utility styles, should come from base-css */
 .stack * + * {
-  margin-top: 1.5rem;
+  margin-top: var(--s-3, 1.5rem);
 }
 
 .cagov-border {
@@ -39,22 +43,21 @@
   text-decoration: none;
 }
 
-/* reset */
-h3 {
+/* spacing overrides, can these come from base-css? */
+.cagov-featured-section h2 {
+  padding-bottom: var(--s-2, 1rem);
+}
+
+.cagov-featured-section h3 {
   margin: 0;
 }
 
-/* spacing overrides, can these come from base-css? */
-.cagov-featured-section h2 {
-  padding-bottom: 16px;
-}
-
 .cagov-hero-body-content p {
-  margin-bottom: 16px;
+  margin-bottom: var(--s-2, 1rem);
 }
 
 .cagov-p-2 {
-  padding: 1.5rem;
+  padding: var(--s-3, 1.5rem);
 }
 
 .cagov-bkgrd-gry {
@@ -68,13 +71,13 @@ h3 {
 }
 
 .cagov-featured-section {
-  margin: 0 0 3rem 0;
+  margin: 0 0 var(--s-5, 3rem) 0;
 }
 
 .cagov-featured-section .components-button.image-button {
   display: block;
   height: 100%;
-  margin: 0 0 3rem 0;
+  margin: 0 0 var(--s-5, 3rem) 0;
   padding: 0;
 }
 
@@ -89,44 +92,54 @@ h3 {
 }
 
 /* hero sidebar swap image on left to go on top when it wraps */
-@media (max-width: 719px) {
+@media (max-width: 767px) {
   .cagov-with-sidebar > * {
     flex-direction: column-reverse;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1176px) {
   .cagov-featured-sidebar {
     max-width: 34%;
   }
 }
 /* call to action */
 /* styles applied to elements WordPress is adding to the markup */
-.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .btn-primary:not(:hover):not(:active):not(.has-background) {
   /* defined here for when css vars are not supported */
-  background-color: var(--primary-color, #33705b);
-  /* variable used with fallback in case it is not defined */
-  color: var(--white, #ffffff);
+  color: var(--white, #fff);
+  background-color: var(--primary-700, #165ac2);
+  border-color: var(--primary-700, #165ac2);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  font-weight: bold;
   display: inline-block;
-  border: none;
+  font-size: var(--font-size-2, 1.125rem);
+  font-weight: var(--font-weight-6, 600);
+  padding: var(--s-1, 0.5rem) var(--s-2, 1rem);
+  line-height: var(--font-lineheight-3, 1.5);
+  border-radius: var(--radius-2, 4px);
+  border: var(--border-1, 1px) solid;
+  text-align: center;
   text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
-.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
-  /* defined here for when css vars are not supported */
-  background-color: var(--primary-hover-color, #33705b);
-  /* variable used with fallback in case it is not defined */
-  color: var(--white, #ffffff);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: bold;
+.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .btn-primary:hover {
+  background-color: var(--primary-900, #003588);
+  border-color: var(--primary-900, #003588);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: var(--white, #fff);
   display: inline-block;
-  border: none;
 }
 
-.cagov-hero-body-content .wp-block-button__link {
+.cagov-hero-body-content .wp-block-button:not(.is-style-outline) .btn-primary:focus {
+  border-color: var(--primary-900, #003588);
+  outline: var(--border-2, 2px) solid var(--accent2-500, #ac8226);
+  outline-offset: 2px;
+}
+
+.cagov-hero-body-content .btn-primary {
   overflow-wrap: normal;
   white-space: nowrap;
 }
