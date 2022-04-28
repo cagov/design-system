@@ -292,7 +292,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
 - `--white`
-- `--gray-300`
+- `--gray-200`
 - `--primary-700`
 - `--primary-900`
 - `--accent2-500`

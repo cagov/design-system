@@ -1,6 +1,7 @@
 /* footer */
 footer {
-  font-size: 1rem;
+  font-size: var(--font-size-1, 1rem);
+  border-top: solid 1px var(--gray-200, #d4d4d7);
 }
 footer .container {
   display: flex;
@@ -12,10 +13,10 @@ footer .container {
   padding: var(--s-2, 1rem);
 }
 footer a:hover {
-  color: var(--primary-dark-color, #1e1569);
+  color: var(--primary-900, #003588);
 }
 footer a:focus {
-  outline: 2px solid var(--highlight-color, #fec02f);
+  outline: 2px solid var(--accent2-500, #ac8226);
 }
 footer .footer-secondary-links {
   display: flex;
@@ -45,6 +46,7 @@ footer .bg-light-grey svg .gov {
 footer .cagov-logo {
   padding-top: var(--s-1, 0.5rem);
   padding-bottom: var(--s-1, 0.5rem);
+  padding-right: var(--s-3, 1.5rem);
 }
 footer .footer-secondary-links a,
 footer .copyright {
@@ -57,7 +59,7 @@ footer .copyright {
 }
 
 .bg-light-grey {
-  background-color: var(--gray-100, #f9f9fa);
+  background-color: var(--gray-50, #fafafa);
 }
 
 .pt-0 {

@@ -2,7 +2,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: var(--white, #fff);
-  border-bottom: 1px solid var(--gray-300, #e1e0e3);
+  border-bottom: 1px solid var(--gray-200, #d4d4d7);
 }
 .site-header .container {
   max-width: var(--w-lg, "1176px");

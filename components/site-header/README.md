@@ -308,7 +308,7 @@ The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/U
 - `--accent2-500`
 - `--white`
 - `--gray-100`
-- `--gray-300`
+- `--gray-200`
 - `--w-lg`
 - `--s-1`
 - `--s-2`

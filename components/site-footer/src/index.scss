@@ -1,7 +1,6 @@
 /* agency footer */
 section.site-footer {
-	border-top: solid 1px var(--gray-300, #bcbbc1);
-	border-bottom: solid 1px var(--gray-300, #bcbbc1);
+	border-top: solid 1px var(--gray-200, #d4d4d7);
 
 	.container {
 		display: flex;
@@ -76,7 +75,7 @@ section.site-footer {
 
 // Misc
 .bg-light-grey {
-	background-color: var(--gray-100, #ededef);
+	background-color: var(--gray-50, #fafafa);
 }
 
 .pt-0 {
