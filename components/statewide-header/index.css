@@ -1,20 +1,19 @@
 /* translate widget loader */
 #google_translate_element {
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm, 0.875rem);
 }
 
 /*official*/
 .official-header {
-  background-color: var(--gray-100, #f9f9fa);
+  background-color: var(--gray-50, #fafafa);
   padding: 0;
   width: 100%;
-  border-bottom: 1px solid var(--gray-200, #ededef);
   /* google translate */
 }
 @media (max-width: 767px) {
   .official-header {
     width: 100vw;
-    padding: 0.5rem 0;
+    padding: var(--s-1, 0.5rem) 0;
   }
 }
 .official-header .container {
@@ -26,7 +25,7 @@
   max-width: var(--w-lg, 1176px);
   min-height: 40px;
   margin: 0 auto;
-  padding: 0 16px 0 16px;
+  padding: 0 var(--s-2, 1rem) 0 var(--s-2, 1rem);
 }
 .official-header .official-logo {
   display: flex;
@@ -48,16 +47,21 @@
   fill: var(--cagov-primary-dark, #003484);
 }
 .official-header .official-tag {
-  margin: 0 var(--spacing-base, 8px);
-  font-size: 0.95rem;
+  margin: 0 var(--s-1, 0.5rem);
+  font-size: var(--font-size-sm, 0.875rem);
   display: inherit;
 }
 .official-header .official-languages a {
   color: var(--black, #000);
-  padding: 0 0.5rem 0 0.5rem;
+  padding: 0 var(--s-1, 0.5rem) 0 var(--s-1, 0.5rem);
+  text-decoration: underline;
 }
 .official-header .official-languages a:hover {
-  color: var(--primary-dark-color, #4a1106);
+  color: var(--black, #000);
+  text-decoration: none;
+}
+.official-header .official-languages a:focus {
+  outline: 2px solid var(--accent2-500, #ac8226);
 }
 .official-header .official-languages {
   display: flex;
@@ -70,11 +74,17 @@
   padding-right: 0;
   border: none;
   text-decoration: underline;
+  color: var(--black, #000);
   background-color: var(--white, #fff);
+  text-decoration: underline;
   transition: transform 0.3s;
 }
 .official-header .official-languages button.offcial-more:hover {
-  color: var(--primary-dark-color, #4a1106);
+  color: var(--black, #000);
+  text-decoration: none;
+}
+.official-header .official-languages button.offcial-more:focus {
+  outline: 2px solid var(--accent2-500, #ac8226);
 }
 .official-header .official-languages button.offcial-more[aria-expanded=false] .caret-down {
   transition: all 0.3s;
@@ -103,9 +113,10 @@
 .official-header .official-languages .dropdown-content {
   background-clip: padding-box;
   background-color: var(--white, #fff);
-  border: 1px solid var(--primary-color, #064e66);
-  border-radius: 0.25rem;
-  padding: 15px;
+  border: 1px solid var(--gray-200, #d4d4d7);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-2, 4px);
+  padding: var(--s-2, 1rem);
   position: absolute;
   right: 0px;
   top: 100%;
