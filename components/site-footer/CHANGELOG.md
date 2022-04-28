@@ -1,5 +1,9 @@
 # Site footer changelog
 
+
+## 1.1.1
+* Updated color variables to go inline with CEILAB color palette. 
+
 ## 1.1.0
 * Changed name from `ds-agency-footer` to `ds-site-footer`.
 * Changed name of CSS class `agency-footer` to `site-footer`.
