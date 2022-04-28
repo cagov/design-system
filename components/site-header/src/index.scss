@@ -50,7 +50,7 @@ $mobile-min: 767px;
     color: var(--black, #000);
     text-decoration: none;
     &:focus {
-      outline: 2px solid var(--highlight-color, #fec02f);
+      outline: 2px solid var(--accent2-500, #ac8226);
     }
   }
 
@@ -92,7 +92,7 @@ $mobile-min: 767px;
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-    column-gap: 24px;
+    column-gap: var(--s-3, 1.5rem);
     row-gap: 12px;
   }
 
@@ -111,18 +111,18 @@ $mobile-min: 767px;
     background: transparent;
     overflow: visible;
     padding: 10px;
-    color: var(--primary-color, #064e66);
+    color: var(--primary-700, #165ac2);
 
     &:hover {
-      color: var(--primary-dark-color, #043747);
+      color: var(--primary-900, #003588);
 
       .blue {
-        fill: var(--primary-dark-color, #043747);
+        fill: var(--primary-900, #003588);
       }
     }
     &:focus {
-      color: var(--primary-dark-color, #043747);
-      outline: 2px solid var(--highlight-color, #fdb81e);
+      color: var(--primary-900, #003588);
+      outline: 2px solid var(--accent2-500, #ac8226);
     }
 
     svg {
@@ -130,7 +130,7 @@ $mobile-min: 767px;
     }
 
     .blue {
-      fill: var(--primary-color, #064e66);
+      fill: var(--primary-700, #165ac2);
     }
   }
 
@@ -142,7 +142,7 @@ $mobile-min: 767px;
     display: inline-block;
     cursor: pointer;
     position: relative;
-    color: var(--primary-color, #064e66);
+    color: var(--primary-700, #165ac2);
     display: flex;
     align-items: center;
     .is-fixed {
@@ -163,15 +163,15 @@ $mobile-min: 767px;
       }
     }
     .hamburger-inner {
-      background-color: var(--primary-color, #064e66);
+      background-color: var(--primary-700, #165ac2);
     }
 
     &:hover {
-      color: var(--primary-dark-color, #043747);
+      color: var(--primary-900, #003588);
       .hamburger-inner {
         &:before,
         &:after {
-          background-color: var(--primary-dark-color, #043747);
+          background-color: var(--primary-900, #003588);
         }
       }
     }
@@ -190,7 +190,7 @@ $mobile-min: 767px;
     transition: all 0.2s ease-in-out;
     vertical-align: middle;
     z-index: 10000;
-    margin-right: 0.5rem;
+    margin-right: var(--s-1, 0.5rem);
     &-box {
       width: 20px;
       height: 20px;
@@ -268,13 +268,13 @@ cagov-site-navigation {
       // submit input
       .search-textfield {
         border: 1px solid;
-        border-color: var(--primary-color, #004abc);
+        border-color: var(--primary-700, #004abc);
         border-radius: 4px;
         padding: 10px;
         width: 100%;
         font-size: 1rem;
         &:focus {
-          outline: 2px solid var(--highlight-color, #fec02f);
+          outline: 2px solid var(--accent2-500, #ac8226);
           outline-offset: -2px;
         }
       }
@@ -283,17 +283,17 @@ cagov-site-navigation {
         position: relative;
         right: 5px;
         outline-offset: -2px;
-        background-color: var(--primary-color, #004abc);
-        border: 1px solid var(--primary-color, #004abc);
+        background-color: var(--primary-700, #004abc);
+        border: 1px solid var(--primary-700, #004abc);
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
         padding: 7px 14px 4px 14px;
         &:hover {
-          background-color: var(--primary-dark-color, #003484);
-          border-color: var(--primary-dark-color, #003484);
+          background-color: var(--primary-900, #003484);
+          border-color: var(--primary-900, #003484);
         }
         &:focus {
-          outline: 2px solid var(--highlight-color, #fec02f);
+          outline: 2px solid var(--accent2-500, #ac8226);
         }
         svg path {
           fill: var(--white, #fff);
@@ -301,24 +301,24 @@ cagov-site-navigation {
       }
 
       .search-close {
-        color: var(--primary-color, #004abc);
+        color: var(--primary-700, #004abc);
         text-decoration: underline;
         border: none;
         background-color: var(--gray-100, #f9f9fa);
-        padding: 0 15px 0 15px;
+        padding: 0 var(--s-2, 1rem) 0 var(--s-2, 1rem);
         &:hover {
-          color: var(--primary-dark-color, #003484);
+          color: var(--primary-900, #003484);
           text-decoration: none;
         }
         &:focus {
-          outline: 2px solid var(--highlight-color, #fec02f);
+          outline: 2px solid var(--accent2-500, #ac8226);
         }
       }
     }
   }
   .search-container--small {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: var(--s-2, 1rem);
+    padding-right: var(--s-2, 1rem);
     &.hidden-search {
       display: none;
     }
@@ -349,13 +349,13 @@ cagov-site-navigation {
 }
 
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
