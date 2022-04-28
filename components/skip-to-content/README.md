@@ -56,7 +56,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 ### Component-specific accessibility review
 
-- Make sure the skip to the content link is the first item to appear on focus when you tab through a webpage and has solid, 2px outline that uses `--highlight-color` variable.
+- Make sure the skip to the content link is the first item to appear on focus when you tab through a webpage and has solid, 2px outline that uses `--accent2-500` variable.
 - Make sure that skip to content id reference `href=”#body-content”` is matching actual `id` attribute in main content div.
 
 ### Standard accessibility review
