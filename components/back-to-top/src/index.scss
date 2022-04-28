@@ -16,7 +16,6 @@ cagov-back-to-top {
     cursor: pointer;
     transition: all 0.5s ease;
     background-color: #fff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     @media (max-width: 767px) {
       font-size: var(--font-size-1, 1rem);
       padding: 8px 8px 8px 8px;
@@ -24,7 +23,7 @@ cagov-back-to-top {
     &:hover {
       color: var(--primary-900, #003484);
       border: 1px solid var(--primary-900, #003484);
-      background-color: var(--gray-100, #f9f9fa);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
       svg path {
         fill: var(--primary-900, #003484);
       }
