@@ -3,10 +3,9 @@
  *
  * @element cagov-site-navigation
  *
- * @cssprop --primary-color - Default value of #064E66, used for background
- * @cssprop --gray-300 - #e1e0e3
- * @cssprop --primary-dark-color - #064e66
- * @cssprop --secondary-color - #fec02f
+ * @cssprop --primary-700 - Default value of #165ac2, used for background
+ * @cssprop --primary-900 - #003588
+ * @cssprop --gray-200 - #d4d4d7
  * @cssprop --w-lg - '1176px'
  */
 

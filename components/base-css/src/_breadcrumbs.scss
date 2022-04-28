@@ -31,7 +31,7 @@
     font-weight: 700;
     font-size: calc(1rem + var(--ratio));
     line-height: 1.125rem;
-    color: var(--primary-color, #004abc);
+    color: var(--primary-700, #165ac2);
   }
 
   .breadcrumb span.crumb:not(:last-child):not([class*="separator"]) {

@@ -16,21 +16,6 @@
   --accent2-500: #ac8227;
   --accent2-700: #775a20;
   --accent2-900: #4a3918;
-  --primary-color: #165ac2;
-  --primary-dark-color: #003688;
-  --primary-hover-color: #003688;
-  --primary-light-color: #a3bee7;
-  --primary-lightest-color: #e7eef9;
-  --secondary-color: #de6516;
-  --secondary-dark-color: #642a0a;
-  --secondary-hover-color: #642a0a;
-  --secondary-light-color: #ffa656;
-  --secondary-lightest-color: #ffead6;
-  --highlight-color: #ac8227;
-  --highlight-dark-color: #4a3918;
-  --highlight-hover-color: #4a3918;
-  --highlight-light-color: #ecb32d;
-  --highlight-lightest-color: #ffecc4;
 }
 
 /* theme colors */
@@ -3247,25 +3232,25 @@ input {
 }
 textarea:focus,
 input:focus {
-  outline: 2px solid var(--secondary-color, #fec02f);
+  outline: 2px solid var(--accent2-500, #ac8226);
 }
 
 /* input, textarea, select generic styles */
 /* Links global styles */
 a {
-  color: var(--primary-color, #004abc);
+  color: var(--primary-700, #165ac2);
   text-decoration: underline;
 }
 a:hover {
-  color: var(--primary-dark-color, #003484);
+  color: var(--primary-900, #003588);
 }
 a:focus {
-  outline: 2px solid var(--highlight-color, #fbad23);
+  outline: 2px solid var(--accent2-500, #ac8226);
 }
 
 a:focus,
 button:focus {
-  outline: solid 2px var(--highlight-color, #fbad23) !important;
+  outline: solid 2px var(--accent2-500, #ac8226) !important;
 }
 
 /* a, a:hover, a:focus */
@@ -3302,7 +3287,7 @@ button:focus {
     font-weight: 700;
     font-size: calc(1rem + var(--ratio));
     line-height: 1.125rem;
-    color: var(--primary-color, #004abc);
+    color: var(--primary-700, #165ac2);
   }
 
   .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
