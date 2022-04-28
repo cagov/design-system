@@ -53,18 +53,25 @@ getFilePaths(directoryToUpload);
 addToFilePaths(cssToUpload);
 
 // upload to S3
+/**
+ * Upload a filepath to s3 bucket by directory
+ * @param {*} dir 
+ * @param {*} filePath 
+ * @returns 
+ */
 const uploadToS3 = (dir, filePath) =>
   new Promise((resolve, reject) => {
     let key = keyPrefix + filePath.split(`${dir}/`)[1];
     if (filePath.indexOf('.css') > -1) {
       key = cssKey;
     }
+    // Set up AWS s3 params.
     const params = {
       Bucket: bucketName,
       Key: key,
       Body: fs.readFileSync(filePath),
     };
-    // get file extenstion, match to content type, tell S3 or it may apply invalid mime type interfering with usage
+    // Get file extenstion, match to content type, tell S3 or it may apply invalid mime type interfering with usage.
     const fileExt = key.split('.').pop();
     if (contentTypeMap.get(fileExt) !== undefined) {
       params.ContentType = contentTypeMap.get(fileExt);
@@ -74,7 +81,7 @@ const uploadToS3 = (dir, filePath) =>
       if (err) {
         reject(err);
       } else {
-        console.log(`uploaded ${params.Key} to ${params.Bucket}`);
+        console.log(`Uploaded ${params.Key} to ${params.Bucket}.`);
         resolve(filePath);
       }
     });
