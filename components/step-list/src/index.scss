@@ -7,33 +7,34 @@
 
   li {
     list-style: none;
-    border-left: 5px solid var(--highlight-color, #fec02f);
+    border-left: 5px solid var(--accent2-300, #ecb32d);
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-7, 700);
     position: relative;
     padding-left: 45px;
-    line-height: 1.5;
+    line-height: var(--font-lineheight-3, 1.5);
+    margin-bottom: 0;
   }
   li:before {
     content: "";
-    font-size: 1.75rem;
+    font-size: var(--font-size-5, 1.625rem);
     font-weight: 700;
     padding: 0 13px 0 13px;
-    border: 5px solid var(--highlight-color, #fec02f);
+    border: 5px solid var(--accent2-300, #ecb32d);
     background-color: #fff;
     border-radius: 50%;
     text-align: center;
     position: absolute;
-    left: -29px;
+    left: -27px;
     top: -5px;
     margin-left: -1px;
   }
   li span.has-black-color,
   li .cagov-step-list-content {
-    margin-top: 1rem;
+    margin-top: var(--s-2, 1rem);
     padding-bottom: 1.75rem;
-    font-size: 1.125rem;
-    font-weight: 500;
+    font-size: var(--font-size-2, 1.125rem);
+    font-weight: var(--font-weight-5, 500);
     display: block;
   }
   li:first-child:before {

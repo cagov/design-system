@@ -83,13 +83,19 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
-- `--highlight-color`
+- `--accent2-300`
+- `--font-size-5`
+- `--font-size-2`
+- `--font-weight-7`
+- `--font-weight-5`
+- `--font-lineheight-3`
+- `--s-2`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 
