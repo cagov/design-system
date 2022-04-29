@@ -76,19 +76,25 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
-- `--primary-dark-color`
-- `--w-lg`
-- `--black`
-- `--gray-200`
-- `--primary-color`
-- `--primary-dark-color`
-- `--highlight-color`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+- `--w-lg`
+- `--s-1`
+- `--s-2`
+- `--s-3`
+- `--black`
+- `--gray-50`
+- `--primary-700`
+- `--primary-900`
+- `--accent2-500`
+- `--cagov-highlight`
+- `--cagov-primary-dark`
+- `--font-size-1`
+
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 
@@ -96,7 +102,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ### Component-specific accessibility review
 
-- Make sure that statewide footer’s links have solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that statewide footer’s links have solid, 2px outline that uses `--accent2-500` variable on focused state.
 - Make sure that cagov-logo link has `title` or `aria-label` attribute in it, so screen readers users would understand what is that link about.
 - Make sure that svg icon inside of the cagov-logo has `aria-hidden=”true”` attribute, so it is hidden from assistive technologies.
 - Make sure that all statewide footer elements are contained inside of the `footer` tag, which is a important semantic landmark for assistive technologies.

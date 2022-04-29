@@ -2,20 +2,20 @@ cagov-highlight-section article .container {
   max-width: var(--w-lg, 1176px) !important;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  padding-left: var(--s-2 1rem);
+  padding-right: var(--s-2 1rem);
+  padding-top: var(--s-3, 1.5rem);
+  padding-bottom: var(--s-4, 2rem);
 }
 cagov-highlight-section article .highlight-body {
   display: flex;
   flex-direction: column;
 }
 cagov-highlight-section article .highlight-body .highlight-image {
-  background-color: var(--primary-lightest-color, #b3c9eb);
+  background-color: var(--primary-100, #b3c9eb);
   padding: 1.5rem;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: var(--radius-2, 4px);
+  border-top-right-radius: var(--radius-2, 4px);
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
@@ -24,18 +24,48 @@ cagov-highlight-section article .highlight-body .highlight-image img {
   margin: auto;
 }
 cagov-highlight-section article .highlight-body .highlight-text {
-  background-color: #ffffff;
-  padding: 1.5rem;
+  background-color: var(--white, #ffffff);
+  padding: var(--s-3, 1.5rem);
   padding-top: 0.75rem;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: var(--radius-2, 4px);
+  border-bottom-right-radius: var(--radius-2, 4px);
 }
 cagov-highlight-section article .highlight-body .highlight-text h1,
 cagov-highlight-section article .highlight-body .highlight-text h2,
 cagov-highlight-section article .highlight-body .highlight-text h3 {
   margin-top: 0;
+}
+cagov-highlight-section article .highlight-body .highlight-text .btn-primary-outline {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: var(--font-size-2, 1.125rem);
+  font-weight: var(--font-weight-6, 600);
+  padding: var(--s-1, 0.5rem) var(--s-2, 1rem);
+  line-height: var(--font-lineheight-3, 1.5);
+  border-radius: var(--radius-2, 4px);
+  border: var(--border-1, 1px) solid;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  color: var(--primary-700, #165ac2);
+  background-color: transparent;
+  border-color: var(--primary-700, #165ac2);
+}
+cagov-highlight-section article .highlight-body .highlight-text .btn-primary-outline:hover {
+  color: var(--primary-900, #003588);
+  border-color: var(--primary-900, #003588);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+cagov-highlight-section article .highlight-body .highlight-text .btn-primary-outline:focus {
+  color: var(--primary-900, #003588);
+  border-color: var(--primary-900, #003588);
+  outline: var(--border-2, 2px) solid var(--accent2-500, #ac8226);
+  outline-offset: 2px;
 }
 
 @media (min-width: 768px) {
@@ -50,9 +80,9 @@ cagov-highlight-section article .highlight-body .highlight-text h3 {
     flex-direction: row;
   }
   cagov-highlight-section article .container .highlight-body .highlight-image {
-    border-top-left-radius: 5px;
+    border-top-left-radius: var(--radius-2, 4px);
     border-top-right-radius: 0px;
-    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: var(--radius-2, 4px);
     border-bottom-right-radius: 0px;
     max-width: 30%;
   }
@@ -63,9 +93,9 @@ cagov-highlight-section article .highlight-body .highlight-text h3 {
   }
   cagov-highlight-section article .container .highlight-body .highlight-text {
     border-top-left-radius: 0px;
-    border-top-right-radius: 5px;
+    border-top-right-radius: var(--radius-2, 4px);
     border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: var(--radius-2, 4px);
     width: 100%;
   }
 }
@@ -81,7 +111,7 @@ cagov-highlight-section article .highlight-body .highlight-text h3 {
 }
 
 .bg-highlight-lightest {
-  background-color: var(--highlight-lightest-color, #ffecc1) !important;
+  background-color: var(--accent2-100, #ffecc1) !important;
 }
 
 .mt-0 {

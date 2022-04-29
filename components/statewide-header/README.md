@@ -82,17 +82,25 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
-- `--primary-color`
-- `--primary-dark-color`
-- `--secondary-color`
-- `--gray-200`
-- `--gray-100`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+- `--black`
+- `--white`
+- `--gray-200`
+- `--gray-50`
+- `--accent2-500`
+- `--cagov-highlight`
+- `--cagov-primary-dark`
+- `--s-1`
+- `--s-2`
+- `--font-size-sm`
+- `--radius-2`
+
+
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 

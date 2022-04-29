@@ -1,5 +1,9 @@
 # Back to top button changelog
 
+
+## 2.0.1
+* Updated color variables
+
 ## 2.0.0
 * Bundle the CSS in the JS
 

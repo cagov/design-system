@@ -4,13 +4,13 @@
   width: 100vw;
 }
 .full-bleed--highlight1 {
-  background: #FFECC1;
+  background: #ffecc1;
 }
 .full-bleed--highlight2 {
   background: #003484;
-  color:#fff;
+  color: #fff;
   a {
-    color:#fff;
+    color: #fff;
   }
 }
 .full-bleed-content-area {
@@ -24,7 +24,8 @@
   background: transparent;
 }
 @media screen and (min-width: 1024px) {
-  .full-bleed-content-area, .full-bleed-content-area--block {
+  .full-bleed-content-area,
+  .full-bleed-content-area--block {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -32,9 +33,9 @@
 
 /* feature-card responsive resize using semantic order variation */
 @media (max-width: 719px) {
-  .cagov-with-sidebar.cagov-no-reverse >* {
+  .cagov-with-sidebar.cagov-no-reverse > * {
     flex-direction: column;
-  }  
+  }
 }
 
 .vector-bear {
@@ -46,11 +47,11 @@
 @media (min-width: 1176px) {
   .cagov-featured-sidebar.max-w-40 {
     max-width: 40%;
-  }  
+  }
 }
 .cagov-featured-sidebar {
-  h1 { 
-    padding-bottom: var(--s-2,1rem)
+  h1 {
+    padding-bottom: var(--s-2, 1rem);
   }
 }
 
@@ -85,9 +86,9 @@
   .contact-us-image {
     width: calc(50% - 12px);
   }
-  
+
   button.wp-block-button__link {
-    background-color: var(--cagov-highlight, #FEC02F);
+    background-color: var(--cagov-highlight, #fec02f);
     color: var(--cagov-primary-dark, #003484);
     cursor: pointer;
   }
@@ -96,7 +97,7 @@
   }
   &.form-background-light button.wp-block-button__link {
     background-color: var(--cagov-primary, #003484);
-    color: var(--white, #FFFFFF);
+    color: var(--white, #ffffff);
   }
   &.form-background-light button.wp-block-button__link:hover {
     background-color: var(--cagov-primary-dark, #003484);
@@ -105,7 +106,7 @@
     background-color: var(--gray-700, #a09fa7);
   }
   &.form-background-light {
-    background-color: var(--gray-100, #F9F9FA);
+    background-color: var(--gray-100, #f9f9fa);
   }
 
   &-content {
@@ -120,16 +121,21 @@
       max-width: 85vw;
     }
   }
-  label, input, select {
+  label,
+  input,
+  select {
     display: block;
   }
-  input, select, textarea {
-    padding: .5rem;
+  input,
+  select,
+  textarea {
+    padding: 0.5rem;
     border-radius: 5px;
-    border: 1px var(--gray-400, #D3D2D6) solid;
+    border: 1px var(--gray-400, #d3d2d6) solid;
     color: var(--black, #000000);
   }
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
   }
   select {
@@ -143,17 +149,17 @@
   }
 
   .required label {
-      font-weight: bold;
+    font-weight: bold;
   }
   .required label:after {
-      color: var(--secondary-dark-color, red);
-      content: ' *';
-      display:inline;
+    color: var(--accent1-700, #9c4510);
+    content: " *";
+    display: inline;
   }
   .form-field {
     margin-bottom: 1rem;
   }
-  .form-field.hidden{
+  .form-field.hidden {
     display: none;
   }
   .form-select {
@@ -173,7 +179,6 @@
       width: 2rem;
       font-weight: 900;
       pointer-events: none;
-
 
       content: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='11' height='7' class='expanded-menu-section-header-arrow-svg' viewBox='0 0 11 7' fill='%23004ABC' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.15596 0.204797L5.49336 5.06317L9.8545 0.204797C10.4293 -0.452129 11.4124 0.625368 10.813 1.28143L5.90083 6.82273C5.68519 7.05909 5.32606 7.05909 5.1342 6.82273L0.174341 1.28143C-0.400433 0.6245 0.581838 -0.452151 1.15661 0.204797H1.15596Z'%3E%3C/path%3E%3C/svg%3E");
       // background-size: .6em;
@@ -195,5 +200,5 @@ cagov-airtable-form .form-responded {
 @media (max-width: 800px) {
   .contact-us {
     flex-wrap: wrap-reverse;
-  }  
+  }
 }

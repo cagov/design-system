@@ -3,36 +3,35 @@ cagov-back-to-top .back-to-top {
   position: fixed;
   z-index: 99999;
   right: -100px;
-  font-size: var(--body-text, 1.125rem);
+  font-size: var(--font-size-2, 1.125rem);
   padding: 10px 10px 10px 10px;
   bottom: 50px;
   opacity: 0;
   visibility: hidden;
-  color: var(--primary-color, #004abc);
-  border: 1px solid var(--primary-color, #004abc);
+  color: var(--primary-700, #004abc);
+  border: 1px solid var(--primary-700, #004abc);
   border-radius: 5px 0px 0px 5px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s ease;
   background-color: #fff;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   cagov-back-to-top .back-to-top {
-    font-size: var(--body-text-mobile, 1rem);
+    font-size: var(--font-size-1, 1rem);
     padding: 8px 8px 8px 8px;
   }
 }
 cagov-back-to-top .back-to-top:hover {
-  color: var(--primary-dark-color, #003484);
-  border: 1px solid var(--primary-dark-color, #003484);
-  background-color: var(--gray-100, #f9f9fa);
+  color: var(--primary-900, #003484);
+  border: 1px solid var(--primary-900, #003484);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 cagov-back-to-top .back-to-top:hover svg path {
-  fill: var(--primary-dark-color, #003484);
+  fill: var(--primary-900, #003484);
 }
 cagov-back-to-top .back-to-top:focus {
-  outline: 2px solid var(--highlight-color, #fec02f);
+  outline: 2px solid var(--accent2-500, #ac8227);
 }
 cagov-back-to-top .back-to-top svg {
   width: 16px;
@@ -40,7 +39,7 @@ cagov-back-to-top .back-to-top svg {
   top: 3px;
 }
 cagov-back-to-top .back-to-top svg path {
-  fill: var(--primary-color, #004abc);
+  fill: var(--primary-700, #004abc);
 }
 cagov-back-to-top .back-to-top.is-visible {
   opacity: 1;

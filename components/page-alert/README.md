@@ -65,11 +65,11 @@ The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/U
 
 - `--cagov-highlight`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 
@@ -84,7 +84,7 @@ This component uses icons from the [CAGov font library](https://template.webstan
 - If you are using svg icon at the beginning of the page alert text make sure it has `aria-hidden=”true”` attribute, so screen readers ignore it.
 - Make sure that close button has `aria-label="Close page alert”` so screen reader users would understand the purpose of the button.
 - When page alert is dismissed make sure that button has `aria-hidden=”true”` attribute, so the users would not tab to it.
-- Make sure that page alert links and buttons have solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that page alert links and buttons have solid, 2px outline that uses `--accent2-500` variable on focused state.
 
 ### Standard accessibility review
 

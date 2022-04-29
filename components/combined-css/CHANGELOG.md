@@ -1,13 +1,13 @@
 # CHANGELOG for ds-compiled-css
 `ds-compiled-css`
 
+## 2.0.2
+* Updated color variables to go inline with new CEILAB color palette.
 
 ## 2.0.1
-
 * Added missing statewide-header and highlight-section scss imports.
 
 ## 2.0.0
-
 * Fixes breaking changes with components that now offer CSS via JS.
 * Incorporates several renamed components. See separate changelogs within each component for implementation details.
   * `ds-feedback` is now `ds-page-feedback`.

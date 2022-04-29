@@ -38,8 +38,7 @@ Do not put a lot of content in your feature card. Too much content is hard to re
 
 ```html preview
 <div
-  class="wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero"
->
+  class="wp-block-ca-design-system-hero cagov-with-sidebar cagov-with-sidebar-left cagov-featured-section cagov-bkgrd-gry cagov-block wp-block-cagov-hero">
   <div>
     <div class="cagov-stack cagov-p-2 cagov-featured-sidebar">
       <h1>We’re making changes to better serve you</h1>
@@ -50,22 +49,14 @@ Do not put a lot of content in your feature card. Too much content is hard to re
         </p>
 
         <div class="wp-block-button">
-          <a
-            class="wp-block-button__link"
-            href="https://cannabis.ca.gov/about-us/consolidation/"
-            >Learn more</a
-          >
+          <a class="btn-primary" href="https://cannabis.ca.gov/about-us/consolidation/">Learn more</a>
         </div>
       </div>
     </div>
     <div>
-      <img
-        class="cagov-featured-image"
-        src="https://cannabis.ca.gov/wp-content/uploads/sites/2/2021/06/cannabis-buds-hero-1024x683.jpg"
-        alt=""
-        width="1024"
-        height="683"
-      />
+      <img class="cagov-featured-image"
+        src="https://cannabis.ca.gov/wp-content/uploads/sites/2/2021/06/cannabis-buds-hero-1024x683.jpg" alt=""
+        width="1024" height="683" />
     </div>
   </div>
 </div>
@@ -93,13 +84,26 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
-- `--primary-color`
+- `--s-1`
+- `--s-2`
+- `--s-2`
+- `--s-5`
+- `--white`
+- `--gray-100`
+- `--primary-700`
+- `--accent2-500`
+- `--font-size-2`
+- `--font-weight-6`
+- `--font-lineheight-3`
+- `--radius-2`
+- `--border-1`
+- `--border-2`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 
@@ -108,7 +112,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 ### Component-specific accessibility review
 
 - Make sure that feature card image has `alt` attribute with text describing the image.
-- Make sure that feature card CTA link button has solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that feature card CTA link button has solid, 2px outline that uses `--accent2-500` variable on focused state.
 
 ### Standard accessibility review
 

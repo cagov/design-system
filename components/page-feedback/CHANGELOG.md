@@ -1,5 +1,9 @@
 # Page feedback changelog
 
+
+## 1.1.2
+* Updated color variables to go inline with CEILAB color palette.
+
 ## 1.1.1
 * Standardized components buttons styles.
 

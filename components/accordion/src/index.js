@@ -11,8 +11,8 @@ import styles from './css/index.css';
  * @attr {string} open - set on the internal details element
  * If this is true the accordion will be open before any user interaction.
  *
- * @cssprop --primary-color - Default value of #1f2574, used for all colors of borders and fills
- * @cssprop --hover-color - Default value of #F9F9FA, used for background on hover
+ * @cssprop --primary-700 - Default value of #165ac2, used for all colors of borders and fills
+ * @cssprop --primary-900 - Default value of #003588, used for background on hover
  *
  */
 export class CaGovAccordion extends window.HTMLElement {

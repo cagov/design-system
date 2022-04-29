@@ -1,4 +1,8 @@
 # Feature card changelog
+
+## 1.0.7
+* Updated color variables and changed button class to btn-primary
+
 ## 1.0.6
 * Remove loading="lazy" attribute from main image because it is usually above the fold and should not have any display delays
 * Use an H1 instead of h2 in the sample markup because the feature card usually holds the most important page header

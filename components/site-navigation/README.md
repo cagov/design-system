@@ -291,17 +291,26 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
-- `--gray-300`
-- `--primary-dark-color`
-- `--primary-hover-color`
-- `--highlight-color`
+- `--white`
+- `--gray-200`
+- `--primary-700`
+- `--primary-900`
+- `--accent2-500`
 - `--w-lg`
+- `--s-sm`
+- `--s-1`
+- `--s-2`
+- `--font-size-2`
+- `--font-weight-4`
+- `--font-weight-7`
+- `--font-lineheight-6`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 
@@ -312,7 +321,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 - Make sure that site navigation is contained within the `nav` tag that has `aria-label=”Site Navigation”` and `role=”navigation”` attributes in it.
 - If the navigation uses dropdowns, make sure that first level nav item has `aria-expanded=”true”` attribute when dropdown is expanded and `aria-expanded=”false”` when dropdown is collapsed. Make sure that dropdown toggle trigger is a button. Dropdown container also needs to have `aria-hidden` attribute, which should change its value between `true` and `false` depending on its visibility. Also, make sure that dropdown links are out of focus when it’s in collapsed state, which means each link needs to have `tabindex=”-1”` attribute. And vice versa, when dropdown is expanded each link inside of the dropdown should not have any `tabindex` attribute.
 - Arrow svg icon inside of the dropdown trigger button needs to have `aria-hidden=”true”` attribute.
-- Make sure that site navigation links have solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that site navigation links have solid, 2px outline that uses `--accent2-500` variable on focused state.
 
 ### Standard accessibility review
 

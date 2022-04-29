@@ -19,7 +19,7 @@
 }
 /* For the BETA tag that appears in the site header */
 .org-name-dept sup {
-  color: var(--secondary-dark-color, #B35A00);
+  color: var(--accent1-700, #9c4510);
   font-size: 0.6em;
 }
 /* Prevent images from overflowing on the component pages */
@@ -42,7 +42,7 @@
 blockquote {
   padding: 1rem;
   margin: 1.5rem 0;
-  background-color: var(--secondary-lightest-color, #FFD9B3);
+  background-color: var(--accent1-100, #ffead6);
   p:last-child {
     margin: 0;
   }
