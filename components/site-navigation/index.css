@@ -1,50 +1,7 @@
 /* Tablet and wider */
 /* Desktop and wider */
 /* utility classes */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 
-.hidden-search {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .mobile-icons,
-.search-close {
-    display: none !important;
-  }
-}
-/* MAIN MENU */
-.cagov-nav.mobile-search {
-  margin-top: 1rem;
-}
-
-.cagov-nav.menu-trigger {
-  margin-top: 1rem;
-  padding: 0.5em 1em 0.5em 0;
-  transition: 0.3s;
-  transform-origin: top left;
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  right: 0;
-  transition: 0.3s;
-  transform-origin: center center;
-}
-.cagov-nav.menu-trigger .is-fixed {
-  position: fixed;
-}
 @media (max-width: 767px) {
   .cagov-nav.menu-trigger {
     z-index: 2000;
@@ -54,67 +11,27 @@
   .cagov-nav.menu-trigger {
     z-index: 2000;
   }
-}
+} 
 
+/* container that holds the entire menu */
 cagov-site-navigation .container {
   padding: 0;
   margin: 0;
 }
-cagov-site-navigation .container .search-container {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
 
 /* EXPANDED MENU SYTLES */
+/* nav menu */
 cagov-site-navigation {
   border-bottom: 1px solid var(--gray-300, #e1e0e3);
   background-color: #ffffff;
 }
+
+/* no text decoration for header links in the Home link in MOBILE VIEW*/
 cagov-site-navigation a.expanded-menu-section-header-link {
-  /* jbum - this is to override the inherited text-decoration from .interior_page a */
   text-decoration: none;
-}
-cagov-site-navigation.display-menu .expanded-menu {
-  display: block;
-}
-cagov-site-navigation .mobile-icons {
-  display: block;
-  margin-left: auto;
-  display: flex;
-}
-cagov-site-navigation .mobile-icons .search-btn {
-  display: flex;
-  align-items: center;
-}
-cagov-site-navigation .mobile-icons .search-btn svg {
-  margin-right: 0.5rem;
-}
-cagov-site-navigation .mobile-icons .search-btn,
-cagov-site-navigation .mobile-icons .menu-btn {
-  border: none;
-  background: transparent;
-  overflow: visible;
-  padding: 10px 10px;
-  margin-right: 10px;
-}
-cagov-site-navigation .mobile-icons .search-btn:hover,
-cagov-site-navigation .mobile-icons .menu-btn:hover {
-  color: var(--primary-dark-color, #064e66);
-}
-cagov-site-navigation .mobile-icons .search-btn:hover .blue,
-cagov-site-navigation .mobile-icons .menu-btn:hover .blue {
-  fill: var(--primary-dark-color, #064e66);
-}
-cagov-site-navigation .mobile-icons .search-btn:focus,
-cagov-site-navigation .mobile-icons .menu-btn:focus {
-  color: var(--primary-dark-color, #064e66);
-  outline: 2px solid var(--highlight-color, #fec02f);
-}
-cagov-site-navigation .mobile-icons .search-btn svg,
-cagov-site-navigation .mobile-icons .menu-btn svg {
-  position: relative;
-  top: 1px;
-}
+} 
+
+/* disables mobile icons and displays the whole page in block when DESKTOP */
 @media (min-width: 768px) {
   cagov-site-navigation {
     display: block;
@@ -123,20 +40,46 @@ cagov-site-navigation .mobile-icons .menu-btn svg {
     display: none;
   }
 }
-cagov-site-navigation .expanded-menu {
+
+/* gets rid of all links when MOBILE VIEW */
+cagov-site-navigation .expanded-menu-grid {
   display: none;
-  max-width: calc(var(--w-lg, "1176px") + 32px);
+  max-width: calc(var(--w-lg, '11px') + 32px); 
   margin: 0 auto;
 }
+
+/* opens the dropdown menu when you hover over the section links */
+cagov-site-navigation .expanded-menu-section:hover  .expanded-menu-dropdown {
+  max-height: none;
+  top: 54px;
+  border: solid 1px #ccc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* rotates the arrow when you hover over the section links */
+cagov-site-navigation .expanded-menu-section:hover .expanded-menu-section-header-arrow-svg {
+  transform: rotate(180deg);
+}
+
+/* adds a background color over section links when hovered */
+cagov-site-navigation .expanded-menu-section:hover .expanded-menu-section-header-link {
+  background-color: #e1e0e3;
+}
+
+/* adds more padding to menu when DESKTOP VIEW */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu {
     display: block;
     padding: 0 16px;
   }
 }
+
+/* formats child container for 'expanded-menu' */
 cagov-site-navigation .expanded-menu-grid {
   margin: 0 auto;
 }
+
+/* puts menu columns above the page and in a row when DESKTOP VIEW  */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-grid {
     display: flex;
@@ -146,21 +89,18 @@ cagov-site-navigation .expanded-menu-grid {
     align-items: stretch;
   }
 }
+
+/* aligns the text for the menu col */
 cagov-site-navigation .expanded-menu-col {
   text-align: left;
 }
+
+/* aligns the text for menu section*/
 cagov-site-navigation .expanded-menu-section {
   text-align: left;
 }
-@media (min-width: 768px) {
-  cagov-site-navigation .expanded-menu-section.expanded {
-    z-index: 3;
-  }
-}
-cagov-site-navigation .expanded-menu-section.expanded .expanded-menu-dropdown {
-  max-height: none;
-  top: 2.35rem;
-}
+
+/* formats the container of the menu headers and links when DESKTOP VIEW */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-section {
     padding: 0;
@@ -171,51 +111,44 @@ cagov-site-navigation .expanded-menu-section.expanded .expanded-menu-dropdown {
     margin-bottom: 0;
   }
 }
+
+/* gets rid of HOME link when DESKTOP VIEW */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-section.mobile-only {
     display: none;
   }
 }
+
+/* formats the dropdown links when DESKTOP VIEW */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-section .expanded-menu-dropdown {
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
+    width: 300px;
     min-width: 17rem;
     background: #fff;
     padding: 0;
     border: none;
   }
 }
+
+/* formats the position and padding of the header links when DESKTOP VIEW*/
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-section .expanded-menu-section-header {
     padding-right: 0;
     margin-right: 0;
   }
 }
+
+/* adds a border above header links in MOBILE VIEW */
 @media (max-width: 767px) {
-  cagov-site-navigation .expanded-menu-section {
+  cagov-site-navigation .expanded-menu-section.mobile-only {
     border-top: solid 1px var(--gray-300, #e1e0e3);
   }
 }
-@media (max-width: 767px) {
-  cagov-site-navigation .expanded-menu-section.expanded .expanded-menu-dropdown {
-    max-height: 100rem;
-  }
-}
-@media (min-width: 768px) {
-  cagov-site-navigation .expanded-menu-section.expanded .expanded-menu-dropdown {
-    max-height: none;
-    top: 59px;
-    padding: 0.5rem 1rem 1rem 1rem;
-    border: solid 1px #ccc;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-}
-cagov-site-navigation .expanded-menu-section.expanded .expanded-menu-section-header-arrow-svg {
-  transform: rotate(180deg);
-}
+
+/* the headers for menu options (applicants, licensees, consumers, etc.) */
 cagov-site-navigation .expanded-menu-section-header-link {
   display: flex !important;
   column-gap: 0.5rem;
@@ -236,18 +169,21 @@ cagov-site-navigation .expanded-menu-section-header-link {
   color: var(--primary-color, #064e66);
   outline-offset: -2px;
 }
-cagov-site-navigation .expanded-menu-section-header-link:active {
-  background: transparent;
-}
+
+/* underlines the column links when hovered*/
 cagov-site-navigation .expanded-menu-section-header-link:hover {
   text-decoration: underline;
   color: var(--primary-hover-color, #043747);
 }
+
+/* formats position of header link in DESKTOP view */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-section-header-link {
     justify-content: flex-start;
   }
 }
+
+/* positions the arrow */
 cagov-site-navigation .expanded-menu-section-header-arrow {
   max-width: 1rem;
   max-height: 1rem;
@@ -255,48 +191,62 @@ cagov-site-navigation .expanded-menu-section-header-arrow {
   display: block;
   transition: all 0.5s cubic-bezier(0.57, 0.2, 0.21, 0.89);
 }
+
+/* the arrow never changes size when changing screen size */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-section-header-arrow {
     transform: none;
   }
 }
+
+/* actual arrow */
 cagov-site-navigation .expanded-menu-section-header-arrow-svg {
   width: 100%;
+  max-width: 20px;
   display: inline-block;
   transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
 }
+
+/* changes display of arrow-svg to block when DESKTOP VIEW */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-section-header-arrow-svg {
     display: block;
   }
 }
+
+/* hides the dropdown links for each column */
 cagov-site-navigation .expanded-menu-dropdown {
-  max-height: 0px;
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s cubic-bezier(0.57, 0.2, 0.21, 0.89);
 }
+
+/* formats the links of the dropdown */
 cagov-site-navigation .expanded-menu-dropdown-link {
   font-weight: 400;
   font-size: 1.125rem;
   padding: 0.5rem 0.25rem;
-  margin: 0.15rem 0 0.15rem 2px;
   display: table;
   transition: color 0.3s cubic-bezier(0.57, 0.2, 0.21, 0.89);
   text-decoration: none;
   width: 100%;
 }
+
+/* underlines links of the dropdown when hovered */
 cagov-site-navigation .expanded-menu-dropdown-link:hover {
   text-decoration: underline;
+  background-color: #F0F0F0;
 }
-cagov-site-navigation .expanded-menu-dropdown-link.current-page-highlight {
-  font-weight: bold;
-}
+
+/* formats links of dropdown when DESKTOP VIEW */
 @media (min-width: 768px) {
   cagov-site-navigation .expanded-menu-dropdown-link {
-    padding: 0.5rem 0;
+    padding: 0.75rem 0.5rem;
     line-height: 2rem;
   }
 }
+
+/* formats links of dropdown when MOBILE VIEW */
 @media (max-width: 767px) {
   cagov-site-navigation .expanded-menu-dropdown-link {
     padding: 0.5rem 0.25rem 0.5rem 1rem;
@@ -309,63 +259,79 @@ cagov-site-navigation .expanded-menu-dropdown-link.current-page-highlight {
     padding-bottom: 1rem;
   }
 }
-cagov-site-navigation .expanded-menu-grouping:not(:first-child) {
-  margin-top: 0.5rem;
+
+/* MOBILE ICONS */
+
+.menu-icon {
+  /* border: 1px solid red; */
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
 }
 
-cagov-site-navigation.display-menu {
-  overflow: hidden;
+.menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background .2s ease-out;
 }
-cagov-site-navigation.display-menu .expanded-menu {
-  transform: translateX(0);
-  visibility: visible;
+
+.menu-icon .nav-icon:before {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: 5px;
 }
+
+.menu-icon .nav-icon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: -5px;
+}
+
+.menu-trigger {
+  display: none;
+}
+
+/* MOBILE ICONS - EXPANDED MENU OPENED */
+
+.menu-trigger:checked ~ .expanded-menu .expanded-menu-grid{
+  display: block;
+}
+
+.menu-trigger:checked ~ .expanded-menu {
+  margin-left: 0;
+  border-bottom: solid 1px var(--gray-300, #e1e0e3);
+}
+
+.menu-trigger:checked ~ .expanded-menu-col {
+  transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* removes menu button when DESKTOP VIEW */
 @media (min-width: 768px) {
-  cagov-site-navigation.display-menu .expanded-menu {
-    width: 100vw;
-    height: 100vh;
-    opacity: 1;
-    visibility: visible;
+  .menu-icon, .menu-trigger {
+    display: none !important;
   }
-}
-cagov-site-navigation.display-menu .expanded-menu:focus {
-  outline: none;
-}
-@media (max-width: 767px) {
-  cagov-site-navigation.display-menu .expanded-menu {
-    margin-left: 0;
-    border-bottom: solid 1px var(--gray-300, #e1e0e3);
-  }
-}
-@media (min-width: 768px) {
-  cagov-site-navigation.display-menu .expanded-menu-col, cagov-site-navigation.display-menu .expanded-menu-search {
-    transition: all 0.6s cubic-bezier(0.5, 1.65, 0.4, 0.8);
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@media (min-width: 768px) {
-  cagov-site-navigation.display-menu .expanded-menu-col.section-get-help {
-    transition-delay: 0.15s !important;
-  }
-  cagov-site-navigation.display-menu .expanded-menu-col.section-health-info {
-    transition-delay: 0.3s !important;
-  }
-  cagov-site-navigation.display-menu .expanded-menu-col.section-working-living-safely {
-    transition-delay: 0.45s !important;
-  }
-  cagov-site-navigation.display-menu .expanded-menu-col.section-you-help {
-    transition-delay: 0.6s !important;
+
+  .expanded-menu-col {
+    display: inline-block;
   }
 }
 
-cagov-site-navigation .expanded-menu-close-mobile-svg {
-  width: 1rem;
-  transform: rotate(180deg);
-}
-
-.expanded-menu-section-header-arrow-svg {
-  max-width: 20px;
-}
 
 /*# sourceMappingURL=index.css.map */
