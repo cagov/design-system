@@ -11,7 +11,7 @@
   text-decoration: none;
 }
 .pdf-link-icon svg path {
-  fill: var(--primary-color, #004abc);
+  fill: var(--primary-700, #004abc);
 }
 
 /* External link icon */
@@ -19,20 +19,20 @@
   display: inline-block;
   padding: 0;
   position: relative;
-  left: 4px;
+  left: 3px;
   margin-right: 2px;
   top: 1px;
   text-decoration: none;
   width: 0.8em;
 }
 .external-link-icon svg path {
-  fill: var(--primary-color, #004abc);
+  fill: var(--primary-700, #004abc);
 }
 
 main a:hover .external-link-icon svg path,
 .site-footer a:hover .external-link-icon svg path,
 .agency-footer a:hover .external-link-icon svg path {
-  fill: var(--primary-dark-color, #003484);
+  fill: var(--primary-900, #003484);
 }
 
 footer a .external-link-icon svg path {

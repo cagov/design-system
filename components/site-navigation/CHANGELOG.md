@@ -1,11 +1,12 @@
 # Site navigation changelog
 
+
+## 2.1.3
+* Updated color variables to go inline with new CEILAB color palette
 ## 2.1.2
-
-- Reset navigation on resize.
-
+* Reset navigation on resize
 ## 2.1.1
-* Reset navigation on resize.
+* Reset navigation on resize
 ## 2.1.0
 * Renamed package from `ds-dropdown-menu` to `ds-site-navigation`.
 * Changed name of custom element to `<cagov-site-navigation>`.

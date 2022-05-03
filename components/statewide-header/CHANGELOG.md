@@ -1,8 +1,11 @@
 # Statewide header changelog
 
-## 1.0.14
 
-- Moved screen reader announcement to CA<span>.</span>gov SVG.
+## 1.0.15
+* Updated color variables to go inline with new CEILAB color palette.
+
+## 1.0.14
+* Moved screen reader announcement to CA<span>.</span>gov SVG.
 
 ## 1.0.13
 * Changed CA<span>.</span>gov logo dimensions to 33px by 24px to make it consistent with statewide-footer's icon.

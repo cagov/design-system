@@ -1,5 +1,10 @@
 # Link icon Changelog
 
+
+## 1.1.2
+
+* Updated color variables to go inline with CEILAB color palette
+
 ## 1.1.1
 
 * Fix bug where link icon was not being added to external links that had an anchor link in the url

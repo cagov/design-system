@@ -100,16 +100,26 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
-- `--primary-color`
-- `—highlight-color`
+- `--primary-700`
+- `--accent2-500`
 - `--gray-100`
 - `--gray-300`
+- `--border-1`
+- `--border-5`
+- `--radius-2`
+- `--s-1`
+- `--s-2`
+- `--s-3`
+- `--font-size-5`
+- `--font-lineheight-3`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+
+
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 
@@ -117,7 +127,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 ### Component-specific accessibility review
 
-- Make sure that the button has solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that the button has solid, 2px outline that uses `--accent2-500` variable on focused state.
 - Make sure that the svg arrow inside of each link has `aria-hidden=”true”` attribute.
 
 ### Standard accessibility review

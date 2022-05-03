@@ -65,13 +65,26 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
-- `--primary-dark-color`
+- `--w-lg`
+- `--s-1`
+- `--s-2`
+- `--border-1`
+- `--border-2`
+- `--radius-2`
+- `--font-size-2`
+- `--font-weight-6`
+- `--font-lineheight-3`
+- `--white`
+- `--gray-200`
+- `--accent2-500`
+- `--primary-900`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 
@@ -80,7 +93,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 ### Component-specific accessibility review
 
 - Make sure that add feedback `textarea` has `id` attribute that is referenced in its label’s `for` attribute.
-- Make sure that page feedback buttons and input fields have solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that page feedback buttons and input fields have solid, 2px outline that uses `--accent2-500` variable on focused state.
 
 ### Standard accessibility review
 

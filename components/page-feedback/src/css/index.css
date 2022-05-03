@@ -2,9 +2,9 @@ cagov-page-feedback {
   width: 100%;
 }
 cagov-page-feedback .feedback-form {
-  background: var(--primary-dark-color, #003484);
-  padding: 1rem;
-  border-radius: 0.3125rem;
+  background: var(--primary-900, #003588);
+  padding: var(--s-2, 1rem);
+  border-radius: var(--radius-2, 4px);
   max-width: var(--w-lg, 1176px);
   margin: 0 auto;
 }
@@ -15,10 +15,10 @@ cagov-page-feedback .feedback-form-question {
 }
 cagov-page-feedback .feedback-form-label {
   color: #fff;
-  background-color: var(--primary-dark-color, #003484);
-  font-size: 1.125rem;
+  background-color: var(--primary-900, #003588);
+  font-size: var(--font-size-2, 1.125rem);
   display: block;
-  margin-right: 1rem;
+  margin-right: var(--s-2, 1rem);
   transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);
   line-height: 3rem;
   width: auto;
@@ -26,34 +26,42 @@ cagov-page-feedback .feedback-form-label {
 @media (max-width: 768px) {
   cagov-page-feedback .feedback-form-label {
     line-height: unset;
-    margin-bottom: 1rem;
+    margin-bottom: var(--s-2, 1rem);
   }
 }
-cagov-page-feedback .feedback-form-button {
-  padding: 1rem;
-  color: var(--primary-dark-color, #003484);
-  border: none;
-  border-radius: 0.3rem;
-  transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);
+cagov-page-feedback .feedback-form .btn-light {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: var(--font-size-2, 1.125rem);
+  font-weight: var(--font-weight-6, 600);
+  padding: var(--s-1, 0.5rem) var(--s-2, 1rem);
+  line-height: var(--font-lineheight-3, 1.5);
+  border-radius: var(--radius-2, 4px);
+  border: var(--border-1, 1px) solid;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
   cursor: pointer;
-  margin: 0 0.5rem 0 0;
-  display: inline !important;
-  /* defensive overrides */
-  position: relative;
-  text-transform: none;
-  top: auto;
-  right: auto;
-  background: #fff;
+  color: var(--primary-900, #003588);
+  background-color: var(--white, #ffffff);
+  border-color: var(--white, #ffffff);
 }
-cagov-page-feedback .feedback-form-button:hover {
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
-  text-decoration: underline;
+cagov-page-feedback .feedback-form .btn-light:hover {
+  color: var(--primary-900, #003588);
+  background-color: var(--gray-200, #d4d4d7);
+  border-color: var(--gray-200, #d4d4d7);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
-cagov-page-feedback .feedback-form-button:focus {
-  box-shadow: 0 0 0 2px #fff;
+cagov-page-feedback .feedback-form .btn-light:focus {
+  background-color: var(--gray-200, #d4d4d7);
+  border-color: var(--gray-200, #d4d4d7);
+  outline: var(--border-2) solid var(--accent2-500, #ac8226);
+  outline-offset: 2px;
 }
-cagov-page-feedback .feedback-form-button .feedback-yes {
-  margin-right: 1rem;
+cagov-page-feedback .feedback-form .btn-light .feedback-yes {
+  margin-right: var(--s-2, 1rem);
 }
 cagov-page-feedback .feedback-form-add {
   padding-top: 0;
@@ -67,7 +75,7 @@ cagov-page-feedback .feedback-form-add {
 }
 cagov-page-feedback .feedback-form-add-grid {
   position: relative;
-  margin-top: 1rem;
+  margin-top: var(--s-2, 1rem);
   display: inline-flex;
   flex-flow: column;
   align-items: flex-start;
@@ -79,10 +87,9 @@ cagov-page-feedback .feedback-form-add-grid {
 }
 cagov-page-feedback .feedback-form-textarea {
   width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  font-family: "Roboto", sans-serif;
-  color: var(--primary-dark-color, #003484);
+  padding: var(--s-2, 1rem);
+  margin-bottom: var(--s-2, 1rem);
+  color: var(--primary-900, #003484);
   max-width: 90%;
   height: 127px;
   width: 600px;

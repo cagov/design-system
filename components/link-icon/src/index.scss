@@ -11,7 +11,7 @@
   line-height: 0.9rem;
   text-decoration: none;
   svg path {
-    fill: var(--primary-color, #004abc);
+    fill: var(--primary-700, #004abc);
   }
 }
 
@@ -21,13 +21,13 @@
   display: inline-block;
   padding: 0;
   position: relative;
-  left: 4px;
+  left: 3px;
   margin-right: 2px;
   top: 1px;
   text-decoration: none;
   width: 0.8em;
   svg path {
-    fill: var(--primary-color, #004abc);
+    fill: var(--primary-700, #004abc);
   }
 }
 
@@ -36,7 +36,7 @@ main a,
 .agency-footer a {
   &:hover {
     .external-link-icon svg path {
-      fill: var(--primary-dark-color, #003484);
+      fill: var(--primary-900, #003484);
     }
   }
 }

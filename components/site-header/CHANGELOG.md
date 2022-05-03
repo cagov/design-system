@@ -1,5 +1,9 @@
 # Site header changelog
 
+
+## 1.1.1
+* Updated color variables to go inline with new CEILAB color palette.
+
 ## 1.1.0
 * Renamed package from `ds-branding` to `ds-site-header`.
 * Renamed CSS class `branding` to `site-header`.

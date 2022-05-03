@@ -63,12 +63,12 @@ $desktop: 1176px;
 
 /* MAIN MENU */
 .cagov-nav.mobile-search {
-  margin-top: 1rem;
+  margin-top: var(--s-2, 1rem);
 }
 
 .cagov-nav.menu-trigger {
   margin-top: 1rem;
-  padding: 0.5em 1em 0.5em 0;
+  padding: var(--s-1, 0.5rem) var(--s-2, 1rem) var(--s-1, 0.5rem) 0;
   transition: 0.3s;
   transform-origin: top left;
   display: inline-block;
@@ -99,16 +99,16 @@ cagov-site-navigation {
     margin: 0;
 
     .search-container {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: var(--s-2, 1rem);
+      padding-bottom: var(--s-2, 1rem);
     }
   }
 }
 
 /* EXPANDED MENU SYTLES */
 cagov-site-navigation {
-  border-bottom: 1px solid var(--gray-300, #e1e0e3);
-  background-color: #ffffff;
+  border-bottom: 1px solid var(--gray-200, #d4d4d7);
+  background-color: var(--white, #ffffff);
   a.expanded-menu-section-header-link {
     /* jbum - this is to override the inherited text-decoration from .interior_page a */
     text-decoration: none;
@@ -129,7 +129,7 @@ cagov-site-navigation {
       display: flex;
       align-items: center;
       svg {
-        margin-right: 0.5rem;
+        margin-right: var(--s-1, 0.5rem);
       }
     }
     .search-btn,
@@ -141,15 +141,15 @@ cagov-site-navigation {
       margin-right: 10px;
 
       &:hover {
-        color: var(--primary-dark-color, #064e66);
+        color: var(--primary-900, #003588);
 
         .blue {
-          fill: var(--primary-dark-color, #064e66);
+          fill: var(--primary-900, #003588);
         }
       }
       &:focus {
-        color: var(--primary-dark-color, #064e66);
-        outline: 2px solid var(--highlight-color, #fec02f);
+        color: var(--primary-900, #003588);
+        outline: 2px solid var(--accent2-500, #ac8226);
       }
 
       svg {
@@ -178,7 +178,7 @@ cagov-site-navigation {
       @include tablet {
         display: flex;
         justify-content: flex-start;
-        column-gap: 0.5rem;
+        column-gap: var(--s-1, 0.5rem);
         align-content: flex-start;
         align-items: stretch;
       }
@@ -230,7 +230,7 @@ cagov-site-navigation {
         }
       }
       @include phone {
-        border-top: solid 1px var(--gray-300, #e1e0e3);
+        border-top: solid 1px var(--gray-200, #d4d4d7);
       }
 
       &.expanded {
@@ -243,8 +243,8 @@ cagov-site-navigation {
           .expanded-menu-dropdown {
             max-height: none;
             top: 59px;
-            padding: 0.5rem 1rem 1rem 1rem;
-            border: solid 1px #ccc;
+            padding: var(--s-1, 0.5rem) var(--s-2, 1rem) var(--s-2, 1rem) var(--s-2, 1rem);
+            border: solid 1px var(--gray-200, #d4d4d7);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           }
         }
@@ -255,29 +255,29 @@ cagov-site-navigation {
       &-header {
         &-link {
           display: flex !important;
-          column-gap: 0.5rem;
+          column-gap: var(--s-1, 0.5rem);
           align-items: center;
           justify-content: space-between;
-          font-weight: normal;
-          font-size: 1.125rem;
+          font-weight: var(--font-weight-4, 400);
+          font-size: var(--font-size-2, 1.125rem);
           cursor: pointer !important;
           width: 100%;
           text-transform: none;
           display: block;
           text-align: left;
           border: none;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-          padding-left: 1rem;
-          padding-right: 1rem;
-          color: var(--primary-color, #064e66);
+          padding-top: var(--s-2, 1rem);
+          padding-bottom: var(--s-2, 1rem);
+          padding-left: var(--s-2, 1rem);
+          padding-right: var(--s-2, 1rem);
+          color: var(--primary-700, #165ac2);
           outline-offset: -2px;
           &:active {
             background: transparent;
           }
           &:hover {
             text-decoration: underline;
-            color: var(--primary-hover-color, #043747);
+            color: var(--primary-900, #003588);
           }
 
           @include tablet {
@@ -309,9 +309,9 @@ cagov-site-navigation {
       transition: max-height 0.5s $slow-curve;
 
       &-link {
-        font-weight: 400;
-        font-size: 1.125rem;
-        padding: 0.5rem 0.25rem;
+        font-weight: var(--font-weight-4, 400);
+        font-size: var(--font-size-2, 1.125rem);
+        padding: var(--s-1, 0.5rem) var(--s-sm, 0.25rem);
         margin: 0.15rem 0 0.15rem 2px;
         display: table;
         transition: color 0.3s $slow-curve;
@@ -321,27 +321,27 @@ cagov-site-navigation {
           text-decoration: underline;
         }
         &.current-page-highlight {
-          font-weight: bold;
+          font-weight: var(--font-weight-7, 700);
         }
         @include tablet {
-          padding: 0.5rem 0;
-          line-height: 2rem;
+          padding: var(--s-1, 0.5rem) 0;
+          line-height: var(--font-lineheight-6, 2rem);
         }
         @include phone {
-          padding: 0.5rem 0.25rem 0.5rem 1rem;
+          padding: var(--s-1, 0.5rem) var(--s-sm, 0.25rem) var(--s-1, 0.5rem) var(--s-2, 1rem);
           outline-offset: -4px;
           &:first-child {
-            padding-top: 1rem;
+            padding-top: var(--s-2, 1rem);
           }
           &:last-child {
-            padding-bottom: 1rem;
+            padding-bottom: var(--s-2, 1rem);
           }
         }
       }
     }
     &-grouping {
       &:not(:first-child) {
-        margin-top: 0.5rem;
+        margin-top: var(--s-1, 0.5rem);
       }
     }
   }
@@ -363,7 +363,7 @@ cagov-site-navigation.display-menu {
   .expanded-menu {
     @include phone {
       margin-left: 0;
-      border-bottom: solid 1px var(--gray-300, #e1e0e3);
+      border-bottom: solid 1px var(--gray-200, #d4d4d7);
     }
     &-col,
     &-search {
@@ -394,7 +394,7 @@ cagov-site-navigation.display-menu {
 cagov-site-navigation {
   .expanded-menu-close-mobile {
     &-svg {
-      width: 1rem;
+      width: var(--s-2, 1rem);
       transform: rotate(180deg);
     }
   }

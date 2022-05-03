@@ -1,5 +1,8 @@
 # Statewide footer changelog
 
+## 1.0.10 
+* Updated color variables to go inline with new CEILAB color palette.
+
 ## 1.0.9 
 * Restored link to CA.gov. 
 * Added default values to CSS variable declarations. 

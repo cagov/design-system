@@ -11,7 +11,7 @@ import styles from './css/index.css';
  * @attr {string} [data-yes] - "Yes";
  * @attr {string} [data-no] - "No";
  *
- * @cssprop --primary-color - Default value of #064E66, used for text, border color
+ * @cssprop --primary-700 - Default value of #165ac2, used for text, border color
  */
 export class CAGovPagination extends window.HTMLElement {
   connectedCallback() {

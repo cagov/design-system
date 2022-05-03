@@ -39,8 +39,8 @@
       ],
       "cssProperties": [
         {
-          "name": "--primary-color",
-          "description": "Default value of #1f2574, used for all colors of borders and fills"
+          "name": "--primary-700",
+          "description": "Default value of #165ac2, used for all colors of borders and fills"
         }
       ]
     }
