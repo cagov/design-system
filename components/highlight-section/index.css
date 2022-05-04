@@ -2,8 +2,8 @@ cagov-highlight-section article .container {
   max-width: var(--w-lg, 1176px) !important;
   margin-right: auto;
   margin-left: auto;
-  padding-left: var(--s-2 1rem);
-  padding-right: var(--s-2 1rem);
+  padding-left: var(--s-2, 1rem);
+  padding-right: var(--s-2, 1rem);
   padding-top: var(--s-3, 1.5rem);
   padding-bottom: var(--s-4, 2rem);
 }
