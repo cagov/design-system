@@ -50,18 +50,17 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:
 
-- `--primary-color`
-- `--primary-dark-color`
-- `--highlight-color`
+- `--primary-700`
+- `--primary-900`
+- `--accent2-500`
 - `--font-size-2`
 - `--font-size-1`
-- `--gray-100`
 
-All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-color”:
+All CSS variables define their own fallback value so you do not have to use additional CSS unless you want to change them. You may define your own value for the variable by adding your own style rules. Here is an example defining the global hex value for a CSS variable named “--primary-700”:
 
 ```css
 :root {
-  --primary-color: #064e66;
+  --primary-700: #165ac2;
 }
 ```
 
@@ -71,7 +70,7 @@ All CSS variables define their own fallback value so you do not have to use addi
 
 - Make sure that arrow span has `aria-hidden=”true”` attribute.
 - When button is not visible, make sure it has `aria-hidden=”true”` and `tabindex=”-1”` attributes. When button is visible, make sure those attribute are no longer there.
-- Make sure that button has solid, 2px outline that uses `--highlight-color` variable on focused state.
+- Make sure that button has solid, 2px outline that uses `--accent2-500` variable on focused state.
 
 ### Standard accessibility review
 

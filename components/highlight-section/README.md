@@ -55,17 +55,24 @@ Expected definition is:
 
 ```
 :root {
-  --primary-color: #004ABC;
-  --primary-dark-color: #003484;
-  --highlight-color: #FEC02F;
-  --highlight-lightest-color: #FFECC1;
-  --primary-lightest-color: #B3C9EB;
-  --primary-color: #33705B;
-  --gray-200: #ededef;
-  --body-text: 1.125rem;
-  --font-weight-regular: 400;
-  --spacing-base: 8px;
+  --white: #ffffff;
+  --primary-100: #b3c9eb;
+  --primary-700: #165ac2;
+  --primary-900: #003588;
+  --accent2-100: #ffecc1;
+  --accent2-500: #ac8226;
   --w-lg: 1176px;
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --font-size-2: 1.125rem;
+  --font-weight-6: 600;
+  --font-lineheight-3: 1.5;
+  --border-1: 1px;
+  --border-2: 2px;
+  --radius-2: 4px;
 
 }
 ```

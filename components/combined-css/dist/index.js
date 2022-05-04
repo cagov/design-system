@@ -1,137 +1,94 @@
 var styles$5 =
-  '/* accordion component specific classes */\ncagov-accordion .cagov-accordion-card {\n  border-radius: 0.3rem !important;\n  margin-bottom: 0;\n  min-height: 3rem;\n  margin-top: 0.5rem;\n  border: solid 1px #ededef !important;\n}\n\ncagov-accordion .accordion-card-container {\n  display: block;\n  overflow: hidden;\n}\n\ncagov-accordion button.accordion-card-header {\n  display: flex;\n  justify-content: left;\n  align-items: center;\n  padding: 0 0 0 1rem;\n  background-clip: border-box;\n  background-color: #ededef;\n  border: none;\n  position: relative;\n  width: 100%;\n  line-height: 3rem;\n}\n\ncagov-accordion.prog-enhanced button.accordion-card-header {\n  cursor: pointer;\n}\n\ncagov-accordion .accordion-title {\n  text-align: left;\n  margin-bottom: 0;\n  color: var(--primary-color, #064e66);\n  margin-right: auto;\n  width: 90%;\n  padding: 0 0.5rem 0 0 !important;\n  font-size: 1.125rem;\n  font-weight: bold;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container {\n  height: 0px;\n  transition: height 0.3s ease;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container .card-body {\n  padding-left: 1rem;\n  margin-top: 8px;\n}\n\ncagov-accordion.prog-enhanced .accordion-card-container .card-body ul {\n  margin-left: 16px;\n  margin-right: 16px;\n}\n\ncagov-accordion .collapsed {\n  display: block;\n  overflow: hidden;\n  visibility: hidden;\n}\n\n.accordion-title h4,\n.accordion-title h3,\n.accordion-title h2 {\n  padding: 0 !important;\n  margin-top: 0 !important;\n  margin-bottom: 0 !important;\n  font-size: 1.2rem !important;\n  font-weight: 700;\n  color: var(--primary-color, #064e66);\n  text-align: left !important;\n}\n\nbutton.accordion-card-header:hover {\n  background-color: var(--hover-color, #f9f9fa);\n}\n\nbutton.accordion-card-header:hover .accordion-title {\n  text-decoration: underline;\n}\n\nbutton.accordion-card-header:hover .accordion-title:hover {\n  text-decoration: underline;\n}\n\nbutton.accordion-card-header:focus {\n  outline-offset: -2px;\n}\n\n.accordion-icon svg line {\n  stroke-width: 4px;\n}\n\ncagov-accordion.prog-enhanced .accordion-alpha .plus-minus {\n  width: 2.125rem;\n  height: 2.125rem;\n  border: none;\n  overflow: hidden;\n  margin-left: 1rem;\n  color: var(--primary-color, #064e66);\n  align-self: flex-start;\n  margin-top: 8px;\n}\n\n.prog-enhanced .accordion-alpha .plus-minus svg {\n  fill: var(--primary-color, #064e66);\n  width: 25px;\n  height: 25px;\n}\n\n.prog-enhanced .accordion-alpha-open cagov-plus .accordion-icon {\n  display: none !important;\n}\n\n.prog-enhanced .accordion-alpha-open cagov-minus .accordion-icon {\n  display: block !important;\n}\n\n@media only screen and (max-width: 767px) {\n  .accordion-alpha-open + .accordion-card-container {\n    height: 100% !important;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+  '/* initial styles */\ncagov-accordion details {\n  border-radius: var(--radius-2, 5px) !important;\n  margin-bottom: 0;\n  min-height: var(--s-5, 3rem);\n  margin-top: 0.5rem;\n  border: solid var(--border-1, 1px) var(--gray-200, #d4d4d7) !important;\n}\ncagov-accordion details summary {\n  cursor: pointer;\n  padding: var(--s-1, 0.5rem) var(--s-5, 3rem) var(--s-1, 0.5rem) var(--s-2, 1rem);\n  background-color: var(--gray-50, #fafafa);\n  position: relative;\n  line-height: var(--s-4, 2rem);\n  margin: 0;\n  color: var(--primary-700, #165ac2);\n  font-size: var(--font-size-2, 1.125rem);\n  font-weight: bold;\n}\ncagov-accordion details summary:hover {\n  background-color: var(--gray-100, #fafafa);\n  color: var(--primary-900, #003688);\n}\ncagov-accordion details .accordion-body {\n  padding: var(--s-2, 1rem);\n}\n\n/* styles applied after custom element javascript runs */\ncagov-accordion:defined {\n  /* let it be open initially if details has open attribute */\n}\ncagov-accordion:defined details {\n  transition: height var(--animation-duration-2, 0.2s);\n  height: var(--s-5, 3rem);\n  overflow: hidden;\n}\ncagov-accordion:defined details[open] {\n  height: auto;\n}\ncagov-accordion:defined summary::-webkit-details-marker {\n  display: none;\n}\ncagov-accordion:defined details summary {\n  list-style: none;\n  /* hide default expansion triangle after js executes */\n  border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;\n}\ncagov-accordion:defined details summary:focus {\n  outline-offset: -2px;\n  outline: solid 2px var(--accent2-500, #ac8227) !important;\n  background-color: var(--gray-100, #fafafa);\n}\ncagov-accordion:defined details .cagov-open-indicator {\n  background-color: var(--primary-700, #165ac2);\n  height: 3px;\n  width: 15px;\n  border-radius: var(--border-3, 3px);\n  position: absolute;\n  right: var(--s-2, 1rem);\n  top: 1.4rem;\n}\ncagov-accordion:defined details .cagov-open-indicator:before {\n  display: block;\n  content: "";\n  position: absolute;\n  top: -6px;\n  left: 3px;\n  width: 3px;\n  height: 15px;\n  border-radius: var(--border-3, 3px);\n  border: none;\n  box-shadow: 3px 0 0 0 var(--primary-700, #165ac2);\n  background: none;\n}\ncagov-accordion:defined details[open] .cagov-open-indicator:before {\n  display: none;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 /**
  * Accordion web component that collapses and expands content inside itself on click.
  *
  * @element cagov-accordion
  *
- * @prop {class string} prog-enhanced -
- * The element is open before any javascript executes so content
- * can be read if an error occurs that prevents js execution.
- * The prog-enhanced class is added to the element once javascript
- * begins to execute. This triggers default collabsed state.
  *
- * @fires click - Default value, will be defined by this.dataset.eventType.
+ * @fires click - Default events which may be listened to in order to discover most popular accordions
  *
- * @attr {string} [data-event-type=click] - dataset defined value for event type fired on click.
- * @attr {string} aria=expanded=true -
- * set on the internal element .accordion-card-header.
+ * @attr {string} open - set on the internal details element
  * If this is true the accordion will be open before any user interaction.
  *
- * @cssprop --primary-color - Default value of #1f2574, used for all colors of borders and fills
- * @cssprop --hover-color - Default value of #F9F9FA, used for background on hover
+ * @cssprop --primary-700 - Default value of #165ac2, used for all colors of borders and fills
+ * @cssprop --primary-900 - Default value of #003588, used for background on hover
  *
  */
 class CaGovAccordion extends window.HTMLElement {
   connectedCallback() {
-    this.classList.add('prog-enhanced');
-    this.expandTarget = this.querySelector('.accordion-card-container');
-    this.expandButton = this.querySelector('.accordion-card-header');
-    if (this.expandButton) {
-      this.expandButton.addEventListener('click', this.listen.bind(this));
-    }
-    this.activateButton = this.querySelector('.accordion-card-header');
-    this.eventType = this.dataset.eventType ? this.dataset.eventType : 'click';
+    this.summaryEl = this.querySelector('summary');
+    // trigger the opening and closing height change animation on summary click
+    this.setHeight();
+    this.summaryEl.addEventListener('click', this.listen.bind(this));
+    this.summaryEl.insertAdjacentHTML(
+      'beforeend',
+      `<div class="cagov-open-indicator" aria-hidden="true" />`,
+    );
+    this.detailsEl = this.querySelector('details');
+    this.bodyEl = this.querySelector('.accordion-body');
 
-    // Detect if accordion should open by default
-    const expanded = this.activateButton.getAttribute('aria-expanded');
-    if (expanded === 'true') {
-      this.triggerAccordionClick(); // Open the accordion.
-      const allLinks = this.querySelectorAll('.accordion-card-container a');
-      const allbuttons = this.querySelectorAll(
-        '.accordion-card-container button',
-      );
-      for (let i = 0; i < allLinks.length; i += 1) {
-        allLinks[i].removeAttribute('tabindex'); // remove tabindex from all the links
-      }
-      for (let i = 0; i < allbuttons.length; i += 1) {
-        allbuttons[i].removeAttribute('tabindex'); // remove tabindex from all the buttons
-      }
-    } else {
-      // making sure that all links inside of the accordion container are having tabindex -1
-      const allLinks = this.querySelectorAll('.accordion-card-container a');
-      const allbuttons = this.querySelectorAll(
-        '.accordion-card-container button',
-      );
-      for (let i = 0; i < allLinks.length; i += 1) {
-        allLinks[i].setAttribute('tabindex', '-1');
-      }
+    window.addEventListener(
+      'resize',
+      this.debounce(() => this.setHeight()).bind(this),
+    );
+  }
 
-      for (let i = 0; i < allbuttons.length; i += 1) {
-        allbuttons[i].setAttribute('tabindex', '-1');
+  setHeight() {
+    requestAnimationFrame(() => {
+      // delay so the desired height is readable in all browsers
+      this.closedHeightInt = parseInt(this.summaryEl.scrollHeight + 2, 10);
+      this.closedHeight = `${this.closedHeightInt}px`;
+
+      // apply initial height
+      if (this.detailsEl.hasAttribute('open')) {
+        // if open get scrollHeight
+        this.detailsEl.style.height = `${parseInt(
+          this.bodyEl.scrollHeight + this.closedHeightInt,
+          10,
+        )}px`;
+      } else {
+        // else apply closed height
+        this.detailsEl.style.height = this.closedHeight;
       }
-    }
+    });
   }
 
   listen() {
-    if (!this.cardBodyHeight) {
-      this.cardBodyHeight = this.querySelector('.card-body').clientHeight + 24;
-    }
-    if (this.expandTarget.clientHeight > 0) {
-      this.closeAccordion();
+    if (this.detailsEl.hasAttribute('open')) {
+      // was open, now closing
+      this.detailsEl.style.height = this.closedHeight;
     } else {
-      this.expandAccordion();
+      // was closed, opening
+      requestAnimationFrame(() => {
+        // delay so the desired height is readable in all browsers
+        this.detailsEl.style.height = `${parseInt(
+          this.bodyEl.scrollHeight + this.closedHeightInt,
+          10,
+        )}px`;
+      });
     }
   }
 
-  triggerAccordionClick() {
-    const event = new MouseEvent(this.eventType, {
-      view: window,
-      bubbles: true,
-      cancelable: true,
-    });
-    this.expandButton.dispatchEvent(event);
-  }
-
-  closeAccordion() {
-    this.expandTarget.style.height = '0px';
-    this.expandTarget.setAttribute('aria-hidden', 'true');
-    this.querySelector('.accordion-card-header').classList.remove(
-      'accordion-alpha-open',
-    );
-    this.activateButton.setAttribute('aria-expanded', 'false');
-    const allLinks = this.querySelectorAll('.accordion-card-container a');
-    const allbuttons = this.querySelectorAll(
-      '.accordion-card-container button',
-    );
-    for (let i = 0; i < allLinks.length; i += 1) {
-      allLinks[i].setAttribute('tabindex', '-1'); // tabindex to all links
-    }
-    for (let i = 0; i < allbuttons.length; i += 1) {
-      allbuttons[i].setAttribute('tabindex', '-1'); // tabindex to all buttons
-    }
-  }
-
-  expandAccordion() {
-    this.expandTarget.style.height = `${this.cardBodyHeight}px`;
-    this.expandTarget.setAttribute('aria-hidden', 'false');
-    this.querySelector('.accordion-card-header').classList.add(
-      'accordion-alpha-open',
-    );
-    this.querySelector('.accordion-card-container').classList.remove(
-      'collapsed',
-    );
-    this.activateButton.setAttribute('aria-expanded', 'true');
-    const allLinks = this.querySelectorAll('.accordion-card-container a');
-    const allbuttons = this.querySelectorAll(
-      '.accordion-card-container button',
-    );
-    for (let i = 0; i < allLinks.length; i += 1) {
-      allLinks[i].removeAttribute('tabindex'); // remove tabindex from all the links
-    }
-    for (let i = 0; i < allbuttons.length; i += 1) {
-      allbuttons[i].removeAttribute('tabindex'); // remove tabindex from all the buttons
-    }
+  debounce(func, timeout = 300) {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        func.apply(this, args);
+      }, timeout);
+    };
   }
 }
 window.customElements.define('cagov-accordion', CaGovAccordion);
+
 const style$5 = document.createElement('style');
 style$5.textContent = styles$5;
 document.querySelector('head').appendChild(style$5);
 
 var styles$4 =
-  '/* Back to top button */\ncagov-back-to-top .back-to-top {\n  position: fixed;\n  z-index: 99999;\n  right: -100px;\n  font-size: var(--body-text, 1.125rem);\n  padding: 10px 10px 10px 10px;\n  bottom: 50px;\n  opacity: 0;\n  visibility: hidden;\n  color: var(--primary-color, #004abc);\n  border: 1px solid var(--primary-color, #004abc);\n  border-radius: 5px 0px 0px 5px;\n  text-decoration: none;\n  cursor: pointer;\n  transition: all 0.5s ease;\n  background-color: #fff;\n  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);\n}\n@media (max-width: 768px) {\n  cagov-back-to-top .back-to-top {\n    font-size: var(--body-text-mobile, 1rem);\n    padding: 8px 8px 8px 8px;\n  }\n}\ncagov-back-to-top .back-to-top:hover {\n  color: var(--primary-dark-color, #003484);\n  border: 1px solid var(--primary-dark-color, #003484);\n  background-color: var(--gray-100, #f9f9fa);\n}\ncagov-back-to-top .back-to-top:hover svg path {\n  fill: var(--primary-dark-color, #003484);\n}\ncagov-back-to-top .back-to-top:focus {\n  outline: 2px solid var(--highlight-color, #fec02f);\n}\ncagov-back-to-top .back-to-top svg {\n  width: 16px;\n  position: relative;\n  top: 3px;\n}\ncagov-back-to-top .back-to-top svg path {\n  fill: var(--primary-color, #004abc);\n}\ncagov-back-to-top .back-to-top.is-visible {\n  opacity: 1;\n  visibility: visible;\n  display: inline;\n  right: 0;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+  '/* Back to top button */\ncagov-back-to-top .back-to-top {\n  position: fixed;\n  z-index: 99999;\n  right: -100px;\n  font-size: var(--font-size-2, 1.125rem);\n  padding: 10px 10px 10px 10px;\n  bottom: 50px;\n  opacity: 0;\n  visibility: hidden;\n  color: var(--primary-700, #004abc);\n  border: 1px solid var(--primary-700, #004abc);\n  border-radius: 5px 0px 0px 5px;\n  text-decoration: none;\n  cursor: pointer;\n  transition: all 0.5s ease;\n  background-color: #fff;\n}\n@media (max-width: 767px) {\n  cagov-back-to-top .back-to-top {\n    font-size: var(--font-size-1, 1rem);\n    padding: 8px 8px 8px 8px;\n  }\n}\ncagov-back-to-top .back-to-top:hover {\n  color: var(--primary-900, #003484);\n  border: 1px solid var(--primary-900, #003484);\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);\n}\ncagov-back-to-top .back-to-top:hover svg path {\n  fill: var(--primary-900, #003484);\n}\ncagov-back-to-top .back-to-top:focus {\n  outline: 2px solid var(--accent2-500, #ac8227);\n}\ncagov-back-to-top .back-to-top svg {\n  width: 16px;\n  position: relative;\n  top: 3px;\n}\ncagov-back-to-top .back-to-top svg path {\n  fill: var(--primary-700, #004abc);\n}\ncagov-back-to-top .back-to-top.is-visible {\n  opacity: 1;\n  visibility: visible;\n  display: inline;\n  right: 0;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 class CaGovBackToTop extends window.HTMLElement {
   static get observedAttributes() {
@@ -737,8 +694,8 @@ function ratingsTemplate(
   <div class="feedback-form cagov-stack">
     <div class="js-feedback-form feedback-form-question">
       <h2 class="feedback-form-label" id="feedback-rating">${question}</h2>
-      <button class="feedback-form-button js-feedback-yes feedback-yes" id="feedback-yes">${yes}</button>
-      <button class="feedback-form-button js-feedback-no" id="feedback-no">${no}</button>
+      <button class="btn-light m-r-2 js-feedback-yes feedback-yes" id="feedback-yes">${yes}</button>
+      <button class="btn-light js-feedback-no" id="feedback-no">${no}</button>
     </div>
           
     <div class="feedback-form-thanks js-feedback-thanks" role="alert">${thanksFeedback}</div>
@@ -747,7 +704,7 @@ function ratingsTemplate(
       <label class="feedback-form-label js-feedback-field-label" for="add-feedback">${commentPrompt}</label>
       <div class="feedback-form-add-grid">
         <textarea name="add-feedback" class="js-add-feedback feedback-form-textarea" id="add-feedback" rows="1"></textarea>
-        <button class="feedback-form-button js-feedback-submit" type="submit" id="feedback-submit">${submit}</button>
+        <button class="btn-light js-feedback-submit" type="submit" id="feedback-submit">${submit}</button>
       </div>
     </div>
 
@@ -757,7 +714,7 @@ function ratingsTemplate(
 }
 
 var styles$2 =
-  'cagov-page-feedback {\n  width: 100%;\n}\ncagov-page-feedback .feedback-form {\n  background: var(--primary-dark-color, #003484);\n  padding: 1rem;\n  border-radius: 0.3125rem;\n  max-width: var(--w-lg, 1176px);\n  margin: 0 auto;\n}\ncagov-page-feedback .feedback-form-question {\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n}\ncagov-page-feedback .feedback-form-label {\n  color: #fff;\n  background-color: var(--primary-dark-color, #003484);\n  font-size: 1.125rem;\n  display: block;\n  margin-right: 1rem;\n  transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);\n  line-height: 3rem;\n  width: auto;\n}\n@media (max-width: 768px) {\n  cagov-page-feedback .feedback-form-label {\n    line-height: unset;\n    margin-bottom: 1rem;\n  }\n}\ncagov-page-feedback .feedback-form-button {\n  padding: 1rem;\n  color: var(--primary-dark-color, #003484);\n  border: none;\n  border-radius: 0.3rem;\n  transition: 0.3s background cubic-bezier(0.57, 0.2, 0.21, 0.89);\n  cursor: pointer;\n  margin: 0 0.5rem 0 0;\n  display: inline !important;\n  /* defensive overrides */\n  position: relative;\n  text-transform: none;\n  top: auto;\n  right: auto;\n  background: #fff;\n}\ncagov-page-feedback .feedback-form-button:hover {\n  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);\n  text-decoration: underline;\n}\ncagov-page-feedback .feedback-form-button:focus {\n  box-shadow: 0 0 0 2px #fff;\n}\ncagov-page-feedback .feedback-form-button .feedback-yes {\n  margin-right: 1rem;\n}\ncagov-page-feedback .feedback-form-add {\n  padding-top: 0;\n  display: none;\n}\n@media (max-width: 768px) {\n  cagov-page-feedback .feedback-form-add {\n    text-align: left;\n    padding-top: 0;\n  }\n}\ncagov-page-feedback .feedback-form-add-grid {\n  position: relative;\n  margin-top: 1rem;\n  display: inline-flex;\n  flex-flow: column;\n  align-items: flex-start;\n}\n@media (max-width: 768px) {\n  cagov-page-feedback .feedback-form-add-grid {\n    display: block;\n  }\n}\ncagov-page-feedback .feedback-form-textarea {\n  width: 100%;\n  padding: 1rem;\n  margin-bottom: 1rem;\n  font-family: "Roboto", sans-serif;\n  color: var(--primary-dark-color, #003484);\n  max-width: 90%;\n  height: 127px;\n  width: 600px;\n}\ncagov-page-feedback .feedback-form-thanks {\n  display: none;\n  color: #fff;\n}\ncagov-page-feedback .feedback-form-error {\n  position: relative;\n  top: 100%;\n  left: 0;\n  display: none;\n  font-weight: 300;\n  text-align: left;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+  'cagov-page-feedback {\n  width: 100%;\n}\ncagov-page-feedback .feedback-form {\n  background: var(--primary-900, #003588);\n  padding: var(--s-2, 1rem);\n  border-radius: var(--radius-2, 4px);\n  max-width: var(--w-lg, 1176px);\n  margin: 0 auto;\n}\ncagov-page-feedback .feedback-form-question {\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n}\ncagov-page-feedback .feedback-form-label {\n  color: #fff;\n  background-color: var(--primary-900, #003588);\n  font-size: var(--font-size-2, 1.125rem);\n  display: block;\n  margin-right: var(--s-2, 1rem);\n  transition: 0.3s color cubic-bezier(0.57, 0.2, 0.21, 0.89);\n  line-height: 3rem;\n  width: auto;\n}\n@media (max-width: 768px) {\n  cagov-page-feedback .feedback-form-label {\n    line-height: unset;\n    margin-bottom: var(--s-2, 1rem);\n  }\n}\ncagov-page-feedback .feedback-form .btn-light {\n  padding: 0.5rem 1rem;\n  border-radius: 0.5rem;\n  display: inline-block;\n  font-size: var(--font-size-2, 1.125rem);\n  font-weight: var(--font-weight-6, 600);\n  padding: var(--s-1, 0.5rem) var(--s-2, 1rem);\n  line-height: var(--font-lineheight-3, 1.5);\n  border-radius: var(--radius-2, 4px);\n  border: var(--border-1, 1px) solid;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: middle;\n  cursor: pointer;\n  color: var(--primary-900, #003588);\n  background-color: var(--white, #ffffff);\n  border-color: var(--white, #ffffff);\n}\ncagov-page-feedback .feedback-form .btn-light:hover {\n  color: var(--primary-900, #003588);\n  background-color: var(--gray-200, #d4d4d7);\n  border-color: var(--gray-200, #d4d4d7);\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);\n  text-decoration: none;\n}\ncagov-page-feedback .feedback-form .btn-light:focus {\n  background-color: var(--gray-200, #d4d4d7);\n  border-color: var(--gray-200, #d4d4d7);\n  outline: var(--border-2) solid var(--accent2-500, #ac8226);\n  outline-offset: 2px;\n}\ncagov-page-feedback .feedback-form .btn-light .feedback-yes {\n  margin-right: var(--s-2, 1rem);\n}\ncagov-page-feedback .feedback-form-add {\n  padding-top: 0;\n  display: none;\n}\n@media (max-width: 768px) {\n  cagov-page-feedback .feedback-form-add {\n    text-align: left;\n    padding-top: 0;\n  }\n}\ncagov-page-feedback .feedback-form-add-grid {\n  position: relative;\n  margin-top: var(--s-2, 1rem);\n  display: inline-flex;\n  flex-flow: column;\n  align-items: flex-start;\n}\n@media (max-width: 768px) {\n  cagov-page-feedback .feedback-form-add-grid {\n    display: block;\n  }\n}\ncagov-page-feedback .feedback-form-textarea {\n  width: 100%;\n  padding: var(--s-2, 1rem);\n  margin-bottom: var(--s-2, 1rem);\n  color: var(--primary-900, #003484);\n  max-width: 90%;\n  height: 127px;\n  width: 600px;\n}\ncagov-page-feedback .feedback-form-thanks {\n  display: none;\n  color: #fff;\n}\ncagov-page-feedback .feedback-form-error {\n  position: relative;\n  top: 100%;\n  left: 0;\n  display: none;\n  font-weight: 300;\n  text-align: left;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 /**
  * Page feedback web component that asks if you found what you were looking for,
@@ -781,7 +738,7 @@ var styles$2 =
  * @attr {string} [data-anythingToAdd] - "If you have anything to add,"
  * @attr {string} [data-anyOtherFeedback] - "If you have any other feedback about this website,"
  *
- * @cssprop --primary-color - Default value of #064E66, used for background
+ * @cssprop --primary-700 - Default value of #165ac2, used for background
  */
 class CAGovPageFeedback extends window.HTMLElement {
   connectedCallback() {
@@ -955,10 +912,9 @@ window.googleTranslateElementInit = () => {
  *
  * @element cagov-site-navigation
  *
- * @cssprop --primary-color - Default value of #064E66, used for background
- * @cssprop --gray-300 - #e1e0e3
- * @cssprop --primary-dark-color - #064e66
- * @cssprop --secondary-color - #fec02f
+ * @cssprop --primary-700 - Default value of #165ac2, used for background
+ * @cssprop --primary-900 - #003588
+ * @cssprop --gray-200 - #d4d4d7
  * @cssprop --w-lg - '1176px'
  */
 
@@ -1193,7 +1149,7 @@ class CAGovSiteNavigation extends window.HTMLElement {
 window.customElements.define('cagov-site-navigation', CAGovSiteNavigation);
 
 var styles$1 =
-  '/* Page alert */\n.icon-select {\n  height: 48px;\n  padding: 0 0px 0 16px;\n}\n\n.editor-styles-wrapper .message-body {\n  padding: 0 32px;\n}\n\n.editor-styles-wrapper .cagov-page-alert {\n  min-height: 64px;\n  height: auto;\n}\n\n.cagov-page-alert {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 8px 16px;\n  width: 100%;\n  min-height: 46px;\n  height: auto;\n  background: rgba(254, 192, 47, 0.2);\n  border: 1px solid var(--cagov-highlight, #fec02f);\n  box-sizing: border-box;\n  border-radius: 5px;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin: 32px 0px;\n}\n.cagov-page-alert .icon {\n  line-height: 1.5rem;\n  background: none;\n}\n.cagov-page-alert .close-button {\n  background: none;\n  margin-left: auto;\n  border: none;\n  cursor: pointer !important;\n}\n.cagov-page-alert .body {\n  line-height: 1.5rem;\n  padding: 0 16px;\n  background: none;\n}\n@media only screen and (max-width: 600px) {\n  .cagov-page-alert {\n    min-height: 46px;\n    height: auto;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+  '/* Page alert */\n.icon-select {\n  height: 48px;\n  padding: 0 0px 0 16px;\n}\n\n.editor-styles-wrapper .message-body {\n  padding: 0 32px;\n}\n\n.editor-styles-wrapper .cagov-page-alert {\n  min-height: 64px;\n  height: auto;\n}\n\n.cagov-page-alert {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 8px 16px;\n  width: 100%;\n  min-height: 46px;\n  height: auto;\n  background: rgba(254, 192, 47, 0.2);\n  border: 1px solid var(--cagov-highlight, #fec02f);\n  box-sizing: border-box;\n  border-radius: 5px;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin: 32px 0px;\n}\n.cagov-page-alert .icon {\n  line-height: 1.5rem;\n  background: none;\n}\n.cagov-page-alert .close-button {\n  background: none;\n  margin-left: auto;\n  border: none;\n  cursor: pointer !important;\n}\n.cagov-page-alert .body {\n  line-height: 1.5rem;\n  padding: 0 16px;\n  background: none;\n}\n@media only screen and (max-width: 600px) {\n  .cagov-page-alert {\n    min-height: 46px;\n    height: auto;\n  }\n}\n\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border: 0;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 /**
  * Page Alert web component
@@ -1221,9 +1177,14 @@ class CAGovPageAlert extends window.HTMLElement {
 
   template(data) {
     if (data !== undefined && data !== null && data.content !== null) {
-      this.innerHTML = `<div class="cagov-page-alert cagov-stack"><div class="icon" aria-hidden="true"><span class="${this.icon}"></span></div>
+      this.innerHTML = `<div class="cagov-page-alert cagov-stack">
+      <div class="icon" aria-hidden="true"><span class="${this.icon}"></span></div>
         <div class="body">${this.message}</div>
-        <button class="close-button"><span class="ca-gov-icon-close-line" aria-hidden="true"></span><span class="visually-hidden">Dismiss page alert</span></button></div>`;
+        <button class="close-button">
+          <span class="ca-gov-icon-close-line" aria-hidden="true"></span>
+          <span class="sr-only">Dismiss page alert</span>
+        </button>
+      </div>`;
     }
 
     return null;
@@ -1315,7 +1276,7 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
 }
 
 var styles =
-  'cagov-pagination .cagov-pagination__list {\n  list-style: none;\n  margin: 0;\n  padding: 0 !important;\n  display: flex;\n}\ncagov-pagination .cagov-pagination__item {\n  border: 1px solid #EDEDEF;\n  border-radius: 0.3rem;\n  margin: 0.25rem;\n}\ncagov-pagination .cagov-pagination__item a {\n  padding: 0.75rem 0.875rem;\n  display: inline-block;\n  color: var(--primary-color, #064E66);\n  text-decoration: none;\n}\ncagov-pagination .cagov-pagination__item:hover {\n  background: #F9F9FA;\n}\ncagov-pagination .cagov-pagination__item:hover a {\n  text-decoration: underline;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current {\n  background-color: #064E66;\n  background-color: var(--primary-color, #064E66);\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current a {\n  color: #fff;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow {\n  border: none;\n  padding: 0.875rem 0;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow:hover {\n  background: inherit;\n}\ncagov-pagination .cagov-pagination__link-inactive {\n  color: grey;\n  border-color: grey;\n  cursor: not-allowed;\n  opacity: 0.5;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+  'cagov-pagination .cagov-pagination__list {\n  list-style: none;\n  margin: 0;\n  padding: 0 !important;\n  display: flex;\n}\ncagov-pagination .cagov-pagination__item {\n  border: var(--border-1, 1px) solid var(--gray-100, #ededef);\n  border-radius: var(--radius-2, 4px);\n  margin: var(--s-sm, 0.25rem);\n}\ncagov-pagination .cagov-pagination__item a {\n  padding: 0.75rem 0.875rem;\n  display: inline-block;\n  color: var(--primary-700, #165ac2);\n  text-decoration: none;\n}\ncagov-pagination .cagov-pagination__item a:hover {\n  color: var(--primary-900, #003588);\n  background: var(--gray-50, #fafafa);\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);\n  text-decoration: none;\n}\ncagov-pagination .cagov-pagination__item a:focus {\n  color: var(--primary-900, #003588);\n  background: var(--gray-50, #fafafa);\n  outline: var(--border-2) solid var(--accent2-500);\n  outline-offset: 2px;\n  text-decoration: none;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current {\n  background-color: #165ac2;\n  background-color: var(--primary-700, #165ac2);\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current a {\n  color: var(--white, #ffffff);\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current a:hover {\n  background-color: var(--primary-900, 3588);\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);\n  text-decoration: none;\n  color: var(--white, #ffffff);\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination-current a:focus {\n  background-color: var(--primary-900, 3588);\n  border-color: var(--primary-900, 3588);\n  outline: var(--border-2) solid var(--accent2-500);\n  outline-offset: 2px;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow {\n  border: none;\n  padding: 0.875rem 0;\n}\ncagov-pagination .cagov-pagination__item.cagov-pagination__overflow:hover {\n  background: inherit;\n}\ncagov-pagination .cagov-pagination__link-inactive {\n  color: grey;\n  border-color: grey;\n  cursor: not-allowed;\n  opacity: 0.5;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 /**
  * Pagination web component
@@ -1327,7 +1288,7 @@ var styles =
  * @attr {string} [data-yes] - "Yes";
  * @attr {string} [data-no] - "No";
  *
- * @cssprop --primary-color - Default value of #064E66, used for text, border color
+ * @cssprop --primary-700 - Default value of #165ac2, used for text, border color
  */
 class CAGovPagination extends window.HTMLElement {
   connectedCallback() {
@@ -1472,40 +1433,3 @@ function linkAnnotator() {
 }
 
 linkAnnotator();
-
-/**
- * Plus web component, inlines an svg plus symbol so it can be styled dynamically
- *
- * @element cagov-plus
- *
- */
-class CaGovPlus extends window.HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `<div class="accordion-icon" aria-hidden="true">
-        <svg viewbox="0 0 25 25">
-            <title>Plus</title>
-            <line x1="6" y1="12.5" x2="19" y2="12.5" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-            <line y1="6" x1="12.5" y2="19" x2="12.5" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-        </svg>
-      </div>`;
-  }
-}
-window.customElements.define('cagov-plus', CaGovPlus);
-
-/**
- * Minus web component, inlines an svg minus symbol so it can be styled dynamically
- *
- * @element cagov-minus
- *
- */
-class CaGovMinus extends window.HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `<div class="accordion-icon" aria-hidden="true">
-        <svg viewbox="0 0 25 25">
-            <title>Minus</title>
-            <line x1="6" y1="12.5" x2="19" y2="12.5"  fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-        </svg>
-      </div>`;
-  }
-}
-window.customElements.define('cagov-minus', CaGovMinus);

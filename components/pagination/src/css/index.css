@@ -5,28 +5,47 @@ cagov-pagination .cagov-pagination__list {
   display: flex;
 }
 cagov-pagination .cagov-pagination__item {
-  border: 1px solid #EDEDEF;
-  border-radius: 0.3rem;
-  margin: 0.25rem;
+  border: var(--border-1, 1px) solid var(--gray-100, #ededef);
+  border-radius: var(--radius-2, 4px);
+  margin: var(--s-sm, 0.25rem);
 }
 cagov-pagination .cagov-pagination__item a {
   padding: 0.75rem 0.875rem;
   display: inline-block;
-  color: var(--primary-color, #064E66);
+  color: var(--primary-700, #165ac2);
   text-decoration: none;
 }
-cagov-pagination .cagov-pagination__item:hover {
-  background: #F9F9FA;
+cagov-pagination .cagov-pagination__item a:hover {
+  color: var(--primary-900, #003588);
+  background: var(--gray-50, #fafafa);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
-cagov-pagination .cagov-pagination__item:hover a {
-  text-decoration: underline;
+cagov-pagination .cagov-pagination__item a:focus {
+  color: var(--primary-900, #003588);
+  background: var(--gray-50, #fafafa);
+  outline: var(--border-2) solid var(--accent2-500);
+  outline-offset: 2px;
+  text-decoration: none;
 }
 cagov-pagination .cagov-pagination__item.cagov-pagination-current {
-  background-color: #064E66;
-  background-color: var(--primary-color, #064E66);
+  background-color: #165ac2;
+  background-color: var(--primary-700, #165ac2);
 }
 cagov-pagination .cagov-pagination__item.cagov-pagination-current a {
-  color: #fff;
+  color: var(--white, #ffffff);
+}
+cagov-pagination .cagov-pagination__item.cagov-pagination-current a:hover {
+  background-color: var(--primary-900, 3588);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: var(--white, #ffffff);
+}
+cagov-pagination .cagov-pagination__item.cagov-pagination-current a:focus {
+  background-color: var(--primary-900, 3588);
+  border-color: var(--primary-900, 3588);
+  outline: var(--border-2) solid var(--accent2-500);
+  outline-offset: 2px;
 }
 cagov-pagination .cagov-pagination__item.cagov-pagination__overflow {
   border: none;

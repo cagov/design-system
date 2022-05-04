@@ -3,43 +3,44 @@
 }
 
 .cagov-card {
-  border: 1px solid var(--gray-300, #e1e0e3);
-  padding: 1rem;
-  border-bottom: 0.3rem solid #004abc;
-  border-bottom: 0.3rem solid var(--primary-color, #004abc);
-  border-radius: 0.3rem;
+  border: var(--border-1, 1px) solid var(--gray-300, #e1e0e3);
+  padding: var(--s-2, 1rem);
+  border-bottom: var(--border-5, 5px) solid var(--primary-700, #004abc);
+  border-radius: var(--radius-2, 4px);
   min-width: 250px;
   min-height: 50px;
   margin-top: 0;
   display: flex;
-  justify-content: space-between;
 }
 .cagov-card:hover {
   background-color: var(--gray-100, #f9f9fa);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .cagov-card:focus {
-  outline: var(--highlight-color, #fec02f);
+  outline: var(--accent2-500, #ac8226);
 }
 .cagov-card .card-text {
-  color: var(--primary-color, #004abc) !important;
-  font-size: 1.75rem;
-  line-height: 40px;
+  color: var(--primary-700, #004abc) !important;
+  font-size: var(--font-size-5, 1.625rem);
+  line-height: var(--font-lineheight-3, 1.5);
   padding: 0;
+  padding-right: var(--s-2, 1rem);
   margin: 0;
 }
 .cagov-card svg {
-  fill: var(--primary-color, #004abc);
-  width: 1rem;
-  margin-top: 0.2rem;
-  margin-left: 1rem;
-  max-height: 25px;
+  fill: var(--primary-700, #004abc);
+  min-width: var(--s-2, 1rem);
+  min-height: var(--s-2, 1rem);
+  max-width: var(--s-2, 1rem);
+  max-height: var(--s-2, 1rem);
+  margin-top: var(--s-1, 0.5rem);
+  margin-left: auto;
 }
 
 .cagov-grid,
 .cagov-grid .block-editor-block-list__layout {
   display: grid;
-  grid-gap: 1.5rem;
+  grid-gap: var(--s-3, 1.5rem);
 }
 
 /* editor override */

@@ -23,7 +23,7 @@ import styles from './css/index.css';
  * @attr {string} [data-anythingToAdd] - "If you have anything to add,"
  * @attr {string} [data-anyOtherFeedback] - "If you have any other feedback about this website,"
  *
- * @cssprop --primary-color - Default value of #064E66, used for background
+ * @cssprop --primary-700 - Default value of #165ac2, used for background
  */
 export class CAGovPageFeedback extends window.HTMLElement {
   connectedCallback() {

@@ -1,6 +1,7 @@
 /* footer */
 footer {
-  font-size: 1rem;
+  font-size: var(--font-size-1, 1rem);
+  border-top: solid 1px var(--gray-200, #d4d4d7);
 
   .container {
     display: flex;
@@ -13,10 +14,10 @@ footer {
   }
   a {
     &:hover {
-      color: var(--primary-dark-color, #1e1569);
+      color: var(--primary-900, #003588);
     }
     &:focus {
-      outline: 2px solid var(--highlight-color, #fec02f);
+      outline: 2px solid var(--accent2-500, #ac8226);
     }
   }
 
@@ -49,9 +50,10 @@ footer {
   }
 
   .cagov-logo {
-	padding-top: var(--s-1, 0.5rem);
+    padding-top: var(--s-1, 0.5rem);
     padding-bottom: var(--s-1, 0.5rem);
- }
+    padding-right: var(--s-3, 1.5rem);
+  }
 
   .footer-secondary-links a,
   .copyright {
@@ -66,7 +68,7 @@ footer {
 }
 
 .bg-light-grey {
-  background-color: var(--gray-100, #f9f9fa);
+  background-color: var(--gray-50, #fafafa);
 }
 
 .pt-0 {

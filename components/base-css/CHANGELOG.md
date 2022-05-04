@@ -1,5 +1,7 @@
 # Base CSS changelog
 
+## 1.0.19
+* Removed old color variables.
 ## 1.0.18
 * Updated color scheme to use new variables and color names.
 * Updated buttons styles and variables.
