@@ -1,11 +1,24 @@
 # California Design System
 
 ## 1.0.7
-- Updated color variables across most components
-- Bumped version of statewide header
 - Dependabot updates
+- Updated color variables across most components
+- Bumped back-to-top component to v2.0.1
+- Bumped feature-card component to v1.0.7
+- Bumped highlight-section component to v1.0.3
+- Bumped link-grid component to v2.1.1
+- Bumped link-icon component to v
+- Bumped page-feedback component to v1.1.2
+- Bumped pagination component to v2.0.1
+- Bumped site-footer component to v1.1.1
+- Bumped site-header component to v1.1.1
+- Bumped site-navigation component to v2.1.3
+- Bumped skip-to-content component to v1.0.3
+- Bumped statewide-footer component to v1.0.10
+- Bumped statewide-header component to v1.0.15
+- Bumped step-list component to v2.0.2\
 
-## 1.06
+## 1.0.6
 
 - #807 - Updated "Skip to content" instructions with clearer instructions
 - #806 - Updated README to include additional information on tests, and directory structure
