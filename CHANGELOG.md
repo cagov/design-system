@@ -1,5 +1,9 @@
 # California Design System
 
+## 1.0.7
+- Updated color variables across most components
+- Bumped version of statewide header
+- Dependabot updates
 
 ## 1.06
 
