@@ -183,8 +183,13 @@ class CAGovSiteNavigation extends window.HTMLElement {
       const expandedEl = menu.querySelector('.expanded-menu-section');
       expandedEl.classList.remove('expanded');
       const closestDropDown = menu.querySelector('.expanded-menu-dropdown');
-      if(closestDropDown.id && menu.querySelector('button[aria-controls='+closestDropDown.id+']')) {
-        menu.querySelector('button[aria-controls='+closestDropDown.id+']').setAttribute('aria-expanded', 'false');
+      if (
+        closestDropDown.id &&
+        menu.querySelector(`button[aria-controls=${closestDropDown.id}]`)
+      ) {
+        menu
+          .querySelector(`button[aria-controls=${closestDropDown.id}]`)
+          .setAttribute('aria-expanded', 'false');
       }
       if (closestDropDown) {
         closestDropDown.setAttribute('aria-hidden', 'true');
@@ -206,8 +211,15 @@ class CAGovSiteNavigation extends window.HTMLElement {
         );
         if (nearestMenuDropDown) {
           nearestMenuDropDown.setAttribute('aria-hidden', 'true');
-          if(nearestMenuDropDown.id && menu.querySelector('button[aria-controls='+nearestMenuDropDown.id+']')) {
-            menu.querySelector('button[aria-controls='+nearestMenuDropDown.id+']').setAttribute('aria-expanded', 'false');
+          if (
+            nearestMenuDropDown.id &&
+            menu.querySelector(
+              `button[aria-controls=${nearestMenuDropDown.id}]`,
+            )
+          ) {
+            menu
+              .querySelector(`button[aria-controls=${nearestMenuDropDown.id}]`)
+              .setAttribute('aria-expanded', 'false');
           }
         }
       }
@@ -227,9 +239,14 @@ class CAGovSiteNavigation extends window.HTMLElement {
             const closestDropDown = this.querySelector(
               '.expanded-menu-dropdown',
             );
-            if(closestDropDown.id && menu.querySelector('button[aria-controls='+closestDropDown.id+']')) {
-              menu.querySelector('button[aria-controls='+closestDropDown.id+']').setAttribute('aria-expanded', 'true');
-            }  
+            if (
+              closestDropDown.id &&
+              menu.querySelector(`button[aria-controls=${closestDropDown.id}]`)
+            ) {
+              menu
+                .querySelector(`button[aria-controls=${closestDropDown.id}]`)
+                .setAttribute('aria-expanded', 'true');
+            }
             if (closestDropDown) {
               closestDropDown.setAttribute('aria-hidden', 'false');
               const allLinks = closestDropDown.querySelectorAll('a');

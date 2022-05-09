@@ -182,8 +182,15 @@ class CAGovSiteNavigation extends window.HTMLElement {
     allMenus.forEach((menu) => {
       const expandedEl = menu.querySelector('.expanded-menu-section');
       expandedEl.classList.remove('expanded');
-      menu.setAttribute('aria-expanded', 'false');
       const closestDropDown = menu.querySelector('.expanded-menu-dropdown');
+      if (
+        closestDropDown.id &&
+        menu.querySelector(`button[aria-controls=${closestDropDown.id}]`)
+      ) {
+        menu
+          .querySelector(`button[aria-controls=${closestDropDown.id}]`)
+          .setAttribute('aria-expanded', 'false');
+      }
       if (closestDropDown) {
         closestDropDown.setAttribute('aria-hidden', 'true');
         const allLinks = closestDropDown.querySelectorAll('a');
@@ -204,7 +211,16 @@ class CAGovSiteNavigation extends window.HTMLElement {
         );
         if (nearestMenuDropDown) {
           nearestMenuDropDown.setAttribute('aria-hidden', 'true');
-          menu.setAttribute('aria-expanded', 'false');
+          if (
+            nearestMenuDropDown.id &&
+            menu.querySelector(
+              `button[aria-controls=${nearestMenuDropDown.id}]`,
+            )
+          ) {
+            menu
+              .querySelector(`button[aria-controls=${nearestMenuDropDown.id}]`)
+              .setAttribute('aria-expanded', 'false');
+          }
         }
       }
       const menuComponent = this;
@@ -220,10 +236,17 @@ class CAGovSiteNavigation extends window.HTMLElement {
           } else {
             menuComponent.closeAllMenus();
             expandedEl.classList.add('expanded');
-            menu.setAttribute('aria-expanded', 'true');
             const closestDropDown = this.querySelector(
               '.expanded-menu-dropdown',
             );
+            if (
+              closestDropDown.id &&
+              menu.querySelector(`button[aria-controls=${closestDropDown.id}]`)
+            ) {
+              menu
+                .querySelector(`button[aria-controls=${closestDropDown.id}]`)
+                .setAttribute('aria-expanded', 'true');
+            }
             if (closestDropDown) {
               closestDropDown.setAttribute('aria-hidden', 'false');
               const allLinks = closestDropDown.querySelectorAll('a');
