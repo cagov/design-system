@@ -184,7 +184,7 @@ class CAGovSiteNavigation extends window.HTMLElement {
       expandedEl.classList.remove('expanded');
       const closestDropDown = menu.querySelector('.expanded-menu-dropdown');
       if (
-        closestDropDown.id &&
+        closestDropDown && closestDropDown.id &&
         menu.querySelector(`button[aria-controls=${closestDropDown.id}]`)
       ) {
         menu
@@ -212,7 +212,7 @@ class CAGovSiteNavigation extends window.HTMLElement {
         if (nearestMenuDropDown) {
           nearestMenuDropDown.setAttribute('aria-hidden', 'true');
           if (
-            nearestMenuDropDown.id &&
+            nearestMenuDropDown && nearestMenuDropDown.id &&
             menu.querySelector(
               `button[aria-controls=${nearestMenuDropDown.id}]`,
             )
@@ -240,7 +240,7 @@ class CAGovSiteNavigation extends window.HTMLElement {
               '.expanded-menu-dropdown',
             );
             if (
-              closestDropDown.id &&
+              closestDropDown && closestDropDown.id &&
               menu.querySelector(`button[aria-controls=${closestDropDown.id}]`)
             ) {
               menu
