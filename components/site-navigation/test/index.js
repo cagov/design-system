@@ -40,7 +40,9 @@ describe('Site navigation', function unitTest() {
 
     // verify attribute expected to change on click is in the initial off state
     expect(
-      el.querySelector('.expanded-menu-col button').getAttribute('aria-expanded'),
+      el
+        .querySelector('.expanded-menu-col button')
+        .getAttribute('aria-expanded'),
     ).to.equal('false');
 
     // click to expand menu
@@ -48,7 +50,9 @@ describe('Site navigation', function unitTest() {
 
     // verify attribute is changed as expected after click
     expect(
-      el.querySelector('.expanded-menu-col button').getAttribute('aria-expanded'),
+      el
+        .querySelector('.expanded-menu-col button')
+        .getAttribute('aria-expanded'),
     ).to.equal('true');
   });
 });
