@@ -1,5 +1,7 @@
 # Site navigation changelog
 
+## 2.1.4
+* Accessibility fix: Use aria-expanded on the button that controls the expansion, add aria-controls to the suggested html to match the id of the expanding element
 
 ## 2.1.3
 * Updated color variables to go inline with new CEILAB color palette
