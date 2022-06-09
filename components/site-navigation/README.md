@@ -82,7 +82,7 @@ Do not link to PDFs in the site navigation.
         <div class="expanded-menu-col js-cagov-navoverlay-expandable">
           <div class="expanded-menu-section">
             <strong class="expanded-menu-section-header">
-              <button class="expanded-menu-section-header-link js-event-hm-menu">
+              <button class="expanded-menu-section-header-link js-event-hm-menu" aria-controls="menu1-links">
                 <span>
                   Applicants
                 </span>
@@ -97,7 +97,7 @@ Do not link to PDFs in the site navigation.
                 </span>
               </button>
             </strong>
-            <div class="expanded-menu-dropdown">
+            <div class="expanded-menu-dropdown" id="menu1-links">
               
                 <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/applicants/how-to-apply-renew/" tabindex="-1">How to apply for or renew a license</a>
               
@@ -116,7 +116,7 @@ Do not link to PDFs in the site navigation.
         <div class="expanded-menu-col js-cagov-navoverlay-expandable">
           <div class="expanded-menu-section">
             <strong class="expanded-menu-section-header">
-              <button class="expanded-menu-section-header-link js-event-hm-menu">
+              <button class="expanded-menu-section-header-link js-event-hm-menu" aria-controls="menu2-links">
                 <span>
                   Licensees
                 </span>
@@ -131,7 +131,7 @@ Do not link to PDFs in the site navigation.
                 </span>
               </button>
             </strong>
-            <div class="expanded-menu-dropdown">
+            <div class="expanded-menu-dropdown" id="menu2-links">
               
                 <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/licensees/cultivation/" tabindex="-1">Cultivation</a>
               
@@ -156,7 +156,7 @@ Do not link to PDFs in the site navigation.
         <div class="expanded-menu-col js-cagov-navoverlay-expandable">
           <div class="expanded-menu-section">
             <strong class="expanded-menu-section-header">
-              <button class="expanded-menu-section-header-link js-event-hm-menu">
+              <button class="expanded-menu-section-header-link js-event-hm-menu" aria-controls="menu3-links">
                 <span>
                   Consumers
                 </span>
@@ -171,7 +171,7 @@ Do not link to PDFs in the site navigation.
                 </span>
               </button>
             </strong>
-            <div class="expanded-menu-dropdown">
+            <div class="expanded-menu-dropdown" id="menu3-links">
               
                 <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/consumers/whats-legal/" tabindex="-1">What’s legal</a>
               
@@ -188,7 +188,7 @@ Do not link to PDFs in the site navigation.
         <div class="expanded-menu-col js-cagov-navoverlay-expandable">
           <div class="expanded-menu-section">
             <strong class="expanded-menu-section-header">
-              <button class="expanded-menu-section-header-link js-event-hm-menu">
+              <button class="expanded-menu-section-header-link js-event-hm-menu" aria-controls="menu4-links">
                 <span>
                   Resources
                 </span>
@@ -203,7 +203,7 @@ Do not link to PDFs in the site navigation.
                 </span>
               </button>
             </strong>
-            <div class="expanded-menu-dropdown">
+            <div class="expanded-menu-dropdown" id="menu4-links">
               
                 <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/resources/laws-and-regulations/" tabindex="-1">Laws and regulations</a>
               
@@ -222,7 +222,7 @@ Do not link to PDFs in the site navigation.
         <div class="expanded-menu-col js-cagov-navoverlay-expandable">
           <div class="expanded-menu-section">
             <strong class="expanded-menu-section-header">
-              <button class="expanded-menu-section-header-link js-event-hm-menu">
+              <button class="expanded-menu-section-header-link js-event-hm-menu" aria-controls="menu5-links">
                 <span>
                   About us
                 </span>
@@ -237,7 +237,7 @@ Do not link to PDFs in the site navigation.
                 </span>
               </button>
             </strong>
-            <div class="expanded-menu-dropdown">
+            <div class="expanded-menu-dropdown" id="menu5-links">
               
                 <a class="expanded-menu-dropdown-link js-event-hm-menu" href="/about-us/about-dcc/" tabindex="-1">About DCC</a>
               
