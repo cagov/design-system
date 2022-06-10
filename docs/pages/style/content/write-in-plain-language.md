@@ -23,7 +23,7 @@ Plain language lowers reading barriers and is clear and accessible to everyone, 
 
 ## How to do this in your writing
 
-Check reading levels with the [Hemingway Editor](http://hemingwayapp.com/). Eliminate very-hard-to-read sentences and minimize hard-to-read sentences. Check the reading level every time you edit content.
+Check reading levels with the [Hemingway Editor](http://hemingwayapp.com/). Eliminate very-hard-to-read sentences and minimize hard-to-read sentences. Check the reading level every time you edit content. Consider using [Microsoft Edge's Immersive Reader](https://support.microsoft.com/en-us/topic/use-immersive-reader-in-microsoft-edge-78a7a17d-52e1-47ee-b0ac-eff8539015e1) to read the text to you while in the Hemingway Editor. This is always helpful in the editing process, but is also how some people are better able to absorb your content. 
 
 * Use simple words.
   * Your content still needs to be accurate. Do not sacrifice clarity for simplicity.
