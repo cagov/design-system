@@ -1,5 +1,58 @@
 # California Design System
 
+## 1.0.8
+- #797 Simple arrow animation suggestion
+- #828 - highlight section padding
+- #838 - a11y nav menu
+- #841 - accordion CHANGELOG update
+- #890 Bump ejs from 3.1.6 to 3.1.8
+- #889 Bump async from 2.6.3 to 2.6.4 in /components/combined-css
+- #887 Bump async from 2.6.3 to 2.6.4 in /components/regulatory-outline
+- #886 Bump async from 2.6.3 to 2.6.4 in /components/combined-css
+- #885 Bump nanoid from 3.1.30 to 3.3.4 in /components/link-icon
+- #884 Bump minimist from 1.2.5 to 1.2.6 in /components/link-icon
+- #883 Bump nanoid from 3.1.30 to 3.3.4 in /components/page-alert
+- #882 Bump minimist from 1.2.5 to 1.2.6 in /components/regulatory-outline
+- #881 Bump minimist from 1.2.5 to 1.2.6 in /components/site-footer
+- #880 Bump ejs from 3.1.6 to 3.1.8
+- #879 Bump nanoid from 3.1.30 to 3.3.4 in /components/site-header
+- #878 Bump minimist from 1.2.5 to 1.2.6 in /components/site-navigation
+- #877 Bump async from 2.6.3 to 2.6.4 in /components/regulatory-outline
+- #876 Bump ansi-regex from 3.0.0 to 5.0.1 in /components/regulatory-outline
+- #875 Bump async from 2.6.3 to 2.6.4 in /components/combined-css
+- #874 Bump minimist from 1.2.5 to 1.2.6 in /components/site-header
+- #873 Bump minimist from 1.2.5 to 1.2.6 in /components/google-translate
+- #872 Bump nanoid from 3.1.30 to 3.3.4 in /components/site-footer
+- #871 Bump nanoid from 3.1.30 to 3.3.4 in /components/combined-css
+- #870 Bump minimist from 1.2.5 to 1.2.6 in /components/combined-css
+- #869 Bump minimist from 1.2.5 to 1.2.6 in /components/base-css
+- #868 Bump nanoid from 3.1.30 to 3.3.4 in /components/base-css
+- #867 Bump nanoid from 3.1.30 to 3.3.4
+- #866 Bump nanoid from 3.1.30 to 3.3.4 in /components/back-to-top
+- Bump minimist from 1.2.5 to 1.2.6 in /components/back-to-top
+- #863 Bump nanoid from 3.1.30 to 3.3.4 in /components/link-icon
+- #862 Bump minimist from 1.2.5 to 1.2.6 in /components/link-icon
+- #861 Bump nanoid from 3.1.30 to 3.3.4 in /components/page-alert
+- #860 Bump minimist from 1.2.5 to 1.2.6 in /components/page-alert
+- #859 Bump minimist from 1.2.5 to 1.2.6 in /components/regulatory-outline
+- #858 Bump minimist from 1.2.5 to 1.2.6 in /components/site-footer
+- #857 Bump simple-get from 4.0.0 to 4.0.1
+- #856 Bump follow-redirects from 1.14.7 to 1.15.1
+- #855 Bump ansi-regex from 3.0.0 to 5.0.1 in /components/regulatory-outline
+- #854 Bump nanoid from 3.1.30 to 3.3.4 in /components/site-header
+- #853 Bump nanoid from 3.1.30 to 3.3.4 in /components/accordion
+- #852 Bump ejs from 3.1.6 to 3.1.8
+- #851 Bump minimist from 1.2.5 to 1.2.6 in /components/site-navigation
+- #850 Bump nanoid from 3.1.30 to 3.3.4 in /components/site-footer
+- #849 Bump ansi-regex from 3.0.0 to 5.0.1 in /components/regulatory-outline
+- #848 Bump follow-redirects from 1.14.7 to 1.15.1
+- #847 Bump simple-get from 4.0.0 to 4.0.1
+- #846 Bump nanoid from 3.1.30 to 3.3.4 in /components/accordion
+- #845 Bump async from 2.6.3 to 2.6.4 in /components/regulatory-outline
+- #844 Bump async from 2.6.3 to 2.6.4 in /components/combined-css
+- #843 Bump sharp from 0.29.3 to 0.30.5
+- Manual security updates to node packages based on dependabot alerts (a backlog of ~30 additional repeat alerst).
+
 ## 1.0.7
 - Dependabot updates
 - Updated color variables across most components
