@@ -25,5 +25,8 @@
     "sass": "^1.49.8",
     "svg-sprite-generator": "^0.0.7",
     "yargs": "^17.3.1"
+  },
+  "volta": {
+    "node": "16.15.1"
   }
 }
