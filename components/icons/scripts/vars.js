@@ -4,6 +4,7 @@ const vars = {
     'https://california.azureedge.net/cdt/statetemplate/5.6.2/fonts/CaGov.svg',
   stateTemplateIconsDir:
     '../../../node_modules/cagov-template-v6/images/icons/',
+  stateTemplateFontsDir: '../../../node_modules/cagov-template-v6/fonts/',
 
   // This component.
   componentDir: 'dist',
