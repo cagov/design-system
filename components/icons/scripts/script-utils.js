@@ -1,3 +1,14 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
+
+// fs.
+const require = createRequire(import.meta.url);
+const fs = require('fs');
+// end fs.
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const vars = {
   // External.
   cagovUrl:
@@ -21,4 +32,4 @@ const vars = {
   siteFileTemplate: '../../docs/site/_includes/layouts/icon-library.njk',
 };
 
-export default vars;
+export { vars, __dirname, fs };

@@ -2,7 +2,7 @@ import glob from 'glob';
 import path from 'path';
 import fs from 'fs';
 import fileGetContents from 'file-get-contents';
-import vars from './vars.js';
+import { vars } from './script-utils.js';
 
 const generateLibrary = async () => {
   // Controller.

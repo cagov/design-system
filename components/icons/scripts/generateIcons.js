@@ -1,14 +1,5 @@
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { createRequire } from 'module';
-import vars from './vars.js';
-
-// fs.
-const require = createRequire(import.meta.url);
-const fs = require('fs');
-// end fs.
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import { vars, __dirname, fs } from './script-utils.js';
 
 const directoryPaths = [
   {
