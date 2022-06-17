@@ -1,32 +1,31 @@
-import wget from 'node-wget';
-import fontBlast from 'font-blast';
-import util from 'util';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 import vars from './vars.js';
-import generateSprite from './generateSprite.js';
 
-const urlToSVG = util.promisify(wget);
+// fs.
+const require = createRequire(import.meta.url);
+const fs = require('fs');
+// end fs.
 
-const generateIcons = async () => {
-  urlToSVG({ url: vars.cagovUrl, dest: vars.componentDirFonts });
-  console.log(
-    `==> CAGOV: ${vars.cagovUrl} ==> ${vars.componentDirFonts}CaGov.svg`,
-  );
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const directoryPath = path.join(__dirname, vars.stateTemplateIconsDir);
 
-  const svgToManySVGs = () => {
-    fontBlast(vars.componentFontAll, vars.componentDir);
-    console.log(
-      `==> CAGOV: ${vars.componentFontAll} ==> ${vars.componentDir}/*.svg`,
-    );
-  };
+const createFiles = () => {
+  fs.readdir(directoryPath, (err, files) => {
+    // Catch error.
+    if (err) {
+      console.log(`Unable to scan directory: ${err}`);
+    }
 
-  const manySVGsToSprite = () => {
-    generateSprite();
-  };
-
-  urlToSVG({ url: vars.cagovUrl, dest: vars.componentDirFonts })
-    .then(() => svgToManySVGs())
-    .then(() => manySVGsToSprite())
-    .catch((err) => console.log(err.message));
+    files.forEach((file) => {
+      // Copy files from State template to this component.
+      fs.writeFileSync(
+        `${vars.componentSubdir}/${file}`,
+        fs.readFileSync(`${directoryPath}/${file}`),
+      );
+    });
+  });
 };
 
-generateIcons();
+createFiles();

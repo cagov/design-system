@@ -17,6 +17,7 @@
     "url": "https://github.com/cagov/design-system/tree/main/components/icons"
   },
   "devDependencies": {
+    "cagov-template-v6": "github:Office-of-Digital-Innovation/California-State-Web-Template#5.6.2",
     "file-get-contents": "^1.0.0",
     "font-blast": "^0.7.0",
     "glob": "^8.0.3",

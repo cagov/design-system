@@ -2,6 +2,8 @@ const vars = {
   // External.
   cagovUrl:
     'https://california.azureedge.net/cdt/statetemplate/5.6.2/fonts/CaGov.svg',
+  stateTemplateIconsDir:
+    '../../../node_modules/cagov-template-v6/images/icons/',
 
   // This component.
   componentDir: 'dist',
