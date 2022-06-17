@@ -4,3 +4,4 @@ _site
 _site_dist
 _build_dist
 docs/site/components/*/
+.history
