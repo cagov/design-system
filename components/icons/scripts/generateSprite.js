@@ -1,51 +1,42 @@
-import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
-import { exec } from 'child_process';
-import vars from './vars.js';
+import path from 'path';
+import { vars, __dirname, fs } from './script-utils.js';
 
 const generateSprite = () => {
-  // Default command.
-  let cmd = `svg-sprite-generate -d ${vars.componentSubdir} -o ${vars.componentFileAll}`;
+  const directories = {
+    source: path.join(__dirname, vars.stateTemplateIconsDir),
+    dest: vars.componentFileAll,
+  };
 
-  // Set up arguments for the command line.
-  const { argv } = yargs(hideBin(process.argv))
-    .option('ids', {
-      alias: 'i',
-      description: 'Pass the ids of the individual svgs.',
-      type: 'array',
-    })
-    .help()
-    .alias('help', 'h');
+  const rewriteIcons = (file) => {
+    const html = `buts ${file}`;
+    return html;
+  };
 
-  // Parse arguments.
-  if (argv.ids) {
-    // Inputs and outputs.
-    const inputStart = `${vars.componentSubdir}/`;
-    const inputEnd = `.svg`;
-    const inputSeparator = `${inputEnd},${inputStart}`;
-    const input = inputStart + argv.ids.join(inputSeparator) + inputEnd;
-    const output = vars.componentFileSome;
+  const makeFile = (dir) => {
+    fs.readdir(dir.source, (err, files) => {
+      // Catch error.
+      if (err) {
+        console.log(`Unable to scan directory: ${err}`);
+      }
 
-    // Set command.
-    cmd = `svg-sprite-generate -l ${input} -o ${output}`;
+      // Start sprite.
+      let html =
+        '<svg style="display:none;" xmlns="http://www.w3.org/2000/svg">';
 
-    // Report.
-    console.log(`==> CAGOV: ${input} ==> ${output}`);
-  }
+      // Get each symbol.
+      files.forEach((file) => {
+        html += rewriteIcons(file);
+      });
 
-  // Run command.
-  exec(cmd, (error, stdout, stderr) => {
-    if (error) {
-      console.log(`error: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.log(`stderr: ${stderr}`);
-      return;
-    }
-    console.log(`==> CAGOV: ${cmd}`);
-    console.log(`stdout: ${stdout}`);
-  });
+      // End sprite.
+      html += `</svg>`;
+
+      // Write sprite.
+      fs.writeFileSync(dir.dest, html);
+      console.log(`==> CAGOV: ${dir.source} ==> ${dir.dest}`);
+    });
+  };
+  makeFile(directories);
 };
 
 export default generateSprite;
