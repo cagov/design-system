@@ -11,14 +11,20 @@ const generateSprite = () => {
     try {
       // Get file contents.
       const contents = fs.readFileSync(directories.source + file, 'utf8');
-
       // Strip extension from file name.
       const fileSlug = file.replace('.svg', '');
+      processedContents = contents.replace(/(?:\r\n|\r|\n)/g, '');
 
+      console.log(processedContents);
       // Replace opening tag.
-      processedContents = contents.replace(
+      processedContents = processedContents.replace(
         '<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',
-        `<symbol id=#${fileSlug}`,
+        `\n<symbol id="${fileSlug}"`,
+      );
+
+      processedContents = processedContents.replace(
+        'width="24" height="24" ',
+        '',
       );
 
       // Remove comment.
@@ -28,7 +34,7 @@ const generateSprite = () => {
       );
 
       // Replace closing tag.
-      processedContents = processedContents.replace('</svg>', '</symbol>');
+      processedContents = processedContents.replace('</svg>', '\n</symbol>');
     } catch (err) {
       console.error(err);
     }
@@ -49,11 +55,13 @@ const generateSprite = () => {
 
       // Get each symbol.
       files.forEach((file) => {
-        html += rewriteIcons(file);
+        if (file !== 'delete') {
+          html += rewriteIcons(file);
+        }
       });
 
       // End sprite.
-      html += `</svg>\n`;
+      html += `</svg>`;
 
       // Write sprite.
       fs.writeFileSync(dir.dest, html);

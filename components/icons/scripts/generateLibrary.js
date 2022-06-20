@@ -12,26 +12,13 @@ const generateLibrary = async () => {
     siteFileTemplate: vars.siteFileTemplate,
     siteDir: vars.siteDir,
     iconSprite: vars.componentFileAll,
-    getMarkup: (sprite, components) => {
-      // Remove xml declaration.
-      let strippedSprite = sprite.replace(
-        '<?xml version="1.0" encoding="utf-8"?>',
-        '',
-      );
-
-      // Hide sprite.
-      strippedSprite = strippedSprite.replace(
-        '<svg ',
-        '<svg style="display:none;" ',
-      );
+    getMarkup: (sprite, components) =>
       // Return entire library.
-      return `
-        ${strippedSprite}
+      `${sprite}
         <div class="cagov-icon-library">
           ${components} 
         </div>
-        `;
-    },
+        `,
   };
 
   // Writes icon-library.njk
