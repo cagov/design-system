@@ -150,6 +150,6 @@ As a component in Alpha status, this component must pass the following accessibi
 
 ## Icon library
 
-Version 5.6.1 of the [CAGov icon library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Download individual svgs using the links below.
+Version 5.6.2 of the [CAGov icon library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Download individual svgs using the links below.
 
 {% include 'layouts/icon-library.njk' %}
