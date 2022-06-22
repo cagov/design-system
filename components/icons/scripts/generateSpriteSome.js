@@ -1,3 +1,8 @@
-import generateSprite from './generateSprite.js';
+import { vars } from './script-utils.js';
+import Sprite from './Sprite.js';
 
-generateSprite();
+const sprite = new Sprite();
+sprite.include = ['albums', 'zoom-out', 'angry', 'apps'];
+sprite.dest = vars.componentFileSome;
+
+sprite.create();
