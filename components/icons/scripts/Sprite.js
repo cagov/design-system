@@ -51,11 +51,7 @@ export default class Sprite {
 
       // Get each symbol.
       files.forEach((file) => {
-        // Strip extension from file name.
-
-        console.log(file.slice(0, -4));
-
-        console.log(file);
+        // Test if file name without .svg is in array.
         if (this.include.includes(file.slice(0, -4)))
           html += this.rewriteEachIcon(file);
       });
