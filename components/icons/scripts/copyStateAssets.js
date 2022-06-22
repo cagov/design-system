@@ -1,3 +1,13 @@
+// This is the file to download icons and fonts from the
+// State Web Template to the proper folders for this component.
+// To use:
+//  ```
+// cd PACKAGEROOT
+// npm install Office-of-Digital-Innovation/California-State-Web-Template -D
+// node scripts/copyStateAssets.js
+// npm remove Office-of-Digital-Innovation/California-State-Web-Template
+// ```
+
 import path from 'path';
 import { vars, __dirname, fs } from './script-utils.js';
 

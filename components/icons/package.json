@@ -7,9 +7,9 @@
   "scripts": {
     "build": "echo 'no build command. See project README.'",
     "dev:sprite-some": "node scripts/generateSpriteSome.js --i=$npm_config_ids",
-    "dev:clear-cache": "run-s dev:icons dev:library && cd ../../ && npm run site:build",
+    "dev:clear-cache": "run-s dev:sprite dev:icons dev:library && cd ../../ && npm run site:build",
     "dev:library": "node scripts/generateLibrary.js ",
-    "dev:icons": "node scripts/generateIcons.js",
+    "dev:sprite": "node scripts/generateSprite.js",
     "dev:font-sass": "sass src/icon-font.scss src/icon-font.css"
   },
   "repository": {
@@ -17,12 +17,10 @@
     "url": "https://github.com/cagov/design-system/tree/main/components/icons"
   },
   "devDependencies": {
-    "cagov-template-v6": "github:Office-of-Digital-Innovation/California-State-Web-Template#5.6.2",
     "file-get-contents": "^1.0.0",
     "glob": "^8.0.3",
     "npm-run-all": "^4.1.5",
     "sass": "^1.52.3",
-    "svg-sprite-generator": "^0.0.7",
     "yargs": "^17.5.1"
   },
   "volta": {
