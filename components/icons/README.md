@@ -57,15 +57,13 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 2. `npm install @cagov/ds-icons`
 
-3. Run the command `npm run dev:sprite-some -ids=[ids]` to generate a the sprite
+3. Run the command `npm run dev:sprite-some [ids]` to generate a the sprite
 
-   - `-ids` : A space-separated list of icon ids.
-
-   - Example: `npm run dev:sprite-some -ids=gear arrow-down left`
+   - Example: `npm run dev:sprite-some gear arrow-down left`
 
 4. The generated sprite will be called `cagovSomeIcons.svg`.
 
-5. Include the generated sprite and index.js in your project or page.
+5. Include the generated sprite and ./index.js as a module in your project or page.
 
 6. Place individual icon inline with `<cagov-icon data-icon="[id]"></cagov-icon>`
 
@@ -119,7 +117,7 @@ Recommended for projects where content authors need to be able to add any font i
 <html-preview>
 
 ```html preview
-<span class="ca-gov-icon-accessibility" aria-hidden="true"></span>
+<span class="ca-gov-icon-audio" aria-hidden="true"></span>
 <span class="ca-gov-icon-drive" aria-hidden="true"></span>
 <span class="ca-gov-icon-ferry" aria-hidden="true"></span>
 <span class="ca-gov-icon-van" aria-hidden="true"></span>

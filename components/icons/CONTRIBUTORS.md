@@ -2,7 +2,7 @@
 
 ## Development
 
-- `npm run dev:sprite-some`: A utility command for developers to create sprite with a subset of icons. Use `--ids=` to pass icon ids.
+- `npm run dev:sprite-some`: A utility command for developers to create sprite with a subset of icons. Use a space-separated list to pass icon ids.
 
 - `npm run dev:clear-cache`: Regenerates all the assets related to icons and cleares the website design cache.
 

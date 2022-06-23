@@ -27,6 +27,22 @@ const vars = {
   componentSubdir: 'dist/svg',
   componentPatternEach: 'dist/svg/*.svg',
 
+  // These are 5.6.2 icons that don't render correctly.
+  excludedIcons: [
+    'audience',
+    'cellphone-touch',
+    'delete',
+    'envelope-checklist',
+    'mobile-graduate',
+    'mobile-textbook',
+    'share-instagram',
+    'spartan-helmet',
+    'textbook',
+    'user-headphone',
+    'user-laptop',
+    'users-check-mark',
+  ],
+
   // DS Website.
   siteDir: '/cagov-icons-svg/', // If changed, update .eleventy.js
   siteFileTemplate: '../../docs/site/_includes/layouts/icon-library.njk',
