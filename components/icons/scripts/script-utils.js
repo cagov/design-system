@@ -25,7 +25,6 @@ const vars = {
   componentFileAll: 'dist/allIcons.svg',
 
   componentSubdir: 'dist/svg',
-  componentPatternEach: 'dist/svg/*.svg',
 
   // These are 5.6.2 icons that don't render correctly.
   excludedIcons: [
@@ -35,6 +34,7 @@ const vars = {
     'envelope-checklist',
     'mobile-graduate',
     'mobile-textbook',
+    'share-Instagram',
     'share-instagram',
     'spartan-helmet',
     'textbook',

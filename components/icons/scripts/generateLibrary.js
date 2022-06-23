@@ -1,13 +1,12 @@
-import glob from 'glob';
 import path from 'path';
 import fs from 'fs';
 import fileGetContents from 'file-get-contents';
 import { vars } from './script-utils.js';
+import Sprite from './Sprite.js';
 
 const generateLibrary = async () => {
   // Controller.
   const library = {
-    pattern: vars.componentPatternEach,
     iconComponents: '',
     siteFileTemplate: vars.siteFileTemplate,
     siteDir: vars.siteDir,
@@ -32,7 +31,9 @@ const generateLibrary = async () => {
   };
 
   // Create cagov-icon components.
-  glob.sync(library.pattern).forEach((fileName) => {
+  const sprite = new Sprite();
+  const list = sprite.setIconFileList();
+  list.forEach((fileName) => {
     const svgID = path.basename(fileName, path.extname(fileName)).toLowerCase();
     library.iconComponents += `<div class=cagov-icon-library--card>
       <cagov-icon data-icon="${svgID}"></cagov-icon>
