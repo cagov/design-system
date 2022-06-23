@@ -10,7 +10,7 @@ Icons reduce cognitive load by communicating meanings or actions simply and accu
 
 ## When and how to use it
 
-Use icons as visual indicators to make key actions or information easy to find. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.1 of the CAGov icon library](#icon-library) whenever possible.
+Use icons as visual indicators to make key actions or information easy to find. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.2 of the CAGov icon library](#icon-library) whenever possible.
 
 Use icons for the same purpose consistently to avoid confusion for visitors and reduce cognitive load. Select an icon that’s as closely tied to the specific information or action as possible. When it may not be clear what the icon means, pair it with a label or supporting text.
 
@@ -57,15 +57,13 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 2. `npm install @cagov/ds-icons`
 
-3. Run the command `npm run dev:sprite-some -ids=[ids]` to generate a the sprite
+3. Run the command `npm run dev:sprite-some [ids]` to generate a the sprite
 
-   - `-ids` : A space-separated list of icon ids.
-
-   - Example: `npm run dev:sprite-some -ids=gear arrow-down left`
+   - Example: `npm run dev:sprite-some gear arrow-down left`
 
 4. The generated sprite will be called `cagovSomeIcons.svg`.
 
-5. Include the generated sprite and index.js in your project or page.
+5. Include the generated sprite and ./index.js as a module in your project or page.
 
 6. Place individual icon inline with `<cagov-icon data-icon="[id]"></cagov-icon>`
 
@@ -119,7 +117,7 @@ Recommended for projects where content authors need to be able to add any font i
 <html-preview>
 
 ```html preview
-<span class="ca-gov-icon-accessibility" aria-hidden="true"></span>
+<span class="ca-gov-icon-audio" aria-hidden="true"></span>
 <span class="ca-gov-icon-drive" aria-hidden="true"></span>
 <span class="ca-gov-icon-ferry" aria-hidden="true"></span>
 <span class="ca-gov-icon-van" aria-hidden="true"></span>
@@ -150,6 +148,6 @@ As a component in Alpha status, this component must pass the following accessibi
 
 ## Icon library
 
-Version 5.6.1 of the [CAGov icon library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Download individual svgs using the links below.
+Version 5.6.2 of the [CAGov icon library](https://template.webstandards.ca.gov/sample/icon-fonts.html). Download individual svgs using the links below.
 
 {% include 'layouts/icon-library.njk' %}

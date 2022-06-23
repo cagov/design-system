@@ -1,37 +1,23 @@
-import glob from 'glob';
 import path from 'path';
 import fs from 'fs';
 import fileGetContents from 'file-get-contents';
-import vars from './vars.js';
+import { vars } from './script-utils.js';
+import Sprite from './Sprite.js';
 
 const generateLibrary = async () => {
   // Controller.
   const library = {
-    pattern: vars.componentPatternEach,
     iconComponents: '',
     siteFileTemplate: vars.siteFileTemplate,
     siteDir: vars.siteDir,
     iconSprite: vars.componentFileAll,
-    getMarkup: (sprite, components) => {
-      // Remove xml declaration.
-      let strippedSprite = sprite.replace(
-        '<?xml version="1.0" encoding="utf-8"?>',
-        '',
-      );
-
-      // Hide sprite.
-      strippedSprite = strippedSprite.replace(
-        '<svg ',
-        '<svg style="display:none;" ',
-      );
+    getMarkup: (sprite, components) =>
       // Return entire library.
-      return `
-        ${strippedSprite}
+      `${sprite}
         <div class="cagov-icon-library">
           ${components} 
         </div>
-        `;
-    },
+        `,
   };
 
   // Writes icon-library.njk
@@ -40,12 +26,14 @@ const generateLibrary = async () => {
       if (error) {
         return console.log(error);
       }
-      return console.log('Creating file!');
+      return console.log('Creating icon-library.njk!');
     });
   };
 
   // Create cagov-icon components.
-  glob.sync(library.pattern).forEach((fileName) => {
+  const sprite = new Sprite();
+  const list = sprite.setIconFileList();
+  list.forEach((fileName) => {
     const svgID = path.basename(fileName, path.extname(fileName)).toLowerCase();
     library.iconComponents += `<div class=cagov-icon-library--card>
       <cagov-icon data-icon="${svgID}"></cagov-icon>
