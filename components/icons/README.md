@@ -10,7 +10,7 @@ Icons reduce cognitive load by communicating meanings or actions simply and accu
 
 ## When and how to use it
 
-Use icons as visual indicators to make key actions or information easy to find. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.1 of the CAGov icon library](#icon-library) whenever possible.
+Use icons as visual indicators to make key actions or information easy to find. [Organize content strategically](https://designsystem.webstandards.ca.gov/style/content/organize-content-strategically/) before using icons. Choose an existing icon from [Version 5.6.2 of the CAGov icon library](#icon-library) whenever possible.
 
 Use icons for the same purpose consistently to avoid confusion for visitors and reduce cognitive load. Select an icon that’s as closely tied to the specific information or action as possible. When it may not be clear what the icon means, pair it with a label or supporting text.
 

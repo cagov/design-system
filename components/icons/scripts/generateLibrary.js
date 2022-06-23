@@ -26,7 +26,7 @@ const generateLibrary = async () => {
       if (error) {
         return console.log(error);
       }
-      return console.log('Creating file!');
+      return console.log('Creating icon-library.njk!');
     });
   };
 

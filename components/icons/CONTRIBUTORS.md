@@ -12,9 +12,6 @@
 
 - `npm run dev:font-sass`: Pipe sass file to design system website.
 
-## About fonts
-
-- Currently the fonts in the fonts folder and icon-font.scss and are hard coded. Ideally we'd create a script so they can be downloaded from source if need be.
 
 ## Design system icon library management
 

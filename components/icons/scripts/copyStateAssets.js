@@ -3,9 +3,9 @@
 // To use:
 //  ```
 // cd PACKAGEROOT
-// npm install Office-of-Digital-Innovation/California-State-Web-Template -D
+// npm install Office-of-Digital-Innovation/California-State-Web-Template#5.6.2 -D
 // node scripts/copyStateAssets.js
-// npm remove Office-of-Digital-Innovation/California-State-Web-Template
+// npm remove cagov-template-v6
 // ```
 
 import path from 'path';
