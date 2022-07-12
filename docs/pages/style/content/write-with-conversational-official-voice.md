@@ -21,6 +21,7 @@ A conversational tone and an official one can seem like they’re opposites of e
 
 * Read your writing out loud to hear how it sounds. This is especially helpful when you’ve done several rounds of edits.
   * When speaking the text aloud, take a breath at each period and a pause at each comma.
+  * Tools like [Immersive Reader in Microsoft Edge](https://support.microsoft.com/en-us/topic/use-immersive-reader-in-microsoft-edge-78a7a17d-52e1-47ee-b0ac-eff8539015e1#:~:text=Enter%20Reader%20Mode%20in%20Immersive%20Reader&text=To%20enter%20Reader%20Mode%2C%20use,use%20the%20keyboard%20shortcut%20F9) will read webpages out loud for you. Use this to help you improve your writing by listening to your words in a different voice.
 * Approach writing like you’re helping a friend with a task. Be supportive without being superior.
 * Think about how much work someone would have to do to retell this information. This reveals content that is complicated.
   * Break ideas into small chunks for readers to help them understand.
