@@ -2,6 +2,10 @@
 
 ## 1.0.9
 
+- Dependabot updates
+- Upgrade to 5.6.2 version of CAWeb icon library
+- Refactor icon component to have fewer dependencies
+
 ## 1.0.8
 
 - #797 Simple arrow animation suggestion
