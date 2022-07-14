@@ -2,19 +2,16 @@
 
 ## Development
 
-- `npm run dev:sprite-some`: A utility command for developers to create sprite with a subset of icons. Use `--ids=` to pass icon ids.
+- `npm run dev:sprite-some`: A utility command for developers to create sprite with a subset of icons. Use a space-separated list to pass icon ids.
 
-- `npm run dev:clear-cache`: Regenerates all the assets needed related to icons and cleares the website design cache.
+- `npm run dev:clear-cache`: Regenerates all the assets related to icons and cleares the website design cache.
 
 - `npm run dev:library`: Regenerates the icon library.
 
-- `npm run dev:icons`: Regenerates the icon set from the hosted CA.gov font. You should only have to run this when new versions of the font are released.
+- `npm run dev:sprite`: Regenerates the sprite from individual svgs. You should only have to run this when new versions of the font are released.
 
 - `npm run dev:font-sass`: Pipe sass file to design system website.
 
-## About fonts
-
-- Currently the fonts in the fonts folder and icon-font.scss and are hard coded. Ideally we'd create a script so they can be downloaded from source if need be.
 
 ## Design system icon library management
 

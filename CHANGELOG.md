@@ -1,6 +1,13 @@
 # California Design System
 
+## 1.0.9
+
+- Dependabot updates
+- Upgrade to 5.6.2 version of CAWeb icon library
+- Refactor icon component to have fewer dependencies
+
 ## 1.0.8
+
 - #797 Simple arrow animation suggestion
 - #828 - highlight section padding
 - #838 - a11y nav menu
@@ -54,6 +61,7 @@
 - Manual security updates to node packages based on dependabot alerts (a backlog of ~30 additional repeat alerst).
 
 ## 1.0.7
+
 - Dependabot updates
 - Updated color variables across most components
 - Bumped back-to-top component to v2.0.1
@@ -76,8 +84,8 @@
 - #807 - Updated "Skip to content" instructions with clearer instructions
 - #806 - Updated README to include additional information on tests, and directory structure
 - #805 - Hyperlinked the ca.gov icon in the sitewide footer
-- #802 - Added a new webpage ([Why web components](https://designsystem.webstandards.ca.gov/why-web-components)) explaining the uses of web components 
-- #799 - Standardized button styles on the homepage 
+- #802 - Added a new webpage ([Why web components](https://designsystem.webstandards.ca.gov/why-web-components)) explaining the uses of web components
+- #799 - Standardized button styles on the homepage
 - #799 - Updated color palette
 - #795 - Added additional heading font-weight options
 
@@ -102,8 +110,8 @@
 - #688 - Design tokens add a reference page
 - #694 - Update PR to allow capitalization in github branches
 - #698 - Accordion: Better multiline summaries, fixes to open indicator icon
-        ⚡️ Markup change since 2.0.0: accordion markup will need to be updated (`ds-accordion`, 2.0.1) 
-        [CHANGELOG](https://github.com/cagov/design-system/blob/main/components/accordion/CHANGELOG.md)
+  ⚡️ Markup change since 2.0.0: accordion markup will need to be updated (`ds-accordion`, 2.0.1)
+  [CHANGELOG](https://github.com/cagov/design-system/blob/main/components/accordion/CHANGELOG.md)
 - #703 - Step List: Adjust padding on `ds-step-list`
 
 ## 1.0.2
@@ -136,4 +144,4 @@
 
 ## 1.0.0
 
-* Initial release includes 18 components, principles, get started documentation, contact forms, design and content style guides. The component documentation is dynamically built from the component's README doc and includes live interactive demos of the component.
+- Initial release includes 18 components, principles, get started documentation, contact forms, design and content style guides. The component documentation is dynamically built from the component's README doc and includes live interactive demos of the component.
