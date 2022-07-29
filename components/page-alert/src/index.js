@@ -5,8 +5,6 @@
 
 import styles from './index.css';
 
-console.log(styles);
-
 class CAGovPageAlert extends window.HTMLElement {
   constructor() {
     super();
