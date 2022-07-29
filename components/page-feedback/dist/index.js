@@ -59,6 +59,17 @@ var styles =
  * @cssprop --primary-700 - Default value of #165ac2, used for background
  */
 class CAGovPageFeedback extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-page-feedback-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-page-feedback-styles';
+      style.textContent = styles;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     const question = this.dataset.question
       ? this.dataset.question
@@ -165,9 +176,7 @@ class CAGovPageFeedback extends window.HTMLElement {
     });
   }
 }
+
 window.customElements.define('cagov-page-feedback', CAGovPageFeedback);
-const style = document.createElement('style');
-style.textContent = styles;
-document.querySelector('head').appendChild(style);
 
 export { CAGovPageFeedback };

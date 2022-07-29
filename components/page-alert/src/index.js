@@ -5,7 +5,20 @@
 
 import styles from './index.css';
 
+console.log(styles);
+
 class CAGovPageAlert extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-page-alert-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-page-alert-styles';
+      style.textContent = styles;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     this.message = this.dataset.message || '';
     this.icon = this.dataset.icon || '';
@@ -40,9 +53,4 @@ class CAGovPageAlert extends window.HTMLElement {
   }
 }
 
-if (customElements.get('cagov-page-alert') === undefined) {
-  window.customElements.define('cagov-page-alert', CAGovPageAlert);
-}
-const style = document.createElement('style');
-style.textContent = styles;
-document.querySelector('head').appendChild(style);
+window.customElements.define('cagov-page-alert', CAGovPageAlert);

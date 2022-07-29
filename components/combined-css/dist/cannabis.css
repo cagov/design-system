@@ -1,5 +1,4 @@
-/* combined design system styles that based on cannabis color scheme */
-/* Colorscheme root variables */
+/* combined design system styles that based on cannabis color scheme */ /* Colorscheme root variables */
 :root {
   /* Theme colors */
   /* Theme colors */
@@ -20,8 +19,7 @@
   --accent2-900: #864529;
 }
 
-/* theme colors */
-/* sitewide styles, these are mostly blank but will be wrapped up into components/base-css */
+/* theme colors */ /* sitewide styles, these are mostly blank but will be wrapped up into components/base-css */
 :root {
   --w-lg: 1176px;
   --w-md: 960px;
@@ -41,8 +39,7 @@
   --desktop-max: 1175px;
   --desktop-lg: 1440px;
   --w-page-content: 876px;
-  --s0: 0px;
-  /* this needs to have px value or the calcs using it break */
+  --s0: 0px; /* this needs to have px value or the calcs using it break */
   --s-sm: 0.25rem;
   --s-1: 0.5rem;
   --s-2: 1rem;
@@ -2557,7 +2554,6 @@ article {
     margin-top: 0;
     margin-left: 0;
   }
-
   /* sidebar */
   .sidebar-container {
     display: block;
@@ -2565,7 +2561,6 @@ article {
     max-width: 100%;
     padding-right: 16px;
   }
-
   /* Content Menu */
   .content-footer {
     display: flex;
@@ -2589,7 +2584,6 @@ html {
     --animation-duration: 0;
     --transiton-duration: 0;
   }
-
   html {
     scroll-behavior: auto;
   }
@@ -2654,7 +2648,6 @@ main .wp-block-image img {
     flex-wrap: nowrap;
     flex-direction: column;
   }
-
   .wp-block-column {
     flex-basis: 0;
     flex-grow: 1;
@@ -3283,7 +3276,6 @@ button:focus {
 .breadcrumb span.crumb {
     display: none;
   }
-
   .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
     display: inline-block;
     font-weight: 700;
@@ -3291,11 +3283,9 @@ button:focus {
     line-height: 1.125rem;
     color: var(--primary-700, #165ac2);
   }
-
   .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
     padding: 0;
   }
-
   .breadcrumb {
     display: block;
     margin-top: calc(3rem + var(--ratio));
@@ -3303,7 +3293,6 @@ button:focus {
     background-color: transparent;
     padding: 0;
   }
-
   .with-sidebar.page-container-ds .breadcrumb {
     margin-bottom: 0px;
   }
@@ -3436,37 +3425,30 @@ h6,
 .h1 {
     font-size: var(--font-size-9, 2.625rem);
   }
-
   h2,
 .h2 {
     font-size: var(--font-size-7, 2.0625rem);
   }
-
   h3,
 .h3 {
     font-size: var(--font-size-5, 1.625rem);
   }
-
   h4,
 .h4 {
     font-size: var(--font-size-3, 1.25rem);
   }
-
   h5,
 .h5 {
     font-size: var(--font-size-1, 1rem);
   }
-
   h2:first-child,
 figure ~ h2:first-of-type {
     margin-top: 0px;
   }
-
   .text-lead,
 .lead {
     font-size: var(--font-size-3, 1.25rem);
   }
-
   .text-small,
 .text-sm {
     font-size: var(--font-size-sm, 0.875rem);
@@ -5100,7 +5082,7 @@ figure figcaption {
 }
 
 .bg-alpha-100 {
-  background-color: black !important;
+  background-color: rgb(0, 0, 0) !important;
 }
 
 .opacity-0 {
@@ -5471,297 +5453,224 @@ figure figcaption {
   .float-md-start {
     float: left !important;
   }
-
   .float-md-end {
     float: right !important;
   }
-
   .float-md-none {
     float: none !important;
   }
-
   .d-md-inline {
     display: inline !important;
   }
-
   .d-md-inline-block {
     display: inline-block !important;
   }
-
   .d-md-block {
     display: block !important;
   }
-
   .d-md-grid {
     display: grid !important;
   }
-
   .d-md-table {
     display: table !important;
   }
-
   .d-md-table-row {
     display: table-row !important;
   }
-
   .d-md-table-cell {
     display: table-cell !important;
   }
-
   .d-md-flex {
     display: flex !important;
   }
-
   .d-md-inline-flex {
     display: inline-flex !important;
   }
-
   .d-md-none {
     display: none !important;
   }
-
   .flex-md-fill {
     flex: 1 1 auto !important;
   }
-
   .flex-md-row {
     flex-direction: row !important;
   }
-
   .flex-md-column {
     flex-direction: column !important;
   }
-
   .flex-md-row-reverse {
     flex-direction: row-reverse !important;
   }
-
   .flex-md-column-reverse {
     flex-direction: column-reverse !important;
   }
-
   .flex-md-grow-0 {
     flex-grow: 0 !important;
   }
-
   .flex-md-grow-1 {
     flex-grow: 1 !important;
   }
-
   .flex-md-shrink-0 {
     flex-shrink: 0 !important;
   }
-
   .flex-md-shrink-1 {
     flex-shrink: 1 !important;
   }
-
   .flex-md-wrap {
     flex-wrap: wrap !important;
   }
-
   .flex-md-nowrap {
     flex-wrap: nowrap !important;
   }
-
   .flex-md-wrap-reverse {
     flex-wrap: wrap-reverse !important;
   }
-
   .gap-md-0 {
     gap: 0 !important;
   }
-
   .gap-md-1 {
     gap: 0.25rem !important;
   }
-
   .gap-md-2 {
     gap: 0.5rem !important;
   }
-
   .gap-md-3 {
     gap: 1rem !important;
   }
-
   .gap-md-4 {
     gap: 1.5rem !important;
   }
-
   .gap-md-5 {
     gap: 3rem !important;
   }
-
   .justify-content-md-start {
     justify-content: flex-start !important;
   }
-
   .justify-content-md-end {
     justify-content: flex-end !important;
   }
-
   .justify-content-md-center {
     justify-content: center !important;
   }
-
   .justify-content-md-between {
     justify-content: space-between !important;
   }
-
   .justify-content-md-around {
     justify-content: space-around !important;
   }
-
   .justify-content-md-evenly {
     justify-content: space-evenly !important;
   }
-
   .align-items-md-start {
     align-items: flex-start !important;
   }
-
   .align-items-md-end {
     align-items: flex-end !important;
   }
-
   .align-items-md-center {
     align-items: center !important;
   }
-
   .align-items-md-baseline {
     align-items: baseline !important;
   }
-
   .align-items-md-stretch {
     align-items: stretch !important;
   }
-
   .align-content-md-start {
     align-content: flex-start !important;
   }
-
   .align-content-md-end {
     align-content: flex-end !important;
   }
-
   .align-content-md-center {
     align-content: center !important;
   }
-
   .align-content-md-between {
     align-content: space-between !important;
   }
-
   .align-content-md-around {
     align-content: space-around !important;
   }
-
   .align-content-md-stretch {
     align-content: stretch !important;
   }
-
   .align-self-md-auto {
     align-self: auto !important;
   }
-
   .align-self-md-start {
     align-self: flex-start !important;
   }
-
   .align-self-md-end {
     align-self: flex-end !important;
   }
-
   .align-self-md-center {
     align-self: center !important;
   }
-
   .align-self-md-baseline {
     align-self: baseline !important;
   }
-
   .align-self-md-stretch {
     align-self: stretch !important;
   }
-
   .order-md-first {
     order: -1 !important;
   }
-
   .order-md-0 {
     order: 0 !important;
   }
-
   .order-md-1 {
     order: 1 !important;
   }
-
   .order-md-2 {
     order: 2 !important;
   }
-
   .order-md-3 {
     order: 3 !important;
   }
-
   .order-md-4 {
     order: 4 !important;
   }
-
   .order-md-5 {
     order: 5 !important;
   }
-
   .order-md-last {
     order: 6 !important;
   }
-
   .m-md-0 {
     margin: 0 !important;
   }
-
   .m-md-l-a {
     margin-left: auto !important;
   }
-
   .m-md-r-a {
     margin-right: auto !important;
   }
-
   .m-md-x-a {
     margin-left: auto !important;
     margin-right: auto !important;
   }
-
   .m-md-0-a {
     margin: 0 auto !important;
   }
-
   .m-md-t-a {
     margin-top: auto !important;
   }
-
   .m-md-b-a {
     margin-bottom: auto !important;
   }
-
   .m-md-y-a {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
-
   .p-md-0 {
     padding: 0 !important;
   }
-
   .text-md-left {
     text-align: left !important;
   }
-
   .text-md-right {
     text-align: right !important;
   }
-
   .text-md-center {
     text-align: center !important;
   }
@@ -5771,297 +5680,224 @@ figure figcaption {
   .float-lg-start {
     float: left !important;
   }
-
   .float-lg-end {
     float: right !important;
   }
-
   .float-lg-none {
     float: none !important;
   }
-
   .d-lg-inline {
     display: inline !important;
   }
-
   .d-lg-inline-block {
     display: inline-block !important;
   }
-
   .d-lg-block {
     display: block !important;
   }
-
   .d-lg-grid {
     display: grid !important;
   }
-
   .d-lg-table {
     display: table !important;
   }
-
   .d-lg-table-row {
     display: table-row !important;
   }
-
   .d-lg-table-cell {
     display: table-cell !important;
   }
-
   .d-lg-flex {
     display: flex !important;
   }
-
   .d-lg-inline-flex {
     display: inline-flex !important;
   }
-
   .d-lg-none {
     display: none !important;
   }
-
   .flex-lg-fill {
     flex: 1 1 auto !important;
   }
-
   .flex-lg-row {
     flex-direction: row !important;
   }
-
   .flex-lg-column {
     flex-direction: column !important;
   }
-
   .flex-lg-row-reverse {
     flex-direction: row-reverse !important;
   }
-
   .flex-lg-column-reverse {
     flex-direction: column-reverse !important;
   }
-
   .flex-lg-grow-0 {
     flex-grow: 0 !important;
   }
-
   .flex-lg-grow-1 {
     flex-grow: 1 !important;
   }
-
   .flex-lg-shrink-0 {
     flex-shrink: 0 !important;
   }
-
   .flex-lg-shrink-1 {
     flex-shrink: 1 !important;
   }
-
   .flex-lg-wrap {
     flex-wrap: wrap !important;
   }
-
   .flex-lg-nowrap {
     flex-wrap: nowrap !important;
   }
-
   .flex-lg-wrap-reverse {
     flex-wrap: wrap-reverse !important;
   }
-
   .gap-lg-0 {
     gap: 0 !important;
   }
-
   .gap-lg-1 {
     gap: 0.25rem !important;
   }
-
   .gap-lg-2 {
     gap: 0.5rem !important;
   }
-
   .gap-lg-3 {
     gap: 1rem !important;
   }
-
   .gap-lg-4 {
     gap: 1.5rem !important;
   }
-
   .gap-lg-5 {
     gap: 3rem !important;
   }
-
   .justify-content-lg-start {
     justify-content: flex-start !important;
   }
-
   .justify-content-lg-end {
     justify-content: flex-end !important;
   }
-
   .justify-content-lg-center {
     justify-content: center !important;
   }
-
   .justify-content-lg-between {
     justify-content: space-between !important;
   }
-
   .justify-content-lg-around {
     justify-content: space-around !important;
   }
-
   .justify-content-lg-evenly {
     justify-content: space-evenly !important;
   }
-
   .align-items-lg-start {
     align-items: flex-start !important;
   }
-
   .align-items-lg-end {
     align-items: flex-end !important;
   }
-
   .align-items-lg-center {
     align-items: center !important;
   }
-
   .align-items-lg-baseline {
     align-items: baseline !important;
   }
-
   .align-items-lg-stretch {
     align-items: stretch !important;
   }
-
   .align-content-lg-start {
     align-content: flex-start !important;
   }
-
   .align-content-lg-end {
     align-content: flex-end !important;
   }
-
   .align-content-lg-center {
     align-content: center !important;
   }
-
   .align-content-lg-between {
     align-content: space-between !important;
   }
-
   .align-content-lg-around {
     align-content: space-around !important;
   }
-
   .align-content-lg-stretch {
     align-content: stretch !important;
   }
-
   .align-self-lg-auto {
     align-self: auto !important;
   }
-
   .align-self-lg-start {
     align-self: flex-start !important;
   }
-
   .align-self-lg-end {
     align-self: flex-end !important;
   }
-
   .align-self-lg-center {
     align-self: center !important;
   }
-
   .align-self-lg-baseline {
     align-self: baseline !important;
   }
-
   .align-self-lg-stretch {
     align-self: stretch !important;
   }
-
   .order-lg-first {
     order: -1 !important;
   }
-
   .order-lg-0 {
     order: 0 !important;
   }
-
   .order-lg-1 {
     order: 1 !important;
   }
-
   .order-lg-2 {
     order: 2 !important;
   }
-
   .order-lg-3 {
     order: 3 !important;
   }
-
   .order-lg-4 {
     order: 4 !important;
   }
-
   .order-lg-5 {
     order: 5 !important;
   }
-
   .order-lg-last {
     order: 6 !important;
   }
-
   .m-lg-0 {
     margin: 0 !important;
   }
-
   .m-lg-l-a {
     margin-left: auto !important;
   }
-
   .m-lg-r-a {
     margin-right: auto !important;
   }
-
   .m-lg-x-a {
     margin-left: auto !important;
     margin-right: auto !important;
   }
-
   .m-lg-0-a {
     margin: 0 auto !important;
   }
-
   .m-lg-t-a {
     margin-top: auto !important;
   }
-
   .m-lg-b-a {
     margin-bottom: auto !important;
   }
-
   .m-lg-y-a {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
-
   .p-lg-0 {
     padding: 0 !important;
   }
-
   .text-lg-left {
     text-align: left !important;
   }
-
   .text-lg-right {
     text-align: right !important;
   }
-
   .text-lg-center {
     text-align: center !important;
   }
@@ -6381,21 +6217,21 @@ figure figcaption {
 
 /* all utility css classes that can be used (shortcodes) */
 /* Grid classes */
-@supports (width: min(376px, 100%)) {
+@supports (width: calc(min(376px, 100%))) {
   .card-grid-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(376px, 100%), 1fr));
     grid-gap: var(--s-3, 1.5rem);
   }
 }
-@supports (width: min(300px, 100%)) {
+@supports (width: calc(min(300px, 100%))) {
   .card-grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     grid-gap: var(--s-3, 1.5rem);
   }
 }
-@supports (width: min(250px, 100%)) {
+@supports (width: calc(min(250px, 100%))) {
   .card-grid-4 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
@@ -6480,8 +6316,7 @@ cagov-accordion:defined summary::-webkit-details-marker {
   display: none;
 }
 cagov-accordion:defined details summary {
-  list-style: none;
-  /* hide default expansion triangle after js executes */
+  list-style: none; /* hide default expansion triangle after js executes */
   border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;
 }
 cagov-accordion:defined details summary:focus {
@@ -6578,7 +6413,6 @@ section.site-footer .container {
     flex-direction: row !important;
     align-items: center;
   }
-
   .footer-social-links {
     margin-left: auto;
   }
@@ -6944,7 +6778,6 @@ cagov-site-navigation .search-container--small.hidden-search {
 .search-close {
     display: none !important;
   }
-
   .site-header .container {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
@@ -7021,7 +6854,7 @@ cagov-site-navigation .search-container--small.hidden-search {
   margin: 0;
 }
 
-@supports (width: min(250px, 100%)) {
+@supports (width: calc(min(250px, 100%))) {
   .cagov-grid,
 .cagov-grid .block-editor-block-list__layout {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));

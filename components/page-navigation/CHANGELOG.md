@@ -1,5 +1,8 @@
 # Page navigation changelog
 
+## 2.1.3
+* Changes to how styles are inserted into the document.
+
 ## 2.1.2
 * Ensure the browser's focus follows the link, for accessibility purposes.
 
