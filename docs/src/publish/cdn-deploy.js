@@ -101,8 +101,8 @@ Promise.all(uploadPromises)
 try {
   const readme = fs.readFileSync('./README.md', 'utf8');
   const updatedReadme = readme.replace(
-    /(cdn\.designsystem\.webstandards\.ca\.gov\/.+?\/v)(.+?)(\/.+?\.)/, 
-    `$1${packageVersion}$3`
+    /(cdn\.designsystem\.webstandards\.ca\.gov\/.+?\/v)(.+?)(\/.+?\.)/,
+    `$1${packageVersion}$3`,
   );
   fs.writeFileSync('./README.md', updatedReadme);
 } catch (e) {
