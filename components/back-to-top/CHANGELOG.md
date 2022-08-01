@@ -1,5 +1,7 @@
 # Back to top button changelog
 
+## 2.0.2
+* Changes to how styles are inserted into the document.
 
 ## 2.0.1
 * Updated color variables

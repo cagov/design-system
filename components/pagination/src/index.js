@@ -14,6 +14,17 @@ import styles from './css/index.css';
  * @cssprop --primary-700 - Default value of #165ac2, used for text, border color
  */
 export class CAGovPagination extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-pagination-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-pagination-styles';
+      style.textContent = styles;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     this.currentPage = parseInt(
       this.dataset.currentPage ? this.dataset.currentPage : '1',
@@ -102,7 +113,5 @@ export class CAGovPagination extends window.HTMLElement {
     );
   }
 }
+
 window.customElements.define('cagov-pagination', CAGovPagination);
-const style = document.createElement('style');
-style.textContent = styles;
-document.querySelector('head').appendChild(style);

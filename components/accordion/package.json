@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-accordion",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Accordions are expandable sections of content. Each section contains a heading (H2 or H3), a plus button (+), and more body text when opened.",
   "main": "dist/index.js",
   "scripts": {

@@ -16,6 +16,17 @@ import styles from './css/index.css';
  *
  */
 export class CaGovAccordion extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-accordion-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-accordion-styles';
+      style.textContent = styles;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     this.summaryEl = this.querySelector('summary');
     // trigger the opening and closing height change animation on summary click
@@ -80,8 +91,5 @@ export class CaGovAccordion extends window.HTMLElement {
     };
   }
 }
-window.customElements.define('cagov-accordion', CaGovAccordion);
 
-const style = document.createElement('style');
-style.textContent = styles;
-document.querySelector('head').appendChild(style);
+window.customElements.define('cagov-accordion', CaGovAccordion);

@@ -24,6 +24,13 @@ class CaGovBackToTop extends window.HTMLElement {
       lastScrollTop: 0,
       timer: null,
     };
+
+    if (!document.querySelector('#cagov-back-to-top-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-back-to-top-styles';
+      style.textContent = styles;
+      document.querySelector('head').appendChild(style);
+    }
   }
 
   connectedCallback() {
@@ -172,9 +179,5 @@ class CaGovBackToTop extends window.HTMLElement {
 }
 
 window.customElements.define('cagov-back-to-top', CaGovBackToTop);
-
-const style = document.createElement('style');
-style.textContent = styles;
-document.querySelector('head').appendChild(style);
 
 export { CaGovBackToTop };

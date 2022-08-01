@@ -41,8 +41,7 @@ cagov-accordion:defined summary::-webkit-details-marker {
   display: none;
 }
 cagov-accordion:defined details summary {
-  list-style: none;
-  /* hide default expansion triangle after js executes */
+  list-style: none; /* hide default expansion triangle after js executes */
   border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;
 }
 cagov-accordion:defined details summary:focus {
