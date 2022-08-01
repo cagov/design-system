@@ -1,6 +1,9 @@
 # CHANGELOG for ds-compiled-css
 `ds-compiled-css`
 
+## 2.0.4
+* Retired and removed the Google Translate component.
+
 ## 2.0.3
 * Changes to the way CSS-in-JS components insert styles into the document.
 

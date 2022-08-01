@@ -2,7 +2,6 @@ import '../../accordion/dist/index.js';
 import '../../back-to-top/dist/index.js';
 import '../../page-navigation/dist/index.js';
 import '../../page-feedback/dist/index.js';
-import '../../google-translate/index.js';
 import '../../site-navigation/src/index.js';
 import '../../page-alert/dist/index.js';
 import '../../pagination/dist/index.js';
