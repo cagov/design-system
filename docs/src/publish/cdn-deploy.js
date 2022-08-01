@@ -96,3 +96,16 @@ Promise.all(uploadPromises)
     // called from prepublish, exit if buid cannot be deployed to cdn which will stop npm publish
     process.exit(1);
   });
+
+// Update CDN version numbers in Readme.
+try {
+  const readme = fs.readFileSync('./README.md', 'utf8');
+  const updatedReadme = readme.replace(
+    /(cdn\.designsystem\.webstandards\.ca\.gov\/.+?\/v)(.+?)(\/.+?\.)/, 
+    `$1${packageVersion}$3`
+  );
+  fs.writeFileSync('./README.md', updatedReadme);
+} catch (e) {
+  console.log(e);
+  console.log(`The README.md file for ${packageName} may be missing.`);
+}
