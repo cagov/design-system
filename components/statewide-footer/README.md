@@ -72,6 +72,14 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 2. Add the **sample markup** from the component to your HTML.
 3. Adjust links as needed.
 
+### CDN installation
+
+We recommend using a build system and bundling your CSS for faster performance. If you do not use a build system, you can include the code from our CDN with a link tag.
+
+```html
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-statewide-footer/v1.0.10/index.css">
+```
+
 ## CSS variables
 
 The following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are used in this component:

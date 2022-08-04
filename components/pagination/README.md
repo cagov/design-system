@@ -61,6 +61,14 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 5. If directly importing, be sure to reference the js file at `./dist/index.js`
 6. Connect pagination to content block
 
+### CDN installation
+
+We recommend using a build system and bundling your JavaScript for faster performance. If you do not use a build system, you can include the code from our CDN with a script tag.
+
+```html
+<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-pagination/v2.0.1/dist/index.js"></script>
+```
+
 ### **Event registration**
 
 The component tracks the current page and triggers custom events on page clicks. You can subscribe to events on this element to watch for clicks. This element does not modify outside content, responding to events and changing body content as desired is left up to your application logic. The following event format is sent on click:
