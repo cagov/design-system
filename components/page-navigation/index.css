@@ -40,13 +40,11 @@ sidebar cagov-page-navigation ul li a:hover {
   cagov-page-navigation .label {
     display: none;
   }
-
   .sidebar-container {
     display: block;
     width: 100%;
     max-width: 100%;
   }
-
   cagov-page-navigation ul li a {
     font-size: 16px;
     line-height: 24px;

@@ -11,6 +11,17 @@ import styles from '../index.css';
  */
 
 class CAGovPageNavigation extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-page-navigation-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-page-navigation-styles';
+      style.textContent = styles;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     this.type = 'wordpress';
 
@@ -407,10 +418,4 @@ class CAGovPageNavigation extends window.HTMLElement {
   }
 }
 
-if (customElements.get('cagov-page-navigation') === undefined) {
-  window.customElements.define('cagov-page-navigation', CAGovPageNavigation);
-}
-
-const style = document.createElement('style');
-style.textContent = styles;
-document.querySelector('head').appendChild(style);
+window.customElements.define('cagov-page-navigation', CAGovPageNavigation);

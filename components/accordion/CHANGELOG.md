@@ -2,7 +2,8 @@
 
 <a href="https://www.npmjs.com/package/@cagov/ds-accordion">https://www.npmjs.com/package/@cagov/ds-accordion</a>
 
-
+## 2.0.3
+* Changes to how styles are inserted into the document.
 ## 2.0.2
 * Fixed new color palette accordions color contrast accessibility issues 
 ## 2.0.1
