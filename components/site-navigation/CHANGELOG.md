@@ -1,5 +1,8 @@
 # Site navigation changelog
 
+## 3.0.0
+* Move built CSS to dist folder.
+
 ## 2.1.4
 * Accessibility fix: Use aria-expanded on the button that controls the expansion, add aria-controls to the suggested html to match the id of the expanding element
 
