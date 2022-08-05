@@ -1,10 +1,11 @@
 {
   "name": "@cagov/ds-link-icon",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.css",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "sass src/index.scss index.css",
+    "build:js": "rollup --config rollup.config.js",
+    "build": "sass src/index.scss src/css/index.css && npm run build:js",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
@@ -20,6 +21,8 @@
   "devDependencies": {
     "@open-wc/testing": "^3.0.0-next.2",
     "@web/test-runner-puppeteer": "^0.10.1",
+    "rollup": "^2.77.2",
+    "rollup-plugin-import-css": "^3.0.3",
     "sass": "^1.38.1"
   }
 }
