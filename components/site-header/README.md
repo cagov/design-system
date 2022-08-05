@@ -299,7 +299,7 @@ Note: There are two versions of the markup, one with and one without a logo.
 We recommend using a build system and bundling your CSS for faster performance. If you do not use a build system, you can include the code from our CDN with a link tag.
 
 ```html
-<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-site-header/v1.1.1/index.css">
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-site-header/v2.0.0/dist/index.css">
 ```
 
 ## CSS variables

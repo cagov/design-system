@@ -1,5 +1,7 @@
 # Site header changelog
 
+## 2.0.0
+* Moved index.css file to dist folder.
 
 ## 1.1.1
 * Updated color variables to go inline with new CEILAB color palette.
