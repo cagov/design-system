@@ -74,10 +74,7 @@ const uploadToS3 = (dir, filePath) =>
   });
 
 const uploadPromises = filePaths.map((filePath) =>
-  uploadToS3(
-    directoryToUpload,
-    filePath,
-  ),
+  uploadToS3(directoryToUpload, filePath),
 );
 Promise.all(uploadPromises)
   .then((result) => {
