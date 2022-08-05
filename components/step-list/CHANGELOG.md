@@ -1,5 +1,7 @@
 # Step list changelog
 
+## 3.0.0
+* Moved built CSS file to dist folder.
 
 ## 2.0.2
 * Updated color variables to go inline with new CEILAB color palette.
