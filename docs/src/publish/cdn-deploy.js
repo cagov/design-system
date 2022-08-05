@@ -15,6 +15,7 @@ const contentTypeMap = new Map();
 contentTypeMap.set('js', 'text/javascript');
 contentTypeMap.set('css', 'text/css');
 contentTypeMap.set('json', 'application/json');
+contentTypeMap.set('svg', 'image/svg+xml');
 
 const directoryToUpload = `${process.cwd()}/dist`;
 const bucketName = 'cdn.designsystem.webstandards.ca.gov';
