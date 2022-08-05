@@ -222,6 +222,23 @@ This CSS-only module contains styles for basic tables. `index.css` is for headle
 
 </html-preview>
 
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
+
+1. Include **SCSS** in your compiler.
+2. Add the **sample markup** from the component to your HTML.
+3. Adjust text as needed.
+
+### CDN installation
+
+We recommend using a build system and bundling your CSS for faster performance. If you do not use a build system, you can include the code from our CDN with a link tag.
+
+```html
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-table/v1.0.1/dist/index.css">
+```
+
+
 ## Expected variables
 
 none.
