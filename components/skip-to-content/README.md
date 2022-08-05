@@ -57,7 +57,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 We recommend using a build system and bundling your CSS for faster performance. If you do not use a build system, you can include the code from our CDN with a link tag.
 
 ```html
-<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-skip-to-content/v1.0.3/index.css">
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-skip-to-content/v2.0.0/dist/index.css">
 ```
 
 ## Accessibility
