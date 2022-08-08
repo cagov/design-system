@@ -8,6 +8,7 @@
     "build": "npm run build:js && sass --no-source-map src/_cannabis.scss dist/cannabis.css && sass --no-source-map src/_drought.scss dist/drought.css && sass --no-source-map src/_cagov.scss dist/cagov.css",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "prepublishOnly": "npm run build && npm run cdn:publish",
+    "yalc:publish": "npm run build && yalc publish --no-scripts",
     "test": "echo \"No test specified\" && exit 0"
   },
   "keywords": [],

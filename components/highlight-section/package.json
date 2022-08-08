@@ -12,6 +12,7 @@
     "build": "sass src/index.scss dist/index.css",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "prepublishOnly": "npm run build && npm test && npm run cdn:publish",
+    "yalc:publish": "npm run build && yalc publish --no-scripts",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],
