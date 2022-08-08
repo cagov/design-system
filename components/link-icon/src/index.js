@@ -1,4 +1,13 @@
 /* PDF ICON */
+import styles from './css/index.css';
+
+if (!document.querySelector('#cagov-link-icon-styles')) {
+  const style = document.createElement('style');
+  style.id = 'cagov-link-icon-styles';
+  style.textContent = styles;
+  document.querySelector('head').appendChild(style);
+}
+
 function placePdfIcons() {
   // pdf-icon component svg icon
   const pdf =

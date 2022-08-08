@@ -142,6 +142,14 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 2. Add the **sample markup** from the component to your HTML.
 3. You may need to adjust `$cagov-regulatory-outline-margin` depending on your default font size.
 
+### CDN installation
+
+We recommend using a build system and bundling your CSS for faster performance. If you do not use a build system, you can include the code from our CDN with a link tag.
+
+```html
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-regulatory-outline/v1.0.4/dist/index.css">
+```
+
 ## Progressive enhancement
 
 This is an HTML- and CSS-only component. JavaScript is not required. It uses [CSS variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/var()#syntax>) to inherit design token values. Token definitions are not required because these style rules provide fallback values.

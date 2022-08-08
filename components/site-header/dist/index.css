@@ -289,7 +289,6 @@ cagov-site-navigation .search-container--small.hidden-search {
 .search-close {
     display: none !important;
   }
-
   .site-header .container {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;

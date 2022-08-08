@@ -47,6 +47,22 @@ Component is also incorporates full bleed background.
         </cagov-highlight-section>
 ```
 
+## Project installation
+
+The instructions assume familiarity with [npm](https://npmjs.com) package management tool and [Sass](https://sass-lang.com/).
+
+1. Include **SCSS** in your compiler.
+2. Add the **sample markup** from the component to your HTML.
+3. Modify with your own text, alt text, and image.
+
+### CDN installation
+
+We recommend using a build system and bundling your CSS for faster performance. If you do not use a build system, you can include the code from our CDN with a link tag.
+
+```html
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-highlight-section/v2.0.0/dist/index.css">
+```
+
 ### Expected variables
 
 There are some colors that should be defined by the containing page.

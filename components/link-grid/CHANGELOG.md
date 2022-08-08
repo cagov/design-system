@@ -1,5 +1,7 @@
 # Link grid changelog
 
+## 3.0.0
+* Moved built CSS to dist folder.
 
 ## 2.1.1
 * Updated color variables to go inline with new CEILAB color palette.

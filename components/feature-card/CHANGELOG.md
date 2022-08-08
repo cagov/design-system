@@ -1,5 +1,8 @@
 # Feature card changelog
 
+## 2.0.0
+* Moved built CSS into dist folder.
+
 ## 1.0.7
 * Updated color variables and changed button class to btn-primary
 

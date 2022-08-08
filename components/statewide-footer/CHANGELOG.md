@@ -1,5 +1,8 @@
 # Statewide footer changelog
 
+## 2.0.0
+* Moved built CSS to dist folder.
+
 ## 1.0.10 
 * Updated color variables to go inline with new CEILAB color palette.
 

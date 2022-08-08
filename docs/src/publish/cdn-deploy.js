@@ -11,14 +11,13 @@ const currentPackageInfo = JSON.parse(
 const packageName = currentPackageInfo.name.replace('@cagov/', '');
 const packageVersion = currentPackageInfo.version;
 const keyPrefix = `components/${packageName}/v${packageVersion}/dist/`;
-const cssKey = `components/${packageName}/v${packageVersion}/index.css`;
 const contentTypeMap = new Map();
 contentTypeMap.set('js', 'text/javascript');
 contentTypeMap.set('css', 'text/css');
 contentTypeMap.set('json', 'application/json');
+contentTypeMap.set('svg', 'image/svg+xml');
 
 const directoryToUpload = `${process.cwd()}/dist`;
-const cssToUpload = `${process.cwd()}/index.css`;
 const bucketName = 'cdn.designsystem.webstandards.ca.gov';
 
 const filePaths = [];
@@ -49,16 +48,11 @@ const getFilePaths = (dir) => {
 
 // get /dist/*
 getFilePaths(directoryToUpload);
-// get /index.css
-addToFilePaths(cssToUpload);
 
 // upload to S3
 const uploadToS3 = (dir, filePath) =>
   new Promise((resolve, reject) => {
-    let key = keyPrefix + filePath.split(`${dir}/`)[1];
-    if (filePath.indexOf('.css') > -1) {
-      key = cssKey;
-    }
+    const key = keyPrefix + filePath.split(`${dir}/`)[1];
     const params = {
       Bucket: bucketName,
       Key: key,
@@ -81,10 +75,7 @@ const uploadToS3 = (dir, filePath) =>
   });
 
 const uploadPromises = filePaths.map((filePath) =>
-  uploadToS3(
-    filePath.indexOf('.css') > -1 ? cssToUpload : directoryToUpload,
-    filePath,
-  ),
+  uploadToS3(directoryToUpload, filePath),
 );
 Promise.all(uploadPromises)
   .then((result) => {
@@ -96,3 +87,16 @@ Promise.all(uploadPromises)
     // called from prepublish, exit if buid cannot be deployed to cdn which will stop npm publish
     process.exit(1);
   });
+
+// Update CDN version numbers in Readme.
+try {
+  const readme = fs.readFileSync('./README.md', 'utf8');
+  const updatedReadme = readme.replace(
+    /(cdn\.designsystem\.webstandards\.ca\.gov\/.+?\/v)(.+?)(\/.+?\.)/,
+    `$1${packageVersion}$3`,
+  );
+  fs.writeFileSync('./README.md', updatedReadme);
+} catch (e) {
+  console.log(e);
+  console.log(`The README.md file for ${packageName} may be missing.`);
+}
