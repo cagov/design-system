@@ -32,7 +32,7 @@ Do not modify the site header beyond adding the site name and a logo.
 <div class="site-header">
   <!-- Note the `with-logo` class next to `container`. Add this when you're including a logo. -->
   <div class="container with-logo">
-    <a href="/" class="grid-logo" aria-label="DCC logo">
+    <a href="javascript:void(0)" class="grid-logo" aria-label="DCC logo">
       <svg
         version="1.1"
         alt="DCC logo"
