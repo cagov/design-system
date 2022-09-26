@@ -99,6 +99,7 @@ class CAGovPageNavigation extends window.HTMLElement {
       headers.forEach((tag) => {
         const tagId = tag.getAttribute('id');
         const tagName = tag.getAttribute('name');
+        const tabIndex = tag.getAttribute('tabindex') || '-1';
 
         const title = tag.innerHTML;
 
@@ -138,6 +139,7 @@ class CAGovPageNavigation extends window.HTMLElement {
 
         tag.setAttribute('id', anchor);
         tag.setAttribute('name', anchor);
+        tag.setAttribute('tabindex', tabIndex);
       });
       return `<ul>${output}</ul>`;
     }

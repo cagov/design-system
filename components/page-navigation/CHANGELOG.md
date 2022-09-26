@@ -1,5 +1,11 @@
 # Page navigation changelog
 
+## 2.2.1
+* Fix anchor linking problem with 2.2.0 in JAWS.
+
+## 2.2.0
+* Remove polyfill for smooth scrolling in Safari.
+
 ## 2.1.3
 * Changes to how styles are inserted into the document.
 
