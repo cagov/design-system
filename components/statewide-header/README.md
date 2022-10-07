@@ -9,7 +9,7 @@ It includes:
 
 ## When and how to use it
 
-The statewide footer is a required Design System component. Place it at the top of the website, above the department branding (site header) and all other content.
+The statewide header is a required Design System component. Place it at the top of the website, above the department branding (site header) and all other content.
 
 If you want to include a translation widget in the statewide header, [reach out through our Contact us page](/contact-us) to find out how you can do so.
 
@@ -17,7 +17,7 @@ If you want to include a translation widget in the statewide header, [reach out 
 
 Do not add other elements to or change the statewide header. Use it only as designed.
 
-Do not combine the statewide header with depatment name or logo, navigation, or information. This is contained in the site header.
+Do not combine the statewide header with department name or logo, navigation, or information. This is contained in the site header.
 
 ## Demo and sample markup
 
