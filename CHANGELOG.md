@@ -1,5 +1,15 @@
 # California Design System
 
+## 1.0.10
+
+- #915 CSS insertion moved into JavaScript Custom Element constructors.
+- #918 Retired Google Translate widget.
+- #919 Added CDN installation and instructions for all components.
+- #926, #933 Removed smooth scrolling polyfill from page-navigation component.
+- #934 Removed unused Issue templates.
+- #927 Removed bad links from site-header example mark-up. 
+
+
 ## 1.0.9
 
 - Dependabot updates
