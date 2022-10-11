@@ -77,7 +77,7 @@ Do not modify the site header beyond adding the site name and a logo.
       </svg>
     </a>
 
-    <a class="grid-org-name" href="/">
+    <a class="grid-org-name" href="javascript:void(0)">
       <span class="org-name-dept"> Department of <br />Cannabis Control </span>
 
       <span class="org-name-state"> California </span>
@@ -180,7 +180,7 @@ Do not modify the site header beyond adding the site name and a logo.
 <!--site-header without logo-->
 <div class="site-header">
   <div class="container">
-    <a class="grid-org-name" href="/">
+    <a class="grid-org-name" href="javascript:void(0)">
       <span class="org-name-state"> State of California </span>
 
       <span class="org-name-dept"> California Drought Action </span>
