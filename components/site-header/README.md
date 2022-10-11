@@ -35,7 +35,7 @@ Do not modify the site header beyond adding the site name and a logo.
     <a href="javascript:void(0)" class="grid-logo" aria-label="DCC logo">
       <svg
         version="1.1"
-        alt="DCC logo"
+        alt="Department of Cannabis Control logo"
         style="height: 75px;"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
