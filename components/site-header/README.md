@@ -32,10 +32,10 @@ Do not modify the site header beyond adding the site name and a logo.
 <div class="site-header">
   <!-- Note the `with-logo` class next to `container`. Add this when you're including a logo. -->
   <div class="container with-logo">
-    <a href="/" class="grid-logo" aria-label="DCC logo">
+    <a href="javascript:void(0)" class="grid-logo" aria-label="DCC logo">
       <svg
         version="1.1"
-        alt="DCC logo"
+        alt="Department of Cannabis Control logo"
         style="height: 75px;"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -77,7 +77,7 @@ Do not modify the site header beyond adding the site name and a logo.
       </svg>
     </a>
 
-    <a class="grid-org-name" href="/">
+    <a class="grid-org-name" href="javascript:void(0)">
       <span class="org-name-dept"> Department of <br />Cannabis Control </span>
 
       <span class="org-name-state"> California </span>
@@ -180,7 +180,7 @@ Do not modify the site header beyond adding the site name and a logo.
 <!--site-header without logo-->
 <div class="site-header">
   <div class="container">
-    <a class="grid-org-name" href="/">
+    <a class="grid-org-name" href="javascript:void(0)">
       <span class="org-name-state"> State of California </span>
 
       <span class="org-name-dept"> California Drought Action </span>
