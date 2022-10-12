@@ -1,15 +1,15 @@
 {
   "name": "@cagov/ds-link-grid",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "The card grid depends on individual cards and lays them out in a grid",
-  "main": "index.css",
+  "main": "dist/index.css",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/cagov/design-system/tree/main/components/link-grid"
   },
   "scripts": {
-    "build": "sass src/index.scss index.css",
+    "build": "sass src/index.scss dist/index.css",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
     "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",

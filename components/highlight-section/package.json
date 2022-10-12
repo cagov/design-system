@@ -1,16 +1,17 @@
 {
   "name": "@cagov/ds-highlight-section",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "THe Highlight Section is a great way to showcase small bits of important information, and can be used to display services or features. ",
-  "main": "index.css",
+  "main": "dist/index.css",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/cagov/design-system/tree/main/components/highlight-section"
   },
   "scripts": {
-    "build": "sass src/index.scss index.css",
-    "prepublishOnly": "npm run build && npm test",
+    "build": "sass src/index.scss dist/index.css",
+    "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
+    "prepublishOnly": "npm run build && npm test && npm run cdn:publish",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],

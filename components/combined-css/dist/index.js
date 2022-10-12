@@ -1,5 +1,5 @@
 var styles$5 =
-  '/* initial styles */\ncagov-accordion details {\n  border-radius: var(--radius-2, 5px) !important;\n  margin-bottom: 0;\n  min-height: var(--s-5, 3rem);\n  margin-top: 0.5rem;\n  border: solid var(--border-1, 1px) var(--gray-200, #d4d4d7) !important;\n}\ncagov-accordion details summary {\n  cursor: pointer;\n  padding: var(--s-1, 0.5rem) var(--s-5, 3rem) var(--s-1, 0.5rem) var(--s-2, 1rem);\n  background-color: var(--gray-50, #fafafa);\n  position: relative;\n  line-height: var(--s-4, 2rem);\n  margin: 0;\n  color: var(--primary-700, #165ac2);\n  font-size: var(--font-size-2, 1.125rem);\n  font-weight: bold;\n}\ncagov-accordion details summary:hover {\n  background-color: var(--gray-100, #fafafa);\n  color: var(--primary-900, #003688);\n}\ncagov-accordion details .accordion-body {\n  padding: var(--s-2, 1rem);\n}\n\n/* styles applied after custom element javascript runs */\ncagov-accordion:defined {\n  /* let it be open initially if details has open attribute */\n}\ncagov-accordion:defined details {\n  transition: height var(--animation-duration-2, 0.2s);\n  height: var(--s-5, 3rem);\n  overflow: hidden;\n}\ncagov-accordion:defined details[open] {\n  height: auto;\n}\ncagov-accordion:defined summary::-webkit-details-marker {\n  display: none;\n}\ncagov-accordion:defined details summary {\n  list-style: none;\n  /* hide default expansion triangle after js executes */\n  border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;\n}\ncagov-accordion:defined details summary:focus {\n  outline-offset: -2px;\n  outline: solid 2px var(--accent2-500, #ac8227) !important;\n  background-color: var(--gray-100, #fafafa);\n}\ncagov-accordion:defined details .cagov-open-indicator {\n  background-color: var(--primary-700, #165ac2);\n  height: 3px;\n  width: 15px;\n  border-radius: var(--border-3, 3px);\n  position: absolute;\n  right: var(--s-2, 1rem);\n  top: 1.4rem;\n}\ncagov-accordion:defined details .cagov-open-indicator:before {\n  display: block;\n  content: "";\n  position: absolute;\n  top: -6px;\n  left: 3px;\n  width: 3px;\n  height: 15px;\n  border-radius: var(--border-3, 3px);\n  border: none;\n  box-shadow: 3px 0 0 0 var(--primary-700, #165ac2);\n  background: none;\n}\ncagov-accordion:defined details[open] .cagov-open-indicator:before {\n  display: none;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+  '/* initial styles */\ncagov-accordion details {\n  border-radius: var(--radius-2, 5px) !important;\n  margin-bottom: 0;\n  min-height: var(--s-5, 3rem);\n  margin-top: 0.5rem;\n  border: solid var(--border-1, 1px) var(--gray-200, #d4d4d7) !important;\n}\ncagov-accordion details summary {\n  cursor: pointer;\n  padding: var(--s-1, 0.5rem) var(--s-5, 3rem) var(--s-1, 0.5rem) var(--s-2, 1rem);\n  background-color: var(--gray-50, #fafafa);\n  position: relative;\n  line-height: var(--s-4, 2rem);\n  margin: 0;\n  color: var(--primary-700, #165ac2);\n  font-size: var(--font-size-2, 1.125rem);\n  font-weight: bold;\n}\ncagov-accordion details summary:hover {\n  background-color: var(--gray-100, #fafafa);\n  color: var(--primary-900, #003688);\n}\ncagov-accordion details .accordion-body {\n  padding: var(--s-2, 1rem);\n}\n\n/* styles applied after custom element javascript runs */\ncagov-accordion:defined {\n  /* let it be open initially if details has open attribute */\n}\ncagov-accordion:defined details {\n  transition: height var(--animation-duration-2, 0.2s);\n  height: var(--s-5, 3rem);\n  overflow: hidden;\n}\ncagov-accordion:defined details[open] {\n  height: auto;\n}\ncagov-accordion:defined summary::-webkit-details-marker {\n  display: none;\n}\ncagov-accordion:defined details summary {\n  list-style: none; /* hide default expansion triangle after js executes */\n  border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;\n}\ncagov-accordion:defined details summary:focus {\n  outline-offset: -2px;\n  outline: solid 2px var(--accent2-500, #ac8227) !important;\n  background-color: var(--gray-100, #fafafa);\n}\ncagov-accordion:defined details .cagov-open-indicator {\n  background-color: var(--primary-700, #165ac2);\n  height: 3px;\n  width: 15px;\n  border-radius: var(--border-3, 3px);\n  position: absolute;\n  right: var(--s-2, 1rem);\n  top: 1.4rem;\n}\ncagov-accordion:defined details .cagov-open-indicator:before {\n  display: block;\n  content: "";\n  position: absolute;\n  top: -6px;\n  left: 3px;\n  width: 3px;\n  height: 15px;\n  border-radius: var(--border-3, 3px);\n  border: none;\n  box-shadow: 3px 0 0 0 var(--primary-700, #165ac2);\n  background: none;\n}\ncagov-accordion:defined details[open] .cagov-open-indicator:before {\n  display: none;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 /**
  * Accordion web component that collapses and expands content inside itself on click.
@@ -17,6 +17,17 @@ var styles$5 =
  *
  */
 class CaGovAccordion extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-accordion-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-accordion-styles';
+      style.textContent = styles$5;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     this.summaryEl = this.querySelector('summary');
     // trigger the opening and closing height change animation on summary click
@@ -81,11 +92,8 @@ class CaGovAccordion extends window.HTMLElement {
     };
   }
 }
-window.customElements.define('cagov-accordion', CaGovAccordion);
 
-const style$5 = document.createElement('style');
-style$5.textContent = styles$5;
-document.querySelector('head').appendChild(style$5);
+window.customElements.define('cagov-accordion', CaGovAccordion);
 
 var styles$4 =
   '/* Back to top button */\ncagov-back-to-top .back-to-top {\n  position: fixed;\n  z-index: 99999;\n  right: -100px;\n  font-size: var(--font-size-2, 1.125rem);\n  padding: 10px 10px 10px 10px;\n  bottom: 50px;\n  opacity: 0;\n  visibility: hidden;\n  color: var(--primary-700, #004abc);\n  border: 1px solid var(--primary-700, #004abc);\n  border-radius: 5px 0px 0px 5px;\n  text-decoration: none;\n  cursor: pointer;\n  transition: all 0.5s ease;\n  background-color: #fff;\n}\n@media (max-width: 767px) {\n  cagov-back-to-top .back-to-top {\n    font-size: var(--font-size-1, 1rem);\n    padding: 8px 8px 8px 8px;\n  }\n}\ncagov-back-to-top .back-to-top:hover {\n  color: var(--primary-900, #003484);\n  border: 1px solid var(--primary-900, #003484);\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);\n}\ncagov-back-to-top .back-to-top:hover svg path {\n  fill: var(--primary-900, #003484);\n}\ncagov-back-to-top .back-to-top:focus {\n  outline: 2px solid var(--accent2-500, #ac8227);\n}\ncagov-back-to-top .back-to-top svg {\n  width: 16px;\n  position: relative;\n  top: 3px;\n}\ncagov-back-to-top .back-to-top svg path {\n  fill: var(--primary-700, #004abc);\n}\ncagov-back-to-top .back-to-top.is-visible {\n  opacity: 1;\n  visibility: visible;\n  display: inline;\n  right: 0;\n}\n\n/*# sourceMappingURL=index.css.map */\n';
@@ -113,6 +121,13 @@ class CaGovBackToTop extends window.HTMLElement {
       lastScrollTop: 0,
       timer: null,
     };
+
+    if (!document.querySelector('#cagov-back-to-top-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-back-to-top-styles';
+      style.textContent = styles$4;
+      document.querySelector('head').appendChild(style);
+    }
   }
 
   connectedCallback() {
@@ -262,12 +277,8 @@ class CaGovBackToTop extends window.HTMLElement {
 
 window.customElements.define('cagov-back-to-top', CaGovBackToTop);
 
-const style$4 = document.createElement('style');
-style$4.textContent = styles$4;
-document.querySelector('head').appendChild(style$4);
-
 var styles$3 =
-  '/* PAGE NAVIGATION */\nsidebar cagov-page-navigation .label {\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28.2px;\n  padding: 0;\n  margin: 0;\n  padding-bottom: 16px;\n}\n\nsidebar cagov-page-navigation ul,\nsidebar cagov-page-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),\nsidebar cagov-page-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {\n  margin: 0;\n  text-indent: 0;\n  padding: 0;\n}\n\nsidebar cagov-page-navigation ul li {\n  padding-top: 14px;\n  padding-bottom: 18px;\n  margin-left: 0;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  border-bottom: 1px solid var(--gray-300, #e1e0e3);\n  line-height: 28.2px;\n  list-style: none;\n}\nsidebar cagov-page-navigation ul li:first-child {\n  border-top: 1px solid var(--gray-300, #e1e0e3);\n}\nsidebar cagov-page-navigation ul li a {\n  text-decoration: none;\n}\nsidebar cagov-page-navigation ul li a:hover {\n  text-decoration: underline;\n}\n\n@media only screen and (max-width: 992px) {\n  cagov-page-navigation .label {\n    display: none;\n  }\n\n  .sidebar-container {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n  }\n\n  cagov-page-navigation ul li a {\n    font-size: 16px;\n    line-height: 24px;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
+  '/* PAGE NAVIGATION */\nsidebar cagov-page-navigation .label {\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28.2px;\n  padding: 0;\n  margin: 0;\n  padding-bottom: 16px;\n}\n\nsidebar cagov-page-navigation ul,\nsidebar cagov-page-navigation ol:not([class*=menu]):not([class*=nav]):not([class*=footer-links]),\nsidebar cagov-page-navigation ul:not([class*=menu]):not([class*=nav]):not([class*=footer-links]) {\n  margin: 0;\n  text-indent: 0;\n  padding: 0;\n}\n\nsidebar cagov-page-navigation ul li {\n  padding-top: 14px;\n  padding-bottom: 18px;\n  margin-left: 0;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  border-bottom: 1px solid var(--gray-300, #e1e0e3);\n  line-height: 28.2px;\n  list-style: none;\n}\nsidebar cagov-page-navigation ul li:first-child {\n  border-top: 1px solid var(--gray-300, #e1e0e3);\n}\nsidebar cagov-page-navigation ul li a {\n  text-decoration: none;\n}\nsidebar cagov-page-navigation ul li a:hover {\n  text-decoration: underline;\n}\n\n@media only screen and (max-width: 992px) {\n  cagov-page-navigation .label {\n    display: none;\n  }\n  .sidebar-container {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n  }\n  cagov-page-navigation ul li a {\n    font-size: 16px;\n    line-height: 24px;\n  }\n}\n\n/*# sourceMappingURL=index.css.map */\n';
 
 /**
  * Page Navigation web component
@@ -280,6 +291,17 @@ var styles$3 =
  */
 
 class CAGovPageNavigation extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-page-navigation-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-page-navigation-styles';
+      style.textContent = styles$3;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     this.type = 'wordpress';
 
@@ -672,13 +694,7 @@ class CAGovPageNavigation extends window.HTMLElement {
   }
 }
 
-if (customElements.get('cagov-page-navigation') === undefined) {
-  window.customElements.define('cagov-page-navigation', CAGovPageNavigation);
-}
-
-const style$3 = document.createElement('style');
-style$3.textContent = styles$3;
-document.querySelector('head').appendChild(style$3);
+window.customElements.define('cagov-page-navigation', CAGovPageNavigation);
 
 function ratingsTemplate(
   question,
@@ -741,6 +757,17 @@ var styles$2 =
  * @cssprop --primary-700 - Default value of #165ac2, used for background
  */
 class CAGovPageFeedback extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-page-feedback-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-page-feedback-styles';
+      style.textContent = styles$2;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     const question = this.dataset.question
       ? this.dataset.question
@@ -847,65 +874,8 @@ class CAGovPageFeedback extends window.HTMLElement {
     });
   }
 }
+
 window.customElements.define('cagov-page-feedback', CAGovPageFeedback);
-const style$2 = document.createElement('style');
-style$2.textContent = styles$2;
-document.querySelector('head').appendChild(style$2);
-
-const appendGoogleTranslateJS = () => {
-  const JS = document.createElement('script');
-  JS.type = 'text/javascript';
-  JS.defer = 'defer';
-  JS.src =
-    '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  document.body.appendChild(JS);
-};
-
-class CAGOVGoogleTranslate extends window.HTMLElement {
-  connectedCallback() {
-    this.storagekey = 'google_translate_page_used';
-
-    this.innerHTML = `<div class="quarter standard-translate d-none" id="google_translate_element">
-      <a class="goog-init" href="#">Change language</a>
-    </div>`;
-
-    this.querySelector('.goog-init').addEventListener('click', (e) => {
-      e.preventDefault();
-      sessionStorage.setItem(this.storagekey, new Date().getTime());
-      this.innerHTML =
-        '<div class="quarter standard-translate" id="google_translate_element">loading</div>';
-      this.loadGoogleTranslateJS();
-    });
-
-    this.loadGoogleTranslateJS();
-  }
-
-  loadGoogleTranslateJS() {
-    if (sessionStorage.getItem(this.storagekey)) {
-      appendGoogleTranslateJS();
-    } else {
-      this.querySelector('.standard-translate').classList.remove('d-none');
-    }
-  }
-}
-window.customElements.define('cagov-google-translate', CAGOVGoogleTranslate);
-
-// global callback function for google translate javascript load
-window.googleTranslateElementInit = () => {
-  const translateEl = document.getElementById('google_translate_element');
-  translateEl.innerHTML = '';
-  translateEl.classList.remove('d-none');
-  (() =>
-    new window.google.translate.TranslateElement(
-      {
-        pageLanguage: 'en',
-        gaTrack: !0,
-        autoDisplay: !1,
-        layout: window.google.translate.TranslateElement.InlineLayout.VERTICAL,
-      },
-      'google_translate_element',
-    ))();
-};
 
 /**
  * Dropdown menu web component
@@ -1091,8 +1061,16 @@ class CAGovSiteNavigation extends window.HTMLElement {
     allMenus.forEach((menu) => {
       const expandedEl = menu.querySelector('.expanded-menu-section');
       expandedEl.classList.remove('expanded');
-      menu.setAttribute('aria-expanded', 'false');
       const closestDropDown = menu.querySelector('.expanded-menu-dropdown');
+      if (
+        closestDropDown &&
+        closestDropDown.id &&
+        menu.querySelector(`button[aria-controls=${closestDropDown.id}]`)
+      ) {
+        menu
+          .querySelector(`button[aria-controls=${closestDropDown.id}]`)
+          .setAttribute('aria-expanded', 'false');
+      }
       if (closestDropDown) {
         closestDropDown.setAttribute('aria-hidden', 'true');
         const allLinks = closestDropDown.querySelectorAll('a');
@@ -1113,7 +1091,17 @@ class CAGovSiteNavigation extends window.HTMLElement {
         );
         if (nearestMenuDropDown) {
           nearestMenuDropDown.setAttribute('aria-hidden', 'true');
-          menu.setAttribute('aria-expanded', 'false');
+          if (
+            nearestMenuDropDown &&
+            nearestMenuDropDown.id &&
+            menu.querySelector(
+              `button[aria-controls=${nearestMenuDropDown.id}]`,
+            )
+          ) {
+            menu
+              .querySelector(`button[aria-controls=${nearestMenuDropDown.id}]`)
+              .setAttribute('aria-expanded', 'false');
+          }
         }
       }
       const menuComponent = this;
@@ -1129,10 +1117,18 @@ class CAGovSiteNavigation extends window.HTMLElement {
           } else {
             menuComponent.closeAllMenus();
             expandedEl.classList.add('expanded');
-            menu.setAttribute('aria-expanded', 'true');
             const closestDropDown = this.querySelector(
               '.expanded-menu-dropdown',
             );
+            if (
+              closestDropDown &&
+              closestDropDown.id &&
+              menu.querySelector(`button[aria-controls=${closestDropDown.id}]`)
+            ) {
+              menu
+                .querySelector(`button[aria-controls=${closestDropDown.id}]`)
+                .setAttribute('aria-expanded', 'true');
+            }
             if (closestDropDown) {
               closestDropDown.setAttribute('aria-hidden', 'false');
               const allLinks = closestDropDown.querySelectorAll('a');
@@ -1157,6 +1153,17 @@ var styles$1 =
  */
 
 class CAGovPageAlert extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-page-alert-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-page-alert-styles';
+      style.textContent = styles$1;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     this.message = this.dataset.message || '';
     this.icon = this.dataset.icon || '';
@@ -1191,12 +1198,7 @@ class CAGovPageAlert extends window.HTMLElement {
   }
 }
 
-if (customElements.get('cagov-page-alert') === undefined) {
-  window.customElements.define('cagov-page-alert', CAGovPageAlert);
-}
-const style$1 = document.createElement('style');
-style$1.textContent = styles$1;
-document.querySelector('head').appendChild(style$1);
+window.customElements.define('cagov-page-alert', CAGovPageAlert);
 
 function pageListItem(label, number) {
   return `<li class="cagov-pagination__item">
@@ -1291,6 +1293,17 @@ var styles =
  * @cssprop --primary-700 - Default value of #165ac2, used for text, border color
  */
 class CAGovPagination extends window.HTMLElement {
+  constructor() {
+    super();
+
+    if (!document.querySelector('#cagov-pagination-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cagov-pagination-styles';
+      style.textContent = styles;
+      document.querySelector('head').appendChild(style);
+    }
+  }
+
   connectedCallback() {
     this.currentPage = parseInt(
       this.dataset.currentPage ? this.dataset.currentPage : '1',
@@ -1379,10 +1392,8 @@ class CAGovPagination extends window.HTMLElement {
     );
   }
 }
+
 window.customElements.define('cagov-pagination', CAGovPagination);
-const style = document.createElement('style');
-style.textContent = styles;
-document.querySelector('head').appendChild(style);
 
 /* PDF ICON */
 function placePdfIcons() {

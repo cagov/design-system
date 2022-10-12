@@ -46,6 +46,14 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 3. Add the **sample markup** to your HTML.
 4. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 
+### CDN installation
+
+We recommend using a build system and bundling your JavaScript for faster performance. If you do not use a build system, you can include the code from our CDN with a script tag.
+
+```html
+<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-page-feedback/v1.1.3/dist/index.js"></script>
+```
+
 ### Other information
 
 - The page feedback component requires the `data-endpoint-url=""` attribute for the endpoint to POST data to if the user submits a comment.

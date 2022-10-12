@@ -1,5 +1,9 @@
 # Link icon Changelog
 
+## 2.0.0
+* Add JS to dist folder.
+* Insert CSS via JS.
+
 
 ## 1.1.2
 

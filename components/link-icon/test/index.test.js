@@ -2,7 +2,7 @@ import { expect, fixture, html } from '@open-wc/testing';
 /* this test file can be run on command line with npm run test
    or with visual debug via npm run test:visual */
 
-import { linkAnnotator, placePdfIcons } from '../src/index.js';
+import { linkAnnotator, placePdfIcons } from '../dist/index.js';
 
 describe('CAGOV Link Icon', function unitTest() {
   // EXTERNAL LINK UNIT TESTS

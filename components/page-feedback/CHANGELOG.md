@@ -1,5 +1,7 @@
 # Page feedback changelog
 
+## 1.1.3
+* Changes to how styles are inserted into the document.
 
 ## 1.1.2
 * Updated color variables to go inline with CEILAB color palette.

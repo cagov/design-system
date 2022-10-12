@@ -50,10 +50,17 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 
 1. `npm i @cagov/ds-link-icon`
 2. Use `import`[¹](/footnotes/#footnote1) or `require` to include the component’s **JavaScript** in your page or compiler.
-3. Include **SCSS** in your Sass compiler.
 4. Add the **sample markup** to your HTML.
 5. Refer to the [Content model section](#content-model) for notes on mapping your data to the **sample markup**.
 6. Note that the `<a>` tags must be inside the `<main>` tag and external link to icons are required.
+
+### CDN installation
+
+We recommend using a build system and bundling your JavaScript for faster performance. If you do not use a build system, you can include the code from our CDN with a script tag.
+
+```html
+<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-link-icon/v2.0.0/dist/index.js"></script>
+```
 
 ### Other dependencies
 
