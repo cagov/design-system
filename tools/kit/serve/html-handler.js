@@ -3,10 +3,11 @@ import { promises as fs, existsSync } from 'fs';
 import path from 'path';
 import url from 'url';
 
-const thisDir = url.fileURLToPath(path.dirname(import.meta.url)); 
+const thisDir = url.fileURLToPath(path.dirname(import.meta.url));
+const templatesDir = `${thisDir}/templates`;
 
-nunjucks.configure(thisDir, {
-  autoescape: true
+nunjucks.configure(templatesDir, {
+  autoescape: true,
 });
 
 // Handle templated HTML.
@@ -19,16 +20,17 @@ export const htmlHandler = async (ctx) => {
   const renderAttributes = {};
 
   // Load the given HTML file.
-  await fs.readFile(ctx.state.filePath)
-    .then(buf => buf.toString())
+  await fs
+    .readFile(ctx.state.filePath)
+    .then((buf) => buf.toString())
     .catch(() => {
       // If file not found, we'll supply our own "not found" HTML.
       ctx.status = 404;
       return `<p>File not found: ${ctx.state.filePath}</p>`;
     })
-    .then(str => { 
+    .then((str) => {
       // Prepare the HTML for nunjucks.
-      renderAttributes.content = nunjucks.compile(str); 
+      renderAttributes.content = nunjucks.compile(str);
     });
 
   const jsFileExists = existsSync('src/index.js');
@@ -36,8 +38,9 @@ export const htmlHandler = async (ctx) => {
     renderAttributes.packageJS = true;
   }
 
-  const cssFileExists = existsSync('src/index.css') || existsSync('src/index.scss');
-  if (cssFileExists) {
+  const cssFileExists = existsSync('src/index.css');
+  const sassFileExists = existsSync('src/index.scss');
+  if (cssFileExists || sassFileExists) {
     renderAttributes.packageCSS = true;
   }
 

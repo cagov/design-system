@@ -19,6 +19,10 @@
       }
     </script>
 
+    {% if baseCSS %}
+      <link id="template-base-css" rel="stylesheet" href="/_templates/base-css.css" />
+    {% endif %}
+
     {% if packageCSS %}
       <link id="package-css" rel="stylesheet" href="/_src/index.css" />
     {% endif %}
@@ -28,7 +32,6 @@
     {% endif %}
   </head>
   <body>
-    <h1>Templated</h1>
     {% include content %}
   </body>
 </html>

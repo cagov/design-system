@@ -13,10 +13,10 @@ export const jsHandler = async (ctx) => {
       bundle: true,
       format: 'esm',
       write: false,
-      loader: { 
+      loader: {
         '.css': 'text',
-        '.html': 'text'
-      }
+        '.html': 'text',
+      },
     });
 
     js = result.outputFiles[0].text;
@@ -25,9 +25,9 @@ export const jsHandler = async (ctx) => {
   // Deliver.
   if (js) {
     ctx.body = js;
-    ctx.type = "text/javascript";
+    ctx.type = 'text/javascript';
   } else {
-    ctx.body = "Not found";
+    ctx.body = 'Not found';
     ctx.status = 404;
   }
 };

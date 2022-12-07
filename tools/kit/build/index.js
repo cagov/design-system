@@ -9,7 +9,9 @@ export const build = async () => {
   // If a plain CSS file exists, serve it.
   const cssFileExists = existsSync('src/index.css');
   if (cssFileExists) {
-    const cssFile = await fs.readFile('src/index.css').then(buf => buf.toString());
+    const cssFile = await fs
+      .readFile('src/index.css')
+      .then((buf) => buf.toString());
     css = cssFile;
   }
 
@@ -36,10 +38,10 @@ export const build = async () => {
       bundle: true,
       format: 'esm',
       write: false,
-      loader: { 
+      loader: {
         '.css': 'text',
-        '.html': 'text'
-      }
+        '.html': 'text',
+      },
     });
 
     js = result.outputFiles[0].text;
@@ -48,4 +50,4 @@ export const build = async () => {
   if (js) {
     await fs.writeFile('dist/index.js', js);
   }
-}
+};
