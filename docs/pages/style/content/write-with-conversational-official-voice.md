@@ -73,4 +73,4 @@ Check your writing against these traits to make sure it’s conversational and o
 
 Style guides help you be consistent across your content. They standardize the way to write punctuation, dates, numbers, and other elements. Adopt an existing style guide if you often have questions about how to write something.
 
-If you want to adopt a style, but do not know how to choose one, Associated Press (AP) Style is a good choice.
+If you want to adopt a style, but do not know how to choose one, [Associated Press (AP) Style](https://store.stylebooks.com/) is a good choice.
