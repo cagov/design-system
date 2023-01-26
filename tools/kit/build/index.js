@@ -49,5 +49,6 @@ export const build = async () => {
 
   if (js) {
     await fs.writeFile('dist/index.js', js);
+    console.log('Component built.')
   }
 };

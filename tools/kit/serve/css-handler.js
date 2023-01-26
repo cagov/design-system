@@ -23,13 +23,17 @@ export const cssHandler = async (ctx) => {
       const result = sass.compile(sassFilePath, {
         sourceMap: false,
         sourceMapIncludeSources: false,
-        importers: [{
-          findFileUrl: (u) => {
-            if (!u.startsWith('~')) return null;
-            // console.log(new URL(`${url.pathToFileURL('node_modules')}/${u.substring(1)}`))
-            return new URL(`${url.pathToFileURL('node_modules')}/${u.substring(1)}`);
-          }
-        }]
+        importers: [
+          {
+            findFileUrl: (u) => {
+              if (!u.startsWith('~')) return null;
+              // console.log(new URL(`${url.pathToFileURL('node_modules')}/${u.substring(1)}`))
+              return new URL(
+                `${url.pathToFileURL('node_modules')}/${u.substring(1)}`,
+              );
+            },
+          },
+        ],
       });
       css = result.css;
     }

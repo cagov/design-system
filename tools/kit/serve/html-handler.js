@@ -1,14 +1,15 @@
 import nunjucks from 'nunjucks';
-import { promises as fs, existsSync } from 'fs';
+import { promises as fs, readFileSync, existsSync } from 'fs';
 import path from 'path';
 import url from 'url';
 
 const thisDir = url.fileURLToPath(path.dirname(import.meta.url));
 const templatesDir = `${thisDir}/templates`;
 
-nunjucks.configure(templatesDir, {
-  autoescape: true,
-});
+const nunjucksEnv = new nunjucks.Environment({ autoescape: true })
+const layoutStr = readFileSync(`${templatesDir}/layout.njk`, 'utf-8');
+console.log(layoutStr)
+const layout = nunjucks.compile(layoutStr, nunjucksEnv);
 
 // Handle templated HTML.
 export const htmlHandler = async (ctx) => {
@@ -44,8 +45,10 @@ export const htmlHandler = async (ctx) => {
     renderAttributes.packageCSS = true;
   }
 
+  console.log(renderAttributes)
+
   // Render the HTML file into the template.
-  const body = nunjucks.render('layout.njk', renderAttributes);
+  const body = layout.render(renderAttributes);
 
   // Return the result.
   ctx.body = body;

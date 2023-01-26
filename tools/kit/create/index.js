@@ -109,7 +109,7 @@ export const create = async () => {
     cssFlavor,
     jsInclude,
     // jsFlavor,
-    baseCssInclude
+    baseCssInclude,
   } = responses;
 
   if (existsSync(module)) {
