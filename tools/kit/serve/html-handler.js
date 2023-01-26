@@ -6,9 +6,9 @@ import url from 'url';
 const thisDir = url.fileURLToPath(path.dirname(import.meta.url));
 const templatesDir = `${thisDir}/templates`;
 
-const nunjucksEnv = new nunjucks.Environment({ autoescape: true })
+const nunjucksEnv = new nunjucks.Environment({ autoescape: true });
 const layoutStr = readFileSync(`${templatesDir}/layout.njk`, 'utf-8');
-console.log(layoutStr)
+console.log(layoutStr);
 const layout = nunjucks.compile(layoutStr, nunjucksEnv);
 
 // Handle templated HTML.
@@ -45,7 +45,7 @@ export const htmlHandler = async (ctx) => {
     renderAttributes.packageCSS = true;
   }
 
-  console.log(renderAttributes)
+  console.log(renderAttributes);
 
   // Render the HTML file into the template.
   const body = layout.render(renderAttributes);

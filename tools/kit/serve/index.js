@@ -7,12 +7,9 @@ import { createRouter } from './router.js';
 import { createSocketRouter } from './watcher.js';
 
 export const serve = (options) => {
-  const { 
-    port = 3000,
-    dir
-  } = options;
+  const { port = 3000, dir } = options;
 
-  console.log(options)
+  console.log(options);
 
   const fontsDir = `${options.dirs.command}/templates/fonts`;
   const serveDir = dir ? `${dir}/` : '';
@@ -21,9 +18,7 @@ export const serve = (options) => {
 
   const socketRouter = createSocketRouter();
 
-  app.ws
-    .use(socketRouter.routes())
-    .use(socketRouter.allowedMethods());
+  app.ws.use(socketRouter.routes()).use(socketRouter.allowedMethods());
 
   app.use(koaMount('/fonts', serveStatic(fontsDir)));
 
@@ -37,7 +32,9 @@ export const serve = (options) => {
       .replace(serveDir, '') // Remove any supplied dir from front of path.
       .replace(/^\/+|\/+$/g, ''); // Remove slashes from front and back
 
-    app.use(koaMount(`/${exampleRoute}`, serveStatic(exampleDir, { defer: true })));
+    app.use(
+      koaMount(`/${exampleRoute}`, serveStatic(exampleDir, { defer: true })),
+    );
   });
 
   const packageFiles = glob.sync(`${serveDir}**/package.json`);
@@ -53,16 +50,13 @@ export const serve = (options) => {
 
     return {
       dir: packageDir,
-      route: packageRoute
+      route: packageRoute,
     };
   });
 
   const router = createRouter(options, components);
 
-  app
-    .use(router.routes())
-    .use(router.allowedMethods())
-    .listen(port);
-  
+  app.use(router.routes()).use(router.allowedMethods()).listen(port);
+
   console.log(`Dev server started: http://localhost:${port}`);
 };

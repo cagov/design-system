@@ -18,8 +18,8 @@ const insertFacts = (argv) => {
     dirs: {
       current: currentDir,
       kit: kitDir,
-      command: commandDir
-    }
+      command: commandDir,
+    },
   };
   const options = Object.assign(argv, commonFacts);
   return options;
@@ -29,23 +29,24 @@ yargs(hideBin(process.argv))
   .command(
     'serve',
     "Start the component's dev server.",
-    (y) => y
-      .option('port', {
-        describe: 'Provide a port number for the dev server.',
-        default: 3000,
-        alias: 'p',
-      })
-      .option('dir', {
-        describe: 'Serve from a different directory.',
-        default: '',
-        alias: 'd',
-      })
-      .option('many', {
-        describe: 'Serve a folder of many components.',
-        default: false,
-        type: 'boolean',
-        alias: 'm',
-      }),
+    (y) =>
+      y
+        .option('port', {
+          describe: 'Provide a port number for the dev server.',
+          default: 3000,
+          alias: 'p',
+        })
+        .option('dir', {
+          describe: 'Serve from a different directory.',
+          default: '',
+          alias: 'd',
+        })
+        .option('many', {
+          describe: 'Serve a folder of many components.',
+          default: false,
+          type: 'boolean',
+          alias: 'm',
+        }),
     (argv) => serve(insertFacts(argv)),
   )
   .command(

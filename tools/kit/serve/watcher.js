@@ -14,29 +14,29 @@ export const createSocketRouter = () => {
   const socketRouter = new Router();
 
   const eventEmitter = new events.EventEmitter();
-  
+
   // Watches for file changes.
   const watcher = chokidar.watch('.', {
     ignored: '**/node_modules/**',
     ignoreInitial: true,
   });
-  
+
   // Emits file change events.
   const notifyFile = (verb, filePath) => {
     console.log(`File ${verb}: ${filePath}. Reloading browser.`);
     eventEmitter.emit('file_changed');
   };
-  
+
   // Performs the following actions on file changes.
   watcher
     .on('add', (filePath) => notifyFile('added', filePath))
     .on('change', (filePath) => notifyFile('changed', filePath))
     .on('unlink', (filePath) => notifyFile('removed', filePath));
-  
+
   // Websockets server.
   socketRouter.get('/', async (ctx) => {
     ctx.websocket.send('connected');
-  
+
     // Tell the browser to reload whenever a file changes.
     eventEmitter.once('file_changed', () => {
       ctx.websocket.send('reload');
@@ -44,4 +44,4 @@ export const createSocketRouter = () => {
   });
 
   return socketRouter;
-}
+};
