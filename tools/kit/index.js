@@ -14,9 +14,11 @@ const kitDir = url.fileURLToPath(path.dirname(import.meta.url));
 
 const insertFacts = (argv) => {
   const commandDir = `${kitDir}/${argv._[0]}`;
+  const targetDir = path.resolve(argv.dir);
   const commonFacts = {
     dirs: {
       current: currentDir,
+      target: targetDir,
       kit: kitDir,
       command: commandDir,
     },

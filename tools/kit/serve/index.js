@@ -3,6 +3,7 @@ import serveStatic from 'koa-static';
 import koaMount from 'koa-mount';
 import websockify from 'koa-websocket';
 import glob from 'glob';
+import path from 'path';
 import { createRouter } from './router.js';
 import { createSocketRouter } from './watcher.js';
 
@@ -22,39 +23,31 @@ export const serve = (options) => {
 
   app.use(koaMount('/fonts', serveStatic(fontsDir)));
 
-  const exampleDirs = glob
+  const examples = glob
     .sync(`${serveDir}**/examples`)
-    .filter((exampleDir) => !exampleDir.includes('node_modules'));
+    .filter((exampleDir) => !exampleDir.includes('node_modules'))
+    .map((exampleDir) => {
+      const exampleRoute = exampleDir
+        .replace(/examples$/g, '') // Remove "examples" from end of path
+        .replace(serveDir, '') // Remove any supplied dir from front of path.
+        .replace(/^\/+|\/+$/g, ''); // Remove slashes from front and back
+      
+      const absoluteDir = path.resolve(exampleDir);
 
-  exampleDirs.forEach((exampleDir) => {
-    const exampleRoute = exampleDir
-      .replace(/examples$/g, '') // Remove "examples" from end of path
-      .replace(serveDir, '') // Remove any supplied dir from front of path.
-      .replace(/^\/+|\/+$/g, ''); // Remove slashes from front and back
+      return {
+        exampleDir,
+        exampleRoute,
+        absoluteDir
+      };
+    });
 
+  examples.forEach(({ exampleDir, exampleRoute }) => {
     app.use(
       koaMount(`/${exampleRoute}`, serveStatic(exampleDir, { defer: true })),
     );
   });
 
-  const packageFiles = glob.sync(`${serveDir}**/package.json`);
-
-  const components = packageFiles.map((packageFile) => {
-    const packageDir = packageFile
-      .replace('package.json', '') // Remove package.json to expose directory
-      .replace(/\/+$/g, ''); // Remove slashes from back
-
-    const packageRoute = packageDir
-      .replace(serveDir, '') // Remove any supplied dir from front of path
-      .replace(/^\/+|\/+$/g, ''); // Remove slashes from front and back
-
-    return {
-      dir: packageDir,
-      route: packageRoute,
-    };
-  });
-
-  const router = createRouter(options, components);
+  const router = createRouter(options, serveDir, examples);
 
   app.use(router.routes()).use(router.allowedMethods()).listen(port);
 

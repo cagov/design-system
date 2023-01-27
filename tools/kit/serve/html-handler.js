@@ -8,7 +8,6 @@ const templatesDir = `${thisDir}/templates`;
 
 const nunjucksEnv = new nunjucks.Environment({ autoescape: true });
 const layoutStr = readFileSync(`${templatesDir}/layout.njk`, 'utf-8');
-console.log(layoutStr);
 const layout = nunjucks.compile(layoutStr, nunjucksEnv);
 
 // Handle templated HTML.
@@ -44,8 +43,6 @@ export const htmlHandler = async (ctx) => {
   if (cssFileExists || sassFileExists) {
     renderAttributes.packageCSS = true;
   }
-
-  console.log(renderAttributes);
 
   // Render the HTML file into the template.
   const body = layout.render(renderAttributes);

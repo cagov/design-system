@@ -3,16 +3,16 @@ import { htmlHandler } from './html-handler.js';
 import { cssHandler } from './css-handler.js';
 import { jsHandler } from './js-handler.js';
 
-export const createRouter = (options, components) => {
+export const createRouter = (options, serveDir, examples) => {
   const { dirs } = options;
 
   const router = new Router();
 
   // Append index.html to directory requests.
-  const indexRoutes = components.flatMap((component) => [
-    `/${component.route}`,
-    `/${component.route}/`,
-    `/${component.route}/(.*)/`,
+  const indexRoutes = examples.flatMap((example) => [
+    `/${example.exampleRoute}`,
+    `/${example.exampleRoute}/`,
+    `/${example.exampleRoute}/(.*)/`,
   ]);
   router.get(['/', '/(.*)/', ...indexRoutes], (ctx) => {
     const index =
@@ -22,56 +22,40 @@ export const createRouter = (options, components) => {
     ctx.redirect(index);
   });
 
-  // Find the file for each request.
-  const fileRoutes = components.map((component) => `/${component.route}/(.*)`);
-  router.get([`/(.*)`, ...fileRoutes], async (ctx, next) => {
-    let filePath;
+  router.get(['/_src/(.*)', '/(.*)/_src/(.*)'], async (ctx, next) => {
+    ctx.state.filePath = `${dirs.target}${ctx.path.replace('/_src/', '/src/')}`;
+    await next();
+  });
 
-    components.forEach((component) => {
-      // Redefine the file path for special package-related paths.
-      ['src', 'dist'].forEach((prefix) => {
-        if (ctx.path.startsWith(`/${component.route}/_${prefix}/`)) {
-          filePath = ctx.path.replace(
-            `/${component.route}/_${prefix}/`,
-            `${component.dir}/${prefix}/`,
-          );
+  router.get(['/_dist/(.*)', '/(.*)/_dist/(.*)'], async (ctx, next) => {
+    ctx.state.filePath = `${dirs.target}${ctx.path.replace('/_dist/', '/dist/')}`;
+    await next();
+  });
+
+  router.get(['/_templates/(.*)', '/(.*)/_templates/(.*)'], async (ctx, next) => {
+    const templateFile = ctx.path.substring(ctx.path.indexOf('_templates/') + 11);
+    ctx.state.filePath = `${dirs.command}/templates/${templateFile}`;
+    await next();
+  });
+
+  examples.forEach((example) => {
+    if (example.exampleRoute) {
+      router.get(`/${example.exampleRoute}/(.*)`, async (ctx, next) => {
+        if (!ctx.state.filePath) {
+          const exampleFile = ctx.path.replace(`/${example.exampleRoute}/`, '');
+          ctx.state.filePath = `${example.absoluteDir}/${exampleFile}`;
         }
+        await next();
       });
-      // Redefine the file path for special template-related paths.
-      if (ctx.path.startsWith(`/${component.route}/_templates/`)) {
-        filePath = ctx.path.replace(
-          `/${component.route}/_templates/`,
-          `${dirs.command}/templates/`,
-        );
-      }
-      // Otherwise, point to the examples folder.
-      if (!filePath) {
-        filePath = `${component.dir}/examples${ctx.path.replace(
-          `/${component.route}`,
-          '',
-        )}`;
-      }
-    });
-
-    // Redefine the file path for special package-related paths.
-    ['src', 'dist'].forEach((prefix) => {
-      if (ctx.path.startsWith(`/_${prefix}/`)) {
-        filePath = ctx.path.replace(`/_${prefix}/`, `${prefix}/`);
-      }
-    });
-
-    // Redefine the file path for special template-related paths.
-    if (ctx.path.startsWith(`/_templates/`)) {
-      filePath = ctx.path.replace(`/_templates/`, `${dirs.command}/templates/`);
     }
+  });
 
+  // Find the file for each request.
+  router.get([`/(.*)`], async (ctx, next) => {
     // Otherwise, point to the examples folder.
-    if (!filePath) {
-      filePath = `examples${ctx.path}`;
+    if (!ctx.state.filePath) {
+      ctx.state.filePath = `${dirs.target}/examples${ctx.path}`;
     }
-
-    // Pass the filePath to subsequent middlewares.
-    ctx.state.filePath = filePath;
 
     // Defer to next middleware.
     await next();
