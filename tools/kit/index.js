@@ -12,15 +12,15 @@ import { create } from './create/index.js';
 const currentDir = process.cwd();
 const kitDir = url.fileURLToPath(path.dirname(import.meta.url));
 
-const insertFacts = (argv) => {
+const withFacts = (argv) => {
   const commandDir = `${kitDir}/${argv._[0]}`;
   const targetDir = path.resolve(argv.dir);
   const commonFacts = {
     dirs: {
-      current: currentDir,
-      target: targetDir,
-      kit: kitDir,
-      command: commandDir,
+      current: currentDir, // The current directory of the CLI
+      target: targetDir, // The targetted directory of the tool
+      kit: kitDir, // The directory of this tool.
+      command: commandDir, // The directory of this tool's requested mode
     },
   };
   const options = Object.assign(argv, commonFacts);
@@ -42,14 +42,8 @@ yargs(hideBin(process.argv))
           describe: 'Serve from a different directory.',
           default: '',
           alias: 'd',
-        })
-        .option('many', {
-          describe: 'Serve a folder of many components.',
-          default: false,
-          type: 'boolean',
-          alias: 'm',
         }),
-    (argv) => serve(insertFacts(argv)),
+    (argv) => serve(withFacts(argv)),
   )
   .command(
     'build',

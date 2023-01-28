@@ -12,6 +12,10 @@ const layout = nunjucks.compile(layoutStr, nunjucksEnv);
 
 // Handle templated HTML.
 export const htmlHandler = async (ctx) => {
+  const {
+    state: { filePath },
+  } = ctx;
+
   // If the path ends with .raw.html, pass. Don't template it.
   if (ctx.path.endsWith('.raw.html')) {
     return;
@@ -21,25 +25,28 @@ export const htmlHandler = async (ctx) => {
 
   // Load the given HTML file.
   await fs
-    .readFile(ctx.state.filePath)
+    .readFile(filePath)
     .then((buf) => buf.toString())
     .catch(() => {
       // If file not found, we'll supply our own "not found" HTML.
       ctx.status = 404;
-      return `<p>File not found: ${ctx.state.filePath}</p>`;
+      return `<p>File not found: ${filePath}</p>`;
     })
     .then((str) => {
       // Prepare the HTML for nunjucks.
       renderAttributes.content = nunjucks.compile(str);
     });
 
-  const jsFileExists = existsSync('src/index.js');
+  const componentPathIndex = filePath.indexOf('/examples');
+  const componentPath = filePath.substring(0, componentPathIndex);
+
+  const jsFileExists = existsSync(`${componentPath}/src/index.js`);
   if (jsFileExists) {
     renderAttributes.packageJS = true;
   }
 
-  const cssFileExists = existsSync('src/index.css');
-  const sassFileExists = existsSync('src/index.scss');
+  const cssFileExists = existsSync(`${componentPath}/src/index.css`);
+  const sassFileExists = existsSync(`${componentPath}/src/index.scss`);
   if (cssFileExists || sassFileExists) {
     renderAttributes.packageCSS = true;
   }

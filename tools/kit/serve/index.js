@@ -8,48 +8,56 @@ import { createRouter } from './router.js';
 import { createSocketRouter } from './watcher.js';
 
 export const serve = (options) => {
-  const { port = 3000, dir } = options;
+  const { port, dirs } = options;
 
-  console.log(options);
-
-  const fontsDir = `${options.dirs.command}/templates/fonts`;
-  const serveDir = dir ? `${dir}/` : '';
-
+  // Initialize a websockets-enabled Koa app.
   const app = websockify(new Koa());
 
+  // Initialize the websockets router. Add it to the Koa app.
   const socketRouter = createSocketRouter();
-
   app.ws.use(socketRouter.routes()).use(socketRouter.allowedMethods());
 
+  // This is where Base CSS expects to find fonts.
+  // Can't be helped here.
+  const fontsDir = `${dirs.command}/templates/fonts`;
   app.use(koaMount('/fonts', serveStatic(fontsDir)));
 
+  // Find all the "examples" folders.
   const examples = glob
-    .sync(`${serveDir}**/examples`)
+    .sync(`${dirs.target}/**/examples`)
     .filter((exampleDir) => !exampleDir.includes('node_modules'))
     .map((exampleDir) => {
+      // This route is how you'll access this folder via URL.
       const exampleRoute = exampleDir
         .replace(/examples$/g, '') // Remove "examples" from end of path
-        .replace(serveDir, '') // Remove any supplied dir from front of path.
+        .replace(dirs.target, '') // Remove any supplied dir from front of path.
         .replace(/^\/+|\/+$/g, ''); // Remove slashes from front and back
-      
+
+      // Get the full, absolute file system path.
       const absoluteDir = path.resolve(exampleDir);
 
       return {
         exampleDir,
         exampleRoute,
-        absoluteDir
+        absoluteDir,
       };
     });
 
+  // Set up static file servers for each "examples" folder.
+  // { defer: true } ensures we can process assets in subsequent middlewares.
   examples.forEach(({ exampleDir, exampleRoute }) => {
     app.use(
       koaMount(`/${exampleRoute}`, serveStatic(exampleDir, { defer: true })),
     );
   });
 
-  const router = createRouter(options, serveDir, examples);
+  // Create the router for our components.
+  const router = createRouter(options, examples);
 
+  // Start up the app!
   app.use(router.routes()).use(router.allowedMethods()).listen(port);
 
+  console.log('Entering serve mode');
+  console.log(`Serving from: ${dirs.target}`);
   console.log(`Dev server started: http://localhost:${port}`);
 };
