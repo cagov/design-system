@@ -30,15 +30,35 @@ export const serve = (options) => {
       // This route is how you'll access this folder via URL.
       const exampleRoute = exampleDir
         .replace(/examples$/g, '') // Remove "examples" from end of path
-        .replace(dirs.target, '') // Remove any supplied dir from front of path.
+        .replace(dirs.target, '') // Remove any supplied dir from front of path
         .replace(/^\/+|\/+$/g, ''); // Remove slashes from front and back
 
       // Get the full, absolute file system path.
       const absoluteDir = path.resolve(exampleDir);
 
+      // Get all the HTML files in this example folder.
+      const exampleFiles =  glob
+        .sync(`${absoluteDir}/**/*.html`)
+        .map((exampleFile) => {
+          const fileStem = exampleFile.replace(exampleDir, '');
+          const fileName = fileStem.replace(/^\/+/g, ''); 
+          const fileRoute = `/${exampleRoute}/${fileName}`.replace('//', '/');
+          return {
+            fileName,
+            fileRoute
+          }
+        });
+
+      // Get the name of the parent folder.
+      const exampleName = absoluteDir
+        .replace(/\/examples$/g, '') // Remove '/examples' from the end
+        .replace(/^.+\//, ''); // Remove everything before final slash from front
+
       return {
         exampleDir,
         exampleRoute,
+        exampleFiles,
+        exampleName,
         absoluteDir,
       };
     });
@@ -58,6 +78,7 @@ export const serve = (options) => {
   app.use(router.routes()).use(router.allowedMethods()).listen(port);
 
   console.log('Entering serve mode');
-  console.log(`Serving from: ${dirs.target}`);
-  console.log(`Dev server started: http://localhost:${port}`);
+  console.log(`Serving from ${dirs.target}`);
+  console.log(`Dev server started at http://localhost:${port}`)
+  console.log(`Components listed at http://localhost:${port}/_meta/digest.html`);
 };

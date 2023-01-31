@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components Digest</title>
+
+    <link id="template-base-css" rel="stylesheet" href="/_templates/base-css.css" />
+  </head>
+  <body>
+    {% for example in examples %}
+      <h2>{{ example.exampleName }}</h2>
+      <ul>
+        {% for file in example.exampleFiles %}
+          <li><a href="{{ file.fileRoute }}">{{ file.fileName }}</a></li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No components found</p>
+    {% endfor %}
+  </body>
+</html>
