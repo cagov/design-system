@@ -37,16 +37,16 @@ export const serve = (options) => {
       const absoluteDir = path.resolve(exampleDir);
 
       // Get all the HTML files in this example folder.
-      const exampleFiles =  glob
+      const exampleFiles = glob
         .sync(`${absoluteDir}/**/*.html`)
         .map((exampleFile) => {
           const fileStem = exampleFile.replace(exampleDir, '');
-          const fileName = fileStem.replace(/^\/+/g, ''); 
+          const fileName = fileStem.replace(/^\/+/g, '');
           const fileRoute = `/${exampleRoute}/${fileName}`.replace('//', '/');
           return {
             fileName,
-            fileRoute
-          }
+            fileRoute,
+          };
         });
 
       // Get the name of the parent folder.
@@ -79,6 +79,8 @@ export const serve = (options) => {
 
   console.log('Entering serve mode');
   console.log(`Serving from ${dirs.target}`);
-  console.log(`Dev server started at http://localhost:${port}`)
-  console.log(`Components listed at http://localhost:${port}/_meta/digest.html`);
+  console.log(`Dev server started at http://localhost:${port}`);
+  console.log(
+    `Components listed at http://localhost:${port}/_meta/digest.html`,
+  );
 };

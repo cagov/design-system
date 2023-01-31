@@ -3,12 +3,10 @@ import { readFileSync } from 'fs';
 
 // Handle templated HTML.
 export const createDigestHandler = (options, examples) => {
-  const {
-    dirs
-  } = options;
+  const { dirs } = options;
 
   const templatesDir = `${dirs.command}/templates`;
-  
+
   const nunjucksEnv = new nunjucks.Environment({ autoescape: true });
   const digestStr = readFileSync(`${templatesDir}/digest.njk`, 'utf-8');
   const digest = nunjucks.compile(digestStr, nunjucksEnv);
@@ -20,4 +18,4 @@ export const createDigestHandler = (options, examples) => {
     // Return the result.
     ctx.body = body;
   };
-}; 
+};

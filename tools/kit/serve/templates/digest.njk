@@ -9,15 +9,24 @@
     <link id="template-base-css" rel="stylesheet" href="/_templates/base-css.css" />
   </head>
   <body>
-    {% for example in examples %}
-      <h2>{{ example.exampleName }}</h2>
-      <ul>
-        {% for file in example.exampleFiles %}
-          <li><a href="{{ file.fileRoute }}">{{ file.fileName }}</a></li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>No components found</p>
-    {% endfor %}
+    <main style="margin: 2rem;">
+      {% for example in examples %}
+        <h2>{{ example.exampleName }}</h2>
+        <ul>
+          {% for file in example.exampleFiles %}
+            <li>
+              <a href="{{ file.fileRoute }}">{{ file.fileName }}</a>
+              (
+                <a href="{{ file.fileRoute }}?noJS">No JS</a>
+                | <a href="{{ file.fileRoute }}?noCSS">No CSS</a>
+                | <a href="{{ file.fileRoute }}?noBASE">No Base CSS</a>
+              )
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No components found</p>
+      {% endfor %}
+    </main>
   </body>
 </html>

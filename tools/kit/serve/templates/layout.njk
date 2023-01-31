@@ -8,7 +8,7 @@
 
     <script id="live-reloader" type="module">
       const socket = new WebSocket(`ws://${location.host}/`);
-      socket.onmessage = (event) => {
+      socket.addEventListener('message', (event) => {
         if (event.data == "connected") {
           console.log('Live reload connected.');
         }
@@ -16,7 +16,8 @@
           socket.close();
           location.reload();
         }
-      }
+        return false;
+      });
     </script>
 
     {% if baseCSS %}
