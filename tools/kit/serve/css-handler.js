@@ -1,50 +1,61 @@
-import { promises as fs, existsSync } from 'fs';
+import { promises as fs } from 'fs';
 import sass from 'sass';
 import url from 'url';
 
 // Handle CSS and Sass.
 export const cssHandler = async (ctx) => {
-  let css;
+  const cssPath = ctx.state.filePath;
+  const cssPromise = new Promise((resolve, reject) =>
+    fs
+      .readFile(cssPath, 'utf-8')
+      .then((str) =>
+        resolve({
+          body: str,
+          type: 'css',
+        }),
+      )
+      .catch(() => reject()),
+  );
 
-  // If a plain CSS file exists, serve it.
-  const cssFileExists = existsSync(ctx.state.filePath);
-  if (cssFileExists) {
-    const cssFile = await fs
-      .readFile(ctx.state.filePath)
-      .then((buf) => buf.toString());
-    css = cssFile;
-  }
-
-  // If no CSS, and there's a Sass file with the same name, render it instead.
-  if (!css) {
-    const sassFilePath = ctx.state.filePath.replace('.css', '.scss');
-    const sassFileExists = existsSync(sassFilePath);
-    if (sassFileExists) {
-      const result = sass.compile(sassFilePath, {
-        sourceMap: false,
-        sourceMapIncludeSources: false,
-        importers: [
-          {
-            findFileUrl: (u) => {
-              if (!u.startsWith('~')) return null;
-              // console.log(new URL(`${url.pathToFileURL('node_modules')}/${u.substring(1)}`))
-              return new URL(
-                `${url.pathToFileURL('node_modules')}/${u.substring(1)}`,
-              );
+  const sassPath = ctx.state.filePath.replace('.css', '.scss');
+  const sassPromise = new Promise((resolve, reject) =>
+    fs
+      .readFile(sassPath, 'utf-8')
+      .then(() =>
+        sass.compileAsync(sassPath, {
+          sourceMap: false,
+          sourceMapIncludeSources: false,
+          importers: [
+            {
+              findFileUrl: (u) => {
+                if (!u.startsWith('~')) return null;
+                return new URL(
+                  `${url.pathToFileURL('node_modules')}/${u.substring(1)}`,
+                );
+              },
             },
-          },
-        ],
-      });
-      css = result.css;
-    }
-  }
+          ],
+        }),
+      )
+      .then((result) =>
+        resolve({
+          body: result.css,
+          type: 'sass',
+        }),
+      )
+      .catch(() => reject()),
+  );
 
-  // Deliver.
-  if (css) {
-    ctx.body = css;
-    ctx.type = 'text/css';
-  } else {
-    ctx.body = 'Not found';
-    ctx.status = 404;
-  }
+  await Promise.any([cssPromise, sassPromise])
+    .then((css) => {
+      if (css.type === 'sass') {
+        ctx.state.filePath = sassPath;
+      }
+      ctx.body = css.body;
+      ctx.type = 'text/css';
+    })
+    .catch(() => {
+      ctx.body = 'Not found';
+      ctx.status = 404;
+    });
 };

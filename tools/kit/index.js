@@ -27,22 +27,25 @@ const withFacts = (argv) => {
   return options;
 };
 
+const withCommonOptions = (y) => {
+  y.option('dir', {
+    describe: 'Configure the folder where this tool should run.',
+    default: '',
+    alias: 'd',
+  });
+  return y;
+};
+
 yargs(hideBin(process.argv))
   .command(
     'serve',
     "Start the component's dev server.",
     (y) =>
-      y
-        .option('port', {
-          describe: 'Provide a port number for the dev server.',
-          default: 3000,
-          alias: 'p',
-        })
-        .option('dir', {
-          describe: 'Serve from a different directory.',
-          default: '',
-          alias: 'd',
-        }),
+      withCommonOptions(y).option('port', {
+        describe: 'Provide a port number for the dev server.',
+        default: 3000,
+        alias: 'p',
+      }),
     (argv) => serve(withFacts(argv)),
   )
   .command(
@@ -57,11 +60,13 @@ yargs(hideBin(process.argv))
   .command(
     'create',
     'Create a new component.',
-    () => {},
-    async () => {
-      await create();
+    (y) => withCommonOptions(y),
+    async (argv) => {
+      await create(withFacts(argv));
       process.exit(0);
     },
   )
-  .demandCommand(1)
+  .demandCommand(1, '')
+  .recommendCommands()
+  .strict()
   .parse();

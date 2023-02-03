@@ -1,14 +1,13 @@
 import nunjucks from 'nunjucks';
-import { promises as fs, readFileSync, existsSync } from 'fs';
+import { promises as fs } from 'fs';
 
 export const createHtmlHandler = (options) => {
   const { dirs } = options;
 
   const templatesDir = `${dirs.command}/templates`;
-
-  const nunjucksEnv = new nunjucks.Environment({ autoescape: true });
-  const layoutStr = readFileSync(`${templatesDir}/layout.njk`, 'utf-8');
-  const layout = nunjucks.compile(layoutStr, nunjucksEnv);
+  nunjucks.configure(templatesDir, {
+    autoescape: true,
+  });
 
   return async (ctx) => {
     const {
@@ -29,8 +28,7 @@ export const createHtmlHandler = (options) => {
 
     // Load the given HTML file.
     await fs
-      .readFile(filePath)
-      .then((buf) => buf.toString())
+      .readFile(filePath, 'utf-8')
       .catch(() => {
         // If file not found, we'll supply our own "not found" HTML.
         ctx.status = 404;
@@ -45,24 +43,29 @@ export const createHtmlHandler = (options) => {
     const componentPath = filePath.substring(0, componentPathIndex);
 
     if (jsEnabled) {
-      const jsFileExists = existsSync(`${componentPath}/src/index.js`);
-      if (jsFileExists) {
-        renderAttributes.packageJS = true;
-      }
+      await fs
+        .access(`${componentPath}/src/index.js`)
+        .then(() => {
+          renderAttributes.packageJS = true;
+        })
+        .catch(() => false);
     }
 
     if (cssEnabled) {
-      const cssFileExists = existsSync(`${componentPath}/src/index.css`);
-      const sassFileExists = existsSync(`${componentPath}/src/index.scss`);
-      if (cssFileExists || sassFileExists) {
-        renderAttributes.packageCSS = true;
-      }
+      await Promise.any([
+        fs.access(`${componentPath}/src/index.css`),
+        fs.access(`${componentPath}/src/index.scss`),
+      ])
+        .then(() => {
+          renderAttributes.packageCSS = true;
+        })
+        .catch(() => false);
     }
 
     renderAttributes.baseCSS = baseEnabled;
 
     // Render the HTML file into the template.
-    const body = layout.render(renderAttributes);
+    const body = nunjucks.render('layout.njk', renderAttributes);
 
     // Return the result.
     ctx.body = body;

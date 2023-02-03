@@ -1,14 +1,10 @@
-import { existsSync } from 'fs';
 import esbuild from 'esbuild';
 
 // Handle JS.
 export const jsHandler = async (ctx) => {
-  let js;
-
   // Build and bundle up the JS via esbuild.
-  const jsFileExists = existsSync(ctx.state.filePath);
-  if (jsFileExists) {
-    const result = esbuild.buildSync({
+  await esbuild
+    .build({
       entryPoints: [ctx.state.filePath],
       bundle: true,
       format: 'esm',
@@ -17,17 +13,14 @@ export const jsHandler = async (ctx) => {
         '.css': 'text',
         '.html': 'text',
       },
+    })
+    .then((result) => {
+      const js = result.outputFiles[0].text;
+      ctx.body = js;
+      ctx.type = 'text/javascript';
+    })
+    .catch(() => {
+      ctx.body = 'Not found';
+      ctx.status = 404;
     });
-
-    js = result.outputFiles[0].text;
-  }
-
-  // Deliver.
-  if (js) {
-    ctx.body = js;
-    ctx.type = 'text/javascript';
-  } else {
-    ctx.body = 'Not found';
-    ctx.status = 404;
-  }
 };
