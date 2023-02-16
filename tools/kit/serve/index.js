@@ -3,6 +3,7 @@ import serveStatic from 'koa-static';
 import koaMount from 'koa-mount';
 import websockify from 'koa-websocket';
 import glob from 'glob';
+import chalk from 'chalk';
 import path from 'path';
 import { createRouter } from './router.js';
 import { createSocketRouter } from './watcher.js';
@@ -77,10 +78,13 @@ export const serve = (options) => {
   // Start up the app!
   app.use(router.routes()).use(router.allowedMethods()).listen(port);
 
+  const serveUrl = `http://localhost:${port}`;
+  const digestUrl = `${serveUrl}/_meta/digest.html`;
+  const servePath = dirs.target.replace(`${dirs.current}/`, '');
+
   console.log('Entering serve mode');
-  console.log(`Serving from ${dirs.target}`);
-  console.log(`Dev server started at http://localhost:${port}`);
-  console.log(
-    `Components listed at http://localhost:${port}/_meta/digest.html`,
-  );
+  console.log(`Serving from ${servePath}\n`);
+
+  console.log(`Dev server started at ${chalk.underline(serveUrl)}`);
+  console.log(`Components listed at ${chalk.underline(digestUrl)}\n`);
 };

@@ -1,8 +1,9 @@
 import Router from '@koa/router';
+import chalk from 'chalk';
 import { createHtmlHandler } from './html-handler.js';
-import { cssHandler } from './css-handler.js';
-import { jsHandler } from './js-handler.js';
 import { createDigestHandler } from './digest-handler.js';
+import { buildCss } from '../util/css-util.js';
+import { buildJavascript } from '../util/js-util.js';
 
 export const createRouter = (options, examples) => {
   const { dirs } = options;
@@ -104,10 +105,14 @@ export const createRouter = (options, examples) => {
     await next();
 
     // After all asset middlewares are complete below, log the request.
-    if (ctx.status !== 404) {
-      console.log(`Served: ${ctx.path} => ${ctx.state.filePath}`);
+    console.log(`${chalk.blue('Request')}: ${ctx.path}`);
+    const logPath = ctx.state.filePath.replace(`${dirs.current}/`, '');
+    if (ctx.status === 404) {
+      console.log(`${chalk.bgRed('Not found')}: ${logPath}\n`);
+    } else if (ctx.status === 500) {
+      console.log(`${chalk.bgRed('Errors')}: ${logPath}\n`);
     } else {
-      console.log(`Not found: ${ctx.path} => ${ctx.state.filePath}`);
+      console.log(`${chalk.green('Served')}: ${logPath}\n`);
     }
   });
 
@@ -120,10 +125,43 @@ export const createRouter = (options, examples) => {
   router.get('/(.*).html', htmlHandler);
 
   // Handle CSS and Sass.
-  router.get('/(.*).css', cssHandler);
+  router.get('/(.*).css', async (ctx) => {
+    await buildCss(ctx.state.filePath)
+      .then((css) => {
+        if (css.type === 'sass') {
+          ctx.state.filePath = css.path;
+        }
+        ctx.body = css.body;
+        ctx.type = 'text/css';
+      })
+      .catch((err) => {
+        if (err.name === 'FileReadError') {
+          ctx.body = 'Not found';
+          ctx.status = 404;
+        } else {
+          ctx.body = 'Errors';
+          ctx.status = 500;
+        }
+      });
+  });
 
   // Handle JS.
-  router.get('/(.*).js', jsHandler);
+  router.get('/(.*).js', async (ctx) => {
+    await buildJavascript(ctx.state.filePath)
+      .then((js) => {
+        ctx.body = js.body;
+        ctx.type = 'text/javascript';
+      })
+      .catch((err) => {
+        if (err.name === 'FileReadError') {
+          ctx.body = 'Not found';
+          ctx.status = 404;
+        } else {
+          ctx.body = 'Errors';
+          ctx.status = 500;
+        }
+      });
+  });
 
   // Return the router for consumption by a Koa app.
   return router;

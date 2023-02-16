@@ -1,54 +1,85 @@
-import { promises as fs, existsSync } from 'fs';
-import sass from 'sass';
-import esbuild from 'esbuild';
+import { promises as fs } from 'fs';
+import chalk from 'chalk';
+import { buildCss } from '../util/css-util.js';
+import { buildJavascript } from '../util/js-util.js';
 
 // Build and bundle CSS and JS.
-export const build = async () => {
-  let css;
+export const build = async (options) => {
+  const { dirs } = options;
 
-  // If a plain CSS file exists, serve it.
-  const cssFileExists = existsSync('src/index.css');
-  if (cssFileExists) {
-    const cssFile = await fs
-      .readFile('src/index.css')
-      .then((buf) => buf.toString());
-    css = cssFile;
-  }
+  const formatsBuilt = [];
+  let errorsFound = false;
 
-  // If no CSS, and there's a Sass file with the same name, render it instead.
-  if (!css) {
-    const sassFileExists = existsSync('src/index.scss');
-    if (sassFileExists) {
-      const result = await sass.compileAsync('src/index.scss');
-      css = result.css;
-    }
-  }
+  const componentPath = dirs.relative(dirs.target);
+  console.log('Building component');
+  console.log(`${chalk.blue('Directory')}: ${componentPath}\n`);
 
-  if (css) {
-    await fs.writeFile('dist/index.css', css);
-  }
+  const cssPath = `${dirs.target}/src/index.css`;
+  const cssDestination = `${dirs.target}/dist/index.css`;
 
-  let js;
+  const cssPromise = buildCss(cssPath, true)
+    .then((css) => {
+      if (css.type === 'css') {
+        console.log(chalk.magentaBright('** Writing CSS **'));
+      }
+      if (css.type === 'sass') {
+        console.log(chalk.magenta('** Writing CSS via Sass **'));
+      }
 
-  // Build and bundle up the JS via esbuild.
-  const jsFileExists = existsSync('src/index.js');
-  if (jsFileExists) {
-    const result = esbuild.buildSync({
-      entryPoints: ['src/index.js'],
-      bundle: true,
-      format: 'esm',
-      write: false,
-      loader: {
-        '.css': 'text',
-        '.html': 'text',
-      },
+      const sourcePath = dirs.relative(css.path);
+      console.log(`${chalk.blue('Source')}: ${sourcePath}`);
+      const resultPath = dirs.relative(cssDestination);
+      console.log(`${chalk.green('Result')}: ${resultPath}\n`);
+
+      formatsBuilt.push('css');
+      return fs.writeFile(cssDestination, css.body);
+    })
+    .catch((err) => {
+      if (!(err.name === 'FileReadError')) {
+        errorsFound = true;
+        console.log(err.message);
+      }
     });
 
-    js = result.outputFiles[0].text;
-  }
+  const jsPath = `${dirs.target}/src/index.js`;
+  const jsDestination = `${dirs.target}/dist/index.js`;
 
-  if (js) {
-    await fs.writeFile('dist/index.js', js);
-    console.log('Component built.');
-  }
+  const jsPromise = buildJavascript(jsPath, true)
+    .then((js) => {
+      console.log(chalk.magenta('** Writing JavaScript via esbuild **'));
+
+      const sourcePath = dirs.relative(js.path);
+      console.log(`${chalk.blue('Source')}: ${sourcePath}`);
+      const resultPath = dirs.relative(jsDestination);
+      console.log(`${chalk.green('Result')}: ${resultPath}\n`);
+
+      formatsBuilt.push('js');
+      return fs.writeFile(jsDestination, js.body);
+    })
+    .catch((err) => {
+      if (!(err.name === 'FileReadError')) {
+        errorsFound = true;
+        console.log(err.message);
+      }
+    });
+
+  const buildDestination = dirs.relative(`${dirs.target}/dist`);
+
+  await Promise.all([cssPromise, jsPromise])
+    .then(() => {
+      if (!formatsBuilt.length || errorsFound) {
+        throw new Error();
+      }
+      console.log('Component built');
+      console.log(`${chalk.green('Build')}: ${buildDestination}`);
+    })
+    .catch(() => {
+      console.log('Component not built');
+      if (!formatsBuilt.length) {
+        console.log('No component files found, check your directory');
+      }
+      if (errorsFound) {
+        console.log('Check errors above');
+      }
+    });
 };

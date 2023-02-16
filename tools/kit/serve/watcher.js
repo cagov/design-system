@@ -1,5 +1,6 @@
 import Router from '@koa/router';
 import chokidar from 'chokidar';
+import chalk from 'chalk';
 import events from 'events';
 
 /**
@@ -23,7 +24,8 @@ export const createSocketRouter = () => {
 
   // Emits file change events.
   const notifyFile = (verb, filePath) => {
-    console.log(`File ${verb}: ${filePath}. Reloading browser.`);
+    console.log(`${chalk.magenta(`File ${verb}`)}: ${filePath}`);
+    console.log(`${chalk.bgGreen('** Reloading browser **')}\n`);
     eventEmitter.emit('file_changed');
   };
 

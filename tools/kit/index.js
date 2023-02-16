@@ -9,10 +9,9 @@ import { serve } from './serve/index.js';
 import { build } from './build/index.js';
 import { create } from './create/index.js';
 
-const currentDir = process.cwd();
-const kitDir = url.fileURLToPath(path.dirname(import.meta.url));
-
 const withFacts = (argv) => {
+  const currentDir = process.cwd();
+  const kitDir = url.fileURLToPath(path.dirname(import.meta.url));
   const commandDir = `${kitDir}/${argv._[0]}`;
   const targetDir = path.resolve(argv.dir);
   const commonFacts = {
@@ -21,6 +20,7 @@ const withFacts = (argv) => {
       target: targetDir, // The targetted directory of the tool
       kit: kitDir, // The directory of this tool.
       command: commandDir, // The directory of this tool's requested mode
+      relative: (filePath) => filePath.replace(`${currentDir}/`, ''),
     },
   };
   const options = Object.assign(argv, commonFacts);
@@ -51,9 +51,9 @@ yargs(hideBin(process.argv))
   .command(
     'build',
     'Build the component for publication.',
-    () => {},
-    async () => {
-      await build();
+    (y) => withCommonOptions(y),
+    async (argv) => {
+      await build(withFacts(argv));
       process.exit(0);
     },
   )
