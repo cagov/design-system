@@ -1,6 +1,6 @@
 {
   "name": "california-design-system",
-  "version": "1.0.0",
+  "version": "1.0.11",
   "description": "State of California Design System A work in progress!",
   "main": "index.js",
   "scripts": {
@@ -65,6 +65,7 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@cagov/11ty-build-system": "^0.3.0",
+    "@cagov/ds-page-feedback": "file:components/page-feedback",
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
     "glob": "^7.2.0",

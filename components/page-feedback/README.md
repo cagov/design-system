@@ -29,6 +29,14 @@ Do not use the page feedback component on pages that are part of a transactional
 
 </html-preview>
 
+### Optional parameters
+
+- data-endpoint-url
+
+This can be defined if you wanted to supply your own data collection endpoint. This is not necessary and most implementations can omit this and take advantage of the default endpoint hosted by ODI at feedback.innovation.ca.cov/sendfeedback. The code will hit this endpoint if this parameter is not used.
+
+
+
 ## Specs
 
 | Property     | Value                |
@@ -51,7 +59,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 We recommend using a build system and bundling your JavaScript for faster performance. If you do not use a build system, you can include the code from our CDN with a script tag.
 
 ```html
-<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-page-feedback/v1.1.3/dist/index.js"></script>
+<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-page-feedback/v1.1.4/dist/index.js"></script>
 ```
 
 ### Other information
