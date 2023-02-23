@@ -66,8 +66,8 @@ export class CAGovPageFeedback extends window.HTMLElement {
       ? this.dataset.anyOtherFeedback
       : 'If you have any other feedback about this website,';
 
-    this.endpointUrl = "https://feedback.innovation.ca.gov/sendfeedback";
-    if(this.dataset.endpointUrl) {
+    this.endpointUrl = 'https://feedback.innovation.ca.gov/sendfeedback';
+    if (this.dataset.endpointUrl) {
       this.endpointUrl = this.dataset.endpointUrl;
     }
 
