@@ -63,8 +63,8 @@
     "./components/*"
   ],
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "@cagov/11ty-build-system": "^0.3.0",
+    "@11ty/eleventy": "^2.0.0",
+    "@cagov/11ty-build-system": "^1.0.0-beta.2",
     "@cagov/ds-page-feedback": "file:components/page-feedback",
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
