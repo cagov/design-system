@@ -14,9 +14,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@open-wc/testing": "^3.0.0-next.2",
-    "@web/test-runner": "^0.13.16",
-    "@web/test-runner-puppeteer": "^0.10.1",
     "rollup": "^2.52.2",
     "rollup-plugin-import-css": "^2.0.1",
     "sass": "^1.38.1"
