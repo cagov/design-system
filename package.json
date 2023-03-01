@@ -1,6 +1,6 @@
 {
   "name": "california-design-system",
-  "version": "1.0.0",
+  "version": "1.0.11",
   "description": "State of California Design System A work in progress!",
   "main": "index.js",
   "scripts": {
@@ -46,7 +46,7 @@
     "@playwright/test": "^1.18.1",
     "@web/dev-server": "^0.1.17",
     "@web/test-runner": "^0.13.16",
-    "@web/test-runner-puppeteer": "^0.10.1",
+    "@web/test-runner-puppeteer": "^0.10.5",
     "aws-sdk": "^2.1055.0",
     "axe-playwright": "^1.1.9",
     "eslint": "^7.32.0",
@@ -63,8 +63,9 @@
     "./components/*"
   ],
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "@cagov/11ty-build-system": "^0.3.0",
+    "@11ty/eleventy": "^2.0.0",
+    "@cagov/11ty-build-system": "^1.0.0-beta.2",
+    "@cagov/ds-page-feedback": "file:components/page-feedback",
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
     "glob": "^7.2.0",
