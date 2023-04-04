@@ -99,7 +99,7 @@ One example is our reusable county search box component on <a href="https://covi
 
 ### Lots of other ways to communicate data between components
 
-Web components provide lifecycle callbacks that respond to attribute changes. You can pass information in through attributes as strings. If you want to pass in a complex object, you can assign it to the custom element in the DOM via: ``` document.querySelector("my-element").bigOjbect = myJSON; ```
+Web components provide lifecycle callbacks that respond to attribute changes. You can pass information in through attributes as strings. If you want to pass in a complex object, you can assign it to the custom element in the DOM via: ``` document.querySelector("my-element").bigObject = myJSON; ```
 
 You can refer to this inside the component via:  ``` this.bigObject ```
 
