@@ -7,19 +7,29 @@ description: Do the hard work to make content simple for people to understand.
 
 ## Standards
 
-Aim for a sixth grade reading level or lower. Keep sentences short and simple. Use smaller, more common words.
+Aim for an 8th grade reading level or lower. Keep sentences short and simple. Use smaller, more common words.
 
-We recommend a sixth grade reading level because:
+We recommend an 8th grade reading level because:
 
-* Familiar words let people read with less effort.
+* It lets people read with less effort.
 * Kids who translate English content for their non-English-speaking parents can do this more easily.
-* Machine translation at this reading level is more accurate.
+* Translation into other languages is more accurate at this reading level.
 
 There's even a plain language requirement in [state law](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=6219.&lawCode=GOV).
 
 ## Why this is important
 
-Plain language lowers reading barriers and is clear and accessible to everyone, including readers with disabilities and limited English fluency. Plain language removes the struggle from finding and acting on information.
+[19% of Californians](https://oag.ca.gov/consumers/limited-english) say they speak English “less than very well.” 44% of Californians over the age of 5 speak a language other than English at home.
+
+Plain language lets people read with less effort. It reduces frustration and makes it easier for people to access services. People also trust information that’s easy to understand.
+
+
+
+It also reduces the workload of state staff. Examples include less:
+
+* Phone calls
+* In-person appointments
+* Data collection errors
 
 ## How to do this in your writing
 
@@ -47,3 +57,5 @@ Check reading levels with the [Hemingway Editor](http://hemingwayapp.com/). Elim
   * Use commas in numbers over 999. This helps people understand the order of magnitude.
 * Use the serial comma (also called the Oxford comma) to reduce confusion. It’s the comma that comes before **and** in a list of 3 or more.
   * For example: _We brought apples, bananas, and oranges_.
+
+The Office of Data and Innovation has more [plain language resources](https://docs.data.ca.gov/calinnovate-toolkit/NQUp2SeHnvd3YF16tw4N/readme/plain-language-resources) in their service delivery toolkit.
