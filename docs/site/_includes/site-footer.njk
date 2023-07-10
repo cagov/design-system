@@ -1,11 +1,24 @@
-<!-- Google Analytics Setup -->
+<!-- Classic Google Analytics Setup -->
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-20973992-20', 'auto');
-ga('set', 'transport', 'beacon');
-ga('send', 'pageview');
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-20973992-20', 'auto');
+  ga('create', 'UA-3419582-2', 'auto', 'tracker2');
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview');
+  ga('tracker2.send', 'pageview');
 </script>
 <script async defer src='https://www.google-analytics.com/analytics.js'></script>
+
+<!-- Google Analytics 4 Setup -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJDVH1C2JS"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-69TD0KNT0F'); // statewide GA4 measurement ID
+  gtag('config', 'G-PJDVH1C2JS'); // individual agency GA4 measurement ID
+</script>
 
 {% if page.url !== "/error.html" %}
   <cagov-page-feedback class="cagov-mb-2 d-block"></cagov-page-feedback>
