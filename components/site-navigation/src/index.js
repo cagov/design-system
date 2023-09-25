@@ -21,6 +21,7 @@ function mobileView() {
 }
 class CAGovSiteNavigation extends window.HTMLElement {
   connectedCallback() {
+    this.mobileSearchClicked = false;
     document
       .querySelector('.cagov-nav.open-menu')
       .addEventListener('click', this.toggleMainMenu.bind(this));
@@ -44,6 +45,10 @@ class CAGovSiteNavigation extends window.HTMLElement {
         .setAttribute('aria-hidden', 'true');
       if (mobileView()) {
         mobileSearchBtn.addEventListener('click', () => {
+          this.mobileSearchClicked = true;
+          setTimeout(() =>{
+            this.mobileSearchClicked = false;
+          }, 3000);
           document
             .querySelector('.search-container--small')
             .classList.toggle('hidden-search');
@@ -86,6 +91,13 @@ class CAGovSiteNavigation extends window.HTMLElement {
 
     // reset mobile search on resize
     window.addEventListener('resize', () => {
+      // Issue #977: on Android phones, the resize event is fired when the address bar is shown/hidden
+      // so we need to prevent hiding the search-bar when this occurs, otherwise, Android
+      // users cannot perform a search.
+      if (this.mobileSearchClicked) { // if mobile search-icon was recently clicked, don't close it
+        this.mobileSearchClicked = false;
+        return;
+      }
       document
         .querySelector('.search-container--small')
         .classList.add('hidden-search');
