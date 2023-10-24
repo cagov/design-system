@@ -1,5 +1,8 @@
 # Site navigation changelog
 
+## 3.0.1
+* Fixed search on Android, addressing issue in #977.
+
 ## 3.0.0
 * Move built CSS to dist folder.
 
