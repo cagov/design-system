@@ -367,6 +367,4 @@ This component requires the following content assets and configuration variables
 
 - [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
 
-- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
-
 - [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)

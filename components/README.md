@@ -2,10 +2,6 @@
 
 This directory contains State of California design system components in research, alpha, beta and production stages of development. More documentation is available on the <a href="https://designsystem.webstandards.ca.gov">design system site</a>.
 
-## README template
-
-[Notion Template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
-
 ## File structure
 
 Each component is an npm package so has a package.json as well as readme and changelog files written in markdown and a test config in the root directory:

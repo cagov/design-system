@@ -9,6 +9,7 @@ module.exports = {
     'arrow-parens': 'off',
     'implicit-arrow-linebreak': 'off',
     'function-paren-newline': 'off',
+    'wc/require-listener-teardown': 'off',
   },
   ignorePatterns: [
     '**/dist/*',
