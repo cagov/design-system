@@ -371,8 +371,6 @@ For example, in the WordPress CMS integration, content editors can manage menu l
 
 - [Component information](https://github.com/cagov/design-system/blob/main/components/README.md)
 
-- [Component README template](https://www.notion.so/odi-engineering/Component-documentation-template-2da3975cc0954174ace43004d151451c)
-
 - [Unit tests](https://github.com/cagov/design-system/blob/main/components/UNIT-TESTS.md)
 
 ¹ To use `import`, files must be served from a [webserver](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) such as Apache, Nginx, or [http-server](https://www.npmjs.com/package/http-server). The `file://` protocol will cause CORS errors in some browsers.
