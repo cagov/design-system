@@ -1,5 +1,8 @@
 # Site navigation changelog
 
+## 3.0.3
+* Fix bug where nav stopped working when GTranslate is present. [985](https://github.com/cagov/design-system/issues/985).
+
 ## 3.0.2
 * Different strategy for the Android fix. Looks at prior window.innerWidth, rather than setting a flag. Fixes possible issue with multiple rapidfire calls to resize.
 

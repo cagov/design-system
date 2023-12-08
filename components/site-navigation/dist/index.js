@@ -243,7 +243,7 @@ class CAGovSiteNavigation extends window.HTMLElement {
       }
       const menuComponent = this;
       menu.addEventListener('click', function addingClickListener(event) {
-        if (event.target.nodeName !== 'A') {
+        if (event.target.nodeName !== 'A' && event.target.nodeName !== 'FONT') {
           event.preventDefault();
         }
         const expandedEl = this.querySelector('.expanded-menu-section');
