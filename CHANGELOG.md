@@ -1,5 +1,18 @@
 # California Design System
 
+## 1.0.12
+
+- Security fixes
+- Fix for google translate [#985](https://github.com/cagov/design-system/issues/985)
+- Documentation updates
+
+
+## 1.0.11
+
+- Dozens of dependabot flagged package versioning updates
+- Migrate from 11ty v1 to v2.
+- Update the backend for the homepage partner signup form to run on AWS and use personal tokens since airtable is dropping plain api key support next year. #963
+
 ## 1.0.10
 
 - #915 CSS insertion moved into JavaScript Custom Element constructors.
