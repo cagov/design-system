@@ -15,11 +15,6 @@ We start by understanding the needs of residents of California through user rese
 
 We work in the open: all our code and issue tracking is public. We’re happy to review pull requests from the public and state employees. Anyone can file an issue with bug reports and feature requests by selecting the **New issue** button from our <a href="https://github.com/cagov/design-system/issues">issues page</a>. You can see the prioritized list of issues we’re addressing on our <a href="https://github.com/orgs/cagov/projects/7">project board</a>.
 
-## Be a part of the Design System
-
-We’re looking for partners to share feedback and improve the Design System.
-
-Reach out to us through the <a href="https://designsystem.webstandards.ca.gov/">contact form</a> if you’d like to work with us. Or, participate through this GitHub repository.
 
 ## Development instructions
 
