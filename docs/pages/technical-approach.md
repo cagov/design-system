@@ -31,8 +31,6 @@ Some things we want to include in our next phase are:
 * More robust accessibility testing
 * Standardized file names across components
 
-Learn how to [contribute or tell us your ideas](/contact-us/). 
-
 ## Component installation
 
 The Design System components are individual packages that you can download. Each component has README instructions for how to install it.
