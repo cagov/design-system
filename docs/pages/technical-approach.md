@@ -18,7 +18,6 @@ The Design System components are agnostic. You can choose to use an opinionated 
 Right now, the Design System components are in use on pilot sites like:
 
 * [covid19.ca.gov](https://covid19.ca.gov/)
-* [drought.ca.gov](https://drought.ca.gov/)
 * [cannabis.ca.gov](https://cannabis.ca.gov/)
 
 There’s still a lot of work ahead to develop and refine the components, but we cannot do it in a vacuum. We need feedback from anyone that comes in contact with the components. 
