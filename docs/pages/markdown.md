@@ -27,7 +27,7 @@ Here's the [full list of labels](https://github.com/highlightjs/highlight.js/blo
 
 ## Sprinkle with magic
 
-Inspired by the [MDJS plugin](https://rocket.modern-web.dev/docs/eleventy-plugins/mdjs-unified/), we've created a way to actually run these code blocks on the page. This allows us to both display the code and offer a preview for a given code block.
+Inspired by the [MDJS plugin](https://legacy.rocket.modern-web.dev/docs/eleventy-plugins/mdjs-unified/), we've created a way to actually run these code blocks on the page. This allows us to both display the code and offer a preview for a given code block.
 
 ### Javascript preview
 

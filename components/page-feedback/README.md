@@ -13,7 +13,7 @@ The page feedback component is intended to:
 
 ## When and how to use it
 
-We're still working on training and data services that supports the page feedback component. If you're interested in using page feedback, [reach out through the Contact us page](/contact-us). We'd like to hear more about your needs as we work on these services.
+We're still working on training and data services that supports the page feedback component. If you're interested in using page feedback, [reach out through our Contact us page](https://innovation.ca.gov/contact-us/). We'd like to hear more about your needs as we work on these services.
 
 ### How not to use it
 

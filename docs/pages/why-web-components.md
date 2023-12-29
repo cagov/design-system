@@ -131,6 +131,5 @@ You can suggest changes or new components by opening issues in the <a href="http
   - <a href="https://ionicframework.com/blog/5-reasons-web-components-are-perfect-for-design-systems/">5 reasons web components are perfect for design systems</a>
   - <a href="https://vaadin.com/blog/design-systems-and-standardized-web-components">Design systems and standards based web components</a>
   - <a href="https://bradfrost.com/blog/link/why-we-use-web-components/">Why we use web components</a>
-  - <a href="https://www.zaplabs.com/blog/engineering/building-web-applications-longevity-through-web-components">Building web applications with longevity through web components</a>
   - <a href="https://shoelace.style/?id=new-to-web-components">New to web components?</a>
   - <a href="https://dev.to/open-wc/introducing-custom-elements-manifest-gkk ">Introducing: Custom Elements Manifest</a>
