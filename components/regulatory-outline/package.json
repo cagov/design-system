@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-regulatory-outline",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Nested, ordered list with the following pattern: (a)(b)(c), (1)(2)(3), (A)(B)(C), (i)(ii)(iii)",
   "main": "dist/index.html",
   "type": "module",

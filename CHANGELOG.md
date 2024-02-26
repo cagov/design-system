@@ -1,11 +1,14 @@
 # California Design System
 
+## 1.0.13
+
+- Removed redundant package-lock.json (due to workspaces config in monorepo). This fixes vulnerability in the npm `ip` package.
+
 ## 1.0.12
 
 - Security fixes
 - Fix for google translate [#985](https://github.com/cagov/design-system/issues/985)
 - Documentation updates
-
 
 ## 1.0.11
 
@@ -20,8 +23,7 @@
 - #919 Added CDN installation and instructions for all components.
 - #926, #933 Removed smooth scrolling polyfill from page-navigation component.
 - #934 Removed unused Issue templates.
-- #927 Removed bad links from site-header example mark-up. 
-
+- #927 Removed bad links from site-header example mark-up.
 
 ## 1.0.9
 

@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility component for mangaging CA State Template v5.6.1 icons in the Design System.",
   "main": "index.js",
   "type": "module",
