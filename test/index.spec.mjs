@@ -4,13 +4,13 @@ import {
   checkA11y
 } from "axe-playwright";
 
-let testLocation = "http://localhost:8080";
+const testLocation = "http://localhost:8080";
 
-let pageUrls = ["/", "/get-started/","/components/","/components/page-navigation/readme/"];
+const pageUrls = ["/", "/get-started/","/components/","/components/page-navigation/readme/"];
 
 pageUrls.forEach(pageUrl => {
 
-  test("a11y page tests "+pageUrl, async ({ page }) => {
+  test(`a11y page tests ${pageUrl}`, async ({ page }) => {
 
     await page.goto(testLocation+pageUrl);
   
@@ -26,7 +26,7 @@ pageUrls.forEach(pageUrl => {
 
 test("base css preview theme switcher test ", async ({ page }) => {
 
-  await page.goto(testLocation+'/components/base-css/preview/');
+  await page.goto(`${testLocation}/components/base-css/preview/`);
 
   await injectAxe(page);
 
@@ -37,9 +37,7 @@ test("base css preview theme switcher test ", async ({ page }) => {
 
   await page.click('#drought');
 
-  const themeCSSUrl = await page.evaluate(() => {
-    return Promise.resolve(document.querySelector('#theme-stylesheet').href);
-  },);
+  const themeCSSUrl = await page.evaluate(() => Promise.resolve(document.querySelector('#theme-stylesheet').href),);
   expect(themeCSSUrl.indexOf('drought') > -1).toBe(true);
 
 });

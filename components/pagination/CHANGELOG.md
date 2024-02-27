@@ -3,6 +3,7 @@
 ## 2.0.3
 
 - Removed redundant package-lock.json (due to workspaces config in monorepo). This fixes vulnerability in the npm `ip` package.
+- Fixed an accessibility issue with accessibility of the ellipsis-based "overflow". 
 
 ## 2.0.2
 
