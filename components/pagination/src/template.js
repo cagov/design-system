@@ -54,7 +54,11 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
 
       ${currentPage < totalPages ? pageListItem(page, currentPage + 1) : ''}
 
-      ${currentPage < totalPages - 3 ? pageOverflow(page, currentPage + 2, totalPages) : ''}
+      ${
+        currentPage < totalPages - 3
+          ? pageOverflow(page, currentPage + 2, totalPages)
+          : ''
+      }
 
       ${currentPage < totalPages - 1 ? pageListItem(page, totalPages) : ''}
 
