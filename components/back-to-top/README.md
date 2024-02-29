@@ -22,7 +22,7 @@ The back to top component is integrated into this site and appears at the bottom
 
 <html-preview>
 
-```html
+```html preview
 <cagov-back-to-top data-hide-after="7000" data-label="Back to top">
 </cagov-back-to-top>
 ```
@@ -51,7 +51,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 We recommend using a build system and bundling your JavaScript for faster performance. If you do not use a build system, you can include the code from our CDN with a script tag.
 
 ```html
-<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-back-to-top/v2.0.2/dist/index.js"></script>
+<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-back-to-top/v2.0.3/dist/index.js"></script>
 ```
 
 ## CSS variables

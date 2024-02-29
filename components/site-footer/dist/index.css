@@ -57,7 +57,7 @@ section.site-footer .footer-social-links a:hover svg path {
 
 @media (min-width: 991px) {
   .footer-secondary-links,
-section.site-footer .container {
+  section.site-footer .container {
     flex-direction: row !important;
     align-items: center;
   }

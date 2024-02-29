@@ -292,7 +292,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 We recommend using a build system and bundling your JavaScript and CSS for faster performance. If you do not use a build system, you can include the code from our CDN with link and script tags.
 
 ```html
-<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-site-navigation/v3.0.3/dist/index.css">
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-site-navigation/v3.0.4/dist/index.css">
 <script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-site-navigation/v3.0.0/dist/index.js"></script>
 ```
 

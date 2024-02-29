@@ -53,9 +53,9 @@ Do not use the step list to create a list of items that are not ordered. Use bul
     <strong>Gather your application information and documents</strong>
     <br />
     <span class="has-inline-color cagov-step-list-content">
-      DCC has resources to help you create the documents you need during the 
+      DCC has resources to help you create the documents you need during the
       license process. If you have questions about the requirements, email the
-      <a href="#">DCC licensing team</a>.
+      <a href="mailto:licensing@cannabis.ca.gov">DCC licensing team</a>.
     </span>
   </li>
 </ol>
@@ -84,7 +84,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 We recommend using a build system and bundling your CSS for faster performance. If you do not use a build system, you can include the code from our CDN with a link tag.
 
 ```html
-<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-step-list/v3.0.0/dist/index.css">
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-step-list/v3.0.1/dist/index.css">
 ```
 
 ## CSS variables

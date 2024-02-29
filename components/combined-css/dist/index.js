@@ -965,7 +965,6 @@ function pageListItem(label, number) {
 function pageOverflow() {
   return `<li
     class="cagov-pagination__item cagov-pagination__overflow"
-    role="presentation"
   >
     <span> … </span>
   </li>`;
