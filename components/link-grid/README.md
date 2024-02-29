@@ -24,8 +24,8 @@ Because the grid collapses into one column on mobile, large grids may occupy sev
 
 ```html preview
 <div class="cagov-grid">
-  <a href="#" class="no-deco cagov-card">
-    <span class="card-text">Link 1</span>
+  <a href="linkurl" class="no-deco cagov-card">
+    <span class="card-text">card title here</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       enable-background="new 0 0 24 24"
@@ -41,8 +41,10 @@ Because the grid collapses into one column on mobile, large grids may occupy sev
       </g>
     </svg>
   </a>
-  <a href="#" class="no-deco cagov-card">
-    <span class="card-text">Link 2, showing what longer text looks like</span>
+  <a href="linkurl" class="no-deco cagov-card">
+    <span class="card-text"
+      >this is an example of a very long text string card title here</span
+    >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       enable-background="new 0 0 24 24"
@@ -58,8 +60,8 @@ Because the grid collapses into one column on mobile, large grids may occupy sev
       </g>
     </svg>
   </a>
-  <a href="#" class="no-deco cagov-card">
-    <span class="card-text">Link 3</span>
+  <a href="linkurl" class="no-deco cagov-card">
+    <span class="card-text">card title 3 here</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       enable-background="new 0 0 24 24"
@@ -101,7 +103,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 We recommend using a build system and bundling your CSS for faster performance. If you do not use a build system, you can include the code from our CDN with a link tag.
 
 ```html
-<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-link-grid/v3.0.0/dist/index.css">
+<link rel="stylesheet" href="https://cdn.designsystem.webstandards.ca.gov/components/ds-link-grid/v3.0.1/dist/index.css">
 ```
 
 ## CSS variables

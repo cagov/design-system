@@ -1,6 +1,6 @@
 {
   "name": "california-design-system",
-  "version": "1.0.11",
+  "version": "1.0.13",
   "description": "State of California Design System A work in progress!",
   "main": "index.js",
   "scripts": {

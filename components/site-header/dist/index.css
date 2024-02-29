@@ -286,7 +286,7 @@ cagov-site-navigation .search-container--small.hidden-search {
 
 @media (min-width: 768px) {
   .mobile-icons,
-.search-close {
+  .search-close {
     display: none !important;
   }
   .site-header .container {

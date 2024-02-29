@@ -68,13 +68,13 @@ footer .copyright {
 
 @media (min-width: 991px) {
   footer .footer-secondary-links,
-footer .container {
+  footer .container {
     margin-right: auto;
     flex-direction: row;
     align-items: center;
   }
   footer .footer-secondary-links.flex-col-end,
-footer .container.flex-col-end {
+  footer .container.flex-col-end {
     flex-direction: column;
     align-items: end;
   }

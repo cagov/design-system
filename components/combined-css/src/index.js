@@ -5,5 +5,5 @@ import '../../page-feedback/dist/index.js';
 import '../../site-navigation/src/index.js';
 import '../../page-alert/dist/index.js';
 import '../../pagination/dist/index.js';
-import '../../link-icon/src/index.js';
+import '../../link-icon/dist/index.js';
 import '../../statewide-header/src/index.js';

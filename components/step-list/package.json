@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-step-list",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "CSS only component that renders stylized step by step instructions",
   "main": "dist/index.css",
   "type": "module",

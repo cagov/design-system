@@ -93,7 +93,7 @@ The instructions assume familiarity with [npm](https://npmjs.com) package manage
 We recommend using a build system and bundling your JavaScript for faster performance. If you do not use a build system, you can include the code from our CDN with a script tag.
 
 ```html
-<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-accordion/v2.0.3/dist/index.js"></script>
+<script type="module" src="https://cdn.designsystem.webstandards.ca.gov/components/ds-accordion/v2.0.4/dist/index.js"></script>
 ```
 
 ## CSS variables

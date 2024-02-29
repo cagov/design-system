@@ -1,21 +1,25 @@
 # Link icon Changelog
 
-## 2.0.0
-* Add JS to dist folder.
-* Insert CSS via JS.
+## 2.0.1
 
+- Removed redundant package-lock.json (due to workspaces config in monorepo). This fixes vulnerability in the npm `ip` package.
+
+## 2.0.0
+
+- Add JS to dist folder.
+- Insert CSS via JS.
 
 ## 1.1.2
 
-* Updated color variables to go inline with CEILAB color palette
+- Updated color variables to go inline with CEILAB color palette
 
 ## 1.1.1
 
-* Fix bug where link icon was not being added to external links that had an anchor link in the url
+- Fix bug where link icon was not being added to external links that had an anchor link in the url
 
 ## 1.1.0
 
-* Add compatibility with renamed `ds-site-footer` component.
+- Add compatibility with renamed `ds-site-footer` component.
 
 ## 1.0.1
 

@@ -1,4 +1,5 @@
-/* combined design system styles that based on cannabis color scheme */ /* Colorscheme root variables */
+/* combined design system styles that based on cannabis color scheme */
+/* Colorscheme root variables */
 :root {
   /* Theme colors */
   /* Theme colors */
@@ -19,7 +20,8 @@
   --accent2-900: #864529;
 }
 
-/* theme colors */ /* sitewide styles, these are mostly blank but will be wrapped up into components/base-css */
+/* theme colors */
+/* sitewide styles, these are mostly blank but will be wrapped up into components/base-css */
 :root {
   --w-lg: 1176px;
   --w-md: 960px;
@@ -2436,7 +2438,7 @@ article {
 
 @media (max-width: 1216px) {
   .footer-container,
-.page-container-ds {
+  .page-container-ds {
     padding-right: 0;
     padding-left: 0;
   }
@@ -2543,7 +2545,7 @@ article {
 
 @media (max-width: 767px) {
   .with-sidebar .main-content-default,
-.with-sidebar .ds-content-layout {
+  .with-sidebar .ds-content-layout {
     display: block;
   }
   .with-sidebar.page-container-ds main {
@@ -3273,7 +3275,7 @@ button:focus {
 @media only screen and (max-width: 992px) {
   /* BREADCRUMB */
   .breadcrumb a.crumb,
-.breadcrumb span.crumb {
+  .breadcrumb span.crumb {
     display: none;
   }
   .breadcrumb span.crumb:not(:last-child):not([class*=separator]) {
@@ -3422,35 +3424,35 @@ h6,
 
 @media (max-width: 767px) {
   h1,
-.h1 {
+  .h1 {
     font-size: var(--font-size-9, 2.625rem);
   }
   h2,
-.h2 {
+  .h2 {
     font-size: var(--font-size-7, 2.0625rem);
   }
   h3,
-.h3 {
+  .h3 {
     font-size: var(--font-size-5, 1.625rem);
   }
   h4,
-.h4 {
+  .h4 {
     font-size: var(--font-size-3, 1.25rem);
   }
   h5,
-.h5 {
+  .h5 {
     font-size: var(--font-size-1, 1rem);
   }
   h2:first-child,
-figure ~ h2:first-of-type {
+  figure ~ h2:first-of-type {
     margin-top: 0px;
   }
   .text-lead,
-.lead {
+  .lead {
     font-size: var(--font-size-3, 1.25rem);
   }
   .text-small,
-.text-sm {
+  .text-sm {
     font-size: var(--font-size-sm, 0.875rem);
   }
 }
@@ -6409,7 +6411,7 @@ section.site-footer .footer-social-links a:hover svg path {
 
 @media (min-width: 991px) {
   .footer-secondary-links,
-section.site-footer .container {
+  section.site-footer .container {
     flex-direction: row !important;
     align-items: center;
   }
@@ -6775,7 +6777,7 @@ cagov-site-navigation .search-container--small.hidden-search {
 
 @media (min-width: 768px) {
   .mobile-icons,
-.search-close {
+  .search-close {
     display: none !important;
   }
   .site-header .container {
@@ -6856,7 +6858,7 @@ cagov-site-navigation .search-container--small.hidden-search {
 
 @supports (width: calc(min(250px, 100%))) {
   .cagov-grid,
-.cagov-grid .block-editor-block-list__layout {
+  .cagov-grid .block-editor-block-list__layout {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   }
 }
@@ -7027,7 +7029,7 @@ cagov-site-navigation .search-container--small.hidden-search {
 
 @media (min-width: 768px) {
   .mobile-icons,
-.search-close {
+  .search-close {
     display: none !important;
   }
 }
@@ -7759,13 +7761,13 @@ footer .copyright {
 
 @media (min-width: 991px) {
   footer .footer-secondary-links,
-footer .container {
+  footer .container {
     margin-right: auto;
     flex-direction: row;
     align-items: center;
   }
   footer .footer-secondary-links.flex-col-end,
-footer .container.flex-col-end {
+  footer .container.flex-col-end {
     flex-direction: column;
     align-items: end;
   }

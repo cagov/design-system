@@ -1,27 +1,39 @@
 # Site footer changelog
 
+## 2.0.1
+
+- Removed redundant package-lock.json (due to workspaces config in monorepo). This fixes vulnerability in the npm `ip` package.
+
 ## 2.0.0
-* Moved index.css file to dist folder.
+
+- Moved index.css file to dist folder.
 
 ## 1.1.1
-* Updated color variables to go inline with CEILAB color palette. 
+
+- Updated color variables to go inline with CEILAB color palette.
 
 ## 1.1.0
-* Changed name from `ds-agency-footer` to `ds-site-footer`.
-* Changed name of CSS class `agency-footer` to `site-footer`.
+
+- Changed name from `ds-agency-footer` to `ds-site-footer`.
+- Changed name of CSS class `agency-footer` to `site-footer`.
 
 ## 1.0.4
-* Force social media icons onto the same line on Safari. 
+
+- Force social media icons onto the same line on Safari.
 
 ## 1.0.3
-* Added visible gray-300 top and bottom borders 
+
+- Added visible gray-300 top and bottom borders
 
 ## 1.0.2
-* Linted and formatted code per root eslint/prettier settings.
-* Added unit test.
+
+- Linted and formatted code per root eslint/prettier settings.
+- Added unit test.
 
 ## 1.0.1
-* Updated agency footer's container left and right padding to 16px (instad of 1rem) to be consistent with other components.
+
+- Updated agency footer's container left and right padding to 16px (instad of 1rem) to be consistent with other components.
 
 ## 1.0.0
-* initial commit
+
+- initial commit

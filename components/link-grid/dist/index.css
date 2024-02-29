@@ -50,7 +50,7 @@
 
 @supports (width: calc(min(250px, 100%))) {
   .cagov-grid,
-.cagov-grid .block-editor-block-list__layout {
+  .cagov-grid .block-editor-block-list__layout {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   }
 }
