@@ -11,10 +11,9 @@ function pageListItem(label, number) {
   </li>`;
 }
 
-function pageOverflow(page, from, to) {
+function pageOverflow() {
   return `<li
     class="cagov-pagination__item cagov-pagination__overflow"
-    aria-label="${page} ${from}…${to}"
   >
     <span> … </span>
   </li>`;
@@ -36,7 +35,7 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
       </li>
       ${currentPage > 2 ? pageListItem(page, 1) : ''}
 
-      ${currentPage > 3 ? pageOverflow(page, 2, currentPage - 2) : ''}
+      ${currentPage > 3 ? pageOverflow() : ''}
 
       ${currentPage > 1 ? pageListItem(page, currentPage - 1) : ''}
 
@@ -54,11 +53,7 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
 
       ${currentPage < totalPages ? pageListItem(page, currentPage + 1) : ''}
 
-      ${
-        currentPage < totalPages - 3
-          ? pageOverflow(page, currentPage + 2, totalPages)
-          : ''
-      }
+      ${currentPage < totalPages - 3 ? pageOverflow() : ''}
 
       ${currentPage < totalPages - 1 ? pageListItem(page, totalPages) : ''}
 
