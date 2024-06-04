@@ -1,6 +1,6 @@
 {
   "name": "@cagov/ds-page-navigation",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
@@ -20,10 +20,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@open-wc/testing": "^3.0.1",
-    "@web/test-runner-puppeteer": "^0.10.2"
+    "@open-wc/testing": "^2.5.33",
+    "@web/test-runner-puppeteer": "^0.7.3"
   },
   "dependencies": {
+    "@cagov/11ty-build-system": "0.1.3",
+    "@web/dev-server": "0.0.6",
+    "@web/test-runner": "0.10.2",
+    "@web/test-runner-playwright": "0.6.6",
     "rollup-plugin-import-css": "^3.0.2"
   }
 }
