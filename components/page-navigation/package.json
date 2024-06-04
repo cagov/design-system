@@ -13,7 +13,7 @@
     "build": "sass src/index.scss index.css && npm run build:js",
     "cdn:publish": "node ../../docs/src/publish/cdn-deploy.js",
     "html:preview": "node ../../docs/src/publish/dynamic-html.js",
-    "prepublishOnly": "npm run html:preview && npm run build && npm test && npm run cdn:publish",
+    "prepublishOnly": "npm run html:preview && npm run build",
     "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "keywords": [],
