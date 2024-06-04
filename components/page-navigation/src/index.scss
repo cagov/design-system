@@ -1,5 +1,5 @@
 /* PAGE NAVIGATION */
-sidebar cagov-page-navigation .label {
+aside cagov-page-navigation .label, sidebar cagov-page-navigation .label {
   font-weight: 700;
   font-size: 24px;
   line-height: 28.2px;
@@ -8,7 +8,9 @@ sidebar cagov-page-navigation .label {
   padding-bottom: 16px;
 }
 
-sidebar cagov-page-navigation ul,
+aside cagov-page-navigation ul, sidebar cagov-page-navigation ul,
+aside cagov-page-navigation ol:not([class*="menu"]):not([class*="nav"]):not([class*="footer-links"]),
+aside cagov-page-navigation ul:not([class*="menu"]):not([class*="nav"]):not([class*="footer-links"]), 
 sidebar cagov-page-navigation ol:not([class*="menu"]):not([class*="nav"]):not([class*="footer-links"]),
 sidebar cagov-page-navigation ul:not([class*="menu"]):not([class*="nav"]):not([class*="footer-links"]) {
   margin: 0;
@@ -16,7 +18,7 @@ sidebar cagov-page-navigation ul:not([class*="menu"]):not([class*="nav"]):not([c
   padding: 0;
 }
 
-sidebar cagov-page-navigation ul li {
+aside cagov-page-navigation ul li, sidebar cagov-page-navigation ul li {
   padding-top: 14px;
   padding-bottom: 18px;
   margin-left: 0;
@@ -42,7 +44,7 @@ sidebar cagov-page-navigation ul li {
     display: none;
   }
 
-  .sidebar-container {
+  .aside-container, .sidebar-container {
     display: block;
     width: 100%;
     max-width: 100%;

@@ -1,5 +1,9 @@
 # Page navigation changelog
 
+## 2.2.3
+
+- Updated css to include aside selector.
+
 ## 2.2.2
 
 - Removed redundant package-lock.json (due to workspaces config in monorepo). This fixes vulnerability in the npm `ip` package.

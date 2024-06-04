@@ -15,9 +15,9 @@ Do not use this component to replace or duplicate site navigation.
 ## Demo and sample markup
 
 ```html preview
-<sidebar>
+<aside>
   <cagov-page-navigation data-selector=".main" data-type="wordpress" data-label="On this page"></cagov-page-navigation>
-</sidebar>
+</aside>
 
 <div class="main">
   <h2>First heading</h2>
