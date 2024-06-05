@@ -1,5 +1,9 @@
 # Page navigation changelog
 
+## 2.2.4
+
+- Using original README.md
+
 ## 2.2.3
 
 - Updated css to include aside selector.
