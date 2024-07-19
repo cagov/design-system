@@ -8,7 +8,7 @@ This project is currently in early beta status. It’s used in production on a f
 Part of our early beta includes learning and collaborating with teams. As the project matures we’ll share more details on how we might meld the design system components into the State template.
 
 ### Why a design system
-We built this to address common needs identified by California's Office of Digital Innovation (ODI) and the California Department of Technology (CDT) during development of <a href="https://alpha.ca.gov">alpha.ca.gov</a>, <a href="https://covid19.ca.gov">covid19.ca.gov</a> and <a href="https://cannabis.ca.gov">cannabis.ca.gov</a>.
+We built this to address common needs identified by California's Office of Digital Innovation (ODI) and the California Department of Technology (CDT) during development of alpha.ca.gov, <a href="https://covid19.ca.gov">covid19.ca.gov</a> and <a href="https://cannabis.ca.gov">cannabis.ca.gov</a>.
 
 ### How we work
 We start by understanding the needs of residents of California through user research. We use an iterative design and development process to provide services that meet these needs. As we work, we continue to test our principles, designs, and components. We prioritize equity to some degree by ensuring that our code is accessible and performant for all devices and bandwidths. Components <a href="https://designsystem.webstandards.ca.gov/components/">pass through stages</a> of alpha, beta and production as they become available to the Design System.

@@ -17,7 +17,7 @@ The Design System is being brought to you with the sponsorship and support from 
 
 Leveraging the efforts of three pivotal digital contributions, we reflect on the journey that led us here and look to a bright future.  
 * [CAWeb Standards](https://webstandards.ca.gov/) 
-* The [Alpha Project](https://alpha.ca.gov/), and 
+* The Alpha Project, and 
 * The [COVID-19](https://covid19.ca.gov/) website
 
 ### The beginning 
