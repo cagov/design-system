@@ -1,6 +1,12 @@
 # Pagination changelog
 
 ## 2.0.3
+- Fixes an issue with small page counts (4,5,6,7) in which on some page numbers
+an ellipsis is displayed where a single-page is missing, or both the ellipsis and
+a single page are skipped leaving a gap in the sequence. New system uses ellipsis for
+2 or more pages only, and displays single pages in its place, when appropriate.
+
+## 2.0.3
 
 - Removed redundant package-lock.json (due to workspaces config in monorepo). This fixes vulnerability in the npm `ip` package.
 - Fixed an accessibility issue with accessibility of the ellipsis-based "overflow". 

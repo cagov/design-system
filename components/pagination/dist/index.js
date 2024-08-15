@@ -35,7 +35,8 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
       </li>
       ${currentPage > 2 ? pageListItem(page, 1) : ''}
 
-      ${currentPage > 3 ? pageOverflow() : ''}
+      ${currentPage > 4 ? pageOverflow() :  ''}
+      ${currentPage === 4 ? pageListItem(page, 2) : ''}
 
       ${currentPage > 1 ? pageListItem(page, currentPage - 1) : ''}
 
@@ -54,6 +55,7 @@ function templateHTML(next, previous, page, currentPage, totalPages) {
       ${currentPage < totalPages ? pageListItem(page, currentPage + 1) : ''}
 
       ${currentPage < totalPages - 3 ? pageOverflow() : ''}
+      ${currentPage === totalPages - 3 ? pageListItem(page, totalPages-1) : ''}
 
       ${currentPage < totalPages - 1 ? pageListItem(page, totalPages) : ''}
 
