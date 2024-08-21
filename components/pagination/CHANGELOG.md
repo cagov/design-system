@@ -1,6 +1,6 @@
 # Pagination changelog
 
-## 2.0.3
+## 2.0.4
 - Fixes an issue with small page counts (4,5,6,7) in which on some page numbers
 an ellipsis is displayed where a single-page is missing, or both the ellipsis and
 a single page are skipped leaving a gap in the sequence. New system uses ellipsis for
