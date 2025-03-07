@@ -13,10 +13,6 @@ Learn [what’s different](/technical-approach/) about California’s Design Sys
 
 Start with the [visual design style guide](/style/design/). Learn about the [UI components](/components/) you can incorporate into your design.
 
-## Content designers
-
-Get familiar with the [guidelines for content design](/style/content/). 
-
 ## Everyone
 
 Everyone can benefit from the [Design System principles](/principles/).
