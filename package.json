@@ -67,7 +67,10 @@
     "braces": ">=3.0.3",
     "ejs": ">=3.1.10",
     "ws": ">=7.5.10",
-    "axios": ">=0.30.2"
+    "axios": ">=0.30.2",
+    "esbuild": ">=0.25.0",
+    "liquidjs": ">=10.0.0",
+    "flat": ">=5.0.1"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.15",
