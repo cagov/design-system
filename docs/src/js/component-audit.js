@@ -30,7 +30,9 @@ fs.readdir(directoryPath, (err, directories) => {
   directories.forEach((directory) => {
     try {
       // eslint-disable-next-line
-      const scriptData = require(`../../../components/${directory}/package.json`);
+      const scriptData = require(
+        `../../../components/${directory}/package.json`,
+      );
 
       const testConfig = getTestConfig(directory);
 

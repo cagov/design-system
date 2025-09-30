@@ -21,7 +21,7 @@
   "author": "ca.gov",
   "license": "ISC",
   "devDependencies": {
-    "@open-wc/testing": "^3.0.1",
+    "@open-wc/testing": "4.0.0",
     "@web/test-runner-playwright": "^0.9.0",
     "lit": "^2.0.0-rc.2",
     "rollup": "^2.52.2",
@@ -29,5 +29,9 @@
   },
   "directories": {
     "test": "test"
+  },
+  "dependencies": {
+    "@web/dev-server": "0.4.6",
+    "@web/test-runner": "0.20.2"
   }
 }
