@@ -15,6 +15,8 @@ module.exports = function (eleventyConfig) {
         options: {
           file: 'docs/src/css/sass/index.scss',
           includePaths: ['./src/css/sass'],
+          quietDeps: true,
+          silenceDeprecations: ['legacy-js-api', 'import'],
         },
       },
       esbuild: [

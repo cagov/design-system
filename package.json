@@ -14,7 +14,7 @@
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
     "lint": "npm run lint:eslint && npm run lint:prettier",
-    "prepare": "husky install",
+    "prepare": "husky",
     "site:build:dev": "cross-env NODE_ENV=development eleventy",
     "site:build": "eleventy",
     "site:convert:illustrations": "node docs/src/11ty/format-illustrations.js",
@@ -66,7 +66,8 @@
     "pug": ">=3.0.3",
     "braces": ">=3.0.3",
     "ejs": ">=3.1.10",
-    "ws": ">=7.5.10"
+    "ws": ">=7.5.10",
+    "axios": ">=0.30.2"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.15",
