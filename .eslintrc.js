@@ -3,7 +3,14 @@ module.exports = {
   extends: ['@open-wc/eslint-config', 'prettier'],
   rules: {
     indent: 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+        optionalDependencies: false,
+        peerDependencies: false,
+      },
+    ],
     'no-console': 'off',
     'operator-linebreak': 'off',
     'arrow-parens': 'off',

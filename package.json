@@ -42,11 +42,11 @@
   "homepage": "https://github.com/cagov/design-system#readme",
   "devDependencies": {
     "@open-wc/eslint-config": "^4.3.0",
-    "@open-wc/testing": "^3.0.0-next.2",
+    "@open-wc/testing": "4.0.0",
     "@playwright/test": "^1.48.2",
-    "@web/dev-server": "^0.2.0",
-    "@web/test-runner": "^0.18.0",
-    "@web/test-runner-playwright": "^0.10.3",
+    "@web/dev-server": "^0.4.6",
+    "@web/test-runner": "0.20.2",
+    "@web/test-runner-playwright": "^0.11.1",
     "aws-sdk": "^2.1354.0",
     "axe-playwright": "^1.1.9",
     "eslint": "^8.57.0",
@@ -62,6 +62,12 @@
   "workspaces": [
     "./components/*"
   ],
+  "overrides": {
+    "pug": ">=3.0.3",
+    "braces": ">=3.0.3",
+    "ejs": ">=3.1.10",
+    "ws": ">=7.5.10"
+  },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.15",
     "@cagov/11ty-build-system": "^1.0.0-beta.2",

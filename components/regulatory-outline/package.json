@@ -12,9 +12,12 @@
     "test": "web-test-runner \"test/**/*.js\" --node-resolve"
   },
   "devDependencies": {
-    "@open-wc/testing": "^3.0.3",
-    "@web/test-runner": "^0.13.17",
+    "@open-wc/testing": "4.0.0",
+    "@web/test-runner": "^0.13.31",
     "@web/test-runner-puppeteer": "^0.10.2",
     "sass": "^1.41.1"
+  },
+  "dependencies": {
+    "@web/dev-server": "0.4.6"
   }
 }
