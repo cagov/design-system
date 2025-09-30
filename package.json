@@ -14,7 +14,7 @@
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
     "lint": "npm run lint:eslint && npm run lint:prettier",
-    "prepare": "husky install",
+    "prepare": "husky",
     "site:build:dev": "cross-env NODE_ENV=development eleventy",
     "site:build": "eleventy",
     "site:convert:illustrations": "node docs/src/11ty/format-illustrations.js",
