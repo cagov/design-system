@@ -2,7 +2,7 @@ const glob = require('glob');
 const components = require('../../site/_data/editable/components.json');
 
 const getComponentSlug = (folderPath) =>
-  folderPath.match(/components\/(.+?)\//)[1];
+  folderPath.match(/components\/(.+?)(?:\/|$)/)[1];
 
 // First, find any components NOT included within 11ty's data...
 // ...at docs/site/_data/editable/components.json.
