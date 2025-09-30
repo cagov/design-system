@@ -2,7 +2,7 @@
 
 ## 1.0.13
 
-- Removed redundant package-lock.json (due to workspaces config in monorepo). This fixes vulnerability in the npm `ip` package.
+- Removed redundant package-lock.json (due to workspaces config in monorepo). This fixes vulnerability in the npm `ip` package. 
 
 ## 1.0.12
 
