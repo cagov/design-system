@@ -61,3 +61,18 @@
     }
   }
 }
+
+.deprecation {
+  background-color: #fce9e8;
+}
+
+.deprecation .container {
+  max-width: var(--w-lg, 1176px);
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+
+.deprecation-msg {
+  border-left: solid .5rem #d5676a;
+  padding-left: 1.5rem;
+}
