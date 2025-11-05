@@ -1,11 +1,16 @@
 # California Design System README
 
+## Maintenance only
+
+This repo was a beta project and is now in maintenance-only mode through July 1, 2026. 
+
+During this period, the repo will continue to receive bug fixes and security updates, but no new features. 
+
+After July 1, 2026, maintenance will end and this repo will move to archived (read-only) status for historical reference.
+
+For active development, head over to California’s next design system at [our GitHub repository](https://github.com/Office-of-Digital-Services/California-Design-System).
+
 ## About the California Design System
-
-### Status
-This project is currently in early beta status. It’s used in production on a few sites while we learn and continuously improve.
-
-Part of our early beta includes learning and collaborating with teams. As the project matures we’ll share more details on how we might meld the design system components into the State template.
 
 ### Why a design system
 We built this to address common needs identified by California's Office of Digital Innovation (ODI) and the California Department of Technology (CDT) during development of alpha.ca.gov, <a href="https://covid19.ca.gov">covid19.ca.gov</a> and <a href="https://cannabis.ca.gov">cannabis.ca.gov</a>.
