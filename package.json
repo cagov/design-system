@@ -78,7 +78,7 @@
     "@cagov/ds-page-feedback": "file:components/page-feedback",
     "cheerio": "^1.0.0-rc.12",
     "cross-env": "^7.0.3",
-    "glob": "^10.3.10",
+    "glob": "^11.1.0",
     "highlight.js": "^11.3.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
