@@ -35,7 +35,8 @@ jobs:
         run: echo ${URLSAFE_BRANCH_NAME}
       - name: Build 11ty
         run: |
-          npm install
+          # using npm ci instead of npm install to reduce threat of installing newer packages than intended
+          npm ci
           ROOT=https://${URLSAFE_BRANCH_NAME}.pr.designsystem.webstandards.ca.gov npm run site:build
       - name: Write robots.txt
         run: |
